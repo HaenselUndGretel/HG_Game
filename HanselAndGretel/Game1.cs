@@ -8,21 +8,20 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using DragonEngine;
 
 namespace HanselAndGretel
 {
 	/// <summary>
 	/// This is the main type for your game
 	/// </summary>
-	public class Game1 : Microsoft.Xna.Framework.Game
+	public class Game1 : EngineGame
 	{
-		GraphicsDeviceManager graphics;
-		SpriteBatch spriteBatch;
 
 		public Game1()
+			:base()
 		{
-			graphics = new GraphicsDeviceManager(this);
-			Content.RootDirectory = "Content";
+			
 		}
 
 		/// <summary>

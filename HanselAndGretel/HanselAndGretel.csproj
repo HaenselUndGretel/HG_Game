@@ -72,9 +72,13 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreditsScene.cs" />
+    <Compile Include="GameScene.cs" />
+    <Compile Include="MenuScene.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="SplashScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

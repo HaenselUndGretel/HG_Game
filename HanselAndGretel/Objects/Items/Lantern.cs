@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	public class GameScene
+	public class Lantern : Item
 	{
 	}
 }

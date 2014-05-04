@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	public class CreditsScene
+	public class Gretel : Player
 	{
 	}
 }

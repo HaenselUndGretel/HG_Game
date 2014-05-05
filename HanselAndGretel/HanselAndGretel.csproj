@@ -72,6 +72,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity.cs" />
     <Compile Include="Objects\Collectables\Artefact.cs" />
     <Compile Include="Objects\Collectables\Diary.cs" />
     <Compile Include="Objects\Collectables\DiaryEntry.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Objects\Items\Lantern.cs" />
     <Compile Include="Objects\Items\Matches.cs" />
     <Compile Include="Savegame.cs" />
+    <Compile Include="SceneData.cs" />
     <Compile Include="Scenes\CreditsScene.cs" />
     <Compile Include="Character\Enemy\Enemy.cs" />
     <Compile Include="Scenes\GameScene.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Character\Enemy\Wolf.cs" />
     <Compile Include="Objects\Collectables\Toy.cs" />
     <Compile Include="Objects\Collectables\Toys.cs" />
+    <Compile Include="Waypoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

@@ -40,7 +40,18 @@ namespace HanselAndGretel
 			}
 		}
 
-		public Inventory Inventory
+		public Inventory InventoryHansel
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
+			}
+		}
+
+		public Inventory InventoryGretel
 		{
 			get
 			{

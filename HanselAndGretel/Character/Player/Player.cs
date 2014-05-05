@@ -15,6 +15,18 @@ namespace HanselAndGretel
 			}
 			set
 			{
+
+			}
+		}
+
+		public List<int> Abilities
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
 			}
 		}
 	}

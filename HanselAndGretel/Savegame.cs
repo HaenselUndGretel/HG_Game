@@ -84,7 +84,18 @@ namespace HanselAndGretel
 			}
 		}
 
-		public SceneData Scene
+		public SceneData[] Scenes
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
+			}
+		}
+
+		public int Chalk
 		{
 			get
 			{

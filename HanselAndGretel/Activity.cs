@@ -8,15 +8,19 @@ namespace HanselAndGretel
 	public enum Activity
 	{
 		CaughtInCobweb,
-		FallInSwamp,
-		KnockOverTree,
-		PushRock,
-		UseWell,
 		FreeFromCobweb,
+		CaughtInSwamp,
+		FreeFromSwamp,
+		KnockOverTree,
+		BalanceOverTree,
+		PushRock,
+		SlipThroughRock,
+		Crawl,
 		UseKey,
+		PullDoor, 
+		UseDoor,
 		UseChalk,
-		OpenDoor,
-		PullDoor,
-		RaiseLantern,
+		UseWell,
+		UseItem,
 	}
 }

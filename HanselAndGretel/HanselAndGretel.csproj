@@ -114,10 +114,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DragonEngine\DragonEngine.csproj">
-      <Project>{54a1d750-6fd4-41d9-9cfd-419acbd142eb}</Project>
-      <Name>DragonEngine</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HanselAndGretelContent\HanselAndGretelContent.contentproj">
       <Name>HanselAndGretelContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>

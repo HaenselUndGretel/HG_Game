@@ -188,7 +188,7 @@
   <Class Name="HanselAndGretel.Savegame">
     <Position X="46.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACSAAAIAAAAAAAQgAAAAAAAAACAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>AACQAAAJAAAAAAAQgAAAAAAAAACAAAAIAAAAABAAAAA=</HashCode>
       <FileName>Savegame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -196,7 +196,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="HanselAndGretel.InventorySlot" Collapsed="true">
-    <Position X="59.25" Y="4.25" Width="1.5" />
+    <Position X="43.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Character\Player\InventorySlot.cs</FileName>
@@ -212,8 +212,8 @@
       <FileName>Waypoint.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HanselAndGretel.SceneData" Collapsed="true">
-    <Position X="61.75" Y="3" Width="1.5" />
+  <Class Name="HanselAndGretel.SceneData">
+    <Position X="59.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAgAAACAAAACAAAAAAAAgAEBgEAAAAAAAABAAAAAAA=</HashCode>
       <FileName>SceneData.cs</FileName>
@@ -299,10 +299,10 @@
       <FileName>Scenes\GameGraphics.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="HanselAndGretel.Activity" Collapsed="true">
-    <Position X="61.75" Y="4.25" Width="1.5" />
+  <Enum Name="HanselAndGretel.Activity">
+    <Position X="61.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAQAAAEAAAQAACBAgRACAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAQAEAEAAAwAACAAgRACAACAAAAAAEAAAAAAA=</HashCode>
       <FileName>Activity.cs</FileName>
     </TypeIdentifier>
   </Enum>

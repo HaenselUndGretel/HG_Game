@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	public abstract class Item : DragonEngine.Entities.GameObject
+	public abstract class Item : KryptonEngine.Entities.GameObject
 	{
 	}
 }

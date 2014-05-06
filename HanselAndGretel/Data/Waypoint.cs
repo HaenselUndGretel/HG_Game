@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	public class Waypoint : DragonEngine.Entities.GameObject
+	public class Waypoint : KryptonEngine.Entities.GameObject
 	{
 	}
 }

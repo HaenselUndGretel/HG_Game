@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using KryptonEngine.Entities;
+using Microsoft.Xna.Framework;
 
 namespace HanselAndGretel
 {

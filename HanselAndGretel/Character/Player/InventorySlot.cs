@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	public class InventorySlot : DragonEngine.Entities.BaseObject
+	public class InventorySlot : KryptonEngine.Entities.BaseObject
 	{
 		public Item Item
 		{

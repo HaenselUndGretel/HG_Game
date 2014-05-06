@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using KryptonEngine.Entities;
+using Microsoft.Xna.Framework;
 
 namespace HanselAndGretel
 {
-	public class Character : DragonEngine.Entities.GameObject
+	public class Character : KryptonEngine.Entities.GameObject
 	{
 		public SpineObject Model
 		{

@@ -2,31 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DragonEngine.SceneManagement;
+using DragonEngine.Entities;
 
 namespace HanselAndGretel
 {
-	public class CreditsScene : DragonEngine.SceneManagement.Scene
+	public class CreditsScene : Scene
 	{
-	
-		public DragonEngine.Entities.Camera Camera
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#region Constructor
 
-		public override void Draw()
-		{
-			throw new System.NotImplementedException();
-		}
+		public CreditsScene(String pSceneName)
+            : base(pSceneName)
+        {
+
+        }
+
+		#endregion
+
+		#region Override Methods
 
 		public override void Initialize()
 		{
-			throw new System.NotImplementedException();
+			mCamera = new Camera();
 		}
 
 		public override void LoadContent()
@@ -38,5 +35,12 @@ namespace HanselAndGretel
 		{
 			throw new System.NotImplementedException();
 		}
+
+		public override void Draw()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		#endregion
 	}
 }

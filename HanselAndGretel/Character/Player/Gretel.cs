@@ -7,5 +7,15 @@ namespace HanselAndGretel
 {
 	public class Gretel : Player
 	{
+		public int Chalk
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
+			}
+		}
 	}
 }

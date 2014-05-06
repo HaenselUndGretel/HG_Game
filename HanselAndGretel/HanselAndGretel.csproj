@@ -73,10 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity.cs" />
+    <Compile Include="GameGraphics.cs" />
+    <Compile Include="GameLogic.cs" />
     <Compile Include="Objects\Collectables\Artefact.cs" />
-    <Compile Include="Objects\Collectables\Diary.cs" />
     <Compile Include="Objects\Collectables\DiaryEntry.cs" />
-    <Compile Include="Objects\Collectables\HomeArtefacts.cs" />
     <Compile Include="Character\Player\InventorySlot.cs" />
     <Compile Include="Objects\Items\Branch.cs" />
     <Compile Include="Character\Character.cs" />
@@ -105,7 +105,6 @@
     <Compile Include="Character\Enemy\Witch.cs" />
     <Compile Include="Character\Enemy\Wolf.cs" />
     <Compile Include="Objects\Collectables\Toy.cs" />
-    <Compile Include="Objects\Collectables\Toys.cs" />
     <Compile Include="Waypoint.cs" />
   </ItemGroup>
   <ItemGroup>

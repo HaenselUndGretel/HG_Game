@@ -19,7 +19,7 @@ namespace HanselAndGretel
 			}
 		}
 
-		public List<int> Abilities
+		public System.Collections.Generic.List<Activity> Abilities
 		{
 			get
 			{
@@ -28,6 +28,23 @@ namespace HanselAndGretel
 			set
 			{
 			}
+		}
+
+		public void CheckForAbility(Activity pAcitvity)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public override void Initialize()
+		{
+			base.Initialize();
+			throw new System.NotImplementedException();
+		}
+
+		public override void Update()
+		{
+			base.Update();
+			throw new System.NotImplementedException();
 		}
 	}
 }

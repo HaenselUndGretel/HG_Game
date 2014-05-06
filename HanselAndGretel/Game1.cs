@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using DragonEngine;
+using DragonEngine.SceneManagement;
 
 namespace HanselAndGretel
 {
@@ -21,7 +22,16 @@ namespace HanselAndGretel
 		public Game1()
 			:base()
 		{
-			
+			EngineSettings.OnWindows = true;
+			EngineSettings.IsDebug = false;
+			this.IsMouseVisible = false;
+			EngineSettings.DisplayHeight = 740;
+			EngineSettings.DisplayWidth = 1280;
+			EngineSettings.SetResolution(1280, 740);
+			/*Final Game
+			EngineSettings.SetResolution();
+			EngineSettings.SetToFullScreen();
+			*/
 		}
 
 		/// <summary>
@@ -32,8 +42,11 @@ namespace HanselAndGretel
 		/// </summary>
 		protected override void Initialize()
 		{
-			// TODO: Add your initialization logic here
-
+			SceneManager.Instance.AddScene(new SplashScene("Splash"));
+			SceneManager.Instance.AddScene(new MenuScene("Menu"));
+			SceneManager.Instance.AddScene(new GameScene("Game"));
+			SceneManager.Instance.AddScene(new CreditsScene("Credits"));
+			SceneManager.Instance.SetStartSceneTo("Splash");
 			base.Initialize();
 		}
 
@@ -43,10 +56,8 @@ namespace HanselAndGretel
 		/// </summary>
 		protected override void LoadContent()
 		{
-			// Create a new SpriteBatch, which can be used to draw textures.
-			spriteBatch = new SpriteBatch(GraphicsDevice);
-
-			// TODO: use this.Content to load your game content here
+			base.LoadContent();
+			SceneManager.Instance.GetScene("Editor").Background = "pixel";
 		}
 
 		/// <summary>
@@ -65,12 +76,6 @@ namespace HanselAndGretel
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Update(GameTime gameTime)
 		{
-			// Allows the game to exit
-			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-				this.Exit();
-
-			// TODO: Add your update logic here
-
 			base.Update(gameTime);
 		}
 
@@ -80,10 +85,6 @@ namespace HanselAndGretel
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw(GameTime gameTime)
 		{
-			GraphicsDevice.Clear(Color.CornflowerBlue);
-
-			// TODO: Add your drawing code here
-
 			base.Draw(gameTime);
 		}
 	}

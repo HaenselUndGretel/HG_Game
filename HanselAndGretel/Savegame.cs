@@ -7,7 +7,7 @@ namespace HanselAndGretel
 {
 	public class Savegame
 	{
-		public HomeArtefacts HomeArtefacts
+		public List<HomeArtefacts> HomeArtefacts
 		{
 			get
 			{
@@ -18,7 +18,7 @@ namespace HanselAndGretel
 			}
 		}
 
-		public Toys Toys
+		public List<Toy> Toys
 		{
 			get
 			{
@@ -29,7 +29,7 @@ namespace HanselAndGretel
 			}
 		}
 
-		public Diary Diary
+		public List<DiaryEntry> Diary
 		{
 			get
 			{
@@ -52,6 +52,39 @@ namespace HanselAndGretel
 		}
 
 		public Inventory InventoryGretel
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
+			}
+		}
+
+		public Waypoint WaypointHansel
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
+			}
+		}
+
+		public Waypoint WaypointGretel
+		{
+			get
+			{
+				throw new System.NotImplementedException();
+			}
+			set
+			{
+			}
+		}
+
+		public SceneData Scene
 		{
 			get
 			{

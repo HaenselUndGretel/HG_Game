@@ -7,7 +7,7 @@ namespace HanselAndGretel
 {
 	public class Savegame
 	{
-		public List<HomeArtefacts> HomeArtefacts
+		public List<Artefact> Artefacts
 		{
 			get
 			{

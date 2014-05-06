@@ -72,7 +72,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity.cs" />
+    <Compile Include="Data\Activity.cs" />
     <Compile Include="Scenes\GameGraphics.cs" />
     <Compile Include="Scenes\GameLogic.cs" />
     <Compile Include="Objects\Collectables\Artefact.cs" />
@@ -88,8 +88,8 @@
     <Compile Include="Objects\Items\Knife.cs" />
     <Compile Include="Objects\Items\Lantern.cs" />
     <Compile Include="Objects\Items\Matches.cs" />
-    <Compile Include="Savegame.cs" />
-    <Compile Include="SceneData.cs" />
+    <Compile Include="Data\Savegame.cs" />
+    <Compile Include="Data\SceneData.cs" />
     <Compile Include="Scenes\CreditsScene.cs" />
     <Compile Include="Character\Enemy\Enemy.cs" />
     <Compile Include="Scenes\GameScene.cs" />
@@ -105,19 +105,13 @@
     <Compile Include="Character\Enemy\Witch.cs" />
     <Compile Include="Character\Enemy\Wolf.cs" />
     <Compile Include="Objects\Collectables\Toy.cs" />
-    <Compile Include="Waypoint.cs" />
+    <Compile Include="Data\Waypoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HanselAndGretelContent\HanselAndGretelContent.contentproj">
-      <Name>HanselAndGretelContent</Name>
-      <XnaReferenceType>Content</XnaReferenceType>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

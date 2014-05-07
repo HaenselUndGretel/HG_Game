@@ -256,7 +256,7 @@
   <Enum Name="HanselAndGretel.Activity">
     <Position X="51.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAYAQAEAEAAAwAACAAgRACAACAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAA4AQAEAEAAAwAACAAARACAACAAAABAEAAAAAAA=</HashCode>
       <FileName>Data\Activity.cs</FileName>
     </TypeIdentifier>
   </Enum>

@@ -7,33 +7,15 @@ namespace HanselAndGretel
 {
 	public class Player : Character
 	{
-		public Inventory Inventory
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
+		#region Properties
 
-			}
-		}
+		public Inventory Inventory;
+		public List<Activity> Abilities;
 
-		public System.Collections.Generic.List<Activity> Abilities
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#endregion
 
-		public void CheckForAbility(Activity pAcitvity)
-		{
-			throw new System.NotImplementedException();
-		}
+
+		#region Override Methods
 
 		public override void Initialize()
 		{
@@ -46,5 +28,16 @@ namespace HanselAndGretel
 			base.Update();
 			throw new System.NotImplementedException();
 		}
+
+		#endregion
+
+		#region Methods
+
+		public void CheckForAbility(Activity pAcitvity)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		#endregion
 	}
 }

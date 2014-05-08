@@ -7,103 +7,48 @@ namespace HanselAndGretel
 {
 	public class Savegame
 	{
-		public List<Artefact> Artefacts
+		#region Properties
+
+		public List<Artefact> Artefacts;
+		public List<Toy> Toys;
+		public List<DiaryEntry> Diary;
+
+		public Inventory InventoryHansel;
+		public Inventory InventoryGretel;
+		public int Chalk;
+
+		public Waypoint WaypointHansel;
+		public Waypoint WaypointGretel;
+
+		public SceneData[] Scenes;
+
+		#endregion
+
+		#region Constructor
+
+		#endregion
+
+		#region Override Methods
+
+		#endregion
+
+		#region Methods
+
+		public void Load()
 		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
+			//Savegame aus File laden
 		}
 
-		public List<Toy> Toys
+		public void Save()
 		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
+			//Savegame in File schreiben
 		}
 
-		public List<DiaryEntry> Diary
+		public void Reset()
 		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
+			//SaveGame von SceneData Files neu mit default Werten erstellen.
 		}
 
-		public Inventory InventoryHansel
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
-
-		public Inventory InventoryGretel
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
-
-		public Waypoint WaypointHansel
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
-
-		public Waypoint WaypointGretel
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
-
-		public SceneData[] Scenes
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
-
-		public int Chalk
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#endregion
 	}
 }

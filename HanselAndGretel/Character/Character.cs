@@ -7,19 +7,16 @@ using Microsoft.Xna.Framework;
 
 namespace HanselAndGretel
 {
-	public class Character : KryptonEngine.Entities.GameObject
+	public class Character : GameObject
 	{
-		public SpineObject Model
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
-	
+		#region Properties
+
+		public SpineObject Model;
+
+		#endregion
+
+		#region Override Methods
+
 		public override void Initialize()
 		{
 			throw new System.NotImplementedException();
@@ -40,9 +37,15 @@ namespace HanselAndGretel
 			throw new System.NotImplementedException();
 		}
 
+		#endregion
+
+		#region Methods
+
 		public void Move(Vector2 pDelta)
 		{
 			throw new System.NotImplementedException();
 		}
+
+		#endregion
 	}
 }

@@ -24,5 +24,6 @@ namespace HanselAndGretel
 		UseChalk,
 		UseWell,
 		UseItem,
+		SwitchItem,
 	}
 }

@@ -9,119 +9,40 @@ namespace HanselAndGretel
 {
 	public class SceneData
 	{
-		public List<Waypoint> Waypoints
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#region Properties
 
-		public List<Collectable> Collectables
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		public List<Rectangle> MoveArea;
+		public List<Waypoint> Waypoints;
 
-		public List<Item> Items
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		public List<InteractiveObject> InteractiveObjects;
+		public List<int> Events;
 
-		public List<Enemy> Enemies
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		public List<Collectable> Collectables;
+		public List<Item> Items;
 
-		public List<Rectangle> MoveArea
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		public List<Enemy> Enemies;
 
-		public List<Light> Lights
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		//public List<Light> Lights;
+		//public List<Emitter> Emitter;
+		//public List<SoundAreas> SoundAreas;
 
-		public List<Emitter> Emitter
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#endregion
 
-		public List<InteractiveObject> InteractiveObjects
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#region Constructor
 
-		public List<SoundAreas> SoundAreas
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#endregion
 
-		public List<int> Events
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#region OverrideMethods
+
+		#endregion
+
+		#region Methods
 
 		public void LoadLevel(int pLevelId)
 		{
 			throw new System.NotImplementedException();
 		}
+
+		#endregion
 	}
 }

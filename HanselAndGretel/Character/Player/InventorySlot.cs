@@ -1,21 +1,17 @@
-﻿using System;
+﻿using KryptonEngine.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace HanselAndGretel
 {
-	public class InventorySlot : KryptonEngine.Entities.BaseObject
+	public class InventorySlot : BaseObject
 	{
-		public Item Item
-		{
-			get
-			{
-				throw new System.NotImplementedException();
-			}
-			set
-			{
-			}
-		}
+		#region Properties
+
+		public Item Item;
+
+		#endregion
 	}
 }

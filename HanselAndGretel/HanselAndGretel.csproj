@@ -18,6 +18,7 @@
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,7 +31,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -72,40 +72,14 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Activity.cs" />
-    <Compile Include="Scenes\GameGraphics.cs" />
-    <Compile Include="Scenes\GameLogic.cs" />
-    <Compile Include="Objects\Collectables\Artefact.cs" />
-    <Compile Include="Objects\Collectables\DiaryEntry.cs" />
-    <Compile Include="Character\Player\InventorySlot.cs" />
-    <Compile Include="Objects\Items\Branch.cs" />
-    <Compile Include="Character\Character.cs" />
-    <Compile Include="Character\Enemy\Mother.cs" />
-    <Compile Include="Objects\Collectables\Collectable.cs" />
-    <Compile Include="Character\Player\Inventory.cs" />
-    <Compile Include="Objects\Items\Item.cs" />
-    <Compile Include="Objects\Items\Key.cs" />
-    <Compile Include="Objects\Items\Knife.cs" />
-    <Compile Include="Objects\Items\Lantern.cs" />
-    <Compile Include="Objects\Items\Matches.cs" />
-    <Compile Include="Data\Savegame.cs" />
-    <Compile Include="Data\SceneData.cs" />
+    <Compile Include="Savegame.cs" />
     <Compile Include="Scenes\CreditsScene.cs" />
-    <Compile Include="Character\Enemy\Enemy.cs" />
     <Compile Include="Scenes\GameScene.cs" />
-    <Compile Include="Character\Player\Gretel.cs" />
-    <Compile Include="Character\Player\Hansel.cs" />
     <Compile Include="Scenes\MenuScene.cs" />
-    <Compile Include="Character\Player\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Character\Enemy\Spider.cs" />
     <Compile Include="Scenes\SplashScene.cs" />
-    <Compile Include="Character\Enemy\Witch.cs" />
-    <Compile Include="Character\Enemy\Wolf.cs" />
-    <Compile Include="Objects\Collectables\Toy.cs" />
-    <Compile Include="Data\Waypoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

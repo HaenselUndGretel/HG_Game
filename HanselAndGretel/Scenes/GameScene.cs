@@ -44,7 +44,6 @@ namespace HanselAndGretel
 		public override void Draw()
 		{
 			
-			
 		}
 
 		#endregion

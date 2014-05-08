@@ -15,7 +15,6 @@ namespace HanselAndGretel
 		public List<Waypoint> Waypoints;
 
 		public List<InteractiveObject> InteractiveObjects;
-		public List<int> Events;
 
 		public List<Collectable> Collectables;
 		public List<Item> Items;

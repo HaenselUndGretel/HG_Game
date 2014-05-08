@@ -12,17 +12,6 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		#region Logic & Graphics
-
-		public const float LogicFPS = 60;
-		public const float LogicTick =  1 / LogicFPS;
-		public double RemainingTime;
-
-		public GameLogic GameLogic;
-		public GameGraphics GameGraphics;
-
-		#endregion
-
 		#endregion
 
 		#region Constructor
@@ -40,10 +29,6 @@ namespace HanselAndGretel
 		public override void Initialize()
 		{
 			mCamera = new Camera();
-			RemainingTime = 0;
-			GameLogic = new GameLogic();
-			GameGraphics = new GameGraphics();
-			
 		}
 
 		public override void LoadContent()
@@ -53,20 +38,13 @@ namespace HanselAndGretel
 
 		public override void Update()
 		{
-			RemainingTime += EngineSettings.Time.ElapsedGameTime.Milliseconds;
-			while (RemainingTime >= (double)LogicTick)
-			{
-				GameLogic.Update();
-				RemainingTime -= (double)LogicTick;
-			}
-			float GIP = (float)(RemainingTime / (double)LogicTick);
-			GameGraphics.Update(GIP);
+
 		}
 
 		public override void Draw()
 		{
 			
-			GameGraphics.Draw();
+			
 		}
 
 		#endregion

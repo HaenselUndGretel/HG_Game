@@ -25,9 +25,9 @@ namespace HanselAndGretel
 			EngineSettings.OnWindows = true;
 			EngineSettings.IsDebug = false;
 			this.IsMouseVisible = false;
-			EngineSettings.DisplayHeight = 740;
+			EngineSettings.DisplayHeight = 720;
 			EngineSettings.DisplayWidth = 1280;
-			EngineSettings.SetResolution(1280, 740);
+			EngineSettings.SetResolution(1280, 720);
 			/*Final Game
 			EngineSettings.SetResolution();
 			EngineSettings.SetToFullScreen();

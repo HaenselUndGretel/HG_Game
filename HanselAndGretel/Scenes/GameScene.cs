@@ -66,11 +66,17 @@ namespace HanselAndGretel
 
 		public override void Draw()
 		{
+			//Collect Packages
+			List<DrawPackage> DrawPackages = new List<DrawPackage>();
+			DrawPackages.Add(mHansel.DrawPackage);
+			DrawPackages.Add(mGretel.DrawPackage);
 			DrawBackground();
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
 			mScene.DrawDebug(mSpriteBatch);
-			mHansel.Draw(mSpriteBatch);
-			mGretel.Draw(mSpriteBatch);
+			foreach(DrawPackage dPack in DrawPackages)
+			{
+				dPack.Draw(mSpriteBatch, mCamera.Position);
+			}
 			mSpriteBatch.End();
 		}
 

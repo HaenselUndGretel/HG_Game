@@ -28,7 +28,7 @@ namespace HanselAndGretel
 
 		public override void LoadContent()
 		{
-			throw new System.NotImplementedException();
+			
 		}
 
 		public override void Update()

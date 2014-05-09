@@ -46,7 +46,7 @@ namespace HanselAndGretel
 			SceneManager.Instance.AddScene(new MenuScene("Menu"));
 			SceneManager.Instance.AddScene(new GameScene("Game"));
 			SceneManager.Instance.AddScene(new CreditsScene("Credits"));
-			SceneManager.Instance.SetStartSceneTo("Splash");
+			SceneManager.Instance.SetStartSceneTo("Game");
 			base.Initialize();
 		}
 
@@ -57,7 +57,7 @@ namespace HanselAndGretel
 		protected override void LoadContent()
 		{
 			base.LoadContent();
-			SceneManager.Instance.GetScene("Editor").Background = "pixel";
+			SceneManager.Instance.GetScene("Game").Background = "pixel";
 		}
 
 		/// <summary>

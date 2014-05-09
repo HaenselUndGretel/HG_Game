@@ -70,9 +70,13 @@ namespace HanselAndGretel
 			List<DrawPackage> DrawPackages = new List<DrawPackage>();
 			DrawPackages.Add(mHansel.DrawPackage);
 			DrawPackages.Add(mGretel.DrawPackage);
+			DrawPackages.AddRange(mScene.DrawPackages);
+
+			//ToDo: DrawPackag Sorting!
+
+			//Draw
 			DrawBackground();
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
-			mScene.DrawDebug(mSpriteBatch);
 			foreach(DrawPackage dPack in DrawPackages)
 			{
 				dPack.Draw(mSpriteBatch, mCamera.Position);

@@ -37,6 +37,7 @@ namespace HanselAndGretel
 		public override void Initialize()
 		{
 			mCamera = new Camera();
+			mCamera.GameScreen = new Rectangle(-1000, -1000, 3000, 3000);
 			mSavegame = new Savegame();
 		}
 
@@ -50,6 +51,9 @@ namespace HanselAndGretel
 			mScene.MoveArea.Add(new Rectangle(50, 50, 50, 50));
 			mScene.MoveArea.Add(new Rectangle(500, 500, 20, 20));
 			mScene.MoveArea.Add(new Rectangle(800, 400, 100, 300));
+			mScene.MoveArea.Add(new Rectangle(1500, 1500, 100, 300));
+			mScene.MoveArea.Add(new Rectangle(1000, 200, 400, 200));
+			mScene.MoveArea.Add(new Rectangle(200, 1800, 300, 300));
 			mHansel = new Hansel(new Vector2(50,500));
 			mGretel = new Gretel(new Vector2(100, 300));
 		}
@@ -77,8 +81,8 @@ namespace HanselAndGretel
 
 			//Draw
 			DrawBackground();
-			//mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
-			mSpriteBatch.Begin();
+			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
+			//mSpriteBatch.Begin();
 			foreach(DrawPackage dPack in DrawPackages)
 			{
 				dPack.Draw(mSpriteBatch, mCamera.Position);

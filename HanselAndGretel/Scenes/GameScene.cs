@@ -62,6 +62,7 @@ namespace HanselAndGretel
 			TmpMoveArea = new List<Rectangle>(mScene.MoveArea);
 			TmpMoveArea.Add(mHansel.CollisionBox);
 			mGretel.Update(TmpMoveArea);
+			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
 		}
 
 		public override void Draw()
@@ -76,7 +77,8 @@ namespace HanselAndGretel
 
 			//Draw
 			DrawBackground();
-			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
+			//mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
+			mSpriteBatch.Begin();
 			foreach(DrawPackage dPack in DrawPackages)
 			{
 				dPack.Draw(mSpriteBatch, mCamera.Position);

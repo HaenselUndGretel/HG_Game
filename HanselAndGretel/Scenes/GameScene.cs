@@ -67,6 +67,8 @@ namespace HanselAndGretel
 			TmpMoveArea.Add(mHansel.CollisionBox);
 			mGretel.Update(TmpMoveArea);
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
+			mHansel.ForceInCameraViewport(mCamera, mScene.MoveArea);
+			mGretel.ForceInCameraViewport(mCamera, mScene.MoveArea);
 		}
 
 		public override void Draw()
@@ -77,7 +79,7 @@ namespace HanselAndGretel
 			DrawPackages.Add(mGretel.DrawPackage);
 			DrawPackages.AddRange(mScene.DrawPackages);
 
-			//ToDo: DrawPackag Sorting!
+			//ToDo: DrawPackage Sorting!
 
 			//Draw
 			DrawBackground();

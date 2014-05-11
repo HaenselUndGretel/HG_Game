@@ -37,38 +37,33 @@ namespace HanselAndGretel
 		public override void Initialize()
 		{
 			mCamera = new Camera();
-			mCamera.GameScreen = new Rectangle(-1000, -1000, 3000, 3000);
+			mCamera.GameScreen = new Rectangle(0, 0, 2000, 2000);
 			mSavegame = new Savegame();
+			mSavegame.Scenes = new SceneData[1] { new SceneData() };
+			mScene = mSavegame.Scenes[0];
+			mScene.MoveArea = new List<Rectangle>();
+			mHansel = new Hansel(new Vector2(50, 500));
+			mGretel = new Gretel(new Vector2(100, 300));
+			mHansel.LoadReferences(mCamera, mGretel, mScene);
+			mGretel.LoadReferences(mCamera, mHansel, mScene);
 		}
 
 		public override void LoadContent()
 		{
 			//mSavegame.Load();
-			mSavegame = new Savegame();
-			mSavegame.Scenes = new SceneData[1]{new SceneData()};
-			mScene = mSavegame.Scenes[0];
-			mScene.MoveArea = new List<Rectangle>();
 			mScene.MoveArea.Add(new Rectangle(50, 50, 50, 50));
 			mScene.MoveArea.Add(new Rectangle(500, 500, 20, 20));
 			mScene.MoveArea.Add(new Rectangle(800, 400, 100, 300));
 			mScene.MoveArea.Add(new Rectangle(1500, 1500, 100, 300));
 			mScene.MoveArea.Add(new Rectangle(1000, 200, 400, 200));
 			mScene.MoveArea.Add(new Rectangle(200, 1800, 300, 300));
-			mHansel = new Hansel(new Vector2(50,500));
-			mGretel = new Gretel(new Vector2(100, 300));
 		}
 
 		public override void Update()
 		{
-			List<Rectangle> TmpMoveArea = new List<Rectangle>(mScene.MoveArea);
-			TmpMoveArea.Add(mGretel.CollisionBox);
-			mHansel.Update(TmpMoveArea);
-			TmpMoveArea = new List<Rectangle>(mScene.MoveArea);
-			TmpMoveArea.Add(mHansel.CollisionBox);
-			mGretel.Update(TmpMoveArea);
+			mHansel.Update();
+			mGretel.Update();
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
-			mHansel.ForceInCameraViewport(mCamera, mScene.MoveArea);
-			mGretel.ForceInCameraViewport(mCamera, mScene.MoveArea);
 		}
 
 		public override void Draw()

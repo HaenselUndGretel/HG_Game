@@ -72,7 +72,6 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Savegame.cs" />
     <Compile Include="Scenes\CreditsScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />

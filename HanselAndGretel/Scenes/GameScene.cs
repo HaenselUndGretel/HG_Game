@@ -37,7 +37,7 @@ namespace HanselAndGretel
 		public override void Initialize()
 		{
 			mCamera = new Camera();
-			mCamera.GameScreen = new Rectangle(0, 0, 2000, 2000);
+			mCamera.GameScreen = new Rectangle(0, 0, 3000, 3000);
 			mSavegame = new Savegame();
 			mSavegame.Scenes = new SceneData[1] { new SceneData() };
 			mScene = mSavegame.Scenes[0];

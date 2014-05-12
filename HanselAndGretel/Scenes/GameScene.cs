@@ -39,9 +39,6 @@ namespace HanselAndGretel
 			mCamera = new Camera();
 			mCamera.GameScreen = new Rectangle(0, 0, 3000, 3000);
 			mSavegame = new Savegame();
-			mSavegame.Scenes = new SceneData[1] { new SceneData() };
-			mScene = mSavegame.Scenes[0];
-			mScene.MoveArea = new List<Rectangle>();
 			mHansel = new Hansel(new Vector2(50, 500));
 			mGretel = new Gretel(new Vector2(100, 300));
 			mHansel.LoadReferences(mCamera, mGretel, mScene);
@@ -50,13 +47,7 @@ namespace HanselAndGretel
 
 		public override void LoadContent()
 		{
-			//mSavegame.Load();
-			mScene.MoveArea.Add(new Rectangle(50, 50, 50, 50));
-			mScene.MoveArea.Add(new Rectangle(500, 500, 20, 20));
-			mScene.MoveArea.Add(new Rectangle(800, 400, 100, 300));
-			mScene.MoveArea.Add(new Rectangle(1500, 1500, 100, 300));
-			mScene.MoveArea.Add(new Rectangle(1000, 200, 400, 200));
-			mScene.MoveArea.Add(new Rectangle(200, 1800, 300, 300));
+			Savegame.Load(mSavegame);
 		}
 
 		public override void Update()

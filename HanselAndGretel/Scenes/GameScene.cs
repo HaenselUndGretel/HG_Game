@@ -41,13 +41,14 @@ namespace HanselAndGretel
 			mSavegame = new Savegame();
 			mHansel = new Hansel(new Vector2(50, 500));
 			mGretel = new Gretel(new Vector2(100, 300));
-			mHansel.LoadReferences(mCamera, mGretel, mScene);
-			mGretel.LoadReferences(mCamera, mHansel, mScene);
 		}
 
 		public override void LoadContent()
 		{
 			Savegame.Load(mSavegame);
+
+			mHansel.LoadReferences(mCamera, mGretel, mScene);
+			mGretel.LoadReferences(mCamera, mHansel, mScene);
 		}
 
 		public override void Update()

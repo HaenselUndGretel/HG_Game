@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{92EA1BB5-61D7-4311-BD82-30C92C0C8924}</ProjectGuid>
+    <ProjectGuid>{3CFBC053-A77B-49CD-A732-4FD4B16E8FC6}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -119,6 +119,11 @@
     <ProjectReference Include="..\..\KryptonEngine\KryptonEngine.csproj">
       <Project>{4beca7bb-c7c4-401e-a263-49b8bbba2cae}</Project>
       <Name>KryptonEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HanselAndGretelContent\HanselAndGretelContent.contentproj">
+      <Project>{4E67907F-D33E-4050-9A43-3F3E7265F70E}</Project>
+      <Name>HanselAndGretelContent</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

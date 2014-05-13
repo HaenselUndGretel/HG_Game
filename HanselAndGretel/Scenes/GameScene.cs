@@ -39,14 +39,16 @@ namespace HanselAndGretel
 			mCamera = new Camera();
 			mCamera.GameScreen = new Rectangle(0, 0, 3000, 3000);
 			mSavegame = new Savegame();
-			mHansel = new Hansel(new Vector2(50, 500));
-			mGretel = new Gretel(new Vector2(100, 300));
+			mHansel = new Hansel();
+			mGretel = new Gretel();
 		}
 
 		public override void LoadContent()
 		{
-			Savegame.Load(mSavegame);
-
+			mSavegame = Savegame.Load();
+			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			mHansel.Position = mSavegame.PositionHansel;
+			mGretel.Position = mSavegame.PositionGretel;
 			mHansel.LoadReferences(mCamera, mGretel, mScene);
 			mGretel.LoadReferences(mCamera, mHansel, mScene);
 		}
@@ -77,6 +79,19 @@ namespace HanselAndGretel
 				dPack.Draw(mSpriteBatch, mCamera.Position);
 			}
 			mSpriteBatch.End();
+		}
+
+		#endregion
+
+		#region Methods
+
+		public void SwitchScene(Waypoint pWPHansel, Waypoint pWPGretel)
+		{
+			if (pWPHansel.DestinationScene != pWPGretel.DestinationScene)
+				throw new Exception("SceneSwitch Versuch mit unterschiedlichen Zielen. Was geht denn hier ab?!?");
+			mScene = mSavegame.Scenes[pWPHansel.DestinationScene];
+			mHansel.Position = mScene.Waypoints[pWPHansel.DestinationWaypoint].Position;
+			mGretel.Position = mScene.Waypoints[pWPGretel.DestinationWaypoint].Position;
 		}
 
 		#endregion

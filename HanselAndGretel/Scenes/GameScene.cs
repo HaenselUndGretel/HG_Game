@@ -63,10 +63,13 @@ namespace HanselAndGretel
 		public override void Draw()
 		{
 			//Collect Packages
-			List<DrawPackage> DrawPackages = new List<DrawPackage>();
-			DrawPackages.Add(mHansel.DrawPackage);
-			DrawPackages.Add(mGretel.DrawPackage);
-			DrawPackages.AddRange(mScene.DrawPackages);
+			List<DrawPackage> DrawPackagesPlanes = new List<DrawPackage>();
+			DrawPackagesPlanes.AddRange(mScene.DrawPackagesBGPlanes);
+			
+			List<DrawPackage> DrawPackagesGame = new List<DrawPackage>();
+			DrawPackagesGame.Add(mHansel.DrawPackage);
+			DrawPackagesGame.Add(mGretel.DrawPackage);
+			DrawPackagesGame.AddRange(mScene.DrawPackagesGame);
 
 			//ToDo: DrawPackage Sorting!
 
@@ -74,7 +77,7 @@ namespace HanselAndGretel
 			DrawBackground();
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
 			//mSpriteBatch.Begin();
-			foreach(DrawPackage dPack in DrawPackages)
+			foreach(DrawPackage dPack in DrawPackagesGame)
 			{
 				dPack.Draw(mSpriteBatch, mCamera.Position);
 			}

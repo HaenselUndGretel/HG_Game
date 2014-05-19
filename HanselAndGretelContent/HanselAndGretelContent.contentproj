@@ -55,10 +55,6 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="hug\002.hug">
-      <Name>002</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="spine\sweetcheeks-1.png">
       <Name>sweetcheeks-1</Name>
       <Importer>TextureImporter</Importer>
@@ -93,6 +89,16 @@
     </Content>
     <Content Include="spine\sweetcheeks.settings">
       <Name>sweetcheeks</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hug\000.hug">
+      <Name>000</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hug\001.hug">
+      <Name>001</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

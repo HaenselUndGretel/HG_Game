@@ -72,6 +72,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Logic.cs" />
+    <Compile Include="Logic\SceneSwitch.cs" />
     <Compile Include="Scenes\CreditsScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />

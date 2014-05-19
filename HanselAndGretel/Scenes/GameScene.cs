@@ -4,6 +4,7 @@ using KryptonEngine.Entities;
 using KryptonEngine.SceneManagement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Spine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace HanselAndGretel
 		protected Hansel mHansel;
 		protected Gretel mGretel;
 		protected SceneData mScene;
+		protected SkeletonRenderer mSkeletonRenderer;
 
 		#endregion
 
@@ -36,6 +38,8 @@ namespace HanselAndGretel
 
 		public override void Initialize()
 		{
+			mSkeletonRenderer = EngineSettings.SpineRenderer;
+			EngineSettings.IsDebug = true;
 			mCamera = new Camera();
 			mCamera.GameScreen = new Rectangle(0, 0, 3000, 3000);
 			mSavegame = new Savegame();
@@ -47,6 +51,8 @@ namespace HanselAndGretel
 		{
 			mSavegame = Savegame.Load();
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			mHansel.LoadContent();
+			mGretel.LoadContent();
 			mHansel.Position = mSavegame.PositionHansel;
 			mGretel.Position = mSavegame.PositionGretel;
 			mHansel.LoadReferences(mCamera, mGretel, mScene);
@@ -62,25 +68,29 @@ namespace HanselAndGretel
 
 		public override void Draw()
 		{
-			//Collect Packages
+			//---------------Collect Packages
 			List<DrawPackage> DrawPackagesPlanes = new List<DrawPackage>();
 			DrawPackagesPlanes.AddRange(mScene.DrawPackagesPlanesBackground);
 			
 			List<DrawPackage> DrawPackagesGame = new List<DrawPackage>();
+			DrawPackagesGame.AddRange(mScene.DrawPackagesGame);
 			DrawPackagesGame.Add(mHansel.DrawPackage);
 			DrawPackagesGame.Add(mGretel.DrawPackage);
-			DrawPackagesGame.AddRange(mScene.DrawPackagesGame);
+			
 
 			//ToDo: DrawPackage Sorting!
 
-			//Draw
+			//---------------Draw
 			DrawBackground();
-			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.GetTranslationMatrix());
-			//mSpriteBatch.Begin();
+
+			Matrix TmpTransformation = mCamera.GetTranslationMatrix();
+			
+			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, TmpTransformation);
+			mSkeletonRenderer.Effect.World = TmpTransformation;
+			foreach (DrawPackage dPack in DrawPackagesPlanes)
+				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			foreach(DrawPackage dPack in DrawPackagesGame)
-			{
-				dPack.Draw(mSpriteBatch, mCamera.Position);
-			}
+				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			mSpriteBatch.End();
 		}
 

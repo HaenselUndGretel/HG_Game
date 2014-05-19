@@ -64,7 +64,7 @@ namespace HanselAndGretel
 		{
 			//Collect Packages
 			List<DrawPackage> DrawPackagesPlanes = new List<DrawPackage>();
-			DrawPackagesPlanes.AddRange(mScene.DrawPackagesBGPlanes);
+			DrawPackagesPlanes.AddRange(mScene.DrawPackagesPlanesBackground);
 			
 			List<DrawPackage> DrawPackagesGame = new List<DrawPackage>();
 			DrawPackagesGame.Add(mHansel.DrawPackage);

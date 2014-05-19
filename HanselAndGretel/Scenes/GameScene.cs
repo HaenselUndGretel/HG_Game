@@ -16,6 +16,7 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
+		protected Logic mLogic;
 		protected Savegame mSavegame;
 		protected Hansel mHansel;
 		protected Gretel mGretel;
@@ -38,6 +39,7 @@ namespace HanselAndGretel
 
 		public override void Initialize()
 		{
+			mLogic = new Logic();
 			mSkeletonRenderer = EngineSettings.SpineRenderer;
 			EngineSettings.IsDebug = true;
 			mCamera = new Camera();
@@ -61,8 +63,12 @@ namespace HanselAndGretel
 
 		public override void Update()
 		{
+			//Update Player
 			mHansel.Update();
 			mGretel.Update();
+			//Update Logic
+			mLogic.Update(mSavegame, mScene, mHansel, mGretel);
+			//Update Camera
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
 		}
 
@@ -81,6 +87,7 @@ namespace HanselAndGretel
 			//ToDo: DrawPackage Sorting!
 
 			//---------------Draw
+			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(mRenderTarget);
 			DrawBackground();
 
 			Matrix TmpTransformation = mCamera.GetTranslationMatrix();
@@ -91,6 +98,14 @@ namespace HanselAndGretel
 				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			foreach(DrawPackage dPack in DrawPackagesGame)
 				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
+			mSpriteBatch.End();
+
+			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
+			mSpriteBatch.Begin();
+			if (mLogic.SceneSwitch.Switching)
+				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, new Color(mLogic.SceneSwitch.Fading, mLogic.SceneSwitch.Fading, mLogic.SceneSwitch.Fading));
+			else
+				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, Color.White);
 			mSpriteBatch.End();
 		}
 

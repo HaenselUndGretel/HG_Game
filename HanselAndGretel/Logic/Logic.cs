@@ -34,7 +34,7 @@ namespace HanselAndGretel
 		{
 			SceneSwitch.TestForSwitch(pScene, pHansel, pGretel, pSavegame.Scenes);
 			if (SceneSwitch.Switching)
-				SceneSwitch.DoSwitch();
+				SceneSwitch.DoSwitch(pSavegame, pScene, pHansel, pGretel);
 		}
 
 		#endregion

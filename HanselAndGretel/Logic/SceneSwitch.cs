@@ -104,6 +104,8 @@ namespace HanselAndGretel
 				throw new Exception("Zielwegpunkt für Hansel oder Gretel nicht gefunden!");
 			DestinationScene = pWpHansel.DestinationScene;
 			//Switching initialisieren
+			pHansel.mModel.SetAnimation();
+			pGretel.mModel.SetAnimation();
 			FadingProgress = 0d;
 			Switching = true;
 			return pWpHansel.DestinationScene;

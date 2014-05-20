@@ -63,11 +63,11 @@ namespace HanselAndGretel
 
 		public override void Update()
 		{
-			//Update Player
-			mHansel.Update();
-			mGretel.Update();
 			//Update Logic
-			mLogic.Update(mSavegame, mScene, mHansel, mGretel);
+			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel);
+			//Update Player
+			mHansel.Update(mLogic.HanselMayMove);
+			mGretel.Update(mLogic.GretelMayMove);
 			//Update Camera
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
 		}
@@ -102,7 +102,7 @@ namespace HanselAndGretel
 
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 			mSpriteBatch.Begin();
-			if (mLogic.SceneSwitch.Switching)
+			if (mLogic.SceneSwitch.CurrentState == SceneSwitch.State.Switching)
 				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, new Color(mLogic.SceneSwitch.Fading, mLogic.SceneSwitch.Fading, mLogic.SceneSwitch.Fading));
 			else
 				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, Color.White);

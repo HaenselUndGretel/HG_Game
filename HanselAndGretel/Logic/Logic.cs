@@ -12,6 +12,9 @@ namespace HanselAndGretel
 
 		public SceneSwitch SceneSwitch;
 
+		public bool HanselMayMove;
+		public bool GretelMayMove;
+
 		#endregion
 
 		#region Constructor
@@ -30,11 +33,19 @@ namespace HanselAndGretel
 			SceneSwitch = new SceneSwitch();
 		}
 
-		public void Update(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
-			SceneSwitch.TestForSwitch(pScene, pHansel, pGretel, pSavegame.Scenes);
-			if (SceneSwitch.Switching)
-				SceneSwitch.DoSwitch(pSavegame, pScene, pHansel, pGretel);
+			//Update Logic Parts
+			SceneSwitch.Update(pSavegame, ref pScene, pHansel, pGretel);
+
+			//Check whether Player may move
+			HanselMayMove = true;
+			GretelMayMove = true;
+			if (SceneSwitch.CurrentState != SceneSwitch.State.Idle)
+			{
+				HanselMayMove = false;
+				GretelMayMove = false;
+			}
 		}
 
 		#endregion

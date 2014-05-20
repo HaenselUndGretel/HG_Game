@@ -10,6 +10,13 @@ namespace HanselAndGretel
 {
 	public class SceneSwitch
 	{
+		public enum State
+		{
+			Idle,
+			Switching,
+			Entering
+		}
+
 		#region Properties
 
 		public double FadingDuration;
@@ -17,7 +24,7 @@ namespace HanselAndGretel
 		protected Vector2 DestinationHansel;
 		protected Vector2 DestinationGretel;
 		protected int DestinationScene;
-		public bool Switching;
+		public State CurrentState;
 
 		#endregion
 
@@ -45,10 +52,29 @@ namespace HanselAndGretel
 		{
 			FadingDuration = 1000d;
 			FadingProgress = 0d;
-			Switching = false;
+			CurrentState = State.Idle;
 		}
 
-		public int TestForSwitch(SceneData pScene, Hansel pHansel, Gretel pGretel, SceneData[] pSceneLookup) //Testet ob geswitched werden soll. Gibt die SceneId zurück zu der geswitched werden soll. Wenn nicht dann =-1.
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel)
+		{
+			switch (CurrentState)
+			{
+				case State.Idle:
+					TestForSwitch(pScene, pHansel, pGretel, pSavegame.Scenes);
+					break;
+				case State.Switching:
+					Switch(pSavegame, ref pScene, pHansel, pGretel);
+					break;
+				case State.Entering:
+					Enter(pScene, pHansel, pGretel);
+					break;
+				default:
+					throw new Exception("SwitchScene.CurrentState not set!");
+					break;
+			}	
+		}
+
+		public void TestForSwitch(SceneData pScene, Hansel pHansel, Gretel pGretel, SceneData[] pSceneLookup) //Testet ob geswitched werden soll. Gibt die SceneId zurück zu der geswitched werden soll. Wenn nicht dann =-1.
 		{
 			foreach (Waypoint wp in pScene.Waypoints)
 			{
@@ -58,7 +84,8 @@ namespace HanselAndGretel
 					{
 						if (wp.CollisionBox.Intersects(pGretel.CollisionBox)) //Gretel berührt auch den Waypoint
 						{
-							return StartSwitching(pHansel, pGretel, wp, wp, pSceneLookup);
+							StartSwitching(pHansel, pGretel, wp, wp, pSceneLookup);
+							return;
 						}
 					}
 					else if (wp.CollisionBox.Contains(pHansel.CollisionBox)) //Der Waypoint kann von einem Spieler betreten werden & Hänsel steht im Waypoint
@@ -69,14 +96,14 @@ namespace HanselAndGretel
 							{
 								if (otherWp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht in diesem Waypoint
 								{
-									return StartSwitching(pHansel, pGretel, wp, otherWp, pSceneLookup);
+									StartSwitching(pHansel, pGretel, wp, otherWp, pSceneLookup);
+									return;
 								}
 							}
 						}
 					}
 				}
 			}
-			return -1;
 		}
 
 		/// <summary>
@@ -87,8 +114,7 @@ namespace HanselAndGretel
 		/// <param name="pWpHansel">Wegpunkt, der von Hänsel betreten ist.</param>
 		/// <param name="pWpGretel">Wegpunkt, der von Gretel betreten ist.</param>
 		/// <param name="pSceneLookup">Scenes-Array aus dem Savegame.</param>
-		/// <returns>Gibt die SceneId zurück zu der geswitched werden soll.</returns>
-		public int StartSwitching(Hansel pHansel, Gretel pGretel, Waypoint pWpHansel, Waypoint pWpGretel, SceneData[] pSceneLookup)
+		public void StartSwitching(Hansel pHansel, Gretel pGretel, Waypoint pWpHansel, Waypoint pWpGretel, SceneData[] pSceneLookup)
 		{
 			//Destination auf 0,0 setzen für ErrorTest
 			DestinationHansel = Vector2.Zero;
@@ -107,30 +133,41 @@ namespace HanselAndGretel
 			pHansel.mModel.SetAnimation();
 			pGretel.mModel.SetAnimation();
 			FadingProgress = 0d;
-			Switching = true;
-			return pWpHansel.DestinationScene;
+			CurrentState = State.Switching;
 		}
 
 		/// <summary>
 		/// Aktualisiert den FadingProgress des Switchings.
 		/// </summary>
-		/// <returns>Switching läuft = true. Beendet = false.</returns>
-		public bool DoSwitch(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel) 
+		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel) 
 		{
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
-			if (FadingProgress >= FadingDuration || !Switching)
+			if (FadingProgress >= FadingDuration)
 			{
-				FadingProgress = 0;
-				Switching = false;
+				//Switch
 				pHansel.Position = DestinationHansel;
 				pGretel.Position = DestinationGretel;
 				pScene = pSavegame.Scenes[DestinationScene];
-
-
-
-				return false;
+				//Show on new Scene
+				FadingProgress = 0;
+				CurrentState = State.Entering;
 			}
-			return true;
+		}
+
+		public void Enter(SceneData pScene, Hansel pHansel, Gretel pGretel)
+		{
+			bool TmpEnterFinished = true;
+			foreach(Waypoint wp in pScene.Waypoints)
+			{
+				if (wp.CollisionBox.Intersects(pHansel.CollisionBox) || wp.CollisionBox.Intersects(pGretel.CollisionBox))
+				{
+					TmpEnterFinished = false;
+					pHansel.MoveManually(wp.MovementOnEnter);
+					pGretel.MoveManually(wp.MovementOnEnter);
+				}
+			}
+			if (TmpEnterFinished)
+				CurrentState = State.Idle;
 		}
 
 		#endregion

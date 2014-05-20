@@ -26,8 +26,8 @@
     <Waypoint>
       <ObjectId>0</ObjectId>
       <Position>
-        <X>0</X>
-        <Y>0</Y>
+        <X>782</X>
+        <Y>391</Y>
       </Position>
       <PositionX>0</PositionX>
       <PositionY>0</PositionY>
@@ -50,6 +50,10 @@
       <DestinationWaypoint>1</DestinationWaypoint>
       <TwoPlayerEnter>true</TwoPlayerEnter>
       <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>0</X>
+        <Y>1</Y>
+      </MovementOnEnter>
     </Waypoint>
   </Waypoints>
   <ParallaxPlanes>

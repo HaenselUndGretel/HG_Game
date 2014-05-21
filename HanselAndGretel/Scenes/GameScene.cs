@@ -57,8 +57,8 @@ namespace HanselAndGretel
 			mGretel.LoadContent();
 			mHansel.Position = mSavegame.PositionHansel;
 			mGretel.Position = mSavegame.PositionGretel;
-			mHansel.LoadReferences(mCamera, mGretel, mScene);
-			mGretel.LoadReferences(mCamera, mHansel, mScene);
+			mHansel.LoadReferences(mCamera, mGretel);
+			mGretel.LoadReferences(mCamera, mHansel);
 		}
 
 		public override void Update()
@@ -66,8 +66,8 @@ namespace HanselAndGretel
 			//Update Logic
 			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel);
 			//Update Player
-			mHansel.Update(mLogic.HanselMayMove);
-			mGretel.Update(mLogic.GretelMayMove);
+			mHansel.Update(mLogic.HanselMayMove, mScene);
+			mGretel.Update(mLogic.GretelMayMove, mScene);
 			//Update Camera
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
 		}

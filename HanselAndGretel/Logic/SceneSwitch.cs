@@ -162,8 +162,8 @@ namespace HanselAndGretel
 				if (wp.CollisionBox.Intersects(pHansel.CollisionBox) || wp.CollisionBox.Intersects(pGretel.CollisionBox))
 				{
 					TmpEnterFinished = false;
-					pHansel.MoveManually(wp.MovementOnEnter);
-					pGretel.MoveManually(wp.MovementOnEnter);
+					pHansel.MoveManually(wp.MovementOnEnter, pScene);
+					pGretel.MoveManually(wp.MovementOnEnter, pScene);
 				}
 			}
 			if (TmpEnterFinished)

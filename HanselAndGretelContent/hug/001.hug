@@ -12,13 +12,13 @@
   </GamePlane>
   <MoveArea>
     <Rectangle>
-      <X>595</X>
-      <Y>-6</Y>
-      <Width>18</Width>
-      <Height>732</Height>
+      <X>904</X>
+      <Y>29</Y>
+      <Width>23</Width>
+      <Height>542</Height>
       <Location>
-        <X>595</X>
-        <Y>-6</Y>
+        <X>904</X>
+        <Y>29</Y>
       </Location>
     </Rectangle>
   </MoveArea>
@@ -26,19 +26,51 @@
     <Waypoint>
       <ObjectId>0</ObjectId>
       <Position>
-        <X>782</X>
-        <Y>391</Y>
+        <X>52</X>
+        <Y>63</Y>
       </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
+      <PositionX>52</PositionX>
+      <PositionY>63</PositionY>
       <CollisionBox>
-        <X>782</X>
-        <Y>391</Y>
-        <Width>263</Width>
-        <Height>272</Height>
+        <X>52</X>
+        <Y>63</Y>
+        <Width>196</Width>
+        <Height>172</Height>
         <Location>
-          <X>782</X>
-          <Y>391</Y>
+          <X>52</X>
+          <Y>63</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <Texture>
+        <Name />
+      </Texture>
+      <DestinationScene>0</DestinationScene>
+      <DestinationWaypoint>0</DestinationWaypoint>
+      <TwoPlayerEnter>true</TwoPlayerEnter>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>1</X>
+        <Y>0</Y>
+      </MovementOnEnter>
+    </Waypoint>
+    <Waypoint>
+      <ObjectId>1</ObjectId>
+      <Position>
+        <X>174</X>
+        <Y>468</Y>
+      </Position>
+      <PositionX>174</PositionX>
+      <PositionY>468</PositionY>
+      <CollisionBox>
+        <X>174</X>
+        <Y>468</Y>
+        <Width>197</Width>
+        <Height>204</Height>
+        <Location>
+          <X>174</X>
+          <Y>468</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -51,8 +83,8 @@
       <TwoPlayerEnter>true</TwoPlayerEnter>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>0</X>
-        <Y>1</Y>
+        <X>1</X>
+        <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
   </Waypoints>

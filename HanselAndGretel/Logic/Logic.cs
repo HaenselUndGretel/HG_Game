@@ -10,7 +10,8 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		public SceneSwitch SceneSwitch;
+		public SceneSwitchHandler SceneSwitchHandler;
+		public ActivityHandler ActivityHandler;
 
 		public bool HanselMayMove;
 		public bool GretelMayMove;
@@ -30,18 +31,20 @@ namespace HanselAndGretel
 
 		public void Initialize()
 		{
-			SceneSwitch = new SceneSwitch();
+			SceneSwitchHandler = new SceneSwitchHandler();
+			ActivityHandler = new ActivityHandler();
 		}
 
 		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
 			//Update Logic Parts
-			SceneSwitch.Update(pSavegame, ref pScene, pHansel, pGretel);
+			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel);
+			ActivityHandler.Update(pScene, pHansel, pGretel);
 
 			//Check whether Player may move
 			HanselMayMove = true;
 			GretelMayMove = true;
-			if (SceneSwitch.CurrentState != SceneSwitch.State.Idle)
+			if (SceneSwitchHandler.CurrentState != SceneSwitchHandler.State.Idle)
 			{
 				HanselMayMove = false;
 				GretelMayMove = false;

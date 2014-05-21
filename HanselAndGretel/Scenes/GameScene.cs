@@ -102,24 +102,11 @@ namespace HanselAndGretel
 
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 			mSpriteBatch.Begin();
-			if (mLogic.SceneSwitch.CurrentState == SceneSwitch.State.Switching)
-				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, new Color(mLogic.SceneSwitch.Fading, mLogic.SceneSwitch.Fading, mLogic.SceneSwitch.Fading));
+			if (mLogic.SceneSwitchHandler.CurrentState == SceneSwitchHandler.State.Switching)
+				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, new Color(mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading));
 			else
 				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, Color.White);
 			mSpriteBatch.End();
-		}
-
-		#endregion
-
-		#region Methods
-
-		public void SwitchScene(Waypoint pWPHansel, Waypoint pWPGretel)
-		{
-			if (pWPHansel.DestinationScene != pWPGretel.DestinationScene)
-				throw new Exception("SceneSwitch Versuch mit unterschiedlichen Zielen. Was geht denn hier ab?!?");
-			mScene = mSavegame.Scenes[pWPHansel.DestinationScene];
-			mHansel.Position = mScene.Waypoints[pWPHansel.DestinationWaypoint].Position;
-			mGretel.Position = mScene.Waypoints[pWPGretel.DestinationWaypoint].Position;
 		}
 
 		#endregion

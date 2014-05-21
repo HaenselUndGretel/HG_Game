@@ -8,7 +8,7 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	public class SceneSwitch
+	public class SceneSwitchHandler
 	{
 		public enum State
 		{
@@ -21,6 +21,8 @@ namespace HanselAndGretel
 
 		public double FadingDuration;
 		public double FadingProgress;
+		protected Vector2 LeaveHansel;
+		protected Vector2 LeaveGretel;
 		protected Vector2 DestinationHansel;
 		protected Vector2 DestinationGretel;
 		protected int DestinationScene;
@@ -39,7 +41,7 @@ namespace HanselAndGretel
 
 		#region Constructor
 
-		public SceneSwitch()
+		public SceneSwitchHandler()
 		{
 			Initialize();
 		}
@@ -78,17 +80,15 @@ namespace HanselAndGretel
 		{
 			foreach (Waypoint wp in pScene.Waypoints)
 			{
-				if (wp.CollisionBox.Intersects(pHansel.CollisionBox)) //Hänsel berührt den Waypoint
+				if (wp.CollisionBox.Contains(pHansel.CollisionBox)) //Hänsel steht in diesem Waypoint
 				{
-					if (wp.TwoPlayerEnter) //Der Waypoint kann von 2 Spielern betreten werden
+					if (wp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht auch in diesem Waypoint
 					{
-						if (wp.CollisionBox.Intersects(pGretel.CollisionBox)) //Gretel berührt auch den Waypoint
-						{
+						if (!OneWay(pSceneLookup, wp))
 							StartSwitching(pHansel, pGretel, wp, wp, pSceneLookup);
-							return;
-						}
+						return;
 					}
-					else if (wp.CollisionBox.Contains(pHansel.CollisionBox)) //Der Waypoint kann von einem Spieler betreten werden & Hänsel steht im Waypoint
+					else
 					{
 						foreach(Waypoint otherWp in pScene.Waypoints)
 						{
@@ -96,7 +96,8 @@ namespace HanselAndGretel
 							{
 								if (otherWp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht in diesem Waypoint
 								{
-									StartSwitching(pHansel, pGretel, wp, otherWp, pSceneLookup);
+									if (!OneWay(pSceneLookup, wp) && !OneWay(pSceneLookup, otherWp))
+										StartSwitching(pHansel, pGretel, wp, otherWp, pSceneLookup);
 									return;
 								}
 							}
@@ -104,6 +105,18 @@ namespace HanselAndGretel
 					}
 				}
 			}
+		}
+
+		public bool OneWay(SceneData[] pSceneLookup, Waypoint pWp)
+		{
+			foreach(Waypoint wp in pSceneLookup[pWp.DestinationScene].Waypoints)
+			{
+				if(wp.ObjectId == pWp.DestinationWaypoint)
+				{
+					return wp.OneWay;
+				}
+			}
+			throw new Exception("Destination Waypoint not found!");
 		}
 
 		/// <summary>
@@ -116,6 +129,8 @@ namespace HanselAndGretel
 		/// <param name="pSceneLookup">Scenes-Array aus dem Savegame.</param>
 		public void StartSwitching(Hansel pHansel, Gretel pGretel, Waypoint pWpHansel, Waypoint pWpGretel, SceneData[] pSceneLookup)
 		{
+			LeaveHansel = -pWpHansel.MovementOnEnter;
+			LeaveGretel = -pWpGretel.MovementOnEnter;
 			//Destination auf 0,0 setzen für ErrorTest
 			DestinationHansel = Vector2.Zero;
 			DestinationGretel = Vector2.Zero;
@@ -142,6 +157,8 @@ namespace HanselAndGretel
 		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel) 
 		{
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
+			pHansel.MoveManually(LeaveHansel, pScene, false);
+			pGretel.MoveManually(LeaveGretel, pScene, false);
 			if (FadingProgress >= FadingDuration)
 			{
 				//Switch
@@ -162,8 +179,8 @@ namespace HanselAndGretel
 				if (wp.CollisionBox.Intersects(pHansel.CollisionBox) || wp.CollisionBox.Intersects(pGretel.CollisionBox))
 				{
 					TmpEnterFinished = false;
-					pHansel.MoveManually(wp.MovementOnEnter, pScene);
-					pGretel.MoveManually(wp.MovementOnEnter, pScene);
+					pHansel.MoveManually(wp.MovementOnEnter, pScene, true);
+					pGretel.MoveManually(wp.MovementOnEnter, pScene, true);
 				}
 			}
 			if (TmpEnterFinished)

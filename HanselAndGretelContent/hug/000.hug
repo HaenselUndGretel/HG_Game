@@ -48,7 +48,6 @@
       </Texture>
       <DestinationScene>1</DestinationScene>
       <DestinationWaypoint>0</DestinationWaypoint>
-      <TwoPlayerEnter>true</TwoPlayerEnter>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>-1</X>
@@ -80,40 +79,7 @@
       </Texture>
       <DestinationScene>1</DestinationScene>
       <DestinationWaypoint>1</DestinationWaypoint>
-      <TwoPlayerEnter>true</TwoPlayerEnter>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-        <Y>0</Y>
-      </MovementOnEnter>
-    </Waypoint>
-    <Waypoint>
-      <ObjectId>2</ObjectId>
-      <Position>
-        <X>386</X>
-        <Y>90</Y>
-      </Position>
-      <PositionX>386</PositionX>
-      <PositionY>90</PositionY>
-      <CollisionBox>
-        <X>386</X>
-        <Y>90</Y>
-        <Width>2</Width>
-        <Height>1</Height>
-        <Location>
-          <X>386</X>
-          <Y>90</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Texture>
-        <Name />
-      </Texture>
-      <DestinationScene>0</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <TwoPlayerEnter>true</TwoPlayerEnter>
-      <OneWay>false</OneWay>
+      <OneWay>true</OneWay>
       <MovementOnEnter>
         <X>-1</X>
         <Y>0</Y>
@@ -163,7 +129,36 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-      <Tiles />
+      <Tiles>
+        <GameObject xsi:type="Sprite">
+          <ObjectId>2</ObjectId>
+          <Position>
+            <X>159.576233</X>
+            <Y>-228.477676</Y>
+          </Position>
+          <PositionX>159</PositionX>
+          <PositionY>-228</PositionY>
+          <CollisionBox>
+            <X>159</X>
+            <Y>-228</Y>
+            <Width>1920</Width>
+            <Height>1080</Height>
+            <Location>
+              <X>159</X>
+              <Y>-228</Y>
+            </Location>
+          </CollisionBox>
+          <IsVisible>true</IsVisible>
+          <DrawZ>0</DrawZ>
+          <TextureName>Stumpf</TextureName>
+          <Width>1920</Width>
+          <Height>1080</Height>
+          <Rotation>0</Rotation>
+          <Texture>
+            <Name />
+          </Texture>
+        </GameObject>
+      </Tiles>
     </ParallaxPlane>
     <ParallaxPlane>
       <ObjectId>8</ObjectId>
@@ -232,6 +227,8 @@
       <Tiles />
     </ParallaxPlane>
   </ParallaxPlanes>
+  <InteractiveObjects />
   <Collectables />
   <Items />
+  <Lights />
 </SceneData>

@@ -75,9 +75,6 @@ namespace HanselAndGretel
 		public override void Draw()
 		{
 			//---------------Collect Packages
-			List<DrawPackage> DrawPackagesPlanes = new List<DrawPackage>();
-			DrawPackagesPlanes.AddRange(mScene.DrawPackagesPlanesBackground);
-			
 			List<DrawPackage> DrawPackagesGame = new List<DrawPackage>();
 			DrawPackagesGame.AddRange(mScene.DrawPackagesGame);
 			DrawPackagesGame.Add(mHansel.DrawPackage);
@@ -94,8 +91,6 @@ namespace HanselAndGretel
 			
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, TmpTransformation);
 			mSkeletonRenderer.Effect.World = TmpTransformation;
-			foreach (DrawPackage dPack in DrawPackagesPlanes)
-				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			foreach(DrawPackage dPack in DrawPackagesGame)
 				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			mSpriteBatch.End();

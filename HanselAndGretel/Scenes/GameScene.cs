@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.Manager;
 using KryptonEngine.SceneManagement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -22,6 +23,7 @@ namespace HanselAndGretel
 		protected Gretel mGretel;
 		protected SceneData mScene;
 		protected SkeletonRenderer mSkeletonRenderer;
+		private Texture2D mActionButton;
 
 		#endregion
 
@@ -51,10 +53,70 @@ namespace HanselAndGretel
 
 		public override void LoadContent()
 		{
+			mActionButton = TextureManager.Instance.GetElementByString("button_x");
 			mSavegame = Savegame.Load();
+			//-----Workaround für linerare Abhängigkeit HG_Game -> HG_Data -> KryptonEngine-----
+			for (int i = 0; i < mSavegame.Scenes.Length; i++)
+			{
+				foreach (InteractiveObject iObj in mSavegame.Scenes[i].InteractiveObjects)
+				{
+					switch (iObj.Activity)
+					{
+						case Activity.CaughtInCobweb:
+							iObj.ActivityState = new CaughtInCobweb(mHansel, mGretel);
+							break;
+						case Activity.CaughtInSwamp:
+							iObj.ActivityState = new CaughtInSwamp(mHansel, mGretel);
+							break;
+						case Activity.KnockOverTree:
+							iObj.ActivityState = new KnockOverTree(mHansel, mGretel);
+							break;
+						case Activity.BalanceOverTree:
+							iObj.ActivityState = new KnockOverTree(mHansel, mGretel);
+							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.PushRock:
+							iObj.ActivityState = new PushRock(mHansel, mGretel);
+							break;
+						case Activity.SlipThroughRock:
+							iObj.ActivityState = new SlipThroughRock(mHansel, mGretel);
+							break;
+						case Activity.Crawl:
+							iObj.ActivityState = new Crawl(mHansel, mGretel);
+							break;
+						case Activity.JumpOverGap:
+							iObj.ActivityState = new JumpOverGap(mHansel, mGretel);
+							break;
+						case Activity.LegUp:
+							iObj.ActivityState = new LegUp(mHansel, mGretel);
+							break;
+						case Activity.LegUpGrab:
+							iObj.ActivityState = new LegUpGrab(mHansel, mGretel);
+							break;
+						case Activity.UseKey:
+							iObj.ActivityState = new UseKey(mHansel, mGretel);
+							break;
+						case Activity.PullDoor:
+							iObj.ActivityState = new UseKey(mHansel, mGretel);
+							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.UseChalk:
+							iObj.ActivityState = new UseChalk(mHansel, mGretel);
+							break;
+						case Activity.UseWell:
+							iObj.ActivityState = new UseWell(mHansel, mGretel);
+							break;
+						default:
+							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + "ist eine ungültige Action angegeben!");
+					}
+				}
+			}
+
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
 			mHansel.LoadContent();
 			mGretel.LoadContent();
+			mHansel.mCurrentActivity = new None();
+			mGretel.mCurrentActivity = new None();
 			mHansel.Position = mSavegame.PositionHansel;
 			mGretel.Position = mSavegame.PositionGretel;
 			mHansel.LoadReferences(mCamera, mGretel);
@@ -79,7 +141,8 @@ namespace HanselAndGretel
 			DrawPackagesGame.AddRange(mScene.DrawPackagesGame);
 			DrawPackagesGame.Add(mHansel.DrawPackage);
 			DrawPackagesGame.Add(mGretel.DrawPackage);
-			
+			DrawPackagesGame.Add(new DrawPackage(new Vector2(mHansel.PositionX - 50, mHansel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityHansel));
+			DrawPackagesGame.Add(new DrawPackage(new Vector2(mGretel.PositionX - 50, mGretel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityGretel));
 
 			//ToDo: DrawPackage Sorting!
 

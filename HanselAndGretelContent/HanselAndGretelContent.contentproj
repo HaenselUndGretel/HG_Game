@@ -49,6 +49,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gfx\button_x.png">
+      <Name>button_x</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="spine\ashbrett-1.png">
       <Name>ashbrett-1</Name>
       <Importer>TextureImporter</Importer>

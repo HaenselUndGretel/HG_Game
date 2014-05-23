@@ -72,18 +72,19 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InteractiveObjects\CaughtInCobweb.cs" />
-    <Compile Include="InteractiveObjects\Crawl.cs" />
-    <Compile Include="InteractiveObjects\JumpOverGap.cs" />
-    <Compile Include="InteractiveObjects\LegUp.cs" />
-    <Compile Include="InteractiveObjects\LegUpGrab.cs" />
-    <Compile Include="InteractiveObjects\PushRock.cs" />
-    <Compile Include="InteractiveObjects\SlipThroughRock.cs" />
-    <Compile Include="InteractiveObjects\CaughtInSwamp.cs" />
-    <Compile Include="InteractiveObjects\KnockOverTree.cs" />
-    <Compile Include="InteractiveObjects\UseChalk.cs" />
-    <Compile Include="InteractiveObjects\UseKey.cs" />
-    <Compile Include="InteractiveObjects\UseWell.cs" />
+    <Compile Include="Activities\CaughtInCobweb.cs" />
+    <Compile Include="Activities\Crawl.cs" />
+    <Compile Include="Activities\JumpOverGap.cs" />
+    <Compile Include="Activities\LegUp.cs" />
+    <Compile Include="Activities\LegUpGrab.cs" />
+    <Compile Include="Activities\None.cs" />
+    <Compile Include="Activities\PushRock.cs" />
+    <Compile Include="Activities\SlipThroughRock.cs" />
+    <Compile Include="Activities\CaughtInSwamp.cs" />
+    <Compile Include="Activities\KnockOverTree.cs" />
+    <Compile Include="Activities\UseChalk.cs" />
+    <Compile Include="Activities\UseKey.cs" />
+    <Compile Include="Activities\UseWell.cs" />
     <Compile Include="Logic\ActivityHandler.cs" />
     <Compile Include="Logic\Logic.cs" />
     <Compile Include="Logic\SceneSwitchHandler.cs" />

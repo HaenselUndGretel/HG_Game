@@ -2,6 +2,7 @@
 using KryptonEngine;
 using KryptonEngine.Controls;
 using KryptonEngine.Entities;
+using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -14,18 +15,14 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		//ButtonFading
-		public float ButtonShowingHansel;
-		public float ButtonShowingGretel;
-		protected const float ShowButtonFadingDuration = 1.0f;
-		protected bool ShowButtonHansel;
-		protected bool ShowButtonGretel;
+		//ActionInfo
+		public float ActionInfoVisibilityHansel;
+		public float ActionInfoVisibilityGretel;
+		protected const float ActionInfoFadingDuration = 1.0f;
+		protected bool ShowActionInfoHansel;
+		protected bool ShowActionInfoGretel;
 		protected string ActionInfoHansel;
 		protected string ActionInfoGretel;
-
-		//Currently possible Activities
-		public List<Activity> PossibleActivitiesHansel;
-		public List<Activity> PossibleActivitiesGretel;
 
 		#endregion
 
@@ -42,14 +39,183 @@ namespace HanselAndGretel
 
 		public void Initialize()
 		{
-			ButtonShowingHansel = 0;
-			ButtonShowingGretel = 0;
+			ActionInfoVisibilityHansel = 0;
+			ActionInfoVisibilityGretel = 0;
+			ShowActionInfoHansel = false;
+			ShowActionInfoGretel = false;
 			ActionInfoHansel = "Not Initialized";
 			ActionInfoGretel = "Not Initialized";
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
+			InteractiveObject TmpIObjEnteredByHansel = GetEnteredInteractiveObject(pHansel, pScene);
+			InteractiveObject TmpIObjEnteredByGretel = GetEnteredInteractiveObject(pGretel, pScene);
+			//Get Possible Activity from EnteredInteractiveObject
+			Activity TmpPossibleActivityHansel;
+			Activity TmpPossibleActivityGretel;
+			if (TmpIObjEnteredByHansel == null)
+				TmpPossibleActivityHansel = Activity.None;
+			else
+				TmpPossibleActivityHansel = TmpIObjEnteredByHansel.ActivityState.GetPossibleActivity(TestInteractiveObjectContains(pHansel, TmpIObjEnteredByHansel));
+			if (TmpIObjEnteredByGretel == null)
+				TmpPossibleActivityGretel = Activity.None;
+			else
+				TmpPossibleActivityGretel = TmpIObjEnteredByGretel.ActivityState.GetPossibleActivity(TestInteractiveObjectContains(pGretel, TmpIObjEnteredByGretel));
+			//Checken ob der Player diese Activity ausführen kann
+			bool TmpHandicappedHansel = !pHansel.CheckForAbility(TmpPossibleActivityHansel);
+			bool TmpHandicappedGretel = !pGretel.CheckForAbility(TmpPossibleActivityGretel);
+			//Wenn Player diese Activity nicht ausführen kann, die PossibleActivity entsprechend anpassen
+			if (TmpHandicappedHansel)
+				TmpPossibleActivityHansel = Activity.None;
+			if (TmpHandicappedGretel)
+				TmpPossibleActivityGretel = Activity.None;
+
+			//Update Activities
+			TryToStartActivity(pHansel, pGretel, TmpIObjEnteredByHansel, TmpIObjEnteredByGretel, TmpHandicappedHansel, TmpHandicappedGretel);
+			UpdateActivities(pHansel, pGretel);
+			//Update ActionInfo
+			UpdateActionInfo(pHansel.mCurrentActivity, pGretel.mCurrentActivity, TmpPossibleActivityHansel, TmpPossibleActivityGretel);
+		}
+
+		#region Update Input & Activities
+
+		/// <summary>
+		/// Activity anhand von Situation und Input ggf starten
+		/// </summary>
+		protected void TryToStartActivity(Hansel pHansel, Gretel pGretel, InteractiveObject pEnteredIObjHansel, InteractiveObject pEnteredIObjGretel, bool pHandicappedHansel, bool pHandicappedGretel)
+		{
+			//Hansel
+			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjHansel != null && pEnteredIObjHansel.ActivityState.mStateHansel == ActivityState.State.Idle && !pHandicappedHansel)
+			{
+				if (pHansel.Input.ActionIsPressed)
+				{
+					pHansel.mCurrentActivity = pEnteredIObjHansel.ActivityState;
+					pHansel.mCurrentActivity.mStateHansel = ActivityState.State.Preparing;
+				}
+			}
+
+			//Gretel
+			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjGretel != null && pEnteredIObjGretel.ActivityState.mStateGretel == ActivityState.State.Idle && !pHandicappedGretel)
+			{
+				if (pGretel.Input.ActionIsPressed)
+				{
+					pGretel.mCurrentActivity = pEnteredIObjGretel.ActivityState;
+					pGretel.mCurrentActivity.mStateGretel = ActivityState.State.Preparing;
+				}
+			}
+		}
+
+		/// <summary>
+		/// Activities der Player passend Aktualisieren
+		/// </summary>
+		protected void UpdateActivities(Hansel pHansel, Gretel pGretel)
+		{
+			pHansel.mCurrentActivity.GetUpdateMethodForPlayer("Hansel")("Hansel");
+			pGretel.mCurrentActivity.GetUpdateMethodForPlayer("Gretel")("Hansel");
+		}
+
+		#endregion
+
+		#region Get&Test InteractiveObject
+
+		/// <summary>
+		/// Getted das InteractiveObject dessen ActionRectangles der angegebene Player intersected.
+		/// </summary>
+		/// <param name="pPlayer">Spieler gegen den getestet werden soll</param>
+		/// <param name="pScene">Scene mit zu testenden InteractiveObjects</param>
+		/// <param name="pContains">False = Player muss nur intersecten. True = Player muss komplett im Action Rectangle stehen.</param>
+		protected InteractiveObject GetEnteredInteractiveObject(Player pPlayer, SceneData pScene)
+		{
+			foreach (InteractiveObject iObj in pScene.InteractiveObjects)
+			{
+				foreach (Rectangle rect in iObj.ActionRectList)
+				{
+					if (rect.Intersects(pPlayer.CollisionBox)) //Intersects
+					{
+						return iObj;
+					}
+				}
+			}
+			return null;
+		}
+
+		/// <summary>
+		/// Testet ob der Player von einem ActionRectangle des InteractiveObjects contained wird.
+		/// </summary>
+		protected bool TestInteractiveObjectContains(Player pPlayer, InteractiveObject pIObj)
+		{
+			if (pIObj == null)
+				return false;
+			foreach (Rectangle rect in pIObj.ActionRectList)
+			{
+				if (rect.Contains(pPlayer.CollisionBox)) //Contains
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		#endregion
+
+		#region Update ActionInfo
+		
+		/// <summary>
+		/// Die ActionInfo wird geupdated incl Sichtbarkeit.
+		/// </summary>
+		protected void UpdateActionInfo(ActivityState pActivityHansel, ActivityState pActivityGretel, Activity pPossibleActivityHansel, Activity pPossibleActivityGretel)
+		{
+			if (pPossibleActivityHansel == Activity.None || pActivityHansel.GetType() != typeof(None))
+			{
+				ShowActionInfoHansel = false;
+			}
+			else
+			{
+				ShowActionInfoHansel = true;
+				ActionInfoHansel = ActivityState.ActivityInfo[pPossibleActivityHansel];
+			}
+			if (pPossibleActivityGretel == Activity.None || pActivityGretel.GetType() != typeof(None))
+			{
+				ShowActionInfoGretel = false;
+			}
+			else
+			{
+				ShowActionInfoGretel = true;
+				ActionInfoGretel = ActivityState.ActivityInfo[pPossibleActivityGretel];
+			}
+			UpdateActionInfoFading();
+		}
+
+		/// <summary>
+		/// Der Fadingstatus der ActionInfo wird geupdated.
+		/// </summary>
+		protected void UpdateActionInfoFading()
+		{
+			//Fade ButtonShowing
+			float TmpFadingDelta = ActionInfoFadingDuration * (EngineSettings.Time.ElapsedGameTime.Milliseconds / 1000f);
+			if (ShowActionInfoHansel) //Fade ButtonShowingHansel in
+				ActionInfoVisibilityHansel += TmpFadingDelta;
+			else //Fade ButtonShowingHansel out
+				ActionInfoVisibilityHansel -= TmpFadingDelta;
+			if (ShowActionInfoGretel) //Fade ButtonShowingGretel in
+				ActionInfoVisibilityGretel += TmpFadingDelta;
+			else //Fade ButtonShowingGretel out
+				ActionInfoVisibilityGretel -= TmpFadingDelta;
+			//Clamp ButtonShowing to 0-1
+			ActionInfoVisibilityHansel = MathHelper.Clamp(ActionInfoVisibilityHansel, 0f, 1f);
+			ActionInfoVisibilityGretel = MathHelper.Clamp(ActionInfoVisibilityGretel, 0f, 1f);
+		}
+
+		#endregion
+
+		#endregion
+
+
+		#region Old Code
+
+		/*
+		 * Old Update
 			UpdatePossibleActivities(pScene, pHansel, pGretel);
 			StartActivityFromInput(pHansel, pGretel);
 			if (PrepareActivity(pHansel))
@@ -60,8 +226,8 @@ namespace HanselAndGretel
 					FinishActivity(pGretel);
 			UpdateButton(pHansel, pGretel, pScene);
 			UpdateButtonShowing();
-		}
-
+			*/
+		/*
 		#region Update PossibleActivities
 
 		public void UpdatePossibleActivities(SceneData pScene, Hansel pHansel, Gretel pGretel)
@@ -221,7 +387,7 @@ namespace HanselAndGretel
 			Activity ActivityGretel = GetPrimaryPossibleActivity(PossibleActivitiesGretel);
 			if (pHansel.mCurrentActivity != Activity.None || ActivityHansel == Activity.None)
 			{
-				ShowButtonHansel = false; //Keine Info anzeigen
+				ShowActionInfoansel = false; //Keine Info anzeigen
 			}
 			else
 			{
@@ -230,7 +396,7 @@ namespace HanselAndGretel
 			
 			if (pGretel.mCurrentActivity != Activity.None || ActivityGretel == Activity.None)
 			{
-				ShowButtonGretel = false; //Keine Info anzeigen
+				ShowActionInfoGretel = false; //Keine Info anzeigen
 			}
 			else
 			{
@@ -261,50 +427,11 @@ namespace HanselAndGretel
 			//UseItem, SwitchItem
 		}
 
-		/// <summary>
-		/// Der Fadingstatus der ButtonInfos wird geupdated.
-		/// </summary>
-		public void UpdateButtonShowing()
-		{
-			//Fade ButtonShowing
-			float TmpFadingDelta = ShowButtonFadingDuration * (EngineSettings.Time.ElapsedGameTime.Milliseconds / 1000f);
-			if (ShowButtonHansel) //Fade ButtonShowingHansel in
-				ButtonShowingHansel += TmpFadingDelta;
-			else //Fade ButtonShowingHansel out
-				ButtonShowingHansel -= TmpFadingDelta;
-			if (ShowButtonGretel) //Fade ButtonShowingGretel in
-				ButtonShowingGretel += TmpFadingDelta;
-			else //Fade ButtonShowingGretel out
-				ButtonShowingGretel -= TmpFadingDelta;
-			//Clamp ButtonShowing to 0-1
-			ButtonShowingHansel = MathHelper.Clamp(ButtonShowingHansel, 0f, 1f);
-			ButtonShowingGretel = MathHelper.Clamp(ButtonShowingGretel, 0f, 1f);
-		}
+		
 
 		#endregion
-
-		/// <summary>
-		/// Getted das InteractiveObject in dessen Action Rectangle der angegebene Player steht.
-		/// </summary>
-		/// <param name="pPlayer">Spieler gegen den getestet werden soll</param>
-		/// <param name="pScene">Scene mit zu testenden InteractiveObjects</param>
-		/// <param name="pContains">False = Player muss nur intersecten. True = Player muss komplett im Action Rectangle stehen.</param>
-		public InteractiveObject GetEnteredInteractiveObject(Player pPlayer, SceneData pScene, bool pContains)
-		{
-			foreach (InteractiveObject iObj in pScene.InteractiveObjects)
-			{
-				foreach (Rectangle rect in iObj.ActionRectList)
-				{
-					if (rect.Intersects(pPlayer.CollisionBox)) //Hansel kann mit Object interacten
-					{
-						if (!pContains || rect.Contains(pPlayer.CollisionBox))
-							return iObj;
-					}
-				}
-			}
-			return null;
-		}
-
+		*/
 		#endregion
+
 	}
 }

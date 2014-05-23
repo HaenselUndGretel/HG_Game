@@ -157,8 +157,8 @@ namespace HanselAndGretel
 		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel) 
 		{
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
-			pHansel.MoveManually(LeaveHansel, pScene, false);
-			pGretel.MoveManually(LeaveGretel, pScene, false);
+			pHansel.MoveManually(LeaveHansel, 1f, pScene, false);
+			pGretel.MoveManually(LeaveGretel, 1f, pScene, false);
 			if (FadingProgress >= FadingDuration)
 			{
 				//Switch
@@ -179,8 +179,8 @@ namespace HanselAndGretel
 				if (wp.CollisionBox.Intersects(pHansel.CollisionBox) || wp.CollisionBox.Intersects(pGretel.CollisionBox))
 				{
 					TmpEnterFinished = false;
-					pHansel.MoveManually(wp.MovementOnEnter, pScene, true);
-					pGretel.MoveManually(wp.MovementOnEnter, pScene, true);
+					pHansel.MoveManually(wp.MovementOnEnter, 1f);
+					pGretel.MoveManually(wp.MovementOnEnter, 1f);
 				}
 			}
 			if (TmpEnterFinished)

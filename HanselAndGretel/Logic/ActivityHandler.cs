@@ -111,8 +111,8 @@ namespace HanselAndGretel
 		/// </summary>
 		protected void UpdateActivities(Hansel pHansel, Gretel pGretel)
 		{
-			pHansel.mCurrentActivity.GetUpdateMethodForPlayer("Hansel")("Hansel");
-			pGretel.mCurrentActivity.GetUpdateMethodForPlayer("Gretel")("Hansel");
+			pHansel.mCurrentActivity.GetUpdateMethodForPlayer(pHansel)(pHansel);
+			pGretel.mCurrentActivity.GetUpdateMethodForPlayer(pGretel)(pGretel);
 		}
 
 		#endregion

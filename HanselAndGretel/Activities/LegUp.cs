@@ -12,20 +12,14 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		protected Hansel rHansel;
-		protected Gretel rGretel;
-		protected InteractiveObject rIObj;
 		protected Vector2 mGretelActionStartOffset;
 		protected Vector2 mGretelMovedByAction;
 
 		#endregion
 
 		public LegUp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
-			:base()
+			: base(pHansel, pGretel, pIObj)
 		{
-			rHansel = pHansel;
-			rGretel = pGretel;
-			rIObj = pIObj;
 		}
 
 		#region Override Methods
@@ -37,9 +31,9 @@ namespace HanselAndGretel
 			return Activity.None;
 		}
 
-		public override void PrepareAction(string pPlayer)
+		public override void PrepareAction(Player pPlayer)
 		{
-			if (pPlayer == "Hansel")
+			if (pPlayer.GetType() == typeof(Hansel))
 			{
 				if (!rHansel.Input.ActionIsPressed)
 				{
@@ -69,7 +63,7 @@ namespace HanselAndGretel
 
 				rHansel.MoveManually(Movement, TmpSpeedFactor); //Spieler bewegen
 			}
-			else if (pPlayer == "Gretel")
+			else if (pPlayer.GetType() == typeof(Gretel))
 			{
 				if (!rGretel.Input.ActionIsPressed)
 				{
@@ -105,9 +99,9 @@ namespace HanselAndGretel
 			}
 		}
 
-		public override void StartAction(string pPlayer)
+		public override void StartAction(Player pPlayer)
 		{
-			if ((pPlayer == "Hansel" && mStateGretel == State.Starting) || (pPlayer == "Gretel" && mStateHansel == State.Starting))
+			if ((pPlayer.GetType() == typeof(Hansel) && mStateGretel == State.Starting) || (pPlayer.GetType() == typeof(Gretel) && mStateHansel == State.Starting))
 			{
 				rHansel.mModel.SetAnimation("attack", false);
 				rGretel.mModel.SetAnimation("attack", false);
@@ -116,14 +110,14 @@ namespace HanselAndGretel
 			}
 		}
 
-		public override void UpdateAction(string pPlayer)
+		public override void UpdateAction(Player pPlayer)
 		{
-			if (pPlayer == "Hansel" && rHansel.mModel.AnimationComplete)
+			if (pPlayer.GetType() == typeof(Hansel) && rHansel.mModel.AnimationComplete)
 			{
 				rHansel.mCurrentActivity = new None();
 				mStateHansel = State.Idle;
 			}
-			else if (pPlayer == "Gretel" && rHansel.mModel.AnimationComplete)
+			else if (pPlayer.GetType() == typeof(Gretel) && rHansel.mModel.AnimationComplete)
 			{
 				rGretel.Position += mGretelMovedByAction;
 				rGretel.mCurrentActivity = new None();

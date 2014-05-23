@@ -9,20 +9,9 @@ namespace HanselAndGretel
 {
 	class KnockOverTree : ActivityState
 	{
-		#region Properties
-
-		protected Hansel rHansel;
-		protected Gretel rGretel;
-		protected InteractiveObject rIObj;
-
-		#endregion
-
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
-			:base()
+			: base(pHansel, pGretel, pIObj)
 		{
-			rHansel = pHansel;
-			rGretel = pGretel;
-			rIObj = pIObj;
 		}
 
 		#region Override Methods
@@ -38,53 +27,15 @@ namespace HanselAndGretel
 			return Activity.None;
 		}
 
-		public override void PrepareAction(string pPlayer)
+		public override void UpdateAction(Player pPlayer)
 		{
-			if (pPlayer == "Hansel")
-			{
-				if (rHansel.Input.ActionJustPressed)
-					mStateHansel = State.Starting;
-			}
-			else if (pPlayer == "Gretel")
-			{
-				if (rGretel.Input.ActionJustPressed)
-					mStateGretel = State.Starting;
-			}
-			else
-			{
-				throw new Exception("Nicht existenter Spielername!");
-			}
-		}
-
-		public override void StartAction(string pPlayer)
-		{
-			if (pPlayer == "Hansel")
-			{
-				mStateHansel = State.Running;
-			}
-			else if (pPlayer == "Gretel")
-			{
-				mStateGretel = State.Running;
-			}
-			else
-			{
-				throw new Exception("Nicht existenter Spielername!");
-			}
-		}
-
-		public override void UpdateAction(string pPlayer)
-		{
-			if (pPlayer == "Hansel")
+			if (pPlayer.GetType() == typeof(Hansel))
 			{
 				
 			}
-			else if (pPlayer == "Gretel")
+			else if (pPlayer.GetType() == typeof(Gretel))
 			{
 				
-			}
-			else
-			{
-				throw new Exception("Nicht existenter Spielername!");
 			}
 		}
 

@@ -9,18 +9,20 @@ namespace HanselAndGretel
 {
 	class PushRock : ActivityState
 	{
-				#region Properties
+		#region Properties
 
 		protected Hansel rHansel;
 		protected Gretel rGretel;
+		protected InteractiveObject rIObj;
 
 		#endregion
 
-		public PushRock(Hansel pHansel, Gretel pGretel)
+		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base()
 		{
 			rHansel = pHansel;
 			rGretel = pGretel;
+			rIObj = pIObj;
 		}
 
 		#region Override Methods

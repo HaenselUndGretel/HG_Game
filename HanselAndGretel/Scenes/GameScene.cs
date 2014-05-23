@@ -23,7 +23,7 @@ namespace HanselAndGretel
 		protected Gretel mGretel;
 		protected SceneData mScene;
 		protected SkeletonRenderer mSkeletonRenderer;
-		private Texture2D mActionButton;
+		protected Texture2D mActionButton;
 
 		#endregion
 
@@ -56,6 +56,7 @@ namespace HanselAndGretel
 			mActionButton = TextureManager.Instance.GetElementByString("button_x");
 			mSavegame = Savegame.Load();
 			//-----Workaround für linerare Abhängigkeit HG_Game -> HG_Data -> KryptonEngine-----
+			#region Setup InteractiveObjects.ActivityState
 			for (int i = 0; i < mSavegame.Scenes.Length; i++)
 			{
 				foreach (InteractiveObject iObj in mSavegame.Scenes[i].InteractiveObjects)
@@ -111,6 +112,7 @@ namespace HanselAndGretel
 					}
 				}
 			}
+			#endregion
 
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
 			mHansel.LoadContent();
@@ -128,8 +130,8 @@ namespace HanselAndGretel
 			//Update Logic
 			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel);
 			//Update Player
-			mHansel.Update(mLogic.HanselMayMove, mScene);
-			mGretel.Update(mLogic.GretelMayMove, mScene);
+			mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
+			mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
 			//Update Camera
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
 		}

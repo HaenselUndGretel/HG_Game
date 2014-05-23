@@ -13,14 +13,16 @@ namespace HanselAndGretel
 
 		protected Hansel rHansel;
 		protected Gretel rGretel;
+		protected InteractiveObject rIObj;
 
 		#endregion
 
-		public LegUpGrab(Hansel pHansel, Gretel pGretel)
+		public LegUpGrab(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base()
 		{
 			rHansel = pHansel;
 			rGretel = pGretel;
+			rIObj = pIObj;
 		}
 
 		#region Override Methods

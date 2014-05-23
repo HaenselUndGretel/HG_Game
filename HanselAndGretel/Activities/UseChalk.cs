@@ -9,18 +9,20 @@ namespace HanselAndGretel
 {
 	class UseChalk : ActivityState
 	{
-				#region Properties
+		#region Properties
 
 		protected Hansel rHansel;
 		protected Gretel rGretel;
+		protected InteractiveObject rIObj;
 
 		#endregion
 
-		public UseChalk(Hansel pHansel, Gretel pGretel)
+		public UseChalk(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base()
 		{
 			rHansel = pHansel;
 			rGretel = pGretel;
+			rIObj = pIObj;
 		}
 
 		#region Override Methods

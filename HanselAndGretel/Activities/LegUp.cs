@@ -20,6 +20,7 @@ namespace HanselAndGretel
 		public LegUp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
+			mGretelActionStartOffset = new Vector2(80, -20);
 		}
 
 		#region Override Methods

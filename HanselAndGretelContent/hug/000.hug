@@ -10,225 +10,69 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <MoveArea>
-    <Rectangle>
-      <X>225</X>
-      <Y>257</Y>
-      <Width>657</Width>
-      <Height>45</Height>
-      <Location>
-        <X>225</X>
-        <Y>257</Y>
-      </Location>
-    </Rectangle>
-  </MoveArea>
-  <Waypoints>
-    <Waypoint>
-      <ObjectId>0</ObjectId>
-      <Position>
-        <X>1052</X>
-        <Y>40</Y>
-      </Position>
-      <PositionX>1052</PositionX>
-      <PositionY>40</PositionY>
-      <CollisionBox>
-        <X>1052</X>
-        <Y>40</Y>
-        <Width>164</Width>
-        <Height>151</Height>
-        <Location>
-          <X>1052</X>
-          <Y>40</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Texture>
-        <Name />
-      </Texture>
-      <DestinationScene>1</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-        <Y>0</Y>
-      </MovementOnEnter>
-    </Waypoint>
-    <Waypoint>
+  <MoveArea />
+  <Waypoints />
+  <BackgroundSprites />
+  <InteractiveObjects>
+    <InteractiveObject>
       <ObjectId>1</ObjectId>
       <Position>
-        <X>1066</X>
-        <Y>475</Y>
+        <X>-159.399261</X>
+        <Y>-284.790466</Y>
       </Position>
-      <PositionX>1066</PositionX>
-      <PositionY>475</PositionY>
+      <PositionX>-159</PositionX>
+      <PositionY>-284</PositionY>
       <CollisionBox>
-        <X>1066</X>
-        <Y>475</Y>
-        <Width>163</Width>
-        <Height>182</Height>
+        <X>-159</X>
+        <Y>-284</Y>
+        <Width>1920</Width>
+        <Height>1080</Height>
         <Location>
-          <X>1066</X>
-          <Y>475</Y>
+          <X>-159</X>
+          <Y>-284</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
+      <DrawZ>-290</DrawZ>
+      <ActionRectList>
+        <Rectangle>
+          <X>593</X>
+          <Y>267</Y>
+          <Width>438</Width>
+          <Height>281</Height>
+          <Location>
+            <X>593</X>
+            <Y>267</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>630</X>
+          <Y>69</Y>
+          <Width>346</Width>
+          <Height>233</Height>
+          <Location>
+            <X>630</X>
+            <Y>69</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>746.6007</X>
+        <Y>318.209534</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>0</X>
+        <Y>0</Y>
+      </ActionPosition2>
+      <ActionId>11</ActionId>
       <Texture>
         <Name />
       </Texture>
-      <DestinationScene>1</DestinationScene>
-      <DestinationWaypoint>1</DestinationWaypoint>
-      <OneWay>true</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-        <Y>0</Y>
-      </MovementOnEnter>
-    </Waypoint>
-  </Waypoints>
-  <ParallaxPlanes>
-    <ParallaxPlane>
-      <ObjectId>6</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>7</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles>
-        <GameObject xsi:type="Sprite">
-          <ObjectId>2</ObjectId>
-          <Position>
-            <X>159.576233</X>
-            <Y>-228.477676</Y>
-          </Position>
-          <PositionX>159</PositionX>
-          <PositionY>-228</PositionY>
-          <CollisionBox>
-            <X>159</X>
-            <Y>-228</Y>
-            <Width>1920</Width>
-            <Height>1080</Height>
-            <Location>
-              <X>159</X>
-              <Y>-228</Y>
-            </Location>
-          </CollisionBox>
-          <IsVisible>true</IsVisible>
-          <DrawZ>0</DrawZ>
-          <TextureName>Stumpf</TextureName>
-          <Width>1920</Width>
-          <Height>1080</Height>
-          <Rotation>0</Rotation>
-          <Texture>
-            <Name />
-          </Texture>
-        </GameObject>
-      </Tiles>
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>8</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>9</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>10</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-  </ParallaxPlanes>
-  <InteractiveObjects />
+      <TextureName>stamm01</TextureName>
+    </InteractiveObject>
+  </InteractiveObjects>
   <Collectables />
   <Items />
-  <Lights />
 </SceneData>

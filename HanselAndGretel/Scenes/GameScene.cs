@@ -140,7 +140,7 @@ namespace HanselAndGretel
 		{
 			//---------------Collect Packages
 			List<DrawPackage> DrawPackagesGame = new List<DrawPackage>();
-			DrawPackagesGame.AddRange(mScene.DrawPackagesGame);
+			DrawPackagesGame.AddRange(mScene.DrawPackages);
 			DrawPackagesGame.Add(mHansel.DrawPackage);
 			DrawPackagesGame.Add(mGretel.DrawPackage);
 			DrawPackagesGame.Add(new DrawPackage(new Vector2(mHansel.PositionX - 50, mHansel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityHansel));

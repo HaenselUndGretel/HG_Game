@@ -54,67 +54,11 @@ namespace HanselAndGretel
 		public override void LoadContent()
 		{
 			mActionButton = TextureManager.Instance.GetElementByString("button_x");
+			//Savegame
 			mSavegame = Savegame.Load();
-			//-----Workaround für linerare Abhängigkeit HG_Game -> HG_Data -> KryptonEngine-----
-			#region Setup InteractiveObjects.ActivityState
-			for (int i = 0; i < mSavegame.Scenes.Length; i++)
-			{
-				foreach (InteractiveObject iObj in mSavegame.Scenes[i].InteractiveObjects)
-				{
-					switch (iObj.Activity)
-					{
-						case Activity.CaughtInCobweb:
-							iObj.ActivityState = new CaughtInCobweb(mHansel, mGretel, iObj);
-							break;
-						case Activity.CaughtInSwamp:
-							iObj.ActivityState = new CaughtInSwamp(mHansel, mGretel, iObj);
-							break;
-						case Activity.KnockOverTree:
-							iObj.ActivityState = new KnockOverTree(mHansel, mGretel, iObj);
-							break;
-						case Activity.BalanceOverTree:
-							iObj.ActivityState = new KnockOverTree(mHansel, mGretel, iObj);
-							iObj.ActivityState.m2ndState = true;
-							break;
-						case Activity.PushRock:
-							iObj.ActivityState = new PushRock(mHansel, mGretel, iObj);
-							break;
-						case Activity.SlipThroughRock:
-							iObj.ActivityState = new SlipThroughRock(mHansel, mGretel, iObj);
-							break;
-						case Activity.Crawl:
-							iObj.ActivityState = new Crawl(mHansel, mGretel, iObj);
-							break;
-						case Activity.JumpOverGap:
-							iObj.ActivityState = new JumpOverGap(mHansel, mGretel, iObj);
-							break;
-						case Activity.LegUp:
-							iObj.ActivityState = new LegUp(mHansel, mGretel, iObj);
-							break;
-						case Activity.LegUpGrab:
-							iObj.ActivityState = new LegUpGrab(mHansel, mGretel, iObj);
-							break;
-						case Activity.UseKey:
-							iObj.ActivityState = new UseKey(mHansel, mGretel, iObj);
-							break;
-						case Activity.PullDoor:
-							iObj.ActivityState = new UseKey(mHansel, mGretel, iObj);
-							iObj.ActivityState.m2ndState = true;
-							break;
-						case Activity.UseChalk:
-							iObj.ActivityState = new UseChalk(mHansel, mGretel, iObj);
-							break;
-						case Activity.UseWell:
-							iObj.ActivityState = new UseWell(mHansel, mGretel, iObj);
-							break;
-						default:
-							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + "ist eine ungültige Action angegeben!");
-					}
-				}
-			}
-			#endregion
-
+			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			//Hansel & Gretel
 			mHansel.LoadContent();
 			mGretel.LoadContent();
 			mHansel.mCurrentActivity = new None();

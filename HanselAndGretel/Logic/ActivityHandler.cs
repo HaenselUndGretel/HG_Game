@@ -209,6 +209,70 @@ namespace HanselAndGretel
 
 		#endregion
 
+		#region Setup InteractiveObjects.ActivityState
+
+		//-----Workaround für linerare Abhängigkeit HG_Game -> HG_Data -> KryptonEngine-----
+		public void SetupInteractiveObjectsFromDeserialization(Savegame pSavegame, Hansel pHansel, Gretel pGretel)
+		{
+			for (int i = 0; i < pSavegame.Scenes.Length; i++)
+			{
+				foreach (InteractiveObject iObj in pSavegame.Scenes[i].InteractiveObjects)
+				{
+					switch (iObj.Activity)
+					{
+						case Activity.CaughtInCobweb:
+							iObj.ActivityState = new CaughtInCobweb(pHansel, pGretel, iObj);
+							break;
+						case Activity.CaughtInSwamp:
+							iObj.ActivityState = new CaughtInSwamp(pHansel, pGretel, iObj);
+							break;
+						case Activity.KnockOverTree:
+							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
+							break;
+						case Activity.BalanceOverTree:
+							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
+							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.PushRock:
+							iObj.ActivityState = new PushRock(pHansel, pGretel, iObj);
+							break;
+						case Activity.SlipThroughRock:
+							iObj.ActivityState = new SlipThroughRock(pHansel, pGretel, iObj);
+							break;
+						case Activity.Crawl:
+							iObj.ActivityState = new Crawl(pHansel, pGretel, iObj);
+							break;
+						case Activity.JumpOverGap:
+							iObj.ActivityState = new JumpOverGap(pHansel, pGretel, iObj);
+							break;
+						case Activity.LegUp:
+							iObj.ActivityState = new LegUp(pHansel, pGretel, iObj);
+							break;
+						case Activity.LegUpGrab:
+							iObj.ActivityState = new LegUpGrab(pHansel, pGretel, iObj);
+							break;
+						case Activity.UseKey:
+							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							break;
+						case Activity.PullDoor:
+							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.UseChalk:
+							iObj.ActivityState = new UseChalk(pHansel, pGretel, iObj);
+							break;
+						case Activity.UseWell:
+							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);
+							break;
+						default:
+							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + "ist eine ungültige Action angegeben!");
+					}
+				}
+			}
+		}
+
+		#endregion
+
 		#endregion
 
 

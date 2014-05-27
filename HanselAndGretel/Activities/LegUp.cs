@@ -21,6 +21,7 @@ namespace HanselAndGretel
 			: base(pHansel, pGretel, pIObj)
 		{
 			mGretelActionStartOffset = new Vector2(80, -20);
+			mGretelMovedByAction = new Vector2(5, -200);
 		}
 
 		#region Override Methods
@@ -44,55 +45,31 @@ namespace HanselAndGretel
 				}
 
 				//Wenn der Spieler an der passenden Position ist Action starten.
-				if (rHansel.Position == rIObj.ActionPosition1)
+				if (rHansel.Position == rIObj.ActionPosition1 && rGretel.Position == rIObj.ActionPosition1 + mGretelActionStartOffset)
 				{
 					mStateHansel = State.Starting;
 				}
 
-				Vector2 Movement = rIObj.ActionPosition1 - rHansel.Position; //Vector SpielerPosition -> ActionPosition
-				Movement.Normalize(); //Bewegungsrichtung
-
-				Vector2 NewDistance = rIObj.ActionPosition1 - (rHansel.Position + Movement); //Vector Neue SpielerPosition -> ActionPosition
-				NewDistance.Normalize(); //Neue Bewegunsrichtung
-
-				float TmpSpeedFactor = 1f;
-
-				if (NewDistance == Movement * -1) //Neue Beweungsrichtung zeigt gegen Bewegungsrichtung
-				{
-					TmpSpeedFactor = (rIObj.ActionPosition1 - rHansel.Position).Length() / (Movement.Length() * rHansel.Speed); //Nicht übers Ziel hinaus bewegen
-				}
-
-				rHansel.MoveManually(Movement, TmpSpeedFactor); //Spieler bewegen
+				//Spieler bewegen
+				rHansel.MoveAgainstPoint(rIObj.ActionPosition1); 
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
 			{
 				if (!rGretel.Input.ActionIsPressed)
 				{
 					rGretel.mCurrentActivity = new None();
-					mStateHansel = State.Idle;
+					mStateGretel = State.Idle;
 					return;
 				}
 
 				//Wenn der Spieler an der passenden Position ist Action starten.
-				if (rGretel.Position == rIObj.ActionPosition1 + mGretelActionStartOffset)
+				if (rGretel.Position == rIObj.ActionPosition1 + mGretelActionStartOffset && rHansel.Position == rIObj.ActionPosition1)
 				{
-					mStateHansel = State.Starting;
+					mStateGretel = State.Starting;
 				}
 
-				Vector2 Movement = rIObj.ActionPosition1 + mGretelActionStartOffset - rGretel.Position; //Vector SpielerPosition -> ActionPosition
-				Movement.Normalize(); //Bewegungsrichtung
-
-				Vector2 NewDistance = rIObj.ActionPosition1 + mGretelActionStartOffset - (rGretel.Position + Movement); //Vector Neue SpielerPosition -> ActionPosition
-				NewDistance.Normalize(); //Neue Bewegunsrichtung
-
-				float TmpSpeedFactor = 1f;
-
-				if (NewDistance == Movement * -1) //Neue Beweungsrichtung zeigt gegen Bewegungsrichtung
-				{
-					TmpSpeedFactor = (rIObj.ActionPosition1 + mGretelActionStartOffset - rGretel.Position).Length() / (Movement.Length() * rGretel.Speed); //Nicht übers Ziel hinaus bewegen
-				}
-
-				rGretel.MoveManually(Movement, TmpSpeedFactor); //Spieler bewegen
+				//Spieler bewegen
+				rGretel.MoveAgainstPoint(rIObj.ActionPosition1 + mGretelActionStartOffset);
 			}
 			else
 			{
@@ -102,13 +79,10 @@ namespace HanselAndGretel
 
 		public override void StartAction(Player pPlayer)
 		{
-			if ((pPlayer.GetType() == typeof(Hansel) && mStateGretel == State.Starting) || (pPlayer.GetType() == typeof(Gretel) && mStateHansel == State.Starting))
-			{
-				rHansel.mModel.SetAnimation("attack", false);
-				rGretel.mModel.SetAnimation("attack", false);
-				mStateHansel = State.Running;
-				mStateGretel = State.Running;
-			}
+			rHansel.mModel.SetAnimation("attack", false);
+			rGretel.mModel.SetAnimation("attack", false);
+			mStateHansel = State.Running;
+			mStateGretel = State.Running;
 		}
 
 		public override void UpdateAction(Player pPlayer)

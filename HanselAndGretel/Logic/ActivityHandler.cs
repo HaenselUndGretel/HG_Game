@@ -265,7 +265,7 @@ namespace HanselAndGretel
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);
 							break;
 						default:
-							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + "ist eine ungültige Action angegeben!");
+							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + " ist eine ungültige Action angegeben!");
 					}
 				}
 			}

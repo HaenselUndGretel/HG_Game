@@ -58,6 +58,7 @@ namespace HanselAndGretel
 			mSavegame = Savegame.Load();
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			mCamera.GameScreen = mScene.GamePlane;
 			//Hansel & Gretel
 			mHansel.LoadContent();
 			mGretel.LoadContent();
@@ -72,7 +73,7 @@ namespace HanselAndGretel
 		public override void Update()
 		{
 			//Update Logic
-			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel);
+			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera);
 			//Update Player
 			mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
 			mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
@@ -97,13 +98,14 @@ namespace HanselAndGretel
 			DrawBackground();
 
 			Matrix TmpTransformation = mCamera.GetTranslationMatrix();
-			
+			//Draw Game
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, TmpTransformation);
 			mSkeletonRenderer.Effect.World = TmpTransformation;
 			foreach(DrawPackage dPack in DrawPackagesGame)
 				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			mSpriteBatch.End();
 
+			//Draw to Screen
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 			mSpriteBatch.Begin();
 			if (mLogic.SceneSwitchHandler.CurrentState == SceneSwitchHandler.State.Switching)

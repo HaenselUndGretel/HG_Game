@@ -12,13 +12,33 @@
   </GamePlane>
   <MoveArea>
     <Rectangle>
-      <X>904</X>
-      <Y>29</Y>
-      <Width>23</Width>
-      <Height>542</Height>
+      <X>621</X>
+      <Y>32</Y>
+      <Width>88</Width>
+      <Height>507</Height>
       <Location>
-        <X>904</X>
-        <Y>29</Y>
+        <X>621</X>
+        <Y>32</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>365</X>
+      <Y>402</Y>
+      <Width>297</Width>
+      <Height>107</Height>
+      <Location>
+        <X>365</X>
+        <Y>402</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>643</X>
+      <Y>58</Y>
+      <Width>190</Width>
+      <Height>182</Height>
+      <Location>
+        <X>643</X>
+        <Y>58</Y>
       </Location>
     </Rectangle>
   </MoveArea>
@@ -26,19 +46,19 @@
     <Waypoint>
       <ObjectId>0</ObjectId>
       <Position>
-        <X>52</X>
-        <Y>63</Y>
+        <X>1053</X>
+        <Y>122</Y>
       </Position>
-      <PositionX>52</PositionX>
-      <PositionY>63</PositionY>
+      <PositionX>1053</PositionX>
+      <PositionY>122</PositionY>
       <CollisionBox>
-        <X>52</X>
-        <Y>63</Y>
-        <Width>196</Width>
-        <Height>172</Height>
+        <X>1053</X>
+        <Y>122</Y>
+        <Width>200</Width>
+        <Height>200</Height>
         <Location>
-          <X>52</X>
-          <Y>63</Y>
+          <X>1053</X>
+          <Y>122</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -48,29 +68,28 @@
       </Texture>
       <DestinationScene>0</DestinationScene>
       <DestinationWaypoint>0</DestinationWaypoint>
-      <TwoPlayerEnter>true</TwoPlayerEnter>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
+        <X>-1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>1</ObjectId>
       <Position>
-        <X>174</X>
-        <Y>468</Y>
+        <X>988</X>
+        <Y>396</Y>
       </Position>
-      <PositionX>174</PositionX>
-      <PositionY>468</PositionY>
+      <PositionX>988</PositionX>
+      <PositionY>396</PositionY>
       <CollisionBox>
-        <X>174</X>
-        <Y>468</Y>
-        <Width>197</Width>
-        <Height>204</Height>
+        <X>988</X>
+        <Y>396</Y>
+        <Width>185</Width>
+        <Height>283</Height>
         <Location>
-          <X>174</X>
-          <Y>468</Y>
+          <X>988</X>
+          <Y>396</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -80,126 +99,15 @@
       </Texture>
       <DestinationScene>0</DestinationScene>
       <DestinationWaypoint>1</DestinationWaypoint>
-      <TwoPlayerEnter>true</TwoPlayerEnter>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
+        <X>-1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
   </Waypoints>
-  <ParallaxPlanes>
-    <ParallaxPlane>
-      <ObjectId>6</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>7</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>8</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>9</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-    <ParallaxPlane>
-      <ObjectId>10</ObjectId>
-      <Position>
-        <X>0</X>
-        <Y>0</Y>
-      </Position>
-      <PositionX>0</PositionX>
-      <PositionY>0</PositionY>
-      <CollisionBox>
-        <X>0</X>
-        <Y>0</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <Tiles />
-    </ParallaxPlane>
-  </ParallaxPlanes>
+  <BackgroundSprites />
+  <InteractiveObjects />
   <Collectables />
   <Items />
 </SceneData>

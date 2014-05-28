@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
+using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -57,7 +58,7 @@ namespace HanselAndGretel
 			CurrentState = State.Idle;
 		}
 
-		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera)
 		{
 			switch (CurrentState)
 			{
@@ -65,7 +66,7 @@ namespace HanselAndGretel
 					TestForSwitch(pScene, pHansel, pGretel, pSavegame.Scenes);
 					break;
 				case State.Switching:
-					Switch(pSavegame, ref pScene, pHansel, pGretel);
+					Switch(pSavegame, ref pScene, pHansel, pGretel, pCamera);
 					break;
 				case State.Entering:
 					Enter(pScene, pHansel, pGretel);
@@ -154,17 +155,18 @@ namespace HanselAndGretel
 		/// <summary>
 		/// Aktualisiert den FadingProgress des Switchings.
 		/// </summary>
-		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel) 
+		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera) 
 		{
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
-			pHansel.MoveManually(LeaveHansel, 1f, pScene, false);
-			pGretel.MoveManually(LeaveGretel, 1f, pScene, false);
+			pHansel.MoveManually(LeaveHansel, 1f, pScene);
+			pGretel.MoveManually(LeaveGretel, 1f, pScene);
 			if (FadingProgress >= FadingDuration)
 			{
 				//Switch
 				pHansel.Position = DestinationHansel;
 				pGretel.Position = DestinationGretel;
 				pScene = pSavegame.Scenes[DestinationScene];
+				pCamera.GameScreen = pScene.GamePlane;
 				//Show on new Scene
 				FadingProgress = 0;
 				CurrentState = State.Entering;
@@ -179,8 +181,8 @@ namespace HanselAndGretel
 				if (wp.CollisionBox.Intersects(pHansel.CollisionBox) || wp.CollisionBox.Intersects(pGretel.CollisionBox))
 				{
 					TmpEnterFinished = false;
-					pHansel.MoveManually(wp.MovementOnEnter, 1f);
-					pGretel.MoveManually(wp.MovementOnEnter, 1f);
+					pHansel.MoveManually(wp.MovementOnEnter, 1f, pScene, false);
+					pGretel.MoveManually(wp.MovementOnEnter, 1f, pScene, false);
 				}
 			}
 			if (TmpEnterFinished)

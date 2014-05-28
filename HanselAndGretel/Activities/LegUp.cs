@@ -35,6 +35,15 @@ namespace HanselAndGretel
 
 		public override void PrepareAction(Player pPlayer)
 		{
+
+			//Wenn beide Spieler an der passenden Position sind Action starten.
+			if (rHansel.Position == rIObj.ActionPosition1 && rHansel.Input.ActionIsPressed && rGretel.Position == rIObj.ActionPosition1 + mGretelActionStartOffset && rGretel.Input.ActionIsPressed)
+			{
+				mStateGretel = State.Starting;
+				mStateHansel = State.Starting;
+				return;
+			}
+
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
 				if (!rHansel.Input.ActionIsPressed)
@@ -43,13 +52,6 @@ namespace HanselAndGretel
 					mStateHansel = State.Idle;
 					return;
 				}
-
-				//Wenn der Spieler an der passenden Position ist Action starten.
-				if (rHansel.Position == rIObj.ActionPosition1 && rGretel.Position == rIObj.ActionPosition1 + mGretelActionStartOffset)
-				{
-					mStateHansel = State.Starting;
-				}
-
 				//Spieler bewegen
 				rHansel.MoveAgainstPoint(rIObj.ActionPosition1); 
 			}
@@ -61,13 +63,6 @@ namespace HanselAndGretel
 					mStateGretel = State.Idle;
 					return;
 				}
-
-				//Wenn der Spieler an der passenden Position ist Action starten.
-				if (rGretel.Position == rIObj.ActionPosition1 + mGretelActionStartOffset && rHansel.Position == rIObj.ActionPosition1)
-				{
-					mStateGretel = State.Starting;
-				}
-
 				//Spieler bewegen
 				rGretel.MoveAgainstPoint(rIObj.ActionPosition1 + mGretelActionStartOffset);
 			}

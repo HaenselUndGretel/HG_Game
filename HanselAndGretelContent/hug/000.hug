@@ -11,14 +11,77 @@
     </Location>
   </GamePlane>
   <MoveArea />
-  <Waypoints />
+  <Waypoints>
+    <Waypoint>
+      <ObjectId>0</ObjectId>
+      <Position>
+        <X>53</X>
+        <Y>54</Y>
+      </Position>
+      <PositionX>53</PositionX>
+      <PositionY>54</PositionY>
+      <CollisionBox>
+        <X>53</X>
+        <Y>54</Y>
+        <Width>204</Width>
+        <Height>206</Height>
+        <Location>
+          <X>53</X>
+          <Y>54</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <Texture>
+        <Name />
+      </Texture>
+      <DestinationScene>1</DestinationScene>
+      <DestinationWaypoint>0</DestinationWaypoint>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>1</X>
+        <Y>0</Y>
+      </MovementOnEnter>
+    </Waypoint>
+    <Waypoint>
+      <ObjectId>1</ObjectId>
+      <Position>
+        <X>49</X>
+        <Y>472</Y>
+      </Position>
+      <PositionX>49</PositionX>
+      <PositionY>472</PositionY>
+      <CollisionBox>
+        <X>49</X>
+        <Y>472</Y>
+        <Width>215</Width>
+        <Height>186</Height>
+        <Location>
+          <X>49</X>
+          <Y>472</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <Texture>
+        <Name />
+      </Texture>
+      <DestinationScene>1</DestinationScene>
+      <DestinationWaypoint>1</DestinationWaypoint>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>1</X>
+        <Y>0</Y>
+      </MovementOnEnter>
+    </Waypoint>
+  </Waypoints>
   <BackgroundSprites />
   <InteractiveObjects>
     <InteractiveObject>
       <ObjectId>1</ObjectId>
       <Position>
-        <X>-159.399261</X>
-        <Y>-284.790466</Y>
+        <X>-159</X>
+        <Y>-284</Y>
       </Position>
       <PositionX>-159</PositionX>
       <PositionY>-284</PositionY>
@@ -59,8 +122,8 @@
         </Rectangle>
       </CollisionRectList>
       <ActionPosition1>
-        <X>746.6007</X>
-        <Y>318.209534</Y>
+        <X>746</X>
+        <Y>318</Y>
       </ActionPosition1>
       <ActionPosition2>
         <X>0</X>

@@ -1,4 +1,5 @@
 ﻿using HanselAndGretel.Data;
+using KryptonEngine.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,10 +36,10 @@ namespace HanselAndGretel
 			ActivityHandler = new ActivityHandler();
 		}
 
-		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera)
 		{
 			//Update Logic Parts
-			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel);
+			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera);
 			ActivityHandler.Update(pScene, pHansel, pGretel);
 
 			//Check whether Player may move

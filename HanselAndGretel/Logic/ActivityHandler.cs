@@ -88,7 +88,7 @@ namespace HanselAndGretel
 			//Hansel
 			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjHansel != null && pEnteredIObjHansel.ActivityState.IsAvailable && pEnteredIObjHansel.ActivityState.mStateHansel == ActivityState.State.Idle && !pHandicappedHansel)
 			{
-				if (pHansel.Input.ActionIsPressed)
+				if (pHansel.Input.ActionIsPressed || ((pEnteredIObjHansel.Activity == Activity.CaughtInCobweb || pEnteredIObjHansel.Activity == Activity.CaughtInSwamp) && !pEnteredIObjHansel.ActivityState.m2ndState))
 				{
 					pHansel.mCurrentActivity = pEnteredIObjHansel.ActivityState;
 					pHansel.mCurrentActivity.mStateHansel = ActivityState.State.Preparing;
@@ -98,7 +98,7 @@ namespace HanselAndGretel
 			//Gretel
 			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjGretel != null && pEnteredIObjGretel.ActivityState.IsAvailable && pEnteredIObjGretel.ActivityState.mStateGretel == ActivityState.State.Idle && !pHandicappedGretel)
 			{
-				if (pGretel.Input.ActionIsPressed)
+				if (pGretel.Input.ActionIsPressed || ((pEnteredIObjGretel.Activity == Activity.CaughtInCobweb || pEnteredIObjGretel.Activity == Activity.CaughtInSwamp) && !pEnteredIObjGretel.ActivityState.m2ndState))
 				{
 					pGretel.mCurrentActivity = pEnteredIObjGretel.ActivityState;
 					pGretel.mCurrentActivity.mStateGretel = ActivityState.State.Preparing;

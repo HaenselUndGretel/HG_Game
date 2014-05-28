@@ -54,11 +54,11 @@ namespace HanselAndGretel
 			//Get Possible Activity from EnteredInteractiveObject
 			Activity TmpPossibleActivityHansel;
 			Activity TmpPossibleActivityGretel;
-			if (TmpIObjEnteredByHansel == null)
+			if (TmpIObjEnteredByHansel == null || !TmpIObjEnteredByHansel.ActivityState.IsAvailable)
 				TmpPossibleActivityHansel = Activity.None;
 			else
 				TmpPossibleActivityHansel = TmpIObjEnteredByHansel.ActivityState.GetPossibleActivity(TestInteractiveObjectContains(pHansel, TmpIObjEnteredByHansel));
-			if (TmpIObjEnteredByGretel == null)
+			if (TmpIObjEnteredByGretel == null || !TmpIObjEnteredByGretel.ActivityState.IsAvailable)
 				TmpPossibleActivityGretel = Activity.None;
 			else
 				TmpPossibleActivityGretel = TmpIObjEnteredByGretel.ActivityState.GetPossibleActivity(TestInteractiveObjectContains(pGretel, TmpIObjEnteredByGretel));
@@ -86,7 +86,7 @@ namespace HanselAndGretel
 		protected void TryToStartActivity(Hansel pHansel, Gretel pGretel, InteractiveObject pEnteredIObjHansel, InteractiveObject pEnteredIObjGretel, bool pHandicappedHansel, bool pHandicappedGretel)
 		{
 			//Hansel
-			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjHansel != null && pEnteredIObjHansel.ActivityState.mStateHansel == ActivityState.State.Idle && !pHandicappedHansel)
+			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjHansel != null && pEnteredIObjHansel.ActivityState.IsAvailable && pEnteredIObjHansel.ActivityState.mStateHansel == ActivityState.State.Idle && !pHandicappedHansel)
 			{
 				if (pHansel.Input.ActionIsPressed)
 				{
@@ -96,7 +96,7 @@ namespace HanselAndGretel
 			}
 
 			//Gretel
-			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjGretel != null && pEnteredIObjGretel.ActivityState.mStateGretel == ActivityState.State.Idle && !pHandicappedGretel)
+			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjGretel != null && pEnteredIObjGretel.ActivityState.IsAvailable && pEnteredIObjGretel.ActivityState.mStateGretel == ActivityState.State.Idle && !pHandicappedGretel)
 			{
 				if (pGretel.Input.ActionIsPressed)
 				{

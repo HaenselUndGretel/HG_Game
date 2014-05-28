@@ -53,7 +53,7 @@ namespace HanselAndGretel
 
 		public void Initialize()
 		{
-			FadingDuration = 1000d;
+			FadingDuration = 1500d;
 			FadingProgress = 0d;
 			CurrentState = State.Idle;
 		}

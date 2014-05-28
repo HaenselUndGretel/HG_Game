@@ -87,7 +87,7 @@ namespace HanselAndGretel
 				rHansel.mCurrentActivity = new None();
 				mStateHansel = State.Idle;
 			}
-			else if (pPlayer.GetType() == typeof(Gretel) && rHansel.mModel.AnimationComplete)
+			else if (pPlayer.GetType() == typeof(Gretel) && rGretel.mModel.AnimationComplete)
 			{
 				rGretel.Position += mGretelMovedByAction;
 				rGretel.mCurrentActivity = new None();

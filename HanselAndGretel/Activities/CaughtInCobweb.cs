@@ -94,44 +94,45 @@ namespace HanselAndGretel
 
 		public override void StartAction(Player pPlayer)
 		{
-			if (!m2ndState)
-			{
-				pPlayer.mModel.SetAnimation("attack");
-				if (pPlayer.GetType() == typeof(Hansel))
-				{
-					mStateHansel = State.Running;
-				}
-				else if (pPlayer.GetType() == typeof(Gretel))
-				{
-					mStateGretel = State.Running;
-				}
-				return;
-			}
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
-				//ToDo Start Animation for QuickEvent Stepping.
+				if (pPlayer == TrappedPlayer)
+				{
+					pPlayer.mModel.SetAnimation("attack");
+				}
+				else
+				{
+					//ToDo Start Animation for QuickEvent Stepping.
+				}
 				mStateHansel = State.Running;
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
 			{
-				//ToDo Start Animation for QuickEvent Stepping.
+				if (pPlayer == TrappedPlayer)
+				{
+					pPlayer.mModel.SetAnimation("attack");
+				}
+				else
+				{
+					//ToDo Start Animation for QuickEvent Stepping.
+				}
 				mStateGretel = State.Running;
 			}
 		}
 
 		public override void UpdateAction(Player pPlayer)
 		{
-			if (WalkAway && pPlayer.GetType() == typeof(Hansel))
+			if (WalkAway && pPlayer.GetType() == typeof(Hansel)) //Von Netz entfernen (nur einmal pro Frame ausführen)
 			{
 				rHansel.MoveManually(new Vector2(0, 1));
 				rGretel.MoveManually(new Vector2(0, 1));
-				bool contains = false;
+				bool finished = true;
 				foreach (Rectangle rect in rIObj.ActionRectList)
 				{
 					if (rect.Intersects(rHansel.CollisionBox) || rect.Intersects(rGretel.CollisionBox))
-						contains = true;
+						finished = false;
 				}
-				if (!contains)
+				if (finished)
 				{
 					rHansel.MoveManually(new Vector2(0, 1));
 					rGretel.MoveManually(new Vector2(0, 1));

@@ -85,21 +85,27 @@ namespace HanselAndGretel
 		/// </summary>
 		protected void TryToStartActivity(Hansel pHansel, Gretel pGretel, InteractiveObject pEnteredIObjHansel, InteractiveObject pEnteredIObjGretel, bool pHandicappedHansel, bool pHandicappedGretel)
 		{
-			//Hansel
+			//Hansel idled, ActivityState ist available, ActivityState.StateHansel idled, Hansel darf diese Activity ausführen
 			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjHansel != null && pEnteredIObjHansel.ActivityState.IsAvailable && pEnteredIObjHansel.ActivityState.mStateHansel == ActivityState.State.Idle && !pHandicappedHansel)
-			{
+			{ //Action pressed || (Cobweb && PlayerTrapped) || (Swamp && HanselContaines)
 				if (pHansel.Input.ActionIsPressed || ((pEnteredIObjHansel.Activity == Activity.CaughtInCobweb && !pEnteredIObjHansel.ActivityState.m2ndState) || (pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pHansel, pEnteredIObjHansel))))
 				{
+					//Bei Swamp && PlayerTrapped nur free ausführen wenn distance klein genug ist
+					if ((pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && pEnteredIObjHansel.ActivityState.m2ndState) && !((CaughtInSwamp)pEnteredIObjHansel.ActivityState).WithinMaxFreeDistance())
+						return;
 					pHansel.mCurrentActivity = pEnteredIObjHansel.ActivityState;
 					pHansel.mCurrentActivity.mStateHansel = ActivityState.State.Preparing;
 				}
 			}
 
-			//Gretel
+			//Gretel idled, ActivityState ist available, ActivityState.StateHansel idled, Gretel darf diese Activity ausführen
 			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjGretel != null && pEnteredIObjGretel.ActivityState.IsAvailable && pEnteredIObjGretel.ActivityState.mStateGretel == ActivityState.State.Idle && !pHandicappedGretel)
-			{
+			{ //Action pressed || (Cobweb && PlayerTrapped) || (Swamp && GretelContaines)
 				if (pGretel.Input.ActionIsPressed || ((pEnteredIObjGretel.Activity == Activity.CaughtInCobweb && !pEnteredIObjGretel.ActivityState.m2ndState) || (pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pGretel, pEnteredIObjGretel))))
 				{
+					//Bei Swamp && PlayerTrapped nur free ausführen wenn distance klein genug ist
+					if ((pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && pEnteredIObjGretel.ActivityState.m2ndState) && !((CaughtInSwamp)pEnteredIObjGretel.ActivityState).WithinMaxFreeDistance())
+						return;
 					pGretel.mCurrentActivity = pEnteredIObjGretel.ActivityState;
 					pGretel.mCurrentActivity.mStateGretel = ActivityState.State.Preparing;
 				}

@@ -14,6 +14,7 @@ namespace HanselAndGretel
 		bool WalkAway;
 		bool HanselTrapped;
 		bool GretelTrapped;
+		float MaxFreeDistance;
 
 		public CaughtInSwamp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -22,13 +23,14 @@ namespace HanselAndGretel
 			WalkAway = false;
 			HanselTrapped = false;
 			GretelTrapped = false;
+			MaxFreeDistance = 100f;
 		}
 
 		#region Override Methods
 
 		public override Activity GetPossibleActivity(bool pContains)
 		{
-			if (m2ndState && (rHansel.Inventory.Contains(typeof(Branch)) || rGretel.Inventory.Contains(typeof(Branch))))
+			if (m2ndState /*&& (rHansel.Inventory.Contains(typeof(Branch)) || rGretel.Inventory.Contains(typeof(Branch)))*/ && WithinMaxFreeDistance())
 				return Activity.FreeFromSwamp;
 			return Activity.None;
 		}
@@ -116,6 +118,11 @@ namespace HanselAndGretel
 					}
 				}
 			}
+		}
+
+		protected bool WithinMaxFreeDistance()
+		{
+			return ((new Vector2(rHansel.CollisionBox.Center.X, rHansel.CollisionBox.Center.Y) - new Vector2(rGretel.CollisionBox.Center.X, rGretel.CollisionBox.Center.Y)).Length() <= MaxFreeDistance) ? true : false;
 		}
 
 		#endregion

@@ -11,7 +11,7 @@ namespace HanselAndGretel
 	class KnockOverTree : ActivityState
 	{
 		/// <summary>
-		/// Muss kleiner sein als der halbe Abstand der ActionPositions
+		/// Muss kleiner sein als der halbe Abstand der ActionPositions und größer als der Durchmesser der angrenzenden CollisionBox
 		/// </summary>
 		float EnterBalanceDistance;
 		float BalanceSpeedFactor;
@@ -20,7 +20,7 @@ namespace HanselAndGretel
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
-			EnterBalanceDistance = 50f;
+			EnterBalanceDistance = 200f;
 			BalanceSpeedFactor = 0.6f;
 			WalkAway = false;
 		}
@@ -29,7 +29,7 @@ namespace HanselAndGretel
 
 		public override Activity GetPossibleActivity(bool pContains)
 		{
-			if (pContains)
+			if (pContains && (mStateGretel == State.Idle && mStateHansel == State.Idle))
 			{
 				if (m2ndState)
 					return Activity.BalanceOverTree;
@@ -100,6 +100,15 @@ namespace HanselAndGretel
 			}
 			pPlayer.mModel.SetAnimation("attack", false); //Start KnockOverTree Animation
 			m2ndState = true;
+			WalkAway = true;
+			if (pPlayer.GetType() == typeof(Hansel) && rHansel.mModel.AnimationComplete)
+			{
+				mStateHansel = State.Running;
+			}
+			else if (pPlayer.GetType() == typeof(Gretel) && rGretel.mModel.AnimationComplete)
+			{
+				mStateGretel = State.Running;
+			}
 		}
 
 		public override void UpdateAction(Player pPlayer)
@@ -113,20 +122,13 @@ namespace HanselAndGretel
 				Vector2 DirectionTest = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 				DirectionTest.Normalize();
 				bool Sideways = false;
-				if (DirectionTest.Y < Math.Sin(45) && DirectionTest.Y > -Math.Sin(45))
+				if (DirectionTest.Y <= Math.Sin(45) && DirectionTest.Y >= -Math.Sin(45))
 					Sideways = true;
 
 				//Runter fallen?
 				bool Fail = false;
-				if (MovementInput.Y > Math.Sin(67.5) || MovementInput.Y < -Math.Sin(67.5)) //Hoch_Runter
-				{
-					if (Sideways)
-						Fail = true;
-				}
-				else if (!Sideways) //Links_Rechts
-				{
+				if ((MovementInput.X == 0 && MovementInput.Y != 0 && Sideways) || (MovementInput.X != 0 && MovementInput.Y == 0 && !Sideways))
 					Fail = true;
-				}
 				//Fallen
 				if (Fail)
 				{
@@ -141,7 +143,7 @@ namespace HanselAndGretel
 				{
 					WalkAway = true;
 					pPlayer.Position = TargetActionPosition - (MovementDirection * EnterBalanceDistance);
-					pPlayer.mModel.SetAnimation("attack", false); //ToDo Raus fade Animation starten. In passende Richtung!
+					pPlayer.mModel.SetAnimation("run", false); //ToDo Raus fade Animation starten. In passende Richtung!
 				}
 
 				//BalancingMovement ausführen

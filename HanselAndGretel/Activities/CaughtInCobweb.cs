@@ -86,10 +86,6 @@ namespace HanselAndGretel
 				//Spieler bewegen
 				rGretel.MoveAgainstPoint(rIObj.ActionPosition2);
 			}
-			else
-			{
-				throw new Exception("Nicht existenter Spielername!");
-			}
 		}
 
 		public override void StartAction(Player pPlayer)

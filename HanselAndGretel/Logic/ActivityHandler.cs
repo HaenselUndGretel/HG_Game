@@ -90,6 +90,13 @@ namespace HanselAndGretel
 			{ //Action pressed || (Cobweb && PlayerTrapped) || (Swamp && HanselContaines)
 				if (pHansel.Input.ActionIsPressed || ((pEnteredIObjHansel.Activity == Activity.CaughtInCobweb && !pEnteredIObjHansel.ActivityState.m2ndState) || (pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pHansel, pEnteredIObjHansel))))
 				{
+					//Instant Swamp Trap
+					if (pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pHansel, pEnteredIObjHansel))
+					{
+						((CaughtInSwamp)pEnteredIObjHansel.ActivityState).HanselTrapped = true;
+						if (((CaughtInSwamp)pEnteredIObjHansel.ActivityState).GretelTrapped)
+							throw new Exception("Beide Player im Sumpf getrapped. N00B!");
+					}
 					//Bei Swamp && PlayerTrapped nur free ausführen wenn distance klein genug ist
 					if ((pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && pEnteredIObjHansel.ActivityState.m2ndState) && !((CaughtInSwamp)pEnteredIObjHansel.ActivityState).WithinMaxFreeDistance())
 						return;
@@ -103,6 +110,13 @@ namespace HanselAndGretel
 			{ //Action pressed || (Cobweb && PlayerTrapped) || (Swamp && GretelContaines)
 				if (pGretel.Input.ActionIsPressed || ((pEnteredIObjGretel.Activity == Activity.CaughtInCobweb && !pEnteredIObjGretel.ActivityState.m2ndState) || (pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pGretel, pEnteredIObjGretel))))
 				{
+					//Instant Swamp Trap
+					if (pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pGretel, pEnteredIObjGretel))
+					{
+						((CaughtInSwamp)pEnteredIObjGretel.ActivityState).GretelTrapped = true;
+						if (((CaughtInSwamp)pEnteredIObjGretel.ActivityState).HanselTrapped)
+							throw new Exception("Beide Player im Sumpf getrapped. N00B!");
+					}
 					//Bei Swamp && PlayerTrapped nur free ausführen wenn distance klein genug ist
 					if ((pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && pEnteredIObjGretel.ActivityState.m2ndState) && !((CaughtInSwamp)pEnteredIObjGretel.ActivityState).WithinMaxFreeDistance())
 						return;

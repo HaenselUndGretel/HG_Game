@@ -12,8 +12,8 @@ namespace HanselAndGretel
 	{
 		int FreeProgressCounter;
 		bool WalkAway;
-		bool HanselTrapped;
-		bool GretelTrapped;
+		public bool HanselTrapped;
+		public bool GretelTrapped;
 		float MaxFreeDistance;
 
 		public CaughtInSwamp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)

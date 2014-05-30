@@ -120,7 +120,7 @@ namespace HanselAndGretel
 			}
 		}
 
-		protected bool WithinMaxFreeDistance()
+		public bool WithinMaxFreeDistance()
 		{
 			return ((new Vector2(rHansel.CollisionBox.Center.X, rHansel.CollisionBox.Center.Y) - new Vector2(rGretel.CollisionBox.Center.X, rGretel.CollisionBox.Center.Y)).Length() <= MaxFreeDistance) ? true : false;
 		}

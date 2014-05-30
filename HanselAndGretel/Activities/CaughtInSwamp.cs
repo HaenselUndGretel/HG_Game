@@ -23,7 +23,7 @@ namespace HanselAndGretel
 			WalkAway = false;
 			HanselTrapped = false;
 			GretelTrapped = false;
-			MaxFreeDistance = 100f;
+			MaxFreeDistance = 200f;
 		}
 
 		#region Override Methods

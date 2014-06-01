@@ -251,6 +251,7 @@ namespace HanselAndGretel
 							break;
 						case Activity.BalanceOverTree:
 							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
+							//ToDo Dummy 2ndState Animation applyen.
 							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.PushRock:
@@ -276,6 +277,7 @@ namespace HanselAndGretel
 							break;
 						case Activity.PullDoor:
 							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							//ToDo Dummy 2ndState Animation applyen.
 							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.UseChalk:

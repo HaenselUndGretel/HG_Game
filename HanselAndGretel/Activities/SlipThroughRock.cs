@@ -23,15 +23,76 @@ namespace HanselAndGretel
 			return Activity.None;
 		}
 
-		public override void UpdateAction(Player pPlayer)
+		public override void PrepareAction(Player pPlayer)
 		{
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
-
+				//Wenn Spieler an der passenden Position ist Action starten
+				if (pPlayer.Position == NearestActionPosition(pPlayer.Position))
+				{
+					mStateHansel = State.Starting;
+					return;
+				}
+				//Spieler idled
+				if (!pPlayer.Input.ActionIsPressed)
+				{
+					pPlayer.mCurrentActivity = new None();
+					mStateHansel = State.Idle;
+					return;
+				}
+				//Spieler zu passender Position bewegen
+				if (pPlayer.Input.ActionIsPressed)
+					pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
 			{
+				//Wenn Spieler an der passenden Position ist Action starten
+				if (pPlayer.Position == NearestActionPosition(pPlayer.Position))
+				{
+					mStateGretel = State.Starting;
+					return;
+				}
+				//Spieler idled
+				if (!pPlayer.Input.ActionIsPressed)
+				{
+					pPlayer.mCurrentActivity = new None();
+					mStateGretel = State.Idle;
+					return;
+				}
+				//Spieler zu passender Position bewegen
+				if (pPlayer.Input.ActionIsPressed)
+					pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
+			}
+		}
 
+		public override void StartAction(Player pPlayer)
+		{
+			//ToDo Passende Animation entsprechend Richtung starten.
+			pPlayer.mModel.SetAnimation("attack", false);
+			if (pPlayer.GetType() == typeof(Hansel))
+			{
+				mStateHansel = State.Running;
+			}
+			else if (pPlayer.GetType() == typeof(Gretel))
+			{
+				mStateGretel = State.Running;
+			}
+		}
+
+		public override void UpdateAction(Player pPlayer)
+		{
+			if (pPlayer.mModel.AnimationComplete)
+			{
+				pPlayer.mCurrentActivity = new None();
+				pPlayer.Position = DistantActionPosition(pPlayer.Position);
+				if (pPlayer.GetType() == typeof(Hansel))
+				{
+					mStateHansel = State.Idle;
+				}
+				else if (pPlayer.GetType() == typeof(Gretel))
+				{
+					mStateGretel = State.Idle;
+				}
 			}
 		}
 

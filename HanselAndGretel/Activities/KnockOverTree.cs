@@ -82,6 +82,7 @@ namespace HanselAndGretel
 
 		public override void StartAction(Player pPlayer)
 		{
+			IsAvailable = false;
 			if (m2ndState && pPlayer.mModel.AnimationComplete)
 			{
 				WalkAway = false;
@@ -143,7 +144,7 @@ namespace HanselAndGretel
 				{
 					WalkAway = true;
 					pPlayer.Position = TargetActionPosition - (MovementDirection * EnterBalanceDistance);
-					pPlayer.mModel.SetAnimation("run", false); //ToDo Raus fade Animation starten. In passende Richtung!
+					pPlayer.mModel.SetAnimation("attack", false); //ToDo Raus fade Animation starten. In passende Richtung!
 				}
 
 				//BalancingMovement ausführen
@@ -166,6 +167,7 @@ namespace HanselAndGretel
 					rGretel.mCurrentActivity = new None();
 					mStateGretel = State.Idle;
 				}
+				IsAvailable = true;
 			}
 		}
 

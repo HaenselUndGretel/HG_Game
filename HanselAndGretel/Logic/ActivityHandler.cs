@@ -37,7 +37,7 @@ namespace HanselAndGretel
 
 		#region Methods
 
-		public void Initialize()
+		protected void Initialize()
 		{
 			ActionInfoVisibilityHansel = 0;
 			ActionInfoVisibilityGretel = 0;

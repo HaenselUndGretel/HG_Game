@@ -33,16 +33,8 @@ namespace HanselAndGretel
 					mStateHansel = State.Starting;
 					return;
 				}
-				//Spieler idled
-				if (!pPlayer.Input.ActionIsPressed)
-				{
-					pPlayer.mCurrentActivity = new None();
-					mStateHansel = State.Idle;
-					return;
-				}
 				//Spieler zu passender Position bewegen
-				if (pPlayer.Input.ActionIsPressed)
-					pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
+				pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
 			{
@@ -52,16 +44,8 @@ namespace HanselAndGretel
 					mStateGretel = State.Starting;
 					return;
 				}
-				//Spieler idled
-				if (!pPlayer.Input.ActionIsPressed)
-				{
-					pPlayer.mCurrentActivity = new None();
-					mStateGretel = State.Idle;
-					return;
-				}
 				//Spieler zu passender Position bewegen
-				if (pPlayer.Input.ActionIsPressed)
-					pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
+				pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
 			}
 		}
 

@@ -87,8 +87,8 @@ namespace HanselAndGretel
 			DrawPackagesGame.AddRange(mScene.DrawPackages);
 			DrawPackagesGame.Add(mHansel.DrawPackage);
 			DrawPackagesGame.Add(mGretel.DrawPackage);
-			DrawPackagesGame.Add(new DrawPackage(new Vector2(mHansel.PositionX - 50, mHansel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityHansel));
-			DrawPackagesGame.Add(new DrawPackage(new Vector2(mGretel.PositionX - 50, mGretel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityGretel));
+			DrawPackagesGame.Add(new DrawPackage(new Vector2(mHansel.PositionX, mHansel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityHansel));
+			DrawPackagesGame.Add(new DrawPackage(new Vector2(mGretel.PositionX, mGretel.PositionY - 100), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityGretel));
 
 			//ToDo: DrawPackage Sorting!
 
@@ -102,6 +102,8 @@ namespace HanselAndGretel
 			mSkeletonRenderer.Effect.World = TmpTransformation;
 			foreach(DrawPackage dPack in DrawPackagesGame)
 				dPack.Draw(mSpriteBatch, mSkeletonRenderer);
+			mSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), mLogic.ActivityHandler.ActionInfoHansel, new Vector2(mHansel.PositionX - 50, mHansel.PositionY - 30), Color.White * mLogic.ActivityHandler.ActionInfoVisibilityHansel);
+			mSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), mLogic.ActivityHandler.ActionInfoGretel, new Vector2(mGretel.PositionX - 50, mGretel.PositionY - 30), Color.White * mLogic.ActivityHandler.ActionInfoVisibilityGretel);
 			mSpriteBatch.End();
 
 			//Draw to Screen

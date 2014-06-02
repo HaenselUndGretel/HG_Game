@@ -21,8 +21,8 @@ namespace HanselAndGretel
 		protected const float ActionInfoFadingDuration = 1.0f;
 		protected bool ShowActionInfoHansel;
 		protected bool ShowActionInfoGretel;
-		protected string ActionInfoHansel;
-		protected string ActionInfoGretel;
+		public string ActionInfoHansel;
+		public string ActionInfoGretel;
 
 		#endregion
 

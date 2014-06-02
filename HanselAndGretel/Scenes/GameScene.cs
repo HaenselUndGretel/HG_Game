@@ -54,20 +54,19 @@ namespace HanselAndGretel
 		public override void LoadContent()
 		{
 			mActionButton = TextureManager.Instance.GetElementByString("button_x");
-			//Savegame
-			mSavegame = Savegame.Load();
-			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
-			mScene = mSavegame.Scenes[mSavegame.SceneId];
-			mCamera.GameScreen = mScene.GamePlane;
 			//Hansel & Gretel
 			mHansel.LoadContent();
 			mGretel.LoadContent();
 			mHansel.mCurrentActivity = new None();
 			mGretel.mCurrentActivity = new None();
-			mHansel.Position = mSavegame.PositionHansel;
-			mGretel.Position = mSavegame.PositionGretel;
 			mHansel.LoadReferences(mCamera, mGretel);
 			mGretel.LoadReferences(mCamera, mHansel);
+			//Savegame
+			mSavegame = Savegame.Load(mHansel, mGretel);
+			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
+			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			//Camera
+			mCamera.GameScreen = mScene.GamePlane;
 		}
 
 		public override void Update()

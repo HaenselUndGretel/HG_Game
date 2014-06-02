@@ -25,7 +25,7 @@ namespace HanselAndGretel
 
 		public override Activity GetPossibleActivity(bool pContains)
 		{
-			if (m2ndState) //&& (rHansel.Inventory.Contains(typeof(Knife)) || rGretel.Inventory.Contains(typeof(Knife))))
+			if (m2ndState && ((rHansel != TrappedPlayer && rHansel.Inventory.Contains(typeof(Knife))) || (rGretel != TrappedPlayer && rGretel.Inventory.Contains(typeof(Knife)))))
 				return Activity.FreeFromCobweb;
 			return Activity.None;
 		}

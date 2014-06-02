@@ -30,7 +30,7 @@ namespace HanselAndGretel
 
 		public override Activity GetPossibleActivity(bool pContains)
 		{
-			if (m2ndState /*&& (rHansel.Inventory.Contains(typeof(Branch)) || rGretel.Inventory.Contains(typeof(Branch)))*/ && WithinMaxFreeDistance())
+			if (m2ndState && (rHansel.Inventory.Contains(typeof(Branch)) || rGretel.Inventory.Contains(typeof(Branch))) && WithinMaxFreeDistance())
 				return Activity.FreeFromSwamp;
 			return Activity.None;
 		}

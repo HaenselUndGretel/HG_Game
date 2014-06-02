@@ -28,6 +28,7 @@ namespace HanselAndGretel
 			{
 				if (m2ndState)
 					return Activity.PullDoor;
+				//ToDo: Hier muss geprüft werden ob der entsprechende Spieler einen (passenden) Schlüssel dabei hat.
 				return Activity.UseKey;
 			}
 			return Activity.None;

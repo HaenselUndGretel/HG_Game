@@ -85,7 +85,7 @@ namespace HanselAndGretel
 				{
 					if (wp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht auch in diesem Waypoint
 					{
-						if (!OneWay(pSceneLookup, wp))
+						if (!wp.OneWay)
 							StartSwitching(pHansel, pGretel, wp, wp, pSceneLookup);
 						return;
 					}
@@ -97,7 +97,7 @@ namespace HanselAndGretel
 							{
 								if (otherWp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht in diesem Waypoint
 								{
-									if (!OneWay(pSceneLookup, wp) && !OneWay(pSceneLookup, otherWp))
+									if (!wp.OneWay && !otherWp.OneWay)
 										StartSwitching(pHansel, pGretel, wp, otherWp, pSceneLookup);
 									return;
 								}
@@ -106,18 +106,6 @@ namespace HanselAndGretel
 					}
 				}
 			}
-		}
-
-		public bool OneWay(SceneData[] pSceneLookup, Waypoint pWp)
-		{
-			foreach(Waypoint wp in pSceneLookup[pWp.DestinationScene].Waypoints)
-			{
-				if(wp.ObjectId == pWp.DestinationWaypoint)
-				{
-					return wp.OneWay;
-				}
-			}
-			throw new Exception("Destination Waypoint not found!");
 		}
 
 		/// <summary>

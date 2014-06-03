@@ -78,6 +78,7 @@
     <Compile Include="Activities\LegUp.cs" />
     <Compile Include="Activities\LegUpGrab.cs" />
     <Compile Include="Activities\None.cs" />
+    <Compile Include="Activities\PullDoor.cs" />
     <Compile Include="Activities\PushRock.cs" />
     <Compile Include="Activities\SlipThroughRock.cs" />
     <Compile Include="Activities\CaughtInSwamp.cs" />

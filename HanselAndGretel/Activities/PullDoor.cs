@@ -7,13 +7,13 @@ using System.Text;
 
 namespace HanselAndGretel
 {
-	class UseKey : ActivityState
+	class PullDoor : ActivityState
 	{
 		protected int ProgressCounterHansel;
 		protected int ProgressCounterGretel;
 		protected const int MaxProgress = 10;
 
-		public UseKey(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+		public PullDoor(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
 			ProgressCounterHansel = 0;
@@ -24,12 +24,9 @@ namespace HanselAndGretel
 
 		public override Activity GetPossibleActivity(bool pContains)
 		{
-			if (pContains)
+			if (pContains && !m2ndState)
 			{
-				if (m2ndState)
-					return Activity.PushDoor;
-				//ToDo: Hier muss geprüft werden ob der entsprechende Spieler einen (passenden) Schlüssel dabei hat.
-				return Activity.UseKey;
+				return Activity.PullDoor;
 			}
 			return Activity.None;
 		}
@@ -184,7 +181,7 @@ namespace HanselAndGretel
 				}
 			}
 		}
-
+		
 		#endregion
 	}
 }

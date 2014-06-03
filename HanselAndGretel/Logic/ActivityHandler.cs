@@ -87,7 +87,7 @@ namespace HanselAndGretel
 		{
 			//Hansel idled, ActivityState ist available, ActivityState.StateHansel idled, Hansel darf diese Activity ausführen
 			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjHansel != null && pEnteredIObjHansel.ActivityState.IsAvailable && pEnteredIObjHansel.ActivityState.mStateHansel == ActivityState.State.Idle && !pHandicappedHansel)
-			{ //Action pressed || (Cobweb && PlayerTrapped) || (Swamp && HanselContaines)
+			{ //Action pressed || (Cobweb && !PlayerTrapped) || (Swamp && HanselContaines)
 				if (pHansel.Input.ActionIsPressed || ((pEnteredIObjHansel.Activity == Activity.CaughtInCobweb && !pEnteredIObjHansel.ActivityState.m2ndState) || (pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pHansel, pEnteredIObjHansel))))
 				{
 					//Instant Swamp Trap
@@ -107,7 +107,7 @@ namespace HanselAndGretel
 
 			//Gretel idled, ActivityState ist available, ActivityState.StateHansel idled, Gretel darf diese Activity ausführen
 			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pEnteredIObjGretel != null && pEnteredIObjGretel.ActivityState.IsAvailable && pEnteredIObjGretel.ActivityState.mStateGretel == ActivityState.State.Idle && !pHandicappedGretel)
-			{ //Action pressed || (Cobweb && PlayerTrapped) || (Swamp && GretelContaines)
+			{ //Action pressed || (Cobweb && !PlayerTrapped) || (Swamp && GretelContaines)
 				if (pGretel.Input.ActionIsPressed || ((pEnteredIObjGretel.Activity == Activity.CaughtInCobweb && !pEnteredIObjGretel.ActivityState.m2ndState) || (pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && TestInteractiveObjectContains(pGretel, pEnteredIObjGretel))))
 				{
 					//Instant Swamp Trap
@@ -275,10 +275,13 @@ namespace HanselAndGretel
 						case Activity.UseKey:
 							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
 							break;
-						case Activity.PullDoor:
+						case Activity.PushDoor:
 							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
 							//ToDo Dummy 2ndState Animation applyen.
 							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.PullDoor:
+							iObj.ActivityState = new PullDoor(pHansel, pGretel, iObj);
 							break;
 						case Activity.UseChalk:
 							iObj.ActivityState = new UseChalk(pHansel, pGretel, iObj);

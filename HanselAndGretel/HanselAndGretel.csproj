@@ -83,6 +83,7 @@
     <Compile Include="Activities\SlipThroughRock.cs" />
     <Compile Include="Activities\CaughtInSwamp.cs" />
     <Compile Include="Activities\KnockOverTree.cs" />
+    <Compile Include="Activities\SwitchItem.cs" />
     <Compile Include="Activities\UseChalk.cs" />
     <Compile Include="Activities\UseKey.cs" />
     <Compile Include="Activities\UseWell.cs" />

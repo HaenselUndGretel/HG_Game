@@ -4,6 +4,8 @@ using KryptonEngine.Controls;
 using KryptonEngine.Entities;
 using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Spine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,16 @@ namespace HanselAndGretel
 		protected bool ShowActionInfoGretel;
 		public string ActionInfoHansel;
 		public string ActionInfoGretel;
+
+		//ButtonFlashing
+		protected const float ButtonFlashDuration = 0.5f;
+		protected double ButtonFlashTimerHansel;
+		protected double ButtonFlashTimerGretel;
+		protected bool ButtonFlashRiseHansel;
+		protected bool ButtonFlashRiseGretel;
+		public bool ShowButtonFlashingHansel;
+		public bool ShowButtonFlashingGretel;
+
 
 		#endregion
 
@@ -76,6 +88,7 @@ namespace HanselAndGretel
 			UpdateActivities(pHansel, pGretel);
 			//Update ActionInfo
 			UpdateActionInfo(pHansel.mCurrentActivity, pGretel.mCurrentActivity, TmpPossibleActivityHansel, TmpPossibleActivityGretel);
+			UpdateButtonFlashing(pHansel, pGretel);
 		}
 
 		#region Update Input & Activities
@@ -213,18 +226,129 @@ namespace HanselAndGretel
 		protected void UpdateActionInfoFading()
 		{
 			//Fade ButtonShowing
-			float TmpFadingDelta = ActionInfoFadingDuration * (EngineSettings.Time.ElapsedGameTime.Milliseconds / 1000f);
-			if (ShowActionInfoHansel) //Fade ButtonShowingHansel in
-				ActionInfoVisibilityHansel += TmpFadingDelta;
-			else //Fade ButtonShowingHansel out
-				ActionInfoVisibilityHansel -= TmpFadingDelta;
-			if (ShowActionInfoGretel) //Fade ButtonShowingGretel in
-				ActionInfoVisibilityGretel += TmpFadingDelta;
-			else //Fade ButtonShowingGretel out
-				ActionInfoVisibilityGretel -= TmpFadingDelta;
-			//Clamp ButtonShowing to 0-1
+			float TmpFadingDelta = ActionInfoFadingDuration * (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds / 1000d);
+			if (!ShowButtonFlashingHansel)
+			{
+				if (ShowActionInfoHansel) //Fade ButtonShowingHansel in
+					ActionInfoVisibilityHansel += TmpFadingDelta;
+				else //Fade ButtonShowingHansel out
+					ActionInfoVisibilityHansel -= TmpFadingDelta;
+			}
+			if (!ShowButtonFlashingGretel)
+			{
+				if (ShowActionInfoGretel) //Fade ButtonShowingGretel in
+					ActionInfoVisibilityGretel += TmpFadingDelta;
+				else //Fade ButtonShowingGretel out
+					ActionInfoVisibilityGretel -= TmpFadingDelta;
+			}//Clamp ButtonShowing to 0-1
 			ActionInfoVisibilityHansel = MathHelper.Clamp(ActionInfoVisibilityHansel, 0f, 1f);
 			ActionInfoVisibilityGretel = MathHelper.Clamp(ActionInfoVisibilityGretel, 0f, 1f);
+		}
+
+		protected void UpdateButtonFlashing(Hansel pHansel, Gretel pGretel)
+		{
+			//Hansel
+			if (pHansel.mCurrentActivity.GetType() == typeof(PullDoor) || pHansel.mCurrentActivity.GetType() == typeof(PushRock))
+			{
+				if (pHansel.mCurrentActivity.mStateHansel == ActivityState.State.Running)
+				{
+					if (!ShowButtonFlashingHansel)
+						ActionInfoVisibilityHansel = 1f;
+					ShowButtonFlashingHansel = true;
+				}
+			}
+			else if (pHansel.mCurrentActivity.GetType() == typeof(UseKey))
+			{
+				if (pHansel.mCurrentActivity.mStateHansel == ActivityState.State.Running && pHansel.mCurrentActivity.m2ndState)
+				{
+					if (!ShowButtonFlashingHansel)
+						ActionInfoVisibilityHansel = 1f;
+					ShowButtonFlashingHansel = true;
+				}
+			}
+			else
+			{
+				ShowButtonFlashingHansel = false;
+			}
+			//Gretel
+			if (pGretel.mCurrentActivity.GetType() == typeof(PullDoor) || pGretel.mCurrentActivity.GetType() == typeof(PushRock))
+			{
+				if (pGretel.mCurrentActivity.mStateGretel == ActivityState.State.Running)
+				{
+					if (!ShowButtonFlashingGretel)
+						ActionInfoVisibilityGretel = 1f;
+					ShowButtonFlashingGretel = true;
+				}
+			}
+			else if (pGretel.mCurrentActivity.GetType() == typeof(UseKey))
+			{
+				if (pGretel.mCurrentActivity.mStateGretel == ActivityState.State.Running && pGretel.mCurrentActivity.m2ndState)
+				{
+					if (!ShowButtonFlashingGretel)
+						ActionInfoVisibilityGretel = 1f;
+					ShowButtonFlashingGretel = true;
+				}
+			}
+			else
+			{
+				ShowButtonFlashingGretel = false;
+			}
+			UpdateButtonFlashFading();
+		}
+
+		protected void UpdateButtonFlashFading()
+		{
+			float TmpFadingDelta = (float)(EngineSettings.Time.ElapsedGameTime.TotalSeconds / ButtonFlashDuration);
+
+			if (ShowButtonFlashingHansel)
+			{
+				ButtonFlashTimerHansel += EngineSettings.Time.ElapsedGameTime.TotalMilliseconds;
+				if (ButtonFlashTimerHansel > ButtonFlashDuration * 1000d)
+				{
+					ButtonFlashTimerHansel = 0;
+					ButtonFlashRiseHansel = !ButtonFlashRiseHansel;
+				}
+				if (ButtonFlashRiseHansel)
+					ActionInfoVisibilityHansel += TmpFadingDelta;
+				else
+					ActionInfoVisibilityHansel -= TmpFadingDelta;
+				ActionInfoVisibilityHansel = MathHelper.Clamp(ActionInfoVisibilityHansel, 0.3f, 1f);
+			}
+
+			if (ShowButtonFlashingGretel)
+			{
+				ButtonFlashTimerGretel += EngineSettings.Time.ElapsedGameTime.TotalMilliseconds;
+				if (ButtonFlashTimerGretel > ButtonFlashDuration * 1000d)
+				{
+					ButtonFlashTimerGretel = 0;
+					ButtonFlashRiseGretel = !ButtonFlashRiseGretel;
+				}
+				if (ButtonFlashRiseGretel)
+					ActionInfoVisibilityGretel += TmpFadingDelta;
+				else
+					ActionInfoVisibilityGretel -= TmpFadingDelta;
+				ActionInfoVisibilityGretel = MathHelper.Clamp(ActionInfoVisibilityGretel, 0.3f, 1f);
+			}
+		}
+
+		#endregion
+
+		#region Draw ActionInfo
+
+		public void DrawActionInfo(Hansel pHansel, Gretel pGretel, SpriteBatch pSpriteBatch, SkeletonRenderer pSkeletonRenderer, Texture2D mActionButton)
+		{
+			Vector2 OffsetHansel = Vector2.Zero;
+			Vector2 OffsetGretel = Vector2.Zero;
+			if (ShowButtonFlashingHansel)
+				OffsetHansel = new Vector2(0, 50 + 20 * ActionInfoVisibilityHansel);
+			if (ShowButtonFlashingGretel)
+				OffsetGretel = new Vector2(0, 50 + 20 * ActionInfoVisibilityHansel);
+			new DrawPackage(new Vector2(pHansel.PositionX + pHansel.CollisionBox.Width / 2 - mActionButton.Width / 2, pHansel.PositionY - 180) + OffsetHansel, 0f, Rectangle.Empty, Color.White, mActionButton, ActionInfoVisibilityHansel).Draw(pSpriteBatch, pSkeletonRenderer);
+			new DrawPackage(new Vector2(pGretel.PositionX + pGretel.CollisionBox.Width / 2 - mActionButton.Width / 2, pGretel.PositionY - 180) + OffsetGretel, 0f, Rectangle.Empty, Color.White, mActionButton, ActionInfoVisibilityGretel).Draw(pSpriteBatch, pSkeletonRenderer);
+			if (!ShowButtonFlashingHansel)
+				pSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), ActionInfoHansel, new Vector2(pHansel.PositionX + pHansel.CollisionBox.Width / 2 - (ActionInfoHansel.Length * 10) / 2, pHansel.PositionY - 120), Color.White * ActionInfoVisibilityHansel);
+			if (!ShowButtonFlashingGretel)
+				pSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), ActionInfoGretel, new Vector2(pGretel.PositionX + pGretel.CollisionBox.Width / 2 - (ActionInfoGretel.Length * 10) / 2, pGretel.PositionY - 120), Color.White * ActionInfoVisibilityGretel);
 		}
 
 		#endregion

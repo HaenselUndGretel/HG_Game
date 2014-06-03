@@ -72,12 +72,14 @@ namespace HanselAndGretel
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
 				ProgressCounterHansel = 0;
+				ProgressCounter = 0;
 				//ToDo Start Animation for QuickEvent Stepping.
 				mStateHansel = State.Running;
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
 			{
 				ProgressCounterGretel = 0;
+				ProgressCounter = 0;
 				//ToDo Start Animation for QuickEvent Stepping.
 				mStateGretel = State.Running;
 			}
@@ -86,7 +88,7 @@ namespace HanselAndGretel
 
 		public override void UpdateAction(Player pPlayer)
 		{
-			if (ProgressCounterHansel >= MaxProgress && ProgressCounterGretel >= MaxProgress)
+			if (ProgressCounter >= MaxProgress)
 			{
 				rHansel.mCurrentActivity = new None();
 				rGretel.mCurrentActivity = new None();

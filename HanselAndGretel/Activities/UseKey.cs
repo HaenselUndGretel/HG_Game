@@ -144,6 +144,7 @@ namespace HanselAndGretel
 				if (m2ndState)
 				{
 					ProgressCounterHansel = 0;
+					ProgressCounter = 0;
 					//ToDo Start Animation for QuickEvent Stepping.
 				}
 				else
@@ -157,6 +158,7 @@ namespace HanselAndGretel
 				if (m2ndState)
 				{
 					ProgressCounterGretel = 0;
+					ProgressCounter = 0;
 					//ToDo Start Animation for QuickEvent Stepping.
 				}
 				else
@@ -182,7 +184,7 @@ namespace HanselAndGretel
 				return;
 			}
 
-			if (ProgressCounterHansel >= MaxProgress && ProgressCounterGretel >= MaxProgress)
+			if (ProgressCounter >= MaxProgress)
 			{
 				rHansel.mCurrentActivity = new None();
 				rGretel.mCurrentActivity = new None();

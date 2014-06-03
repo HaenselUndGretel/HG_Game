@@ -23,7 +23,6 @@ namespace HanselAndGretel
 		protected Gretel mGretel;
 		protected SceneData mScene;
 		protected SkeletonRenderer mSkeletonRenderer;
-		protected Texture2D mActionButton;
 
 		#endregion
 
@@ -53,7 +52,6 @@ namespace HanselAndGretel
 
 		public override void LoadContent()
 		{
-			mActionButton = TextureManager.Instance.GetElementByString("button_x");
 			//Hansel & Gretel
 			mHansel.LoadContent();
 			mGretel.LoadContent();
@@ -113,10 +111,7 @@ namespace HanselAndGretel
 					dPack.Draw(mSpriteBatch, mSkeletonRenderer);
 			}
 			//Draw ActionInfo
-			new DrawPackage(new Vector2(mHansel.PositionX + mHansel.CollisionBox.Width / 2 - mActionButton.Width / 2, mHansel.PositionY - 180), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityHansel).Draw(mSpriteBatch, mSkeletonRenderer);
-			new DrawPackage(new Vector2(mGretel.PositionX + mGretel.CollisionBox.Width / 2 - mActionButton.Width / 2, mGretel.PositionY - 180), 0f, mActionButton.Bounds, Color.White, mActionButton, mLogic.ActivityHandler.ActionInfoVisibilityGretel).Draw(mSpriteBatch, mSkeletonRenderer);
-			mSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), mLogic.ActivityHandler.ActionInfoHansel, new Vector2(mHansel.PositionX + mHansel.CollisionBox.Width / 2 - (mLogic.ActivityHandler.ActionInfoHansel.Length * 10) / 2, mHansel.PositionY - 120), Color.White * mLogic.ActivityHandler.ActionInfoVisibilityHansel);
-			mSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), mLogic.ActivityHandler.ActionInfoGretel, new Vector2(mGretel.PositionX + mGretel.CollisionBox.Width / 2 - (mLogic.ActivityHandler.ActionInfoGretel.Length * 10) / 2, mGretel.PositionY - 120), Color.White * mLogic.ActivityHandler.ActionInfoVisibilityGretel);
+			mLogic.ActivityHandler.DrawActionInfo(mHansel, mGretel, mSpriteBatch, mSkeletonRenderer, TextureManager.Instance.GetElementByString("button_x"));
 			mSpriteBatch.End();
 
 			//Draw to Screen

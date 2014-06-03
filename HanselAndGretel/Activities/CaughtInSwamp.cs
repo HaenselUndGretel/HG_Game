@@ -12,6 +12,7 @@ namespace HanselAndGretel
 	{
 		int FreeProgressCounter;
 		bool WalkAway;
+		Vector2 WalkAwayDirection;
 		public bool HanselTrapped;
 		public bool GretelTrapped;
 		float MaxFreeDistance;
@@ -37,10 +38,27 @@ namespace HanselAndGretel
 
 		public override void PrepareAction(Player pPlayer)
 		{
+			if (m2ndState && (!rHansel.Inventory.Contains(typeof(Branch)) && !rGretel.Inventory.Contains(typeof(Branch))))
+			{
+				pPlayer.mCurrentActivity = new None();
+				if (pPlayer.GetType() == typeof(Hansel))
+				{
+					mStateHansel = State.Idle;
+				}
+				else if (pPlayer.GetType() == typeof(Gretel))
+				{
+					mStateGretel = State.Idle;
+				}
+				return;
+			}
 			FreeProgressCounter = 0;
 			WalkAway = false;
 			if (HanselTrapped || GretelTrapped)
+			{
+				WalkAwayDirection = rHansel.Position + ((rGretel.Position - rHansel.Position) / 2) - new Vector2(rIObj.CollisionRectList[0].X, rIObj.CollisionRectList[0].Y);
+				WalkAwayDirection.Normalize();
 				m2ndState = true;
+			}
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
 				mStateHansel = State.Starting;
@@ -83,8 +101,8 @@ namespace HanselAndGretel
 		{
 			if (WalkAway && pPlayer.GetType() == typeof(Hansel)) //Von Netz entfernen (nur einmal pro Frame ausführen)
 			{
-				rHansel.MoveManually(new Vector2(0, 1));
-				rGretel.MoveManually(new Vector2(0, 1));
+				rHansel.MoveManually(WalkAwayDirection);
+				rGretel.MoveManually(WalkAwayDirection);
 				bool finished = true;
 				foreach (Rectangle rect in rIObj.ActionRectList)
 				{
@@ -93,8 +111,8 @@ namespace HanselAndGretel
 				}
 				if (finished)
 				{
-					rHansel.MoveManually(new Vector2(0, 1));
-					rGretel.MoveManually(new Vector2(0, 1));
+					rHansel.MoveManually(WalkAwayDirection);
+					rGretel.MoveManually(WalkAwayDirection);
 					rHansel.mCurrentActivity = new None();
 					rGretel.mCurrentActivity = new None();
 					mStateHansel = State.Idle;

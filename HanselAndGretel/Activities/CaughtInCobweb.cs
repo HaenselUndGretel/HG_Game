@@ -32,6 +32,19 @@ namespace HanselAndGretel
 
 		public override void PrepareAction(Player pPlayer)
 		{
+			if (m2ndState && ((rHansel != TrappedPlayer && !rHansel.Inventory.Contains(typeof(Knife))) || (rGretel != TrappedPlayer && !rGretel.Inventory.Contains(typeof(Knife)))))
+			{
+				pPlayer.mCurrentActivity = new None();
+				if (pPlayer.GetType() == typeof(Hansel))
+				{
+					mStateHansel = State.Idle;
+				}
+				else if (pPlayer.GetType() == typeof(Gretel))
+				{
+					mStateGretel = State.Idle;
+				}
+				return;
+			}
 			if (!m2ndState) //Spieler trappen
 			{
 				pPlayer.Position = rIObj.ActionPosition1;

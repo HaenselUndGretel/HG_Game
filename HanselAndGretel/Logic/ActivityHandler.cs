@@ -65,10 +65,10 @@ namespace HanselAndGretel
 			//Checken ob der Player diese Activity ausführen kann
 			bool TmpHandicappedHansel = !pHansel.CheckForAbility(TmpPossibleActivityHansel);
 			bool TmpHandicappedGretel = !pGretel.CheckForAbility(TmpPossibleActivityGretel);
-			//Wenn Player diese Activity nicht ausführen kann, die PossibleActivity entsprechend anpassen
-			if (TmpHandicappedHansel)
+			//Wenn Player diese Activity nicht ausführen kann, oder ihm der Schlüssel fehlt oder er auf der falschen Seite des Baums steht, die PossibleActivity entsprechend anpassen
+			if (TmpHandicappedHansel || (TmpPossibleActivityHansel == Activity.UseKey && !pHansel.Inventory.Contains(typeof(Key))) || (TmpPossibleActivityHansel == Activity.KnockOverTree && TmpIObjEnteredByHansel.ActivityState.NearestActionPosition(pHansel.Position) != TmpIObjEnteredByHansel.ActionPosition1))
 				TmpPossibleActivityHansel = Activity.None;
-			if (TmpHandicappedGretel)
+			if (TmpHandicappedGretel || (TmpPossibleActivityGretel == Activity.UseKey && !pGretel.Inventory.Contains(typeof(Key))) || (TmpPossibleActivityGretel == Activity.KnockOverTree && TmpIObjEnteredByGretel.ActivityState.NearestActionPosition(pGretel.Position) != TmpIObjEnteredByGretel.ActionPosition1))
 				TmpPossibleActivityGretel = Activity.None;
 
 			//Update Activities

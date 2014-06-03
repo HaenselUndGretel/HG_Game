@@ -28,11 +28,21 @@ namespace HanselAndGretel
 		{
 			foreach (Item item in pScene.Items)
 			{
-				if (item.CollisionBox.Intersects(pHansel.CollisionBox) && !pHansel.Inventory.IsFull)
+				if (item.CollisionBox.Intersects(pHansel.CollisionBox))
 				{
-					pHansel.Inventory.FreeItemSlot.Item = item;
-					pScene.Items.Remove(item);
-					//return; Geht das in einer foreach-Schleife? Wenn nicht returnen.
+					if (pHansel.Inventory.TryToStore(item))
+					{
+						pScene.Items.Remove(item);
+						return;
+					}
+				}
+				else if (item.CollisionBox.Intersects(pGretel.CollisionBox))
+				{
+					if (pGretel.Inventory.TryToStore(item))
+					{
+						pScene.Items.Remove(item);
+						return;
+					}
 				}
 			}
 		}

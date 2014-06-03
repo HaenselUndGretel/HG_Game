@@ -20,7 +20,7 @@ namespace HanselAndGretel
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
-			EnterBalanceDistance = 200f;
+			EnterBalanceDistance = 80f;
 			BalanceSpeedFactor = 0.6f;
 			WalkAway = false;
 		}
@@ -42,73 +42,82 @@ namespace HanselAndGretel
 		{
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
-				//Wenn Spieler an der passenden Position ist Action starten
-				if (pPlayer.Position == NearestActionPosition(pPlayer.Position))
-				{
-					mStateHansel = State.Starting;
-					return;
-				}
-				//Spieler idled
-				if (!pPlayer.Input.ActionIsPressed)
+				if (!m2ndState && NearestActionPosition(pPlayer.Position) != rIObj.ActionPosition1)
 				{
 					pPlayer.mCurrentActivity = new None();
 					mStateHansel = State.Idle;
 					return;
 				}
-				//Spieler zu passender Position bewegen
-				if (pPlayer.Input.ActionIsPressed)
-					pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
-			}
-			else if (pPlayer.GetType() == typeof(Gretel))
-			{
 				//Wenn Spieler an der passenden Position ist Action starten
 				if (pPlayer.Position == NearestActionPosition(pPlayer.Position))
 				{
-					mStateGretel = State.Starting;
+					if (!m2ndState)
+					{
+						//ToDo Start Tree falling
+						pPlayer.mModel.SetAnimation("attack", false);
+					}
+					mStateHansel = State.Starting;
 					return;
 				}
-				//Spieler idled
-				if (!pPlayer.Input.ActionIsPressed)
+				pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
+			}
+			else if (pPlayer.GetType() == typeof(Gretel))
+			{
+				if (!m2ndState && NearestActionPosition(pPlayer.Position) != rIObj.ActionPosition1)
 				{
 					pPlayer.mCurrentActivity = new None();
 					mStateGretel = State.Idle;
 					return;
 				}
-				//Spieler zu passender Position bewegen
-				if (pPlayer.Input.ActionIsPressed)
-					pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
+				//Wenn Spieler an der passenden Position ist Action starten
+				if (pPlayer.Position == NearestActionPosition(pPlayer.Position))
+				{
+					if (!m2ndState)
+					{
+						//ToDo Start Tree falling
+						pPlayer.mModel.SetAnimation("attack", false);
+					}
+					mStateGretel = State.Starting;
+					return;
+				}
+				pPlayer.MoveAgainstPoint(NearestActionPosition(pPlayer.Position));
 			}
 		}
 
 		public override void StartAction(Player pPlayer)
 		{
 			IsAvailable = false;
-			if (m2ndState && pPlayer.mModel.AnimationComplete)
+			if (m2ndState)
 			{
-				WalkAway = false;
-				Vector2 Direction = DistantActionPosition(pPlayer.Position) - NearestActionPosition(pPlayer.Position);
-				Direction.Normalize();
-				pPlayer.Position += Direction * EnterBalanceDistance;
-				if (pPlayer.GetType() == typeof(Hansel))
+				if (pPlayer.mModel.AnimationComplete)
 				{
-					mStateHansel = State.Running;
-				}
-				else if (pPlayer.GetType() == typeof(Gretel))
-				{
-					mStateGretel = State.Running;
+					WalkAway = false;
+					Vector2 Direction = DistantActionPosition(pPlayer.Position) - NearestActionPosition(pPlayer.Position);
+					Direction.Normalize();
+					pPlayer.Position += Direction * EnterBalanceDistance;
+					if (pPlayer.GetType() == typeof(Hansel))
+					{
+						mStateHansel = State.Running;
+					}
+					else if (pPlayer.GetType() == typeof(Gretel))
+					{
+						mStateGretel = State.Running;
+					}
 				}
 				return;
 			}
-			pPlayer.mModel.SetAnimation("attack", false); //Start KnockOverTree Animation
-			m2ndState = true;
-			WalkAway = true;
-			if (pPlayer.GetType() == typeof(Hansel) && rHansel.mModel.AnimationComplete)
+			if (pPlayer.mModel.AnimationComplete)
 			{
-				mStateHansel = State.Running;
-			}
-			else if (pPlayer.GetType() == typeof(Gretel) && rGretel.mModel.AnimationComplete)
-			{
-				mStateGretel = State.Running;
+				m2ndState = true;
+				WalkAway = true;
+				if (pPlayer.GetType() == typeof(Hansel) && rHansel.mModel.AnimationComplete)
+				{
+					mStateHansel = State.Running;
+				}
+				else if (pPlayer.GetType() == typeof(Gretel) && rGretel.mModel.AnimationComplete)
+				{
+					mStateGretel = State.Running;
+				}
 			}
 		}
 

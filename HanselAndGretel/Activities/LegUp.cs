@@ -21,7 +21,7 @@ namespace HanselAndGretel
 			: base(pHansel, pGretel, pIObj)
 		{
 			mGretelActionStartOffset = new Vector2(80, -20);
-			mGretelMovedByAction = new Vector2(5, -200);
+			mGretelMovedByAction = new Vector2(-50, -250);
 		}
 
 		#region Override Methods

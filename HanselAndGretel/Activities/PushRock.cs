@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,10 @@ namespace HanselAndGretel
 	{
 		protected int ProgressCounterHansel;
 		protected int ProgressCounterGretel;
+		protected int ProgressCounter;
 		protected const int MaxProgress = 10;
+		protected const float ProgressDeltaPosition = 200f / (float)MaxProgress;
+		protected Vector2 ProgressDirection = new Vector2(0, 1);
 
 		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
@@ -97,8 +101,8 @@ namespace HanselAndGretel
 			{
 				if (pPlayer.Input.ActionJustPressed && ProgressCounterHansel <= ProgressCounterGretel)
 				{
-					//ToDo Step through QuickEvent Animation
 					++ProgressCounterHansel;
+					UpdateProgressPosition();
 				}
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
@@ -107,7 +111,25 @@ namespace HanselAndGretel
 				{
 					//ToDo Step through QuickEvent Animation
 					++ProgressCounterGretel;
+					UpdateProgressPosition();
 				}
+			}
+		}
+
+		protected void UpdateProgressPosition()
+		{
+			if (ProgressCounterHansel > ProgressCounter && ProgressCounterGretel > ProgressCounter)
+			{
+				for (int i = 0; i < rIObj.CollisionRectList.Count; i++)
+				{
+					Rectangle rect = rIObj.CollisionRectList[i];
+					rect.X += (int)(ProgressDirection.X * ProgressDeltaPosition);
+					rect.Y += (int)(ProgressDirection.Y * ProgressDeltaPosition);
+					rIObj.CollisionRectList[i] = rect;
+				}
+				rHansel.Position += ProgressDirection * ProgressDeltaPosition;
+				rGretel.Position += ProgressDirection * ProgressDeltaPosition;
+				++ProgressCounter;
 			}
 		}
 

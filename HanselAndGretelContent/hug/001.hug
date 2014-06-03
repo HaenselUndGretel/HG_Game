@@ -4,34 +4,125 @@
     <X>0</X>
     <Y>0</Y>
     <Width>1280</Width>
-    <Height>720</Height>
+    <Height>1440</Height>
     <Location>
       <X>0</X>
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <MoveArea />
+  <MoveArea>
+    <Rectangle>
+      <X>-63</X>
+      <Y>757</Y>
+      <Width>390</Width>
+      <Height>314</Height>
+      <Location>
+        <X>-63</X>
+        <Y>757</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>530</X>
+      <Y>736</Y>
+      <Width>162</Width>
+      <Height>335</Height>
+      <Location>
+        <X>530</X>
+        <Y>736</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>597</X>
+      <Y>395</Y>
+      <Width>205</Width>
+      <Height>578</Height>
+      <Location>
+        <X>597</X>
+        <Y>395</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>594</X>
+      <Y>-30</Y>
+      <Width>208</Width>
+      <Height>591</Height>
+      <Location>
+        <X>594</X>
+        <Y>-30</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-144</X>
+      <Y>226</Y>
+      <Width>343</Width>
+      <Height>552</Height>
+      <Location>
+        <X>-144</X>
+        <Y>226</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-54</X>
+      <Y>-49</Y>
+      <Width>331</Width>
+      <Height>415</Height>
+      <Location>
+        <X>-54</X>
+        <Y>-49</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1054</X>
+      <Y>638</Y>
+      <Width>259</Width>
+      <Height>547</Height>
+      <Location>
+        <X>1054</X>
+        <Y>638</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1119</X>
+      <Y>285</Y>
+      <Width>183</Width>
+      <Height>475</Height>
+      <Location>
+        <X>1119</X>
+        <Y>285</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1073</X>
+      <Y>-24</Y>
+      <Width>235</Width>
+      <Height>367</Height>
+      <Location>
+        <X>1073</X>
+        <Y>-24</Y>
+      </Location>
+    </Rectangle>
+  </MoveArea>
   <Waypoints>
     <Waypoint>
-      <ObjectId>0</ObjectId>
+      <ObjectId>3</ObjectId>
       <Position>
-        <X>79</X>
-        <Y>79</Y>
+        <X>3</X>
+        <Y>1182</Y>
       </Position>
       <CollisionBox>
-        <X>79</X>
-        <Y>79</Y>
-        <Width>134</Width>
-        <Height>254</Height>
+        <X>3</X>
+        <Y>1182</Y>
+        <Width>151</Width>
+        <Height>246</Height>
         <Location>
-          <X>79</X>
-          <Y>79</Y>
+          <X>3</X>
+          <Y>1182</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-      <DestinationScene>0</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
+      <DestinationScene>000</DestinationScene>
+      <DestinationWaypoint>14</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>1</X>
@@ -39,166 +130,177 @@
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
-      <ObjectId>1</ObjectId>
+      <ObjectId>0</ObjectId>
       <Position>
-        <X>50</X>
-        <Y>469</Y>
+        <X>824</X>
+        <Y>8</Y>
       </Position>
       <CollisionBox>
-        <X>50</X>
-        <Y>469</Y>
-        <Width>134</Width>
-        <Height>234</Height>
+        <X>824</X>
+        <Y>8</Y>
+        <Width>242</Width>
+        <Height>124</Height>
         <Location>
-          <X>50</X>
-          <Y>469</Y>
+          <X>824</X>
+          <Y>8</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-      <DestinationScene>0</DestinationScene>
+      <DestinationScene>002</DestinationScene>
       <DestinationWaypoint>1</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
-        <Y>0</Y>
+        <X>0</X>
+        <Y>1</Y>
+      </MovementOnEnter>
+    </Waypoint>
+    <Waypoint>
+      <ObjectId>1</ObjectId>
+      <Position>
+        <X>288</X>
+        <Y>9</Y>
+      </Position>
+      <CollisionBox>
+        <X>288</X>
+        <Y>9</Y>
+        <Width>300</Width>
+        <Height>117</Height>
+        <Location>
+          <X>288</X>
+          <Y>9</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <DestinationScene>002</DestinationScene>
+      <DestinationWaypoint>0</DestinationWaypoint>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>0</X>
+        <Y>1</Y>
       </MovementOnEnter>
     </Waypoint>
   </Waypoints>
   <BackgroundSprites />
-  <InteractiveObjects />
-  <Collectables />
-  <Items>
-    <Item xsi:type="Key">
-      <ObjectId>1</ObjectId>
-      <Position>
-        <X>735</X>
-        <Y>274</Y>
-      </Position>
-      <CollisionBox>
-        <X>735</X>
-        <Y>274</Y>
-        <Width>64</Width>
-        <Height>64</Height>
-        <Location>
-          <X>735</X>
-          <Y>274</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>338</DrawZ>
-      <TextureName>ItemKey</TextureName>
-      <Width>64</Width>
-      <Height>64</Height>
-      <Rotation>0</Rotation>
-      <Texture>
-        <Name />
-      </Texture>
-    </Item>
-    <Item xsi:type="Lantern">
+  <InteractiveObjects>
+    <InteractiveObject>
       <ObjectId>2</ObjectId>
       <Position>
-        <X>1082</X>
-        <Y>566</Y>
+        <X>329</X>
+        <Y>870</Y>
       </Position>
       <CollisionBox>
-        <X>1082</X>
-        <Y>566</Y>
-        <Width>64</Width>
-        <Height>64</Height>
+        <X>329</X>
+        <Y>870</Y>
+        <Width>200</Width>
+        <Height>200</Height>
         <Location>
-          <X>1082</X>
-          <Y>566</Y>
+          <X>329</X>
+          <Y>870</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>630</DrawZ>
-      <TextureName>ItemLantern</TextureName>
-      <Width>64</Width>
-      <Height>64</Height>
-      <Rotation>0</Rotation>
-      <Texture>
-        <Name />
-      </Texture>
-    </Item>
-    <Item xsi:type="Matches">
-      <ObjectId>3</ObjectId>
-      <Position>
-        <X>438</X>
-        <Y>88</Y>
-      </Position>
-      <CollisionBox>
-        <X>438</X>
-        <Y>88</Y>
-        <Width>64</Width>
-        <Height>64</Height>
-        <Location>
-          <X>438</X>
-          <Y>88</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>152</DrawZ>
-      <TextureName>ItemMatches</TextureName>
-      <Width>64</Width>
-      <Height>64</Height>
-      <Rotation>0</Rotation>
-      <Texture>
-        <Name />
-      </Texture>
-      <Count>10</Count>
-    </Item>
-    <Item xsi:type="Branch">
-      <ObjectId>4</ObjectId>
-      <Position>
-        <X>1046</X>
-        <Y>96</Y>
-      </Position>
-      <CollisionBox>
-        <X>1046</X>
-        <Y>96</Y>
-        <Width>64</Width>
-        <Height>64</Height>
-        <Location>
-          <X>1046</X>
-          <Y>96</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>160</DrawZ>
-      <TextureName>ItemBranch</TextureName>
-      <Width>64</Width>
-      <Height>64</Height>
-      <Rotation>0</Rotation>
-      <Texture>
-        <Name />
-      </Texture>
-    </Item>
-    <Item xsi:type="Knife">
+      <DrawZ>0</DrawZ>
+      <ActionRectList>
+        <Rectangle>
+          <X>329</X>
+          <Y>1070</Y>
+          <Width>200</Width>
+          <Height>150</Height>
+          <Location>
+            <X>329</X>
+            <Y>1070</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>328</X>
+          <Y>870</Y>
+          <Width>200</Width>
+          <Height>199</Height>
+          <Location>
+            <X>328</X>
+            <Y>870</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>427</X>
+        <Y>1075</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>0</X>
+        <Y>0</Y>
+      </ActionPosition2>
+      <ActionId>11</ActionId>
+      <TextureName>legup</TextureName>
+    </InteractiveObject>
+    <InteractiveObject>
       <ObjectId>5</ObjectId>
       <Position>
-        <X>587</X>
-        <Y>540</Y>
+        <X>802</X>
+        <Y>723</Y>
       </Position>
       <CollisionBox>
-        <X>587</X>
-        <Y>540</Y>
-        <Width>64</Width>
-        <Height>64</Height>
+        <X>802</X>
+        <Y>723</Y>
+        <Width>250</Width>
+        <Height>250</Height>
         <Location>
-          <X>587</X>
-          <Y>540</Y>
+          <X>802</X>
+          <Y>723</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>604</DrawZ>
-      <TextureName>ItemKnife</TextureName>
-      <Width>64</Width>
-      <Height>64</Height>
-      <Rotation>0</Rotation>
-      <Texture>
-        <Name />
-      </Texture>
-    </Item>
-  </Items>
+      <DrawZ>0</DrawZ>
+      <ActionRectList>
+        <Rectangle>
+          <X>800</X>
+          <Y>573</Y>
+          <Width>254</Width>
+          <Height>149</Height>
+          <Location>
+            <X>800</X>
+            <Y>573</Y>
+          </Location>
+        </Rectangle>
+        <Rectangle>
+          <X>802</X>
+          <Y>973</Y>
+          <Width>249</Width>
+          <Height>150</Height>
+          <Location>
+            <X>802</X>
+            <Y>973</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>802</X>
+          <Y>723</Y>
+          <Width>249</Width>
+          <Height>248</Height>
+          <Location>
+            <X>802</X>
+            <Y>723</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>922</X>
+        <Y>668</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>927</X>
+        <Y>979</Y>
+      </ActionPosition2>
+      <ActionId>10</ActionId>
+      <TextureName>jumpovergap</TextureName>
+    </InteractiveObject>
+  </InteractiveObjects>
+  <Collectables />
+  <Items />
 </SceneData>

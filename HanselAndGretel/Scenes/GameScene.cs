@@ -90,11 +90,13 @@ namespace HanselAndGretel
 
 			//---------------Draw
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(mRenderTarget);
-			DrawBackground();
+			//DrawBackground();
 
 			Matrix TmpTransformation = mCamera.GetTranslationMatrix();
 			mSkeletonRenderer.Effect.World = TmpTransformation;
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, TmpTransformation);
+			//DrawBackground
+			mSpriteBatch.Draw(mScene.BackgroundTextures[0], Vector2.Zero, Color.White);
 			//Draw Game
 			foreach (DrawPackage dPack in DrawPackagesGame)
 			{

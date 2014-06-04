@@ -40,12 +40,12 @@ namespace HanselAndGretel
 		{
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
-				InventoryFocusHansel = 1;
+				InventoryFocusHansel = pPlayer.Inventory.ItemFocus;
 				mStateHansel = State.Running;
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
 			{
-				InventoryFocusGretel = 1;
+				InventoryFocusGretel = pPlayer.Inventory.ItemFocus;
 				mStateGretel = State.Running;
 			}
 		}
@@ -89,7 +89,7 @@ namespace HanselAndGretel
 				//UseItem
 				if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusGretel].Item != null)
 				{
-					pPlayer.Inventory.ItemFocus = InventoryFocusHansel;
+					pPlayer.Inventory.ItemFocus = InventoryFocusGretel;
 					pPlayer.mCurrentActivity = new None();
 					mStateGretel = State.Idle;
 				}

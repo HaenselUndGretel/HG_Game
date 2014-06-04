@@ -73,7 +73,6 @@ namespace HanselAndGretel
 					break;
 				default:
 					throw new Exception("SwitchScene.CurrentState not set!");
-					break;
 			}	
 		}
 

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace HanselAndGretel
 {
@@ -142,7 +143,7 @@ namespace HanselAndGretel
 				//Fallen
 				if (Fail)
 				{
-					throw new Exception("Du N00B bist runter gefallen! OMG, is ja doof.");
+					MessageBox.Show("Du N00B bist runter gefallen! OMG, is ja doof.");
 				}
 				//WalkAway?
 				Vector2 TargetActionPosition = NearestActionPosition(pPlayer.Position + MovementInput * 1000f);

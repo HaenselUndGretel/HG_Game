@@ -31,14 +31,14 @@ namespace HanselAndGretel
 
 		public override Activity GetPossibleActivity(bool pContains)
 		{
-			if (m2ndState && (rHansel.Inventory.Contains(typeof(Branch)) || rGretel.Inventory.Contains(typeof(Branch))) && WithinMaxFreeDistance())
+			if (m2ndState && (rHansel.Inventory.Contains(typeof(Branch), false) || rGretel.Inventory.Contains(typeof(Branch), false)) && WithinMaxFreeDistance())
 				return Activity.FreeFromSwamp;
 			return Activity.None;
 		}
 
 		public override void PrepareAction(Player pPlayer)
 		{
-			if (m2ndState && (!rHansel.Inventory.Contains(typeof(Branch)) && !rGretel.Inventory.Contains(typeof(Branch))))
+			if (m2ndState && (!rHansel.Inventory.Contains(typeof(Branch), false) && !rGretel.Inventory.Contains(typeof(Branch), false)))
 			{
 				pPlayer.mCurrentActivity = new None();
 				if (pPlayer.GetType() == typeof(Hansel))

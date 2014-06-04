@@ -70,6 +70,14 @@ namespace HanselAndGretel
 					++InventoryFocusHansel;
 				InventoryFocusHansel = (int)MathHelper.Clamp(InventoryFocusHansel, 0, 2);
 
+				//UseItem
+				if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusHansel].Item != null)
+				{
+					pPlayer.Inventory.ItemFocus = InventoryFocusHansel;
+					pPlayer.mCurrentActivity = new None();
+					mStateHansel = State.Idle;
+				}
+				//SwapItem
 				if (pPlayer.Input.ActionJustPressed && m2ndState)
 					SwapItem(pPlayer);
 			}
@@ -82,6 +90,14 @@ namespace HanselAndGretel
 					++InventoryFocusGretel;
 				InventoryFocusGretel = (int)MathHelper.Clamp(InventoryFocusGretel, 0, 2);
 
+				//UseItem
+				if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusGretel].Item != null)
+				{
+					pPlayer.Inventory.ItemFocus = InventoryFocusHansel;
+					pPlayer.mCurrentActivity = new None();
+					mStateGretel = State.Idle;
+				}
+				//SwapItem
 				if (pPlayer.Input.ActionJustPressed && m2ndState)
 					SwapItem(pPlayer);
 			}

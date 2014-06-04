@@ -226,7 +226,7 @@ namespace HanselAndGretel
 		protected void UpdateActionInfoFading()
 		{
 			//Fade ButtonShowing
-			float TmpFadingDelta = ActionInfoFadingDuration * (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds / 1000d);
+			float TmpFadingDelta = (float)EngineSettings.Time.ElapsedGameTime.TotalSeconds / ActionInfoFadingDuration;
 			if (!ShowButtonFlashingHansel)
 			{
 				if (ShowActionInfoHansel) //Fade ButtonShowingHansel in
@@ -298,7 +298,7 @@ namespace HanselAndGretel
 
 		protected void UpdateButtonFlashFading()
 		{
-			float TmpFadingDelta = (float)(EngineSettings.Time.ElapsedGameTime.TotalSeconds / ButtonFlashDuration);
+			float TmpFadingDelta = (float)EngineSettings.Time.ElapsedGameTime.TotalSeconds / ButtonFlashDuration;
 
 			if (ShowButtonFlashingHansel)
 			{

@@ -15,7 +15,7 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		protected const float InventoryFadingDuration = 1f;
+		protected const float InventoryFadingDuration = 0.3f;
 		protected float InventoryVisibilityHansel;
 		protected float InventoryVisibilityGretel;
 		protected Vector2 InventoryOffset;
@@ -98,7 +98,7 @@ namespace HanselAndGretel
 		protected void UpdateInventoryFading(Hansel pHansel, Gretel pGretel)
 		{
 			//Fade ButtonShowing
-			float TmpFadingDelta = InventoryFadingDuration * (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds / 1000d);
+			float TmpFadingDelta = (float)EngineSettings.Time.ElapsedGameTime.TotalSeconds / InventoryFadingDuration;
 			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem)) //Fade ButtonShowingHansel in
 				InventoryVisibilityHansel += TmpFadingDelta;
 			else //Fade ButtonShowingHansel out

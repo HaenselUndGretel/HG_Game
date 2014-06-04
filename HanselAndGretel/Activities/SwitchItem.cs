@@ -12,7 +12,7 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		protected const float MaxSwapDistance = 1000f;
+		protected const float MaxSwapDistance = 200f;
 		public int InventoryFocusHansel;
 		public int InventoryFocusGretel;
 
@@ -38,10 +38,6 @@ namespace HanselAndGretel
 
 		public override void PrepareAction(Player pPlayer)
 		{
-			if ((rHansel.Position - rGretel.Position).Length() <= MaxSwapDistance)
-				m2ndState = true;
-			else
-				m2ndState = false;
 			if (pPlayer.GetType() == typeof(Hansel))
 			{
 				InventoryFocusHansel = 1;
@@ -78,7 +74,7 @@ namespace HanselAndGretel
 					mStateHansel = State.Idle;
 				}
 				//SwapItem
-				if (pPlayer.Input.ActionJustPressed && m2ndState)
+				if (pPlayer.Input.ActionJustPressed && ((rHansel.Position - rGretel.Position).Length() <= MaxSwapDistance))
 					SwapItem(pPlayer);
 			}
 			else if (pPlayer.GetType() == typeof(Gretel))
@@ -98,7 +94,7 @@ namespace HanselAndGretel
 					mStateGretel = State.Idle;
 				}
 				//SwapItem
-				if (pPlayer.Input.ActionJustPressed && m2ndState)
+				if (pPlayer.Input.ActionJustPressed && ((rHansel.Position - rGretel.Position).Length() <= MaxSwapDistance))
 					SwapItem(pPlayer);
 			}
 		}

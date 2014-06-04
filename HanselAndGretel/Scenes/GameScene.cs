@@ -119,6 +119,7 @@ namespace HanselAndGretel
 
 			//Draw to Screen
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
+			EngineSettings.Graphics.GraphicsDevice.Clear(Color.Black);
 			mSpriteBatch.Begin();
 			if (mLogic.SceneSwitchHandler.CurrentState == SceneSwitchHandler.State.Switching)
 				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, new Color(mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading));

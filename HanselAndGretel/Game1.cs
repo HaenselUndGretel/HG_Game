@@ -28,10 +28,7 @@ namespace HanselAndGretel
 			EngineSettings.DisplayHeight = 720;
 			EngineSettings.DisplayWidth = 1280;
 			EngineSettings.SetResolution(1280, 720);
-			//Final Game
-			//EngineSettings.SetResolution();
-			//EngineSettings.SetToFullScreen();
-			
+			EngineSettings.SetToFullScreen();
 		}
 
 		/// <summary>

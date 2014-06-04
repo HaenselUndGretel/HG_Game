@@ -112,6 +112,7 @@ namespace HanselAndGretel
 			}
 			//Draw ActionInfo
 			mLogic.ActivityHandler.DrawActionInfo(mHansel, mGretel, mSpriteBatch, mSkeletonRenderer, TextureManager.Instance.GetElementByString("button_x"));
+			mLogic.ItemHandler.DrawInventory(mHansel, mGretel, mSpriteBatch, mSkeletonRenderer);
 			mSpriteBatch.End();
 
 			//Draw to Screen

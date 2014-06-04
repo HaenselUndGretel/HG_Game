@@ -2,6 +2,8 @@
 using KryptonEngine;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Spine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,7 @@ namespace HanselAndGretel
 		protected const float InventoryFadingDuration = 1f;
 		protected float InventoryVisibilityHansel;
 		protected float InventoryVisibilityGretel;
+		protected Vector2 InventoryOffset;
 
 		#endregion
 
@@ -32,19 +35,20 @@ namespace HanselAndGretel
 
 		protected void Initialize()
 		{
-
+			InventoryOffset = new Vector2(25 - (64 * 3) / 2, -78 - 64);
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
 			CollectItems(pScene, pHansel, pGretel);
-			ShowInventory(pHansel, pGretel);
-			UpdateInventory(pHansel, pGretel);
+			UpdateShowInventory(pHansel, pGretel);
 			UpdateInventoryFading(pHansel, pGretel);
 		}
 
-		protected void ShowInventory(Hansel pHansel, Gretel pGretel)
-		{
+		#region Update Inventory
+
+		protected void UpdateShowInventory(Hansel pHansel, Gretel pGretel)
+		{ //Das eigentliche InventoryUpdate wird automatisch über den ActivityHandler ausgeführt.
 			//Hansel
 			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pHansel.Input.SwitchItemJustPressed)
 			{
@@ -66,14 +70,6 @@ namespace HanselAndGretel
 			{
 				pGretel.mCurrentActivity = new None();
 			}
-		}
-
-		protected void UpdateInventory(Hansel pHansel, Gretel pGretel)
-		{
-			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem))
-				pHansel.mCurrentActivity.GetUpdateMethodForPlayer(pHansel)(pHansel);
-			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
-				pGretel.mCurrentActivity.GetUpdateMethodForPlayer(pGretel)(pGretel);
 		}
 
 		protected void CollectItems(SceneData pScene, Hansel pHansel, Gretel pGretel)
@@ -115,6 +111,27 @@ namespace HanselAndGretel
 			InventoryVisibilityHansel = MathHelper.Clamp(InventoryVisibilityHansel, 0f, 1f);
 			InventoryVisibilityGretel = MathHelper.Clamp(InventoryVisibilityGretel, 0f, 1f);
 		}
+
+		#endregion
+
+		#region Draw Inventory
+
+		public void DrawInventory(Hansel pHansel, Gretel pGretel, SpriteBatch pSpriteBatch, SkeletonRenderer pSkeletonRenderer)
+		{
+			int TmpFocusHansel = 3;
+			int TmpFocusGretel = 3;
+			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem))
+				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocusHansel;
+			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
+				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocusGretel;
+			List<DrawPackage> DrawPackages = new List<DrawPackage>();
+			DrawPackages.AddRange(pHansel.Inventory.GetDrawPackages(pHansel.Position + InventoryOffset, InventoryVisibilityHansel, TmpFocusHansel));
+			DrawPackages.AddRange(pGretel.Inventory.GetDrawPackages(pGretel.Position + InventoryOffset, InventoryVisibilityGretel, TmpFocusGretel));
+			foreach (DrawPackage dPack in DrawPackages)
+				dPack.Draw(pSpriteBatch, pSkeletonRenderer);
+		}
+
+		#endregion
 
 		#endregion
 	}

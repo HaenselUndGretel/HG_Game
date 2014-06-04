@@ -12,9 +12,9 @@ namespace HanselAndGretel
 	{
 		#region Properties
 
-		protected const float MaxSwapDistance = 100f;
-		protected int InventoryFocusHansel;
-		protected int InventoryFocusGretel;
+		protected const float MaxSwapDistance = 1000f;
+		public int InventoryFocusHansel;
+		public int InventoryFocusGretel;
 
 		#endregion
 
@@ -68,7 +68,7 @@ namespace HanselAndGretel
 					--InventoryFocusHansel;
 				if (pPlayer.Input.ItemRightJustPressed)
 					++InventoryFocusHansel;
-				MathHelper.Clamp(InventoryFocusHansel, 0, 3);
+				InventoryFocusHansel = (int)MathHelper.Clamp(InventoryFocusHansel, 0, 2);
 
 				if (pPlayer.Input.ActionJustPressed && m2ndState)
 					SwapItem(pPlayer);
@@ -80,7 +80,7 @@ namespace HanselAndGretel
 					--InventoryFocusGretel;
 				if (pPlayer.Input.ItemRightJustPressed)
 					++InventoryFocusGretel;
-				MathHelper.Clamp(InventoryFocusGretel, 0, 3);
+				InventoryFocusGretel = (int)MathHelper.Clamp(InventoryFocusGretel, 0, 2);
 
 				if (pPlayer.Input.ActionJustPressed && m2ndState)
 					SwapItem(pPlayer);

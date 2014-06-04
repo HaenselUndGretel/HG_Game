@@ -11,7 +11,7 @@ namespace HanselAndGretel
 	class CaughtInCobweb : ActivityState
 	{
 		int FreeProgressCounter;
-		Player TrappedPlayer;
+		public Player TrappedPlayer;
 		bool WalkAway;
 
 		public CaughtInCobweb(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)

@@ -266,8 +266,22 @@ namespace HanselAndGretel
 					ShowButtonFlashingHansel = true;
 				}
 			}
+			else if (pHansel.mCurrentActivity.GetType() == typeof(CaughtInCobweb) && pHansel != ((CaughtInCobweb)pHansel.mCurrentActivity).TrappedPlayer)
+			{
+				if (!ShowButtonFlashingHansel)
+						ActionInfoVisibilityHansel = 1f;
+					ShowButtonFlashingHansel = true;
+			}
+			else if (pHansel.mCurrentActivity.GetType() == typeof(CaughtInSwamp) && !((CaughtInSwamp)pHansel.mCurrentActivity).HanselTrapped)
+			{
+				if (!ShowButtonFlashingHansel)
+					ActionInfoVisibilityHansel = 1f;
+				ShowButtonFlashingHansel = true;
+			}
 			else
 			{
+				if (ShowButtonFlashingHansel)
+					ActionInfoVisibilityHansel = 0f;
 				ShowButtonFlashingHansel = false;
 			}
 			//Gretel
@@ -289,8 +303,22 @@ namespace HanselAndGretel
 					ShowButtonFlashingGretel = true;
 				}
 			}
+			else if (pGretel.mCurrentActivity.GetType() == typeof(CaughtInCobweb) && pGretel != ((CaughtInCobweb)pGretel.mCurrentActivity).TrappedPlayer)
+			{
+				if (!ShowButtonFlashingGretel)
+					ActionInfoVisibilityGretel = 1f;
+				ShowButtonFlashingGretel = true;
+			}
+			else if (pGretel.mCurrentActivity.GetType() == typeof(CaughtInSwamp) && !((CaughtInSwamp)pGretel.mCurrentActivity).GretelTrapped)
+			{
+				if (!ShowButtonFlashingGretel)
+					ActionInfoVisibilityGretel = 1f;
+				ShowButtonFlashingGretel = true;
+			}
 			else
 			{
+				if (ShowButtonFlashingGretel)
+					ActionInfoVisibilityGretel = 0f;
 				ShowButtonFlashingGretel = false;
 			}
 			UpdateButtonFlashFading();

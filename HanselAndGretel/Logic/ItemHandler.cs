@@ -35,7 +35,7 @@ namespace HanselAndGretel
 
 		protected void Initialize()
 		{
-			InventoryOffset = new Vector2(25 - (64 * 3) / 2, -78 - 64);
+			InventoryOffset = new Vector2(25, -100);
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
@@ -124,11 +124,8 @@ namespace HanselAndGretel
 				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocusHansel;
 			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
 				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocusGretel;
-			List<DrawPackage> DrawPackages = new List<DrawPackage>();
-			DrawPackages.AddRange(pHansel.Inventory.GetDrawPackages(pHansel.Position + InventoryOffset, InventoryVisibilityHansel, TmpFocusHansel));
-			DrawPackages.AddRange(pGretel.Inventory.GetDrawPackages(pGretel.Position + InventoryOffset, InventoryVisibilityGretel, TmpFocusGretel));
-			foreach (DrawPackage dPack in DrawPackages)
-				dPack.Draw(pSpriteBatch, pSkeletonRenderer);
+			pHansel.Inventory.Draw(pSpriteBatch, pHansel.Position + InventoryOffset, InventoryVisibilityHansel, TmpFocusHansel);
+			pGretel.Inventory.Draw(pSpriteBatch, pGretel.Position + InventoryOffset, InventoryVisibilityGretel, TmpFocusGretel);
 		}
 
 		#endregion

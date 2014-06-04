@@ -174,11 +174,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\inventory_focus.png">
-      <Name>inventory_focus</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Content Include="spine\ashbrett-1.png">
       <Name>ashbrett-1</Name>
       <Importer>TextureImporter</Importer>

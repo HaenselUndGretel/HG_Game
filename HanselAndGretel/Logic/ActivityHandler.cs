@@ -109,7 +109,10 @@ namespace HanselAndGretel
 					{
 						((CaughtInSwamp)pEnteredIObjHansel.ActivityState).HanselTrapped = true;
 						if (((CaughtInSwamp)pEnteredIObjHansel.ActivityState).GretelTrapped)
+						{
+							EngineSettings.SetToWindowed();
 							MessageBox.Show("Beide Player im Sumpf getrapped. N00Bs!");
+						}
 					}
 					//Bei Swamp && PlayerTrapped nur free ausführen wenn distance klein genug ist
 					if ((pEnteredIObjHansel.Activity == Activity.CaughtInSwamp && pEnteredIObjHansel.ActivityState.m2ndState) && !((CaughtInSwamp)pEnteredIObjHansel.ActivityState).WithinMaxFreeDistance())
@@ -129,7 +132,10 @@ namespace HanselAndGretel
 					{
 						((CaughtInSwamp)pEnteredIObjGretel.ActivityState).GretelTrapped = true;
 						if (((CaughtInSwamp)pEnteredIObjGretel.ActivityState).HanselTrapped)
+						{
+							EngineSettings.SetToWindowed();
 							MessageBox.Show("Beide Player im Sumpf getrapped. N00Bs!");
+						}
 					}
 					//Bei Swamp && PlayerTrapped nur free ausführen wenn distance klein genug ist
 					if ((pEnteredIObjGretel.Activity == Activity.CaughtInSwamp && pEnteredIObjGretel.ActivityState.m2ndState) && !((CaughtInSwamp)pEnteredIObjGretel.ActivityState).WithinMaxFreeDistance())

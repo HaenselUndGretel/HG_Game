@@ -1,4 +1,5 @@
 ﻿using HanselAndGretel.Data;
+using KryptonEngine;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
 using System;
@@ -143,6 +144,7 @@ namespace HanselAndGretel
 				//Fallen
 				if (Fail)
 				{
+					EngineSettings.SetToWindowed();
 					MessageBox.Show("Du N00B bist runter gefallen! OMG, is ja doof.");
 				}
 				//WalkAway?

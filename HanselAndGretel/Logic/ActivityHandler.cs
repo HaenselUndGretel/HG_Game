@@ -419,9 +419,6 @@ namespace HanselAndGretel
 						case Activity.SlipThroughRock:
 							iObj.ActivityState = new SlipThroughRock(pHansel, pGretel, iObj);
 							break;
-						case Activity.Crawl:
-							iObj.ActivityState = new Crawl(pHansel, pGretel, iObj);
-							break;
 						case Activity.JumpOverGap:
 							iObj.ActivityState = new JumpOverGap(pHansel, pGretel, iObj);
 							break;

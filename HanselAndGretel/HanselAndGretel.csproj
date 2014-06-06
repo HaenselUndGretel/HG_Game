@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\CaughtInCobweb.cs" />
-    <Compile Include="Activities\Crawl.cs" />
     <Compile Include="Activities\JumpOverGap.cs" />
     <Compile Include="Activities\LegUp.cs" />
     <Compile Include="Activities\LegUpGrab.cs" />

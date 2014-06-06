@@ -89,7 +89,7 @@ namespace HanselAndGretel
 			//ToDo: DrawPackage Sorting!
 
 			//---------------Draw
-			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(mRenderTarget);
+			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(mRenderTargetFinal);
 			//DrawBackground();
 
 			Matrix TmpTransformation = mCamera.GetTranslationMatrix();
@@ -122,9 +122,9 @@ namespace HanselAndGretel
 			EngineSettings.Graphics.GraphicsDevice.Clear(Color.Black);
 			mSpriteBatch.Begin();
 			if (mLogic.SceneSwitchHandler.CurrentState == SceneSwitchHandler.State.Switching)
-				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, new Color(mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading));
+				mSpriteBatch.Draw(mRenderTargetFinal, Vector2.Zero, new Color(mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading, mLogic.SceneSwitchHandler.Fading));
 			else
-				mSpriteBatch.Draw(mRenderTarget, Vector2.Zero, Color.White);
+				mSpriteBatch.Draw(mRenderTargetFinal, Vector2.Zero, Color.White);
 			mSpriteBatch.End();
 		}
 

@@ -72,8 +72,10 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityStates\BalanceOverBrokenTree.cs" />
     <Compile Include="ActivityStates\CaughtInCobweb.cs" />
     <Compile Include="ActivityStates\CaughtInSwamp.cs" />
+    <Compile Include="ActivityStates\Conditions.cs" />
     <Compile Include="ActivityStates\JumpOverGap.cs" />
     <Compile Include="ActivityStates\KnockOverTree.cs" />
     <Compile Include="ActivityStates\LegUp.cs" />

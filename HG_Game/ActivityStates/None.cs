@@ -15,9 +15,5 @@ namespace HG_Game
 			mMovementSpeedFactorGretel = 1f;
 		}
 
-		public override Activity GetPossibleActivity(bool pContains)
-		{
-			return Activity.None;
-		}
 	}
 }

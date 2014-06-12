@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using KryptonEngine.Entities;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
 	public class SplashScene : Scene
 	{

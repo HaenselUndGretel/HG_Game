@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
 	public class Logic
 	{
@@ -42,8 +42,8 @@ namespace HanselAndGretel
 		{
 			//Update Logic Parts
 			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera);
-			ActivityHandler.Update(pScene, pHansel, pGretel);
-			ItemHandler.Update(pScene, pHansel, pGretel);
+			//ActivityHandler.Update(pScene, pHansel, pGretel);
+			//ItemHandler.Update(pScene, pHansel, pGretel);
 
 			//Check whether Player may move
 			HanselMayMove = true;

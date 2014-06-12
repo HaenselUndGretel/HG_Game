@@ -1,6 +1,6 @@
 using System;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
 #if WINDOWS || XBOX
     static class Program

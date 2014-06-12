@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{F89C843D-C689-4DD1-B1B2-1ACD4B4FBF5B}</ProjectGuid>
+    <ProjectGuid>{6F1CEC69-945C-4AAC-BC2F-8FEC83A40A2A}</ProjectGuid>
     <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -19,7 +19,7 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>HanselAndGretelContent</RootNamespace>
+    <RootNamespace>HG_GameContent</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
@@ -37,13 +37,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gfx\Engine\EngineClose.png">
-      <Name>EngineClose</Name>
+    <Compile Include="gfx\000Diffuse.png">
+      <Name>000Diffuse</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\hansel_cutout.png">
-      <Name>hansel_cutout</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\001Diffuse.png">
+      <Name>001Diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\002Diffuse.png">
+      <Name>002Diffuse</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -54,198 +63,253 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\Collectable1.png">
-      <Name>Collectable1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable2.png">
-      <Name>Collectable2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable3.png">
-      <Name>Collectable3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable4.png">
-      <Name>Collectable4</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable5.png">
-      <Name>Collectable5</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable6.png">
-      <Name>Collectable6</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable7.png">
-      <Name>Collectable7</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable8.png">
-      <Name>Collectable8</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\Collectable9.png">
-      <Name>Collectable9</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\ItemBranch.png">
-      <Name>ItemBranch</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\ItemKey.png">
-      <Name>ItemKey</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\ItemKnife.png">
-      <Name>ItemKnife</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\ItemLantern.png">
-      <Name>ItemLantern</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\ItemMatches.png">
-      <Name>ItemMatches</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="gfx\cobweb.png">
       <Name>cobweb</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\jumpovergap.png">
-      <Name>jumpovergap</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable1.png">
+      <Name>Collectable1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\knockovertree.png">
-      <Name>knockovertree</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable2.png">
+      <Name>Collectable2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\legup.png">
-      <Name>legup</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable3.png">
+      <Name>Collectable3</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\pulldoor_usekey.png">
-      <Name>pulldoor_usekey</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable4.png">
+      <Name>Collectable4</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\pushrock.png">
-      <Name>pushrock</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable5.png">
+      <Name>Collectable5</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\slipthroughrock.png">
-      <Name>slipthroughrock</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable6.png">
+      <Name>Collectable6</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\swamp.png">
-      <Name>swamp</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable7.png">
+      <Name>Collectable7</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\stamm01.png">
-      <Name>stamm01</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable8.png">
+      <Name>Collectable8</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Collectable9.png">
+      <Name>Collectable9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\Engine\EngineClose.png">
+      <Name>EngineClose</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\hansel_cutout.png">
+      <Name>hansel_cutout</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="gfx\inventory.png">
       <Name>inventory</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\000Diffuse.png">
-      <Name>000Diffuse</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\ItemBranch.png">
+      <Name>ItemBranch</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\001Diffuse.png">
-      <Name>001Diffuse</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\ItemKey.png">
+      <Name>ItemKey</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\002Diffuse.png">
-      <Name>002Diffuse</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\ItemKnife.png">
+      <Name>ItemKnife</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Content Include="spine\ashbrett-1.png">
-      <Name>ashbrett-1</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\ItemLantern.png">
+      <Name>ItemLantern</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\sweetcheeks-1.png">
-      <Name>sweetcheeks-1</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\ItemMatches.png">
+      <Name>ItemMatches</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="spine\ashbrett.atlas">
-      <Name>ashbrett</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\ashbrett.json">
-      <Name>ashbrett</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Compile Include="gfx\jumpovergap.png">
+      <Name>jumpovergap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="spine\sweetcheeks.atlas">
-      <Name>sweetcheeks</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\sweetcheeks.json">
-      <Name>sweetcheeks</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Compile Include="gfx\knockovertree.png">
+      <Name>knockovertree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="spine\ashbrett.settings">
-      <Name>ashbrett</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\sweetcheeks.settings">
-      <Name>sweetcheeks</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Compile Include="gfx\legup.png">
+      <Name>legup</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\pulldoor_usekey.png">
+      <Name>pulldoor_usekey</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\pushrock.png">
+      <Name>pushrock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\slipthroughrock.png">
+      <Name>slipthroughrock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\stamm01.png">
+      <Name>stamm01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gfx\swamp.png">
+      <Name>swamp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="hug\000.hug">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>000</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="hug\001.hug">
-      <Name>001</Name>
+    <Content Include="spine\ashbrett-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ashbrett-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Content>
+    <Content Include="spine\sweetcheeks-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>sweetcheeks-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hug\001.hug">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>001</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="hug\002.hug">
-      <Name>002</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>002</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\ashbrett.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ashbrett</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\ashbrett.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ashbrett</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\ashbrett.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ashbrett</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\sweetcheeks.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>sweetcheeks</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\sweetcheeks.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>sweetcheeks</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\sweetcheeks.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>sweetcheeks</Name>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

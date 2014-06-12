@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 using KryptonEngine;
 using KryptonEngine.SceneManagement;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
 	/// <summary>
 	/// This is the main type for your game
@@ -20,7 +20,7 @@ namespace HanselAndGretel
 	{
 
 		public Game1()
-			:base()
+			: base()
 		{
 			EngineSettings.OnWindows = true;
 			EngineSettings.IsDebug = false;
@@ -28,7 +28,7 @@ namespace HanselAndGretel
 			EngineSettings.DisplayHeight = 720;
 			EngineSettings.DisplayWidth = 1280;
 			EngineSettings.SetResolution(1280, 720);
-			EngineSettings.SetToFullScreen();
+			//EngineSettings.SetToFullScreen();
 		}
 
 		/// <summary>

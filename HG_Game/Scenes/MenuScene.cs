@@ -5,7 +5,7 @@ using System.Text;
 using KryptonEngine.SceneManagement;
 using KryptonEngine.Entities;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
 	public class MenuScene : Scene
 	{

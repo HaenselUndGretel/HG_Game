@@ -9,10 +9,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
 	public class ItemHandler
-	{
+	{/*
 		#region Properties
 
 		protected const float InventoryFadingDuration = 0.3f;
@@ -131,5 +131,5 @@ namespace HanselAndGretel
 		#endregion
 
 		#endregion
-	}
+	*/}
 }

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HanselAndGretel
+namespace HG_Game
 {
-	class None : ActivityState
+	public class None : ActivityState
 	{
 		public None()
 			:base()

@@ -9,20 +9,69 @@ namespace HG_Game
 {
 	public static class Conditions
 	{
-
-		public static bool NotHandicapped(Player pPlayer, Player pOtherPlayer, ActivityState pActivityState)
+		#region Start
+		public static bool NotHandicapped(Player pPlayer, Activity pActivity)
 		{
 			return true;
 		}
 
-		public static bool Intersects(Player pPlayer, Player pOtherPlayer, ActivityState pActivityState)
+		//ActionRectangles
+		public static bool Intersects(Player pPlayer, InteractiveObject pIObj)
 		{
 			return true;
 		}
 
-		public static bool Contains(Player pPlayer, Player pOtherPlayer, ActivityState pActivityState)
+		public static bool Contains(Player pPlayer, InteractiveObject pIObj)
 		{
 			return true;
 		}
+
+		//ActionButton
+		public static bool ActionHold(Player pPlayer)
+		{
+			return true;
+		}
+
+		public static bool ActionPressed(Player pPlayer)
+		{
+			return true;
+		}
+
+		//Item dabei
+		public static bool ItemInOwnHand(Player pPlayer, Type pItemType)
+		{
+			return true;
+		}
+
+		public static bool ItemInOwnInventory(Player pPlayer, Type pItemType)
+		{
+			return true;
+		}
+
+		public static bool ItemInInventory(Player pPlayer, Player pOtherPlayer, Type pItemType)
+		{
+			return true;
+		}
+
+		//Weitere
+		public static bool NearestActionPosition1(Player pPlayer, InteractiveObject IObj)
+		{
+			return true;
+		}
+
+		public static bool PlayerNearEnough(Player pPlayer, Player pOtherPlayer, float Distance)
+		{
+			return true;
+		}
+
+		public static bool ActivityNotInUseByOtherPlayer(Player pOtherPlayer, ActivityState pActivityState)
+		{
+			return true;
+		}
+		#endregion
+
+		#region Update
+
+		#endregion
 	}
 }

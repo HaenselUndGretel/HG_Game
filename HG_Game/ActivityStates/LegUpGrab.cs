@@ -17,5 +17,22 @@ namespace HG_Game
 
 		}
 
+		#region Override Methods
+
+		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
+		{
+			if (Conditions.NotHandicapped(pPlayer, Activity.LegUpGrab) &&
+				Conditions.Contains(pPlayer, rIObj)
+				)
+				return Activity.LegUpGrab;
+			return Activity.None;
+		}
+
+		public override void Update(Player pPlayer, Player pOtherPlayer)
+		{
+			base.Update(pPlayer, pOtherPlayer);
+		}
+
+		#endregion
 	}
 }

@@ -14,5 +14,23 @@ namespace HG_Game
 		{
 		}
 
+		#region Override Methods
+
+		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
+		{
+			if (Conditions.NotHandicapped(pPlayer, Activity.SlipThroughRock) &&
+				Conditions.Contains(pPlayer, rIObj) &&
+				Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this)
+				)
+				return Activity.SlipThroughRock;
+			return Activity.None;
+		}
+
+		public override void Update(Player pPlayer, Player pOtherPlayer)
+		{
+			base.Update(pPlayer, pOtherPlayer);
+		}
+
+		#endregion
 	}
 }

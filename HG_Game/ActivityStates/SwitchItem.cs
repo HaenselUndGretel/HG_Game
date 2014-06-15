@@ -10,6 +10,25 @@ namespace HG_Game
 {
 	class SwitchItem : ActivityState
 	{
+
+		public SwitchItem(InteractiveObject pIObj)
+			: base(pIObj)
+		{
+		}
+
+		#region Override Methods
+
+		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
+		{
+			base.GetPossibleActivity(pPlayer, pOtherPlayer);
+		}
+
+		public override void Update(Player pPlayer, Player pOtherPlayer)
+		{
+			base.Update(pPlayer, pOtherPlayer);
+		}
+
+		#endregion
 		/*
 		#region Properties
 

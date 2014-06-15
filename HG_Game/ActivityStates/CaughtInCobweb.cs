@@ -17,5 +17,18 @@ namespace HG_Game
 
 		}
 
+		#region Override Methods
+
+		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
+		{
+			return base.GetPossibleActivity(pPlayer, pOtherPlayer);
+		}
+
+		public override void Update(Player pPlayer, Player pOtherPlayer)
+		{
+			base.Update(pPlayer, pOtherPlayer);
+		}
+
+		#endregion
 	}
 }

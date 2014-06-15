@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,8 +54,21 @@ namespace HG_Game
 			return true;
 		}
 
+		//Kreide dabei
+		public static bool EnoughChalk(Player pPlayer)
+		{
+			if (pPlayer.GetType() == typeof(Gretel) && ((Gretel)pPlayer).Chalk < 0)
+				return true;
+			return false;
+		}
+
 		//Weitere
 		public static bool NearestActionPosition1(Player pPlayer, InteractiveObject IObj)
+		{
+			return true;
+		}
+
+		public static bool NearestActionPosition2(Player pPlayer, InteractiveObject IObj)
 		{
 			return true;
 		}

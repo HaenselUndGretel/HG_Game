@@ -83,6 +83,7 @@
     <Compile Include="ActivityStates\None.cs" />
     <Compile Include="ActivityStates\PullDoor.cs" />
     <Compile Include="ActivityStates\PushRock.cs" />
+    <Compile Include="ActivityStates\Sequences.cs" />
     <Compile Include="ActivityStates\SlipThroughRock.cs" />
     <Compile Include="ActivityStates\SwitchItem.cs" />
     <Compile Include="ActivityStates\UseChalk.cs" />

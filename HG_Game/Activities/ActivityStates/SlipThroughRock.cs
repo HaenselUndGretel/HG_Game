@@ -28,7 +28,25 @@ namespace HG_Game
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			base.Update(pPlayer, pOtherPlayer);
+			switch (pPlayer.mCurrentState)
+			{
+				case 0:
+					Sequences.StartAnimation(pPlayer.mModel, "Attack"); //Weg bewegen
+					++pPlayer.mCurrentState;
+					break;
+				case 1:
+					if (Conditions.AnimationComplete(pPlayer.mModel))
+					{
+						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.Position));
+						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						++pPlayer.mCurrentState;
+					}
+					break;
+				case 2:
+					if (Conditions.AnimationComplete(pPlayer.mModel))
+						Sequences.SetPlayerToIdle(pPlayer);
+					break;
+			}
 		}
 
 		#endregion

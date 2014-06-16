@@ -39,7 +39,24 @@ namespace HG_Game
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			base.Update(pPlayer, pOtherPlayer);
+			if (!m2ndState) //KnockOverTree
+			{
+				switch (pPlayer.mCurrentState)
+				{
+					case 0:
+						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						++pPlayer.mCurrentState;
+						break;
+					case 1:
+						if (Conditions.AnimationComplete(pPlayer.mModel))
+							Sequences.SetPlayerToIdle(pPlayer);
+						break;
+				}
+			}
+			else //BalanceOverTree
+			{
+				throw new NotImplementedException();
+			}
 		}
 
 		#endregion

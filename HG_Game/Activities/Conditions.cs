@@ -86,6 +86,11 @@ namespace HG_Game
 
 		#region Update
 
+		public static bool AnimationComplete(SpineObject pSpine)
+		{
+			return pSpine.AnimationComplete;
+		}
+
 		#endregion
 	}
 }

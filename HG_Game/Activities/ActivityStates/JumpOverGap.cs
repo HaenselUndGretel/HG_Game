@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,12 @@ namespace HG_Game
 {
 	class JumpOverGap : ActivityState
 	{
+		protected Vector2 mDestination;
+
 		public JumpOverGap(InteractiveObject pIObj)
 			: base(pIObj)
 		{
+			mDestination = Vector2.Zero;
 		}
 
 		#region Override Methods
@@ -26,7 +30,19 @@ namespace HG_Game
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			base.Update(pPlayer, pOtherPlayer);
+			switch (pPlayer.mCurrentState)
+			{
+				case 0:
+					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					mDestination = rIObj.DistantActionPosition(pPlayer.Position);
+					++pPlayer.mCurrentState;
+					break;
+				case 1:
+					Sequences.SynchMovementToAnimation(new SpineObject("fluffy"), pPlayer, mDestination); //ToDo: Set SpineObject to rIObj
+					if (Conditions.AnimationComplete(pPlayer.mModel))
+						Sequences.SetPlayerToIdle(pPlayer);
+					break;
+			}
 		}
 
 		#endregion

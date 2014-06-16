@@ -17,7 +17,7 @@ namespace HG_Game
 
 		}
 
-		public static void SetToPosition(Player pPlayer, Vector2 pPosition)
+		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
 
 		}
@@ -35,12 +35,7 @@ namespace HG_Game
 		}
 
 		//Start Animation
-		public static void StartAnimation(Player pPlayer, bool pLoop)
-		{
-
-		}
-
-		public static void StartAnimation(InteractiveObject pIObj, bool pLoop)
+		public static void StartAnimation(SpineObject pSpine, string pAnimation, bool pLoop = false)
 		{
 
 		}
@@ -74,7 +69,7 @@ namespace HG_Game
 		}
 
 		//Player während Animation bewegen
-		public static void SynchMovementToAnimation(AnimationState pAnimationState, Player pPlayer, Vector2 pDestination)
+		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pDestination)
 		{
 
 		}
@@ -82,6 +77,11 @@ namespace HG_Game
 		//QuickTimeEvent
 
 		//Set States
+		public static void SetPlayerToIdle(Player pPlayer)
+		{
+			pPlayer.mCurrentActivity = ActivityHandler.None;
+			pPlayer.mCurrentState = 0;
+		}
 
 		//Gretel States setzen (Brunnen)
 

@@ -16,7 +16,7 @@ namespace HG_Game
 			Idle,
 			Switching,
 			Entering
-		}
+		};
 
 		#region Properties
 

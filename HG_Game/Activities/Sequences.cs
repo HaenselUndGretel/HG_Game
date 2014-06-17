@@ -41,12 +41,7 @@ namespace HG_Game
 		}
 
 		//Animation Stepping
-		public static void UpdateAnimationStepping(Player pPlayer, float pProgress)
-		{
-
-		}
-
-		public static void UpdateAnimationStepping(InteractiveObject pIObj, float pProgress)
+		public static void UpdateAnimationStepping(SpineObject pSpine, float pProgress)
 		{
 
 		}

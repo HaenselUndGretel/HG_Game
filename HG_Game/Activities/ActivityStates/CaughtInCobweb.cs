@@ -10,6 +10,7 @@ namespace HG_Game
 {
 	class CaughtInCobweb : ActivityState
 	{
+		protected QuickTimeEvent QTE;
 
 		public CaughtInCobweb(InteractiveObject pIObj)
 			: base(pIObj)
@@ -25,7 +26,8 @@ namespace HG_Game
 				Conditions.NotHandicapped(pPlayer, Activity.CaughtInCobweb)
 				)
 			{
-				//ToDo: Trap Player!
+				pPlayer.mCurrentActivity = this;
+				pPlayer.mCurrentState = 10;
 				return Activity.None;
 			}
 			if (m2ndState &&
@@ -38,7 +40,41 @@ namespace HG_Game
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			base.Update(pPlayer, pOtherPlayer);
+			switch (pPlayer.mCurrentState)
+			{
+				case 0: //FreeFromCobweb
+					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					QTE.StartQTE();
+					++pPlayer.mCurrentState;
+					break;
+				case 1:
+					if (QTE.State == QuickTimeEvent.QTEState.Failed)
+					{
+
+						break;
+					}
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					{
+						++pPlayer.mCurrentState;
+						break;
+					}
+					QTE.Update();
+					Sequences.UpdateAnimationStepping(pPlayer.mModel, QTE.Progress);
+					break;
+				case 2:
+					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
+					{
+						Sequences.SetPlayerToIdle(pPlayer);
+						Sequences.SetPlayerToIdle(pOtherPlayer);
+						break;
+					}
+					Sequences.MoveUpDown(pPlayer, false);
+					Sequences.MoveUpDown(pOtherPlayer, false);
+					break;
+				case 10: //CaughtInCobeweb
+					Sequences.StartAnimation(pPlayer.mModel, "attack", true);
+					break;
+			}
 		}
 
 		#endregion

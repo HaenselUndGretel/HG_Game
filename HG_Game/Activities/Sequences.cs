@@ -70,7 +70,7 @@ namespace HG_Game
 		}
 
 		//Player während Animation bewegen
-		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pDestination)
+		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pDestination, Vector2 pSource)
 		{
 
 		}
@@ -95,6 +95,10 @@ namespace HG_Game
 		//Stuff (BrunnenKorb) bewegen
 
 		//EndeGelände
+		public static void End()
+		{
+
+		}
 
 	}
 }

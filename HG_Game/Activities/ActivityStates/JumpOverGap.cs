@@ -11,6 +11,7 @@ namespace HG_Game
 	class JumpOverGap : ActivityState
 	{
 		protected Vector2 mDestination;
+		protected Vector2 mSource;
 
 		public JumpOverGap(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -35,10 +36,11 @@ namespace HG_Game
 				case 0:
 					Sequences.StartAnimation(pPlayer.mModel, "attack");
 					mDestination = rIObj.DistantActionPosition(pPlayer.Position);
+					mSource = pPlayer.Position;
 					++pPlayer.mCurrentState;
 					break;
 				case 1:
-					Sequences.SynchMovementToAnimation(new SpineObject("fluffy"), pPlayer, mDestination); //ToDo: Set SpineObject to rIObj
+					Sequences.SynchMovementToAnimation(new SpineObject("fluffy"), pPlayer, mDestination, mSource); //ToDo: Set SpineObject to rIObj
 					if (Conditions.AnimationComplete(pPlayer.mModel))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

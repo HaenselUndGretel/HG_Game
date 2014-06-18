@@ -17,6 +17,12 @@ namespace HG_Game
 
 		}
 
+		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null)
+		{
+			//Hansel->AP1 Gretel->AP2
+			//Wenn pOffsetGretel nicht null ist muss Gretel an AP1 + pOffsetGretel gesetzt werden.
+		}
+
 		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
 

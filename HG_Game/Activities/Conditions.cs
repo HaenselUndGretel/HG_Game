@@ -86,6 +86,13 @@ namespace HG_Game
 
 		#region Update
 
+		public static bool PlayersAtActionPositions(Player pPlayer, Player pOtherPlayer, Nullable<Vector2> pOffsetGretel = null)
+		{
+			//Hansel an AP1 & Gretel an AP2
+			//Wenn pOffsetGretel nicht null ist muss Gretel an AP1 + pOffsetGretel sitzen.
+			return true;
+		}
+
 		public static bool AnimationComplete(SpineObject pSpine)
 		{
 			return pSpine.AnimationComplete;

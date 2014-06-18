@@ -10,10 +10,13 @@ namespace HG_Game
 {
 	class PushRock : ActivityState
 	{
+		protected QuickTimeEvent QTE;
+		protected Vector2 mDestination;
 
-		public PushRock(InteractiveObject pIObj)
-			:base(pIObj)
+		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			:base(pHansel, pGretel, pIObj)
 		{
+			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, true, true);
 		}
 
 		#region Override Methods
@@ -29,7 +32,35 @@ namespace HG_Game
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			base.Update(pPlayer, pOtherPlayer);
+			switch (pPlayer.mCurrentState)
+			{
+				case 0:
+					if (!Conditions.ActionHold(pPlayer))
+						Sequences.SetPlayerToIdle(pPlayer);
+					if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer))
+						++pPlayer.mCurrentState;
+					Sequences.MovePlayerToRightActionPosition(pPlayer);
+					break;
+				case 1:
+					QTE.StartQTE();
+					++pPlayer.mCurrentState;
+					break;
+				case 2:
+					QTE.Update();
+					if (pPlayer.GetType() == typeof(Hansel))
+						Sequences.UpdateMovementStepping(rIObj, QTE.Progress, mDestination);
+					Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mDestination);
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					{
+						Sequences.SetPlayerToIdle(pPlayer);
+					}
+					else if (QTE.State == QuickTimeEvent.QTEState.Failed)
+					{
+						Sequences.SetPlayerToIdle(pPlayer);
+						Sequences.SetPlayerToIdle(pOtherPlayer);
+					}
+					break;
+			}
 		}
 
 		#endregion

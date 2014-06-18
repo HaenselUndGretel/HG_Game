@@ -9,8 +9,8 @@ namespace HG_Game
 {
 	class UseChalk : ActivityState
 	{
-		public UseChalk(InteractiveObject pIObj)
-			: base(pIObj)
+		public UseChalk(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 

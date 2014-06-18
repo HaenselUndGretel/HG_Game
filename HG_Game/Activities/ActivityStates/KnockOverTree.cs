@@ -12,8 +12,8 @@ namespace HG_Game
 	class KnockOverTree : ActivityState
 	{
 
-		public KnockOverTree(InteractiveObject pIObj)
-			: base(pIObj)
+		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 
@@ -55,7 +55,15 @@ namespace HG_Game
 			}
 			else //BalanceOverTree
 			{
-				throw new NotImplementedException();
+				switch (pPlayer.mCurrentState)
+				{
+					case 0:
+						
+						break;
+					case 1:
+
+						break;
+				}
 			}
 		}
 

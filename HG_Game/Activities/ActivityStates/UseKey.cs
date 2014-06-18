@@ -11,8 +11,8 @@ namespace HG_Game
 	class UseKey : ActivityState
 	{
 
-		public UseKey(InteractiveObject pIObj)
-			: base(pIObj)
+		public UseKey(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 

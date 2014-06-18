@@ -12,10 +12,10 @@ namespace HG_Game
 	{
 		protected QuickTimeEvent QTE;
 
-		public CaughtInCobweb(InteractiveObject pIObj)
-			: base(pIObj)
+		public CaughtInCobweb(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
-
+			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, false, false, true);
 		}
 
 		#region Override Methods
@@ -44,13 +44,17 @@ namespace HG_Game
 			{
 				case 0: //FreeFromCobweb
 					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					if (pPlayer.GetType() == typeof(Hansel))
+						QTE.OnlyOnePlayerIsHansel = true;
+					else
+						QTE.OnlyOnePlayerIsHansel = false;
 					QTE.StartQTE();
 					++pPlayer.mCurrentState;
 					break;
 				case 1:
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
 					{
-
+						Sequences.SetPlayerToIdle(pPlayer);
 						break;
 					}
 					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
@@ -73,6 +77,7 @@ namespace HG_Game
 					break;
 				case 10: //CaughtInCobeweb
 					Sequences.StartAnimation(pPlayer.mModel, "attack", true);
+					++pPlayer.mCurrentState;
 					break;
 			}
 		}

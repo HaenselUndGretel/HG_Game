@@ -10,10 +10,12 @@ namespace HG_Game
 {
 	class CaughtInSwamp : ActivityState
 	{
+		protected QuickTimeEvent QTE;
 
-		public CaughtInSwamp(InteractiveObject pIObj)
-			: base(pIObj)
+		public CaughtInSwamp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
+			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, false);
 		}
 
 		#region Override Methods
@@ -25,7 +27,8 @@ namespace HG_Game
 				Conditions.Contains(pPlayer, rIObj)
 				)
 			{
-				//ToDo: Trap Player!
+				pPlayer.mCurrentActivity = this;
+				pPlayer.mCurrentState = 10;
 				return Activity.None;
 			}
 			if (m2ndState &&
@@ -39,7 +42,43 @@ namespace HG_Game
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			base.Update(pPlayer, pOtherPlayer);
+			switch (pPlayer.mCurrentState)
+			{
+				case 0: //FreeFromSwamp
+					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					QTE.StartQTE();
+					++pPlayer.mCurrentState;
+					break;
+				case 1:
+					if (QTE.State == QuickTimeEvent.QTEState.Failed)
+					{
+						Sequences.SetPlayerToIdle(pPlayer);
+						break;
+					}
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					{
+						++pPlayer.mCurrentState;
+						break;
+					}
+					QTE.Update();
+					Sequences.UpdateAnimationStepping(pPlayer.mModel, QTE.Progress);
+					break;
+				case 2:
+					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
+					{
+						Sequences.SetPlayerToIdle(pPlayer);
+						Sequences.SetPlayerToIdle(pOtherPlayer);
+						break;
+					}
+					Vector2 Source = new Vector2(rIObj.ActionRectList[0].Center.X, rIObj.ActionRectList[0].Center.Y);
+					Sequences.MoveAway(pPlayer, Source);
+					Sequences.MoveAway(pOtherPlayer, Source);
+					break;
+				case 10: //CaughtInSwamp
+					Sequences.StartAnimation(pPlayer.mModel, "attack", true);
+					++pPlayer.mCurrentState;
+					break;
+			}
 		}
 
 		#endregion

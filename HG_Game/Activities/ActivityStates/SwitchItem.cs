@@ -11,8 +11,8 @@ namespace HG_Game
 	class SwitchItem : ActivityState
 	{
 
-		public SwitchItem(InteractiveObject pIObj)
-			: base(pIObj)
+		public SwitchItem(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 

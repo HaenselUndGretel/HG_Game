@@ -9,8 +9,8 @@ namespace HG_Game
 {
 	class SlipThroughRock : ActivityState
 	{
-		public SlipThroughRock(InteractiveObject pIObj)
-			: base(pIObj)
+		public SlipThroughRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 

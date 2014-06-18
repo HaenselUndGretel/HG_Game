@@ -10,8 +10,8 @@ namespace HG_Game
 	class PullDoor : ActivityState
 	{
 
-		public PullDoor(InteractiveObject pIObj)
-			: base(pIObj)
+		public PullDoor(pHansel, pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 

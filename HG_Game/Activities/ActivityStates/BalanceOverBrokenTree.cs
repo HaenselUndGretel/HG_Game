@@ -9,8 +9,8 @@ namespace HG_Game
 {
 	class BalanceOverBrokenTree : ActivityState
 	{
-		public BalanceOverBrokenTree(InteractiveObject pIObj)
-			: base(pIObj)
+		public BalanceOverBrokenTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 		}
 

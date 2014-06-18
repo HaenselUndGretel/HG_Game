@@ -9,8 +9,8 @@ namespace HG_Game
 {
 	class UseWell : ActivityState
 	{
-		public UseWell(InteractiveObject pIObj)
-			:base(pIObj)
+		public UseWell(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			:base(pHansel, pGretel, pIObj)
 		{
 		}
 

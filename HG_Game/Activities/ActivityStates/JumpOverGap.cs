@@ -12,8 +12,8 @@ namespace HG_Game
 	{
 		protected Vector2 mDestination;
 
-		public JumpOverGap(InteractiveObject pIObj)
-			: base(pIObj)
+		public JumpOverGap(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+			: base(pHansel, pGretel, pIObj)
 		{
 			mDestination = Vector2.Zero;
 		}

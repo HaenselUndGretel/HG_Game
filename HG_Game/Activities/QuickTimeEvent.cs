@@ -54,11 +54,16 @@ namespace HG_Game
 		protected float ProgressSteps;
 		protected bool KeepProgress; //Save Progress between runs?
 
+		//QTE behavior
+		protected bool OnlyX;
+		protected bool OnlyOnePlayer;
+		public bool OnlyOnePlayerIsHansel;
+
 		#endregion
 
 		#region Constructor
 
-		public QuickTimeEvent(InputHelper pInputHansel, InputHelper pInputGretel, bool pKeepProgress = true, float pProgressSteps = 0.1f, float pDelayHansel = 1000f, float pDelayGretel = 1000f, float pSlowdownHansel = 1f, float pSlowdownGretel = 1f)
+		public QuickTimeEvent(InputHelper pInputHansel, InputHelper pInputGretel, bool pKeepProgress = true, bool pOnlyX = false, bool pOnlyOnePlayer = false , bool pOnlyOnePlayerIsHansel = false, float pProgressSteps = 0.1f, float pDelayHansel = 1000f, float pDelayGretel = 1000f, float pSlowdownHansel = 1f, float pSlowdownGretel = 1f)
 			: base()
 		{
 			InputHansel = pInputHansel;
@@ -70,6 +75,9 @@ namespace HG_Game
 			SlowdownGretel = pSlowdownGretel;
 			Progress = 0;
 			KeepProgress = pKeepProgress;
+			OnlyX = pOnlyX;
+			OnlyOnePlayer = pOnlyOnePlayer;
+			OnlyOnePlayerIsHansel = pOnlyOnePlayerIsHansel;
 			ResetTimer();
 		}
 
@@ -79,7 +87,7 @@ namespace HG_Game
 
 		public void Update()
 		{
-			if (GetCurrentTimeoutProgress() > 1f)
+			if (GetCurrentTimeoutProgress() > 1f && !OnlyX)
 				NotPressed();
 			if (((State == QTEState.Hansel || State == QTEState.HanselTurnAround) && InputHansel.InputJustPressed(CurrentInputHansel)) ||
 				((State == QTEState.Gretel || State == QTEState.GretelTurnAround) && InputGretel.InputJustPressed(CurrentInputGretel)))
@@ -92,10 +100,20 @@ namespace HG_Game
 				Progress = 0;
 			CurrentInputHansel = GetRandomInput();
 			CurrentInputGretel = GetRandomInput();
-			if (Randomizer.Next(2) == 1)
-				State = QTEState.Hansel;
+			if (OnlyOnePlayer)
+			{
+				if (OnlyOnePlayerIsHansel)
+					State = QTEState.Hansel;
+				else
+					State = QTEState.Gretel;
+			}
 			else
-				State = QTEState.Gretel;
+			{
+				if (Randomizer.Next(2) == 1)
+					State = QTEState.Hansel;
+				else
+					State = QTEState.Gretel;
+			}
 			ResetTimer();
 		}
 
@@ -107,13 +125,29 @@ namespace HG_Game
 			switch(State)
 			{
 				case QTEState.Hansel:
-					State = QTEState.Gretel;
-					CurrentInputGretel = GetRandomInput();
+					if (OnlyOnePlayer)
+					{
+						State = QTEState.Hansel;
+						CurrentInputHansel = GetRandomInput();
+					}
+					else
+					{
+						State = QTEState.Gretel;
+						CurrentInputGretel = GetRandomInput();
+					}
 					ResetTimer();
 					break;
 				case QTEState.Gretel:
-					State = QTEState.Hansel;
-					CurrentInputHansel = GetRandomInput();
+					if (OnlyOnePlayer)
+					{
+						State = QTEState.Gretel;
+						CurrentInputGretel = GetRandomInput();
+					}
+					else
+					{
+						State = QTEState.Hansel;
+						CurrentInputHansel = GetRandomInput();
+					}
 					ResetTimer();
 					break;
 				case QTEState.HanselTurnAround:
@@ -134,13 +168,29 @@ namespace HG_Game
 			switch (State)
 			{
 				case QTEState.Hansel:
-					State = QTEState.GretelTurnAround;
-					CurrentInputGretel = GetRandomInput();
+					if (OnlyOnePlayer)
+					{
+						State = QTEState.HanselTurnAround;
+						CurrentInputHansel = GetRandomInput();
+					}
+					else
+					{
+						State = QTEState.GretelTurnAround;
+						CurrentInputGretel = GetRandomInput();
+					}
 					ResetTimer();
 					break;
 				case QTEState.Gretel:
-					State = QTEState.HanselTurnAround;
-					CurrentInputHansel = GetRandomInput();
+					if (OnlyOnePlayer)
+					{
+						State = QTEState.GretelTurnAround;
+						CurrentInputGretel = GetRandomInput();
+					}
+					else
+					{
+						State = QTEState.HanselTurnAround;
+						CurrentInputHansel = GetRandomInput();
+					}
 					ResetTimer();
 					break;
 				case QTEState.HanselTurnAround:
@@ -160,6 +210,8 @@ namespace HG_Game
 
 		protected InputHelper.Input GetRandomInput()
 		{
+			if (OnlyX)
+				return InputHelper.mAction;
 			int RandomChoice = Randomizer.Next(4);
 			switch (RandomChoice)
 			{

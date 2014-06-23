@@ -14,18 +14,27 @@ namespace HG_Game
 		//Move & Set to Position
 		public static void MoveToPosition(Player pPlayer, Vector2 pPosition, float pSpeedFactor = 1f)
 		{
-
+			pPlayer.MoveAgainstPoint(pPosition, pSpeedFactor);
 		}
 
-		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null)
+		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null, float pSpeedFactor = 1f)
 		{
 			//Hansel->AP1 Gretel->AP2
-			//Wenn pOffsetGretel nicht null ist muss Gretel an AP1 + pOffsetGretel gesetzt werden.
+			Vector2 Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
+			if (pPlayer.GetType() == typeof(Gretel))
+			{
+				//Wenn pOffsetGretel nicht null ist muss Gretel an AP1 + pOffsetGretel gesetzt werden.
+				if (pOffsetGretel != null)
+					Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition1 + (Vector2)pOffsetGretel;
+				else
+					Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition2;
+			}
+			pPlayer.MoveAgainstPoint(Destination, pSpeedFactor);
 		}
 
 		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
-
+			pPlayer.Position = pPosition;
 		}
 
 		//Move für Cobweb

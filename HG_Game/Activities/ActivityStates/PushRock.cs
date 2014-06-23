@@ -11,7 +11,12 @@ namespace HG_Game
 	class PushRock : ActivityState
 	{
 		protected QuickTimeEvent QTE;
-		protected Vector2 mDestination;
+		protected Vector2 mSourceHansel;
+		protected Vector2 mSourceGretel;
+		protected Vector2 mSourceIObj;
+		protected Vector2 mDestinationHansel;
+		protected Vector2 mDestinationGretel;
+		protected Vector2 mDestinationIObj;
 
 		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
@@ -43,13 +48,30 @@ namespace HG_Game
 					break;
 				case 1:
 					QTE.StartQTE();
+					if (pPlayer.GetType() == typeof(Hansel))
+					{
+						mSourceHansel = pPlayer.Position;
+						mSourceGretel = pOtherPlayer.Position;
+					}
+					else
+					{
+						mSourceHansel = pOtherPlayer.Position;
+						mSourceGretel = pPlayer.Position;
+					}
+					mSourceIObj = new Vector2(rIObj.CollisionRectList[0].X, rIObj.CollisionRectList[0].Y);
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
 					QTE.Update();
 					if (pPlayer.GetType() == typeof(Hansel))
-						Sequences.UpdateMovementStepping(rIObj, QTE.Progress, mDestination);
-					Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mDestination);
+					{
+						Sequences.UpdateMovementStepping(rIObj, QTE.Progress, mSourceIObj, mDestinationIObj);
+						Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceHansel, mDestinationHansel);
+					}
+					else
+					{
+						Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceGretel, mDestinationGretel);
+					}
 					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);

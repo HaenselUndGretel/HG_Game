@@ -105,8 +105,8 @@ namespace HG_Game
 			//Hansel an AP1 & Gretel an AP2
 			if (pPlayer.mCurrentActivity != pOtherPlayer.mCurrentActivity)
 				throw new Exception("Spieler sind nicht an gleicher Activity beteiligt. Soll hier false returned werden?");
-			Player TmpHansel;
-			Player TmpGretel;
+			Player TmpHansel = new Player();
+			Player TmpGretel = new Player();
 			if (pPlayer.GetType() == typeof(Hansel))
 				TmpHansel = pPlayer;
 			else
@@ -117,7 +117,7 @@ namespace HG_Game
 				TmpGretel = pOtherPlayer;
 			if (TmpHansel.Position != TmpHansel.mCurrentActivity.rIObj.ActionPosition1)
 				return false;
-			if (pOffsetGretel = null && TmpGretel.Position != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
+			if (pOffsetGretel == null && TmpGretel.Position != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
 				return false;
 			//Wenn pOffsetGretel nicht null ist muss Gretel an AP1 + pOffsetGretel sitzen.
 			if (pOffsetGretel != null && TmpGretel.Position != TmpGretel.mCurrentActivity.rIObj.ActionPosition1 + pOffsetGretel)

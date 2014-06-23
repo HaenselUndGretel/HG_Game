@@ -40,48 +40,57 @@ namespace HG_Game
 		//Move für Cobweb
 		public static void MoveUpDown(Player pPlayer, bool pUp, float pSpeedFactor = 1f)
 		{
-
+			Vector2 Direction = new Vector2(0, 1);
+			if (pUp)
+				Direction = new Vector2(0, -1);
+			pPlayer.MoveManually(Direction, pSpeedFactor);
 		}
 
 		//Move für Swamp
 		public static void MoveAway(Player pPlayer, Vector2 pSource, float pSpeedFactor = 1f)
 		{
-
+			Vector2 Direction = pPlayer.Position - pSource;
+			Direction.Normalize();
+			pPlayer.MoveManually(Direction, pSpeedFactor);
 		}
 
 		//Start Animation
 		public static void StartAnimation(SpineObject pSpine, string pAnimation, bool pLoop = false)
 		{
-
+			pSpine.SetAnimation(pAnimation, pLoop, true);
 		}
 
 		//Animation Stepping
 		public static void UpdateAnimationStepping(SpineObject pSpine, float pProgress)
 		{
-
+			pSpine.AnimationState.GetCurrent(0).TimeScale = pSpine.AnimationState.GetCurrent(0).EndTime * pProgress;
 		}
 
 		//Movement Stepping
-		public static void UpdateMovementStepping(Player pPlayer, float pProgress, Vector2 pDestination)
+		public static void UpdateMovementStepping(Player pPlayer, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-
+			pPlayer.Position = (pDestination - pSource) * pProgress;
 		}
 
-		public static void UpdateMovementStepping(InteractiveObject pIObj, float pProgress, Vector2 pDestination)
+		public static void UpdateMovementStepping(InteractiveObject pIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-
+			pIObj.Position = (pDestination - pSource) * pProgress;
 		}
 
 		//Pause & Play Animation
 		public static void PausePlayAnimation(AnimationState pAnimationState, bool pPlay)
 		{
-
+			if (pAnimationState.TimeScale == 1f)
+				pAnimationState.TimeScale = 0f;
+			else if (pAnimationState.TimeScale == 0f)
+				pAnimationState.TimeScale = 1f;
 		}
 
 		//Player während Animation bewegen
-		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pDestination, Vector2 pSource)
+		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pSource, Vector2 pDestination)
 		{
-
+			float Progress = pSpineToSynchTo.AnimationState.GetCurrent(0).Time / pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
+			pPlayer.Position = (pDestination - pSource) * Progress;
 		}
 
 		//QuickTimeEvent
@@ -106,7 +115,8 @@ namespace HG_Game
 		//EndeGelände
 		public static void End()
 		{
-
+			//So ist das nicht passiert...
+			throw new NotImplementedException();
 		}
 
 	}

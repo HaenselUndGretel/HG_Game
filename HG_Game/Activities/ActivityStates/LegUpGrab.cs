@@ -11,7 +11,7 @@ namespace HG_Game
 	class LegUpGrab : ActivityState
 	{
 		protected QuickTimeEvent QTE;
-		protected const Vector2 mStartOffsetGretel = new Vector2(55, -20);
+		protected Vector2 mStartOffsetGretel = new Vector2(55, -20);
 
 		public LegUpGrab(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)

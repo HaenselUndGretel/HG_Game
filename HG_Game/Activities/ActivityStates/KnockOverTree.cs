@@ -72,7 +72,7 @@ namespace HG_Game
 						++pPlayer.mCurrentState;
 						break;
 					case 1:
-						Sequences.SynchMovementToAnimation(pPlayer.mModel, pPlayer, StartPosition + (Direction * EnterBalanceDistance), StartPosition);
+						Sequences.SynchMovementToAnimation(pPlayer.mModel, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer.mModel))
 							++pPlayer.mCurrentState;
 						break;
@@ -105,7 +105,7 @@ namespace HG_Game
 						if ((TargetActionPosition - pPlayer.Position).Length() <= (MovementDirection * EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
-							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance);
+							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance));
 							Sequences.StartAnimation(pPlayer.mModel, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
 							StartPosition = pPlayer.Position;
 						}
@@ -114,7 +114,7 @@ namespace HG_Game
 						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.Position + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
 					case 3:
-						Sequences.SynchMovementToAnimation(pPlayer.mModel, pPlayer, StartPosition + (Direction * EnterBalanceDistance), StartPosition);
+						Sequences.SynchMovementToAnimation(pPlayer.mModel, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer.mModel))
 						{
 							Sequences.SetPlayerToIdle(pPlayer);

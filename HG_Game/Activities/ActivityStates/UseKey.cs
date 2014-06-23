@@ -42,7 +42,7 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
-						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pPlayer.mModel, "attack");
 						++pPlayer.mCurrentState;
 						break;
 					case 1:

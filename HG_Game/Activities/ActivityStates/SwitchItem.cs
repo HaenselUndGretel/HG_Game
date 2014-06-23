@@ -20,7 +20,7 @@ namespace HG_Game
 
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
-			base.GetPossibleActivity(pPlayer, pOtherPlayer);
+			return base.GetPossibleActivity(pPlayer, pOtherPlayer);
 		}
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)

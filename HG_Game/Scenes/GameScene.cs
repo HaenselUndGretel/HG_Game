@@ -83,7 +83,7 @@ namespace HG_Game
 
 		public override void Draw()
 		{
-			throw new System.NotImplementedException();
+			
 		}
 
 		#endregion

@@ -45,7 +45,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0: //FreeFromSwamp
-					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					Sequences.StartAnimation(pPlayer, "attack");
 					QTE.StartQTE();
 					++pPlayer.mCurrentState;
 					break;
@@ -61,7 +61,7 @@ namespace HG_Game
 						break;
 					}
 					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer.mModel, QTE.Progress);
+					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
 					break;
 				case 2:
 					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
@@ -75,7 +75,7 @@ namespace HG_Game
 					Sequences.MoveAway(pOtherPlayer, Source);
 					break;
 				case 10: //CaughtInSwamp
-					Sequences.StartAnimation(pPlayer.mModel, "attack", true);
+					Sequences.StartAnimation(pPlayer, "attack", true);
 					++pPlayer.mCurrentState;
 					break;
 			}

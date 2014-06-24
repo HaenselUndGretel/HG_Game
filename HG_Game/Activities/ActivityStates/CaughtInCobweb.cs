@@ -43,7 +43,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0: //FreeFromCobweb
-					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					Sequences.StartAnimation(pPlayer, "attack");
 					if (pPlayer.GetType() == typeof(Hansel))
 						QTE.OnlyOnePlayerIsHansel = true;
 					else
@@ -63,7 +63,7 @@ namespace HG_Game
 						break;
 					}
 					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer.mModel, QTE.Progress);
+					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
 					break;
 				case 2:
 					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
@@ -76,7 +76,7 @@ namespace HG_Game
 					Sequences.MoveUpDown(pOtherPlayer, false);
 					break;
 				case 10: //CaughtInCobeweb
-					Sequences.StartAnimation(pPlayer.mModel, "attack", true);
+					Sequences.StartAnimation(pPlayer, "attack", true);
 					++pPlayer.mCurrentState;
 					break;
 			}

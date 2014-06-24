@@ -43,14 +43,14 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer, mStartOffsetGretel);
 					break;
 				case 1:
-					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					Sequences.StartAnimation(pPlayer, "attack");
 					QTE.StartQTE();
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
 					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer.mModel, QTE.Progress);
-					Sequences.UpdateAnimationStepping(pOtherPlayer.mModel, QTE.Progress);
+					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
+					Sequences.UpdateAnimationStepping(pOtherPlayer, QTE.Progress);
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);

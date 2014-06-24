@@ -42,11 +42,11 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
-						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 						break;
 					case 1:
-						if (Conditions.AnimationComplete(pPlayer.mModel))
+						if (Conditions.AnimationComplete(pPlayer))
 							Sequences.SetPlayerToIdle(pPlayer);
 						break;
 				}

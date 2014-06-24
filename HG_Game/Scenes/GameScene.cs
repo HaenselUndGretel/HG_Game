@@ -6,6 +6,7 @@ using KryptonEngine.SceneManagement;
 using KryptonEngine.Entities;
 using HanselAndGretel.Data;
 using KryptonEngine;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace HG_Game
 {
@@ -20,6 +21,8 @@ namespace HG_Game
 		protected SceneData mScene;
 
 		protected Logic mLogic;
+
+		protected Texture2D[] TmpSpineStuff;
 
 		#endregion
 
@@ -41,14 +44,16 @@ namespace HG_Game
 			EngineSettings.IsDebug = true;
 #endif
 			//Player
-			mHansel = new Hansel();
-			mGretel = new Gretel();
+			mHansel = new Hansel("ashbrett");
+			mGretel = new Gretel("sweetcheeks");
 			//Camera
 			mCamera = new Camera();
 			//Savegame
 			mSavegame = new Savegame();
 			//Logic
 			mLogic = new Logic();
+
+			TmpSpineStuff = new Texture2D[4];
 		}
 
 		public override void LoadContent()
@@ -68,6 +73,9 @@ namespace HG_Game
 
 			//Camera
 			mCamera.GameScreen = mScene.GamePlane;
+
+			for (int i = 0; i < 4; ++i)
+				TmpSpineStuff[i] = KryptonEngine.Manager.TextureManager.Instance.GetElementByString("sweetcheeks");
 		}
 
 		public override void Update()
@@ -83,7 +91,13 @@ namespace HG_Game
 
 		public override void Draw()
 		{
-			
+			mRenderer.SetGebuffer();
+			mRenderer.Begin(mCamera.Transform);
+			mRenderer.Draw(mHansel.Skeleton, TmpSpineStuff);
+
+
+			mRenderer.End();
+			mRenderer.DrawDebugRendertargets(mSpriteBatch);
 		}
 
 		#endregion

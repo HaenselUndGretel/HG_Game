@@ -50,11 +50,11 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
-						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 						break;
 					case 1:
-						if (Conditions.AnimationComplete(pPlayer.mModel))
+						if (Conditions.AnimationComplete(pPlayer))
 							Sequences.SetPlayerToIdle(pPlayer);
 						break;
 				}
@@ -65,15 +65,15 @@ namespace HG_Game
 				{
 					case 0:
 						IsAvailable = false;
-						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						Sequences.StartAnimation(pPlayer, "attack");
 						StartPosition = pPlayer.Position;
 						Direction = rIObj.DistantActionPosition(pPlayer.Position) - StartPosition;
 						Direction.Normalize();
 						++pPlayer.mCurrentState;
 						break;
 					case 1:
-						Sequences.SynchMovementToAnimation(pPlayer.mModel, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
-						if (Conditions.AnimationComplete(pPlayer.mModel))
+						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
+						if (Conditions.AnimationComplete(pPlayer))
 							++pPlayer.mCurrentState;
 						break;
 					case 2:
@@ -106,7 +106,7 @@ namespace HG_Game
 						{
 							++pPlayer.mCurrentState;
 							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance));
-							Sequences.StartAnimation(pPlayer.mModel, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
+							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
 							StartPosition = pPlayer.Position;
 						}
 
@@ -114,8 +114,8 @@ namespace HG_Game
 						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.Position + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
 					case 3:
-						Sequences.SynchMovementToAnimation(pPlayer.mModel, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
-						if (Conditions.AnimationComplete(pPlayer.mModel))
+						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
+						if (Conditions.AnimationComplete(pPlayer))
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
 							IsAvailable = true;

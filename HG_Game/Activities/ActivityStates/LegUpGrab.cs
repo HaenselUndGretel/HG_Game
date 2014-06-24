@@ -42,14 +42,14 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer, mStartOffsetGretel);
 					break;
 				case 1:
-					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					Sequences.StartAnimation(pPlayer, "attack");
 					QTE.StartQTE();
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
 					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer.mModel, QTE.Progress);
-					Sequences.UpdateAnimationStepping(pOtherPlayer.mModel, QTE.Progress);
+					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
+					Sequences.UpdateAnimationStepping(pOtherPlayer, QTE.Progress);
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -63,22 +63,22 @@ namespace HG_Game
 				case 3:
 					if (pPlayer.GetType() == typeof(Gretel) && Conditions.ActionPressed(pPlayer))
 					{
-						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 						++pOtherPlayer.mCurrentState;
 					}
 					break;
 				case 4:
-					if (Conditions.AnimationComplete(pPlayer.mModel) && Conditions.AnimationComplete(pOtherPlayer.mModel))
+					if (Conditions.AnimationComplete(pPlayer) && Conditions.AnimationComplete(pOtherPlayer))
 					{
-						Sequences.StartAnimation(pPlayer.mModel, "attack");
-						Sequences.StartAnimation(pOtherPlayer.mModel, "attack");
+						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pOtherPlayer, "attack");
 						++pPlayer.mCurrentState;
 						++pOtherPlayer.mCurrentState;
 					}
 					break;
 				case 5:
-					if (Conditions.AnimationComplete(pPlayer.mModel))
+					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;
 			}

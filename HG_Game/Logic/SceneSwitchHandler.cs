@@ -133,8 +133,8 @@ namespace HG_Game
 				throw new Exception("Zielwegpunkt für Hansel oder Gretel nicht gefunden!");
 			DestinationScene = pWpHansel.DestinationScene;
 			//Switching initialisieren
-			pHansel.mModel.SetAnimation();
-			pGretel.mModel.SetAnimation();
+			pHansel.SetAnimation();
+			pGretel.SetAnimation();
 			FadingProgress = 0d;
 			CurrentState = State.Switching;
 		}

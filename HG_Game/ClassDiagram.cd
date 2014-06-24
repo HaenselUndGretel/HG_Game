@@ -1,0 +1,1064 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HanselAndGretel.Data.Character" Collapsed="true">
+    <Position X="62.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Enemy" Collapsed="true">
+    <Position X="65" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Mother" Collapsed="true">
+    <Position X="63.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Spider" Collapsed="true">
+    <Position X="66" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Witch" Collapsed="true">
+    <Position X="68.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Wolf" Collapsed="true">
+    <Position X="61.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Gretel" Collapsed="true">
+    <Position X="57" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Hansel" Collapsed="true">
+    <Position X="59.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Inventory" Collapsed="true">
+    <Position X="54.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.InventorySlot" Collapsed="true">
+    <Position X="104.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Player" Collapsed="true">
+    <Position X="58.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Savegame" Collapsed="true">
+    <Position X="117.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.SceneData" Collapsed="true">
+    <Position X="119" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Waypoint" Collapsed="true">
+    <Position X="50.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Artefact" Collapsed="true">
+    <Position X="13.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Collectables\Artefact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HanselAndGretel.Data.Collectable" Collapsed="true">
+    <Position X="84" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.DiaryEntry" Collapsed="true">
+    <Position X="16" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Collectables\DiaryEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HanselAndGretel.Data.Toy" Collapsed="true">
+    <Position X="18.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Collectables\Toy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HanselAndGretel.Data.Branch" Collapsed="true">
+    <Position X="93" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Item" Collapsed="true">
+    <Position X="90.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Key" Collapsed="true">
+    <Position X="86.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Knife" Collapsed="true">
+    <Position X="88.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Lantern" Collapsed="true">
+    <Position X="90.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Matches" Collapsed="true">
+    <Position X="95.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.BaseObject" Collapsed="true">
+    <Position X="54.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.GameObject" Collapsed="true">
+    <Position X="74" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.InteractiveObject" Collapsed="true">
+    <Position X="52.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HG_Game.BalanceOverBrokenTree" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\BalanceOverBrokenTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.CaughtInCobweb" Collapsed="true">
+    <Position X="21" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAA=</HashCode>
+      <FileName>Activities\ActivityStates\CaughtInCobweb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.CaughtInSwamp" Collapsed="true">
+    <Position X="25.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAA=</HashCode>
+      <FileName>Activities\ActivityStates\CaughtInSwamp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.JumpOverGap" Collapsed="true">
+    <Position X="27.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\JumpOverGap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.KnockOverTree" Collapsed="true">
+    <Position X="32.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAEAAAAAAAACAAAAAAAAAAAAAAAAAAAAECAAA=</HashCode>
+      <FileName>Activities\ActivityStates\KnockOverTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.LegUp" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACgAA=</HashCode>
+      <FileName>Activities\ActivityStates\LegUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.LegUpGrab" Collapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACgAA=</HashCode>
+      <FileName>Activities\ActivityStates\LegUpGrab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.None" Collapsed="true">
+    <Position X="34.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Activities\ActivityStates\None.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.PullDoor" Collapsed="true">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\PullDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.PushRock" Collapsed="true">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAgAAAAAAAAQAAAAAAAAAAAEAAAgAAAAAAAKgAA=</HashCode>
+      <FileName>Activities\ActivityStates\PushRock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.SlipThroughRock" Collapsed="true">
+    <Position X="36.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\SlipThroughRock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.SwitchItem" Collapsed="true">
+    <Position X="18.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\SwitchItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.UseChalk" Collapsed="true">
+    <Position X="23.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\UseChalk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.UseKey" Collapsed="true">
+    <Position X="30" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\UseKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.UseWell" Collapsed="true">
+    <Position X="39" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Activities\ActivityStates\UseWell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.Conditions" Collapsed="true">
+    <Position X="115.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAAAAAASAABAABIABAAIBAAAIJQAIA=</HashCode>
+      <FileName>Activities\Conditions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.QuickTimeEvent" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABgAACIARAAAAAAQAgAAAApEQCAQABCABQClAQQ=</HashCode>
+      <FileName>Activities\QuickTimeEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.Sequences" Collapsed="true">
+    <Position X="108.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAiACAAAAAAAEAACCQAAAQAAAIAAABAAAAAg=</HashCode>
+      <FileName>Activities\Sequences.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.ActivityHandler" Collapsed="true">
+    <Position X="106.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Logic\ActivityHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.ItemHandler" Collapsed="true">
+    <Position X="117.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\ItemHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.Logic" Collapsed="true">
+    <Position X="106.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQABAAAAAAAAQAAAAAAAAQAAAAAAAAAAAAgAAAABAA=</HashCode>
+      <FileName>Logic\Logic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.SceneSwitchHandler" Collapsed="true">
+    <Position X="106.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAAABAA0AYAQAAAAAKAAIAAEAAAAAAAQAAAAIAA=</HashCode>
+      <FileName>Logic\SceneSwitchHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.CreditsScene" Collapsed="true">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Scenes\CreditsScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.GameScene" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAwAAAAAAAACAAABAAAAAAQgAACAAAAQ=</HashCode>
+      <FileName>Scenes\GameScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.MenuScene" Collapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Scenes\MenuScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HG_Game.SplashScene" Collapsed="true">
+    <Position X="3" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Scenes\SplashScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KryptonEngine.Controls.InputHelper" Collapsed="true">
+    <Position X="115.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Controls.MouseHelper" Collapsed="true">
+    <Position X="110.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.ActivityState" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.AnimatedSprite" Collapsed="true">
+    <Position X="99.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.Camera" Collapsed="true">
+    <Position X="41.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.DrawPackage" Collapsed="true">
+    <Position X="120.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.InterfaceObject" Collapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.ParallaxPlane" Collapsed="true">
+    <Position X="45.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.SpineData" Collapsed="true">
+    <Position X="43.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.SpineObject" Collapsed="true">
+    <Position X="70.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.Sprite" Collapsed="true">
+    <Position X="93" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.Thumbnail" Collapsed="true">
+    <Position X="97.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.TiledSprite" Collapsed="true">
+    <Position X="101" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Entities.Timer" Collapsed="true">
+    <Position X="72.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.VERSION" Collapsed="true">
+    <Position X="106.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.DELAYTYPE_UTILITY" Collapsed="true">
+    <Position X="117.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Factory" Collapsed="true">
+    <Position X="120.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Memory" Collapsed="true">
+    <Position X="108.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.System" Collapsed="true">
+    <Position X="117.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Sound" Collapsed="true">
+    <Position X="108.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Channel" Collapsed="true">
+    <Position X="110.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.ChannelGroup" Collapsed="true">
+    <Position X="112" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.SoundGroup" Collapsed="true">
+    <Position X="110.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.DSP" Collapsed="true">
+    <Position X="106.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.DSPConnection" Collapsed="true">
+    <Position X="108.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Geometry" Collapsed="true">
+    <Position X="113.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Reverb" Collapsed="true">
+    <Position X="115.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="FMOD.Error" Collapsed="true">
+    <Position X="113.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.FModAudio.FmodMediaPlayer" Collapsed="true">
+    <Position X="106.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.FModAudio.FModSong" Collapsed="true">
+    <Position X="108.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.EventTrigger" Collapsed="true">
+    <Position X="48" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.DirectionLight" Collapsed="true">
+    <Position X="75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Light" Collapsed="true">
+    <Position X="78.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.Lighter" Collapsed="true">
+    <Position X="120.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.PointLight" Collapsed="true">
+    <Position X="77.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="HanselAndGretel.Data.SpotLight" Collapsed="true">
+    <Position X="79.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.HG_Data.Objects.Lights.AmbientLight" Collapsed="true">
+    <Position X="81.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Interface.Box" Collapsed="true">
+    <Position X="7.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Interface.Button" Collapsed="true">
+    <Position X="102" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Interface.DropDownMenu" Collapsed="true">
+    <Position X="0.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Interface.MenuBar" Collapsed="true">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Interface.Window" Collapsed="true">
+    <Position X="5.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Manager.FontManager" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Manager.InteractiveObjectDataManager" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Manager.Manager&lt;T&gt;" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Manager.ShaderManager" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Manager.SpineDataManager" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Manager.TextureManager" Collapsed="true">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Physics.Collision" Collapsed="true">
+    <Position X="113.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Pools.Pool&lt;T&gt;" Collapsed="true">
+    <Position X="11.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Pools.SpinePool" Collapsed="true">
+    <Position X="10.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Pools.SpritePool" Collapsed="true">
+    <Position X="12.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Rendering.Components.FPSCounter" Collapsed="true">
+    <Position X="110.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Rendering.Components.GBuffer" Collapsed="true">
+    <Position X="112" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Rendering.Components.QuadRenderer" Collapsed="true">
+    <Position X="113.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Rendering.Components.SpriteData" Collapsed="true">
+    <Position X="115.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Rendering.Core.BaseRenderer" Collapsed="true">
+    <Position X="0.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.Rendering.TwoDRenderer" Collapsed="true">
+    <Position X="0.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.SceneManagement.Scene" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.SceneManagement.SceneManager" Collapsed="true">
+    <Position X="120.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.EngineSettings" Collapsed="true">
+    <Position X="112" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="KryptonEngine.EngineGame" Collapsed="true">
+    <Position X="110.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Animation" Collapsed="true">
+    <Position X="108.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.CurveTimeline" Collapsed="true">
+    <Position X="13" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Spine.RotateTimeline" Collapsed="true">
+    <Position X="10.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.TranslateTimeline" Collapsed="true">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.ScaleTimeline" Collapsed="true">
+    <Position X="13" Y="10.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.ColorTimeline" Collapsed="true">
+    <Position X="15.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.AttachmentTimeline" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="120.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Spine.EventTimeline" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="119" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Spine.DrawOrderTimeline" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="119" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Spine.AnimationState" Collapsed="true">
+    <Position X="110.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.TrackEntry" Collapsed="true">
+    <Position X="119" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.AnimationStateData" Collapsed="true">
+    <Position X="112" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Atlas" Collapsed="true">
+    <Position X="113.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.AtlasPage" Collapsed="true">
+    <Position X="117.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.AtlasRegion" Collapsed="true">
+    <Position X="119" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.AtlasAttachmentLoader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="115.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Spine.Attachment" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.BoundingBoxAttachment" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.RegionAttachment" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Bone" Collapsed="true">
+    <Position X="106.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.BoneData" Collapsed="true">
+    <Position X="108.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Event" Collapsed="true">
+    <Position X="115.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.EventData" Collapsed="true">
+    <Position X="117.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Json" Collapsed="true">
+    <Position X="119" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Skeleton" Collapsed="true">
+    <Position X="110.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SkeletonBounds" Collapsed="true">
+    <Position X="112" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Polygon" Collapsed="true">
+    <Position X="112" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SkeletonData" Collapsed="true">
+    <Position X="113.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SkeletonJson" Collapsed="true">
+    <Position X="115.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Skin" Collapsed="true">
+    <Position X="119" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Slot" Collapsed="true">
+    <Position X="120.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SlotData" Collapsed="true">
+    <Position X="106.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SkeletonRenderer" Collapsed="true">
+    <Position X="117.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SpriteBatcher" Collapsed="true">
+    <Position X="112" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.SpriteBatchItem" Collapsed="true">
+    <Position X="113.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.Util" Collapsed="true">
+    <Position X="120.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Spine.XnaTextureLoader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="108.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="FMOD.VECTOR" Collapsed="true">
+    <Position X="115.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.GUID" Collapsed="true">
+    <Position X="119" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.ASYNCREADINFO" Collapsed="true">
+    <Position X="108.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.TAG" Collapsed="true">
+    <Position X="113.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.CDTOC" Collapsed="true">
+    <Position X="110.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.CREATESOUNDEXINFO" Collapsed="true">
+    <Position X="112" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.REVERB_PROPERTIES" Collapsed="true">
+    <Position X="112" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.REVERB_FLAGS" Collapsed="true">
+    <Position X="110.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.REVERB_CHANNELPROPERTIES" Collapsed="true">
+    <Position X="108.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.REVERB_CHANNELFLAGS" Collapsed="true">
+    <Position X="106.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.ADVANCEDSETTINGS" Collapsed="true">
+    <Position X="106.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.DSP_PARAMETERDESC" Collapsed="true">
+    <Position X="115.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.DSP_DESCRIPTION" Collapsed="true">
+    <Position X="113.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.DSP_STATE" Collapsed="true">
+    <Position X="117.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Struct Name="FMOD.MEMORY_USAGE_DETAILS" Collapsed="true">
+    <Position X="120.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Struct>
+  <Interface Name="Spine.Timeline" Collapsed="true">
+    <Position X="110.25" Y="11" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Spine.TextureLoader" Collapsed="true">
+    <Position X="108.5" Y="11" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Spine.AttachmentLoader" Collapsed="true">
+    <Position X="106.75" Y="11" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="HanselAndGretel.Data.Activity">
+    <Position X="23.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgA4AQAEAEAAAwAACAAARACAACAAAABAEAAAAAAA=</HashCode>
+      <FileName>Data\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="KryptonEngine.Entities.Activity" Collapsed="true">
+    <Position X="106.75" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.RESULT" Collapsed="true">
+    <Position X="106.75" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.OUTPUTTYPE" Collapsed="true">
+    <Position X="119" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.CAPS" Collapsed="true">
+    <Position X="110.25" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DEBUGLEVEL" Collapsed="true">
+    <Position X="115.5" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.MEMORY_TYPE" Collapsed="true">
+    <Position X="113.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SPEAKERMODE" Collapsed="true">
+    <Position X="119" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SPEAKER" Collapsed="true">
+    <Position X="115.5" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.PLUGINTYPE" Collapsed="true">
+    <Position X="120.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.INITFLAGS" Collapsed="true">
+    <Position X="110.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SOUND_TYPE" Collapsed="true">
+    <Position X="110.25" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SOUND_FORMAT" Collapsed="true">
+    <Position X="108.5" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.MODE" Collapsed="true">
+    <Position X="115.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.OPENSTATE" Collapsed="true">
+    <Position X="117.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SOUNDGROUP_BEHAVIOR" Collapsed="true">
+    <Position X="112" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SYSTEM_CALLBACKTYPE" Collapsed="true">
+    <Position X="120.75" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.CHANNEL_CALLBACKTYPE" Collapsed="true">
+    <Position X="112" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_FFT_WINDOW" Collapsed="true">
+    <Position X="112" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_RESAMPLER" Collapsed="true">
+    <Position X="115.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.TAGTYPE" Collapsed="true">
+    <Position X="108.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.TAGDATATYPE" Collapsed="true">
+    <Position X="106.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DELAYTYPE" Collapsed="true">
+    <Position X="117.25" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.TIMEUNIT" Collapsed="true">
+    <Position X="113.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.SPEAKERMAPTYPE" Collapsed="true">
+    <Position X="117.25" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.CHANNELINDEX" Collapsed="true">
+    <Position X="113.75" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_TYPE" Collapsed="true">
+    <Position X="120.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_OSCILLATOR" Collapsed="true">
+    <Position X="110.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_LOWPASS" Collapsed="true">
+    <Position X="120.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_ITLOWPASS" Collapsed="true">
+    <Position X="119" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_HIGHPASS" Collapsed="true">
+    <Position X="115.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_ECHO" Collapsed="true">
+    <Position X="110.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_DELAY" Collapsed="true">
+    <Position X="106.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_FLANGE" Collapsed="true">
+    <Position X="113.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_TREMOLO" Collapsed="true">
+    <Position X="119" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_DISTORTION" Collapsed="true">
+    <Position X="108.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_NORMALIZE" Collapsed="true">
+    <Position X="108.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_PARAMEQ" Collapsed="true">
+    <Position X="112" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_PITCHSHIFT" Collapsed="true">
+    <Position X="113.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_CHORUS" Collapsed="true">
+    <Position X="119" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_ITECHO" Collapsed="true">
+    <Position X="117.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_COMPRESSOR" Collapsed="true">
+    <Position X="120.75" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_SFXREVERB" Collapsed="true">
+    <Position X="117.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.DSP_LOWPASS_SIMPLE" Collapsed="true">
+    <Position X="106.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.MEMBITS" Collapsed="true">
+    <Position X="112" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="FMOD.EVENT_MEMBITS" Collapsed="true">
+    <Position X="106.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="HanselAndGretel.Data.SoundSetting" Collapsed="true">
+    <Position X="113.75" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Spine.Format" Collapsed="true">
+    <Position X="108.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Spine.TextureFilter" Collapsed="true">
+    <Position X="110.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Spine.TextureWrap" Collapsed="true">
+    <Position X="112" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="Spine.AttachmentType" Collapsed="true">
+    <Position X="108.5" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Delegate Name="FMOD.SYSTEM_CALLBACK" Collapsed="true">
+    <Position X="108.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.CHANNEL_CALLBACK" Collapsed="true">
+    <Position X="108.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.SOUND_NONBLOCKCALLBACK" Collapsed="true">
+    <Position X="119" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.SOUND_PCMREADCALLBACK" Collapsed="true">
+    <Position X="120.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.SOUND_PCMSETPOSCALLBACK" Collapsed="true">
+    <Position X="106.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.FILE_OPENCALLBACK" Collapsed="true">
+    <Position X="113.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.FILE_CLOSECALLBACK" Collapsed="true">
+    <Position X="112" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.FILE_READCALLBACK" Collapsed="true">
+    <Position X="115.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.FILE_SEEKCALLBACK" Collapsed="true">
+    <Position X="117.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.FILE_ASYNCREADCALLBACK" Collapsed="true">
+    <Position X="110.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.FILE_ASYNCCANCELCALLBACK" Collapsed="true">
+    <Position X="108.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.CB_3D_ROLLOFFCALLBACK" Collapsed="true">
+    <Position X="106.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_CREATECALLBACK" Collapsed="true">
+    <Position X="110.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_RELEASECALLBACK" Collapsed="true">
+    <Position X="117.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_RESETCALLBACK" Collapsed="true">
+    <Position X="119" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_READCALLBACK" Collapsed="true">
+    <Position X="115.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_SETPOSITIONCALLBACK" Collapsed="true">
+    <Position X="106.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_SETPARAMCALLBACK" Collapsed="true">
+    <Position X="120.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_GETPARAMCALLBACK" Collapsed="true">
+    <Position X="113.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Delegate Name="FMOD.DSP_DIALOGCALLBACK" Collapsed="true">
+    <Position X="112" Y="16.75" Width="1.5" />
+    <TypeIdentifier />
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

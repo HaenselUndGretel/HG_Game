@@ -34,14 +34,14 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
-					Sequences.StartAnimation(pPlayer.mModel, "attack");
+					Sequences.StartAnimation(pPlayer, "attack");
 					mDestination = rIObj.DistantActionPosition(pPlayer.Position);
 					mSource = pPlayer.Position;
 					++pPlayer.mCurrentState;
 					break;
 				case 1:
 					Sequences.SynchMovementToAnimation(new SpineObject("fluffy"), pPlayer, mSource, mDestination); //ToDo: Set SpineObject to rIObj
-					if (Conditions.AnimationComplete(pPlayer.mModel))
+					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;
 			}

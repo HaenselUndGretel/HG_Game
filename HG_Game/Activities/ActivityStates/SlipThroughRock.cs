@@ -31,19 +31,19 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
-					Sequences.StartAnimation(pPlayer.mModel, "Attack"); //Weg bewegen
+					Sequences.StartAnimation(pPlayer, "Attack"); //Weg bewegen
 					++pPlayer.mCurrentState;
 					break;
 				case 1:
-					if (Conditions.AnimationComplete(pPlayer.mModel))
+					if (Conditions.AnimationComplete(pPlayer))
 					{
 						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.Position));
-						Sequences.StartAnimation(pPlayer.mModel, "attack");
+						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 					}
 					break;
 				case 2:
-					if (Conditions.AnimationComplete(pPlayer.mModel))
+					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;
 			}

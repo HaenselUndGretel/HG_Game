@@ -68,7 +68,6 @@ namespace HG_Game
 
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
-			//ToDo: SetupInteractiveObjectsFromDeserialization
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
 
 			//Camera
@@ -91,10 +90,11 @@ namespace HG_Game
 
 		public override void Draw()
 		{
-			mRenderer.SetGebuffer();
+			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList();
+
+			mRenderer.SetGBuffer();
 			mRenderer.Begin(mCamera.Transform);
 			mRenderer.Draw(mHansel.Skeleton, TmpSpineStuff);
-
 
 			mRenderer.End();
 			mRenderer.DrawDebugRendertargets(mSpriteBatch);

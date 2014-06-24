@@ -154,6 +154,7 @@ namespace HG_Game
 				pGretel.Position = DestinationGretel;
 				pScene = pSavegame.Scenes[DestinationScene];
 				pCamera.GameScreen = pScene.GamePlane;
+				pScene.SetupRenderList(pHansel, pGretel);
 				//Show on new Scene
 				FadingProgress = 0;
 				CurrentState = State.Entering;

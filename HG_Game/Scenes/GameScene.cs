@@ -22,8 +22,6 @@ namespace HG_Game
 
 		protected Logic mLogic;
 
-		protected Texture2D[] TmpSpineStuff;
-
 		#endregion
 
 		#region Constructor
@@ -52,8 +50,6 @@ namespace HG_Game
 			mSavegame = new Savegame();
 			//Logic
 			mLogic = new Logic();
-
-			TmpSpineStuff = new Texture2D[4];
 		}
 
 		public override void LoadContent()
@@ -72,9 +68,6 @@ namespace HG_Game
 
 			//Camera
 			mCamera.GameScreen = mScene.GamePlane;
-
-			for (int i = 0; i < 4; ++i)
-				TmpSpineStuff[i] = KryptonEngine.Manager.TextureManager.Instance.GetElementByString("sweetcheeks");
 		}
 
 		public override void Update()
@@ -93,8 +86,11 @@ namespace HG_Game
 			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList();
 
 			mRenderer.SetGBuffer();
+			mRenderer.ClearGBuffer();
 			mRenderer.Begin(mCamera.Transform);
-			mRenderer.Draw(mHansel.Skeleton, TmpSpineStuff);
+
+			foreach (InteractiveObject iObj in mScene.RenderList)
+				mRenderer.Draw(iObj.Skeleton, iObj.Textures, iObj.DrawZ);
 
 			mRenderer.End();
 			mRenderer.DrawDebugRendertargets(mSpriteBatch);

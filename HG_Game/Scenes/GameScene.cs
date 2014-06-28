@@ -7,6 +7,7 @@ using KryptonEngine.Entities;
 using HanselAndGretel.Data;
 using KryptonEngine;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace HG_Game
 {
@@ -54,6 +55,9 @@ namespace HG_Game
 
 		public override void LoadContent()
 		{
+			//Logic
+			mLogic.LoadContent();
+
 			//Player
 			mHansel.LoadContent();
 			mGretel.LoadContent();
@@ -88,9 +92,15 @@ namespace HG_Game
 			mRenderer.SetGBuffer();
 			mRenderer.ClearGBuffer();
 			mRenderer.Begin(mCamera.Transform);
+			//Render Background
+			mRenderer.Draw(mScene.BackgroundTexture.Textures, Vector2.Zero);
 
+			//Render Game
 			foreach (InteractiveObject iObj in mScene.RenderList)
 				mRenderer.Draw(iObj.Skeleton, iObj.Textures, iObj.DrawZ);
+
+			//Render ActionInfo
+			mLogic.ActivityHandler.DrawActionInfo(mRenderer, mHansel, mGretel);
 
 			mRenderer.End();
 			mRenderer.DrawDebugRendertargets(mSpriteBatch);

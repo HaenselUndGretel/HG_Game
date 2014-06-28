@@ -91,6 +91,7 @@
     <Compile Include="Activities\ActivityStates\UseKey.cs" />
     <Compile Include="Activities\ActivityStates\UseWell.cs" />
     <Compile Include="Logic\ActivityHandler.cs" />
+    <Compile Include="Logic\HudFading.cs" />
     <Compile Include="Logic\ItemHandler.cs" />
     <Compile Include="Logic\Logic.cs" />
     <Compile Include="Logic\SceneSwitchHandler.cs" />

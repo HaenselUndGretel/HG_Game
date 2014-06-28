@@ -96,6 +96,7 @@ namespace HG_Game
 		{
 			return (pOtherPlayer.mCurrentActivity == pActivityState) ? false : true;
 		}
+
 		#endregion
 
 		#region Update

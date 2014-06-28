@@ -38,11 +38,16 @@ namespace HG_Game
 			ItemHandler = new ItemHandler();
 		}
 
+		public void LoadContent()
+		{
+			ActivityHandler.LoadContent();
+		}
+
 		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera)
 		{
 			//Update Logic Parts
 			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera);
-			//ActivityHandler.Update(pScene, pHansel, pGretel);
+			ActivityHandler.Update(pScene, pHansel, pGretel);
 			//ItemHandler.Update(pScene, pHansel, pGretel);
 
 			//Check whether Player may move

@@ -40,23 +40,23 @@ namespace HG_Game
 		public void LoadContent()
 		{
 			ActionInfoButton = TextureManager.Instance.GetElementByString("ButtonX");
-			ActionInfo = new Texture2D[15]; //Anzahl an möglichen Activities
+			ActionInfo = new Texture2D[20]; //Anzahl an möglichen Activities
 			string prefix = "ActivityInfo_";
-			ActionInfo[0] = TextureManager.Instance.GetElementByString(prefix + "FreeFromCobweb");
-			ActionInfo[1] = TextureManager.Instance.GetElementByString(prefix + "FreeFromSwamp");
-			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "KnockOverTree");
-			ActionInfo[3] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverTree");
-			ActionInfo[4] = TextureManager.Instance.GetElementByString(prefix + "PushRock");
-			ActionInfo[5] = TextureManager.Instance.GetElementByString(prefix + "SlipThroughRock");
-			ActionInfo[6] = TextureManager.Instance.GetElementByString(prefix + "JumpOverGap");
-			ActionInfo[7] = TextureManager.Instance.GetElementByString(prefix + "LegUp");
-			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "LegUpGrab");
-			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "UseKey");
-			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
-			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
-			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "UseChalk");
-			ActionInfo[13] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
-			ActionInfo[14] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverBrokenTree");
+			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "FreeFromCobweb");
+			ActionInfo[4] = TextureManager.Instance.GetElementByString(prefix + "FreeFromSwamp");
+			ActionInfo[5] = TextureManager.Instance.GetElementByString(prefix + "KnockOverTree");
+			ActionInfo[6] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverTree");
+			ActionInfo[7] = TextureManager.Instance.GetElementByString(prefix + "PushRock");
+			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "SlipThroughRock");
+			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "JumpOverGap");
+			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "LegUp");
+			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "LegUpGrab");
+			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "UseKey");
+			ActionInfo[13] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
+			ActionInfo[14] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
+			ActionInfo[15] = TextureManager.Instance.GetElementByString(prefix + "UseChalk");
+			ActionInfo[16] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
+			ActionInfo[19] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverBrokenTree");
 
 			/*
 			FreeFromCobweb, "Befreien [Netz]"
@@ -135,12 +135,12 @@ namespace HG_Game
 				if (ActivityHansel != Activity.None)
 				{
 					ActionInfoFading.ShowHudHansel = true;
-					UpdateActionInfo(true, ActivityHansel);
+					ActionInfoHansel = (int)ActivityHansel;
 				}
 				if (ActivityGretel != Activity.None)
 				{
 					ActionInfoFading.ShowHudGretel = true;
-					UpdateActionInfo(false, ActivityGretel);
+					ActionInfoGretel = (int)ActivityGretel;
 				}
 			}
 
@@ -150,21 +150,6 @@ namespace HG_Game
 
 
 			ActionInfoFading.Update();
-		}
-
-		/// <summary>
-		/// Updated die ActionInfo zur möglichen Activity
-		/// </summary>
-		/// <param name="pHansel">true = Hansel, false = Gretel</param>
-		/// <param name="pActivity">Activity zu der die ActionInfo gesetzt werden soll</param>
-		protected void UpdateActionInfo(bool pHansel, Activity pActivity)
-		{
-			if (pHansel)
-			{
-				ActionInfoHansel = ActivityState.ActivityInfo[pActivity];
-				return;
-			}
-			ActionInfoGretel = ActivityState.ActivityInfo[pActivity];
 		}
 
 		public void DrawActionInfo(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)

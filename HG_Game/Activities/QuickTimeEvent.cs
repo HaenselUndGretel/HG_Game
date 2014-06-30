@@ -87,11 +87,45 @@ namespace HG_Game
 
 		public void Update()
 		{
-			if (GetCurrentTimeoutProgress() > 1f && !OnlyX)
+			if (((State == QTEState.Hansel || State == QTEState.HanselTurnAround) && PressedWrongInput(true)) ||
+				((State == QTEState.Gretel || State == QTEState.GretelTurnAround) && PressedWrongInput(false)) ||
+				(GetCurrentTimeoutProgress() > 1f && !OnlyX))
+			{
 				NotPressed();
+				return;
+			}
 			if (((State == QTEState.Hansel || State == QTEState.HanselTurnAround) && InputHansel.InputJustPressed(CurrentInputHansel)) ||
 				((State == QTEState.Gretel || State == QTEState.GretelTurnAround) && InputGretel.InputJustPressed(CurrentInputGretel)))
 				Pressed();
+		}
+
+		protected bool PressedWrongInput(bool pHansel)
+		{
+			//Wenn nur X gedrückt werden soll passiert nichts wenn etwas anderes gedrückt wird
+			if (OnlyX)
+				return false;
+			//Abzufragende States ermitteln
+			InputHelper input;
+			InputHelper.Input RightInput;
+			if (pHansel)
+			{
+				input = InputHansel;
+				RightInput = CurrentInputHansel;
+			}
+			else
+			{
+				input = InputGretel;
+				RightInput = CurrentInputGretel;
+			}
+			//Eigentliche Abfrage
+			if ((input.InputJustPressed(InputHelper.mAction) && RightInput != InputHelper.mAction) ||
+				(input.InputJustPressed(InputHelper.mBack) && RightInput != InputHelper.mBack) ||
+				(input.InputJustPressed(InputHelper.mSwitchItem) && RightInput != InputHelper.mSwitchItem) ||
+				(input.InputJustPressed(InputHelper.mUseItem) && RightInput != InputHelper.mUseItem))
+			{
+				return true;
+			}
+			return false;
 		}
 
 		public void StartQTE()

@@ -40,6 +40,7 @@ namespace HG_Game
 			if (pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed)
 				pGretel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
 
+			UpdateVisibility(pScene, pGretel);
 			CollectItems(pScene, pHansel, pGretel);
 			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
 			InventoryFading.Update();
@@ -47,24 +48,55 @@ namespace HG_Game
 
 		#region Update Inventory
 
+		protected void UpdateVisibility(SceneData pScene, Gretel pGretel)
+		{
+			//Get Lantern
+			Lantern lantern = (Lantern)pGretel.Inventory.GetItemByType(typeof(Lantern));
+			if (lantern == null)
+				return;
+
+			//Update Items
+			foreach (Item item in pScene.Items)
+			{
+				item.IsVisible = false;
+				if (item.CollisionBox.Intersects(pGretel.CollisionBox)) //Item befindet sich im Lichtkreis
+				{
+					item.IsVisible = true;
+				}
+			}
+
+			//Update Collectables
+			foreach (Collectable col in pScene.Collectables)
+			{
+				col.IsVisible = false;
+				if (col.CollisionBox.Intersects(pGretel.CollisionBox)) //Collectable befindet sich im Lichtkreis
+				{
+					col.IsVisible = true;
+				}
+			}
+		}
+
 		protected void CollectItems(SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
 			foreach (Item item in pScene.Items)
 			{
-				if (item.CollisionBox.Intersects(pHansel.CollisionBox))
+				if (item.IsVisible)
 				{
-					if (pHansel.Inventory.TryToStore(item))
+					if (item.CollisionBox.Intersects(pHansel.CollisionBox))
 					{
-						pScene.Items.Remove(item);
-						return;
+						if (pHansel.Inventory.TryToStore(item))
+						{
+							pScene.Items.Remove(item);
+							return;
+						}
 					}
-				}
-				else if (item.CollisionBox.Intersects(pGretel.CollisionBox))
-				{
-					if (pGretel.Inventory.TryToStore(item))
+					else if (item.CollisionBox.Intersects(pGretel.CollisionBox))
 					{
-						pScene.Items.Remove(item);
-						return;
+						if (pGretel.Inventory.TryToStore(item))
+						{
+							pScene.Items.Remove(item);
+							return;
+						}
 					}
 				}
 			}

@@ -23,6 +23,9 @@ namespace HG_Game
 		protected Texture2D ActionInfoButton;
 		protected Texture2D[] ActionInfo;
 
+		protected Vector2 ActionInfoOffset;
+		protected Vector2 ActionInfoButtonOffset;
+
 		#endregion
 
 		#region Constructor
@@ -30,7 +33,8 @@ namespace HG_Game
 		public ActivityHandler()
 		{
 			ActionInfoFading = new HudFading();
-			ActionInfoButton = new Sprite(Vector2.Zero, "ButtonX");
+			ActionInfoOffset = new Vector2(-100, -200);
+			ActionInfoButtonOffset = new Vector2(-50, -300);
 		}
 
 		#endregion
@@ -154,10 +158,12 @@ namespace HG_Game
 
 		public void DrawActionInfo(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
 		{
-			pSpriteBatch.Draw(ActionInfoButton, pHansel.Position, Color.White * ActionInfoFading.VisibilityHansel);
-			//Draw ActionInfoText Hansel
-			pSpriteBatch.Draw(ActionInfoButton, pGretel.Position, Color.White * ActionInfoFading.VisibilityGretel);
-			//Draw ActionInfoText Gretel
+			//ActionInfo
+			pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.Position + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
+			pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.Position + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
+			//ButtonX
+			pSpriteBatch.Draw(ActionInfoButton, pHansel.Position + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
+			pSpriteBatch.Draw(ActionInfoButton, pGretel.Position + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
 		}
 
 		#endregion

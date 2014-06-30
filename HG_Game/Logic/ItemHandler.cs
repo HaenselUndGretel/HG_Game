@@ -12,12 +12,10 @@ using System.Text;
 namespace HG_Game
 {
 	public class ItemHandler
-	{/*
+	{
 		#region Properties
 
-		protected const float InventoryFadingDuration = 0.3f;
-		protected float InventoryVisibilityHansel;
-		protected float InventoryVisibilityGretel;
+		HudFading InventoryFading;
 		protected Vector2 InventoryOffset;
 
 		#endregion
@@ -26,51 +24,28 @@ namespace HG_Game
 
 		public ItemHandler()
 		{
-			Initialize();
+			InventoryFading = new HudFading(0.3f, 0.3f);
+			InventoryOffset = new Vector2(25, -100);
 		}
 
 		#endregion
 
 		#region Methods
 
-		protected void Initialize()
+		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
-			InventoryOffset = new Vector2(25, -100);
-		}
+			//Das eigentliche InventoryUpdate wird automatisch über den ActivityHandler ausgeführt.
+			if (pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed)
+				pHansel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
+			if (pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed)
+				pGretel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
 
-		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
-		{
 			CollectItems(pScene, pHansel, pGretel);
-			UpdateShowInventory(pHansel, pGretel);
-			UpdateInventoryFading(pHansel, pGretel);
+			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
+			InventoryFading.Update();
 		}
 
 		#region Update Inventory
-
-		protected void UpdateShowInventory(Hansel pHansel, Gretel pGretel)
-		{ //Das eigentliche InventoryUpdate wird automatisch über den ActivityHandler ausgeführt.
-			//Hansel
-			if (pHansel.mCurrentActivity.GetType() == typeof(None) && pHansel.Input.SwitchItemJustPressed)
-			{
-				pHansel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
-				pHansel.mCurrentActivity.mStateHansel = ActivityState.State.Preparing;
-			}
-			else if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem) && (pHansel.Input.SwitchItemJustPressed || pHansel.Input.BackJustPressed))
-			{
-				pHansel.mCurrentActivity = new None();
-			}
-
-			//Gretel
-			if (pGretel.mCurrentActivity.GetType() == typeof(None) && pGretel.Input.SwitchItemJustPressed)
-			{
-				pGretel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
-				pGretel.mCurrentActivity.mStateGretel = ActivityState.State.Preparing;
-			}
-			else if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem) && (pGretel.Input.SwitchItemJustPressed || pGretel.Input.BackJustPressed))
-			{
-				pGretel.mCurrentActivity = new None();
-			}
-		}
 
 		protected void CollectItems(SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
@@ -95,21 +70,16 @@ namespace HG_Game
 			}
 		}
 
-		protected void UpdateInventoryFading(Hansel pHansel, Gretel pGretel)
+		protected void CollectCollectables(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
-			//Fade ButtonShowing
-			float TmpFadingDelta = (float)EngineSettings.Time.ElapsedGameTime.TotalSeconds / InventoryFadingDuration;
-			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem)) //Fade ButtonShowingHansel in
-				InventoryVisibilityHansel += TmpFadingDelta;
-			else //Fade ButtonShowingHansel out
-				InventoryVisibilityHansel -= TmpFadingDelta;
-			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem)) //Fade ButtonShowingGretel in
-				InventoryVisibilityGretel += TmpFadingDelta;
-			else //Fade ButtonShowingGretel out
-				InventoryVisibilityGretel -= TmpFadingDelta;
-			//Clamp ButtonShowing to 0-1
-			InventoryVisibilityHansel = MathHelper.Clamp(InventoryVisibilityHansel, 0f, 1f);
-			InventoryVisibilityGretel = MathHelper.Clamp(InventoryVisibilityGretel, 0f, 1f);
+			foreach (Collectable col in pScene.Collectables)
+			{
+				if (col.IsVisible && col.CollisionBox.Intersects(pHansel.CollisionBox) || col.CollisionBox.Intersects(pGretel.CollisionBox))
+				{
+					pSavegame.Collectables.Add(col);
+					pScene.Collectables.Remove(col);
+				}
+			}
 		}
 
 		#endregion
@@ -124,12 +94,12 @@ namespace HG_Game
 				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocusHansel;
 			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
 				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocusGretel;
-			pHansel.Inventory.Draw(pSpriteBatch, pHansel.Position + InventoryOffset, InventoryVisibilityHansel, TmpFocusHansel);
-			pGretel.Inventory.Draw(pSpriteBatch, pGretel.Position + InventoryOffset, InventoryVisibilityGretel, TmpFocusGretel);
+			pHansel.Inventory.Draw(pSpriteBatch, pHansel.Position + InventoryOffset, InventoryFading.VisibilityHansel, TmpFocusHansel);
+			pGretel.Inventory.Draw(pSpriteBatch, pGretel.Position + InventoryOffset, InventoryFading.VisibilityGretel, TmpFocusGretel);
 		}
 
 		#endregion
 
 		#endregion
-	*/}
+	}
 }

@@ -48,7 +48,7 @@ namespace HG_Game
 			//Update Logic Parts
 			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera);
 			ActivityHandler.Update(pScene, pHansel, pGretel);
-			//ItemHandler.Update(pScene, pHansel, pGretel);
+			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame);
 
 			//Check whether Player may move
 			HanselMayMove = true;

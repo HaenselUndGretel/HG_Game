@@ -10,134 +10,86 @@ namespace HG_Game
 {
 	class SwitchItem : ActivityState
 	{
-
-		public SwitchItem(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
-			: base(pHansel, pGretel, pIObj)
-		{
-		}
-
-		#region Override Methods
-
-		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
-		{
-			return base.GetPossibleActivity(pPlayer, pOtherPlayer);
-		}
-
-		public override void Update(Player pPlayer, Player pOtherPlayer)
-		{
-			base.Update(pPlayer, pOtherPlayer);
-		}
-
-		#endregion
-		/*
-		#region Properties
-
 		protected const float MaxSwapDistance = 200f;
 		public int InventoryFocusHansel;
 		public int InventoryFocusGretel;
 
-		#endregion
-
-		#region Constructor
-
 		public SwitchItem(Hansel pHansel, Gretel pGretel)
 			: base(pHansel, pGretel)
-		{
-			Initialize();
-		}
-
-		#endregion
-
-		#region OverrideMethods
-
-		public override void Initialize()
 		{
 			InventoryFocusHansel = 1;
 			InventoryFocusGretel = 1;
 		}
 
-		public override void PrepareAction(Player pPlayer)
+		#region Override Methods
+
+		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			if (pPlayer.GetType() == typeof(Hansel))
+			switch (pPlayer.mCurrentState)
 			{
-				InventoryFocusHansel = pPlayer.Inventory.ItemFocus;
-				mStateHansel = State.Running;
-			}
-			else if (pPlayer.GetType() == typeof(Gretel))
-			{
-				InventoryFocusGretel = pPlayer.Inventory.ItemFocus;
-				mStateGretel = State.Running;
-			}
-		}
+				case 0:
+					if (pPlayer.GetType() == typeof(Hansel))
+						InventoryFocusHansel = pPlayer.Inventory.ItemFocus;
+					else
+						InventoryFocusGretel = pPlayer.Inventory.ItemFocus;
+					++pPlayer.mCurrentState;
+					break;
+				case 1:
+					//Map IFocus to Player
+					int InventoryFocusPlayer = InventoryFocusGretel;
+					if (pPlayer.GetType() == typeof(Hansel))
+						InventoryFocusPlayer = InventoryFocusHansel;
 
-		public override void StartAction(Player pPlayer)
-		{
-			//Nothing to do here!
-		}
+					//Navigate Inventory
+					if (pPlayer.Input.ItemLeftJustPressed)
+						--InventoryFocusPlayer;
+					if (pPlayer.Input.ItemRightJustPressed)
+						++InventoryFocusPlayer;
+					InventoryFocusPlayer = (int)MathHelper.Clamp(InventoryFocusPlayer, 0, 2);
 
-		public override void UpdateAction(Player pPlayer)
-		{
-			if (pPlayer.GetType() == typeof(Hansel))
-			{
-				//Navigate Inventory
-				if (pPlayer.Input.ItemLeftJustPressed)
-					--InventoryFocusHansel;
-				if (pPlayer.Input.ItemRightJustPressed)
-					++InventoryFocusHansel;
-				InventoryFocusHansel = (int)MathHelper.Clamp(InventoryFocusHansel, 0, 2);
+					//UseItem
+					if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item != null)
+					{
+						pPlayer.Inventory.ItemFocus = InventoryFocusPlayer;
+						++pPlayer.mCurrentState;
+						return;
+					}
+					if (pPlayer.Input.SwitchItemJustPressed || pPlayer.Input.BackJustPressed)
+					{
+						++pPlayer.mCurrentState;
+						return;
+					}
 
-				//UseItem
-				if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusHansel].Item != null)
-				{
-					pPlayer.Inventory.ItemFocus = InventoryFocusHansel;
-					pPlayer.mCurrentActivity = new None();
-					mStateHansel = State.Idle;
-				}
-				//SwapItem
-				if (pPlayer.Input.ActionJustPressed && ((rHansel.Position - rGretel.Position).Length() <= MaxSwapDistance))
-					SwapItem(pPlayer);
-			}
-			else if (pPlayer.GetType() == typeof(Gretel))
-			{
-				//Navigate Inventory
-				if (pPlayer.Input.ItemLeftJustPressed)
-					--InventoryFocusGretel;
-				if (pPlayer.Input.ItemRightJustPressed)
-					++InventoryFocusGretel;
-				InventoryFocusGretel = (int)MathHelper.Clamp(InventoryFocusGretel, 0, 2);
-
-				//UseItem
-				if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusGretel].Item != null)
-				{
-					pPlayer.Inventory.ItemFocus = InventoryFocusGretel;
-					pPlayer.mCurrentActivity = new None();
-					mStateGretel = State.Idle;
-				}
-				//SwapItem
-				if (pPlayer.Input.ActionJustPressed && ((rHansel.Position - rGretel.Position).Length() <= MaxSwapDistance))
-					SwapItem(pPlayer);
-			}
-		}
-
-		protected void SwapItem(Player pPlayer)
-		{
-			if (pPlayer.GetType() == typeof(Hansel))
-			{
-				if (rHansel.Inventory.ItemSlots[InventoryFocusHansel].Item == null)
-					return;
-				if (rGretel.Inventory.TryToStore(rHansel.Inventory.ItemSlots[InventoryFocusHansel].Item))
-					rHansel.Inventory.ItemSlots[InventoryFocusHansel].Item = null;
-			}
-			else if (pPlayer.GetType() == typeof(Gretel))
-			{
-				if (rGretel.Inventory.ItemSlots[InventoryFocusGretel].Item == null)
-					return;
-				if (rHansel.Inventory.TryToStore(rGretel.Inventory.ItemSlots[InventoryFocusGretel].Item))
-					rGretel.Inventory.ItemSlots[InventoryFocusGretel].Item = null;
+					//SwapItem
+					if (pPlayer.Input.ActionJustPressed && ((pPlayer.Position - pOtherPlayer.Position).Length() <= MaxSwapDistance))
+						SwapItem(pPlayer, pOtherPlayer);
+					break;
+				case 2:
+					Sequences.SetPlayerToIdle(pPlayer); //In nächsten Framedurchlauf gesetzt damit der ItemHandler das Inventory beim Schließen durch Y nicht instant wieder öffnet (JustPressed)
+					break;
 			}
 		}
 
 		#endregion
-		*/
+
+		#region Methods
+
+		protected void SwapItem(Player pPlayer, Player pOtherPlayer)
+		{
+			//Map IFocus to Player
+			int InventoryFocusPlayer;
+			if (pPlayer.GetType() == typeof(Hansel))
+				InventoryFocusPlayer = InventoryFocusHansel;
+			else
+				InventoryFocusPlayer = InventoryFocusGretel;
+			//Swap Item
+			if (pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item == null)
+				return;
+			if (pOtherPlayer.Inventory.TryToStore(pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item))
+				pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item = null;
+		}
+
+		#endregion
+
 	}
 }

@@ -152,7 +152,6 @@ namespace HG_Game
 			pHansel.mCurrentActivity.Update(pHansel, pGretel);
 			pGretel.mCurrentActivity.Update(pGretel, pHansel);
 
-
 			ActionInfoFading.Update();
 		}
 

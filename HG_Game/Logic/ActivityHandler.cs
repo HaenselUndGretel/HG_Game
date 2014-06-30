@@ -1,7 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
 using KryptonEngine.Manager;
-using KryptonEngine.Rendering;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -19,9 +18,10 @@ namespace HG_Game
 		
 		protected HudFading ActionInfoFading;
 
-		protected string ActionInfoHansel;
-		protected string ActionInfoGretel;
-		protected Sprite ActionInfoButton;
+		protected int ActionInfoHansel;
+		protected int ActionInfoGretel;
+		protected Texture2D ActionInfoButton;
+		protected Texture2D[] ActionInfo;
 
 		#endregion
 
@@ -39,7 +39,43 @@ namespace HG_Game
 
 		public void LoadContent()
 		{
-			ActionInfoButton.LoadTextures();
+			ActionInfoButton = TextureManager.Instance.GetElementByString("ButtonX");
+			ActionInfo = new Texture2D[15]; //Anzahl an möglichen Activities
+			string prefix = "ActivityInfo_";
+			ActionInfo[0] = TextureManager.Instance.GetElementByString(prefix + "FreeFromCobweb");
+			ActionInfo[1] = TextureManager.Instance.GetElementByString(prefix + "FreeFromSwamp");
+			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "KnockOverTree");
+			ActionInfo[3] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverTree");
+			ActionInfo[4] = TextureManager.Instance.GetElementByString(prefix + "PushRock");
+			ActionInfo[5] = TextureManager.Instance.GetElementByString(prefix + "SlipThroughRock");
+			ActionInfo[6] = TextureManager.Instance.GetElementByString(prefix + "JumpOverGap");
+			ActionInfo[7] = TextureManager.Instance.GetElementByString(prefix + "LegUp");
+			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "LegUpGrab");
+			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "UseKey");
+			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
+			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
+			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "UseChalk");
+			ActionInfo[13] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
+			ActionInfo[14] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverBrokenTree");
+
+			/*
+			FreeFromCobweb, "Befreien [Netz]"
+			FreeFromSwamp, "Befreien [Sumpf]"
+			KnockOverTree, "Umwerfen [Baum]"
+			BalanceOverTree, "Balancieren [Baum]"
+			PushRock, "Drücken [Fels]"
+			SlipThroughRock, "Durch schlüpfen [Fels]"
+			JumpOverGap, "Springen [Abgrund]"
+			LegUp, "Räuberleiter"
+			LegUpGrab, "Hoch heben"
+			UseKey, "Schlüssel benutzen [Tür]"
+			PushDoor, "Drücken [Tür]"
+			PullDoor, "Ziehen [Tür]"
+			UseChalk, "Markieren [Kreide]"
+			UseWell, "Herablassen [Brunnen]"
+			BalanceOverBrokenTree, "Balancieren [Brüchiger Baum]"
+			*/
+
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
@@ -131,11 +167,11 @@ namespace HG_Game
 			ActionInfoGretel = ActivityState.ActivityInfo[pActivity];
 		}
 
-		public void DrawActionInfo(TwoDRenderer pRenderer, Hansel pHansel, Gretel pGretel)
+		public void DrawActionInfo(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
 		{
-			pRenderer.Draw(ActionInfoButton, pHansel.Position);//Alpha = ActionInfoFading.VisibilityHansel
+			pSpriteBatch.Draw(ActionInfoButton, pHansel.Position, Color.White * ActionInfoFading.VisibilityHansel);
 			//Draw ActionInfoText Hansel
-			pRenderer.Draw(ActionInfoButton, pGretel.Position);//Alpha = ActionInfoFading.VisibilityGretel
+			pSpriteBatch.Draw(ActionInfoButton, pGretel.Position, Color.White * ActionInfoFading.VisibilityGretel);
 			//Draw ActionInfoText Gretel
 		}
 

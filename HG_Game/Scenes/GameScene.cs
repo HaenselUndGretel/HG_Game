@@ -100,7 +100,7 @@ namespace HG_Game
 				mRenderer.Draw(iObj.Skeleton, iObj.Textures, iObj.DrawZ);
 
 			//Render ActionInfo
-			mLogic.ActivityHandler.DrawActionInfo(mRenderer, mHansel, mGretel);
+			mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
 
 			mRenderer.End();
 			mRenderer.DrawDebugRendertargets(mSpriteBatch);

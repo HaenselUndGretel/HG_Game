@@ -46,7 +46,7 @@ namespace HG_Game
 			InventoryFading.Update();
 		}
 
-		#region Update Inventory
+		#region Update
 
 		protected void UpdateVisibility(SceneData pScene, Gretel pGretel)
 		{
@@ -59,7 +59,7 @@ namespace HG_Game
 			foreach (Item item in pScene.Items)
 			{
 				item.IsVisible = false;
-				if (item.CollisionBox.Intersects(pGretel.CollisionBox)) //Item befindet sich im Lichtkreis
+				if (!item.IsHidden || item.CollisionBox.Intersects(pGretel.CollisionBox)) //Item befindet sich im Lichtkreis
 				{
 					item.IsVisible = true;
 				}
@@ -69,7 +69,7 @@ namespace HG_Game
 			foreach (Collectable col in pScene.Collectables)
 			{
 				col.IsVisible = false;
-				if (col.CollisionBox.Intersects(pGretel.CollisionBox)) //Collectable befindet sich im Lichtkreis
+				if (!col.IsHidden || col.CollisionBox.Intersects(pGretel.CollisionBox)) //Collectable befindet sich im Lichtkreis
 				{
 					col.IsVisible = true;
 				}

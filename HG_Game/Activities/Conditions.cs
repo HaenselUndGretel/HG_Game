@@ -126,6 +126,31 @@ namespace HG_Game
 			return true;
 		}
 
+		public static bool PlayersAtWellPositions(Player pPlayer, Player pOtherPlayer, bool pGretelDown)
+		{
+			//Hansel an AP1 & Gretel->AP1 + Offset / AP2
+			if (pPlayer.mCurrentActivity != pOtherPlayer.mCurrentActivity)
+				throw new Exception("Spieler sind nicht an gleicher Activity beteiligt. Soll hier false returned werden?");
+			Player TmpHansel = new Player("");
+			Player TmpGretel = new Player("");
+			if (pPlayer.GetType() == typeof(Hansel))
+				TmpHansel = pPlayer;
+			else
+				TmpGretel = pPlayer;
+			if (pOtherPlayer.GetType() == typeof(Hansel))
+				TmpHansel = pOtherPlayer;
+			else
+				TmpGretel = pOtherPlayer;
+			if (TmpHansel.Position != TmpHansel.mCurrentActivity.rIObj.ActionPosition1)
+				return false;
+			if (pGretelDown && TmpGretel.Position != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
+				return false;
+			if (!pGretelDown && TmpGretel.Position != TmpGretel.mCurrentActivity.rIObj.ActionPosition1 + new Vector2(TmpGretel.mCurrentActivity.rIObj.ActionPosition2.X - TmpGretel.mCurrentActivity.rIObj.ActionPosition1.X, 0))
+				return false;
+			return true;
+		}
+
+
 		public static bool AnimationComplete(SpineObject pSpine)
 		{
 			return pSpine.AnimationComplete;

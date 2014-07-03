@@ -32,6 +32,21 @@ namespace HG_Game
 			pPlayer.MoveAgainstPoint(Destination, pSpeedFactor);
 		}
 
+		public static void MovePlayerToWellActionPosition(Player pPlayer, bool pGretelDown, float pSpeedFactor = 1f)
+		{
+			//Hansel->AP1 Gretel->AP1 + Offset / AP2
+			Vector2 Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
+			if (pPlayer.GetType() == typeof(Gretel))
+			{
+				//Wenn pOffsetGretel oben ist muss Gretel an AP1 + Offset gesetzt werden.
+				if (!pGretelDown)
+					Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition1 + new Vector2(pPlayer.mCurrentActivity.rIObj.ActionPosition2.X - pPlayer.mCurrentActivity.rIObj.ActionPosition1.X, 0);
+				else //sonst an AP2
+					Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition2;
+			}
+			pPlayer.MoveAgainstPoint(Destination, pSpeedFactor);
+		}
+
 		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
 			pPlayer.Position = pPosition;

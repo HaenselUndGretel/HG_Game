@@ -252,6 +252,21 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\Collectable1_default.png">
+      <Name>Collectable1_default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\Collectable1_hover.png">
+      <Name>Collectable1_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\Collectable1_locked.png">
+      <Name>Collectable1_locked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="hug\000.hug">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>000</Name>

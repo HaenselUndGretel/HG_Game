@@ -63,7 +63,7 @@ namespace HG_Game
 					MenuState = ChalkState.RockMenu;
 					FadingRockMenu.ShowHudGretel = true;
 					FadingArrowMenu.ShowHudGretel = false;
-					RockMenu.SetRockMenu(Vector2.Zero, 80f, rRockData);
+					RockMenu.SetRockMenu(pPlayer.PositionIO + OffsetRockMenu, 80f, rRockData);
 					if (pPlayer.Input.BackJustPressed)
 						Sequences.SetPlayerToIdle(pPlayer);
 					if (pPlayer.Input.ActionJustPressed && rRockData.Count < 3)
@@ -72,7 +72,7 @@ namespace HG_Game
 				case 2:
 					MenuState = ChalkState.ArrowMenu;
 					FadingArrowMenu.ShowHudGretel = true;
-					ArrowMenu.SetArrowMenu(Vector2.Zero, 80f);
+					ArrowMenu.SetArrowMenu(pPlayer.PositionIO + OffsetArrowMenu, 80f);
 					if (pPlayer.Input.BackJustPressed)
 						--pPlayer.mCurrentState;
 					int SelectedArrow = ArrowMenu.Update(pPlayer);

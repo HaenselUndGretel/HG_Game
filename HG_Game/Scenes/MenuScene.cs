@@ -19,6 +19,7 @@ namespace HG_Game
 
 		protected Texture2D mBackground;
 		protected List<ImageButton> mButtons;
+		protected List<LockedImageButton> mCollectableButton;
 		protected int SelectedIndex;
 		#endregion
 
@@ -48,7 +49,14 @@ namespace HG_Game
 
 			for (int i = 0; i < 5; i++ )
 				mButtons.Add(new ImageButton(Names[i], new Vector2(25 + i * TextureWidth + i * 25, TextureHeight), Actions[i]));
-			mButtons[SelectedIndex].IsSelected = true; 
+			mButtons[SelectedIndex].IsSelected = true;
+
+
+			mCollectableButton = new List<LockedImageButton>();
+			for(int i = 0; i < 9; i++)
+			{
+				mCollectableButton.Add(new LockedImageButton("Collectable", new Vector2(25 + i * TextureWidth + i * 25, 25), null));
+			}
 		}
 
 		public override void Update()
@@ -79,6 +87,9 @@ namespace HG_Game
 
 			foreach (ImageButton ib in mButtons)
 				ib.Draw(mSpriteBatch);
+
+			foreach (LockedImageButton lib in mCollectableButton)
+				lib.Draw(mSpriteBatch);
 
 			mSpriteBatch.End();
 		}

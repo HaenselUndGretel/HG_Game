@@ -50,10 +50,15 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						if (Conditions.PlayerAtActionPosition(pPlayer))
+							++pPlayer.mCurrentState;
+						Sequences.MovePlayerToActionPosition(pPlayer);
+						break;
+					case 1:
 						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 						break;
-					case 1:
+					case 2:
 						if (Conditions.AnimationComplete(pPlayer))
 							Sequences.SetPlayerToIdle(pPlayer);
 						break;
@@ -64,6 +69,11 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						if (Conditions.PlayerAtNearestActionPosition(pPlayer))
+							++pPlayer.mCurrentState;
+						Sequences.MovePlayerToNearestActionPosition(pPlayer);
+						break;
+					case 1:
 						IsAvailable = false;
 						Sequences.StartAnimation(pPlayer, "attack");
 						StartPosition = pPlayer.PositionIO;
@@ -71,12 +81,12 @@ namespace HG_Game
 						Direction.Normalize();
 						++pPlayer.mCurrentState;
 						break;
-					case 1:
+					case 2:
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer))
 							++pPlayer.mCurrentState;
 						break;
-					case 2:
+					case 3:
 						//Update Movement
 						Vector2 MovementInput = pPlayer.Input.Movement;
 						if (MovementInput == Vector2.Zero) //Performance quit
@@ -113,7 +123,7 @@ namespace HG_Game
 						//BalancingMovement ausführen
 						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
-					case 3:
+					case 4:
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer))
 						{

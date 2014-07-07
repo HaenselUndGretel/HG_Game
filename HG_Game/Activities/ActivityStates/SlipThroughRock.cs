@@ -31,10 +31,15 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					if (Conditions.PlayerAtNearestActionPosition(pPlayer))
+						++pPlayer.mCurrentState;
+					Sequences.MovePlayerToNearestActionPosition(pPlayer);
+					break;
+				case 1:
 					Sequences.StartAnimation(pPlayer, "Attack"); //Weg bewegen
 					++pPlayer.mCurrentState;
 					break;
-				case 1:
+				case 2:
 					if (Conditions.AnimationComplete(pPlayer))
 					{
 						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.PositionIO));
@@ -42,7 +47,7 @@ namespace HG_Game
 						++pPlayer.mCurrentState;
 					}
 					break;
-				case 2:
+				case 3:
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

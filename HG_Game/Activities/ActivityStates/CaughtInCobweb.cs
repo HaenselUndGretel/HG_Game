@@ -43,6 +43,11 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0: //FreeFromCobweb
+					if (Conditions.PlayerAtActionPosition(pPlayer, true))
+						++pPlayer.mCurrentState;
+					Sequences.MovePlayerToActionPosition(pPlayer, true);
+					break;
+				case 1:
 					Sequences.StartAnimation(pPlayer, "attack");
 					if (pPlayer.GetType() == typeof(Hansel))
 						QTE.OnlyOnePlayerIsHansel = true;
@@ -51,7 +56,7 @@ namespace HG_Game
 					QTE.StartQTE();
 					++pPlayer.mCurrentState;
 					break;
-				case 1:
+				case 2:
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -65,7 +70,7 @@ namespace HG_Game
 					QTE.Update();
 					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
 					break;
-				case 2:
+				case 3:
 					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);

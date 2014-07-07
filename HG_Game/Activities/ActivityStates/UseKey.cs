@@ -10,10 +10,16 @@ namespace HG_Game
 {
 	class UseKey : ActivityState
 	{
+		protected QuickTimeEvent QTE;
+		protected Vector2 mSourceHansel;
+		protected Vector2 mSourceGretel;
+		protected Vector2 mDestinationHansel;
+		protected Vector2 mDestinationGretel;
 
 		public UseKey(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
+			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, true, true);
 		}
 
 		#region Override Methods
@@ -42,10 +48,15 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						if (Conditions.PlayerAtActionPosition(pPlayer))
+							++pPlayer.mCurrentState;
+						Sequences.MovePlayerToActionPosition(pPlayer);
+						break;
+					case 1:
 						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 						break;
-					case 1:
+					case 2:
 						if (Conditions.AnimationComplete(pPlayer))
 							Sequences.SetPlayerToIdle(pPlayer);
 						break;
@@ -53,7 +64,51 @@ namespace HG_Game
 			}
 			else //PushDoor
 			{
-				throw new NotImplementedException();
+				switch (pPlayer.mCurrentState)
+				{
+					case 0:
+						if (!Conditions.ActionHold(pPlayer))
+							Sequences.SetPlayerToIdle(pPlayer);
+						if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer))
+							++pPlayer.mCurrentState;
+						Sequences.MovePlayerToRightActionPosition(pPlayer);
+						break;
+					case 1:
+						QTE.StartQTE();
+						if (pPlayer.GetType() == typeof(Hansel))
+						{
+							mSourceHansel = pPlayer.PositionIO;
+							mSourceGretel = pOtherPlayer.PositionIO;
+						}
+						else
+						{
+							mSourceHansel = pOtherPlayer.PositionIO;
+							mSourceGretel = pPlayer.PositionIO;
+						}
+						++pPlayer.mCurrentState;
+						break;
+					case 2:
+						QTE.Update();
+						if (pPlayer.GetType() == typeof(Hansel))
+						{
+							Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
+							Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceHansel, mDestinationHansel);
+						}
+						else
+						{
+							Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceGretel, mDestinationGretel);
+						}
+						if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+						{
+							Sequences.SetPlayerToIdle(pPlayer);
+						}
+						else if (QTE.State == QuickTimeEvent.QTEState.Failed)
+						{
+							Sequences.SetPlayerToIdle(pPlayer);
+							Sequences.SetPlayerToIdle(pOtherPlayer);
+						}
+						break;
+				}
 			}
 		}
 

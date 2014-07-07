@@ -127,8 +127,6 @@ namespace HG_Game
 						}
 					}
 					break;
-
-
 			}
 		}
 

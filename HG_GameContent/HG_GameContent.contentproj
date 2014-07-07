@@ -392,10 +392,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Content Include="hug\000.hug">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>000</Name>
-    </Content>
     <Compile Include="spine\skeleton.png">
       <Name>skeleton</Name>
       <Importer>TextureImporter</Importer>
@@ -404,18 +400,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="hug\001.hug">
+    <Content Include="hug\000.hug">
+      <Name>000</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>001</Name>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="hug\002.hug">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>002</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="spine\skeleton.atlas">
       <Name>skeleton</Name>

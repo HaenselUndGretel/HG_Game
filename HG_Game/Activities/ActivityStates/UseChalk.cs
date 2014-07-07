@@ -55,6 +55,11 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					if (Conditions.PlayerAtActionPosition(pPlayer))
+						++pPlayer.mCurrentState;
+					Sequences.MovePlayerToActionPosition(pPlayer);
+					break;
+				case 1:
 					MenuState = ChalkState.RockMenu;
 					FadingRockMenu.ShowHudGretel = true;
 					FadingArrowMenu.ShowHudGretel = false;
@@ -64,7 +69,7 @@ namespace HG_Game
 					if (pPlayer.Input.ActionJustPressed && rRockData.Count < 3)
 						++pPlayer.mCurrentState;
 					break;
-				case 1:
+				case 2:
 					MenuState = ChalkState.ArrowMenu;
 					FadingArrowMenu.ShowHudGretel = true;
 					ArrowMenu.SetArrowMenu(Vector2.Zero, 80f);
@@ -82,7 +87,7 @@ namespace HG_Game
 						++pPlayer.mCurrentState;
 					}
 					break;
-				case 2:
+				case 3:
 					if (pPlayer.AnimationComplete)
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

@@ -101,6 +101,23 @@ namespace HG_Game
 
 		#region Update
 
+		public static bool PlayerAtActionPosition(Player pPlayer, bool pAP2 = false)
+		{
+			Vector2 APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
+			if (pAP2)
+				APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition2;
+			if (pPlayer.PositionIO == APPosition)
+				return true;
+			return false;
+		}
+
+		public static bool PlayerAtNearestActionPosition(Player pPlayer)
+		{
+			if (pPlayer.PositionIO == pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.PositionIO))
+				return true;
+			return false;
+		}
+
 		public static bool PlayersAtActionPositions(Player pPlayer, Player pOtherPlayer, Nullable<Vector2> pOffsetGretel = null)
 		{
 			//Hansel an AP1 & Gretel an AP2

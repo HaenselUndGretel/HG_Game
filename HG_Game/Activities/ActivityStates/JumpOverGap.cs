@@ -34,12 +34,17 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					if (Conditions.PlayerAtNearestActionPosition(pPlayer))
+						++pPlayer.mCurrentState;
+					Sequences.MovePlayerToNearestActionPosition(pPlayer);
+					break;
+				case 1:
 					Sequences.StartAnimation(pPlayer, "attack");
 					mDestination = rIObj.DistantActionPosition(pPlayer.Position);
 					mSource = pPlayer.PositionIO;
 					++pPlayer.mCurrentState;
 					break;
-				case 1:
+				case 2:
 					Sequences.SynchMovementToAnimation(rIObj, pPlayer, mSource, mDestination);
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);

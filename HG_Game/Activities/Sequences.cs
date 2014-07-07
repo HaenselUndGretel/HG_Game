@@ -17,6 +17,19 @@ namespace HG_Game
 			pPlayer.MoveAgainstPoint(pPosition, pSpeedFactor);
 		}
 
+		public static void MovePlayerToActionPosition(Player pPlayer, bool pAP2 = false)
+		{
+			Vector2 APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
+			if (pAP2)
+				APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition2;
+			pPlayer.MoveAgainstPoint(APPosition);
+		}
+
+		public static void MovePlayerToNearestActionPosition(Player pPlayer)
+		{
+			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.PositionIO));
+		}
+
 		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null, float pSpeedFactor = 1f)
 		{
 			//Hansel->AP1 Gretel->AP2

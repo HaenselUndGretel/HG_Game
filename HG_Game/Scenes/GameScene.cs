@@ -43,8 +43,8 @@ namespace HG_Game
 			EngineSettings.IsDebug = true;
 #endif
 			//Player
-			mHansel = new Hansel("ashbrett");
-			mGretel = new Gretel("sweetcheeks");
+			mHansel = new Hansel("hansel");
+			mGretel = new Gretel("gretel");
 			//Camera
 			mCamera = new Camera();
 			//Savegame

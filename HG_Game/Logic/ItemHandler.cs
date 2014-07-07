@@ -118,7 +118,7 @@ namespace HG_Game
 
 		#region Draw Inventory
 
-		public void DrawInventory(Hansel pHansel, Gretel pGretel, SpriteBatch pSpriteBatch, SkeletonRenderer pSkeletonRenderer)
+		public void DrawInventory(Hansel pHansel, Gretel pGretel, SpriteBatch pSpriteBatch)
 		{
 			int TmpFocusHansel = 3;
 			int TmpFocusGretel = 3;

@@ -61,6 +61,7 @@ namespace HG_Game
 					else
 						pPlayer.SetAnimation("attack", false);
 					++pPlayer.mCurrentState;
+					break;
 				case 3:
 					//-----Gretel bereit / im Korb?-----
 					if (pOtherPlayer.mCurrentState < 3)
@@ -72,6 +73,7 @@ namespace HG_Game
 						finished = Conditions.AnimationComplete(pOtherPlayer);
 					if (finished)
 						++pPlayer.mCurrentState;
+					break;
 				case 4:
 					//-----Brunnen hochziehen / herablassen-----
 					if (pOtherPlayer.mCurrentState != 4)

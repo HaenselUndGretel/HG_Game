@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,10 +44,10 @@ namespace HG_Game
 			ActivityHandler.LoadContent();
 		}
 
-		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer)
 		{
 			//Update Logic Parts
-			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera);
+			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
 			ActivityHandler.Update(pScene, pHansel, pGretel);
 			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame);
 

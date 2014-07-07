@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.Rendering;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,7 @@ namespace HG_Game
 			CurrentState = State.Idle;
 		}
 
-		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer)
 		{
 			switch (CurrentState)
 			{
@@ -66,7 +67,7 @@ namespace HG_Game
 					TestForSwitch(pScene, pHansel, pGretel, pSavegame.Scenes);
 					break;
 				case State.Switching:
-					Switch(pSavegame, ref pScene, pHansel, pGretel, pCamera);
+					Switch(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
 					break;
 				case State.Entering:
 					Enter(pScene, pHansel, pGretel);
@@ -142,7 +143,7 @@ namespace HG_Game
 		/// <summary>
 		/// Aktualisiert den FadingProgress des Switchings.
 		/// </summary>
-		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera) 
+		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer) 
 		{
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
 			pHansel.MoveManually(LeaveHansel, 1f, pScene);
@@ -155,6 +156,7 @@ namespace HG_Game
 				pScene = pSavegame.Scenes[DestinationScene];
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);
+				pRenderer.AmbientLight = pScene.SceneAmbientLight;
 				//Show on new Scene
 				FadingProgress = 0;
 				CurrentState = State.Entering;

@@ -9,6 +9,7 @@ using KryptonEngine;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using KryptonEngine.HG_Data;
+using KryptonEngine.Manager;
 
 namespace HG_Game
 {
@@ -43,7 +44,6 @@ namespace HG_Game
 #if DEBUG
 			EngineSettings.IsDebug = true;
 #endif
-			mRenderer.AmbientLight = new AmbientLight();
 
 			//Player
 			mHansel = new Hansel("skeleton");
@@ -76,6 +76,7 @@ namespace HG_Game
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			mRenderer.AmbientLight = mScene.SceneAmbientLight;
 
 			//Camera
 			mCamera.GameScreen = mScene.GamePlane;
@@ -87,7 +88,7 @@ namespace HG_Game
 		public override void Update()
 		{
 			//Update Logic
-			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera);
+			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer);
 			//Update Player
 			mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
 			mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
@@ -106,24 +107,47 @@ namespace HG_Game
 				mRenderer.Draw(mScene.BackgroundTexture.Textures, Vector2.Zero);
 				//Render Game
 				foreach (InteractiveObject iObj in mScene.RenderList)
-					mRenderer.Draw(iObj.Skeleton, iObj.Textures, (float)iObj.DrawZ);
+					iObj.Draw(mRenderer);
 			mRenderer.End();
-
-			/*
-			//--------------------SpriteBatch (HUD & Infos)--------------------
-			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
-				//Render ActionInfo
-				mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
-				//Render ChalkMenues
-				foreach (InteractiveObject iObj in mScene.InteractiveObjects)
-					if (iObj.Activity == Activity.UseChalk)
-						((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
-			mSpriteBatch.End();
-			*/
+			
 			//--------------------DrawToScreen--------------------
 			mRenderer.DisposeGBuffer();
+			mRenderer.ProcessLight(mScene.Lights, mCamera.Transform);
 			mRenderer.ProcessFinalScene();
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
+
+			//--------------------SpriteBatch (HUD & Infos)--------------------
+			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+			//Render ActionInfo
+			mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
+			//Render ChalkMenues
+			foreach (InteractiveObject iObj in mScene.InteractiveObjects)
+				if (iObj.Activity == Activity.UseChalk)
+					((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
+			mSpriteBatch.End();
+
+#if DEBUG
+			if (EngineSettings.IsDebug)
+			{
+
+			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+			for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
+			{
+				mScene.RenderList[i].DrawDebug(mSpriteBatch);
+			}
+			mSpriteBatch.End();
+
+			SpriteFont font = FontManager.Instance.GetElementByString("font");
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine("Hansel:" + mHansel.PositionIO.ToString() + "," + mHansel.CollisionBox.ToString());
+			sb.AppendLine("Gretel:" + mGretel.PositionIO.ToString() + "," + mGretel.CollisionBox.ToString());
+			sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
+
+			mSpriteBatch.Begin();
+			mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);
+			mSpriteBatch.End();
+			}
+#endif
 		}
 
 		#endregion

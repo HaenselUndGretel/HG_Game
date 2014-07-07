@@ -40,12 +40,12 @@ namespace HG_Game
 					break;
 				case 1:
 					Sequences.StartAnimation(pPlayer, "attack");
-					mDestination = rIObj.DistantActionPosition(pPlayer.Position);
+					mDestination = rIObj.DistantActionPosition(pPlayer.PositionIO);
 					mSource = pPlayer.PositionIO;
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					Sequences.SynchMovementToAnimation(rIObj, pPlayer, mSource, mDestination);
+					Sequences.SynchMovementToAnimation(pPlayer, pPlayer, mSource, mDestination);
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

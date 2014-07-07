@@ -118,7 +118,7 @@ namespace HG_Game
 		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pSource, Vector2 pDestination)
 		{
 			float Progress = pSpineToSynchTo.AnimationState.GetCurrent(0).Time / pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
-			pPlayer.PositionIO = (pDestination - pSource) * Progress;
+			pPlayer.PositionIO = pSource + (pDestination - pSource) * Progress;
 		}
 
 		//QuickTimeEvent

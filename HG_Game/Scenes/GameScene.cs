@@ -93,7 +93,6 @@ namespace HG_Game
 			mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
 			//Update Camera
 			mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
-			mCamera.MoveCamera(new Vector2(-200, -200));
 		}
 
 		public override void Draw()

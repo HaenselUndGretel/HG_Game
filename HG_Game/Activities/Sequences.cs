@@ -49,7 +49,7 @@ namespace HG_Game
 
 		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
-			pPlayer.Position = pPosition;
+			pPlayer.PositionIO = pPosition;
 		}
 
 		//Move für Cobweb
@@ -64,7 +64,7 @@ namespace HG_Game
 		//Move für Swamp
 		public static void MoveAway(Player pPlayer, Vector2 pSource, float pSpeedFactor = 1f)
 		{
-			Vector2 Direction = pPlayer.Position - pSource;
+			Vector2 Direction = pPlayer.PositionIO - pSource;
 			Direction.Normalize();
 			pPlayer.MoveManually(Direction, pSpeedFactor);
 		}
@@ -84,12 +84,12 @@ namespace HG_Game
 		//Movement Stepping
 		public static void UpdateMovementStepping(Player pPlayer, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pPlayer.Position = (pDestination - pSource) * pProgress;
+			pPlayer.PositionIO = (pDestination - pSource) * pProgress;
 		}
 
 		public static void UpdateMovementStepping(InteractiveObject pIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pIObj.Position = (pDestination - pSource) * pProgress;
+			pIObj.PositionIO = (pDestination - pSource) * pProgress;
 		}
 
 		//Pause & Play Animation
@@ -105,7 +105,7 @@ namespace HG_Game
 		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pSource, Vector2 pDestination)
 		{
 			float Progress = pSpineToSynchTo.AnimationState.GetCurrent(0).Time / pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
-			pPlayer.Position = (pDestination - pSource) * Progress;
+			pPlayer.PositionIO = (pDestination - pSource) * Progress;
 		}
 
 		//QuickTimeEvent

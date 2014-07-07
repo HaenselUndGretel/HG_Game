@@ -37,22 +37,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gfx\000Diffuse.png">
-      <Name>000Diffuse</Name>
+    <Compile Include="gfx\000.png">
+      <Name>000</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gfx\001Diffuse.png">
-      <Name>001Diffuse</Name>
+    <Compile Include="gfx\001.png">
+      <Name>001</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gfx\002Diffuse.png">
-      <Name>002Diffuse</Name>
+    <Compile Include="gfx\002.png">
+      <Name>002</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -191,43 +191,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gfx\jumpovergap.png">
-      <Name>jumpovergap</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="gfx\knockovertree.png">
-      <Name>knockovertree</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="gfx\legup.png">
-      <Name>legup</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="gfx\pulldoor_usekey.png">
       <Name>pulldoor_usekey</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="gfx\pushrock.png">
-      <Name>pushrock</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="gfx\slipthroughrock.png">
-      <Name>slipthroughrock</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -342,16 +307,101 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\ActivityInfo_BalanceOverBrokenTree.png">
+      <Name>ActivityInfo_BalanceOverBrokenTree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_BalanceOverTree.png">
+      <Name>ActivityInfo_BalanceOverTree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_FreeFromCobweb.png">
+      <Name>ActivityInfo_FreeFromCobweb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_FreeFromSwamp.png">
+      <Name>ActivityInfo_FreeFromSwamp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_JumpOverGap.png">
+      <Name>ActivityInfo_JumpOverGap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_KnockOverTree.png">
+      <Name>ActivityInfo_KnockOverTree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_LegUp.png">
+      <Name>ActivityInfo_LegUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_LegUpGrab.png">
+      <Name>ActivityInfo_LegUpGrab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_PullDoor.png">
+      <Name>ActivityInfo_PullDoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_PushDoor.png">
+      <Name>ActivityInfo_PushDoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_PushRock.png">
+      <Name>ActivityInfo_PushRock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_SlipThroughRock.png">
+      <Name>ActivityInfo_SlipThroughRock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_UseChalk.png">
+      <Name>ActivityInfo_UseChalk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_UseKey.png">
+      <Name>ActivityInfo_UseKey</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_UseWell.png">
+      <Name>ActivityInfo_UseWell</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ArrowMenuBackground.png">
+      <Name>ArrowMenuBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\RockMenuBackground.png">
+      <Name>RockMenuBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="hug\000.hug">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>000</Name>
     </Content>
-    <Content Include="spine\spineboy.png">
-      <Name>spineboy</Name>
+    <Compile Include="spine\skeleton.png">
+      <Name>skeleton</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="hug\001.hug">
@@ -365,17 +415,24 @@
       <Name>002</Name>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="spine\spineboy.atlas">
-      <Name>spineboy</Name>
+    <Content Include="spine\skeleton.atlas">
+      <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="spine\spineboy.json">
-      <Name>spineboy</Name>
+    <Content Include="spine\skeleton.json">
+      <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="spine\spineboy.settings">
-      <Name>spineboy</Name>
+    <Content Include="spine\skeleton.settings">
+      <Name>skeleton</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\skeleton.iObj">
+      <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

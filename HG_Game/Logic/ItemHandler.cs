@@ -126,8 +126,8 @@ namespace HG_Game
 				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocusHansel;
 			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
 				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocusGretel;
-			pHansel.Inventory.Draw(pSpriteBatch, pHansel.Position + InventoryOffset, InventoryFading.VisibilityHansel, TmpFocusHansel);
-			pGretel.Inventory.Draw(pSpriteBatch, pGretel.Position + InventoryOffset, InventoryFading.VisibilityGretel, TmpFocusGretel);
+			pHansel.Inventory.Draw(pSpriteBatch, pHansel.PositionIO + InventoryOffset, InventoryFading.VisibilityHansel, TmpFocusHansel);
+			pGretel.Inventory.Draw(pSpriteBatch, pGretel.PositionIO + InventoryOffset, InventoryFading.VisibilityGretel, TmpFocusGretel);
 		}
 
 		#endregion

@@ -66,8 +66,8 @@ namespace HG_Game
 					case 0:
 						IsAvailable = false;
 						Sequences.StartAnimation(pPlayer, "attack");
-						StartPosition = pPlayer.Position;
-						Direction = rIObj.DistantActionPosition(pPlayer.Position) - StartPosition;
+						StartPosition = pPlayer.PositionIO;
+						Direction = rIObj.DistantActionPosition(pPlayer.PositionIO) - StartPosition;
 						Direction.Normalize();
 						++pPlayer.mCurrentState;
 						break;
@@ -98,20 +98,20 @@ namespace HG_Game
 							Sequences.End();
 						}
 						//WalkAway?
-						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.Position + MovementInput * 1000f);
-						Vector2 MovementDirection = TargetActionPosition - pPlayer.Position;
+						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f);
+						Vector2 MovementDirection = TargetActionPosition - pPlayer.PositionIO;
 						MovementDirection.Normalize();
 						//Wenn Entfernung vom Player zum TargetActionPoint <= EnterBalanceEntfernung
-						if ((TargetActionPosition - pPlayer.Position).Length() <= (MovementDirection * EnterBalanceDistance).Length())
+						if ((TargetActionPosition - pPlayer.PositionIO).Length() <= (MovementDirection * EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
 							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance));
 							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
-							StartPosition = pPlayer.Position;
+							StartPosition = pPlayer.PositionIO;
 						}
 
 						//BalancingMovement ausführen
-						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.Position + MovementInput * 1000f), BalanceSpeedFactor);
+						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
 					case 3:
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));

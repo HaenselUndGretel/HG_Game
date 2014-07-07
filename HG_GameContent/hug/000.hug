@@ -226,7 +226,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-	  <Name>spineboy</Name>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>260</X>
@@ -280,7 +280,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-	  <Name>spineboy</Name>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>278</X>
@@ -344,7 +344,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-	  <Name>spineboy</Name>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>953</X>
@@ -398,7 +398,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
-	  <Name>spineboy</Name>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>1974</X>
@@ -455,7 +455,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>158</DrawZ>
-      <TextureName>ItemKey</TextureName>
+	  <Name>skeleton</Name>
       <Width>64</Width>
       <Height>64</Height>
       <Rotation>0</Rotation>
@@ -481,7 +481,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>502</DrawZ>
-      <TextureName>ItemBranch</TextureName>
+	  <Name>skeleton</Name>
       <Width>64</Width>
       <Height>64</Height>
       <Rotation>0</Rotation>
@@ -507,7 +507,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>87</DrawZ>
-      <TextureName>ItemKnife</TextureName>
+	  <Name>skeleton</Name>
       <Width>64</Width>
       <Height>64</Height>
       <Rotation>0</Rotation>

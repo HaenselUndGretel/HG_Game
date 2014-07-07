@@ -43,7 +43,7 @@ namespace HG_Game
 
 		public void LoadContent()
 		{
-			ActionInfoButton = TextureManager.Instance.GetElementByString("ButtonX");
+			ActionInfoButton = TextureManager.Instance.GetElementByString("button_x");
 			ActionInfo = new Texture2D[20]; //Anzahl an möglichen Activities
 			string prefix = "ActivityInfo_";
 			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "FreeFromCobweb");
@@ -158,12 +158,81 @@ namespace HG_Game
 		public void DrawActionInfo(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
 		{
 			//ActionInfo
-			pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.Position + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
-			pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.Position + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
+			if (ActionInfoHansel != 0)
+				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.PositionIO + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
+			if (ActionInfoGretel != 0)
+				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.PositionIO + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
 			//ButtonX
-			pSpriteBatch.Draw(ActionInfoButton, pHansel.Position + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
-			pSpriteBatch.Draw(ActionInfoButton, pGretel.Position + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
+			pSpriteBatch.Draw(ActionInfoButton, pHansel.PositionIO + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
+			pSpriteBatch.Draw(ActionInfoButton, pGretel.PositionIO + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
 		}
+
+		#region Setup InteractiveObjects.ActivityState
+
+		//-----Workaround für linerare Abhängigkeit HG_Game -> HG_Data -> KryptonEngine-----
+		public void SetupInteractiveObjectsFromDeserialization(Savegame pSavegame, Hansel pHansel, Gretel pGretel)
+		{
+			for (int i = 0; i < pSavegame.Scenes.Length; i++)
+			{
+				foreach (InteractiveObject iObj in pSavegame.Scenes[i].InteractiveObjects)
+				{
+					switch (iObj.Activity)
+					{
+						case Activity.CaughtInCobweb:
+							iObj.ActivityState = new CaughtInCobweb(pHansel, pGretel, iObj);
+							break;
+						case Activity.CaughtInSwamp:
+							iObj.ActivityState = new CaughtInSwamp(pHansel, pGretel, iObj);
+							break;
+						case Activity.KnockOverTree:
+							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
+							break;
+						case Activity.BalanceOverTree:
+							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
+							//ToDo Dummy 2ndState Animation applyen.
+							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.PushRock:
+							iObj.ActivityState = new PushRock(pHansel, pGretel, iObj);
+							break;
+						case Activity.SlipThroughRock:
+							iObj.ActivityState = new SlipThroughRock(pHansel, pGretel, iObj);
+							break;
+						case Activity.JumpOverGap:
+							iObj.ActivityState = new JumpOverGap(pHansel, pGretel, iObj);
+							break;
+						case Activity.LegUp:
+							iObj.ActivityState = new LegUp(pHansel, pGretel, iObj);
+							break;
+						case Activity.LegUpGrab:
+							iObj.ActivityState = new LegUpGrab(pHansel, pGretel, iObj);
+							break;
+						case Activity.UseKey:
+							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							break;
+						case Activity.PushDoor:
+							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							//ToDo Dummy 2ndState Animation applyen.
+							iObj.ActivityState.m2ndState = true;
+							break;
+						case Activity.PullDoor:
+							iObj.ActivityState = new PullDoor(pHansel, pGretel, iObj);
+							break;
+						case Activity.UseChalk:
+							iObj.ActivityState = new UseChalk(pHansel, pGretel, iObj);
+							break;
+						case Activity.UseWell:
+							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);
+							break;
+						default:
+							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + " ist eine ungültige Action angegeben!");
+					}
+				}
+			}
+		}
+
+		#endregion
+
 
 		#endregion
 	}

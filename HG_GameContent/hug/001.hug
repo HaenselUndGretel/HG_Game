@@ -202,6 +202,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>329</X>
@@ -255,6 +256,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>800</X>

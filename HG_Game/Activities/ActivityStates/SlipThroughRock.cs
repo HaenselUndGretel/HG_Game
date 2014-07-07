@@ -37,7 +37,7 @@ namespace HG_Game
 				case 1:
 					if (Conditions.AnimationComplete(pPlayer))
 					{
-						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.Position));
+						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.PositionIO));
 						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 					}

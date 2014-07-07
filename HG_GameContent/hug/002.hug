@@ -162,6 +162,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
+	  <Name>skeleton</Name>
       <ActionRectList>
         <Rectangle>
           <X>655</X>

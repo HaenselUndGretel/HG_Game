@@ -50,13 +50,13 @@ namespace HG_Game
 					QTE.StartQTE();
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
-						mSourceHansel = pPlayer.Position;
-						mSourceGretel = pOtherPlayer.Position;
+						mSourceHansel = pPlayer.PositionIO;
+						mSourceGretel = pOtherPlayer.PositionIO;
 					}
 					else
 					{
-						mSourceHansel = pOtherPlayer.Position;
-						mSourceGretel = pPlayer.Position;
+						mSourceHansel = pOtherPlayer.PositionIO;
+						mSourceGretel = pPlayer.PositionIO;
 					}
 					mSourceIObj = new Vector2(rIObj.CollisionRectList[0].X, rIObj.CollisionRectList[0].Y);
 					++pPlayer.mCurrentState;

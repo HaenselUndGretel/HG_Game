@@ -78,7 +78,7 @@ namespace HG_Game
 			OnlyX = pOnlyX;
 			OnlyOnePlayer = pOnlyOnePlayer;
 			OnlyOnePlayerIsHansel = pOnlyOnePlayerIsHansel;
-			ResetTimer();
+			//ResetTimer();
 		}
 
 		#endregion

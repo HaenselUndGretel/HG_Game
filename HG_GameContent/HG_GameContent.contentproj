@@ -286,7 +286,7 @@
       <Name>Singel</Name>
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
-	</Compile>
+    </Compile>
     <Compile Include="gfx\Collectable1_default.png">
       <Name>Collectable1_default</Name>
       <Importer>TextureImporter</Importer>
@@ -302,21 +302,55 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\arrow_down_default.png">
+      <Name>arrow_down_default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_down_hover.png">
+      <Name>arrow_down_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_left_default.png">
+      <Name>arrow_left_default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_left_hover.png">
+      <Name>arrow_left_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_right_default.png">
+      <Name>arrow_right_default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_right_hover.png">
+      <Name>arrow_right_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_up_default.png">
+      <Name>arrow_up_default</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\arrow_up_hover.png">
+      <Name>arrow_up_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="hug\000.hug">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>000</Name>
     </Content>
-    <Content Include="spine\ashbrett-1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>ashbrett-1</Name>
+    <Content Include="spine\spineboy.png">
+      <Name>spineboy</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-    </Content>
-    <Content Include="spine\sweetcheeks-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>sweetcheeks-1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -332,39 +366,17 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="spine\ashbrett.atlas">
+    <Content Include="spine\spineboy.atlas">
+      <Name>spineboy</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>ashbrett</Name>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spine\ashbrett.json">
+    <Content Include="spine\spineboy.json">
+      <Name>spineboy</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>ashbrett</Name>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spine\ashbrett.settings">
+    <Content Include="spine\spineboy.settings">
+      <Name>spineboy</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>ashbrett</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spine\sweetcheeks.atlas">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>sweetcheeks</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spine\sweetcheeks.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>sweetcheeks</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spine\sweetcheeks.settings">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>sweetcheeks</Name>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

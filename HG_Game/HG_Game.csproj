@@ -75,6 +75,7 @@
     <Compile Include="Activities\ActivityStates\BalanceOverBrokenTree.cs" />
     <Compile Include="Activities\ActivityStates\CaughtInCobweb.cs" />
     <Compile Include="Activities\ActivityStates\CaughtInSwamp.cs" />
+    <Compile Include="Activities\ActivityStates\ChalkMenu.cs" />
     <Compile Include="Activities\Conditions.cs" />
     <Compile Include="Activities\ActivityStates\JumpOverGap.cs" />
     <Compile Include="Activities\ActivityStates\KnockOverTree.cs" />

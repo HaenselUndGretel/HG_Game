@@ -40,7 +40,7 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 1:
-					Sequences.SynchMovementToAnimation(new SpineObject("fluffy"), pPlayer, mSource, mDestination); //ToDo: Set SpineObject to rIObj
+					Sequences.SynchMovementToAnimation(rIObj, pPlayer, mSource, mDestination);
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

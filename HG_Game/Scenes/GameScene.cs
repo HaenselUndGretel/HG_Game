@@ -43,8 +43,8 @@ namespace HG_Game
 			EngineSettings.IsDebug = true;
 #endif
 			//Player
-			mHansel = new Hansel("hansel");
-			mGretel = new Gretel("gretel");
+			mHansel = new Hansel("spineboy");
+			mGretel = new Gretel("spineboy");
 			//Camera
 			mCamera = new Camera();
 			//Savegame
@@ -87,22 +87,29 @@ namespace HG_Game
 
 		public override void Draw()
 		{
+			//--------------------Renderer (Game & Lighting)--------------------
 			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList();
-
 			mRenderer.SetGBuffer();
 			mRenderer.ClearGBuffer();
 			mRenderer.Begin(mCamera.Transform);
-			//Render Background
-			mRenderer.Draw(mScene.BackgroundTexture.Textures, Vector2.Zero);
-
-			//Render Game
-			foreach (InteractiveObject iObj in mScene.RenderList)
-				mRenderer.Draw(iObj.Skeleton, iObj.Textures, iObj.DrawZ);
-
-			//Render ActionInfo
-			mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
-
+				//Render Background
+				mRenderer.Draw(mScene.BackgroundTexture.Textures, Vector2.Zero);
+				//Render Game
+				foreach (InteractiveObject iObj in mScene.RenderList)
+					mRenderer.Draw(iObj.Skeleton, iObj.Textures, iObj.DrawZ);
 			mRenderer.End();
+
+			//--------------------SpriteBatch (HUD & Infos)--------------------
+			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+				//Render ActionInfo
+				mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
+				//Render ChalkMenues
+				foreach (InteractiveObject iObj in mScene.InteractiveObjects)
+					if (iObj.Activity == Activity.UseChalk)
+						((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
+			mSpriteBatch.End();
+
+			//--------------------DrawToScreen--------------------
 			mRenderer.DrawDebugRendertargets(mSpriteBatch);
 		}
 

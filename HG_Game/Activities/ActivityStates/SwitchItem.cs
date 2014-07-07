@@ -61,7 +61,7 @@ namespace HG_Game
 					}
 
 					//SwapItem
-					if (pPlayer.Input.ActionJustPressed && ((pPlayer.PositionIO - pOtherPlayer.PositionIO).Length() <= MaxSwapDistance))
+					if (pPlayer.Input.ActionJustPressed && ((pPlayer.SkeletonPosition - pOtherPlayer.SkeletonPosition).Length() <= MaxSwapDistance))
 						SwapItem(pPlayer, pOtherPlayer);
 					break;
 				case 2:

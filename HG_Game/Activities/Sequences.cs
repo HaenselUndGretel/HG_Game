@@ -27,7 +27,7 @@ namespace HG_Game
 
 		public static void MovePlayerToNearestActionPosition(Player pPlayer)
 		{
-			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.PositionIO));
+			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.SkeletonPosition));
 		}
 
 		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null, float pSpeedFactor = 1f)
@@ -62,7 +62,7 @@ namespace HG_Game
 
 		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
-			pPlayer.PositionIO = pPosition;
+			pPlayer.MoveInteractiveObject(pPlayer.SkeletonPosition - pPosition);
 		}
 
 		//Move für Cobweb
@@ -77,7 +77,7 @@ namespace HG_Game
 		//Move für Swamp
 		public static void MoveAway(Player pPlayer, Vector2 pSource, float pSpeedFactor = 1f)
 		{
-			Vector2 Direction = pPlayer.PositionIO - pSource;
+			Vector2 Direction = pPlayer.SkeletonPosition - pSource;
 			Direction.Normalize();
 			pPlayer.MoveManually(Direction, pSpeedFactor);
 		}
@@ -97,12 +97,12 @@ namespace HG_Game
 		//Movement Stepping
 		public static void UpdateMovementStepping(Player pPlayer, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pPlayer.PositionIO = (pDestination - pSource) * pProgress;
+			pPlayer.MoveInteractiveObject((pDestination - pSource) * pProgress);
 		}
 
 		public static void UpdateMovementStepping(InteractiveObject pIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pIObj.PositionIO = (pDestination - pSource) * pProgress;
+			pIObj.MoveInteractiveObject((pDestination - pSource) * pProgress);
 		}
 
 		//Pause & Play Animation
@@ -118,7 +118,7 @@ namespace HG_Game
 		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pSource, Vector2 pDestination)
 		{
 			float Progress = pSpineToSynchTo.AnimationState.GetCurrent(0).Time / pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
-			pPlayer.PositionIO = (pDestination - pSource) * Progress;
+			pPlayer.MoveInteractiveObject((pDestination - pSource) * Progress);
 		}
 
 		//QuickTimeEvent

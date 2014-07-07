@@ -77,12 +77,12 @@ namespace HG_Game
 		//Weitere
 		public static bool NearestActionPosition1(Player pPlayer, InteractiveObject IObj)
 		{
-			return (IObj.NearestActionPosition(pPlayer.PositionIO) == IObj.ActionPosition1) ? true : false;
+			return (IObj.NearestActionPosition(pPlayer.SkeletonPosition) == IObj.ActionPosition1) ? true : false;
 		}
 
 		public static bool NearestActionPosition2(Player pPlayer, InteractiveObject IObj)
 		{
-			return (IObj.NearestActionPosition(pPlayer.PositionIO) == IObj.ActionPosition2) ? true : false;
+			return (IObj.NearestActionPosition(pPlayer.SkeletonPosition) == IObj.ActionPosition2) ? true : false;
 		}
 
 		public static bool PlayerNearEnough(Player pPlayer, Player pOtherPlayer, float Distance)
@@ -106,14 +106,14 @@ namespace HG_Game
 			Vector2 APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
 			if (pAP2)
 				APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition2;
-			if (pPlayer.PositionIO == APPosition)
+			if (pPlayer.SkeletonPosition == APPosition)
 				return true;
 			return false;
 		}
 
 		public static bool PlayerAtNearestActionPosition(Player pPlayer)
 		{
-			if (pPlayer.PositionIO == pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.PositionIO))
+			if (pPlayer.SkeletonPosition == pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.SkeletonPosition))
 				return true;
 			return false;
 		}
@@ -133,12 +133,12 @@ namespace HG_Game
 				TmpHansel = pOtherPlayer;
 			else
 				TmpGretel = pOtherPlayer;
-			if (TmpHansel.PositionIO != TmpHansel.mCurrentActivity.rIObj.ActionPosition1)
+			if (TmpHansel.SkeletonPosition != TmpHansel.mCurrentActivity.rIObj.ActionPosition1)
 				return false;
-			if (pOffsetGretel == null && TmpGretel.PositionIO != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
+			if (pOffsetGretel == null && TmpGretel.SkeletonPosition != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
 				return false;
 			//Wenn pOffsetGretel nicht null ist muss Gretel an AP1 + pOffsetGretel sitzen.
-			if (pOffsetGretel != null && TmpGretel.PositionIO != TmpGretel.mCurrentActivity.rIObj.ActionPosition1 + pOffsetGretel)
+			if (pOffsetGretel != null && TmpGretel.SkeletonPosition != TmpGretel.mCurrentActivity.rIObj.ActionPosition1 + pOffsetGretel)
 				return false;
 			return true;
 		}
@@ -158,11 +158,11 @@ namespace HG_Game
 				TmpHansel = pOtherPlayer;
 			else
 				TmpGretel = pOtherPlayer;
-			if (TmpHansel.PositionIO != TmpHansel.mCurrentActivity.rIObj.ActionPosition1)
+			if (TmpHansel.SkeletonPosition != TmpHansel.mCurrentActivity.rIObj.ActionPosition1)
 				return false;
-			if (pGretelDown && TmpGretel.PositionIO != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
+			if (pGretelDown && TmpGretel.SkeletonPosition != TmpGretel.mCurrentActivity.rIObj.ActionPosition2)
 				return false;
-			if (!pGretelDown && TmpGretel.PositionIO != TmpGretel.mCurrentActivity.rIObj.ActionPosition1 + new Vector2(TmpGretel.mCurrentActivity.rIObj.ActionPosition2.X - TmpGretel.mCurrentActivity.rIObj.ActionPosition1.X, 0))
+			if (!pGretelDown && TmpGretel.SkeletonPosition != TmpGretel.mCurrentActivity.rIObj.ActionPosition1 + new Vector2(TmpGretel.mCurrentActivity.rIObj.ActionPosition2.X - TmpGretel.mCurrentActivity.rIObj.ActionPosition1.X, 0))
 				return false;
 			return true;
 		}

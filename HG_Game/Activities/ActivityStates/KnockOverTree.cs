@@ -76,8 +76,8 @@ namespace HG_Game
 					case 1:
 						IsAvailable = false;
 						Sequences.StartAnimation(pPlayer, "attack");
-						StartPosition = pPlayer.PositionIO;
-						Direction = rIObj.DistantActionPosition(pPlayer.PositionIO) - StartPosition;
+						StartPosition = pPlayer.SkeletonPosition;
+						Direction = rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - StartPosition;
 						Direction.Normalize();
 						++pPlayer.mCurrentState;
 						break;
@@ -108,20 +108,20 @@ namespace HG_Game
 							Sequences.End();
 						}
 						//WalkAway?
-						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f);
-						Vector2 MovementDirection = TargetActionPosition - pPlayer.PositionIO;
+						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f);
+						Vector2 MovementDirection = TargetActionPosition - pPlayer.SkeletonPosition;
 						MovementDirection.Normalize();
 						//Wenn Entfernung vom Player zum TargetActionPoint <= EnterBalanceEntfernung
-						if ((TargetActionPosition - pPlayer.PositionIO).Length() <= (MovementDirection * EnterBalanceDistance).Length())
+						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
 							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance));
 							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
-							StartPosition = pPlayer.PositionIO;
+							StartPosition = pPlayer.SkeletonPosition;
 						}
 
 						//BalancingMovement ausführen
-						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f), BalanceSpeedFactor);
+						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
 					case 4:
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));

@@ -159,12 +159,12 @@ namespace HG_Game
 		{
 			//ActionInfo
 			if (ActionInfoHansel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.PositionIO + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
+				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.SkeletonPosition + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
 			if (ActionInfoGretel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.PositionIO + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
+				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.SkeletonPosition + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
 			//ButtonX
-			pSpriteBatch.Draw(ActionInfoButton, pHansel.PositionIO + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
-			pSpriteBatch.Draw(ActionInfoButton, pGretel.PositionIO + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
+			pSpriteBatch.Draw(ActionInfoButton, pHansel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
+			pSpriteBatch.Draw(ActionInfoButton, pGretel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
 		}
 
 		#region Setup InteractiveObjects.ActivityState
@@ -176,7 +176,7 @@ namespace HG_Game
 			{
 				foreach (InteractiveObject iObj in pSavegame.Scenes[i].InteractiveObjects)
 				{
-					switch (iObj.Activity)
+					switch (iObj.ActivityId)
 					{
 						case Activity.CaughtInCobweb:
 							iObj.ActivityState = new CaughtInCobweb(pHansel, pGretel, iObj);
@@ -220,7 +220,7 @@ namespace HG_Game
 							break;
 						case Activity.UseChalk:
 							iObj.ActivityState = new UseChalk(pHansel, pGretel, iObj);
-							((UseChalk)iObj.ActivityState).rRockData = pSavegame.Scenes[i].ChalkRockData;
+							//((UseChalk)iObj.ActivityState).rRockData = pSavegame.Scenes[i].ChalkRockData;
 							break;
 						case Activity.UseWell:
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);

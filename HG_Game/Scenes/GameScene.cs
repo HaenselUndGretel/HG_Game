@@ -122,7 +122,7 @@ namespace HG_Game
 			mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
 			//Render ChalkMenues
 			foreach (InteractiveObject iObj in mScene.InteractiveObjects)
-				if (iObj.Activity == Activity.UseChalk)
+				if (iObj.ActivityId == Activity.UseChalk)
 					((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
 			mSpriteBatch.End();
 
@@ -130,18 +130,18 @@ namespace HG_Game
 			if (EngineSettings.IsDebug)
 			{
 
-			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
-			for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
-			{
-				mScene.RenderList[i].DrawDebug(mSpriteBatch);
-			}
-			mSpriteBatch.End();
+			//mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+			//for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
+			//{
+			//	mScene.RenderList[i].DrawDebug(mSpriteBatch);
+			//}
+			//mSpriteBatch.End();
 
 			SpriteFont font = FontManager.Instance.GetElementByString("font");
 			StringBuilder sb = new StringBuilder();
-			sb.AppendLine("Hansel:" + mHansel.PositionIO.ToString() + "," + mHansel.CollisionBox.ToString());
-			sb.AppendLine("Gretel:" + mGretel.PositionIO.ToString() + "," + mGretel.CollisionBox.ToString());
-			sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
+			//sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
+			//sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
+			//sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
 
 			mSpriteBatch.Begin();
 			mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);

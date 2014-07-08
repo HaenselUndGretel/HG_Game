@@ -12,7 +12,7 @@ namespace HG_Game
 	{
 		public QuickTimeEvent QTE;
 		protected Vector2 mStartOffsetGretel = new Vector2(55, 20);
-		protected Vector2 mOffsetGretel = new Vector2(-20, -225);
+		protected Vector2 mOffsetGretel = new Vector2(-20, -255);
 
 		protected float OldProgress;
 

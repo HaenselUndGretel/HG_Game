@@ -85,6 +85,11 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						if (!Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this))
+						{
+							Sequences.SetPlayerToIdle(pPlayer);
+							return;
+						}
 						if (Conditions.PlayerAtNearestActionPosition(pPlayer))
 							++pPlayer.mCurrentState;
 						Sequences.MovePlayerToNearestActionPosition(pPlayer);

@@ -151,6 +151,7 @@ namespace HG_Game
 			{
 
 				mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+				mScene.DrawDebug(mSpriteBatch);
 				for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
 				{
 					mScene.RenderList[i].DrawDebug(mSpriteBatch);

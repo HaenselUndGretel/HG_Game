@@ -71,9 +71,9 @@ namespace HG_Game
 					else if (ActionToCollisionRectDirection.Y < 0)
 						DestinationDelta = new Vector2(0, -RockMoveDistance);
 					else if (ActionToCollisionRectDirection.X > 0)
-						DestinationDelta = new Vector2(-RockMoveDistance, 0);
-					else
 						DestinationDelta = new Vector2(RockMoveDistance, 0);
+					else
+						DestinationDelta = new Vector2(-RockMoveDistance, 0);
 
 					mDestinationIObj = rIObj.SkeletonPosition + DestinationDelta;
 					mDestinationHansel = mSourceHansel + DestinationDelta;

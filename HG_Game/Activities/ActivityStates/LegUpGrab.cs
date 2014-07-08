@@ -69,15 +69,21 @@ namespace HG_Game
 					}
 					break;
 				case 3:
-					if (pPlayer.GetType() == typeof(Gretel) && Conditions.ActionPressed(pPlayer))
+					QTE.SetToGretelGrab();
+					++pPlayer.mCurrentState;
+					break;
+				case 4:
+					QTE.Update();
+					if (pPlayer.GetType() == typeof(Gretel) && (QTE.State == QuickTimeEvent.QTEState.Finished || QTE.State == QuickTimeEvent.QTEState.Successfull))
 					{
 						Sequences.StartAnimation(pPlayer, "attack"); //Item greifen
 						m2ndState = true;
 						++pPlayer.mCurrentState;
 						++pOtherPlayer.mCurrentState;
+						QTE.SetToGretelGrabbed();
 					}
 					break;
-				case 4:
+				case 5:
 					if (Conditions.AnimationComplete(pPlayer) && Conditions.AnimationComplete(pOtherPlayer))
 					{
 						//Gretel runter lassen
@@ -87,7 +93,7 @@ namespace HG_Game
 						++pOtherPlayer.mCurrentState;
 					}
 					break;
-				case 5:
+				case 6:
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

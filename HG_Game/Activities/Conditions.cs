@@ -123,7 +123,7 @@ namespace HG_Game
 			if (pPlayer.mCurrentActivity.rIObj == null || pOtherPlayer.mCurrentActivity.rIObj == null) return false;
 			//Hansel an AP1 & Gretel an AP2
 			if (pPlayer.mCurrentActivity != pOtherPlayer.mCurrentActivity)
-				throw new Exception("Spieler sind nicht an gleicher Activity beteiligt. Soll hier false returned werden?");
+				return false;
 			Player TmpHansel = new Player("");
 			Player TmpGretel = new Player("");
 			if (pPlayer.GetType() == typeof(Hansel))

@@ -345,6 +345,27 @@ namespace HG_Game
 			throw new Exception("Progress bei dafür nicht gültigem State abgefragt.");
 		}
 
+		public void SetToGretelGrab()
+		{
+			State = QTEState.Gretel;
+			CurrentInputGretel = InputHelper.mAction;
+			Progress = 0.9f;
+			ProgressSteps = 1.0f;
+			OnlyX = false;
+			OnlyOnePlayer = true;
+			OnlyOnePlayerIsHansel = false;
+			ButtonFading.ShowHudHansel = false;
+			ButtonFading.ShowHudGretel = true;
+			ButtonGretel = TextureManager.Instance.GetElementByString("button_x");
+		}
+
+		public void SetToGretelGrabbed()
+		{
+			State = QTEState.Finished;
+			Progress = 1.1f;
+			ButtonFading.ShowHudGretel = false;
+		}
+
 		#endregion
 	}
 }

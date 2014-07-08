@@ -11,6 +11,7 @@ namespace HG_Game
 	class CaughtInCobweb : ActivityState
 	{
 		public QuickTimeEvent QTE;
+		protected float OldProgress;
 
 		public CaughtInCobweb(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -57,18 +58,20 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
+					if (OldProgress < QTE.Progress)
+						OldProgress += 0.01f;
+					if (OldProgress >= QTE.Progress)
+						QTE.Update();
+
+					Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
+
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
-					{
 						Sequences.SetPlayerToIdle(pPlayer);
-						break;
-					}
-					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						++pPlayer.mCurrentState;
-						break;
+						++pOtherPlayer.mCurrentState;
 					}
-					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
 					break;
 				case 3:
 					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
@@ -82,7 +85,15 @@ namespace HG_Game
 					break;
 				case 10: //CaughtInCobeweb
 					Sequences.StartAnimation(pPlayer, "attack", true);
+					OldProgress = 0f;
 					++pPlayer.mCurrentState;
+					break;
+				case 11:
+					if (Conditions.AnimationComplete(pPlayer))
+						Sequences.End();
+					break;
+				case 12:
+					//Spieler führt nicht mehr zu Spielende während er raus bewegt wird
 					break;
 			}
 		}

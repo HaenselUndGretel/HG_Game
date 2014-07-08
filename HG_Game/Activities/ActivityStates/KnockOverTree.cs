@@ -17,10 +17,12 @@ namespace HG_Game
 		protected const float BalanceSpeedFactor = 0.6f;
 		protected Vector2 StartPosition;
 		protected Vector2 Direction;
+		protected float OldProgress;
 
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
+			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, true, true, true, true);
 			StartPosition = Vector2.Zero;
 			Direction = Vector2.Zero;
 		}
@@ -58,10 +60,19 @@ namespace HG_Game
 						break;
 					case 1:
 						Sequences.StartAnimation(pPlayer, "attack");
+						QTE.StartQTE();
 						++pPlayer.mCurrentState;
 						break;
 					case 2:
-						if (Conditions.AnimationComplete(pPlayer))
+						if (OldProgress < QTE.Progress)
+							OldProgress += 0.01f;
+						if (OldProgress >= QTE.Progress)
+							QTE.Update();
+
+						Sequences.UpdateAnimationStepping(rIObj, OldProgress);
+						Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
+
+						if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
 							m2ndState = true;

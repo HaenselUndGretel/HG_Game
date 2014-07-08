@@ -82,7 +82,6 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					// QTE Progress von 0.1 auf 0.5 für smoothere Rockbewegung.
 					if (OldProgress < QTE.Progress)
 						OldProgress += 0.01f;
 					if (OldProgress >= QTE.Progress)

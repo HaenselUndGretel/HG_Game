@@ -22,6 +22,7 @@ namespace HG_Game
 			Gretel,
 			HanselTurnAround,
 			GretelTurnAround,
+			Finished,
 			Successfull,
 			Failed
 		};
@@ -108,6 +109,8 @@ namespace HG_Game
 				((State == QTEState.Gretel || State == QTEState.GretelTurnAround) && InputGretel.InputJustPressed(CurrentInputGretel)))
 				Pressed();
 			UpdateButtonHud();
+			if (State == QTEState.Finished && ButtonFading.VisibilityHansel == 0f && ButtonFading.VisibilityGretel == 0)
+				State = QTEState.Successfull;
 		}
 
 		public void UpdateButtonHud()
@@ -124,7 +127,7 @@ namespace HG_Game
 			if (State == QTEState.GretelTurnAround)
 				ButtonFading.VisibilityGretel = 1f;
 
-			if (State == QTEState.Successfull || State == QTEState.Failed)
+			if (State == QTEState.Finished || State == QTEState.Failed)
 			{
 				ButtonFading.VisibilityHansel = 0f;
 				ButtonFading.VisibilityGretel = 0f;
@@ -218,7 +221,7 @@ namespace HG_Game
 		{
 			Progress += ProgressSteps;
 			if (Progress >= 1f)
-				State = QTEState.Successfull;
+				State = QTEState.Finished;
 			switch(State)
 			{
 				case QTEState.Hansel:
@@ -326,6 +329,8 @@ namespace HG_Game
 
 		public float GetCurrentTimeoutProgress()
 		{
+			if (State == QTEState.Finished || State == QTEState.Successfull) //Sollte eigentlich nie abgefragt werden wenn QTE bereits Successfull war
+				return 1.1f;
 			switch (State)
 			{
 				case QTEState.Hansel:
@@ -336,8 +341,6 @@ namespace HG_Game
 					return (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds - TimerHansel) / (DelayHansel * SlowdownHansel * SlowdownTurnAround);
 				case QTEState.GretelTurnAround:
 					return (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds - TimerGretel) / (DelayGretel * SlowdownGretel * SlowdownTurnAround);
-				case QTEState.Successfull: //Sollte eigentlich nie abgefragt werden wenn QTE bereits Successfull war.
-					return 1.1f;
 			}
 			throw new Exception("Progress bei dafür nicht gültigem State abgefragt.");
 		}

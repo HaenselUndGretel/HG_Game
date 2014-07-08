@@ -42,7 +42,7 @@ namespace HG_Game
 				case 2:
 					if (Conditions.AnimationComplete(pPlayer))
 					{
-						Sequences.Move(pPlayer, rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - pPlayer.SkeletonPosition);
+						Sequences.SetToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.SkeletonPosition));
 						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 					}

@@ -63,7 +63,7 @@ namespace HG_Game
 
 		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
 		{
-			pPlayer.MoveInteractiveObject(pPlayer.SkeletonPosition - pPosition);
+			pPlayer.MoveInteractiveObject(pPosition);
 		}
 
 		//Move für Cobweb
@@ -92,18 +92,19 @@ namespace HG_Game
 		//Animation Stepping
 		public static void UpdateAnimationStepping(SpineObject pSpine, float pProgress)
 		{
+			if (pSpine.AnimationState.ToString() == "<none>") return;
 			pSpine.AnimationState.GetCurrent(0).TimeScale = pSpine.AnimationState.GetCurrent(0).EndTime * pProgress;
 		}
 
 		//Movement Stepping
 		public static void UpdateMovementStepping(Player pPlayer, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pPlayer.MoveInteractiveObject((pDestination - pSource) * pProgress);
+			pPlayer.MoveInteractiveObject(pDestination * pProgress);
 		}
 
 		public static void UpdateMovementStepping(InteractiveObject pIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pIObj.MoveInteractiveObject((pDestination - pSource) * pProgress);
+			pIObj.MoveInteractiveObject(pDestination * pProgress);
 		}
 
 		//Pause & Play Animation

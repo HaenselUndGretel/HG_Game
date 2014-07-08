@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using KryptonEngine.HG_Data;
 using KryptonEngine.Manager;
+using KryptonEngine.Controls;
+using KryptonEngine.FModAudio;
 
 namespace HG_Game
 {
@@ -48,7 +50,6 @@ namespace HG_Game
 			//Player
 			mHansel = new Hansel("skeleton");
 			mGretel = new Gretel("skeleton");
-			//mHansel.Position = new Vector2(0, 100);
 			//mHansel.mCurrentActivity = ActivityHandler.None;
 			//mGretel.mCurrentActivity = ActivityHandler.None;
 			//Camera
@@ -92,6 +93,14 @@ namespace HG_Game
 
 		public override void Update()
 		{
+			if (InputHelper.Player1.ButtonJustPressed(Microsoft.Xna.Framework.Input.Buttons.Start))
+			{
+				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
+				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);
+				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(3);
+				SceneManager.Instance.SetCurrentSceneTo("Menu");
+			}
+
 			//Update Logic
 			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer);
 			//Update Player
@@ -105,11 +114,14 @@ namespace HG_Game
 		{
 			//--------------------Renderer (Game & Lighting)--------------------
 			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList();
+
+			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
+
 			mRenderer.SetGBuffer();
 			mRenderer.ClearGBuffer();
 			mRenderer.Begin(mCamera.Transform);
 				//Render Background
-				mRenderer.Draw(mScene.BackgroundTexture.Textures, Vector2.Zero);
+				mScene.BackgroundTexture.Draw(mRenderer);
 				//Render Game
 				foreach (InteractiveObject iObj in mScene.RenderList)
 					iObj.Draw(mRenderer);
@@ -119,6 +131,7 @@ namespace HG_Game
 			mRenderer.DisposeGBuffer();
 			mRenderer.ProcessLight(mScene.Lights, mCamera.Transform);
 			mRenderer.ProcessFinalScene();
+
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
 
 			//--------------------SpriteBatch (HUD & Infos)--------------------
@@ -144,8 +157,8 @@ namespace HG_Game
 
 			SpriteFont font = FontManager.Instance.GetElementByString("font");
 			StringBuilder sb = new StringBuilder();
-			sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
-			sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
+			//sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
+			//sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
 			//sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
 
 			mSpriteBatch.Begin();

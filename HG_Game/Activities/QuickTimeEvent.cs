@@ -143,7 +143,7 @@ namespace HG_Game
 			}
 			else
 			{
-				if (Randomizer.Next(2) == 1)
+				if (EngineSettings.Randomizer.Next(2) == 1)
 					State = QTEState.Hansel;
 				else
 					State = QTEState.Gretel;
@@ -273,6 +273,8 @@ namespace HG_Game
 					return (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds - TimerHansel) / (DelayHansel * SlowdownHansel * SlowdownTurnAround);
 				case QTEState.GretelTurnAround:
 					return (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds - TimerGretel) / (DelayGretel * SlowdownGretel * SlowdownTurnAround);
+				case QTEState.Successfull:
+					return 0.0f;
 			}
 			throw new Exception("Progress bei dafür nicht gültigem State abgefragt.");
 		}

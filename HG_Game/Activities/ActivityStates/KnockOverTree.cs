@@ -119,7 +119,8 @@ namespace HG_Game
 						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
-							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance));
+							// Kann man auch sein lassen.
+							//Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - pPlayer.SkeletonPosition);
 							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
 							StartPosition = pPlayer.SkeletonPosition;
 						}
@@ -133,7 +134,7 @@ namespace HG_Game
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
 							IsAvailable = true;
-							pPlayer.mCurrentState = 0;
+							//pPlayer.mCurrentState = 0;
 						}
 						break;
 				}

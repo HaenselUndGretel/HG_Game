@@ -74,7 +74,7 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 
 		float ration = screen.y / screen.x;
 
-		float z = ((DepthColor.r + DepthColor.g + DepthColor.b) / 3)*720 ;
+		float z = ((DepthColor.r + DepthColor.g + DepthColor.b) / 3)*650 ;
 
 
 		float3 WorldPos = float3(screen.x*input.TexCoord.x, (screen.y*input.TexCoord.y) + (z*0.80), z);
@@ -93,8 +93,8 @@ float4 PixelShaderFunction(VertexShaderOutput input) : COLOR0
 		float light = max(dot(NnormalColor, normalize(lightDir)), 0.0) ;
 
 		float lightDistance = length(lightDir);
-		float attenuation = LightIntensity / (max(lightDistance * LightRadius, 1.0 / LightRadius));
-
+		//float attenuation = LightIntensity / (max(lightDistance * LightRadius, 1.0 / LightRadius));
+    float attenuation = LightIntensity / (lightDistance + 0.001) - (1 / LightRadius);
 		//float attenuation =saturate(1/  lightDistance * LightRadius);
 
 		//float attenuation =LightRadius/ (LightRadius+lightDistance);

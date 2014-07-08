@@ -59,8 +59,28 @@ namespace HG_Game
 				HanselMayMove = false;
 				GretelMayMove = false;
 			}
+
+			UpdateEventTrigger(pScene, pHansel, pGretel);
 		}
 
+		private void UpdateEventTrigger(SceneData pScene, Hansel pHansel, Gretel pGretel)
+		{
+			if (pScene.Events.Count == 0) return;
+
+			List<EventTrigger> delEvents = new List<EventTrigger>();
+			foreach (EventTrigger et in pScene.Events)
+			{
+				if (et.CollisionBox.Contains(pHansel.CollisionBox) || et.CollisionBox.Contains(pGretel.CollisionBox))
+				{
+					et.TriggerActivity();
+					delEvents.Add(et);
+				}
+			}
+
+			foreach (EventTrigger et in delEvents)
+				pScene.Events.Remove(et);
+
+		}
 		#endregion
 	}
 }

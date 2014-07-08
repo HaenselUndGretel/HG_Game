@@ -16,6 +16,9 @@ namespace HG_Game
 		protected Vector2 mDestinationHansel;
 		protected Vector2 mDestinationGretel;
 
+		protected float OldProgress;
+		protected Vector2 AnimationDirection;
+
 		public PullDoor(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
@@ -56,28 +59,57 @@ namespace HG_Game
 						mSourceHansel = pOtherPlayer.SkeletonPosition;
 						mSourceGretel = pPlayer.SkeletonPosition;
 					}
+
+					Vector2 direction = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
+
+					if (direction.Y > 0)
+						AnimationDirection = new Vector2(0, 1);
+					else if (direction.Y < 0)
+						AnimationDirection = new Vector2(0, -1);
+					else if (direction.X > 0)
+						AnimationDirection = new Vector2(-1, 0);
+					else
+						AnimationDirection = new Vector2(1, 0);
+
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
+					OldProgress = QTE.Progress;
 					QTE.Update();
-					if (pPlayer.GetType() == typeof(Hansel))
-					{
-						Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
-						Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceHansel, mDestinationHansel);
-					}
-					else
-					{
-						Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceGretel, mDestinationGretel);
-					}
-					if (QTE.State == QuickTimeEvent.QTEState.Successfull)
-					{
-						Sequences.SetPlayerToIdle(pPlayer);
-					}
-					else if (QTE.State == QuickTimeEvent.QTEState.Failed)
+
+					if(OldProgress >= 1.0f)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
+						rIObj.CollisionRectList.Clear();
+						rIObj.ActionRectList.Clear();
 					}
+
+					if (OldProgress != QTE.Progress)
+					{
+						Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
+						Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
+						Sequences.UpdateAnimationStepping(pOtherPlayer, QTE.Progress);
+					}
+					//QTE.Update();
+					//if (pPlayer.GetType() == typeof(Hansel))
+					//{
+					//	Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
+					//	Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceHansel, mDestinationHansel);
+					//}
+					//else
+					//{
+					//	Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceGretel, mDestinationGretel);
+					//}
+					//if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					//{
+					//	Sequences.SetPlayerToIdle(pPlayer);
+					//}
+					//else if (QTE.State == QuickTimeEvent.QTEState.Failed)
+					//{
+					//	Sequences.SetPlayerToIdle(pPlayer);
+					//	Sequences.SetPlayerToIdle(pOtherPlayer);
+					//}
 					break;
 			}
 		}

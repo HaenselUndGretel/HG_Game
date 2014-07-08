@@ -31,8 +31,8 @@ namespace HG_Game
 		public bool ShowHudHansel { get { return StateHansel.ShowHud; } set { StateHansel.ShowHud = value; } }
 		public bool ShowHudGretel { get { return StateGretel.ShowHud; } set { StateGretel.ShowHud = value; } }
 
-		public float VisibilityHansel { get { return StateHansel.Visibility; } }
-		public float VisibilityGretel { get { return StateGretel.Visibility; } }
+		public float VisibilityHansel { get { return StateHansel.Visibility; } set { StateHansel.Visibility = value; } }
+		public float VisibilityGretel { get { return StateGretel.Visibility; } set { StateGretel.Visibility = value; } }
 
 		#endregion
 

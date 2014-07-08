@@ -1,6 +1,10 @@
-﻿using KryptonEngine;
+﻿using HanselAndGretel.Data;
+using KryptonEngine;
 using KryptonEngine.Controls;
 using KryptonEngine.Entities;
+using KryptonEngine.Manager;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,6 +61,12 @@ namespace HG_Game
 		protected bool OnlyOnePlayer;
 		public bool OnlyOnePlayerIsHansel;
 
+		//ButtonHUD
+		HudFading ButtonFading;
+		Texture2D ButtonHansel;
+		Texture2D ButtonGretel;
+		Vector2 ButtonOffset;
+
 		#endregion
 
 		#region Constructor
@@ -77,6 +87,8 @@ namespace HG_Game
 			OnlyOnePlayer = pOnlyOnePlayer;
 			OnlyOnePlayerIsHansel = pOnlyOnePlayerIsHansel;
 			//ResetTimer();
+			ButtonFading = new HudFading(0.5f, 0.5f, OnlyX);
+			ButtonOffset = new Vector2(-30, -150);
 		}
 
 		#endregion
@@ -95,6 +107,59 @@ namespace HG_Game
 			if (((State == QTEState.Hansel || State == QTEState.HanselTurnAround) && InputHansel.InputJustPressed(CurrentInputHansel)) ||
 				((State == QTEState.Gretel || State == QTEState.GretelTurnAround) && InputGretel.InputJustPressed(CurrentInputGretel)))
 				Pressed();
+			UpdateButtonHud();
+		}
+
+		public void UpdateButtonHud()
+		{
+			UpdateButtonTextures();
+			ButtonFading.ShowHudHansel = false;
+			ButtonFading.ShowHudGretel = false;
+			if (State == QTEState.Hansel || State == QTEState.HanselTurnAround)
+				ButtonFading.ShowHudHansel = true;
+			if (State == QTEState.Gretel || State == QTEState.GretelTurnAround)
+				ButtonFading.ShowHudGretel = true;
+			if (State == QTEState.HanselTurnAround)
+				ButtonFading.VisibilityHansel = 1f;
+			if (State == QTEState.GretelTurnAround)
+				ButtonFading.VisibilityGretel = 1f;
+
+			if (State == QTEState.Successfull || State == QTEState.Failed)
+			{
+				ButtonFading.VisibilityHansel = 0f;
+				ButtonFading.VisibilityGretel = 0f;
+			}
+
+			ButtonFading.Update();
+		}
+
+		protected void UpdateButtonTextures()
+		{
+			if (CurrentInputHansel == InputHelper.mAction)
+				ButtonHansel = TextureManager.Instance.GetElementByString("button_x");
+			else if (CurrentInputHansel == InputHelper.mBack)
+				ButtonHansel = TextureManager.Instance.GetElementByString("button_b");
+			else if (CurrentInputHansel == InputHelper.mSwitchItem)
+				ButtonHansel = TextureManager.Instance.GetElementByString("button_y");
+			else if (CurrentInputHansel == InputHelper.mUseItem)
+				ButtonHansel = TextureManager.Instance.GetElementByString("button_a");
+
+			if (CurrentInputGretel == InputHelper.mAction)
+				ButtonGretel = TextureManager.Instance.GetElementByString("button_x");
+			else if (CurrentInputGretel == InputHelper.mBack)
+				ButtonGretel = TextureManager.Instance.GetElementByString("button_b");
+			else if (CurrentInputGretel == InputHelper.mSwitchItem)
+				ButtonGretel = TextureManager.Instance.GetElementByString("button_y");
+			else if (CurrentInputGretel == InputHelper.mUseItem)
+				ButtonGretel = TextureManager.Instance.GetElementByString("button_a");
+		}
+
+		public void DrawButtonHud(SpriteBatch pSpriteBatch, Player pHansel, Player pGretel)
+		{
+			if (ButtonHansel != null)
+				pSpriteBatch.Draw(ButtonHansel, pHansel.SkeletonPosition + ButtonOffset, Color.White * ButtonFading.VisibilityHansel);
+			if (ButtonGretel != null)
+				pSpriteBatch.Draw(ButtonGretel, pGretel.SkeletonPosition + ButtonOffset, Color.White * ButtonFading.VisibilityGretel);
 		}
 
 		protected bool PressedWrongInput(bool pHansel)

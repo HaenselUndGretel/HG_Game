@@ -92,14 +92,17 @@ namespace HG_Game
 			if (pGretel.mCurrentActivity == None)
 				TestGretel = true;
 
+			//-----Wenn nicht getestet wird keine ActionInfo anzeigen-----
+			ActionInfoFading.ShowHudHansel = false;
+			ActionInfoFading.ShowHudGretel = false;
 			//-----Activity ggf starten-----
 			if (TestHansel || TestGretel)
 			{
 				//Betretene InteractiveObjects bestimmen
 				InteractiveObject IObjIntersectsHansel = null;
 				InteractiveObject IObjIntersectsGretel = null;
-				Activity ActivityHansel = Activity.None;
-				Activity ActivityGretel = Activity.None;
+				Activity PossibleActivityHansel = Activity.None;
+				Activity PossibleActivityGretel = Activity.None;
 				foreach (InteractiveObject iObj in pScene.InteractiveObjects)
 				{
 					foreach (Rectangle rect in iObj.ActionRectList)
@@ -107,12 +110,12 @@ namespace HG_Game
 						if (TestHansel && rect.Intersects(pHansel.CollisionBox))
 						{
 							IObjIntersectsHansel = iObj;
-							ActivityHansel = iObj.ActivityState.GetPossibleActivity(pHansel, pGretel);
+							PossibleActivityHansel = iObj.ActivityState.GetPossibleActivity(pHansel, pGretel);
 						}
 						if (TestGretel && rect.Intersects(pGretel.CollisionBox))
 						{
 							IObjIntersectsGretel = iObj;
-							ActivityGretel = iObj.ActivityState.GetPossibleActivity(pGretel, pHansel);
+							PossibleActivityGretel = iObj.ActivityState.GetPossibleActivity(pGretel, pHansel);
 						}
 					}
 				}
@@ -121,30 +124,28 @@ namespace HG_Game
 				if (TestHansel &&
 					IObjIntersectsHansel != null &&
 					Conditions.ActionPressed(pHansel) &&
-					ActivityHansel != Activity.None)
+					PossibleActivityHansel != Activity.None)
 				{
 					pHansel.mCurrentActivity = IObjIntersectsHansel.ActivityState;
 				}
 				if (TestGretel &&
 					IObjIntersectsGretel != null &&
 					Conditions.ActionPressed(pGretel) &&
-					ActivityGretel != Activity.None)
+					PossibleActivityGretel != Activity.None)
 				{
 					pGretel.mCurrentActivity = IObjIntersectsGretel.ActivityState;
 				}
 
 				//-----Update ActionInfoState-----
-				ActionInfoFading.ShowHudHansel = false;
-				ActionInfoFading.ShowHudGretel = false;
-				if (ActivityHansel != Activity.None)
+				if (PossibleActivityHansel != Activity.None)
 				{
 					ActionInfoFading.ShowHudHansel = true;
-					ActionInfoHansel = (int)ActivityHansel;
+					ActionInfoHansel = (int)PossibleActivityHansel;
 				}
-				if (ActivityGretel != Activity.None)
+				if (PossibleActivityGretel != Activity.None)
 				{
 					ActionInfoFading.ShowHudGretel = true;
-					ActionInfoGretel = (int)ActivityGretel;
+					ActionInfoGretel = (int)PossibleActivityGretel;
 				}
 			}
 
@@ -165,6 +166,50 @@ namespace HG_Game
 			//ButtonX
 			pSpriteBatch.Draw(ActionInfoButton, pHansel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
 			pSpriteBatch.Draw(ActionInfoButton, pGretel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
+		}
+
+		public void DrawButtonHud(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
+		{
+			if (pHansel.mCurrentActivity != null)
+			{
+				if (pHansel.mCurrentActivity.GetType() == typeof(CaughtInCobweb))
+					((CaughtInCobweb)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(CaughtInSwamp))
+					((CaughtInSwamp)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(KnockOverTree))
+					((KnockOverTree)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(LegUp))
+					((LegUp)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(LegUpGrab))
+					((LegUpGrab)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(PullDoor))
+					((PullDoor)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(PushRock))
+					((PushRock)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pHansel.mCurrentActivity.GetType() == typeof(UseKey))
+					((UseKey)pHansel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+			}
+			if (pGretel.mCurrentActivity != null)
+			{
+				if (pHansel.mCurrentActivity != null && pGretel.mCurrentActivity == pHansel.mCurrentActivity)
+					return; //Nicht doppelt zeichnen
+				if (pGretel.mCurrentActivity.GetType() == typeof(CaughtInCobweb))
+					((CaughtInCobweb)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(CaughtInSwamp))
+					((CaughtInSwamp)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(KnockOverTree))
+					((KnockOverTree)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(LegUp))
+					((LegUp)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(LegUpGrab))
+					((LegUpGrab)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(PullDoor))
+					((PullDoor)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(PushRock))
+					((PushRock)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+				else if (pGretel.mCurrentActivity.GetType() == typeof(UseKey))
+					((UseKey)pGretel.mCurrentActivity).QTE.DrawButtonHud(pSpriteBatch, pHansel, pGretel);
+			}
 		}
 
 		#region Setup InteractiveObjects.ActivityState

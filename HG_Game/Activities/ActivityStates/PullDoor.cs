@@ -10,7 +10,7 @@ namespace HG_Game
 {
 	class PullDoor : ActivityState
 	{
-		protected QuickTimeEvent QTE;
+		public QuickTimeEvent QTE;
 		protected Vector2 mSourceHansel;
 		protected Vector2 mSourceGretel;
 

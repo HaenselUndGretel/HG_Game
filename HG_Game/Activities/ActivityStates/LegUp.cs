@@ -10,7 +10,7 @@ namespace HG_Game
 {
 	class LegUp : ActivityState
 	{
-		protected QuickTimeEvent QTE;
+		public QuickTimeEvent QTE;
 		protected Vector2 mStartOffsetGretel = new Vector2(55, 20);
 		protected Vector2 mOffsetGretel = new Vector2(-20, -225);
 

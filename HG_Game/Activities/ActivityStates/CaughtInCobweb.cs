@@ -10,7 +10,7 @@ namespace HG_Game
 {
 	class CaughtInCobweb : ActivityState
 	{
-		protected QuickTimeEvent QTE;
+		public QuickTimeEvent QTE;
 
 		public CaughtInCobweb(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)

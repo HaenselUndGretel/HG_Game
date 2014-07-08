@@ -10,7 +10,7 @@ namespace HG_Game
 {
 	class CaughtInSwamp : ActivityState
 	{
-		protected QuickTimeEvent QTE;
+		public QuickTimeEvent QTE;
 
 		public CaughtInSwamp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)

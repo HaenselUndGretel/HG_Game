@@ -142,6 +142,8 @@ namespace HG_Game
 			foreach (InteractiveObject iObj in mScene.InteractiveObjects)
 				if (iObj.ActivityId == Activity.UseChalk)
 					((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
+			//Render ButtonHud
+			mLogic.ActivityHandler.DrawButtonHud(mSpriteBatch, mHansel, mGretel);
 			mSpriteBatch.End();
 
 #if DEBUG
@@ -160,6 +162,9 @@ namespace HG_Game
 			//sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
 			//sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
 			//sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
+			sb.AppendLine("Hansel:"+mHansel.mCurrentState + " " +mHansel.mCurrentActivity.GetType().ToString());
+			sb.AppendLine("Gretel:" + mGretel.mCurrentState + " " + mGretel.mCurrentActivity.GetType().ToString());
+			
 
 			mSpriteBatch.Begin();
 			mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);

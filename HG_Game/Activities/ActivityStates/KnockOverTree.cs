@@ -11,6 +11,7 @@ namespace HG_Game
 {
 	class KnockOverTree : ActivityState
 	{
+		public QuickTimeEvent QTE;
 		// von 100 auf 74 wegen anderen Hitboxen
 		protected const float EnterBalanceDistance = 74.0f;
 		protected const float BalanceSpeedFactor = 0.6f;

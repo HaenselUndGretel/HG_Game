@@ -62,7 +62,7 @@ namespace HG_Game
 					else if (QTE.State == QuickTimeEvent.QTEState.Successfull)
 					{
 						if (pPlayer.GetType() == typeof(Gretel))
-							Sequences.MovePlayer(pPlayer, mOffsetGretel);
+							Sequences.Move(pPlayer, mOffsetGretel);
 						Sequences.SetPlayerToIdle(pPlayer);
 					}
 					break;

@@ -119,10 +119,9 @@ namespace HG_Game
 						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
-							// Kann man auch sein lassen.
-							//Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - pPlayer.SkeletonPosition);
 							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
 							StartPosition = pPlayer.SkeletonPosition;
+							Direction = MovementDirection;
 						}
 
 						//BalancingMovement ausführen

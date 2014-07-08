@@ -66,6 +66,11 @@ namespace HG_Game
 			pPlayerIObj.MoveInteractiveObject(pPosition);
 		}
 
+		public static void MovePlayer(Player pPlayer, Vector2 pPosition)
+		{
+			pPlayer.Move(pPosition - pPlayer.SkeletonPosition, new List<Rectangle>());
+		} 
+
 		public static void SetToPosition(InteractiveObject pPlayerIObj, Vector2 pPosition)
 		{
 			pPlayerIObj.MoveInteractiveObject(pPosition - pPlayerIObj.SkeletonPosition);
@@ -105,7 +110,10 @@ namespace HG_Game
 		//Movement Stepping
 		public static void UpdateMovementStepping(InteractiveObject pPlayerIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			SetToPosition(pPlayerIObj, pSource + (pDestination - pSource) * pProgress);
+			if (pPlayerIObj.GetType() == typeof(Player))
+				MovePlayer((Player)pPlayerIObj, pSource + (pDestination - pSource) * pProgress);
+			else
+				SetToPosition(pPlayerIObj, pSource + (pDestination - pSource) * pProgress);
 		}
 
 		//Pause & Play Animation

@@ -15,7 +15,6 @@ namespace HG_Game
 		protected Vector2 mSourceGretel;
 
 		protected float OldProgress;
-		protected Vector2 AnimationDirection;
 
 		public PullDoor(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -58,18 +57,23 @@ namespace HG_Game
 						mSourceGretel = pPlayer.SkeletonPosition;
 					}
 
-					Vector2 direction = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
+					Vector2 ActionToCollisionRectDirection = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
 
-					if (direction.Y > 0)
-						AnimationDirection = new Vector2(0, 1);
-					else if (direction.Y < 0)
-						AnimationDirection = new Vector2(0, -1);
-					else if (direction.X > 0)
-						AnimationDirection = new Vector2(-1, 0);
+					int AnimationDirection;
+					if (ActionToCollisionRectDirection.Y > 0)
+						AnimationDirection = 0;
+					else if (ActionToCollisionRectDirection.Y < 0)
+						AnimationDirection = 1;
+					else if (ActionToCollisionRectDirection.X > 0)
+						AnimationDirection = 2;
 					else
-						AnimationDirection = new Vector2(1, 0);
+						AnimationDirection = 3;
 
+					//Passende Animation entsprechend AnimationDirection starten
+					Sequences.StartAnimation(pPlayer, "attack");
+					Sequences.StartAnimation(pOtherPlayer, "attack");
 					++pPlayer.mCurrentState;
+					++pOtherPlayer.mCurrentState;
 					break;
 				case 2:
 					if (OldProgress < QTE.Progress)

@@ -545,6 +545,42 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Content Include="hug\001.hug">
+      <Name>001</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\bookShelf.iObj">
+      <Name>bookShelf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\cobweb.iObj">
+      <Name>cobweb</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\stonePush.iObj">
+      <Name>stonePush</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\stonePush2.iObj">
+      <Name>stonePush2</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\stonePush3.iObj">
+      <Name>stonePush3</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\stonePush4.iObj">
+      <Name>stonePush4</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\swamp.iObj">
+      <Name>swamp</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\waystone.iObj">
+      <Name>waystone</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="sfx\MusicForest0.mp3">
       <Name>MusicForest0</Name>
       <Importer>Mp3Importer</Importer>

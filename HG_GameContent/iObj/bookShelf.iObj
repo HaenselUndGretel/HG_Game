@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>16000</ObjectId>
+  <ObjectId>15000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,60 +18,40 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>knockovertree</Name>
+  <Name>bookShelf</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-97</X>
-      <Y>-355</Y>
-      <Width>202</Width>
-      <Height>123</Height>
+      <X>75</X>
+      <Y>-77</Y>
+      <Width>148</Width>
+      <Height>199</Height>
       <Location>
-        <X>-97</X>
-        <Y>-355</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-94</X>
-      <Y>50</Y>
-      <Width>198</Width>
-      <Height>123</Height>
-      <Location>
-        <X>-94</X>
-        <Y>50</Y>
+        <X>75</X>
+        <Y>-77</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-94</X>
-      <Y>-232</Y>
-      <Width>195</Width>
-      <Height>51</Height>
+      <X>-75</X>
+      <Y>-215</Y>
+      <Width>150</Width>
+      <Height>252</Height>
       <Location>
-        <X>-94</X>
-        <Y>-232</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-92</X>
-      <Y>0</Y>
-      <Width>194</Width>
-      <Height>50</Height>
-      <Location>
-        <X>-92</X>
-        <Y>0</Y>
+        <X>-75</X>
+        <Y>-215</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>7</X>
-    <Y>-248</Y>
+    <X>99</X>
+    <Y>1</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-1</X>
-    <Y>69</Y>
+    <X>0</X>
+    <Y>0</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

@@ -11,10 +11,7 @@ namespace HG_Game
 	class UseKey : ActivityState
 	{
 		public QuickTimeEvent QTE;
-		protected Vector2 mSourceHansel;
-		protected Vector2 mSourceGretel;
-		protected Vector2 mDestinationHansel;
-		protected Vector2 mDestinationGretel;
+		protected float OldProgress;
 
 		public UseKey(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -75,37 +72,46 @@ namespace HG_Game
 						break;
 					case 1:
 						QTE.StartQTE();
-						if (pPlayer.GetType() == typeof(Hansel))
-						{
-							mSourceHansel = pPlayer.SkeletonPosition;
-							mSourceGretel = pOtherPlayer.SkeletonPosition;
-						}
+
+						Vector2 ActionToCollisionRectDirection = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
+
+						int AnimationDirection;
+						if (ActionToCollisionRectDirection.Y > 0)
+							AnimationDirection = 0;
+						else if (ActionToCollisionRectDirection.Y < 0)
+							AnimationDirection = 1;
+						else if (ActionToCollisionRectDirection.X > 0)
+							AnimationDirection = 2;
 						else
-						{
-							mSourceHansel = pOtherPlayer.SkeletonPosition;
-							mSourceGretel = pPlayer.SkeletonPosition;
-						}
+							AnimationDirection = 3;
+						//Passende Animation entsprechend AnimationDirection starten
+						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pOtherPlayer, "attack");
 						++pPlayer.mCurrentState;
+						++pOtherPlayer.mCurrentState;
 						break;
 					case 2:
-						QTE.Update();
+						if (OldProgress < QTE.Progress)
+							OldProgress += 0.01f;
+						if (OldProgress >= QTE.Progress)
+							QTE.Update();
+
 						if (pPlayer.GetType() == typeof(Hansel))
 						{
-							Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
-							Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceHansel, mDestinationHansel);
+							Sequences.UpdateAnimationStepping(rIObj, OldProgress);
+							Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
 						}
 						else
 						{
-							Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceGretel, mDestinationGretel);
+							Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
 						}
-						if (QTE.State == QuickTimeEvent.QTEState.Successfull)
-						{
-							Sequences.SetPlayerToIdle(pPlayer);
-						}
-						else if (QTE.State == QuickTimeEvent.QTEState.Failed)
+
+						if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
 							Sequences.SetPlayerToIdle(pOtherPlayer);
+							rIObj.CollisionRectList.Clear();
+							rIObj.ActionRectList.Clear();
 						}
 						break;
 				}

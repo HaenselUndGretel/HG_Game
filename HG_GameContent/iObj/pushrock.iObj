@@ -23,25 +23,25 @@
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-64</X>
-      <Y>-256</Y>
-      <Width>128</Width>
-      <Height>128</Height>
+      <X>-86</X>
+      <Y>-321</Y>
+      <Width>178</Width>
+      <Height>139</Height>
       <Location>
-        <X>-64</X>
-        <Y>-256</Y>
+        <X>-86</X>
+        <Y>-321</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-64</X>
-      <Y>-128</Y>
-      <Width>128</Width>
-      <Height>128</Height>
+      <X>-84</X>
+      <Y>-181</Y>
+      <Width>169</Width>
+      <Height>191</Height>
       <Location>
-        <X>-64</X>
-        <Y>-128</Y>
+        <X>-84</X>
+        <Y>-181</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>

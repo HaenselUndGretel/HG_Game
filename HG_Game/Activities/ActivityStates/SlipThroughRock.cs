@@ -36,13 +36,13 @@ namespace HG_Game
 					Sequences.MovePlayerToNearestActionPosition(pPlayer);
 					break;
 				case 1:
-					Sequences.StartAnimation(pPlayer, "Attack"); //Weg bewegen
+					Sequences.StartAnimation(pPlayer, "attack"); //Weg bewegen
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
 					if (Conditions.AnimationComplete(pPlayer))
 					{
-						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.PositionIO));
+						Sequences.MovePlayer(pPlayer, rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - pPlayer.SkeletonPosition);
 						Sequences.StartAnimation(pPlayer, "attack");
 						++pPlayer.mCurrentState;
 					}

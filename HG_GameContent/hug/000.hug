@@ -22,18 +22,18 @@
         <Y>306</Y>
       </Position>
       <CollisionBox>
-        <X>302</X>
-        <Y>306</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>185</X>
+        <Y>126</Y>
+        <Width>241</Width>
+        <Height>180</Height>
         <Location>
-          <X>302</X>
-          <Y>306</Y>
+          <X>185</X>
+          <Y>126</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>306</DrawZ>
-      <NormalZ>0.07470703</NormalZ>
+      <DrawZ>317</DrawZ>
+      <NormalZ>0.07739258</NormalZ>
       <Name>jumpgap</Name>
       <Height>0</Height>
       <Width>0</Width>
@@ -88,13 +88,13 @@
         <Y>777</Y>
       </Position>
       <CollisionBox>
-        <X>411</X>
-        <Y>777</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>317</X>
+        <Y>545</Y>
+        <Width>195</Width>
+        <Height>51</Height>
         <Location>
-          <X>411</X>
-          <Y>777</Y>
+          <X>317</X>
+          <Y>545</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -164,13 +164,13 @@
         <Y>644</Y>
       </Position>
       <CollisionBox>
-        <X>1183</X>
-        <Y>644</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>1096</X>
+        <Y>464</Y>
+        <Width>184</Width>
+        <Height>190</Height>
         <Location>
-          <X>1183</X>
-          <Y>644</Y>
+          <X>1096</X>
+          <Y>464</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -230,13 +230,13 @@
         <Y>1071</Y>
       </Position>
       <CollisionBox>
-        <X>1918</X>
-        <Y>1071</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>1822</X>
+        <Y>894</Y>
+        <Width>196</Width>
+        <Height>182</Height>
         <Location>
-          <X>1918</X>
-          <Y>1071</Y>
+          <X>1822</X>
+          <Y>894</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -286,13 +286,13 @@
         <Y>1153</Y>
       </Position>
       <CollisionBox>
-        <X>1333</X>
-        <Y>1153</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>1249</X>
+        <Y>972</Y>
+        <Width>169</Width>
+        <Height>191</Height>
         <Location>
-          <X>1333</X>
-          <Y>1153</Y>
+          <X>1249</X>
+          <Y>972</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -335,11 +335,135 @@
       </ActionPosition2>
       <ActionId>7</ActionId>
     </InteractiveObject>
+    <InteractiveObject>
+      <ObjectId>17</ObjectId>
+      <Position>
+        <X>1823</X>
+        <Y>213</Y>
+      </Position>
+      <CollisionBox>
+        <X>1770</X>
+        <Y>-1</Y>
+        <Width>176</Width>
+        <Height>260</Height>
+        <Location>
+          <X>1770</X>
+          <Y>-1</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>215</DrawZ>
+      <NormalZ>0.0524902344</NormalZ>
+      <Name>slipthroughrock</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>1668</X>
+          <Y>0</Y>
+          <Width>102</Width>
+          <Height>258</Height>
+          <Location>
+            <X>1668</X>
+            <Y>0</Y>
+          </Location>
+        </Rectangle>
+        <Rectangle>
+          <X>1946</X>
+          <Y>-1</Y>
+          <Width>150</Width>
+          <Height>259</Height>
+          <Location>
+            <X>1946</X>
+            <Y>-1</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>1770</X>
+          <Y>-1</Y>
+          <Width>176</Width>
+          <Height>260</Height>
+          <Location>
+            <X>1770</X>
+            <Y>-1</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>1744</X>
+        <Y>139</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>1977</X>
+        <Y>141</Y>
+      </ActionPosition2>
+      <ActionId>8</ActionId>
+    </InteractiveObject>
   </InteractiveObjects>
   <Collectables />
   <Items />
-  <Lights />
-  <Events />
+  <Lights>
+    <Light xsi:type="PointLight">
+      <ObjectId>21</ObjectId>
+      <Position>
+        <X>1782</X>
+        <Y>436</Y>
+      </Position>
+      <CollisionBox>
+        <X>1782</X>
+        <Y>436</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>1782</X>
+          <Y>436</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Intensity>15</Intensity>
+      <Depth>0.114257813</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>20</Radius>
+    </Light>
+  </Lights>
+  <Events>
+    <EventTrigger>
+      <ObjectId>21</ObjectId>
+      <Position>
+        <X>655</X>
+        <Y>28</Y>
+      </Position>
+      <CollisionBox>
+        <X>655</X>
+        <Y>28</Y>
+        <Width>969</Width>
+        <Height>406</Height>
+        <Location>
+          <X>655</X>
+          <Y>28</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Event>PlaySound</Event>
+      <Target>-1</Target>
+      <IsAcitvated>false</IsAcitvated>
+      <WitchSpawnPosition>
+        <X>0</X>
+        <Y>0</Y>
+      </WitchSpawnPosition>
+      <SoundName>SfxWolfAppear</SoundName>
+    </EventTrigger>
+  </Events>
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
     <Position>

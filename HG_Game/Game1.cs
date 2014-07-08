@@ -40,10 +40,10 @@ namespace HG_Game
 		protected override void Initialize()
 		{
 			SceneManager.Instance.AddScene(new SplashScene("Splash"));
-			SceneManager.Instance.AddScene(new MenuScene("Menu"));
 			SceneManager.Instance.AddScene(new GameScene("Game"));
 			SceneManager.Instance.AddScene(new CreditsScene("Credits"));
-			SceneManager.Instance.SetStartSceneTo("Game");
+			SceneManager.Instance.AddScene(new MenuScene("Menu"));
+			SceneManager.Instance.SetStartSceneTo("Menu");
 			base.Initialize();
 		}
 

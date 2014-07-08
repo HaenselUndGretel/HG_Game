@@ -12,7 +12,7 @@ namespace HG_Game
 	{
 		protected QuickTimeEvent QTE;
 		protected Vector2 mStartOffsetGretel = new Vector2(55, -20);
-		protected Vector2 mOffsetGretel = new Vector2(-20, -200);
+		protected Vector2 mOffsetGretel = new Vector2(-20, -225);
 
 		public LegUp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -62,7 +62,7 @@ namespace HG_Game
 					else if (QTE.State == QuickTimeEvent.QTEState.Successfull)
 					{
 						if (pPlayer.GetType() == typeof(Gretel))
-							Sequences.SetPlayerToPosition(pPlayer, pPlayer.PositionIO + mOffsetGretel);
+							Sequences.MovePlayer(pPlayer, mOffsetGretel);
 						Sequences.SetPlayerToIdle(pPlayer);
 					}
 					break;

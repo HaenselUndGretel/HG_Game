@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>6000</ObjectId>
+  <ObjectId>4000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -16,24 +16,13 @@
     </Location>
   </CollisionBox>
   <IsVisible>true</IsVisible>
-  <DrawZ>-9</DrawZ>
+  <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>skeleton</Name>
+  <Name>wolf</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList />
-  <CollisionRectList>
-    <Rectangle>
-      <X>-12</X>
-      <Y>-24</Y>
-      <Width>24</Width>
-      <Height>24</Height>
-      <Location>
-        <X>-12</X>
-        <Y>-24</Y>
-      </Location>
-    </Rectangle>
-  </CollisionRectList>
+  <CollisionRectList />
   <ActionPosition1>
     <X>0</X>
     <Y>0</Y>

@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using KryptonEngine.HG_Data;
 using KryptonEngine.Manager;
+using KryptonEngine.Controls;
+using KryptonEngine.FModAudio;
 
 namespace HG_Game
 {
@@ -72,6 +74,10 @@ namespace HG_Game
 			mGretel.mCurrentActivity = ActivityHandler.None;
 			mHansel.LoadReferences(mCamera, mGretel);
 			mGretel.LoadReferences(mCamera, mHansel);
+			mHansel.SkeletonPosition = new Vector2(50, 100);
+			mGretel.SkeletonPosition = new Vector2(50, 50);
+			mHansel.MoveInteractiveObject(Vector2.Zero);
+			mGretel.MoveInteractiveObject(Vector2.Zero);
 
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
@@ -87,6 +93,14 @@ namespace HG_Game
 
 		public override void Update()
 		{
+			if (InputHelper.Player1.ButtonJustPressed(Microsoft.Xna.Framework.Input.Buttons.Start))
+			{
+				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
+				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);
+				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(3);
+				SceneManager.Instance.SetCurrentSceneTo("Menu");
+			}
+
 			//Update Logic
 			mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer);
 			//Update Player
@@ -100,11 +114,14 @@ namespace HG_Game
 		{
 			//--------------------Renderer (Game & Lighting)--------------------
 			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList();
+
+			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
+
 			mRenderer.SetGBuffer();
 			mRenderer.ClearGBuffer();
 			mRenderer.Begin(mCamera.Transform);
 				//Render Background
-				mRenderer.Draw(mScene.BackgroundTexture.Textures, Vector2.Zero);
+				mScene.BackgroundTexture.Draw(mRenderer);
 				//Render Game
 				foreach (InteractiveObject iObj in mScene.RenderList)
 					iObj.Draw(mRenderer);
@@ -114,6 +131,7 @@ namespace HG_Game
 			mRenderer.DisposeGBuffer();
 			mRenderer.ProcessLight(mScene.Lights, mCamera.Transform);
 			mRenderer.ProcessFinalScene();
+
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
 
 			//--------------------SpriteBatch (HUD & Infos)--------------------
@@ -122,7 +140,7 @@ namespace HG_Game
 			mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
 			//Render ChalkMenues
 			foreach (InteractiveObject iObj in mScene.InteractiveObjects)
-				if (iObj.Activity == Activity.UseChalk)
+				if (iObj.ActivityId == Activity.UseChalk)
 					((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
 			mSpriteBatch.End();
 
@@ -130,18 +148,18 @@ namespace HG_Game
 			if (EngineSettings.IsDebug)
 			{
 
-			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
-			for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
-			{
-				mScene.RenderList[i].DrawDebug(mSpriteBatch);
-			}
-			mSpriteBatch.End();
+				mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+				for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
+				{
+					mScene.RenderList[i].DrawDebug(mSpriteBatch);
+				}
+				mSpriteBatch.End();
 
 			SpriteFont font = FontManager.Instance.GetElementByString("font");
 			StringBuilder sb = new StringBuilder();
-			sb.AppendLine("Hansel:" + mHansel.PositionIO.ToString() + "," + mHansel.CollisionBox.ToString());
-			sb.AppendLine("Gretel:" + mGretel.PositionIO.ToString() + "," + mGretel.CollisionBox.ToString());
-			sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
+			//sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
+			//sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
+			//sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
 
 			mSpriteBatch.Begin();
 			mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);

@@ -32,6 +32,7 @@ namespace HG_Game
 
 		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null, float pSpeedFactor = 1f)
 		{
+			if (pPlayer.mCurrentActivity.rIObj == null) return;
 			//Hansel->AP1 Gretel->AP2
 			Vector2 Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
 			if (pPlayer.GetType() == typeof(Gretel))
@@ -117,8 +118,12 @@ namespace HG_Game
 		//Player während Animation bewegen
 		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pSource, Vector2 pDestination)
 		{
+			float ActTime = pSpineToSynchTo.AnimationState.GetCurrent(0).Time;
+			float EndTime = pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
+
 			float Progress = pSpineToSynchTo.AnimationState.GetCurrent(0).Time / pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
-			pPlayer.MoveInteractiveObject((pDestination - pSource) * Progress);
+			Vector2 distance = pDestination - pPlayer.SkeletonPosition;
+			pPlayer.MoveInteractiveObject((distance) * Progress);
 		}
 
 		//QuickTimeEvent

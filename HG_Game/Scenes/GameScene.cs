@@ -48,6 +48,7 @@ namespace HG_Game
 			//Player
 			mHansel = new Hansel("skeleton");
 			mGretel = new Gretel("skeleton");
+			//mHansel.Position = new Vector2(0, 100);
 			//mHansel.mCurrentActivity = ActivityHandler.None;
 			//mGretel.mCurrentActivity = ActivityHandler.None;
 			//Camera
@@ -72,6 +73,10 @@ namespace HG_Game
 			mGretel.mCurrentActivity = ActivityHandler.None;
 			mHansel.LoadReferences(mCamera, mGretel);
 			mGretel.LoadReferences(mCamera, mHansel);
+			mHansel.SkeletonPosition = new Vector2(50, 100);
+			mGretel.SkeletonPosition = new Vector2(50, 50);
+			mHansel.MoveInteractiveObject(Vector2.Zero);
+			mGretel.MoveInteractiveObject(Vector2.Zero);
 
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
@@ -130,17 +135,17 @@ namespace HG_Game
 			if (EngineSettings.IsDebug)
 			{
 
-			//mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
-			//for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
-			//{
-			//	mScene.RenderList[i].DrawDebug(mSpriteBatch);
-			//}
-			//mSpriteBatch.End();
+				mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+				for (int i = mScene.RenderList.Count - 1; i >= 0; --i)
+				{
+					mScene.RenderList[i].DrawDebug(mSpriteBatch);
+				}
+				mSpriteBatch.End();
 
 			SpriteFont font = FontManager.Instance.GetElementByString("font");
 			StringBuilder sb = new StringBuilder();
-			//sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
-			//sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
+			sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
+			sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
 			//sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
 
 			mSpriteBatch.Begin();

@@ -130,7 +130,7 @@ namespace HG_Game
 					Conditions.ActionPressed(pGretel) &&
 					ActivityGretel != Activity.None)
 				{
-					pHansel.mCurrentActivity = IObjIntersectsGretel.ActivityState;
+					pGretel.mCurrentActivity = IObjIntersectsGretel.ActivityState;
 				}
 
 				//-----Update ActionInfoState-----
@@ -178,6 +178,9 @@ namespace HG_Game
 				{
 					switch (iObj.ActivityId)
 					{
+						case Activity.None:
+							iObj.ActivityState = new None();
+							break;
 						case Activity.CaughtInCobweb:
 							iObj.ActivityState = new CaughtInCobweb(pHansel, pGretel, iObj);
 							break;

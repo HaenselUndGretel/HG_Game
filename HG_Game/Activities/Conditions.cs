@@ -120,6 +120,7 @@ namespace HG_Game
 
 		public static bool PlayersAtActionPositions(Player pPlayer, Player pOtherPlayer, Nullable<Vector2> pOffsetGretel = null)
 		{
+			if (pPlayer.mCurrentActivity.rIObj == null || pOtherPlayer.mCurrentActivity.rIObj == null) return false;
 			//Hansel an AP1 & Gretel an AP2
 			if (pPlayer.mCurrentActivity != pOtherPlayer.mCurrentActivity)
 				throw new Exception("Spieler sind nicht an gleicher Activity beteiligt. Soll hier false returned werden?");

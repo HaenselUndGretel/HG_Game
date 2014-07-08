@@ -625,6 +625,48 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\jumpgap.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jumpgap</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\knockovertree.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>knockovertree</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\laterne.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>laterne</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\LegUp.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>LegUp</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\pulldoor.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>pulldoor</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\pushrock.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>pushrock</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\wolf.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>wolf</Name>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

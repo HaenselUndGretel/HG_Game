@@ -11,7 +11,8 @@ namespace HG_Game
 {
 	class KnockOverTree : ActivityState
 	{
-		protected const float EnterBalanceDistance = 100f;
+		// von 100 auf 74 wegen anderen Hitboxen
+		protected const float EnterBalanceDistance = 74.0f;
 		protected const float BalanceSpeedFactor = 0.6f;
 		protected Vector2 StartPosition;
 		protected Vector2 Direction;
@@ -60,7 +61,10 @@ namespace HG_Game
 						break;
 					case 2:
 						if (Conditions.AnimationComplete(pPlayer))
+						{
 							Sequences.SetPlayerToIdle(pPlayer);
+							m2ndState = true;
+						}
 						break;
 				}
 			}
@@ -129,6 +133,7 @@ namespace HG_Game
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
 							IsAvailable = true;
+							pPlayer.mCurrentState = 0;
 						}
 						break;
 				}

@@ -31,11 +31,12 @@ VertexShaderOutput VertexShaderFunction(VertexShaderInput input)
   VertexShaderOutput Output = (VertexShaderOutput)0;
 
   float4 worldPosition = mul(input.Position, World);
-    float4 viewPosition = mul(worldPosition, View);
-    float4 ProjectionPosition = mul(viewPosition, Projection);
+  float4 viewPosition = mul(worldPosition, View);
+  float4 ProjectionPosition = mul(viewPosition, Projection);
 
-    Output.Position = input.Position;
+  Output.Position = input.Position;
   Output.LightPos = mul(LightPosition, View);
+  Output.LightPos.z = LightPosition.z;
   Output.TexCoord = input.TexCoord;
 
   return Output;

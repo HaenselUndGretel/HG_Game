@@ -82,6 +82,7 @@ namespace HG_Game
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
+			//mScene = mSavegame.Scenes[1];
 			mRenderer.AmbientLight = mScene.SceneAmbientLight;
 
 			//Camera

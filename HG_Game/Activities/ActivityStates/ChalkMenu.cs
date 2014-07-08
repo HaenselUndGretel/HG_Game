@@ -155,9 +155,11 @@ namespace HG_Game
 
 		public void Draw(SpriteBatch pSpriteBatch, float pAlpha)
 		{
-			pSpriteBatch.Draw(mBackground, Position, Color.Wheat * pAlpha);
-			foreach (ImageButton btn in mButtons)
-				btn.Draw(pSpriteBatch);
+			if (mBackground != null)
+				pSpriteBatch.Draw(mBackground, Position, Color.Wheat * pAlpha);
+			if (mButtons != null)
+				foreach (ImageButton btn in mButtons)
+					btn.Draw(pSpriteBatch);
 		}
 
 		#endregion

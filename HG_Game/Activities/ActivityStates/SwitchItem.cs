@@ -11,14 +11,12 @@ namespace HG_Game
 	class SwitchItem : ActivityState
 	{
 		protected const float MaxSwapDistance = 200f;
-		public int InventoryFocusHansel;
-		public int InventoryFocusGretel;
+		public int InventoryFocus;
 
 		public SwitchItem(Hansel pHansel, Gretel pGretel)
 			: base(pHansel, pGretel)
 		{
-			InventoryFocusHansel = 1;
-			InventoryFocusGretel = 1;
+			InventoryFocus = 1;
 		}
 
 		#region Override Methods
@@ -28,29 +26,21 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
-					if (pPlayer.GetType() == typeof(Hansel))
-						InventoryFocusHansel = pPlayer.Inventory.ItemFocus;
-					else
-						InventoryFocusGretel = pPlayer.Inventory.ItemFocus;
+					InventoryFocus = pPlayer.Inventory.ItemFocus;
 					++pPlayer.mCurrentState;
 					break;
 				case 1:
-					//Map IFocus to Player
-					int InventoryFocusPlayer = InventoryFocusGretel;
-					if (pPlayer.GetType() == typeof(Hansel))
-						InventoryFocusPlayer = InventoryFocusHansel;
-
 					//Navigate Inventory
 					if (pPlayer.Input.ItemLeftJustPressed)
-						--InventoryFocusPlayer;
+						--InventoryFocus;
 					if (pPlayer.Input.ItemRightJustPressed)
-						++InventoryFocusPlayer;
-					InventoryFocusPlayer = (int)MathHelper.Clamp(InventoryFocusPlayer, 0, 2);
+						++InventoryFocus;
+					InventoryFocus = (int)MathHelper.Clamp(InventoryFocus, 0, 2);
 
 					//UseItem
-					if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item != null)
+					if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocus].Item != null)
 					{
-						pPlayer.Inventory.ItemFocus = InventoryFocusPlayer;
+						pPlayer.Inventory.ItemFocus = InventoryFocus;
 						++pPlayer.mCurrentState;
 						return;
 					}
@@ -76,17 +66,10 @@ namespace HG_Game
 
 		protected void SwapItem(Player pPlayer, Player pOtherPlayer)
 		{
-			//Map IFocus to Player
-			int InventoryFocusPlayer;
-			if (pPlayer.GetType() == typeof(Hansel))
-				InventoryFocusPlayer = InventoryFocusHansel;
-			else
-				InventoryFocusPlayer = InventoryFocusGretel;
-			//Swap Item
-			if (pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item == null)
+			if (pPlayer.Inventory.ItemSlots[InventoryFocus].Item == null)
 				return;
-			if (pOtherPlayer.Inventory.TryToStore(pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item))
-				pPlayer.Inventory.ItemSlots[InventoryFocusPlayer].Item = null;
+			if (pOtherPlayer.Inventory.TryToStore(pPlayer.Inventory.ItemSlots[InventoryFocus].Item))
+				pPlayer.Inventory.ItemSlots[InventoryFocus].Item = null;
 		}
 
 		#endregion

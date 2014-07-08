@@ -212,11 +212,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gfx\sweetcheeks.png">
-      <Name>sweetcheeks</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="cfx\ClearRenderTargets.fx">
       <Name>ClearRenderTargets</Name>
       <Importer>EffectImporter</Importer>
@@ -637,6 +632,11 @@
     </Compile>
     <Compile Include="gfx\stepmotherDepth.png">
       <Name>stepmotherDepth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\branch.png">
+      <Name>branch</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

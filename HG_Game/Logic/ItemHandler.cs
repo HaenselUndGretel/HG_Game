@@ -25,7 +25,7 @@ namespace HG_Game
 		public ItemHandler()
 		{
 			InventoryFading = new HudFading(0.3f, 0.3f);
-			InventoryOffset = new Vector2(25, -100);
+			InventoryOffset = new Vector2(0, -160);
 		}
 
 		#endregion
@@ -43,7 +43,7 @@ namespace HG_Game
 			UpdateVisibility(pScene, pGretel);
 			CollectItems(pScene, pHansel, pGretel);
 			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
-			InventoryFading.Update();
+			UpdateInventoryFading(pHansel, pGretel);
 		}
 
 		#region Update
@@ -117,6 +117,18 @@ namespace HG_Game
 			}
 		}
 
+		protected void UpdateInventoryFading(Hansel pHansel, Gretel pGretel)
+		{
+			InventoryFading.ShowHudHansel = false;
+			InventoryFading.ShowHudGretel = false;
+			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem))
+				InventoryFading.ShowHudHansel = true;
+			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
+				InventoryFading.ShowHudGretel = true;
+
+			InventoryFading.Update();
+		}
+
 		#endregion
 
 		#region Draw Inventory
@@ -126,9 +138,9 @@ namespace HG_Game
 			int TmpFocusHansel = 3;
 			int TmpFocusGretel = 3;
 			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem))
-				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocusHansel;
+				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocus;
 			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
-				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocusGretel;
+				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocus;
 			pHansel.Inventory.Draw(pSpriteBatch, pHansel.SkeletonPosition + InventoryOffset, InventoryFading.VisibilityHansel, TmpFocusHansel);
 			pGretel.Inventory.Draw(pSpriteBatch, pGretel.SkeletonPosition + InventoryOffset, InventoryFading.VisibilityGretel, TmpFocusGretel);
 		}

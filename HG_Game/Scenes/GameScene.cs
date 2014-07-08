@@ -92,6 +92,8 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 
 			mGretel.Chalk = 2;
+			mHansel.Inventory.TryToStore(new Branch("cobweb"));
+			mHansel.Inventory.GetItemByType(typeof(Branch)).LoadContent();
 		}
 
 		public override void Update()
@@ -145,6 +147,8 @@ namespace HG_Game
 			foreach (InteractiveObject iObj in mScene.InteractiveObjects)
 				if (iObj.ActivityId == Activity.UseChalk)
 					((UseChalk)iObj.ActivityState).DrawMenues(mSpriteBatch);
+			//Render Inventory
+			mLogic.ItemHandler.DrawInventory(mHansel, mGretel, mSpriteBatch);
 			//Render ButtonHud
 			mLogic.ActivityHandler.DrawButtonHud(mSpriteBatch, mHansel, mGretel);
 			mSpriteBatch.End();

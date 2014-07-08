@@ -268,7 +268,7 @@ namespace HG_Game
 							break;
 						case Activity.UseChalk:
 							iObj.ActivityState = new UseChalk(pHansel, pGretel, iObj);
-							//((UseChalk)iObj.ActivityState).rRockData = pSavegame.Scenes[i].ChalkRockData;
+							((UseChalk)iObj.ActivityState).rRockData = pSavegame.Scenes[i].ChalkRockData;
 							break;
 						case Activity.UseWell:
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);

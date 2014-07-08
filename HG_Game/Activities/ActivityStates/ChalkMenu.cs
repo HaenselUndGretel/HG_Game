@@ -21,6 +21,7 @@ namespace HG_Game
 		protected List<ImageButton> mButtons;
 		protected int SelectedIndex;
 		protected bool RockMenu;
+		protected const float ButtonSpacing = 60f;
 
 		#endregion
 
@@ -42,7 +43,7 @@ namespace HG_Game
 		public void Initialize()
 		{
 			RockMenu = false;
-			SelectedIndex = 1;
+			SelectedIndex = 0;
 		}
 
 		public int Update(Player pPlayer)
@@ -51,39 +52,27 @@ namespace HG_Game
 			mButtons[SelectedIndex].IsSelected = false;
 
 			if (pPlayer.Input.ButtonJustPressed(Buttons.DPadRight))
-				SelectedIndex++;
+				++SelectedIndex;
 			else if (pPlayer.Input.ButtonJustPressed(Buttons.DPadLeft))
-				SelectedIndex--;
+				--SelectedIndex;
 
-			if (SelectedIndex < 1)
-				SelectedIndex = mButtons.Count;
-			if (SelectedIndex > mButtons.Count)
-				SelectedIndex = 1;
+			if (SelectedIndex < 0)
+				SelectedIndex = mButtons.Count - 1;
+			if (SelectedIndex > mButtons.Count - 1)
+				SelectedIndex = 0;
 
 			mButtons[SelectedIndex].IsSelected = true;
 
-			if (pPlayer.Input.ButtonJustPressed(Buttons.A))
+			if (pPlayer.Input.ActionJustPressed)
 				return SelectedIndex;
-			return 0;
-		}
-
-		public void Draw(SpriteBatch pSpriteBatch)
-		{
-			pSpriteBatch.Begin();
-
-			pSpriteBatch.Draw(mBackground, Vector2.Zero, Color.White);
-
-			foreach (ImageButton ib in mButtons)
-				ib.Draw(pSpriteBatch);
-
-			pSpriteBatch.End();
+			return -1;
 		}
 
 		#endregion
 
 		#region Methods
 
-		public void SetArrowMenu(Vector2 pMenuPosition, float pButtonSpacing)
+		public void SetArrowMenu(Vector2 pMenuPosition)
 		{
 			Position = pMenuPosition;
 			mBackground = TextureManager.Instance.GetElementByString("ArrowMenuBackground");
@@ -93,10 +82,10 @@ namespace HG_Game
 			for (int i = 0; i < 4; i++)
 				mButtons.Add(new ImageButton(Names[i], Vector2.Zero, new Action(() => { })));
 			mButtons[SelectedIndex].IsSelected = true;
-			SetPosition(pMenuPosition, pButtonSpacing, mButtons.Count);
+			SetButtonPositions(pMenuPosition, mButtons.Count);
 		}
 
-		public void SetRockMenu(Vector2 pMenuPosition, float pButtonSpacing, List<string> pData)
+		public void SetRockMenu(Vector2 pMenuPosition, List<string> pData)
 		{
 			Position = pMenuPosition;
 			mBackground = TextureManager.Instance.GetElementByString("RockMenuBackground");
@@ -106,60 +95,60 @@ namespace HG_Game
 			{
 				mButtons.Add(new ImageButton(str, Vector2.Zero, new Action(() => { })));
 			}
-			SetPosition(pMenuPosition, pButtonSpacing, 3);
+			SetButtonPositions(pMenuPosition, 3);
 		}
 
 		public void AddButtonToRockMenu(int SelectedArrow)
 		{
 			switch (SelectedArrow)
 			{
-				case 1:
+				case 0:
 					mButtons.Add(new ImageButton("arrow_left", Vector2.Zero, new Action(() => { })));
 					break;
-				case 2:
+				case 1:
 					mButtons.Add(new ImageButton("arrow_up", Vector2.Zero, new Action(() => { })));
 					break;
-				case 3:
+				case 2:
 					mButtons.Add(new ImageButton("arrow_right", Vector2.Zero, new Action(() => { })));
 					break;
-				case 4:
+				case 3:
 					mButtons.Add(new ImageButton("arrow_down", Vector2.Zero, new Action(() => { })));
 					break;
 			}
+			SetButtonPositions(Position, 3);
 		}
 
 		public string GetRockMenuDataString(int SelectedArrow)
 		{
 			switch (SelectedArrow)
 			{
-				case 1:
+				case 0:
 					return "arrow_left";
-				case 2:
+				case 1:
 					return "arrow_up";
-				case 3:
+				case 2:
 					return "arrow_right";
-				case 4:
+				case 3:
 					return "arrow_up";
 			}
 			return "";
 		}
 
-		protected void SetPosition(Vector2 pMenuPosition, float pButtonSpacing, int pButtonCount)
+		protected void SetButtonPositions(Vector2 pMenuPosition, int pButtonCount)
 		{
-			Vector2 MenuPosition = new Vector2(pMenuPosition.X - pButtonCount * pButtonSpacing / 2, pMenuPosition.Y);
 			for (int i = 0; i < mButtons.Count; ++i)
 			{
-				mButtons[i].Position = new Vector2(MenuPosition.X + i * pButtonSpacing, MenuPosition.Y);
+				mButtons[i].Position = new Vector2(pMenuPosition.X + 10 + i * ButtonSpacing, pMenuPosition.Y + 10);
 			}
 		}
 
 		public void Draw(SpriteBatch pSpriteBatch, float pAlpha)
 		{
 			if (mBackground != null)
-				pSpriteBatch.Draw(mBackground, Position, Color.Wheat * pAlpha);
+				pSpriteBatch.Draw(mBackground, Position, Color.White * pAlpha);
 			if (mButtons != null)
 				foreach (ImageButton btn in mButtons)
-					btn.Draw(pSpriteBatch);
+					btn.Draw(pSpriteBatch, pAlpha);
 		}
 
 		#endregion

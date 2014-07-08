@@ -71,7 +71,7 @@ namespace HG_Game
 		//Kreide dabei
 		public static bool EnoughChalk(Player pPlayer)
 		{
-			return (pPlayer.GetType() == typeof(Gretel) && ((Gretel)pPlayer).Chalk < 0) ? true : false;
+			return (pPlayer.GetType() == typeof(Gretel) && ((Gretel)pPlayer).Chalk > 0) ? true : false;
 		}
 
 		//Weitere

@@ -81,8 +81,8 @@ namespace HG_Game
 
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
-			mScene = mSavegame.Scenes[mSavegame.SceneId];
-			//mScene = mSavegame.Scenes[1];
+			//mScene = mSavegame.Scenes[mSavegame.SceneId];
+			mScene = mSavegame.Scenes[1];
 			mRenderer.AmbientLight = mScene.SceneAmbientLight;
 
 			//Camera
@@ -90,6 +90,8 @@ namespace HG_Game
 
 			//Set ActivityStates in IObjs
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
+
+			mGretel.Chalk = 2;
 		}
 
 		public override void Update()
@@ -114,7 +116,7 @@ namespace HG_Game
 		public override void Draw()
 		{
 			//--------------------Renderer (Game & Lighting)--------------------
-			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList();
+			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList(); //DrawZ unbrauchbar da sie nirgends relativ zur Welt geupdated wird
 
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 
@@ -167,7 +169,6 @@ namespace HG_Game
 			sb.AppendLine("Hansel:"+mHansel.mCurrentState + " " +mHansel.mCurrentActivity.GetType().ToString());
 			sb.AppendLine("Gretel:" + mGretel.mCurrentState + " " + mGretel.mCurrentActivity.GetType().ToString());
 			
-
 			mSpriteBatch.Begin();
 			mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);
 			mSpriteBatch.End();

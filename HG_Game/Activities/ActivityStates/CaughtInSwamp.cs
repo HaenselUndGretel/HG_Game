@@ -82,8 +82,8 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 11:
-					if (Conditions.AnimationComplete(pPlayer))
-						Sequences.End();
+					//if (Conditions.AnimationComplete(pPlayer))
+						//Sequences.End();
 					break;
 				case 12:
 					//Spieler führt nicht mehr zu Spielende während er raus bewegt wird

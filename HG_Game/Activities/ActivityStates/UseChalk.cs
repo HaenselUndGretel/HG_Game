@@ -11,14 +11,6 @@ namespace HG_Game
 {
 	class UseChalk : ActivityState
 	{
-		public enum ChalkState
-		{
- 			Idle,
-			RockMenu,
-			ArrowMenu
-		}
-
-		public ChalkState MenuState;
 		protected ChalkMenu RockMenu;
 		protected ChalkMenu ArrowMenu;
 		public List<string> rRockData;
@@ -26,8 +18,8 @@ namespace HG_Game
 		protected HudFading FadingRockMenu;
 		protected HudFading FadingArrowMenu;
 
-		protected Vector2 OffsetArrowMenu;
-		protected Vector2 OffsetRockMenu;
+		protected Vector2 OffsetRockMenu = new Vector2(-100, -150);
+		protected Vector2 OffsetArrowMenu = new Vector2(-130, -250);
 
 		public UseChalk(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -43,8 +35,7 @@ namespace HG_Game
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
 			if (Conditions.NotHandicapped(pPlayer, Activity.UseChalk) &&
-				Conditions.Contains(pPlayer, rIObj) &&
-				Conditions.EnoughChalk(pPlayer)
+				Conditions.Contains(pPlayer, rIObj)
 				)
 				return Activity.UseChalk;
 			return Activity.None;
@@ -60,34 +51,50 @@ namespace HG_Game
 					Sequences.MovePlayerToActionPosition(pPlayer);
 					break;
 				case 1:
-					MenuState = ChalkState.RockMenu;
 					FadingRockMenu.ShowHudGretel = true;
 					FadingArrowMenu.ShowHudGretel = false;
-					RockMenu.SetRockMenu(pPlayer.SkeletonPosition + OffsetRockMenu, 80f, rRockData);
-					if (pPlayer.Input.BackJustPressed)
-						Sequences.SetPlayerToIdle(pPlayer);
-					if (pPlayer.Input.ActionJustPressed && rRockData.Count < 3)
-						++pPlayer.mCurrentState;
+					RockMenu.SetRockMenu(pPlayer.SkeletonPosition + OffsetRockMenu, rRockData);
+					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					MenuState = ChalkState.ArrowMenu;
-					FadingArrowMenu.ShowHudGretel = true;
-					ArrowMenu.SetArrowMenu(pPlayer.SkeletonPosition + OffsetArrowMenu, 80f);
+					//RockMenu schließen
 					if (pPlayer.Input.BackJustPressed)
-						--pPlayer.mCurrentState;
+					{
+						Sequences.SetPlayerToIdle(pPlayer);
+						FadingRockMenu.ShowHudGretel = false;
+						FadingArrowMenu.ShowHudGretel = false;
+					}
+					//ArrowMenu öffnen
+					if (Conditions.EnoughChalk(pPlayer) && pPlayer.Input.ActionJustPressed && rRockData.Count < 3)
+						++pPlayer.mCurrentState;
+					break;
+				case 3:
+					FadingArrowMenu.ShowHudGretel = true;
+					ArrowMenu.SetArrowMenu(pPlayer.SkeletonPosition + OffsetArrowMenu);
+					++pPlayer.mCurrentState;
+					break;
+				case 4:
+					//ArrowMenu schließen
+					if (pPlayer.Input.BackJustPressed)
+						pPlayer.mCurrentState = 1;
 					int SelectedArrow = ArrowMenu.Update(pPlayer);
-					if (SelectedArrow != 0)
+					if (SelectedArrow != -1)
 					{
 						RockMenu.AddButtonToRockMenu(SelectedArrow);
 						rRockData.Add(RockMenu.GetRockMenuDataString(SelectedArrow));
-						MenuState = ChalkState.Idle;
+						--((Gretel)pPlayer).Chalk;
+						++pPlayer.mCurrentState;
 						FadingRockMenu.ShowHudGretel = false;
 						FadingArrowMenu.ShowHudGretel = false;
-						pPlayer.SetAnimation("attack", false); //Pfeil an Fels malen
-						++pPlayer.mCurrentState;
 					}
 					break;
-				case 3:
+				case 5:
+					if (FadingRockMenu.VisibilityGretel > 0f)
+						break;
+					pPlayer.SetAnimation("attack", false); //Pfeil an Fels malen
+					++pPlayer.mCurrentState;
+					break;
+				case 6:
 					if (pPlayer.AnimationComplete)
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;
@@ -96,6 +103,8 @@ namespace HG_Game
 
 		public void DrawMenues(SpriteBatch pSpriteBatch)
 		{
+			FadingRockMenu.Update();
+			FadingArrowMenu.Update();
 			RockMenu.Draw(pSpriteBatch, FadingRockMenu.VisibilityGretel);
 			ArrowMenu.Draw(pSpriteBatch, FadingArrowMenu.VisibilityGretel);
 		}

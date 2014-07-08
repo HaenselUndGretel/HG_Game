@@ -11,6 +11,7 @@ namespace HG_Game
 	class LegUpGrab : ActivityState
 	{
 		public QuickTimeEvent QTE;
+		protected float OldProgress;
 		protected Vector2 mStartOffsetGretel = new Vector2(55, -20);
 
 		public LegUpGrab(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
@@ -23,7 +24,8 @@ namespace HG_Game
 
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
-			if (Conditions.NotHandicapped(pPlayer, Activity.LegUpGrab) &&
+			if (!m2ndState &&
+				Conditions.NotHandicapped(pPlayer, Activity.LegUpGrab) &&
 				Conditions.Contains(pPlayer, rIObj)
 				)
 				return Activity.LegUpGrab;
@@ -47,23 +49,30 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
-					Sequences.UpdateAnimationStepping(pOtherPlayer, QTE.Progress);
+					if (OldProgress < QTE.Progress)
+						OldProgress += 0.01f;
+					if (OldProgress >= QTE.Progress)
+						QTE.Update();
+
+					Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
+					Sequences.UpdateAnimationStepping(pOtherPlayer, OldProgress);
+
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 					}
-					else if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						++pPlayer.mCurrentState;
+						++pOtherPlayer.mCurrentState;
 					}
 					break;
 				case 3:
 					if (pPlayer.GetType() == typeof(Gretel) && Conditions.ActionPressed(pPlayer))
 					{
-						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pPlayer, "attack"); //Item greifen
+						m2ndState = true;
 						++pPlayer.mCurrentState;
 						++pOtherPlayer.mCurrentState;
 					}
@@ -71,6 +80,7 @@ namespace HG_Game
 				case 4:
 					if (Conditions.AnimationComplete(pPlayer) && Conditions.AnimationComplete(pOtherPlayer))
 					{
+						//Gretel runter lassen
 						Sequences.StartAnimation(pPlayer, "attack");
 						Sequences.StartAnimation(pOtherPlayer, "attack");
 						++pPlayer.mCurrentState;

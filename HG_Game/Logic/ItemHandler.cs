@@ -92,6 +92,9 @@ namespace HG_Game
 					}
 					else if (item.CollisionBox.Intersects(pGretel.CollisionBox))
 					{
+						//Bei LegUpGrab Item erst im richtigen Moment einsammeln
+						if (pGretel.mCurrentActivity != null && pGretel.mCurrentActivity.GetType() == typeof(LegUpGrab) && pGretel.mCurrentActivity.m2ndState)
+							return;
 						if (pGretel.Inventory.TryToStore(item))
 						{
 							pScene.Items.Remove(item);

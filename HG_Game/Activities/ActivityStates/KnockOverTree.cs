@@ -22,7 +22,7 @@ namespace HG_Game
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
-			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, true, true, true, true);
+			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, true, true, true);
 			StartPosition = Vector2.Zero;
 			Direction = Vector2.Zero;
 		}
@@ -54,6 +54,10 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						if (pPlayer.GetType() == typeof(Hansel))
+							QTE.OnlyOnePlayerIsHansel = true;
+						else
+							QTE.OnlyOnePlayerIsHansel = false;
 						if (Conditions.PlayerAtActionPosition(pPlayer))
 							++pPlayer.mCurrentState;
 						Sequences.MovePlayerToActionPosition(pPlayer);
@@ -146,6 +150,8 @@ namespace HG_Game
 						break;
 					case 4:
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
+						while (pPlayer.CollisionBox.Intersects(pOtherPlayer.CollisionBox))
+							pOtherPlayer.MoveManually(Direction);
 						if (Conditions.AnimationComplete(pPlayer))
 						{
 							Sequences.SetPlayerToIdle(pPlayer);

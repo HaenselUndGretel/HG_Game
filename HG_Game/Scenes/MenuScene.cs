@@ -132,9 +132,9 @@ namespace HG_Game
 		{
 			mButtons[SelectedIndex].IsSelected = false;
 
-			if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadRight))
+			if (InputHelper.ButtonJustPressed2Player(Buttons.DPadRight))
 				SelectedIndex++;
-			else if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadLeft))
+			else if (InputHelper.ButtonJustPressed2Player(Buttons.DPadLeft))
 				SelectedIndex--;
 
 			if (SelectedIndex == -1)
@@ -144,7 +144,7 @@ namespace HG_Game
 
 			mButtons[SelectedIndex].IsSelected = true;
 
-			if (InputHelper.Player1.ButtonJustPressed(Buttons.A))
+			if (InputHelper.ButtonJustPressed2Player(Buttons.A))
 				mButtons[SelectedIndex].IsClicked();
 		}
 
@@ -161,17 +161,17 @@ namespace HG_Game
 			{
 				mCollectableButton[SelectedIndexCollectable].IsSelected = false;
 
-				if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadRight))
+				if (InputHelper.ButtonJustPressed2Player(Buttons.DPadRight))
 					SelectedIndexCollectable++;
-				else if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadLeft))
+				else if (InputHelper.ButtonJustPressed2Player(Buttons.DPadLeft))
 					SelectedIndexCollectable--;
-				else if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadUp)
+				else if (InputHelper.ButtonJustPressed2Player(Buttons.DPadUp)
 					&& SelectedIndexCollectable > 4)
 					SelectedIndexCollectable -= 5;
-				else if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadDown)
+				else if (InputHelper.ButtonJustPressed2Player(Buttons.DPadDown)
 				   && SelectedIndexCollectable < 4)
 					SelectedIndexCollectable += 5;
-				else if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadDown)
+				else if (InputHelper.ButtonJustPressed2Player(Buttons.DPadDown)
 					&& SelectedIndexCollectable == 4)
 					SelectedIndexCollectable += 4;
 
@@ -182,10 +182,10 @@ namespace HG_Game
 
 				mCollectableButton[SelectedIndexCollectable].IsSelected = true;
 
-				if (InputHelper.Player1.ButtonJustPressed(Buttons.A))
+				if (InputHelper.ButtonJustPressed2Player(Buttons.A))
 					mCollectableButton[SelectedIndexCollectable].IsClicked();
 
-				if(InputHelper.Player1.ButtonJustPressed(Buttons.B))
+				if(InputHelper.ButtonJustPressed2Player(Buttons.B))
 				{
 					StartMoveing = true;
 					MoveDirection = true;
@@ -207,9 +207,9 @@ namespace HG_Game
 			{
 				mOptionButtons[SelectedIndexOptions].IsSelected = false;
 
-				if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadRight))
+				if (InputHelper.ButtonJustPressed2Player(Buttons.DPadRight))
 					SelectedIndexOptions++;
-				else if (InputHelper.Player1.ButtonJustPressed(Buttons.DPadLeft))
+				else if (InputHelper.ButtonJustPressed2Player(Buttons.DPadLeft))
 					SelectedIndexOptions--;
 
 				if (SelectedIndexOptions == -1)
@@ -219,10 +219,10 @@ namespace HG_Game
 
 				mOptionButtons[SelectedIndexOptions].IsSelected = true;
 
-				if (InputHelper.Player1.ButtonJustPressed(Buttons.A))
+				if (InputHelper.ButtonJustPressed2Player(Buttons.A))
 					mOptionButtons[SelectedIndexOptions].IsClicked();
 
-				if (InputHelper.Player1.ButtonJustPressed(Buttons.B))
+				if (InputHelper.ButtonJustPressed2Player(Buttons.B))
 				{
 					StartMoveing = true;
 					MoveDirection = true;
@@ -233,13 +233,13 @@ namespace HG_Game
 
 		private void UpdateControllerMenu()
 		{
-			if (InputHelper.Player1.ButtonJustPressed(Buttons.B))
+			if (InputHelper.ButtonJustPressed2Player(Buttons.B))
 				menuState = MenuState.Options;
 		}
 
 		private void UpdateCredits()
 		{
-			if (InputHelper.Player1.ButtonJustPressed(Buttons.B))
+			if (InputHelper.ButtonJustPressed2Player(Buttons.B))
 				menuState = MenuState.Options;
 		}
 

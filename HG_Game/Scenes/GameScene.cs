@@ -93,7 +93,7 @@ namespace HG_Game
 
 		public override void Update()
 		{
-			if (InputHelper.Player1.ButtonJustPressed(Microsoft.Xna.Framework.Input.Buttons.Start))
+			if (InputHelper.ButtonJustPressed2Player(Microsoft.Xna.Framework.Input.Buttons.Start))
 			{
 				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
 				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);

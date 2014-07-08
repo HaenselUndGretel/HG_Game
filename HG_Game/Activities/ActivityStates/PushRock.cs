@@ -88,18 +88,15 @@ namespace HG_Game
 					if (OldProgress >= QTE.Progress)
 						QTE.Update();
 
-					if(OldProgress >= 1.0f)
+					Sequences.UpdateMovementStepping(rIObj, OldProgress, mSourceIObj, mDestinationIObj);
+					Sequences.UpdateMovementStepping(pPlayer, OldProgress, mSourceHansel, mDestinationHansel);
+					Sequences.UpdateMovementStepping(pOtherPlayer, OldProgress, mSourceGretel, mDestinationGretel);
+
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 						rIObj.ActionRectList.Clear();
-					}
-
-					if (OldProgress <= QTE.Progress)
-					{
-						Sequences.UpdateMovementStepping(rIObj, OldProgress, mSourceIObj, mDestinationIObj);
-						Sequences.UpdateMovementStepping(pPlayer, OldProgress, mSourceHansel, mDestinationHansel);
-						Sequences.UpdateMovementStepping(pOtherPlayer, OldProgress, mSourceGretel, mDestinationGretel);
 					}
 					break;
 			}

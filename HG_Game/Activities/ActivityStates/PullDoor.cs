@@ -13,8 +13,6 @@ namespace HG_Game
 		protected QuickTimeEvent QTE;
 		protected Vector2 mSourceHansel;
 		protected Vector2 mSourceGretel;
-		protected Vector2 mDestinationHansel;
-		protected Vector2 mDestinationGretel;
 
 		protected float OldProgress;
 		protected Vector2 AnimationDirection;
@@ -74,42 +72,22 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					OldProgress = QTE.Progress;
-					QTE.Update();
+					if (OldProgress < QTE.Progress)
+						OldProgress += 0.01f;
+					if (OldProgress >= QTE.Progress)
+						QTE.Update();
 
-					if(OldProgress >= 1.0f)
+					Sequences.UpdateAnimationStepping(rIObj, OldProgress);
+					Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
+					Sequences.UpdateAnimationStepping(pOtherPlayer, OldProgress);
+
+					if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 						rIObj.CollisionRectList.Clear();
 						rIObj.ActionRectList.Clear();
 					}
-
-					if (OldProgress != QTE.Progress)
-					{
-						Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
-						Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
-						Sequences.UpdateAnimationStepping(pOtherPlayer, QTE.Progress);
-					}
-					//QTE.Update();
-					//if (pPlayer.GetType() == typeof(Hansel))
-					//{
-					//	Sequences.UpdateAnimationStepping(rIObj, QTE.Progress);
-					//	Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceHansel, mDestinationHansel);
-					//}
-					//else
-					//{
-					//	Sequences.UpdateMovementStepping(pPlayer, QTE.Progress, mSourceGretel, mDestinationGretel);
-					//}
-					//if (QTE.State == QuickTimeEvent.QTEState.Successfull)
-					//{
-					//	Sequences.SetPlayerToIdle(pPlayer);
-					//}
-					//else if (QTE.State == QuickTimeEvent.QTEState.Failed)
-					//{
-					//	Sequences.SetPlayerToIdle(pPlayer);
-					//	Sequences.SetPlayerToIdle(pOtherPlayer);
-					//}
 					break;
 			}
 		}

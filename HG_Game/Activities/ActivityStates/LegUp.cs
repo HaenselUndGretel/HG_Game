@@ -11,8 +11,10 @@ namespace HG_Game
 	class LegUp : ActivityState
 	{
 		protected QuickTimeEvent QTE;
-		protected Vector2 mStartOffsetGretel = new Vector2(55, -20);
+		protected Vector2 mStartOffsetGretel = new Vector2(55, 20);
 		protected Vector2 mOffsetGretel = new Vector2(-20, -225);
+
+		protected float OldProgress;
 
 		public LegUp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -36,6 +38,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					OldProgress = 0;
 					if (!Conditions.ActionHold(pPlayer))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -51,15 +54,20 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					QTE.Update();
-					Sequences.UpdateAnimationStepping(pPlayer, QTE.Progress);
-					Sequences.UpdateAnimationStepping(pOtherPlayer, QTE.Progress);
+					if (OldProgress < QTE.Progress)
+						OldProgress += 0.01f;
+					if (OldProgress >= QTE.Progress)
+						QTE.Update();
+
+					Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
+					Sequences.UpdateAnimationStepping(pOtherPlayer, OldProgress);
+
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 					}
-					else if (QTE.State == QuickTimeEvent.QTEState.Successfull)
+					else if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						if (pPlayer.GetType() == typeof(Gretel))
 							Sequences.Move(pPlayer, mOffsetGretel);

@@ -24,8 +24,6 @@ namespace HG_Game
 
 		public QTEState State;
 
-		protected Random Randomizer;
-
 		//Timing
 		protected float DelayHansel;
 		protected float DelayGretel;
@@ -246,7 +244,7 @@ namespace HG_Game
 		{
 			if (OnlyX)
 				return InputHelper.mAction;
-			int RandomChoice = Randomizer.Next(4);
+			int RandomChoice = EngineSettings.Randomizer.Next(4);
 			switch (RandomChoice)
 			{
 				case 0:

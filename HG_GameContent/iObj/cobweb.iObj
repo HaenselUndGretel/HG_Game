@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>7000</ObjectId>
+  <ObjectId>6000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -16,31 +16,52 @@
     </Location>
   </CollisionBox>
   <IsVisible>true</IsVisible>
-  <DrawZ>-22</DrawZ>
+  <DrawZ>-34</DrawZ>
   <NormalZ>0</NormalZ>
   <Name>stepmother</Name>
   <Height>0</Height>
   <Width>0</Width>
-  <ActionRectList />
+  <ActionRectList>
+    <Rectangle>
+      <X>-156</X>
+      <Y>-182</Y>
+      <Width>310</Width>
+      <Height>99</Height>
+      <Location>
+        <X>-156</X>
+        <Y>-182</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-166</X>
+      <Y>5</Y>
+      <Width>327</Width>
+      <Height>86</Height>
+      <Location>
+        <X>-166</X>
+        <Y>5</Y>
+      </Location>
+    </Rectangle>
+  </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-106</X>
-      <Y>-61</Y>
-      <Width>215</Width>
-      <Height>72</Height>
+      <X>-143</X>
+      <Y>-85</Y>
+      <Width>281</Width>
+      <Height>92</Height>
       <Location>
-        <X>-106</X>
-        <Y>-61</Y>
+        <X>-143</X>
+        <Y>-85</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>-1</X>
-    <Y>-30</Y>
+    <X>0</X>
+    <Y>-38</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-3</X>
-    <Y>35</Y>
+    <X>0</X>
+    <Y>54</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

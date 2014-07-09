@@ -27,6 +27,7 @@ namespace HG_Game
 				Conditions.NotHandicapped(pPlayer, Activity.CaughtInCobweb)
 				)
 			{
+				m2ndState = true;
 				pPlayer.mCurrentActivity = this;
 				pPlayer.mCurrentState = 10;
 				return Activity.None;
@@ -78,12 +79,14 @@ namespace HG_Game
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
+						m2ndState = false;
 						break;
 					}
 					Sequences.MoveUpDown(pPlayer, false);
 					Sequences.MoveUpDown(pOtherPlayer, false);
 					break;
 				case 10: //CaughtInCobeweb
+					Sequences.SetToPosition(pPlayer, rIObj.ActionPosition1);
 					Sequences.StartAnimation(pPlayer, "attack", true);
 					OldProgress = 0f;
 					++pPlayer.mCurrentState;

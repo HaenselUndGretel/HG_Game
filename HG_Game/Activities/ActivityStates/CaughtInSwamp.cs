@@ -23,7 +23,7 @@ namespace HG_Game
 
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
-			if (!m2ndState &&
+			if (
 				Conditions.NotHandicapped(pPlayer, Activity.CaughtInSwamp) &&
 				Conditions.Contains(pPlayer, rIObj)
 				)
@@ -60,7 +60,10 @@ namespace HG_Game
 					Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
 
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
-						Sequences.SetPlayerToIdle(pPlayer);
+					{
+						QTE.ButtonFading.SetAllToFalse();
+						pPlayer.mCurrentState = 5;
+					}
 					if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						++pPlayer.mCurrentState;
@@ -68,16 +71,20 @@ namespace HG_Game
 					}
 					break;
 				case 2:
-					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
+					if (!Conditions.CobwebSwampIntersects(pPlayer, rIObj) && !Conditions.CobwebSwampIntersects(pOtherPlayer, rIObj))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 						m2ndState = false;
-						break;
 					}
 					Vector2 Source = new Vector2(rIObj.ActionRectList[0].Center.X, rIObj.ActionRectList[0].Center.Y);
 					Sequences.MoveAway(pPlayer, Source);
 					Sequences.MoveAway(pOtherPlayer, Source);
+					break;
+				case 5:
+					if (QTE.ButtonFading.VisibilityHansel == 0f && QTE.ButtonFading.VisibilityGretel == 0f)
+						Sequences.SetPlayerToIdle(pPlayer);
+					QTE.ButtonFading.Update();
 					break;
 				case 10: //CaughtInSwamp
 					Sequences.StartAnimation(pPlayer, "attack", true);

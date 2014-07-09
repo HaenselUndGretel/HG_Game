@@ -104,7 +104,7 @@ namespace HG_Game
 					}
 					break;
 				case 3:
-					if (!Conditions.CobwebIntersects(pPlayer, rIObj) && !Conditions.CobwebIntersects(pOtherPlayer, rIObj))
+					if (!Conditions.CobwebSwampIntersects(pPlayer, rIObj) && !Conditions.CobwebSwampIntersects(pOtherPlayer, rIObj))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);

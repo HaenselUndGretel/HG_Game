@@ -41,7 +41,7 @@ namespace HG_Game
 			return false;
 		}
 
-		public static bool CobwebIntersects(Player pPlayer, InteractiveObject pIObj)
+		public static bool CobwebSwampIntersects(Player pPlayer, InteractiveObject pIObj)
 		{
 			foreach (Rectangle rect in pIObj.ActionRectList)
 			{

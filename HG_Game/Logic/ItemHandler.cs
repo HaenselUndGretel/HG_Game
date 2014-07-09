@@ -121,9 +121,9 @@ namespace HG_Game
 		{
 			InventoryFading.ShowHudHansel = false;
 			InventoryFading.ShowHudGretel = false;
-			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem))
+			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem) || (pHansel.mCurrentActivity.GetType() == typeof(CaughtInCobweb) && pHansel.mCurrentState == 11 && ((CaughtInCobweb)pHansel.mCurrentActivity).CaughtPlayerSwitchItem.GetType() == typeof(SwitchItem)))
 				InventoryFading.ShowHudHansel = true;
-			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
+			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem) || (pGretel.mCurrentActivity.GetType() == typeof(CaughtInCobweb) && pGretel.mCurrentState == 11 && ((CaughtInCobweb)pGretel.mCurrentActivity).CaughtPlayerSwitchItem.GetType() == typeof(SwitchItem)))
 				InventoryFading.ShowHudGretel = true;
 
 			InventoryFading.Update();
@@ -141,6 +141,10 @@ namespace HG_Game
 				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocus;
 			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
 				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocus;
+			if (pHansel.mCurrentActivity.GetType() == typeof(CaughtInCobweb) && pHansel.mCurrentState == 11 && ((CaughtInCobweb)pHansel.mCurrentActivity).CaughtPlayerSwitchItem.GetType() == typeof(SwitchItem))
+				TmpFocusHansel = ((SwitchItem)(((CaughtInCobweb)pHansel.mCurrentActivity).CaughtPlayerSwitchItem)).InventoryFocus;
+			if (pGretel.mCurrentActivity.GetType() == typeof(CaughtInCobweb) && pGretel.mCurrentState == 11 && ((CaughtInCobweb)pGretel.mCurrentActivity).CaughtPlayerSwitchItem.GetType() == typeof(SwitchItem))
+				TmpFocusGretel = ((SwitchItem)(((CaughtInCobweb)pGretel.mCurrentActivity).CaughtPlayerSwitchItem)).InventoryFocus;
 			pHansel.Inventory.Draw(pSpriteBatch, pHansel.SkeletonPosition + InventoryOffset, InventoryFading.VisibilityHansel, TmpFocusHansel);
 			pGretel.Inventory.Draw(pSpriteBatch, pGretel.SkeletonPosition + InventoryOffset, InventoryFading.VisibilityGretel, TmpFocusGretel);
 		}

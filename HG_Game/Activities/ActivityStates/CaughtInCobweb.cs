@@ -14,11 +14,13 @@ namespace HG_Game
 		protected float OldProgress;
 		protected bool pLeaveUp = false;
 		protected Vector2 StartOffsetActionRectangle2 = new Vector2(0, -200);
+		public ActivityState CaughtPlayerSwitchItem;
 
 		public CaughtInCobweb(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
 			QTE = new QuickTimeEvent(pHansel.Input, pGretel.Input, false, false, true);
+			CaughtPlayerSwitchItem = ActivityHandler.None;
 		}
 
 		#region Override Methods
@@ -115,6 +117,24 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 11:
+					//Inventar im Netz öffnen / schließen
+					if (pPlayer.Input.SwitchItemJustPressed)
+					{
+						if (CaughtPlayerSwitchItem.GetType() == typeof(SwitchItem))
+						{ //Schließen
+							CaughtPlayerSwitchItem = ActivityHandler.None;
+						}
+						else
+						{ //Öffnen
+							if (pPlayer.GetType() == typeof(Hansel))
+								CaughtPlayerSwitchItem = new SwitchItem((Hansel)pPlayer, (Gretel)pOtherPlayer, true);
+							else
+								CaughtPlayerSwitchItem = new SwitchItem((Hansel)pOtherPlayer, (Gretel)pPlayer, true);
+						}
+					}
+					if (pPlayer.Input.BackJustPressed) //Schließen
+						CaughtPlayerSwitchItem = ActivityHandler.None;
+					CaughtPlayerSwitchItem.Update(pPlayer, pOtherPlayer);
 					//if (Conditions.AnimationComplete(pPlayer))
 						//Sequences.End();
 					break;

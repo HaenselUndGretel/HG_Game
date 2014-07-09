@@ -12,22 +12,38 @@ namespace HG_Game
 	{
 		protected const float MaxSwapDistance = 200f;
 		public int InventoryFocus;
+		protected bool InCobweb;
+		protected int InCobwebState;
 
 		public SwitchItem(Hansel pHansel, Gretel pGretel)
 			: base(pHansel, pGretel)
 		{
 			InventoryFocus = 1;
+			InCobweb = false;
+		}
+
+		public SwitchItem(Hansel pHansel, Gretel pGretel, bool pInCobweb)
+			: base(pHansel, pGretel)
+		{
+			InventoryFocus = 1;
+			InCobweb = pInCobweb;
 		}
 
 		#region Override Methods
 
 		public override void Update(Player pPlayer, Player pOtherPlayer)
 		{
-			switch (pPlayer.mCurrentState)
+			int State = pPlayer.mCurrentState;
+			if (InCobweb)
+				State = InCobwebState;
+			switch (State)
 			{
 				case 0:
 					InventoryFocus = pPlayer.Inventory.ItemFocus;
-					++pPlayer.mCurrentState;
+					if (InCobweb)
+						++InCobwebState;
+					else
+						++pPlayer.mCurrentState;
 					break;
 				case 1:
 					//Navigate Inventory
@@ -41,12 +57,14 @@ namespace HG_Game
 					if (pPlayer.Input.UseItemJustPressed && pPlayer.Inventory.ItemSlots[InventoryFocus].Item != null)
 					{
 						pPlayer.Inventory.ItemFocus = InventoryFocus;
-						++pPlayer.mCurrentState;
+						if (!InCobweb)
+							++pPlayer.mCurrentState;
 						return;
 					}
 					if (pPlayer.Input.SwitchItemJustPressed || pPlayer.Input.BackJustPressed)
 					{
-						++pPlayer.mCurrentState;
+						if (!InCobweb)
+							++pPlayer.mCurrentState;
 						return;
 					}
 

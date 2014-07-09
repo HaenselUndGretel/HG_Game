@@ -55,7 +55,10 @@ namespace HG_Game
 						break;
 					case 2:
 						if (Conditions.AnimationComplete(pPlayer))
+						{
 							Sequences.SetPlayerToIdle(pPlayer);
+							m2ndState = true;
+						}
 						break;
 				}
 			}

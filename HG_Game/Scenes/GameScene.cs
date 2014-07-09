@@ -92,8 +92,8 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 
 			mGretel.Chalk = 2;
-			mHansel.Inventory.TryToStore(new Branch("cobweb"));
-			mHansel.Inventory.GetItemByType(typeof(Branch)).LoadContent();
+			mHansel.Inventory.TryToStore(new Key("cobweb"));
+			mHansel.Inventory.GetItemByType(typeof(Key)).LoadContent();
 		}
 
 		public override void Update()

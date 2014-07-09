@@ -173,11 +173,11 @@ namespace HG_Game
 			//sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
 			//sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
 			//sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
-			sb.AppendLine("Hansel:"+mHansel.mCurrentState + " " +mHansel.mCurrentActivity.GetType().ToString());
-			sb.AppendLine("Gretel:" + mGretel.mCurrentState + " " + mGretel.mCurrentActivity.GetType().ToString());
+			//sb.AppendLine("Hansel:"+mHansel.mCurrentState + " " +mHansel.mCurrentActivity.GetType().ToString());
+			//sb.AppendLine("Gretel:" + mGretel.mCurrentState + " " + mGretel.mCurrentActivity.GetType().ToString());
 			
 			mSpriteBatch.Begin();
-			mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);
+			//mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);
 			mSpriteBatch.End();
 			}
 #endif

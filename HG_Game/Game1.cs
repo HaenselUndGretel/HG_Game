@@ -28,7 +28,7 @@ namespace HG_Game
 			EngineSettings.DisplayHeight = 720;
 			EngineSettings.DisplayWidth = 1280;
 			EngineSettings.SetResolution(1280, 720);
-			//EngineSettings.SetToFullScreen();
+			EngineSettings.SetToFullScreen();
 		}
 
 		/// <summary>

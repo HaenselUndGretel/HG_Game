@@ -915,6 +915,14 @@
       <Name>usekey</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="hug\000_.hug">
+      <Name>000_</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hug\001_.hug">
+      <Name>001_</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="sfx\MusicForest0.mp3">
       <Name>MusicForest0</Name>
       <Importer>Mp3Importer</Importer>

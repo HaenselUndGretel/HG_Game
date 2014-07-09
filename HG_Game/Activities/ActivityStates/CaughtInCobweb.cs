@@ -12,6 +12,8 @@ namespace HG_Game
 	{
 		public QuickTimeEvent QTE;
 		protected float OldProgress;
+		protected bool pLeaveUp = false;
+		protected Vector2 StartOffsetActionRectangle2 = new Vector2(0, -200);
 
 		public CaughtInCobweb(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
@@ -45,12 +47,34 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0: //FreeFromCobweb
-					if (Conditions.PlayerAtActionPosition(pPlayer, true))
+					if (Conditions.PlayerAtCobwebActionPosition(pPlayer, StartOffsetActionRectangle2))
 						++pPlayer.mCurrentState;
-					Sequences.MovePlayerToActionPosition(pPlayer, true);
+					foreach (Rectangle rect in rIObj.ActionRectList)
+					{
+						if (rect.Contains(pPlayer.CollisionRectList[0]))
+						{
+							if (rect.Contains(new Point((int)rIObj.ActionPosition2.X, (int)rIObj.ActionPosition2.Y)))
+								Sequences.MovePlayerToCobwebActionPosition(pPlayer, Vector2.Zero);
+							else
+								Sequences.MovePlayerToCobwebActionPosition(pPlayer, StartOffsetActionRectangle2);
+						}
+					}
 					break;
 				case 1:
 					Sequences.StartAnimation(pPlayer, "attack");
+					//Leave Up or Down?
+					float ActionToCollisionRectY = 0f;
+					foreach (Rectangle rect in rIObj.ActionRectList)
+					{
+						if (pPlayer.CollisionBox.Intersects(rect))
+							ActionToCollisionRectY = rIObj.CollisionRectList[0].Y - rect.Y;
+					}
+
+					if (ActionToCollisionRectY > 0f)
+						pLeaveUp = true;
+					else
+						pLeaveUp = false;
+
 					if (pPlayer.GetType() == typeof(Hansel))
 						QTE.OnlyOnePlayerIsHansel = true;
 					else
@@ -75,15 +99,14 @@ namespace HG_Game
 					}
 					break;
 				case 3:
-					if (!Conditions.Contains(pPlayer, rIObj) && !Conditions.Contains(pOtherPlayer, rIObj))
+					if (!Conditions.CobwebIntersects(pPlayer, rIObj) && !Conditions.CobwebIntersects(pOtherPlayer, rIObj))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 						m2ndState = false;
-						break;
 					}
-					Sequences.MoveUpDown(pPlayer, false);
-					Sequences.MoveUpDown(pOtherPlayer, false);
+					Sequences.MoveUpDown(pPlayer, pLeaveUp);
+					Sequences.MoveUpDown(pOtherPlayer, pLeaveUp);
 					break;
 				case 10: //CaughtInCobeweb
 					Sequences.SetToPosition(pPlayer, rIObj.ActionPosition1);

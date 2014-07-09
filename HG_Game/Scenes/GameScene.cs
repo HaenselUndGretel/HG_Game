@@ -50,8 +50,8 @@ namespace HG_Game
 			//Player
 			mHansel = new Hansel("skeleton");
 			mGretel = new Gretel("skeleton");
-			//mHansel.mCurrentActivity = ActivityHandler.None;
-			//mGretel.mCurrentActivity = ActivityHandler.None;
+			mHansel.mCurrentActivity = ActivityHandler.None;
+			mGretel.mCurrentActivity = ActivityHandler.None;
 			//Camera
 			mCamera = new Camera();
 			//Savegame
@@ -92,8 +92,8 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 
 			mGretel.Chalk = 2;
-			mHansel.Inventory.TryToStore(new Key("cobweb"));
-			mHansel.Inventory.GetItemByType(typeof(Key)).LoadContent();
+			mHansel.Inventory.TryToStore(new Knife("cobweb"));
+			mHansel.Inventory.GetItemByType(typeof(Knife)).LoadContent();
 		}
 
 		public override void Update()

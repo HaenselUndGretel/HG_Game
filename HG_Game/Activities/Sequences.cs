@@ -25,6 +25,11 @@ namespace HG_Game
 			pPlayer.MoveAgainstPoint(APPosition);
 		}
 
+		public static void MovePlayerToCobwebActionPosition(Player pPlayer, Vector2 pOffsetOtherPosition)
+		{
+			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.ActionPosition2 + pOffsetOtherPosition);
+		}
+
 		public static void MovePlayerToNearestActionPosition(Player pPlayer)
 		{
 			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.SkeletonPosition));

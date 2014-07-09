@@ -41,6 +41,25 @@ namespace HG_Game
 			return false;
 		}
 
+		public static bool CobwebIntersects(Player pPlayer, InteractiveObject pIObj)
+		{
+			foreach (Rectangle rect in pIObj.ActionRectList)
+			{
+				if (rect.Intersects(pPlayer.CollisionBox)) //Contains
+				{
+					return true;
+				}
+			}
+			foreach (Rectangle rect in pIObj.CollisionRectList)
+			{
+				if (rect.Intersects(pPlayer.CollisionBox)) //Contains
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
 		//ActionButton
 		public static bool ActionHold(Player pPlayer)
 		{
@@ -107,6 +126,13 @@ namespace HG_Game
 			if (pAP2)
 				APPosition = pPlayer.mCurrentActivity.rIObj.ActionPosition2;
 			if (pPlayer.SkeletonPosition == APPosition)
+				return true;
+			return false;
+		}
+
+		public static bool PlayerAtCobwebActionPosition(Player pPlayer, Vector2 pOffsetOtherPosition)
+		{
+			if (pPlayer.SkeletonPosition == pPlayer.mCurrentActivity.rIObj.ActionPosition2 || (pPlayer.SkeletonPosition == pPlayer.mCurrentActivity.rIObj.ActionPosition2 + pOffsetOtherPosition))
 				return true;
 			return false;
 		}

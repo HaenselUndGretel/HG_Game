@@ -1131,10 +1131,6 @@
       <Name>bookShelf</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="spine\desktop.ini">
-      <Name>desktop</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="spine\stonePush.atlas">
       <Name>stonePush</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -144,7 +144,7 @@ namespace HG_Game
 
 			mButtons[SelectedIndex].IsSelected = true;
 
-			if (InputHelper.ButtonJustPressed2Player(Buttons.A))
+			if (InputHelper.ButtonJustPressed2Player(Buttons.A) || InputHelper.Player1.ActionJustPressed)
 				mButtons[SelectedIndex].IsClicked();
 		}
 

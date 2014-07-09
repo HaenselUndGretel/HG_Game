@@ -95,7 +95,7 @@
 	}
 },
 "animations": {
-	"anim_1": {
+	"idle": {
 		"bones": {
 			"root": {
 				"rotate": [
@@ -341,7 +341,7 @@
 			}
 		}
 	},
-	"anim_2": {
+	"attack": {
 		"bones": {
 			"root": {
 				"rotate": [

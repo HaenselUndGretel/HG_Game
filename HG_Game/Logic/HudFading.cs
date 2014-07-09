@@ -116,6 +116,17 @@ namespace HG_Game
 			}
 		}
 
+		public void SetAllToFalse(bool pInstantInvisible = false)
+		{
+			StateHansel.ShowHud = false;
+			StateGretel.ShowHud = false;
+			if (pInstantInvisible)
+			{
+				StateHansel.Visibility = 0f;
+				StateGretel.Visibility = 0f;
+			}
+		}
+
 		#endregion
 
 	}

@@ -63,10 +63,10 @@ namespace HG_Game
 		public bool OnlyOnePlayerIsHansel;
 
 		//ButtonHUD
-		HudFading ButtonFading;
-		Texture2D ButtonHansel;
-		Texture2D ButtonGretel;
-		Vector2 ButtonOffset;
+		public HudFading ButtonFading;
+		protected Texture2D ButtonHansel;
+		protected Texture2D ButtonGretel;
+		protected Vector2 ButtonOffset;
 
 		#endregion
 

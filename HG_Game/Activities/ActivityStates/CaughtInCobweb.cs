@@ -93,7 +93,10 @@ namespace HG_Game
 					Sequences.UpdateAnimationStepping(pPlayer, OldProgress);
 
 					if (QTE.State == QuickTimeEvent.QTEState.Failed)
-						Sequences.SetPlayerToIdle(pPlayer);
+					{
+						QTE.ButtonFading.SetAllToFalse();
+						pPlayer.mCurrentState = 5;
+					}
 					if (QTE.State == QuickTimeEvent.QTEState.Successfull && OldProgress >= 1.0f)
 					{
 						++pPlayer.mCurrentState;
@@ -109,6 +112,11 @@ namespace HG_Game
 					}
 					Sequences.MoveUpDown(pPlayer, pLeaveUp);
 					Sequences.MoveUpDown(pOtherPlayer, pLeaveUp);
+					break;
+				case 5:
+					if (QTE.ButtonFading.VisibilityHansel == 0f && QTE.ButtonFading.VisibilityGretel == 0f)
+						Sequences.SetPlayerToIdle(pPlayer);
+					QTE.ButtonFading.Update();
 					break;
 				case 10: //CaughtInCobeweb
 					Sequences.SetToPosition(pPlayer, rIObj.ActionPosition1);

@@ -358,7 +358,7 @@ namespace HG_Game
 		public void SetToGretelGrab()
 		{
 			State = QTEState.Gretel;
-			CurrentInputGretel = InputHelper.mAction;
+			CurrentInputGretel = InputHelper.mUseItem;
 			Progress = 0.9f;
 			ProgressSteps = 1.0f;
 			OnlyX = false;
@@ -366,7 +366,7 @@ namespace HG_Game
 			OnlyOnePlayerIsHansel = false;
 			ButtonFading.ShowHudHansel = false;
 			ButtonFading.ShowHudGretel = true;
-			ButtonGretel = TextureManager.Instance.GetElementByString("button_x");
+			ButtonGretel = TextureManager.Instance.GetElementByString("button_a");
 		}
 
 		public void SetToGretelGrabbed()

@@ -68,6 +68,8 @@ namespace HG_Game
 		protected Texture2D ButtonGretel;
 		protected Vector2 ButtonOffset;
 
+		protected bool GrabItem = false;
+
 		#endregion
 
 		#region Constructor
@@ -167,6 +169,8 @@ namespace HG_Game
 
 		protected bool PressedWrongInput(bool pHansel)
 		{
+			if (GrabItem)
+				return false;
 			//Wenn nur X gedrückt werden soll passiert nichts wenn etwas anderes gedrückt wird
 			if (OnlyX)
 				return false;
@@ -265,6 +269,8 @@ namespace HG_Game
 
 		protected void NotPressed()
 		{
+			if (GrabItem)
+				return;
 			switch (State)
 			{
 				case QTEState.Hansel:
@@ -351,6 +357,8 @@ namespace HG_Game
 					return (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds - TimerHansel) / (DelayHansel * SlowdownHansel * SlowdownTurnAround);
 				case QTEState.GretelTurnAround:
 					return (float)(EngineSettings.Time.ElapsedGameTime.TotalMilliseconds - TimerGretel) / (DelayGretel * SlowdownGretel * SlowdownTurnAround);
+				case QTEState.Failed:
+					return 0.0f;
 			}
 			throw new Exception("Progress bei dafür nicht gültigem State abgefragt.");
 		}
@@ -367,6 +375,7 @@ namespace HG_Game
 			ButtonFading.ShowHudHansel = false;
 			ButtonFading.ShowHudGretel = true;
 			ButtonGretel = TextureManager.Instance.GetElementByString("button_a");
+			GrabItem = true;
 		}
 
 		public void SetToGretelGrabbed()
@@ -374,6 +383,7 @@ namespace HG_Game
 			State = QTEState.Finished;
 			Progress = 1.1f;
 			ButtonFading.ShowHudGretel = false;
+			GrabItem = false;
 		}
 
 		#endregion

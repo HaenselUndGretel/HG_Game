@@ -82,7 +82,6 @@ namespace HG_Game
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
-			//mScene = mSavegame.Scenes[1];
 			mRenderer.AmbientLight = mScene.SceneAmbientLight;
 
 			//Camera
@@ -93,7 +92,11 @@ namespace HG_Game
 
 			mGretel.Chalk = 2;
 			mHansel.Inventory.TryToStore(new Branch("cobweb"));
+			mHansel.Inventory.TryToStore(new Key("cobweb"));
+			mHansel.Inventory.TryToStore(new Knife("cobweb"));
 			mHansel.Inventory.GetItemByType(typeof(Branch)).LoadContent();
+			mHansel.Inventory.GetItemByType(typeof(Key)).LoadContent();
+			mHansel.Inventory.GetItemByType(typeof(Knife)).LoadContent();
 		}
 
 		public override void Update()

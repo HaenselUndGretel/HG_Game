@@ -28,6 +28,7 @@ namespace HG_Game
 				Conditions.Contains(pPlayer, rIObj)
 				)
 			{
+				m2ndState = true;
 				pPlayer.mCurrentActivity = this;
 				pPlayer.mCurrentState = 10;
 				return Activity.None;
@@ -71,6 +72,7 @@ namespace HG_Game
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
+						m2ndState = false;
 						break;
 					}
 					Vector2 Source = new Vector2(rIObj.ActionRectList[0].Center.X, rIObj.ActionRectList[0].Center.Y);
@@ -79,6 +81,7 @@ namespace HG_Game
 					break;
 				case 10: //CaughtInSwamp
 					Sequences.StartAnimation(pPlayer, "attack", true);
+					OldProgress = 0f;
 					++pPlayer.mCurrentState;
 					break;
 				case 11:

@@ -17,7 +17,7 @@ namespace HG_Game
 		protected Vector2 StartPosition;
 		protected Vector2 Direction;
 
-		protected ThumbstickProgress Progress;
+		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
@@ -25,7 +25,7 @@ namespace HG_Game
 		{
 			StartPosition = Vector2.Zero;
 			Direction = Vector2.Zero;
-			Progress = new ThumbstickProgress();
+			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
 		}
 

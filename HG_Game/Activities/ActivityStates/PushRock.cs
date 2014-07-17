@@ -19,13 +19,13 @@ namespace HG_Game
 		protected Vector2 mDestinationIObj;
 
 		protected const int RockMoveDistance = 256;
-		protected ThumbstickProgress Progress;
+		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
 		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
 		{
-			Progress = new ThumbstickProgress();
+			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
 		}
 

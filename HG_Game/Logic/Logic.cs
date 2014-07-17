@@ -15,6 +15,8 @@ namespace HG_Game
 		public SceneSwitchHandler SceneSwitchHandler;
 		public ActivityHandler ActivityHandler;
 		public ItemHandler ItemHandler;
+		public EventHandler EventHandler;
+		public TemperatureHandler TemperatureHandler;
 
 		public bool HanselMayMove;
 		public bool GretelMayMove;
@@ -37,6 +39,8 @@ namespace HG_Game
 			SceneSwitchHandler = new SceneSwitchHandler();
 			ActivityHandler = new ActivityHandler();
 			ItemHandler = new ItemHandler();
+			EventHandler = new EventHandler();
+			TemperatureHandler = new TemperatureHandler();
 		}
 
 		public void LoadContent()
@@ -50,6 +54,8 @@ namespace HG_Game
 			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
 			ActivityHandler.Update(pScene, pHansel, pGretel);
 			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame);
+			EventHandler.Update(pScene, pHansel, pGretel);
+			TemperatureHandler.Update(pHansel, pGretel);
 
 			//Check whether Player may move
 			HanselMayMove = true;
@@ -59,28 +65,8 @@ namespace HG_Game
 				HanselMayMove = false;
 				GretelMayMove = false;
 			}
-
-			UpdateEventTrigger(pScene, pHansel, pGretel);
 		}
 
-		private void UpdateEventTrigger(SceneData pScene, Hansel pHansel, Gretel pGretel)
-		{
-			if (pScene.Events.Count == 0) return;
-
-			List<EventTrigger> delEvents = new List<EventTrigger>();
-			foreach (EventTrigger et in pScene.Events)
-			{
-				if (et.CollisionBox.Contains(pHansel.CollisionBox) || et.CollisionBox.Contains(pGretel.CollisionBox))
-				{
-					et.TriggerActivity();
-					delEvents.Add(et);
-				}
-			}
-
-			foreach (EventTrigger et in delEvents)
-				pScene.Events.Remove(et);
-
-		}
 		#endregion
 	}
 }

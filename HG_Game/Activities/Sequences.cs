@@ -121,7 +121,7 @@ namespace HG_Game
 		}
 
 		//ActivityInstruction & Progress Update
-		public static void UpdateActIProgressBoth(ThumbstickProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
+		public static void UpdateActIProgressBoth(SteppingProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
 		{
 			if (!Conditions.ActionThumbstickPressedBothPlayer(pPlayer, pOtherPlayer, pThumbstickDirection))
 			{
@@ -143,7 +143,7 @@ namespace HG_Game
 			}
 		}
 
-		public static void UpdateActIProgressBothLegUp(ThumbstickProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
+		public static void UpdateActIProgressBothLegUp(SteppingProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
 		{
 			if (!Conditions.ActionThumbstickPressed(pPlayer, pThumbstickDirection) || !Conditions.ActionHold(pOtherPlayer))
 			{

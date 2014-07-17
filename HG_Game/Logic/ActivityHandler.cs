@@ -56,10 +56,7 @@ namespace HG_Game
 			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
 			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
 			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
-
 			/*
-			FreeFromCobweb, "Befreien [Netz]"
-			FreeFromSwamp, "Befreien [Sumpf]"
 			KnockOverTree, "Umwerfen [Baum]"
 			BalanceOverTree, "Balancieren [Baum]"
 			PushRock, "Drücken [Fels]"
@@ -67,14 +64,10 @@ namespace HG_Game
 			JumpOverGap, "Springen [Abgrund]"
 			LegUp, "Räuberleiter"
 			LegUpGrab, "Hoch heben"
-			UseKey, "Schlüssel benutzen [Tür]"
 			PushDoor, "Drücken [Tür]"
 			PullDoor, "Ziehen [Tür]"
-			UseChalk, "Markieren [Kreide]"
 			UseWell, "Herablassen [Brunnen]"
-			BalanceOverBrokenTree, "Balancieren [Brüchiger Baum]"
 			*/
-
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
@@ -151,6 +144,8 @@ namespace HG_Game
 			ActionInfoFading.Update();
 		}
 
+		#region Draw
+
 		public void DrawActionInfo(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
 		{
 			//ActionInfo
@@ -176,6 +171,8 @@ namespace HG_Game
 				pGretel.mCurrentActivity.Draw(pSpriteBatch, pGretel, pHansel);
 			}
 		}
+
+		#endregion
 
 		#region Setup InteractiveObjects.ActivityState
 

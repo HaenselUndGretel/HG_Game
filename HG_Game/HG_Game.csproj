@@ -83,7 +83,9 @@
     <Compile Include="Activities\ActivityStates\SlipThroughRock.cs" />
     <Compile Include="Activities\ActivityStates\PushDoor.cs" />
     <Compile Include="Activities\ActivityStates\UseWell.cs" />
-    <Compile Include="Activities\ThumbstickProgress.cs" />
+    <Compile Include="Activities\SteppingProgress.cs" />
+    <Compile Include="Logic\EventHandler.cs" />
+    <Compile Include="Logic\TemperatureHandler.cs" />
     <Compile Include="Scenes\Cheats.cs" />
     <Compile Include="Logic\ActivityHandler.cs" />
     <Compile Include="Logic\HudFading.cs" />

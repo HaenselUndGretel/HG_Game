@@ -11,13 +11,13 @@ namespace HG_Game
 {
 	class UseWell : ActivityState
 	{
-		protected ThumbstickProgress Progress;
+		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
 		public UseWell(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
 		{
-			Progress = new ThumbstickProgress();
+			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
 			ActI.SetThumbstickDir(pHansel, ActivityInstruction.ThumbstickDirection.Rotate);
 			ActI.SetThumbstickDir(pGretel, ActivityInstruction.ThumbstickDirection.None);

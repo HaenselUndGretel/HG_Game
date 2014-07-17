@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HG_Game
 {
-	public class ThumbstickProgress
+	public class SteppingProgress
 	{
 		#region Properties
 
@@ -19,13 +19,14 @@ namespace HG_Game
 
 		protected float ProgressSpeed { get { return (float)(EngineSettings.Time.ElapsedGameTime.TotalSeconds / (double)ProgressDuration); } }
 		public float Progress { get { return mProgress; } }
+		public float ProgressInverse { get { return 1f - mProgress; } }
 		public bool Complete { get { return (Progress >= 1f) ? true : false; } }
 
 		#endregion
 
 		#region Constructor
 
-		public ThumbstickProgress(float pProgressDuration = 1f)
+		public SteppingProgress(float pProgressDuration = 1f)
 		{
 			mProgress = 0f;
 			ProgressDuration = pProgressDuration;

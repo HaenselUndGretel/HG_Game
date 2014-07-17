@@ -11,13 +11,13 @@ namespace HG_Game
 {
 	class PushDoor : ActivityState
 	{
-		protected ThumbstickProgress Progress;
+		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
 		public PushDoor(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
-			Progress = new ThumbstickProgress();
+			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
 		}
 

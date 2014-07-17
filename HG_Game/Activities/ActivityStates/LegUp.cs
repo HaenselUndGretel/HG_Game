@@ -14,13 +14,13 @@ namespace HG_Game
 		protected Vector2 mStartOffsetGretel = new Vector2(55, -20);
 		protected Vector2 mOffsetGretel = new Vector2(-20, -255);
 
-		protected ThumbstickProgress Progress;
+		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
 		public LegUp(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
-			Progress = new ThumbstickProgress();
+			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
 		}
 

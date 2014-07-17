@@ -158,23 +158,29 @@ namespace HG_Game
 
 				SpriteFont font = FontManager.Instance.GetElementByString("font");
 				StringBuilder sb = new StringBuilder();
-				/*
-				sb.AppendLine("Hansel:" + mHansel.SkeletonPosition.ToString() + "," + mHansel.CollisionBox.ToString());
-				sb.AppendLine("Gretel:" + mGretel.SkeletonPosition.ToString() + "," + mGretel.CollisionBox.ToString());
-				sb.AppendLine("Camera:" + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + "," + mCamera.GameScreen.ToString());
-				sb.AppendLine("Hansel:"+mHansel.mCurrentState + " " +mHansel.mCurrentActivity.GetType().ToString());
-				sb.AppendLine("Gretel:" + mGretel.mCurrentState + " " + mGretel.mCurrentActivity.GetType().ToString());
-				*/
-				/*
-				sb.AppendLine(mHansel.Input.LeftStickRotation.ToString());
-				for (int i = 0; i < (int)(mHansel.Input.LeftStickRotation * 100); ++i)
+
+				sb.AppendLine("--------------------Player--------------------");
+				sb.AppendLine("Hansel: __Pos_ " + mHansel.SkeletonPosition.ToString() + " __CBox_ " + mHansel.CollisionBox.ToString() + " __BTemp_ " + mHansel.BodyTemperature.ToString());
+				sb.AppendLine("Gretel: __Pos_ " + mGretel.SkeletonPosition.ToString() + " __CBox_ " + mGretel.CollisionBox.ToString() + " __BTemp_ " + mGretel.BodyTemperature.ToString());
+				sb.AppendLine("--------------------Camera--------------------");
+				sb.AppendLine("Camera: __Pos_ " + (mCamera.Position - new Vector2(EngineSettings.VirtualResWidth, EngineSettings.VirtualResHeight) / 2).ToString() + " __GameScreen_ " + mCamera.GameScreen.ToString());
+				sb.AppendLine("--------------------ActivityStates--------------------");
+				sb.AppendLine("Hansel: __State_ " + mHansel.mCurrentState + " __ActivityState_ " + mHansel.mCurrentActivity.GetType().ToString());
+				sb.AppendLine("Gretel: __State_ " + mGretel.mCurrentState + " __ActivityState " + mGretel.mCurrentActivity.GetType().ToString());
+				sb.AppendLine("--------------------ThumbstickRotation--------------------");
+				sb.AppendLine("Rotation: " + mHansel.Input.LeftStickRotation.ToString());
+				sb.AppendLine("Mit Uhrzeiger");
+				for (int i = 0; i < (int)(mHansel.Input.LeftStickRotation * 1000); ++i)
 					sb.Append("|");
 				sb.AppendLine("");
-				for (int i = 0; i > (int)(mHansel.Input.LeftStickRotation * 100); --i)
+				sb.AppendLine("Gegen Uhrzeiger");
+				for (int i = 0; i > (int)(mHansel.Input.LeftStickRotation * 1000); --i)
 					sb.Append("|");
-				*/
+				sb.AppendLine("");
+				sb.AppendLine("-------------------- --------------------");
+				
 				mSpriteBatch.Begin();
-				mSpriteBatch.DrawString(font, sb.ToString(), new Vector2(100, 100), Color.White);
+				mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
 				mSpriteBatch.End();
 			}
 #endif

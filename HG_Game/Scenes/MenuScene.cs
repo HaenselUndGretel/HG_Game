@@ -319,6 +319,7 @@ namespace HG_Game
 		private void StartNewGame()
 		{
 			// Hauptgame Scene
+			((GameScene)SceneManager.Instance.GetScene("Game")).RestartSavegame();
 			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(1);
 			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(2);
 			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(3);

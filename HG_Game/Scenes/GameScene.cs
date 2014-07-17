@@ -75,10 +75,8 @@ namespace HG_Game
 			mGretel.mCurrentActivity = ActivityHandler.None;
 			mHansel.LoadReferences(mCamera, mGretel);
 			mGretel.LoadReferences(mCamera, mHansel);
-			mHansel.SkeletonPosition = new Vector2(50, 100);
-			mGretel.SkeletonPosition = new Vector2(50, 50);
-			mHansel.MoveInteractiveObject(Vector2.Zero);
-			mGretel.MoveInteractiveObject(Vector2.Zero);
+			mHansel.ApplySettings();
+			mGretel.ApplySettings();
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
@@ -101,8 +99,10 @@ namespace HG_Game
 				mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
 				mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
 
+#if DEBUG
 				//DebugCheats, im finalen Spiel löschen
 				Cheats.Update(mSavegame, mScene, mHansel, mGretel);
+#endif
 
 				//Update Camera
 				mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
@@ -134,12 +134,16 @@ namespace HG_Game
 
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
 
-			//--------------------SpriteBatch (HUD, Infos & PauseMenu)--------------------
+			//--------------------SpriteBatch WorldSpace(HUD & Infos)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
 			//Render ActionInfo
 			mLogic.ActivityHandler.DrawActionInfo(mSpriteBatch, mHansel, mGretel);
 			//Render ButtonHud
 			mLogic.ActivityHandler.DrawActivityInstruction(mSpriteBatch, mHansel, mGretel);
+			mSpriteBatch.End();
+
+			//--------------------SpriteBatch ScreenSpace(PauseMenu)--------------------
+			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 			//Render PauseMenu
 			mPauseMenu.Draw(mSpriteBatch);
 			mSpriteBatch.End();
@@ -186,6 +190,23 @@ namespace HG_Game
 #endif
 			#endregion
 
+		}
+
+		#endregion
+
+		#region Methods
+
+		public void RestartSavegame()
+		{
+			mSavegame.Reset();
+			RestartGame();
+			Savegame.Save(mSavegame, mHansel, mGretel);
+		}
+
+		public void RestartGame()
+		{
+			Initialize();
+			LoadContent();
 		}
 
 		#endregion

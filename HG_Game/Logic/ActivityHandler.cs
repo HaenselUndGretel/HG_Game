@@ -46,21 +46,16 @@ namespace HG_Game
 			ActionInfoButton = TextureManager.Instance.GetElementByString("button_x");
 			ActionInfo = new Texture2D[20]; //Anzahl an möglichen Activities
 			string prefix = "ActivityInfo_";
-			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "FreeFromCobweb");
-			ActionInfo[4] = TextureManager.Instance.GetElementByString(prefix + "FreeFromSwamp");
-			ActionInfo[5] = TextureManager.Instance.GetElementByString(prefix + "KnockOverTree");
-			ActionInfo[6] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverTree");
-			ActionInfo[7] = TextureManager.Instance.GetElementByString(prefix + "PushRock");
-			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "SlipThroughRock");
-			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "JumpOverGap");
-			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "LegUp");
-			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "LegUpGrab");
-			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "UseKey");
-			ActionInfo[13] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
-			ActionInfo[14] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
-			ActionInfo[15] = TextureManager.Instance.GetElementByString(prefix + "UseChalk");
-			ActionInfo[16] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
-			ActionInfo[19] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverBrokenTree");
+			ActionInfo[1] = TextureManager.Instance.GetElementByString(prefix + "KnockOverTree");
+			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverTree");
+			ActionInfo[3] = TextureManager.Instance.GetElementByString(prefix + "PushRock");
+			ActionInfo[4] = TextureManager.Instance.GetElementByString(prefix + "SlipThroughRock");
+			ActionInfo[5] = TextureManager.Instance.GetElementByString(prefix + "JumpOverGap");
+			ActionInfo[6] = TextureManager.Instance.GetElementByString(prefix + "LegUp");
+			ActionInfo[7] = TextureManager.Instance.GetElementByString(prefix + "LegUpGrab");
+			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
+			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
+			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
 
 			/*
 			FreeFromCobweb, "Befreien [Netz]"
@@ -92,27 +87,30 @@ namespace HG_Game
 			if (pGretel.mCurrentActivity == None)
 				TestGretel = true;
 
+			//-----Wenn nicht getestet wird keine ActionInfo anzeigen-----
+			ActionInfoFading.ShowHudHansel = false;
+			ActionInfoFading.ShowHudGretel = false;
 			//-----Activity ggf starten-----
 			if (TestHansel || TestGretel)
 			{
 				//Betretene InteractiveObjects bestimmen
 				InteractiveObject IObjIntersectsHansel = null;
 				InteractiveObject IObjIntersectsGretel = null;
-				Activity ActivityHansel = Activity.None;
-				Activity ActivityGretel = Activity.None;
+				Activity PossibleActivityHansel = Activity.None;
+				Activity PossibleActivityGretel = Activity.None;
 				foreach (InteractiveObject iObj in pScene.InteractiveObjects)
 				{
 					foreach (Rectangle rect in iObj.ActionRectList)
 					{
-						if (TestHansel && rect.Intersects(pHansel.CollisionBox))
+						if (TestHansel && rect.Contains(new Point((int)pHansel.SkeletonPosition.X, (int)pHansel.SkeletonPosition.Y)))
 						{
 							IObjIntersectsHansel = iObj;
-							ActivityHansel = iObj.ActivityState.GetPossibleActivity(pHansel, pGretel);
+							PossibleActivityHansel = iObj.ActivityState.GetPossibleActivity(pHansel, pGretel);
 						}
-						if (TestGretel && rect.Intersects(pGretel.CollisionBox))
+						if (TestGretel && rect.Contains(new Point((int)pGretel.SkeletonPosition.X, (int)pGretel.SkeletonPosition.Y)))
 						{
 							IObjIntersectsGretel = iObj;
-							ActivityGretel = iObj.ActivityState.GetPossibleActivity(pGretel, pHansel);
+							PossibleActivityGretel = iObj.ActivityState.GetPossibleActivity(pGretel, pHansel);
 						}
 					}
 				}
@@ -121,30 +119,28 @@ namespace HG_Game
 				if (TestHansel &&
 					IObjIntersectsHansel != null &&
 					Conditions.ActionPressed(pHansel) &&
-					ActivityHansel != Activity.None)
+					PossibleActivityHansel != Activity.None)
 				{
 					pHansel.mCurrentActivity = IObjIntersectsHansel.ActivityState;
 				}
 				if (TestGretel &&
 					IObjIntersectsGretel != null &&
 					Conditions.ActionPressed(pGretel) &&
-					ActivityGretel != Activity.None)
+					PossibleActivityGretel != Activity.None)
 				{
-					pHansel.mCurrentActivity = IObjIntersectsGretel.ActivityState;
+					pGretel.mCurrentActivity = IObjIntersectsGretel.ActivityState;
 				}
 
 				//-----Update ActionInfoState-----
-				ActionInfoFading.ShowHudHansel = false;
-				ActionInfoFading.ShowHudGretel = false;
-				if (ActivityHansel != Activity.None)
+				if (PossibleActivityHansel != Activity.None)
 				{
 					ActionInfoFading.ShowHudHansel = true;
-					ActionInfoHansel = (int)ActivityHansel;
+					ActionInfoHansel = (int)PossibleActivityHansel;
 				}
-				if (ActivityGretel != Activity.None)
+				if (PossibleActivityGretel != Activity.None)
 				{
 					ActionInfoFading.ShowHudGretel = true;
-					ActionInfoGretel = (int)ActivityGretel;
+					ActionInfoGretel = (int)PossibleActivityGretel;
 				}
 			}
 
@@ -159,12 +155,26 @@ namespace HG_Game
 		{
 			//ActionInfo
 			if (ActionInfoHansel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.PositionIO + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
+				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.SkeletonPosition + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
 			if (ActionInfoGretel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.PositionIO + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
+				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.SkeletonPosition + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
 			//ButtonX
-			pSpriteBatch.Draw(ActionInfoButton, pHansel.PositionIO + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
-			pSpriteBatch.Draw(ActionInfoButton, pGretel.PositionIO + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
+			pSpriteBatch.Draw(ActionInfoButton, pHansel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
+			pSpriteBatch.Draw(ActionInfoButton, pGretel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
+		}
+
+		public void DrawActivityInstruction(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
+		{
+			if (pHansel.mCurrentActivity != null)
+			{
+				pHansel.mCurrentActivity.Draw(pSpriteBatch, pHansel, pGretel);
+			}
+			if (pGretel.mCurrentActivity != null)
+			{
+				if (pHansel.mCurrentActivity != null && pGretel.mCurrentActivity == pHansel.mCurrentActivity)
+					return; //Nicht doppelt zeichnen
+				pGretel.mCurrentActivity.Draw(pSpriteBatch, pGretel, pHansel);
+			}
 		}
 
 		#region Setup InteractiveObjects.ActivityState
@@ -176,13 +186,10 @@ namespace HG_Game
 			{
 				foreach (InteractiveObject iObj in pSavegame.Scenes[i].InteractiveObjects)
 				{
-					switch (iObj.Activity)
+					switch (iObj.ActivityId)
 					{
-						case Activity.CaughtInCobweb:
-							iObj.ActivityState = new CaughtInCobweb(pHansel, pGretel, iObj);
-							break;
-						case Activity.CaughtInSwamp:
-							iObj.ActivityState = new CaughtInSwamp(pHansel, pGretel, iObj);
+						case Activity.None:
+							iObj.ActivityState = None;
 							break;
 						case Activity.KnockOverTree:
 							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
@@ -205,22 +212,18 @@ namespace HG_Game
 							iObj.ActivityState = new LegUp(pHansel, pGretel, iObj);
 							break;
 						case Activity.LegUpGrab:
-							iObj.ActivityState = new LegUpGrab(pHansel, pGretel, iObj);
-							break;
-						case Activity.UseKey:
-							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							iObj.ActivityState = new LegUp(pHansel, pGretel, iObj);
+							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.PushDoor:
-							iObj.ActivityState = new UseKey(pHansel, pGretel, iObj);
+							iObj.ActivityState = new PushDoor(pHansel, pGretel, iObj);
 							//ToDo Dummy 2ndState Animation applyen.
 							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.PullDoor:
-							iObj.ActivityState = new PullDoor(pHansel, pGretel, iObj);
-							break;
-						case Activity.UseChalk:
-							iObj.ActivityState = new UseChalk(pHansel, pGretel, iObj);
-							((UseChalk)iObj.ActivityState).rRockData = pSavegame.Scenes[i].ChalkRockData;
+							iObj.ActivityState = new PushDoor(pHansel, pGretel, iObj);
+							//(ToDo Dummy 2ndState Animation applyen.)
+							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.UseWell:
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);

@@ -1,5 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,8 @@ namespace HG_Game
 {
 	class SlipThroughRock : ActivityState
 	{
+		protected Vector2 Destination;
+
 		public SlipThroughRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
@@ -36,18 +40,28 @@ namespace HG_Game
 					Sequences.MovePlayerToNearestActionPosition(pPlayer);
 					break;
 				case 1:
-					Sequences.StartAnimation(pPlayer, "Attack"); //Weg bewegen
+					Sequences.StartAnimation(pPlayer, "attack"); //Weg bewegen
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
 					if (Conditions.AnimationComplete(pPlayer))
 					{
-						Sequences.SetPlayerToPosition(pPlayer, rIObj.DistantActionPosition(pPlayer.PositionIO));
-						Sequences.StartAnimation(pPlayer, "attack");
+						Destination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
+						pPlayer.IsVisible = false;
 						++pPlayer.mCurrentState;
 					}
 					break;
 				case 3:
+					if (pPlayer.SkeletonPosition == Destination)
+					{
+						Sequences.StartAnimation(pPlayer, "attack");
+						pPlayer.IsVisible = true;
+						++pPlayer.mCurrentState;
+						break;
+					}
+					Sequences.MoveToPosition(pPlayer, Destination);
+					break;
+				case 4:
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

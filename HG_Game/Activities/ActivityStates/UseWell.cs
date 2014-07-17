@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +11,24 @@ namespace HG_Game
 {
 	class UseWell : ActivityState
 	{
-		protected const float BucketSpeed = 0.2f; //Wieviel der Gesamtstrecke mit einer Controllerumdrehung zurück gelegt wird
-		protected float BucketState;
+		protected ThumbstickProgress Progress;
+		public ActivityInstruction ActI;
 
 		public UseWell(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
 		{
-			BucketState = 0;
+			Progress = new ThumbstickProgress();
+			ActI = new ActivityInstruction();
+			ActI.SetThumbstickDir(pHansel, ActivityInstruction.ThumbstickDirection.Rotate);
+			ActI.SetThumbstickDir(pGretel, ActivityInstruction.ThumbstickDirection.None);
 		}
 
 		#region Override Methods
 
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
-			if (Conditions.NotHandicapped(pPlayer, Activity.UseWell)
+			if (Conditions.NotHandicapped(pPlayer, Activity.UseWell) &&
+				Conditions.AtRightSideOfWell(pPlayer, rIObj)
 				)
 				return Activity.UseWell;
 			return Activity.None;
@@ -36,7 +41,10 @@ namespace HG_Game
 				case 0:
 					//-----Zu Positionen holden-----
 					if (!Conditions.ActionHold(pPlayer))
+					{
 						Sequences.SetPlayerToIdle(pPlayer);
+						break;
+					}
 					//Wenn Spieler an passenden Positionen sind
 					if ((!m2ndState && Conditions.PlayersAtWellPositions(pPlayer, pOtherPlayer, false)) ||
 						(m2ndState && Conditions.PlayersAtWellPositions(pPlayer, pOtherPlayer, true))
@@ -57,9 +65,9 @@ namespace HG_Game
 					//-----Animationen starten (Hansel an Kurbel bereit machen, Gretel in Korb steigen)-----
 					m2ndState = true;
 					if (pPlayer.GetType() == typeof(Hansel))
-						pPlayer.SetAnimation("attack");
+						pPlayer.SetAnimation("attack"); //An Kurbel
 					else
-						pPlayer.SetAnimation("attack", false);
+						pPlayer.SetAnimation("attack", false); //In Korb steigen
 					++pPlayer.mCurrentState;
 					break;
 				case 3:
@@ -67,7 +75,7 @@ namespace HG_Game
 					if (pOtherPlayer.mCurrentState < 3)
 						break;
 					bool finished = false;
-					if (pPlayer.GetType() == typeof(Gretel))
+					if (pPlayer.GetType() == typeof(Gretel)) //Gretel im Korb
 						finished = Conditions.AnimationComplete(pPlayer);
 					else
 						finished = Conditions.AnimationComplete(pOtherPlayer);
@@ -80,28 +88,56 @@ namespace HG_Game
 						break;
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
-						BucketState += pPlayer.Input.LeftStickRotation * BucketSpeed;
-						if (pPlayer.Input.LeftStickRotation > 0f)
-							pPlayer.SetAnimation("attack"); //Brunnen runter lassen Animation
-						else if (pPlayer.Input.LeftStickRotation < 0f)
-							pPlayer.SetAnimation("attack"); //Brunnen hoch ziehen Animation
+						if (pPlayer.Input.ActionIsPressed && pPlayer.Input.LeftStickRotation != 0f && pOtherPlayer.Input.ActionIsPressed) //Brunnen wird bewegt?
+						{
+							if (pPlayer.Input.LeftStickRotation > 0f)
+							{
+								pPlayer.SetAnimation("attack"); //Brunnen runter lassen Animation
+								pOtherPlayer.SetAnimation("attack");
+							}
+							else if (pPlayer.Input.LeftStickRotation < 0f)
+							{
+								pPlayer.SetAnimation("attack"); //Brunnen hoch ziehen Animation
+								pOtherPlayer.SetAnimation("attack");
+							}
+							ActI.SetFadingState(pPlayer, false, false);
+							ActI.SetFadingState(pOtherPlayer, false, false);
+							Progress.StepFromRotation(pPlayer.Input.LeftStickRotation);
+							UpdateOverlay();
+						}
 						else
+						{
 							pPlayer.SetAnimation("attack"); //Brunnen idle Animation
+							pOtherPlayer.SetAnimation("attack");
+							if (pPlayer.Input.ActionIsPressed && pPlayer.Input.LeftStickRotation != 0f) //Hansel versucht Brunnen zu bewegen?
+								ActI.SetFadingState(pPlayer, false, false);
+							else
+								ActI.SetFadingState(pPlayer, true, false);
+							if (pOtherPlayer.Input.ActionIsPressed)
+								ActI.SetFadingState(pOtherPlayer, false, false);
+							else
+								ActI.SetFadingState(pOtherPlayer, true);
+						}
+
+						if (Progress.Progress <= 0f && pPlayer.Input.LeftStickRotation < 0f)
+						{
+							ActI.SetFadingState(pPlayer, false);
+							ActI.SetFadingState(pOtherPlayer, false);
+							Progress.Reset();
+							pPlayer.SetAnimation(); //Hansel von Kurbel weg nehmen
+							pPlayer.mCurrentState = 10;
+							pOtherPlayer.mCurrentState = 8;
+						}
+						if (Progress.Progress >= 1f && pPlayer.Input.LeftStickRotation > 0f)
+						{
+							ActI.SetFadingState(pPlayer, false);
+							ActI.SetFadingState(pOtherPlayer, false);
+							Progress.Reset(true);
+							pOtherPlayer.mCurrentState = 8;
+						}
+						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
+						Sequences.UpdateMovementStepping(pOtherPlayer, Progress.Progress, Conditions.WellActionPosition2Up(rIObj), rIObj.ActionPosition2);
 					}
-					if (BucketState <= 0f)
-					{
-						BucketState = 0f;
-						pPlayer.SetAnimation(); //Hansel von Kurbel weg nehmen
-						pPlayer.mCurrentState = 10;
-						pOtherPlayer.mCurrentState = 8;
-					}
-					if (BucketState >= 1f)
-					{
-						BucketState = 1f;
-						pOtherPlayer.mCurrentState = 8;
-					}
-					Sequences.UpdateAnimationStepping(rIObj, BucketState);
-					Sequences.UpdateMovementStepping(pOtherPlayer, BucketState, new Vector2(rIObj.ActionPosition2.X - rIObj.ActionPosition1.X, 0), rIObj.ActionPosition2);
 					break;
 				case 8:
 					//-----Oben/Unten aussteigen-----
@@ -122,12 +158,33 @@ namespace HG_Game
 						Sequences.SetPlayerToIdle(pPlayer);
 						if (pPlayer.GetType() == typeof(Hansel))
 						{
-							BucketState = 0f;
+							Progress.Reset();
 							m2ndState = false;
 						}
 					}
 					break;
 			}
+			ActI.Update();
+		}
+
+		protected void UpdateOverlay()
+		{
+			if (Progress.Progress > 0.1f)
+			{
+				//Hide Overlay
+
+				return;
+			}
+			//Display Overlay
+
+		}
+
+		public override void Draw(SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
+		{
+			if (pPlayer.GetType() == typeof(Hansel))
+				ActI.Draw(pSpriteBatch, (Hansel)pPlayer, (Gretel)pOtherPlayer);
+			else
+				ActI.Draw(pSpriteBatch, (Hansel)pOtherPlayer, (Gretel)pPlayer);
 		}
 
 		#endregion

@@ -126,9 +126,9 @@ namespace HG_Game
 			foreach(Waypoint wp in pSceneLookup[pWpHansel.DestinationScene].Waypoints) //Wegpunkte in der Zielscene durchgehen
 			{
 				if (wp.ObjectId == pWpHansel.DestinationWaypoint) //Hansels Zielwegpunkt=
-					DestinationHansel = wp.Position + (pHansel.PositionIO - pWpHansel.Position);
+					DestinationHansel = wp.Position + (pHansel.SkeletonPosition - pWpHansel.Position);
 				if (wp.ObjectId == pWpGretel.DestinationWaypoint) //Gretels Zielwegpunkt?
-					DestinationGretel = wp.Position + (pGretel.PositionIO - pWpGretel.Position);
+					DestinationGretel = wp.Position + (pGretel.SkeletonPosition - pWpGretel.Position);
 			}
 			if (DestinationHansel == Vector2.Zero || DestinationGretel == Vector2.Zero) //ErrorTest
 				throw new Exception("Zielwegpunkt für Hansel oder Gretel nicht gefunden!");
@@ -151,8 +151,8 @@ namespace HG_Game
 			if (FadingProgress >= FadingDuration)
 			{
 				//Switch
-				pHansel.PositionIO = DestinationHansel;
-				pGretel.PositionIO = DestinationGretel;
+				pHansel.MoveInteractiveObject(DestinationHansel - pHansel.SkeletonPosition);
+				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);
 				pScene = pSavegame.Scenes[DestinationScene];
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);

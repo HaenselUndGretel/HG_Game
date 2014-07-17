@@ -31,8 +31,8 @@ namespace HG_Game
 		public bool ShowHudHansel { get { return StateHansel.ShowHud; } set { StateHansel.ShowHud = value; } }
 		public bool ShowHudGretel { get { return StateGretel.ShowHud; } set { StateGretel.ShowHud = value; } }
 
-		public float VisibilityHansel { get { return StateHansel.Visibility; } }
-		public float VisibilityGretel { get { return StateGretel.Visibility; } }
+		public float VisibilityHansel { get { return StateHansel.Visibility; } set { StateHansel.Visibility = value; } }
+		public float VisibilityGretel { get { return StateGretel.Visibility; } set { StateGretel.Visibility = value; } }
 
 		#endregion
 
@@ -113,6 +113,36 @@ namespace HG_Game
 				StateGretel.ShowHud = pShowHud;
 				if (pResetTimer)
 					StateGretel.FadingTimer = 0;
+			}
+		}
+
+		public void SetState(bool pHansel, bool pShow, bool pInstant)
+		{
+			if (pHansel)
+			{
+				StateHansel.Flashing = false;
+				StateHansel.ShowHud = pShow;
+				StateHansel.FadingTimer = 0d;
+				if (pInstant)
+				{
+					if (pShow)
+						StateHansel.Visibility = 1f;
+					else
+						StateHansel.Visibility = 0f;
+				}
+			}
+			else
+			{
+				StateGretel.Flashing = false;
+				StateGretel.ShowHud = pShow;
+				StateGretel.FadingTimer = 0d;
+				if (pInstant)
+				{
+					if (pShow)
+						StateGretel.Visibility = 1f;
+					else
+						StateGretel.Visibility = 0f;
+				}
 			}
 		}
 

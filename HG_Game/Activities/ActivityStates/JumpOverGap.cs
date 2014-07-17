@@ -40,8 +40,8 @@ namespace HG_Game
 					break;
 				case 1:
 					Sequences.StartAnimation(pPlayer, "attack");
-					mDestination = rIObj.DistantActionPosition(pPlayer.PositionIO);
-					mSource = pPlayer.PositionIO;
+					mDestination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
+					mSource = pPlayer.SkeletonPosition;
 					++pPlayer.mCurrentState;
 					break;
 				case 2:

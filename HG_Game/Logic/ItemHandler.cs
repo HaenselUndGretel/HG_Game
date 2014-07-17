@@ -15,8 +15,12 @@ namespace HG_Game
 	{
 		#region Properties
 
-		HudFading InventoryFading;
-		protected Vector2 InventoryOffset;
+		protected enum LanternOwnership { None, Hansel, Gretel };
+
+		protected const float MaxSwapDistance = 200f;
+		protected LanternOwnership Lantern;
+		protected Vector2 LanternOffset;
+		protected PointLight LanternLight;
 
 		#endregion
 
@@ -24,8 +28,9 @@ namespace HG_Game
 
 		public ItemHandler()
 		{
-			InventoryFading = new HudFading(0.3f, 0.3f);
-			InventoryOffset = new Vector2(25, -100);
+			Lantern = LanternOwnership.None;
+			LanternOffset = new Vector2(0, -100);
+			LanternLight = new PointLight(); 
 		}
 
 		#endregion
@@ -34,103 +39,87 @@ namespace HG_Game
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
-			//Das eigentliche InventoryUpdate wird automatisch über den ActivityHandler ausgeführt.
-			if (pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed)
-				pHansel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
-			if (pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed)
-				pGretel.mCurrentActivity = new SwitchItem(pHansel, pGretel);
-
-			UpdateVisibility(pScene, pGretel);
-			CollectItems(pScene, pHansel, pGretel);
-			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
-			InventoryFading.Update();
-		}
-
-		#region Update
-
-		protected void UpdateVisibility(SceneData pScene, Gretel pGretel)
-		{
-			//Get Lantern
-			Lantern lantern = (Lantern)pGretel.Inventory.GetItemByType(typeof(Lantern));
-			if (lantern == null)
-				return;
-
-			//Update Items
-			foreach (Item item in pScene.Items)
+			//SwapItem
+			if (
+				((pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed) ||
+				(pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed))
+				&&
+				((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <= MaxSwapDistance)
+				)
 			{
-				item.IsVisible = false;
-				if (!item.IsHidden || item.CollisionBox.Intersects(pGretel.CollisionBox)) //Item befindet sich im Lichtkreis
+				switch (Lantern)
 				{
-					item.IsVisible = true;
+					case LanternOwnership.Hansel:
+						Lantern = LanternOwnership.Gretel;
+						break;
+					case LanternOwnership.Gretel:
+						Lantern = LanternOwnership.Hansel;
+						break;
 				}
 			}
+			
+			UpdateVisibility(pScene, pHansel, pGretel);
+			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
+		}
 
+		protected void UpdateVisibility(SceneData pScene, Hansel pHansel, Gretel pGretel)
+		{
 			//Update Collectables
 			foreach (Collectable col in pScene.Collectables)
 			{
 				col.IsVisible = false;
-				if (!col.IsHidden || col.CollisionBox.Intersects(pGretel.CollisionBox)) //Collectable befindet sich im Lichtkreis
+				if (!col.IsHidden || InLanternLight(col, pHansel, pGretel)) //Collectable befindet sich im Lichtkreis
 				{
 					col.IsVisible = true;
 				}
 			}
 		}
 
-		protected void CollectItems(SceneData pScene, Hansel pHansel, Gretel pGretel)
+		protected bool InLanternLight(Collectable pCollectable, Hansel pHansel, Gretel pGretel)
 		{
-			foreach (Item item in pScene.Items)
+			if (Lantern == LanternOwnership.None)
+				return false;
+			Vector2 Position;
+			float Radius = 100f;
+			switch (Lantern)
 			{
-				if (item.IsVisible)
-				{
-					if (item.CollisionBox.Intersects(pHansel.CollisionBox))
-					{
-						if (pHansel.Inventory.TryToStore(item))
-						{
-							pScene.Items.Remove(item);
-							return;
-						}
-					}
-					else if (item.CollisionBox.Intersects(pGretel.CollisionBox))
-					{
-						if (pGretel.Inventory.TryToStore(item))
-						{
-							pScene.Items.Remove(item);
-							return;
-						}
-					}
-				}
+				case LanternOwnership.Hansel:
+					Position = pHansel.SkeletonPosition + LanternOffset;
+					if (pHansel.Input.UseItemIsPressed)
+						Radius *= 1.8f;
+					break;
+				case LanternOwnership.Gretel:
+					Position = pGretel.SkeletonPosition + LanternOffset;
+					break;
 			}
+			
+			//Eigentlicher Test
+
+			return true;
 		}
 
 		protected void CollectCollectables(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel)
 		{
 			foreach (Collectable col in pScene.Collectables)
 			{
-				if (col.IsVisible && col.CollisionBox.Intersects(pHansel.CollisionBox) || col.CollisionBox.Intersects(pGretel.CollisionBox))
+				if (col.IsVisible)
 				{
-					pSavegame.Collectables.Add(col);
-					pScene.Collectables.Remove(col);
+					if (col.CollisionBox.Intersects(pHansel.CollisionBox))
+					{
+						pSavegame.Collectables.Add(col);
+						pScene.Collectables.Remove(col);
+					}
+					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
+					{
+						//Bei LegUpGrab Item erst im richtigen Moment einsammeln
+						if (pGretel.mCurrentActivity != null && pGretel.mCurrentActivity.GetType() == typeof(LegUp) && pGretel.mCurrentActivity.m2ndState && pGretel.mCurrentState < 4)
+							return;
+						pSavegame.Collectables.Add(col);
+						pScene.Collectables.Remove(col);
+					}
 				}
 			}
 		}
-
-		#endregion
-
-		#region Draw Inventory
-
-		public void DrawInventory(Hansel pHansel, Gretel pGretel, SpriteBatch pSpriteBatch)
-		{
-			int TmpFocusHansel = 3;
-			int TmpFocusGretel = 3;
-			if (pHansel.mCurrentActivity.GetType() == typeof(SwitchItem))
-				TmpFocusHansel = ((SwitchItem)pHansel.mCurrentActivity).InventoryFocusHansel;
-			if (pGretel.mCurrentActivity.GetType() == typeof(SwitchItem))
-				TmpFocusGretel = ((SwitchItem)pGretel.mCurrentActivity).InventoryFocusGretel;
-			pHansel.Inventory.Draw(pSpriteBatch, pHansel.PositionIO + InventoryOffset, InventoryFading.VisibilityHansel, TmpFocusHansel);
-			pGretel.Inventory.Draw(pSpriteBatch, pGretel.PositionIO + InventoryOffset, InventoryFading.VisibilityGretel, TmpFocusGretel);
-		}
-
-		#endregion
 
 		#endregion
 	}

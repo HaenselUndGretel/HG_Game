@@ -2,6 +2,7 @@
 using KryptonEngine;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,21 @@ namespace HG_Game
 {
 	class KnockOverTree : ActivityState
 	{
-		protected const float EnterBalanceDistance = 100f;
+		protected const float EnterBalanceDistance = 74.0f;
 		protected const float BalanceSpeedFactor = 0.6f;
 		protected Vector2 StartPosition;
 		protected Vector2 Direction;
+
+		protected ThumbstickProgress Progress;
+		public ActivityInstruction ActI;
 
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
 			StartPosition = Vector2.Zero;
 			Direction = Vector2.Zero;
+			Progress = new ThumbstickProgress();
+			ActI = new ActivityInstruction();
 		}
 
 		#region Override Methods
@@ -56,19 +62,64 @@ namespace HG_Game
 						break;
 					case 1:
 						Sequences.StartAnimation(pPlayer, "attack");
+						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
+						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
+						if (DestinationDelta.Y > 0)
+							dir = ActivityInstruction.ThumbstickDirection.Down;
+						else if (DestinationDelta.Y < 0)
+							dir = ActivityInstruction.ThumbstickDirection.Up;
+						else if (DestinationDelta.X < 0)
+							dir = ActivityInstruction.ThumbstickDirection.Left;
+						else
+							dir = ActivityInstruction.ThumbstickDirection.Right;
+
+						ActI.SetThumbstickDir(pPlayer, dir);
+						ActI.SetThumbstickDir(pOtherPlayer, ActivityInstruction.ThumbstickDirection.None);
 						++pPlayer.mCurrentState;
 						break;
 					case 2:
-						if (Conditions.AnimationComplete(pPlayer))
+						if (!Conditions.ActionThumbstickPressed(pPlayer, rIObj.ActionPosition2 - rIObj.ActionPosition1))
+						{
+							ActI.SetFadingState(pPlayer, true);
+							Progress.StepBackward();
+						}
+						else
+						{
+							ActI.SetFadingState(pPlayer, false, false);
+							Progress.StepForward();
+						}
+						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
+						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
+
+						if (Progress.Complete)
+						{
+							//Baum fällt
+							Sequences.StartAnimation(pPlayer, "attack");
+							//Sequences.StartAnimation(rIObj, "attack");
+							ActI.SetFadingState(pPlayer, false);
+							++pPlayer.mCurrentState;
+						}
+						break;
+					case 3:
+						if (Conditions.AnimationComplete(rIObj))
+						{
 							Sequences.SetPlayerToIdle(pPlayer);
+							m2ndState = true;
+						}
 						break;
 				}
+				ActI.Update();
 			}
 			else //BalanceOverTree
 			{
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						if (!Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this))
+						{
+							Sequences.SetPlayerToIdle(pPlayer);
+							return;
+						}
 						if (Conditions.PlayerAtNearestActionPosition(pPlayer))
 							++pPlayer.mCurrentState;
 						Sequences.MovePlayerToNearestActionPosition(pPlayer);
@@ -76,8 +127,8 @@ namespace HG_Game
 					case 1:
 						IsAvailable = false;
 						Sequences.StartAnimation(pPlayer, "attack");
-						StartPosition = pPlayer.PositionIO;
-						Direction = rIObj.DistantActionPosition(pPlayer.PositionIO) - StartPosition;
+						StartPosition = pPlayer.SkeletonPosition;
+						Direction = rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - StartPosition;
 						Direction.Normalize();
 						++pPlayer.mCurrentState;
 						break;
@@ -105,34 +156,45 @@ namespace HG_Game
 						//Fallen
 						if (Fail)
 						{
-							Sequences.End();
+							//Sequences.End();
 						}
 						//WalkAway?
-						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f);
-						Vector2 MovementDirection = TargetActionPosition - pPlayer.PositionIO;
+						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f);
+						Vector2 MovementDirection = TargetActionPosition - pPlayer.SkeletonPosition;
 						MovementDirection.Normalize();
 						//Wenn Entfernung vom Player zum TargetActionPoint <= EnterBalanceEntfernung
-						if ((TargetActionPosition - pPlayer.PositionIO).Length() <= (MovementDirection * EnterBalanceDistance).Length())
+						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
-							Sequences.SetPlayerToPosition(pPlayer, TargetActionPosition - (MovementDirection * EnterBalanceDistance));
 							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
-							StartPosition = pPlayer.PositionIO;
+							StartPosition = pPlayer.SkeletonPosition;
+							Direction = MovementDirection;
 						}
 
 						//BalancingMovement ausführen
-						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.PositionIO + MovementInput * 1000f), BalanceSpeedFactor);
+						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
 					case 4:
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
+						while (pPlayer.CollisionBox.Intersects(pOtherPlayer.CollisionBox))
+							pOtherPlayer.MoveManually(Direction);
 						if (Conditions.AnimationComplete(pPlayer))
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
 							IsAvailable = true;
+							//pPlayer.mCurrentState = 0;
 						}
 						break;
 				}
 			}
+		}
+
+		public override void Draw(SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
+		{
+			if (pPlayer.GetType() == typeof(Hansel))
+				ActI.Draw(pSpriteBatch, (Hansel)pPlayer, (Gretel)pOtherPlayer);
+			else
+				ActI.Draw(pSpriteBatch, (Hansel)pOtherPlayer, (Gretel)pPlayer);
 		}
 
 		#endregion

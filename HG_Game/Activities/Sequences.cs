@@ -25,13 +25,19 @@ namespace HG_Game
 			pPlayer.MoveAgainstPoint(APPosition);
 		}
 
+		public static void MovePlayerToCobwebActionPosition(Player pPlayer, Vector2 pOffsetOtherPosition)
+		{
+			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.ActionPosition2 + pOffsetOtherPosition);
+		}
+
 		public static void MovePlayerToNearestActionPosition(Player pPlayer)
 		{
-			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.PositionIO));
+			pPlayer.MoveAgainstPoint(pPlayer.mCurrentActivity.rIObj.NearestActionPosition(pPlayer.SkeletonPosition));
 		}
 
 		public static void MovePlayerToRightActionPosition(Player pPlayer, Nullable<Vector2> pOffsetGretel = null, float pSpeedFactor = 1f)
 		{
+			if (pPlayer.mCurrentActivity.rIObj == null) return;
 			//Hansel->AP1 Gretel->AP2
 			Vector2 Destination = pPlayer.mCurrentActivity.rIObj.ActionPosition1;
 			if (pPlayer.GetType() == typeof(Gretel))
@@ -60,26 +66,19 @@ namespace HG_Game
 			pPlayer.MoveAgainstPoint(Destination, pSpeedFactor);
 		}
 
-		public static void SetPlayerToPosition(Player pPlayer, Vector2 pPosition)
+		public static void Move(InteractiveObject pPlayerIObj, Vector2 pPosition)
 		{
-			pPlayer.PositionIO = pPosition;
+			pPlayerIObj.MoveInteractiveObject(pPosition);
 		}
 
-		//Move für Cobweb
-		public static void MoveUpDown(Player pPlayer, bool pUp, float pSpeedFactor = 1f)
+		public static void MovePlayer(Player pPlayer, Vector2 pPosition)
 		{
-			Vector2 Direction = new Vector2(0, 1);
-			if (pUp)
-				Direction = new Vector2(0, -1);
-			pPlayer.MoveManually(Direction, pSpeedFactor);
-		}
+			pPlayer.Move(pPosition - pPlayer.SkeletonPosition, new List<Rectangle>());
+		} 
 
-		//Move für Swamp
-		public static void MoveAway(Player pPlayer, Vector2 pSource, float pSpeedFactor = 1f)
+		public static void SetToPosition(InteractiveObject pPlayerIObj, Vector2 pPosition)
 		{
-			Vector2 Direction = pPlayer.PositionIO - pSource;
-			Direction.Normalize();
-			pPlayer.MoveManually(Direction, pSpeedFactor);
+			pPlayerIObj.MoveInteractiveObject(pPosition - pPlayerIObj.SkeletonPosition);
 		}
 
 		//Start Animation
@@ -91,18 +90,18 @@ namespace HG_Game
 		//Animation Stepping
 		public static void UpdateAnimationStepping(SpineObject pSpine, float pProgress)
 		{
-			pSpine.AnimationState.GetCurrent(0).TimeScale = pSpine.AnimationState.GetCurrent(0).EndTime * pProgress;
+			if (pSpine.AnimationState.ToString() == "<none>") return;
+			//if (pSpine.AnimationState.ToString() == "<none>") throw new Exception("SpineObjekt hat keinen AnimationState. TmpFix = return.");
+			pSpine.AnimationState.GetCurrent(0).Time = pSpine.AnimationState.GetCurrent(0).EndTime * pProgress;
 		}
 
 		//Movement Stepping
-		public static void UpdateMovementStepping(Player pPlayer, float pProgress, Vector2 pSource, Vector2 pDestination)
+		public static void UpdateMovementStepping(InteractiveObject pPlayerIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
 		{
-			pPlayer.PositionIO = (pDestination - pSource) * pProgress;
-		}
-
-		public static void UpdateMovementStepping(InteractiveObject pIObj, float pProgress, Vector2 pSource, Vector2 pDestination)
-		{
-			pIObj.PositionIO = (pDestination - pSource) * pProgress;
+			if (pPlayerIObj.GetType() == typeof(Player))
+				MovePlayer((Player)pPlayerIObj, pSource + (pDestination - pSource) * pProgress);
+			else
+				SetToPosition(pPlayerIObj, pSource + (pDestination - pSource) * pProgress);
 		}
 
 		//Pause & Play Animation
@@ -118,7 +117,52 @@ namespace HG_Game
 		public static void SynchMovementToAnimation(SpineObject pSpineToSynchTo, Player pPlayer, Vector2 pSource, Vector2 pDestination)
 		{
 			float Progress = pSpineToSynchTo.AnimationState.GetCurrent(0).Time / pSpineToSynchTo.AnimationState.GetCurrent(0).EndTime;
-			pPlayer.PositionIO = pSource + (pDestination - pSource) * Progress;
+			SetToPosition(pPlayer, pSource + (pDestination - pSource) * Progress);
+		}
+
+		//ActivityInstruction & Progress Update
+		public static void UpdateActIProgressBoth(ThumbstickProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
+		{
+			if (!Conditions.ActionThumbstickPressedBothPlayer(pPlayer, pOtherPlayer, pThumbstickDirection))
+			{
+				if (!Conditions.ActionThumbstickPressed(pPlayer, pThumbstickDirection))
+					pActI.SetFadingState(pPlayer, true);
+				else
+					pActI.SetFadingState(pPlayer, false, false);
+				if (!Conditions.ActionThumbstickPressed(pOtherPlayer, pThumbstickDirection))
+					pActI.SetFadingState(pOtherPlayer, true);
+				else
+					pActI.SetFadingState(pOtherPlayer, false, false);
+				pProgress.StepBackward();
+			}
+			else
+			{
+				pActI.SetFadingState(pPlayer, false, false);
+				pActI.SetFadingState(pOtherPlayer, false, false);
+				pProgress.StepForward();
+			}
+		}
+
+		public static void UpdateActIProgressBothLegUp(ThumbstickProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
+		{
+			if (!Conditions.ActionThumbstickPressed(pPlayer, pThumbstickDirection) || !Conditions.ActionHold(pOtherPlayer))
+			{
+				if (!Conditions.ActionThumbstickPressed(pPlayer, pThumbstickDirection))
+					pActI.SetFadingState(pPlayer, true);
+				else
+					pActI.SetFadingState(pPlayer, false, false);
+				if (!Conditions.ActionHold(pOtherPlayer))
+					pActI.SetFadingState(pOtherPlayer, true);
+				else
+					pActI.SetFadingState(pOtherPlayer, false, false);
+				pProgress.StepBackward();
+			}
+			else
+			{
+				pActI.SetFadingState(pPlayer, false, false);
+				pActI.SetFadingState(pOtherPlayer, false, false);
+				pProgress.StepForward();
+			}
 		}
 
 		//QuickTimeEvent
@@ -131,10 +175,6 @@ namespace HG_Game
 		}
 
 		//Gretel States setzen (Brunnen)
-
-		//Set Arrow States
-
-		//Rock & Arrow Menu Navigation
 
 		//Overlay ein-/ausblenden
 

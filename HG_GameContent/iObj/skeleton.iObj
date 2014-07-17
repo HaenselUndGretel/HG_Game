@@ -24,13 +24,13 @@
   <ActionRectList />
   <CollisionRectList>
     <Rectangle>
-      <X>-32</X>
-      <Y>-27</Y>
-      <Width>64</Width>
-      <Height>28</Height>
+      <X>-12</X>
+      <Y>-24</Y>
+      <Width>24</Width>
+      <Height>24</Height>
       <Location>
-        <X>-32</X>
-        <Y>-27</Y>
+        <X>-12</X>
+        <Y>-24</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>

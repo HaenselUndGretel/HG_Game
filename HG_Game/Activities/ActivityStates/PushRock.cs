@@ -52,6 +52,12 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer);
 					break;
 				case 1:
+					if (m2ndState)
+					{
+						++pPlayer.mCurrentState;
+						break;
+					}
+					m2ndState = true;
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
 						mSourceHansel = pPlayer.SkeletonPosition;
@@ -96,7 +102,11 @@ namespace HG_Game
 					break;
 				case 2:
 					Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, mDestinationIObj - mSourceIObj, false);
-
+					if (Progress.Progress >= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
+					{ //Abbrechbar
+						Sequences.SetPlayerToIdle(pPlayer);
+						Sequences.SetPlayerToIdle(pOtherPlayer);
+					}
 					Sequences.UpdateMovementStepping(rIObj, Progress.Progress, mSourceIObj, mDestinationIObj);
 					Sequences.UpdateMovementStepping(pPlayer, Progress.Progress, mSourceHansel, mDestinationHansel);
 					Sequences.UpdateMovementStepping(pOtherPlayer, Progress.Progress, mSourceGretel, mDestinationGretel);

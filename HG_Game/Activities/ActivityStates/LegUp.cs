@@ -67,7 +67,7 @@ namespace HG_Game
 					{
 						Sequences.UpdateActIProgressBothLegUp(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
 						if (Progress.Progress >= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
-						{
+						{ //Abbrechbar
 							Sequences.SetPlayerToIdle(pPlayer);
 							Sequences.SetPlayerToIdle(pOtherPlayer);
 						}

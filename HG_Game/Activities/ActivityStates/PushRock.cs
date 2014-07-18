@@ -107,10 +107,12 @@ namespace HG_Game
 						Sequences.SetPlayerToIdle(pPlayer);
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 					}
-					Sequences.UpdateMovementStepping(rIObj, Progress.Progress, mSourceIObj, mDestinationIObj);
-					Sequences.UpdateMovementStepping(pPlayer, Progress.Progress, mSourceHansel, mDestinationHansel);
-					Sequences.UpdateMovementStepping(pOtherPlayer, Progress.Progress, mSourceGretel, mDestinationGretel);
-
+					if (pPlayer.GetType() == typeof(Hansel))
+					{
+						Sequences.UpdateMovementStepping(rIObj, Progress.Progress, mSourceIObj, mDestinationIObj);
+						Sequences.UpdateMovementStepping(pPlayer, Progress.Progress, mSourceHansel, mDestinationHansel);
+						Sequences.UpdateMovementStepping(pOtherPlayer, Progress.Progress, mSourceGretel, mDestinationGretel);
+					}
 					if (Progress.Complete)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);

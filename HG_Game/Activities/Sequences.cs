@@ -90,6 +90,8 @@ namespace HG_Game
 		//Animation Stepping
 		public static void UpdateAnimationStepping(SpineObject pSpine, float pProgress)
 		{
+			if (pProgress > 0.9f)
+				pProgress = 0.9f;
 			if (pSpine.AnimationState.ToString() == "<none>") return;
 			//if (pSpine.AnimationState.ToString() == "<none>") throw new Exception("SpineObjekt hat keinen AnimationState. TmpFix = return.");
 			pSpine.AnimationState.GetCurrent(0).Time = pSpine.AnimationState.GetCurrent(0).EndTime * pProgress;

@@ -65,7 +65,12 @@ namespace HG_Game
 				case 2: //Hoch heben
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
-						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
+						Sequences.UpdateActIProgressBothLegUp(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
+						if (Progress.Progress >= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
+						{
+							Sequences.SetPlayerToIdle(pPlayer);
+							Sequences.SetPlayerToIdle(pOtherPlayer);
+						}
 						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pOtherPlayer, Progress.Progress);
 

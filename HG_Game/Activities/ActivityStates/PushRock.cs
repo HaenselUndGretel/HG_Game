@@ -25,7 +25,7 @@ namespace HG_Game
 		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
 		{
-			Progress = new SteppingProgress();
+			Progress = new SteppingProgress(7f);
 			ActI = new ActivityInstruction();
 		}
 

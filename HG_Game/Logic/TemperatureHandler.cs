@@ -12,7 +12,7 @@ namespace HG_Game
 
 		protected SteppingProgress Frost;
 		protected const float Distance = 300f;
-		protected const float MinBodyTemperature = 0.5f;
+		protected const float MinBodyTemperature = 0.7f;
 
 		#endregion
 
@@ -20,7 +20,7 @@ namespace HG_Game
 
 		public TemperatureHandler()
 		{
-			Frost = new SteppingProgress(8f);
+			Frost = new SteppingProgress(6f);
 		}
 
 		#endregion

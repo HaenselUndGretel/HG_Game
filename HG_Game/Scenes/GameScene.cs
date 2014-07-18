@@ -184,7 +184,7 @@ namespace HG_Game
 				sb.AppendLine("-------------------- --------------------");
 				
 				mSpriteBatch.Begin();
-				mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
+				//mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
 				mSpriteBatch.End();
 			}
 #endif

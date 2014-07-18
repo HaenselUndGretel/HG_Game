@@ -95,7 +95,7 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
-					Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, mDestinationIObj - mSourceIObj);
+					Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, mDestinationIObj - mSourceIObj, false);
 
 					Sequences.UpdateMovementStepping(rIObj, Progress.Progress, mSourceIObj, mDestinationIObj);
 					Sequences.UpdateMovementStepping(pPlayer, Progress.Progress, mSourceHansel, mDestinationHansel);

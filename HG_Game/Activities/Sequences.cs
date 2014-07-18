@@ -123,7 +123,7 @@ namespace HG_Game
 		}
 
 		//ActivityInstruction & Progress Update
-		public static void UpdateActIProgressBoth(SteppingProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection)
+		public static void UpdateActIProgressBoth(SteppingProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection, bool AllowStepBack = true)
 		{
 			if (!Conditions.ActionThumbstickPressedBothPlayer(pPlayer, pOtherPlayer, pThumbstickDirection))
 			{
@@ -135,7 +135,8 @@ namespace HG_Game
 					pActI.SetFadingState(pOtherPlayer, true);
 				else
 					pActI.SetFadingState(pOtherPlayer, false, false);
-				pProgress.StepBackward();
+				if (AllowStepBack)
+					pProgress.StepBackward();
 			}
 			else
 			{

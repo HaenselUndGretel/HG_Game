@@ -112,7 +112,7 @@ namespace HG_Game
 		public override void Draw()
 		{
 			//--------------------Renderer (Game & Lighting)--------------------
-			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList(); //DrawZ unbrauchbar da sie nirgends relativ zur Welt geupdated wird
+			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList(); //Wird DrawZ vom Character genommen wenn er als IObj betrachtet wird?
 
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 

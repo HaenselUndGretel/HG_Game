@@ -87,6 +87,7 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 			//PauseMenu
 			mPauseMenu.LoadContent();
+			mHansel.Lantern = true;
 		}
 
 		public override void Update()
@@ -111,9 +112,12 @@ namespace HG_Game
 
 		public override void Draw()
 		{
-			//--------------------Renderer (Game & Lighting)--------------------
+			//--------------------Prepare Draw--------------------
 			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList(); //Wird DrawZ vom Character genommen wenn er als IObj betrachtet wird?
+			//Temporär immer neu aufbauen, sollte später anders umgesetzt werden, wie RenderList
+			List<Light> LightList = new List<Light>(mScene.Lights) { mLogic.ItemHandler.LanternLight };
 
+			//--------------------Renderer (Game & Lighting)--------------------
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 
 			mRenderer.SetGBuffer();
@@ -129,7 +133,7 @@ namespace HG_Game
 			
 			//--------------------DrawToScreen--------------------
 			mRenderer.DisposeGBuffer();
-			mRenderer.ProcessLight(mScene.Lights, mCamera.Transform);
+			mRenderer.ProcessLight(LightList, mCamera.Transform);
 			mRenderer.ProcessFinalScene();
 
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);

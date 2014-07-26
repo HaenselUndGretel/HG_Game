@@ -15,12 +15,11 @@ namespace HG_Game
 	{
 		#region Properties
 
-		protected enum LanternOwnership { None, Hansel, Gretel };
-
 		protected const float MaxSwapDistance = 200f;
-		protected LanternOwnership Lantern;
 		protected Vector2 LanternOffset;
-		protected PointLight LanternLight;
+		public PointLight LanternLight;
+		protected const float LanternHeight = 3f;
+		protected const float LanternHeightRaised = 5f;
 
 		#endregion
 
@@ -28,9 +27,12 @@ namespace HG_Game
 
 		public ItemHandler()
 		{
-			Lantern = LanternOwnership.None;
 			LanternOffset = new Vector2(0, -100);
-			LanternLight = new PointLight(); 
+			LanternLight = new PointLight();
+			LanternLight.Depth = 0.5f;
+			LanternLight.Intensity = 1f;
+			LanternLight.LightColor = new Vector3(1f, 1f, 1f);
+			LanternLight.Radius = 10f;
 		}
 
 		#endregion
@@ -39,7 +41,7 @@ namespace HG_Game
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
-			//SwapItem
+			//Lantern
 			if (
 				((pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed) ||
 				(pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed))
@@ -47,17 +49,31 @@ namespace HG_Game
 				((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <= MaxSwapDistance)
 				)
 			{
-				switch (Lantern)
+				if (pHansel.Lantern)
 				{
-					case LanternOwnership.Hansel:
-						Lantern = LanternOwnership.Gretel;
-						break;
-					case LanternOwnership.Gretel:
-						Lantern = LanternOwnership.Hansel;
-						break;
+					pGretel.Lantern = true;
+					pHansel.Lantern = false;
+				}
+				else if (pGretel.Lantern)
+				{
+					pHansel.Lantern = true;
+					pGretel.Lantern = false;
 				}
 			}
-			
+
+			if (pHansel.Lantern)
+			{
+				LanternLight.Position = pHansel.SkeletonPosition + LanternOffset;
+				if (pHansel.Input.UseItemIsPressed)
+					LanternLight.NormalZ = LanternHeightRaised;
+				else
+					LanternLight.NormalZ = LanternHeight;
+			}
+			else if (pGretel.Lantern)
+			{
+				LanternLight.Position = pHansel.SkeletonPosition + LanternOffset;
+				LanternLight.NormalZ = LanternHeight;
+			}
 			UpdateVisibility(pScene, pHansel, pGretel);
 			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
 		}
@@ -77,20 +93,19 @@ namespace HG_Game
 
 		protected bool InLanternLight(Collectable pCollectable, Hansel pHansel, Gretel pGretel)
 		{
-			if (Lantern == LanternOwnership.None)
+			if (!pHansel.Lantern && !pGretel.Lantern)
 				return false;
 			Vector2 Position;
 			float Radius = 100f;
-			switch (Lantern)
+			if (pHansel.Lantern)
 			{
-				case LanternOwnership.Hansel:
-					Position = pHansel.SkeletonPosition + LanternOffset;
-					if (pHansel.Input.UseItemIsPressed)
-						Radius *= 1.8f;
-					break;
-				case LanternOwnership.Gretel:
-					Position = pGretel.SkeletonPosition + LanternOffset;
-					break;
+				Position = pHansel.SkeletonPosition + LanternOffset;
+				if (pHansel.Input.UseItemIsPressed)
+					Radius *= 1.8f;
+			}
+			else if (pGretel.Lantern)
+			{
+				Position = pGretel.SkeletonPosition + LanternOffset;
 			}
 			
 			//Eigentlicher Test

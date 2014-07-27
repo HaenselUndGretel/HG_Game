@@ -52,7 +52,7 @@ namespace HG_Game
 		{
 			//Update Logic Parts
 			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
-			ActivityHandler.Update(pScene, pHansel, pGretel);
+			ActivityHandler.Update(pScene, pHansel, pGretel, pSavegame);
 			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame);
 			EventHandler.Update(pScene, pHansel, pGretel);
 			TemperatureHandler.Update(pHansel, pGretel);

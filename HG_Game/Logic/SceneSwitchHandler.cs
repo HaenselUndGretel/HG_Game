@@ -153,6 +153,7 @@ namespace HG_Game
 				//Switch
 				pHansel.MoveInteractiveObject(DestinationHansel - pHansel.SkeletonPosition);
 				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);
+				pSavegame.SceneId = DestinationScene;
 				pScene = pSavegame.Scenes[DestinationScene];
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);

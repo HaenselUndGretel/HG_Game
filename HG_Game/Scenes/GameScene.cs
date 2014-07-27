@@ -87,7 +87,6 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 			//PauseMenu
 			mPauseMenu.LoadContent();
-			mHansel.Lantern = true;
 		}
 
 		public override void Update()

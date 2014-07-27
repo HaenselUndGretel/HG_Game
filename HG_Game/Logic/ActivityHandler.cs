@@ -70,7 +70,7 @@ namespace HG_Game
 			*/
 		}
 
-		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, int pCurrentScene, Savegame pSavegame)
+		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
 			//-----Ist Player verfügbar für eine Activity?-----
 			bool TestHansel = false;
@@ -109,7 +109,7 @@ namespace HG_Game
 				}
 
 				//-----Tür erst offen wenn Laterne eingesammelt wurde-----
-				if (pCurrentScene == 3)
+				if (pSavegame.SceneId == 3)
 				{
 					foreach (Collectable col in pSavegame.Scenes[4].Collectables)
 					{

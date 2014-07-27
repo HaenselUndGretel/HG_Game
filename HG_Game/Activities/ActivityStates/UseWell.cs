@@ -171,10 +171,10 @@ namespace HG_Game
 		{
 			if (Progress.Progress > 0.1f)
 			{
-				Sequences.SetWellOverlay(false, ref pRenderList); //Hide Overlay
+				Sequences.SetWellOverlay(rIObj.SkeletonPosition, false, ref pRenderList); //Hide Overlay
 				return;
 			}
-			Sequences.SetWellOverlay(true, ref pRenderList); //Display Overlay
+			Sequences.SetWellOverlay(rIObj.SkeletonPosition, true, ref pRenderList); //Display Overlay
 			
 
 		}

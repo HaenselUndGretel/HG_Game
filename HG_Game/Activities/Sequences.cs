@@ -177,13 +177,19 @@ namespace HG_Game
 		}
 
 		//Brunnen-Overlay ein-/ausblenden
-		public static void SetWellOverlay(bool pVisible, ref List<InteractiveObject> pRenderList)
+		public static void SetWellOverlay(Vector2 pWellPosition, bool pVisible, ref List<InteractiveObject> pRenderList)
 		{
-			InteractiveObject wellOverlay = InteractiveObjectDataManager.Instance.GetElementByString("wellOverlay"); //BrunnenOverlay-iObjName muss auch in SceneData.SetupRenderList() gesetzt werden.
+			InteractiveObject wellOverlay = InteractiveObjectDataManager.Instance.GetElementByString("wellOverlay"); //BrunnenOverlay-iObjName und PositionOffset muss auch in SceneData.SetupRenderList() gesetzt werden.
 			if (pVisible && !pRenderList.Contains(wellOverlay))
+			{
 				pRenderList.Add(wellOverlay);
+				wellOverlay.SkeletonPosition = pWellPosition + new Vector2(-100, 300);
+				wellOverlay.ApplySettings();
+			}
 			else if (!pVisible && pRenderList.Contains(wellOverlay))
+			{
 				pRenderList.Remove(wellOverlay);
+			}
 		}
 
 		//EndeGelände

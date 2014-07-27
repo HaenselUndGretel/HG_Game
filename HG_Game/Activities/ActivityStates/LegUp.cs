@@ -115,9 +115,12 @@ namespace HG_Game
 					if (pPlayer.GetType() == typeof(Hansel) && Conditions.AnimationComplete(pOtherPlayer))
 					{
 						ActI.SetFadingState(pOtherPlayer, false);
-						//Gretel runter lassen
-						Sequences.StartAnimation(pPlayer, "attack");
-						Sequences.StartAnimation(pOtherPlayer, "attack");
+						if (m2ndState) //LegUpGrab
+						{
+							//Gretel runter lassen
+							Sequences.StartAnimation(pPlayer, "attack");
+							Sequences.StartAnimation(pOtherPlayer, "attack");
+						}
 						++pPlayer.mCurrentState;
 						++pOtherPlayer.mCurrentState;
 					}

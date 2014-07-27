@@ -18,8 +18,11 @@ namespace HG_Game
 		protected const float MaxSwapDistance = 200f;
 		protected Vector2 LanternOffset;
 		public PointLight LanternLight;
-		protected const float LanternHeight = 3f;
-		protected const float LanternHeightRaised = 5f;
+		protected const float LanternHeight = 0.08f;
+		protected const float LanternHeightRaised = 0.15f;
+		protected const float LanternRadius = 8f;
+		protected const float LanternRadiusRaised = 15f;
+		SteppingProgress LanternRaiseProgress;
 
 		#endregion
 
@@ -27,12 +30,13 @@ namespace HG_Game
 
 		public ItemHandler()
 		{
-			LanternOffset = new Vector2(0, -100);
+			LanternOffset = new Vector2(0, -5);
 			LanternLight = new PointLight();
-			LanternLight.Depth = 0.5f;
-			LanternLight.Intensity = 1f;
+			LanternLight.Intensity = 10f;
 			LanternLight.LightColor = new Vector3(1f, 1f, 1f);
-			LanternLight.Radius = 10f;
+			LanternLight.Depth = LanternHeight;
+			LanternLight.Radius = LanternRadius;
+			LanternRaiseProgress = new SteppingProgress(0.3f);
 		}
 
 		#endregion
@@ -42,19 +46,14 @@ namespace HG_Game
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
 			//Lantern
-			if (
-				((pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed) ||
-				(pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed))
-				&&
-				((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <= MaxSwapDistance)
-				)
+			if ((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <= MaxSwapDistance)
 			{
-				if (pHansel.Lantern)
+				if (pHansel.Lantern && pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed)
 				{
 					pGretel.Lantern = true;
 					pHansel.Lantern = false;
 				}
-				else if (pGretel.Lantern)
+				else if (pGretel.Lantern && pGretel.mCurrentActivity == ActivityHandler.None && pGretel.Input.SwitchItemJustPressed)
 				{
 					pHansel.Lantern = true;
 					pGretel.Lantern = false;
@@ -65,15 +64,17 @@ namespace HG_Game
 			{
 				LanternLight.Position = pHansel.SkeletonPosition + LanternOffset;
 				if (pHansel.Input.UseItemIsPressed)
-					LanternLight.NormalZ = LanternHeightRaised;
+					LanternRaiseProgress.StepForward();
 				else
-					LanternLight.NormalZ = LanternHeight;
+					LanternRaiseProgress.StepBackward();
 			}
 			else if (pGretel.Lantern)
 			{
-				LanternLight.Position = pHansel.SkeletonPosition + LanternOffset;
-				LanternLight.NormalZ = LanternHeight;
+				LanternLight.Position = pGretel.SkeletonPosition + LanternOffset;
+				LanternRaiseProgress.Reset();
 			}
+			LanternLight.Depth = LanternHeight + ((LanternHeightRaised - LanternHeight) * LanternRaiseProgress.Progress);
+			LanternLight.Radius = LanternRadius + ((LanternRadiusRaised - LanternRadius) * LanternRaiseProgress.Progress);
 			UpdateVisibility(pScene, pHansel, pGretel);
 			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
 		}

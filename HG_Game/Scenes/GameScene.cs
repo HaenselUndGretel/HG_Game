@@ -12,6 +12,7 @@ using KryptonEngine.HG_Data;
 using KryptonEngine.Manager;
 using KryptonEngine.Controls;
 using KryptonEngine.FModAudio;
+using KryptonEngine.AI;
 
 namespace HG_Game
 {
@@ -28,6 +29,8 @@ namespace HG_Game
 		protected Logic mLogic;
 
 		protected PauseMenu mPauseMenu;
+
+		protected AIManager AI;
 
 		#endregion
 
@@ -53,6 +56,8 @@ namespace HG_Game
 			mGretel = new Gretel("skeleton");
 			mHansel.mCurrentActivity = ActivityHandler.None;
 			mGretel.mCurrentActivity = ActivityHandler.None;
+			GameReferenzes.ReferenzGretel = mGretel;
+			GameReferenzes.ReferenzHansel = mHansel;
 			//Camera
 			mCamera = new Camera();
 			//Savegame
@@ -61,6 +66,9 @@ namespace HG_Game
 			mLogic = new Logic();
 			//PauseMenu
 			mPauseMenu = new PauseMenu();
+
+			// Initialisierung AI
+			AI = new AIManager(mCamera.GameScreen);
 		}
 
 		public override void LoadContent()

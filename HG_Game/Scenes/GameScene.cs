@@ -45,8 +45,6 @@ namespace HG_Game
 
 		protected PauseMenu mPauseMenu;
 
-		protected AIManager AI;
-
 		#endregion
 
 		#region Constructor
@@ -84,9 +82,6 @@ namespace HG_Game
 			mLogic = new Logic();
 			//PauseMenu
 			mPauseMenu = new PauseMenu();
-
-			// Initialisierung AI
-			AI = new AIManager(mCamera.GameScreen);
 		}
 
 		public override void LoadContent()
@@ -115,6 +110,16 @@ namespace HG_Game
 			//PauseMenu
 			mPauseMenu.LoadContent();
 			mHansel.Lantern = true;
+
+			GameReferenzes.ReferenzHansel = mHansel;
+			GameReferenzes.ReferenzGretel = mGretel;
+
+			AIManager.Instance.ChangeMap(mCamera.GameScreen, mScene.MoveArea);
+
+			foreach (InteractiveObject iobj in mScene.InteractiveObjects)
+				AIManager.Instance.CalculateMoveableFields(iobj.CollisionRectList);
+
+			AIManager.Instance.SetAgents(mScene.Enemies);
 		}
 
 		public override void Update()

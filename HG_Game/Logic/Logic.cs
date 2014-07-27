@@ -1,4 +1,5 @@
 ﻿using HanselAndGretel.Data;
+using KryptonEngine.AI;
 using KryptonEngine.Entities;
 using KryptonEngine.Rendering;
 using System;
@@ -56,6 +57,10 @@ namespace HG_Game
 			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame, ref pGameState);
 			EventHandler.Update(pScene, pHansel, pGretel);
 			TemperatureHandler.Update(pHansel, pGretel);
+
+			AIManager.Instance.Update();
+			foreach (Enemy e in pScene.Enemies)
+				e.Update();
 
 			//Check whether Player may move
 			HanselMayMove = true;

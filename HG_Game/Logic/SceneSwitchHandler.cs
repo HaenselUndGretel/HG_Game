@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
+using KryptonEngine.AI;
 using KryptonEngine.Entities;
 using KryptonEngine.Rendering;
 using Microsoft.Xna.Framework;
@@ -161,6 +162,13 @@ namespace HG_Game
 				//Show on new Scene
 				FadingProgress = 0;
 				CurrentState = State.Entering;
+
+				AIManager.Instance.ChangeMap(pCamera.GameScreen, pScene.MoveArea);
+				
+				// Für alle weiteren Felder die nicht betreten werden können.
+				foreach(InteractiveObject iobj in pScene.InteractiveObjects)
+					AIManager.Instance.CalculateMoveableFields(iobj.CollisionRectList);
+				AIManager.Instance.SetAgents(pScene.Enemies);
 			}
 		}
 

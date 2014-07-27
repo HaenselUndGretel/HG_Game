@@ -157,6 +157,10 @@ namespace HG_Game
 			pHansel.mCurrentActivity.Update(pHansel, pGretel);
 			pGretel.mCurrentActivity.Update(pGretel, pHansel);
 
+			//Brunnen Overlay updaten
+			if (pHansel.mCurrentActivity.GetType() == typeof(UseWell) && pHansel.mCurrentState == 4)
+				((UseWell)pHansel.mCurrentActivity).UpdateOverlay(ref pScene.RenderList);
+
 			ActionInfoFading.Update();
 		}
 

@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
 using Spine;
 using System;
@@ -176,9 +177,13 @@ namespace HG_Game
 		}
 
 		//Brunnen-Overlay ein-/ausblenden
-		public static void SetWellOverlay()
+		public static void SetWellOverlay(bool pVisible, ref List<InteractiveObject> pRenderList)
 		{
-
+			InteractiveObject wellOverlay = InteractiveObjectDataManager.Instance.GetElementByString("wellOverlay"); //BrunnenOverlay-iObjName muss auch in SceneData.SetupRenderList() gesetzt werden.
+			if (pVisible && !pRenderList.Contains(wellOverlay))
+				pRenderList.Add(wellOverlay);
+			else if (!pVisible && pRenderList.Contains(wellOverlay))
+				pRenderList.Remove(wellOverlay);
 		}
 
 		//EndeGelände

@@ -119,7 +119,7 @@ namespace HG_Game
 			return true;
 		}
 
-		protected void CollectCollectables(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel)
+		protected void CollectCollectables(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel, ref GameScene.GameState pGameState)
 		{
 			foreach (Collectable col in pScene.Collectables)
 			{
@@ -132,6 +132,7 @@ namespace HG_Game
 						//Laterne einsammeln
 						if (col.GetType() == typeof(Lantern))
 							pHansel.Lantern = true;
+						pGameState = GameScene.GameState.CollectableInfo;
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
 					{
@@ -143,6 +144,7 @@ namespace HG_Game
 						//Laterne einsammeln
 						if (col.GetType() == typeof(Lantern))
 							pGretel.Lantern = true;
+						pGameState = GameScene.GameState.CollectableInfo;
 					}
 				}
 			}

@@ -12,12 +12,25 @@ using KryptonEngine.HG_Data;
 using KryptonEngine.Manager;
 using KryptonEngine.Controls;
 using KryptonEngine.FModAudio;
+using Microsoft.Xna.Framework.Input;
 
 namespace HG_Game
 {
 	public class GameScene : Scene
 	{
 		#region Properties
+
+		public enum GameState
+		{
+			Running,
+			Paused,
+			CollectableInfo,
+			End
+		}
+
+		protected GameState mState;
+		protected SteppingProgress mEndGameFading;
+		protected Texture2D mEndGameTexture;
 
 		protected Hansel mHansel;
 		protected Gretel mGretel;
@@ -48,6 +61,9 @@ namespace HG_Game
 #if DEBUG
 			EngineSettings.IsDebug = true;
 #endif
+			//GameState
+			mState = GameState.Running;
+			mEndGameFading = new SteppingProgress(3f);
 			//Player
 			mHansel = new Hansel("skeleton");
 			mGretel = new Gretel("skeleton");
@@ -66,6 +82,7 @@ namespace HG_Game
 		public override void LoadContent()
 		{
 			base.LoadContent();
+			mEndGameTexture = TextureManager.Instance.GetElementByString("endgame");
 			//Logic
 			mLogic.LoadContent();
 			//Player
@@ -91,21 +108,34 @@ namespace HG_Game
 
 		public override void Update()
 		{
-			if (!mPauseMenu.Update()) //Wenn das PauseMenu nicht aktiv ist
+			mPauseMenu.Update(ref mState);
+			switch (mState)
 			{
-				//Update Logic
-				mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer);
-				//Update Player
-				mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
-				mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
-
+				case GameState.Running:
+					//Update Logic
+					mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer);
+					//Update Player
+					mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
+					mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
 #if DEBUG
-				//DebugCheats, im finalen Spiel löschen
-				Cheats.Update(mSavegame, mScene, mHansel, mGretel);
+					//DebugCheats, im finalen Spiel löschen
+					Cheats.Update(mSavegame, mScene, mHansel, mGretel);
 #endif
-
-				//Update Camera
-				mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
+					//Update Camera
+					mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
+					break;
+				case GameState.CollectableInfo:
+					
+					break;
+				case GameState.End:
+					mEndGameFading.StepForward();
+					if (mEndGameFading.Complete && InputHelper.ButtonJustPressed2Player(Buttons.A))
+					{ //Wenn komplett sichtbar & ein Spieler drückt A
+						mEndGameFading.Reset();
+						Initialize();
+						LoadContent();
+					}
+					break;
 			}
 		}
 
@@ -148,7 +178,14 @@ namespace HG_Game
 			//--------------------SpriteBatch ScreenSpace(PauseMenu)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 			//Render PauseMenu
+			if (mState == GameState.CollectableInfo)
+				mSpriteBatch.Draw(mSavegame.Collectables[mSavegame.Collectables.Count - 1].ShowTexture, new Vector2(50, 50), Color.White);
 			mPauseMenu.Draw(mSpriteBatch);
+			if (mState == GameState.End)
+			{
+				mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * mEndGameFading.Progress);
+				mSpriteBatch.Draw(mEndGameTexture, Vector2.Zero, Color.White);
+			}
 			mSpriteBatch.End();
 
 			#region Debug

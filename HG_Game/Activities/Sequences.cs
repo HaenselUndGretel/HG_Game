@@ -168,8 +168,6 @@ namespace HG_Game
 			}
 		}
 
-		//QuickTimeEvent
-
 		//Set States
 		public static void SetPlayerToIdle(Player pPlayer)
 		{
@@ -177,11 +175,11 @@ namespace HG_Game
 			pPlayer.mCurrentState = 0;
 		}
 
-		//Gretel States setzen (Brunnen)
+		//Brunnen-Overlay ein-/ausblenden
+		public static void SetWellOverlay()
+		{
 
-		//Overlay ein-/ausblenden
-
-		//Stuff (BrunnenKorb) bewegen
+		}
 
 		//EndeGelände
 		public static void End()

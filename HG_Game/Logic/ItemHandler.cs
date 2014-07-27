@@ -45,6 +45,13 @@ namespace HG_Game
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
+			UpdateLantern(pHansel, pGretel);
+			UpdateVisibility(pScene, pHansel, pGretel);
+			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
+		}
+
+		protected void UpdateLantern(Hansel pHansel, Gretel pGretel)
+		{
 			//Lantern
 			if ((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <= MaxSwapDistance)
 			{
@@ -75,8 +82,6 @@ namespace HG_Game
 			}
 			LanternLight.Depth = LanternHeight + ((LanternHeightRaised - LanternHeight) * LanternRaiseProgress.Progress);
 			LanternLight.Radius = LanternRadius + ((LanternRadiusRaised - LanternRadius) * LanternRaiseProgress.Progress);
-			UpdateVisibility(pScene, pHansel, pGretel);
-			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
 		}
 
 		protected void UpdateVisibility(SceneData pScene, Hansel pHansel, Gretel pGretel)
@@ -124,6 +129,9 @@ namespace HG_Game
 					{
 						pSavegame.Collectables.Add(col);
 						pScene.Collectables.Remove(col);
+						//Laterne einsammeln
+						if (col.GetType() == typeof(Lantern))
+							pHansel.Lantern = true;
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
 					{
@@ -132,6 +140,9 @@ namespace HG_Game
 							return;
 						pSavegame.Collectables.Add(col);
 						pScene.Collectables.Remove(col);
+						//Laterne einsammeln
+						if (col.GetType() == typeof(Lantern))
+							pGretel.Lantern = true;
 					}
 				}
 			}

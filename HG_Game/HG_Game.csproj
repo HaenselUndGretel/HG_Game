@@ -86,7 +86,7 @@
     <Compile Include="Activities\SteppingProgress.cs" />
     <Compile Include="Logic\EventHandler.cs" />
     <Compile Include="Logic\TemperatureHandler.cs" />
-    <Compile Include="Scenes\Cheats.cs" />
+    <Compile Include="Scenes\Game\Cheats.cs" />
     <Compile Include="Logic\ActivityHandler.cs" />
     <Compile Include="Logic\HudFading.cs" />
     <Compile Include="Logic\ItemHandler.cs" />
@@ -98,7 +98,7 @@
     <Compile Include="Scenes\CreditsScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />
-    <Compile Include="Scenes\PauseMenu.cs" />
+    <Compile Include="Scenes\Game\PauseMenu.cs" />
     <Compile Include="Scenes\SplashScene.cs" />
   </ItemGroup>
   <ItemGroup>

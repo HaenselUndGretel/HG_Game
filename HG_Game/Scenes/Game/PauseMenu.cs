@@ -42,7 +42,7 @@ namespace HG_Game
 			mButtons.Add(new ImageButton("exitIngame", new Vector2(300, 100), ExitButton));
 		}
 
-		public bool Update()
+		public void Update(ref GameScene.GameState pGameState)
 		{
 			if (InputHelper.ButtonJustPressed2Player(Buttons.Start))
 			{
@@ -53,9 +53,11 @@ namespace HG_Game
 			if (mIsActive)
 			{
 				HandleInput();
-				return true;
+				pGameState = GameScene.GameState.Paused;
+				return;
 			}
-			return false;
+			if (pGameState == GameScene.GameState.Paused)
+				pGameState = GameScene.GameState.Running;
 		}
 
 		public void Draw(SpriteBatch pSpriteBatch)

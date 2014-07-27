@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
 using Spine;
 using System;
@@ -168,8 +169,6 @@ namespace HG_Game
 			}
 		}
 
-		//QuickTimeEvent
-
 		//Set States
 		public static void SetPlayerToIdle(Player pPlayer)
 		{
@@ -177,17 +176,27 @@ namespace HG_Game
 			pPlayer.mCurrentState = 0;
 		}
 
-		//Gretel States setzen (Brunnen)
-
-		//Overlay ein-/ausblenden
-
-		//Stuff (BrunnenKorb) bewegen
+		//Brunnen-Overlay ein-/ausblenden
+		public static void SetWellOverlay(Vector2 pWellPosition, bool pVisible, ref List<InteractiveObject> pRenderList)
+		{
+			InteractiveObject wellOverlay = InteractiveObjectDataManager.Instance.GetElementByString("wellOverlay"); //BrunnenOverlay-iObjName und PositionOffset muss auch in SceneData.SetupRenderList() gesetzt werden.
+			if (pVisible && !pRenderList.Contains(wellOverlay))
+			{
+				pRenderList.Add(wellOverlay);
+				wellOverlay.SkeletonPosition = pWellPosition + new Vector2(-100, 300);
+				wellOverlay.ApplySettings();
+			}
+			else if (!pVisible && pRenderList.Contains(wellOverlay))
+			{
+				pRenderList.Remove(wellOverlay);
+			}
+		}
 
 		//EndeGelände
-		public static void End()
+		public static void End(ref GameScene.GameState pGameState)
 		{
 			//So ist das nicht passiert...
-			throw new NotImplementedException();
+			pGameState = GameScene.GameState.End;
 		}
 
 	}

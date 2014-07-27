@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -103,7 +104,6 @@ namespace HG_Game
 							ActI.SetFadingState(pPlayer, false, false);
 							ActI.SetFadingState(pOtherPlayer, false, false);
 							Progress.StepFromRotation(pPlayer.Input.LeftStickRotation);
-							UpdateOverlay();
 						}
 						else
 						{
@@ -167,15 +167,15 @@ namespace HG_Game
 			ActI.Update();
 		}
 
-		protected void UpdateOverlay()
+		public void UpdateOverlay(ref List<InteractiveObject> pRenderList)
 		{
 			if (Progress.Progress > 0.1f)
 			{
-				//Hide Overlay
-
+				Sequences.SetWellOverlay(rIObj.SkeletonPosition, false, ref pRenderList); //Hide Overlay
 				return;
 			}
-			//Display Overlay
+			Sequences.SetWellOverlay(rIObj.SkeletonPosition, true, ref pRenderList); //Display Overlay
+			
 
 		}
 

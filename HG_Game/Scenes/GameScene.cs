@@ -13,12 +13,25 @@ using KryptonEngine.Manager;
 using KryptonEngine.Controls;
 using KryptonEngine.FModAudio;
 using KryptonEngine.AI;
+using Microsoft.Xna.Framework.Input;
 
 namespace HG_Game
 {
 	public class GameScene : Scene
 	{
 		#region Properties
+
+		public enum GameState
+		{
+			Running,
+			Paused,
+			CollectableInfo,
+			End
+		}
+
+		protected GameState mState;
+		protected SteppingProgress mEndGameFading;
+		protected Texture2D mEndGameTexture;
 
 		protected Hansel mHansel;
 		protected Gretel mGretel;
@@ -51,6 +64,9 @@ namespace HG_Game
 #if DEBUG
 			EngineSettings.IsDebug = true;
 #endif
+			//GameState
+			mState = GameState.Running;
+			mEndGameFading = new SteppingProgress(3f);
 			//Player
 			mHansel = new Hansel("skeleton");
 			mGretel = new Gretel("skeleton");
@@ -74,6 +90,7 @@ namespace HG_Game
 		public override void LoadContent()
 		{
 			base.LoadContent();
+			mEndGameTexture = TextureManager.Instance.GetElementByString("endgame");
 			//Logic
 			mLogic.LoadContent();
 			//Player
@@ -95,33 +112,50 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 			//PauseMenu
 			mPauseMenu.LoadContent();
+			mHansel.Lantern = true;
 		}
 
 		public override void Update()
 		{
-			if (!mPauseMenu.Update()) //Wenn das PauseMenu nicht aktiv ist
+			mPauseMenu.Update(ref mState);
+			switch (mState)
 			{
-				//Update Logic
-				mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer);
-				//Update Player
-				mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
-				mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
-
+				case GameState.Running:
+					//Update Logic
+					mLogic.Update(mSavegame, ref mScene, mHansel, mGretel, mCamera, mRenderer, ref mState);
+					//Update Player
+					mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
+					mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
 #if DEBUG
-				//DebugCheats, im finalen Spiel löschen
-				Cheats.Update(mSavegame, mScene, mHansel, mGretel);
+					//DebugCheats, im finalen Spiel löschen
+					Cheats.Update(mSavegame, mScene, mHansel, mGretel);
 #endif
-
-				//Update Camera
-				mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
+					//Update Camera
+					mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
+					break;
+				case GameState.CollectableInfo:
+					
+					break;
+				case GameState.End:
+					mEndGameFading.StepForward();
+					if (mEndGameFading.Complete && InputHelper.ButtonJustPressed2Player(Buttons.A))
+					{ //Wenn komplett sichtbar & ein Spieler drückt A
+						mEndGameFading.Reset();
+						Initialize();
+						LoadContent();
+					}
+					break;
 			}
 		}
 
 		public override void Draw()
 		{
-			//--------------------Renderer (Game & Lighting)--------------------
-			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.DrawZ).ToList(); //Wird DrawZ vom Character genommen wenn er als IObj betrachtet wird?
+			//--------------------Prepare Draw--------------------
+			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.NormalZ).ToList(); //Wird DrawZ vom Character genommen wenn er als IObj betrachtet wird?
+			//Temporär immer neu aufbauen, sollte später anders umgesetzt werden, wie RenderList
+			List<Light> LightList = new List<Light>(mScene.Lights) { mLogic.ItemHandler.LanternLight };
 
+			//--------------------Renderer (Game & Lighting)--------------------
 			EngineSettings.Graphics.GraphicsDevice.SetRenderTarget(null);
 
 			mRenderer.SetGBuffer();
@@ -137,7 +171,7 @@ namespace HG_Game
 			
 			//--------------------DrawToScreen--------------------
 			mRenderer.DisposeGBuffer();
-			mRenderer.ProcessLight(mScene.Lights, mCamera.Transform);
+			mRenderer.ProcessLight(LightList, mCamera.Transform);
 			mRenderer.ProcessFinalScene();
 
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
@@ -153,7 +187,14 @@ namespace HG_Game
 			//--------------------SpriteBatch ScreenSpace(PauseMenu)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 			//Render PauseMenu
+			if (mState == GameState.CollectableInfo)
+				mSpriteBatch.Draw(mSavegame.Collectables[mSavegame.Collectables.Count - 1].ShowTexture, new Vector2(50, 50), Color.White);
 			mPauseMenu.Draw(mSpriteBatch);
+			if (mState == GameState.End)
+			{
+				mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * mEndGameFading.Progress);
+				mSpriteBatch.Draw(mEndGameTexture, Vector2.Zero, Color.White);
+			}
 			mSpriteBatch.End();
 
 			#region Debug

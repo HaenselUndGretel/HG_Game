@@ -70,7 +70,7 @@ namespace HG_Game
 					Switch(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
 					break;
 				case State.Entering:
-					Enter(pScene, pHansel, pGretel);
+					Enter(pScene, pHansel, pGretel, pSavegame);
 					break;
 				default:
 					throw new Exception("SwitchScene.CurrentState not set!");
@@ -153,6 +153,7 @@ namespace HG_Game
 				//Switch
 				pHansel.MoveInteractiveObject(DestinationHansel - pHansel.SkeletonPosition);
 				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);
+				pSavegame.SceneId = DestinationScene;
 				pScene = pSavegame.Scenes[DestinationScene];
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);
@@ -163,7 +164,7 @@ namespace HG_Game
 			}
 		}
 
-		public void Enter(SceneData pScene, Hansel pHansel, Gretel pGretel)
+		public void Enter(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
 			bool TmpEnterFinished = true;
 			foreach(Waypoint wp in pScene.Waypoints)
@@ -176,7 +177,17 @@ namespace HG_Game
 				}
 			}
 			if (TmpEnterFinished)
+			{
 				CurrentState = State.Idle;
+				//Spiel speichern wenn Spiler in der Scene angekommen sind und ein Kreidefelsen in ihr steht.
+				foreach (InteractiveObject iObj in pScene.InteractiveObjects)
+				{
+					if (iObj.Name == "chalkRock")
+					{
+						Savegame.Save(pSavegame, pHansel, pGretel);
+					}
+				}
+			}
 		}
 
 		#endregion

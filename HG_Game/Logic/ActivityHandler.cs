@@ -70,7 +70,7 @@ namespace HG_Game
 			*/
 		}
 
-		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel)
+		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
 		{
 			//-----Ist Player verfügbar für eine Activity?-----
 			bool TestHansel = false;
@@ -108,7 +108,23 @@ namespace HG_Game
 					}
 				}
 
-				//Activity aufgrund von Spielereingabe starten?
+				//-----Tür erst offen wenn Laterne eingesammelt wurde-----
+				if (pSavegame.SceneId == 3)
+				{
+					foreach (Collectable col in pSavegame.Scenes[4].Collectables)
+					{
+						if (col.GetType() == typeof(Lantern))
+						{
+							if (PossibleActivityHansel == Activity.PushDoor)
+								PossibleActivityHansel = Activity.None;
+							if (PossibleActivityGretel == Activity.PushDoor)
+								PossibleActivityGretel = Activity.None;
+						}
+					}
+				}
+
+
+				//-----Activity aufgrund von Spielereingabe starten?-----
 				if (TestHansel &&
 					IObjIntersectsHansel != null &&
 					Conditions.ActionPressed(pHansel) &&
@@ -140,6 +156,10 @@ namespace HG_Game
 			//-----Update Activities-----
 			pHansel.mCurrentActivity.Update(pHansel, pGretel);
 			pGretel.mCurrentActivity.Update(pGretel, pHansel);
+
+			//Brunnen Overlay updaten
+			if (pHansel.mCurrentActivity.GetType() == typeof(UseWell) && pHansel.mCurrentState == 4)
+				((UseWell)pHansel.mCurrentActivity).UpdateOverlay(ref pScene.RenderList);
 
 			ActionInfoFading.Update();
 		}

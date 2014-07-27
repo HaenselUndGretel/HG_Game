@@ -48,12 +48,12 @@ namespace HG_Game
 			ActivityHandler.LoadContent();
 		}
 
-		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer, ref GameScene.GameState pGameState)
 		{
 			//Update Logic Parts
 			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
-			ActivityHandler.Update(pScene, pHansel, pGretel);
-			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame);
+			ActivityHandler.Update(pScene, pHansel, pGretel, pSavegame);
+			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame, ref pGameState);
 			EventHandler.Update(pScene, pHansel, pGretel);
 			TemperatureHandler.Update(pHansel, pGretel);
 

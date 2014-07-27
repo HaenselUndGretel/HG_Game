@@ -187,10 +187,10 @@ namespace HG_Game
 		}
 
 		//EndeGelände
-		public static void End()
+		public static void End(ref GameScene.GameState pGameState)
 		{
 			//So ist das nicht passiert...
-			throw new NotImplementedException();
+			pGameState = GameScene.GameState.End;
 		}
 
 	}

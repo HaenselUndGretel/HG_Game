@@ -43,11 +43,11 @@ namespace HG_Game
 
 		#region Methods
 
-		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
+		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame, ref GameScene.GameState pGameState)
 		{
 			UpdateLantern(pHansel, pGretel);
 			UpdateVisibility(pScene, pHansel, pGretel);
-			CollectCollectables(pSavegame, pScene, pHansel, pGretel);
+			CollectCollectables(pSavegame, pScene, pHansel, pGretel, ref pGameState);
 		}
 
 		protected void UpdateLantern(Hansel pHansel, Gretel pGretel)

@@ -62,7 +62,7 @@ namespace HG_Game
 
 			AIManager.Instance.Update();
 
-			EnemyHandler.Update(ref pGameState);
+			EnemyHandler.Update();
 			//Check whether Player may move
 			HanselMayMove = true;
 			GretelMayMove = true;

@@ -15,15 +15,15 @@ namespace HG_Game
 
 		}
 
-		public void Update(ref GameScene.GameState pGameState)
+		public void Update()
 		{
 			foreach (Enemy e in GameReferenzes.Level.Enemies)
 			{
 				e.Update();
 				if (Vector2.Distance(GameReferenzes.ReferenzHansel.Position, e.Position) < GameReferenzes.DEATH_ZONE)
-					Sequences.End(ref pGameState);
+					GameScene.End = true;
 				if (Vector2.Distance(GameReferenzes.ReferenzGretel.Position, e.Position) < GameReferenzes.DEATH_ZONE)
-					Sequences.End(ref pGameState);
+					GameScene.End = true;
 			}
 		}
 	}

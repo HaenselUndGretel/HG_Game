@@ -274,680 +274,7 @@
     </Rectangle>
   </MoveArea>
   <Waypoints />
-  <BackgroundSprites>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>80</ObjectId>
-      <Position>
-        <X>2119</X>
-        <Y>106</Y>
-      </Position>
-      <CollisionBox>
-        <X>2119</X>
-        <Y>106</Y>
-        <Width>139</Width>
-        <Height>294</Height>
-        <Location>
-          <X>2119</X>
-          <Y>106</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>401</DrawZ>
-      <NormalZ>0.09790039</NormalZ>
-      <TextureName>EnvWell</TextureName>
-      <Width>139</Width>
-      <Height>294</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>93</ObjectId>
-      <Position>
-        <X>-577</X>
-        <Y>-989</Y>
-      </Position>
-      <CollisionBox>
-        <X>-577</X>
-        <Y>-989</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-577</X>
-          <Y>-989</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1059</DrawZ>
-      <NormalZ>0.258544922</NormalZ>
-      <TextureName>TreeCrown2</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>96</ObjectId>
-      <Position>
-        <X>66</X>
-        <Y>-980</Y>
-      </Position>
-      <CollisionBox>
-        <X>66</X>
-        <Y>-980</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>66</X>
-          <Y>-980</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1068</DrawZ>
-      <NormalZ>0.2607422</NormalZ>
-      <TextureName>TreeCrown2</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>95</ObjectId>
-      <Position>
-        <X>-125</X>
-        <Y>-979</Y>
-      </Position>
-      <CollisionBox>
-        <X>-125</X>
-        <Y>-979</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-125</X>
-          <Y>-979</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1069</DrawZ>
-      <NormalZ>0.260986328</NormalZ>
-      <TextureName>TreeCrown</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>101</ObjectId>
-      <Position>
-        <X>1235</X>
-        <Y>-979</Y>
-      </Position>
-      <CollisionBox>
-        <X>1235</X>
-        <Y>-979</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>1235</X>
-          <Y>-979</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1069</DrawZ>
-      <NormalZ>0.260986328</NormalZ>
-      <TextureName>TreeCrown</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>91</ObjectId>
-      <Position>
-        <X>-999</X>
-        <Y>-978</Y>
-      </Position>
-      <CollisionBox>
-        <X>-999</X>
-        <Y>-978</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-999</X>
-          <Y>-978</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1070</DrawZ>
-      <NormalZ>0.261230469</NormalZ>
-      <TextureName>TreeCrown</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>99</ObjectId>
-      <Position>
-        <X>721</X>
-        <Y>-966</Y>
-      </Position>
-      <CollisionBox>
-        <X>721</X>
-        <Y>-966</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>721</X>
-          <Y>-966</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1082</DrawZ>
-      <NormalZ>0.264160156</NormalZ>
-      <TextureName>TreeCrown2</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>94</ObjectId>
-      <Position>
-        <X>-366</X>
-        <Y>-962</Y>
-      </Position>
-      <CollisionBox>
-        <X>-366</X>
-        <Y>-962</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-366</X>
-          <Y>-962</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1086</DrawZ>
-      <NormalZ>0.265136719</NormalZ>
-      <TextureName>Stone2</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>100</ObjectId>
-      <Position>
-        <X>995</X>
-        <Y>-962</Y>
-      </Position>
-      <CollisionBox>
-        <X>995</X>
-        <Y>-962</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>995</X>
-          <Y>-962</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1086</DrawZ>
-      <NormalZ>0.265136719</NormalZ>
-      <TextureName>TreeCrown</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>98</ObjectId>
-      <Position>
-        <X>542</X>
-        <Y>-958</Y>
-      </Position>
-      <CollisionBox>
-        <X>542</X>
-        <Y>-958</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>542</X>
-          <Y>-958</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1090</DrawZ>
-      <NormalZ>0.266113281</NormalZ>
-      <TextureName>TreeCrown</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>92</ObjectId>
-      <Position>
-        <X>-798</X>
-        <Y>-953</Y>
-      </Position>
-      <CollisionBox>
-        <X>-798</X>
-        <Y>-953</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-798</X>
-          <Y>-953</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1095</DrawZ>
-      <NormalZ>0.267333984</NormalZ>
-      <TextureName>TreeCrown3</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>97</ObjectId>
-      <Position>
-        <X>292</X>
-        <Y>-948</Y>
-      </Position>
-      <CollisionBox>
-        <X>292</X>
-        <Y>-948</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>292</X>
-          <Y>-948</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1100</DrawZ>
-      <NormalZ>0.2685547</NormalZ>
-      <TextureName>TreeCrown3</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>102</ObjectId>
-      <Position>
-        <X>1456</X>
-        <Y>-915</Y>
-      </Position>
-      <CollisionBox>
-        <X>1456</X>
-        <Y>-915</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>1456</X>
-          <Y>-915</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1133</DrawZ>
-      <NormalZ>0.276611328</NormalZ>
-      <TextureName>Stone2</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>111</ObjectId>
-      <Position>
-        <X>-473</X>
-        <Y>-452</Y>
-      </Position>
-      <CollisionBox>
-        <X>-473</X>
-        <Y>-452</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-473</X>
-          <Y>-452</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1596</DrawZ>
-      <NormalZ>0.389648438</NormalZ>
-      <TextureName>TreeCrown3</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>114</ObjectId>
-      <Position>
-        <X>1298</X>
-        <Y>-296</Y>
-      </Position>
-      <CollisionBox>
-        <X>1298</X>
-        <Y>-296</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>1298</X>
-          <Y>-296</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1751</DrawZ>
-      <NormalZ>0.427490234</NormalZ>
-      <TextureName>Stone1</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>116</ObjectId>
-      <Position>
-        <X>1001</X>
-        <Y>-287</Y>
-      </Position>
-      <CollisionBox>
-        <X>1001</X>
-        <Y>-287</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>1001</X>
-          <Y>-287</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1761</DrawZ>
-      <NormalZ>0.429931641</NormalZ>
-      <TextureName>Stone4</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>107</ObjectId>
-      <Position>
-        <X>801</X>
-        <Y>-279</Y>
-      </Position>
-      <CollisionBox>
-        <X>801</X>
-        <Y>-279</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>801</X>
-          <Y>-279</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1769</DrawZ>
-      <NormalZ>0.431884766</NormalZ>
-      <TextureName>Stone1</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>103</ObjectId>
-      <Position>
-        <X>1517</X>
-        <Y>-206</Y>
-      </Position>
-      <CollisionBox>
-        <X>1517</X>
-        <Y>-206</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>1517</X>
-          <Y>-206</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1842</DrawZ>
-      <NormalZ>0.449707031</NormalZ>
-      <TextureName>TreeCrown3</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>113</ObjectId>
-      <Position>
-        <X>-923</X>
-        <Y>-193</Y>
-      </Position>
-      <CollisionBox>
-        <X>-923</X>
-        <Y>-193</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-923</X>
-          <Y>-193</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1855</DrawZ>
-      <NormalZ>0.452880859</NormalZ>
-      <TextureName>Stone4</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>112</ObjectId>
-      <Position>
-        <X>-586</X>
-        <Y>-181</Y>
-      </Position>
-      <CollisionBox>
-        <X>-586</X>
-        <Y>-181</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-586</X>
-          <Y>-181</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1867</DrawZ>
-      <NormalZ>0.455810547</NormalZ>
-      <TextureName>Stone3</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>115</ObjectId>
-      <Position>
-        <X>-461</X>
-        <Y>-89</Y>
-      </Position>
-      <CollisionBox>
-        <X>-461</X>
-        <Y>-89</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-461</X>
-          <Y>-89</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1959</DrawZ>
-      <NormalZ>0.478271484</NormalZ>
-      <TextureName>TreeStumpf</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>89</ObjectId>
-      <Position>
-        <X>133</X>
-        <Y>-66</Y>
-      </Position>
-      <CollisionBox>
-        <X>133</X>
-        <Y>-66</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>133</X>
-          <Y>-66</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1982</DrawZ>
-      <NormalZ>0.483886719</NormalZ>
-      <TextureName>TreeStumpf</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>108</ObjectId>
-      <Position>
-        <X>-489</X>
-        <Y>89</Y>
-      </Position>
-      <CollisionBox>
-        <X>-489</X>
-        <Y>89</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-489</X>
-          <Y>89</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>2137</DrawZ>
-      <NormalZ>0.5217285</NormalZ>
-      <TextureName>Stone1</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>106</ObjectId>
-      <Position>
-        <X>965</X>
-        <Y>135</Y>
-      </Position>
-      <CollisionBox>
-        <X>965</X>
-        <Y>135</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>965</X>
-          <Y>135</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>2183</DrawZ>
-      <NormalZ>0.532959</NormalZ>
-      <TextureName>Stone3</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>105</ObjectId>
-      <Position>
-        <X>752</X>
-        <Y>354</Y>
-      </Position>
-      <CollisionBox>
-        <X>752</X>
-        <Y>354</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>752</X>
-          <Y>354</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>2402</DrawZ>
-      <NormalZ>0.5864258</NormalZ>
-      <TextureName>TreeFace</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>109</ObjectId>
-      <Position>
-        <X>-465</X>
-        <Y>402</Y>
-      </Position>
-      <CollisionBox>
-        <X>-465</X>
-        <Y>402</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-465</X>
-          <Y>402</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>2450</DrawZ>
-      <NormalZ>0.598144531</NormalZ>
-      <TextureName>Stone1</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>104</ObjectId>
-      <Position>
-        <X>1534</X>
-        <Y>413</Y>
-      </Position>
-      <CollisionBox>
-        <X>1534</X>
-        <Y>413</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>1534</X>
-          <Y>413</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>2461</DrawZ>
-      <NormalZ>0.6008301</NormalZ>
-      <TextureName>TreeCrown</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-    <GameObject xsi:type="Sprite">
-      <ObjectId>110</ObjectId>
-      <Position>
-        <X>-1089</X>
-        <Y>425</Y>
-      </Position>
-      <CollisionBox>
-        <X>-1089</X>
-        <Y>425</Y>
-        <Width>2048</Width>
-        <Height>2048</Height>
-        <Location>
-          <X>-1089</X>
-          <Y>425</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>2473</DrawZ>
-      <NormalZ>0.603759766</NormalZ>
-      <TextureName>TreeCrown2</TextureName>
-      <Width>2048</Width>
-      <Height>2048</Height>
-      <Rotation>0</Rotation>
-    </GameObject>
-  </BackgroundSprites>
+  <BackgroundSprites />
   <InteractiveObjects>
     <InteractiveObject>
       <ObjectId>3</ObjectId>
@@ -956,13 +283,13 @@
         <Y>384</Y>
       </Position>
       <CollisionBox>
-        <X>128</X>
-        <Y>384</Y>
+        <X>53</X>
+        <Y>169</Y>
         <Width>150</Width>
         <Height>252</Height>
         <Location>
-          <X>128</X>
-          <Y>384</Y>
+          <X>53</X>
+          <Y>169</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1012,13 +339,13 @@
         <Y>1186</Y>
       </Position>
       <CollisionBox>
-        <X>2213</X>
-        <Y>1186</Y>
+        <X>2117</X>
+        <Y>1009</Y>
         <Width>196</Width>
         <Height>182</Height>
         <Location>
-          <X>2213</X>
-          <Y>1186</Y>
+          <X>2117</X>
+          <Y>1009</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1068,13 +395,13 @@
         <Y>809</Y>
       </Position>
       <CollisionBox>
-        <X>290</X>
-        <Y>809</Y>
+        <X>256</X>
+        <Y>741</Y>
         <Width>68</Width>
         <Height>72</Height>
         <Location>
-          <X>290</X>
-          <Y>809</Y>
+          <X>256</X>
+          <Y>741</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1180,13 +507,13 @@
         <Y>1039</Y>
       </Position>
       <CollisionBox>
-        <X>893</X>
-        <Y>1039</Y>
+        <X>806</X>
+        <Y>859</Y>
         <Width>184</Width>
         <Height>190</Height>
         <Location>
-          <X>893</X>
-          <Y>1039</Y>
+          <X>806</X>
+          <Y>859</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1312,13 +639,13 @@
         <Y>721</Y>
       </Position>
       <CollisionBox>
-        <X>2196</X>
-        <Y>721</Y>
+        <X>2102</X>
+        <Y>489</Y>
         <Width>195</Width>
         <Height>51</Height>
         <Location>
-          <X>2196</X>
-          <Y>721</Y>
+          <X>2102</X>
+          <Y>489</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1383,7 +710,6 @@
     </InteractiveObject>
   </InteractiveObjects>
   <Collectables />
-  <Items />
   <Lights>
     <Light xsi:type="PointLight">
       <ObjectId>118</ObjectId>
@@ -1558,5 +884,109 @@
       <Z>1</Z>
     </Direction>
   </SceneDirectionLight>
-  <Enemies />
+  <Enemies>
+    <Enemy xsi:type="Wolf">
+      <ObjectId>127</ObjectId>
+      <Position>
+        <X>1253</X>
+        <Y>1246</Y>
+      </Position>
+      <CollisionBox>
+        <X>1203</X>
+        <Y>1146</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>1203</X>
+          <Y>1146</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1246</DrawZ>
+      <NormalZ>0.304199219</NormalZ>
+      <Name>wolf</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList />
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>1253</X>
+        <Y>1246</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>1253</X>
+        <Y>1246</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+    </Enemy>
+    <Enemy xsi:type="Wolf">
+      <ObjectId>132</ObjectId>
+      <Position>
+        <X>1422</X>
+        <Y>512</Y>
+      </Position>
+      <CollisionBox>
+        <X>1372</X>
+        <Y>412</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>1372</X>
+          <Y>412</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>512</DrawZ>
+      <NormalZ>0.125</NormalZ>
+      <Name>wolf</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList />
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>1422</X>
+        <Y>512</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>1422</X>
+        <Y>512</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+    </Enemy>
+    <Enemy xsi:type="Wolf">
+      <ObjectId>136</ObjectId>
+      <Position>
+        <X>844</X>
+        <Y>426</Y>
+      </Position>
+      <CollisionBox>
+        <X>794</X>
+        <Y>326</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>794</X>
+          <Y>326</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>426</DrawZ>
+      <NormalZ>0.104003906</NormalZ>
+      <Name>wolf</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList />
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>844</X>
+        <Y>426</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>844</X>
+        <Y>426</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+    </Enemy>
+  </Enemies>
+  <Fog>false</Fog>
 </SceneData>

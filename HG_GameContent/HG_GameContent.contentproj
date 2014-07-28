@@ -754,6 +754,16 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\000Depth.png">
+      <Name>000Depth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\000AO.png">
+      <Name>000AO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="iObj\bookShelf.iObj">
       <Name>bookShelf</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

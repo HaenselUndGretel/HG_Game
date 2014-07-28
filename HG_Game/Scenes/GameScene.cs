@@ -72,8 +72,6 @@ namespace HG_Game
 			mGretel = new Gretel("skeleton");
 			mHansel.mCurrentActivity = ActivityHandler.None;
 			mGretel.mCurrentActivity = ActivityHandler.None;
-			GameReferenzes.ReferenzGretel = mGretel;
-			GameReferenzes.ReferenzHansel = mHansel;
 			//Camera
 			mCamera = new Camera();
 			//Savegame

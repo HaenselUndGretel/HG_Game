@@ -113,6 +113,7 @@ namespace HG_Game
 
 			GameReferenzes.ReferenzHansel = mHansel;
 			GameReferenzes.ReferenzGretel = mGretel;
+			GameReferenzes.GameCamera = mCamera;
 
 			AIManager.Instance.ChangeMap(mCamera.GameScreen, mScene.MoveArea);
 
@@ -218,6 +219,7 @@ namespace HG_Game
 				{
 					mScene.RenderList[i].DrawDebug(mSpriteBatch);
 				}
+				AIManager.Instance.DrawDebugAiGrid(mSpriteBatch);
 				mSpriteBatch.End();
 
 				SpriteFont font = FontManager.Instance.GetElementByString("font");

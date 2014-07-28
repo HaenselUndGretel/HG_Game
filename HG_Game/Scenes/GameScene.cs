@@ -21,6 +21,8 @@ namespace HG_Game
 	{
 		#region Properties
 
+		public static bool End;
+
 		public enum GameState
 		{
 			Running,
@@ -117,6 +119,11 @@ namespace HG_Game
 
 		public override void Update()
 		{
+			if (End)
+			{
+				mState = GameState.End;
+				End = false;
+			}
 			mPauseMenu.Update(ref mState);
 			switch (mState)
 			{
@@ -141,8 +148,7 @@ namespace HG_Game
 					if (mEndGameFading.Complete && InputHelper.ButtonJustPressed2Player(Buttons.A))
 					{ //Wenn komplett sichtbar & ein Spieler drückt A
 						mEndGameFading.Reset();
-						Initialize();
-						LoadContent();
+						RestartGame();
 					}
 					break;
 			}

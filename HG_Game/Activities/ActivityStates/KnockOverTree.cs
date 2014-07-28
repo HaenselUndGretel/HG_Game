@@ -156,7 +156,7 @@ namespace HG_Game
 						//Fallen
 						if (Fail)
 						{
-							//Sequences.End();
+							GameScene.End = true;
 						}
 						//WalkAway?
 						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f);

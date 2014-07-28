@@ -192,12 +192,13 @@ namespace HG_Game
 			}
 		}
 
+		/*
 		//EndeGelände
 		public static void End(ref GameScene.GameState pGameState)
 		{
 			//So ist das nicht passiert...
 			pGameState = GameScene.GameState.End;
 		}
-
+		*/
 	}
 }

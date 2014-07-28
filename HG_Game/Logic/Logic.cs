@@ -18,6 +18,7 @@ namespace HG_Game
 		public ItemHandler ItemHandler;
 		public EventHandler EventHandler;
 		public TemperatureHandler TemperatureHandler;
+		public EnemyHandler EnemyHandler;
 
 		public bool HanselMayMove;
 		public bool GretelMayMove;
@@ -42,6 +43,7 @@ namespace HG_Game
 			ItemHandler = new ItemHandler();
 			EventHandler = new EventHandler();
 			TemperatureHandler = new TemperatureHandler();
+			EnemyHandler = new EnemyHandler();
 		}
 
 		public void LoadContent()
@@ -59,9 +61,8 @@ namespace HG_Game
 			TemperatureHandler.Update(pHansel, pGretel);
 
 			AIManager.Instance.Update();
-			foreach (Enemy e in pScene.Enemies)
-				e.Update();
 
+			EnemyHandler.Update(ref pGameState);
 			//Check whether Player may move
 			HanselMayMove = true;
 			GretelMayMove = true;

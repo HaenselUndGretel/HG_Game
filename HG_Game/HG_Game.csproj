@@ -84,6 +84,7 @@
     <Compile Include="Activities\ActivityStates\PushDoor.cs" />
     <Compile Include="Activities\ActivityStates\UseWell.cs" />
     <Compile Include="Activities\SteppingProgress.cs" />
+    <Compile Include="Logic\EnemyHandler.cs" />
     <Compile Include="Logic\EventHandler.cs" />
     <Compile Include="Logic\TemperatureHandler.cs" />
     <Compile Include="Scenes\Game\Cheats.cs" />

@@ -114,13 +114,15 @@ namespace HG_Game
 			GameReferenzes.ReferenzHansel = mHansel;
 			GameReferenzes.ReferenzGretel = mGretel;
 			GameReferenzes.GameCamera = mCamera;
+			GameReferenzes.Level = mScene;
 
 			AIManager.Instance.ChangeMap(mCamera.GameScreen, mScene.MoveArea);
 
 			foreach (InteractiveObject iobj in mScene.InteractiveObjects)
-				AIManager.Instance.CalculateMoveableFields(iobj.CollisionRectList);
+				AIManager.Instance.SetInterActiveObjects(mScene.InteractiveObjects);
 
 			AIManager.Instance.SetAgents(mScene.Enemies);
+			
 		}
 
 		public override void Update()

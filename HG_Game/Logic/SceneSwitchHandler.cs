@@ -163,11 +163,11 @@ namespace HG_Game
 				FadingProgress = 0;
 				CurrentState = State.Entering;
 
+				GameReferenzes.Level = pScene;
 				AIManager.Instance.ChangeMap(pCamera.GameScreen, pScene.MoveArea);
 				
 				// Für alle weiteren Felder die nicht betreten werden können.
-				foreach(InteractiveObject iobj in pScene.InteractiveObjects)
-					AIManager.Instance.CalculateMoveableFields(iobj.CollisionRectList);
+				AIManager.Instance.SetInterActiveObjects(pScene.InteractiveObjects);
 				AIManager.Instance.SetAgents(pScene.Enemies);
 			}
 		}

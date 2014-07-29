@@ -120,17 +120,6 @@ namespace HG_Game
 				AIManager.Instance.SetInterActiveObjects(mScene.InteractiveObjects);
 
 			AIManager.Instance.SetAgents(mScene.Enemies);
-
-			//Lantern Test
-			Lantern l = new Lantern("skeleton", "Collectable1_locked");
-			l.LoadContent();
-			l.SkeletonPosition = new Vector2(50, 100);
-			l.Position = l.SkeletonPosition;
-			l.CollisionRectList.Add(new Rectangle(30, 80, 40, 40));
-			l.MoveInteractiveObject(new Vector2(0,1));
-			l.ApplySettings();
-			mScene.Collectables.Add(l);
-			
 		}
 
 		public override void Update()

@@ -133,6 +133,7 @@ namespace HG_Game
 						if (col.GetType() == typeof(Lantern))
 							pHansel.Lantern = true;
 						pGameState = GameScene.GameState.CollectableInfo;
+						return;
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
 					{
@@ -145,6 +146,7 @@ namespace HG_Game
 						if (col.GetType() == typeof(Lantern))
 							pGretel.Lantern = true;
 						pGameState = GameScene.GameState.CollectableInfo;
+						return;
 					}
 				}
 			}

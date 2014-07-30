@@ -106,6 +106,11 @@ namespace HG_Game
 			return (pOtherPlayer.mCurrentActivity == pActivityState) ? false : true;
 		}
 
+		public static bool OtherPlayerAtSameActivity(Player pOtherPlayer, ActivityState pActivityState)
+		{
+			return (pOtherPlayer.mCurrentActivity == pActivityState) ? true : false;
+		}
+
 		#endregion
 
 		#region Update

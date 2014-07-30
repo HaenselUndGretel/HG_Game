@@ -42,7 +42,10 @@ namespace HG_Game
 			{
 				case 0:
 					if (!Conditions.ActionHold(pPlayer))
+					{
 						Sequences.SetPlayerToIdle(pPlayer);
+						break;
+					}
 					if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer))
 						++pPlayer.mCurrentState;
 					Sequences.MovePlayerToRightActionPosition(pPlayer);

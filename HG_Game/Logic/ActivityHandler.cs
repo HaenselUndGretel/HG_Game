@@ -26,6 +26,9 @@ namespace HG_Game
 		protected Vector2 ActionInfoOffset;
 		protected Vector2 ActionInfoButtonOffset;
 
+		protected const int AmuletScene = 10;
+		protected List<UseAmulet> AmuletStates;
+
 		#endregion
 
 		#region Constructor
@@ -35,6 +38,7 @@ namespace HG_Game
 			ActionInfoFading = new HudFading();
 			ActionInfoOffset = new Vector2(-100, -200);
 			ActionInfoButtonOffset = new Vector2(-50, -300);
+			AmuletStates = new List<UseAmulet>(4);
 		}
 
 		#endregion
@@ -161,7 +165,39 @@ namespace HG_Game
 			if (pHansel.mCurrentActivity.GetType() == typeof(UseWell) && pHansel.mCurrentState == 4)
 				((UseWell)pHansel.mCurrentActivity).UpdateOverlay(ref pScene.RenderList);
 
+			//AmuletStates updaten
+			UpdateAmulet(pSavegame, pScene);
+			
+
 			ActionInfoFading.Update();
+		}
+
+		protected void UpdateAmulet(Savegame pSavegame, SceneData pScene)
+		{
+			if (pSavegame.SceneId != AmuletScene)
+				return;
+			bool AmuletFinished = true;
+			foreach(UseAmulet a in AmuletStates)
+			{
+				if (a.m2ndState == false)
+				{
+					AmuletFinished = false;
+					break;
+				}
+			}
+			if (AmuletFinished)
+			{
+				foreach (UseAmulet a in AmuletStates)
+					a.m2ndState = false;
+				Witch w = null;
+				foreach (Enemy e in pScene.Enemies)
+					if (e.GetType() == typeof(Witch))
+					{
+						w = (Witch)e;
+					}
+				if (w == null) throw new Exception("Witch nicht gefunden!");
+				pScene.Enemies.Remove(w);
+			}
 		}
 
 		#region Draw
@@ -244,6 +280,10 @@ namespace HG_Game
 							break;
 						case Activity.UseWell:
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);
+							break;
+						case Activity.UseAmulet:
+							iObj.ActivityState = new UseAmulet(pHansel, pGretel, iObj);
+							AmuletStates.Add((UseAmulet)iObj.ActivityState);
 							break;
 						default:
 							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + " ist eine ungültige Action angegeben!");

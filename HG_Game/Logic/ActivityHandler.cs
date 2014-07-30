@@ -60,18 +60,6 @@ namespace HG_Game
 			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
 			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
 			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
-			/*
-			KnockOverTree, "Umwerfen [Baum]"
-			BalanceOverTree, "Balancieren [Baum]"
-			PushRock, "Drücken [Fels]"
-			SlipThroughRock, "Durch schlüpfen [Fels]"
-			JumpOverGap, "Springen [Abgrund]"
-			LegUp, "Räuberleiter"
-			LegUpGrab, "Hoch heben"
-			PushDoor, "Drücken [Tür]"
-			PullDoor, "Ziehen [Tür]"
-			UseWell, "Herablassen [Brunnen]"
-			*/
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)

@@ -30,6 +30,8 @@ namespace HG_Game
 		protected List<ChargeAmulet> AmuletStates;
 		protected UseAmulet Amulet;
 
+		public static bool AmuletBlocksWaypoints;
+
 		#endregion
 
 		#region Constructor
@@ -192,8 +194,12 @@ namespace HG_Game
 
 		protected void UpdateAmulet(Savegame pSavegame, SceneData pScene)
 		{
-			if (pSavegame.SceneId != AmuletScene)
+			if (pSavegame.SceneId != AmuletScene || Amulet.m2ndState)
+			{
+				AmuletBlocksWaypoints = false;
 				return;
+			}
+			AmuletBlocksWaypoints = true;
 			bool AmuletFinished = true;
 			foreach(ChargeAmulet a in AmuletStates)
 			{

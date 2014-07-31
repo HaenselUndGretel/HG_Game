@@ -2,6 +2,7 @@
 using KryptonEngine.Entities;
 using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Spine;
 using System;
 using System.Collections.Generic;
@@ -215,5 +216,14 @@ namespace HG_Game
 			pGameState = GameScene.GameState.End;
 		}
 		*/
+
+		//Draw
+		public static void DrawActI(ActivityInstruction pActI, SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
+		{
+			if (pPlayer.GetType() == typeof(Hansel))
+				pActI.Draw(pSpriteBatch, (Hansel)pPlayer, (Gretel)pOtherPlayer);
+			else
+				pActI.Draw(pSpriteBatch, (Hansel)pOtherPlayer, (Gretel)pPlayer);
+		}
 	}
 }

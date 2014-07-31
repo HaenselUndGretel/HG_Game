@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +62,11 @@ namespace HG_Game
 			ActI.Update();
 		}
 
-		#endregion
+		public override void Draw(SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
+		{
+			Sequences.DrawActI(ActI, pSpriteBatch, pPlayer, pOtherPlayer);
+		}
 
+		#endregion
 	}
 }

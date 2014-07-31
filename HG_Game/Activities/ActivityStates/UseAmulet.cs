@@ -8,7 +8,7 @@ using System.Text;
 
 namespace HG_Game
 {
-	class UseAmulet : ActivityState
+	public class UseAmulet : ActivityState
 	{
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;

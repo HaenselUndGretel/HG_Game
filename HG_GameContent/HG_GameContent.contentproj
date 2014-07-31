@@ -967,7 +967,7 @@
       <Name>amuletStone</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="sfx\MusicForest0.mp3">
+    <Content Include="sfx\MusicForest0.mp3">
       <Name>MusicForest0</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>

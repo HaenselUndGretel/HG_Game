@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
@@ -133,6 +134,7 @@ namespace HG_Game
 						if (col.GetType() == typeof(Lantern))
 							pHansel.Lantern = true;
 						pGameState = GameScene.GameState.CollectableInfo;
+						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId);
 						return;
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
@@ -146,6 +148,7 @@ namespace HG_Game
 						if (col.GetType() == typeof(Lantern))
 							pGretel.Lantern = true;
 						pGameState = GameScene.GameState.CollectableInfo;
+						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId);
 						return;
 					}
 				}

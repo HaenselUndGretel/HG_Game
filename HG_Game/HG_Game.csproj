@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\ActivityInstruction.cs" />
+    <Compile Include="Activities\ActivityStates\ChargeAmulet.cs" />
     <Compile Include="Activities\ActivityStates\UseAmulet.cs" />
     <Compile Include="Activities\Conditions.cs" />
     <Compile Include="Activities\ActivityStates\JumpOverGap.cs" />

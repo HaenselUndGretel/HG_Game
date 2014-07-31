@@ -9,30 +9,27 @@ using System.Text;
 
 namespace HG_Game
 {
-	class PushDoor : ActivityState
+	public class ChargeAmulet : ActivityState
 	{
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
-		public PushDoor(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
+		public ChargeAmulet(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
 			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
+			ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Up);
 		}
 
 		#region Override Methods
 
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
-			if (Conditions.NotHandicapped(pPlayer, Activity.PushDoor) &&
+			if (Conditions.NotHandicapped(pPlayer, Activity.ChargeAmulet) &&
 				Conditions.Contains(pPlayer, rIObj)
 				)
-			{
-				if (!m2ndState)
-					return Activity.PushDoor;
-				return Activity.PullDoor;
-			}
+				return Activity.ChargeAmulet;
 			return Activity.None;
 		}
 
@@ -41,7 +38,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
-					//-----Zu Position holden-----
+					//-----Zu Positionen holden-----
 					if (!Conditions.ActionHold(pPlayer))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -52,42 +49,18 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer);
 					break;
 				case 1:
-					//-----Richtung bestimmen-----
-					Vector2 ActionToCollisionRectDirection = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
-
-					int AnimationDirection;
-					if (ActionToCollisionRectDirection.Y > 0)
-					{
-						AnimationDirection = 0;
-						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Down);
-					}
-					else if (ActionToCollisionRectDirection.Y < 0)
-					{
-						AnimationDirection = 1;
-						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Up);
-					}
-					else if (ActionToCollisionRectDirection.X > 0)
-					{
-						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Right);
-						AnimationDirection = 2;
-					}
-					else
-					{
-						AnimationDirection = 3;
-						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Left);
-					}
-					//Passende Animation entsprechend AnimationDirection & Push-/PullDoor starten
+					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, "attack");
 					Sequences.StartAnimation(pOtherPlayer, "attack");
 					++pPlayer.mCurrentState;
 					++pOtherPlayer.mCurrentState;
 					break;
 				case 2:
-					//-----Tür bewegen-----
+					//-----Amulett hoch halten-----
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
-						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y), false);
-						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
+						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
+						//Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 					}
 					else
@@ -101,8 +74,8 @@ namespace HG_Game
 						Sequences.SetPlayerToIdle(pOtherPlayer);
 						ActI.SetFadingState(pPlayer, false);
 						ActI.SetFadingState(pOtherPlayer, false);
-						rIObj.CollisionRectList.Clear();
 						rIObj.ActionRectList.Clear();
+						m2ndState = true;
 					}
 					break;
 			}

@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,9 @@ namespace HG_Game
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
 			if (Conditions.NotHandicapped(pPlayer, Activity.UseAmulet) &&
-				Conditions.Contains(pPlayer, rIObj)
+				Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this) &&
+				!pPlayer.Lantern &&
+				!m2ndState
 				)
 				return Activity.UseAmulet;
 			return Activity.None;
@@ -37,48 +40,32 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
-					//-----Zu Positionen holden-----
-					if (!Conditions.ActionHold(pPlayer))
-					{
-						Sequences.SetPlayerToIdle(pPlayer);
-						break;
-					}
-					if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer))
-						++pPlayer.mCurrentState;
-					Sequences.MovePlayerToRightActionPosition(pPlayer);
-					break;
-				case 1:
 					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, "attack");
-					Sequences.StartAnimation(pOtherPlayer, "attack");
 					++pPlayer.mCurrentState;
-					++pOtherPlayer.mCurrentState;
 					break;
-				case 2:
+				case 1:
 					//-----Amulett hoch halten-----
-					if (pPlayer.GetType() == typeof(Hansel))
-					{
-						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1), false);
-						//Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
-						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
-					}
-					else
-					{
-						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
-					}
-
+					Sequences.UpdateActIProgress(Progress, ActI, pPlayer, new Vector2(0, -1));
+					Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
+					//Abbrechbar
+					if (Progress.Progress <= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
+						Sequences.SetPlayerToIdle(pPlayer);
 					if (Progress.Complete)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
-						Sequences.SetPlayerToIdle(pOtherPlayer);
 						ActI.SetFadingState(pPlayer, false);
-						ActI.SetFadingState(pOtherPlayer, false);
-						rIObj.ActionRectList.Clear();
+						//Delete Witch
 						m2ndState = true;
 					}
 					break;
 			}
 			ActI.Update();
+		}
+
+		public override void Draw(SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
+		{
+			Sequences.DrawActI(ActI, pSpriteBatch, pPlayer, pOtherPlayer);
 		}
 
 		#endregion

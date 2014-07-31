@@ -175,16 +175,11 @@ namespace HG_Game
 				return;
 			}
 			Sequences.SetWellOverlay(rIObj.SkeletonPosition, true, ref pRenderList); //Display Overlay
-			
-
 		}
 
 		public override void Draw(SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
 		{
-			if (pPlayer.GetType() == typeof(Hansel))
-				ActI.Draw(pSpriteBatch, (Hansel)pPlayer, (Gretel)pOtherPlayer);
-			else
-				ActI.Draw(pSpriteBatch, (Hansel)pOtherPlayer, (Gretel)pPlayer);
+			Sequences.DrawActI(ActI, pSpriteBatch, pPlayer, pOtherPlayer);
 		}
 
 		#endregion

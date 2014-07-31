@@ -87,7 +87,7 @@ namespace HG_Game
 			base.LoadContent();
 			mEndGameTexture = TextureManager.Instance.GetElementByString("endgame");
 			//Logic
-			mLogic.LoadContent();
+			mLogic.LoadContent(mHansel, mGretel);
 			//Player
 			mHansel.LoadContent();
 			mGretel.LoadContent();

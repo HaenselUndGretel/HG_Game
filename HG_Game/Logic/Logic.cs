@@ -46,9 +46,9 @@ namespace HG_Game
 			EnemyHandler = new EnemyHandler();
 		}
 
-		public void LoadContent()
+		public void LoadContent(Hansel pHansel, Gretel pGretel)
 		{
-			ActivityHandler.LoadContent();
+			ActivityHandler.LoadContent(pHansel, pGretel);
 		}
 
 		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer, ref GameScene.GameState pGameState)

@@ -68,7 +68,7 @@ namespace HG_Game
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
 						Sequences.UpdateActIProgressBothLegUp(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
-						if (Progress.Progress >= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
+						if (Progress.Progress <= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
 						{ //Abbrechbar
 							Sequences.SetPlayerToIdle(pPlayer);
 							Sequences.SetPlayerToIdle(pOtherPlayer);
@@ -144,10 +144,7 @@ namespace HG_Game
 
 		public override void Draw(SpriteBatch pSpriteBatch, Player pPlayer, Player pOtherPlayer)
 		{
-			if (pPlayer.GetType() == typeof(Hansel))
-				ActI.Draw(pSpriteBatch, (Hansel)pPlayer, (Gretel)pOtherPlayer);
-			else
-				ActI.Draw(pSpriteBatch, (Hansel)pOtherPlayer, (Gretel)pPlayer);
+			Sequences.DrawActI(ActI, pSpriteBatch, pPlayer, pOtherPlayer);
 		}
 
 		#endregion

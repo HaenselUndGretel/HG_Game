@@ -2,6 +2,7 @@
 using KryptonEngine;
 using KryptonEngine.AI;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using KryptonEngine.Rendering;
 using Microsoft.Xna.Framework;
 using System;
@@ -139,6 +140,7 @@ namespace HG_Game
 			pGretel.SetAnimation();
 			FadingProgress = 0d;
 			CurrentState = State.Switching;
+			FmodMediaPlayer.Instance.FadeBackgroundOut();
 		}
 
 		/// <summary>
@@ -169,6 +171,9 @@ namespace HG_Game
 				// Für alle weiteren Felder die nicht betreten werden können.
 				AIManager.Instance.SetInterActiveObjects(pScene.InteractiveObjects);
 				AIManager.Instance.SetAgents(pScene.Enemies);
+
+				SoundHandler.Instance.SceneId = DestinationScene;
+				FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.GetBackgroundMusic());
 			}
 		}
 
@@ -186,6 +191,7 @@ namespace HG_Game
 			}
 			if (TmpEnterFinished)
 			{
+
 				CurrentState = State.Idle;
 				//Spiel speichern wenn Spiler in der Scene angekommen sind und ein Kreidefelsen in ihr steht.
 				foreach (InteractiveObject iObj in pScene.InteractiveObjects)

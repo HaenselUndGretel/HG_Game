@@ -114,6 +114,8 @@ namespace HG_Game
 			GameReferenzes.GameCamera = mCamera;
 			GameReferenzes.Level = mScene;
 
+			SoundHandler.Instance.SceneId = mSavegame.SceneId;
+
 			AIManager.Instance.ChangeMap(mCamera.GameScreen, mScene.MoveArea);
 
 			foreach (InteractiveObject iobj in mScene.InteractiveObjects)

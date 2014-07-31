@@ -57,10 +57,7 @@ namespace HG_Game
 			SelectedIndex = 0;
 			SelectedIndexCollectable = 0;
 			SelectedIndexOptions = 0;
-			FmodMediaPlayer.Instance.SetBackgroundSong(new List<String>() { "MusicForest0", "MusicForest1", "MusicForest2", "MusicForest3" });
-			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(3);
+			FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.MainTheme);
 		}
 		#endregion
 
@@ -83,17 +80,10 @@ namespace HG_Game
 				mButtons.Add(new ImageButton(Names[i], new Vector2(25 + i * TextureWidth + i * 25, TextureHeight), Actions[i]));
 			mButtons[SelectedIndex].IsSelected = true;
 
-
 			int OffsetScreenX = 1280;
 			int OffsetScreenY = 720;
 
 			mCollectableButton = new List<LockedImageButton>();
-			//for(int i = 0; i < 5; i++)
-			//	mCollectableButton.Add(new LockedImageButton("Collectable1", new Vector2(25 + i * TextureWidth + i * 25, -OffsetScreenY +  25), null));
-			//for(int i = 5; i < 9; i++)
-			//	mCollectableButton.Add(new LockedImageButton("Collectable1", new Vector2(138 + (i - 5) * TextureWidth + (i - 5) * 25, -OffsetScreenY + 276), null));
-			//for (int i = 0; i < 9; i++)
-			//	mCollectableButton[i].IsUnlocked = true;
 
 			for (int i = 0; i < 5; i++)
 				mCollectableButton.Add(new LockedImageButton("Collectable1", new Vector2(25 + i * TextureWidth + i * 25, + 25), null));
@@ -310,6 +300,7 @@ namespace HG_Game
 		private void ContinueGame()
 		{
 			// Startet Spielstand aus der SaveDatei.
+			FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.GetBackgroundMusic());
 			SceneManager.Instance.SetCurrentSceneTo("Game");
 		}
 
@@ -317,9 +308,11 @@ namespace HG_Game
 		{
 			// Hauptgame Scene
 			((GameScene)SceneManager.Instance.GetScene("Game")).RestartSavegame();
-			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(1);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(2);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(3);
+			FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.HouseTheme);
+			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
+			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);
+			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(3);
+			SoundHandler.Instance.SceneId = 0;
 			SceneManager.Instance.SetCurrentSceneTo("Game");
 		}
 

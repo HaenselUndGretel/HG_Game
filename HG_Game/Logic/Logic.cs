@@ -63,6 +63,8 @@ namespace HG_Game
 			AIManager.Instance.Update();
 
 			EnemyHandler.Update();
+			SoundHandler.Instance.Update();
+
 			//Check whether Player may move
 			HanselMayMove = true;
 			GretelMayMove = true;

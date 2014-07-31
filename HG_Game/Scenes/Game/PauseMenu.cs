@@ -1,4 +1,5 @@
-﻿using KryptonEngine.Controls;
+﻿using KryptonEngine;
+using KryptonEngine.Controls;
 using KryptonEngine.Entities;
 using KryptonEngine.FModAudio;
 using KryptonEngine.Manager;
@@ -99,9 +100,7 @@ namespace HG_Game
 		private void ExitButton()
 		{
 			mIsActive = false;
-			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(3);
+			FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.MainTheme);
 			SceneManager.Instance.SetCurrentSceneTo("Menu");
 		}
 

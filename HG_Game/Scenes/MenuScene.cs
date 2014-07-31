@@ -310,9 +310,6 @@ namespace HG_Game
 		private void ContinueGame()
 		{
 			// Startet Spielstand aus der SaveDatei.
-			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(1);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(2);
-			FmodMediaPlayer.Instance.FadeBackgroundChannelOut(3);
 			SceneManager.Instance.SetCurrentSceneTo("Game");
 		}
 

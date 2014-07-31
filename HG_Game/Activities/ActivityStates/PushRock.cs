@@ -45,6 +45,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					//-----Zu Positionen holden-----
 					if (!Conditions.ActionHold(pPlayer))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -55,6 +56,7 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer);
 					break;
 				case 1:
+					//-----Richtung bestimmen-----
 					if (m2ndState)
 					{
 						++pPlayer.mCurrentState;
@@ -104,6 +106,7 @@ namespace HG_Game
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
+					//-----Fels bewegen-----
 					Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, mDestinationIObj - mSourceIObj, false);
 					if (Progress.Progress >= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
 					{ //Abbrechbar

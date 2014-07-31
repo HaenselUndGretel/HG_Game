@@ -8,7 +8,7 @@ using System.Text;
 
 namespace HG_Game
 {
-	class UseAmulet : ActivityState
+	public class UseAmulet : ActivityState
 	{
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
@@ -37,6 +37,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					//-----Zu Positionen holden-----
 					if (!Conditions.ActionHold(pPlayer))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -47,13 +48,14 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer);
 					break;
 				case 1:
-					//Amulett hoch halten
+					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, "attack");
 					Sequences.StartAnimation(pOtherPlayer, "attack");
 					++pPlayer.mCurrentState;
 					++pOtherPlayer.mCurrentState;
 					break;
 				case 2:
+					//-----Amulett hoch halten-----
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
 						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1), false);

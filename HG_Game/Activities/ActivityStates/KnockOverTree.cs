@@ -56,11 +56,13 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						//-----Zu Position bewegen-----
 						if (Conditions.PlayerAtActionPosition(pPlayer))
 							++pPlayer.mCurrentState;
 						Sequences.MovePlayerToActionPosition(pPlayer);
 						break;
 					case 1:
+						//-----Richtung bestimmen-----
 						Sequences.StartAnimation(pPlayer, "attack");
 						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
 						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
@@ -78,6 +80,7 @@ namespace HG_Game
 						++pPlayer.mCurrentState;
 						break;
 					case 2:
+						//-----Baum umwerfen-----
 						if (!Conditions.ActionThumbstickPressed(pPlayer, rIObj.ActionPosition2 - rIObj.ActionPosition1))
 						{
 							ActI.SetFadingState(pPlayer, true);
@@ -101,6 +104,7 @@ namespace HG_Game
 						}
 						break;
 					case 3:
+						//-----Baum umgefallen?-----
 						if (Conditions.AnimationComplete(rIObj))
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
@@ -115,6 +119,7 @@ namespace HG_Game
 				switch (pPlayer.mCurrentState)
 				{
 					case 0:
+						//-----Zu Position bewegen-----
 						if (!Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this))
 						{
 							Sequences.SetPlayerToIdle(pPlayer);
@@ -125,6 +130,7 @@ namespace HG_Game
 						Sequences.MovePlayerToNearestActionPosition(pPlayer);
 						break;
 					case 1:
+						//-----Richtung bestimmen-----
 						IsAvailable = false;
 						Sequences.StartAnimation(pPlayer, "attack");
 						StartPosition = pPlayer.SkeletonPosition;
@@ -133,11 +139,13 @@ namespace HG_Game
 						++pPlayer.mCurrentState;
 						break;
 					case 2:
+						//-----Auf Baum steigen-----
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer))
 							++pPlayer.mCurrentState;
 						break;
 					case 3:
+						//-----Auf Baum balancieren-----
 						//Update Movement
 						Vector2 MovementInput = pPlayer.Input.Movement;
 						if (MovementInput == Vector2.Zero) //Performance quit
@@ -175,6 +183,7 @@ namespace HG_Game
 						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), BalanceSpeedFactor);
 						break;
 					case 4:
+						//-----Von Baum steigen-----
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
 						while (pPlayer.CollisionBox.Intersects(pOtherPlayer.CollisionBox))
 							pOtherPlayer.MoveManually(Direction);

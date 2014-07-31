@@ -41,6 +41,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					//-----Zu Position holden-----
 					if (!Conditions.ActionHold(pPlayer))
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
@@ -51,6 +52,7 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer);
 					break;
 				case 1:
+					//-----Richtung bestimmen-----
 					Vector2 ActionToCollisionRectDirection = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
 
 					int AnimationDirection;
@@ -81,6 +83,7 @@ namespace HG_Game
 					++pOtherPlayer.mCurrentState;
 					break;
 				case 2:
+					//-----Tür bewegen-----
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
 						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y), false);

@@ -100,24 +100,9 @@ namespace HG_Game
 
 		protected bool InLanternLight(Collectable pCollectable, Hansel pHansel, Gretel pGretel)
 		{
-			if (!pHansel.Lantern && !pGretel.Lantern)
+			if (!pGretel.Lantern)
 				return false;
-			Vector2 Position;
-			float Radius = 100f;
-			if (pHansel.Lantern)
-			{
-				Position = pHansel.SkeletonPosition + LanternOffset;
-				if (pHansel.Input.UseItemIsPressed)
-					Radius *= 1.8f;
-			}
-			else if (pGretel.Lantern)
-			{
-				Position = pGretel.SkeletonPosition + LanternOffset;
-			}
-			
-			//Eigentlicher Test
-
-			return true;
+			return ((pGretel.SkeletonPosition - pCollectable.SkeletonPosition).Length() < GameReferenzes.LIGHT_RADIUS) ? true : false;
 		}
 
 		protected void CollectCollectables(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel, ref GameScene.GameState pGameState)

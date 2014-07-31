@@ -45,6 +45,7 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					//-----Zu Position holden-----
 					if (!m2ndState) //LegUp
 						Progress.Reset(); //LegUp kann mehrfach ausgeführt werden
 					if (!Conditions.ActionHold(pPlayer))
@@ -62,7 +63,8 @@ namespace HG_Game
 					ActI.ThumbstickDirGretel = ActivityInstruction.ThumbstickDirection.None;
 					++pPlayer.mCurrentState;
 					break;
-				case 2: //Hoch heben
+				case 2:
+					//-----Hoch heben-----
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
 						Sequences.UpdateActIProgressBothLegUp(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
@@ -96,6 +98,7 @@ namespace HG_Game
 					}
 					break;
 				case 3:
+					//-----Gretel nächste Animation starten-----
 					if (pPlayer.GetType() == typeof(Gretel))
 					{
 						if (!m2ndState) //LegUp
@@ -112,6 +115,7 @@ namespace HG_Game
 					}
 					break;
 				case 4:
+					//-----Gretel fertig?-----
 					if (pPlayer.GetType() == typeof(Hansel) && Conditions.AnimationComplete(pOtherPlayer))
 					{
 						ActI.SetFadingState(pOtherPlayer, false);
@@ -126,6 +130,7 @@ namespace HG_Game
 					}
 					break;
 				case 5:
+					//-----Beide fertig?-----
 					if (Conditions.AnimationComplete(pPlayer))
 					{
 						if (!m2ndState && pPlayer.GetType() == typeof(Gretel))

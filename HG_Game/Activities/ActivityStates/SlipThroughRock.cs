@@ -35,15 +35,18 @@ namespace HG_Game
 			switch (pPlayer.mCurrentState)
 			{
 				case 0:
+					//-----Zu Position bewegen-----
 					if (Conditions.PlayerAtNearestActionPosition(pPlayer))
 						++pPlayer.mCurrentState;
 					Sequences.MovePlayerToNearestActionPosition(pPlayer);
 					break;
 				case 1:
+					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, "attack"); //Weg bewegen
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
+					//-----Weg bewegt?-----
 					if (Conditions.AnimationComplete(pPlayer))
 					{
 						Destination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
@@ -52,9 +55,10 @@ namespace HG_Game
 					}
 					break;
 				case 3:
+					//-----Durch Felsspalt bewegen-----
 					if (pPlayer.SkeletonPosition == Destination)
 					{
-						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pPlayer, "attack"); //Wieder "auftauchen"
 						pPlayer.IsVisible = true;
 						++pPlayer.mCurrentState;
 						break;
@@ -62,6 +66,7 @@ namespace HG_Game
 					Sequences.MoveToPosition(pPlayer, Destination);
 					break;
 				case 4:
+					//-----Wieder komplett da?-----
 					if (Conditions.AnimationComplete(pPlayer))
 						Sequences.SetPlayerToIdle(pPlayer);
 					break;

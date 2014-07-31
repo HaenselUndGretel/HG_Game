@@ -3,827 +3,300 @@
   <GamePlane>
     <X>0</X>
     <Y>0</Y>
-    <Width>2560</Width>
-    <Height>1440</Height>
+    <Width>1280</Width>
+    <Height>720</Height>
     <Location>
       <X>0</X>
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Forest</BackgroundSoundSetting>
-  <MoveArea>
-    <Rectangle>
-      <X>510</X>
-      <Y>-51</Y>
-      <Width>124</Width>
-      <Height>540</Height>
-      <Location>
-        <X>510</X>
-        <Y>-51</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>505</X>
-      <Y>460</Y>
-      <Width>147</Width>
-      <Height>263</Height>
-      <Location>
-        <X>505</X>
-        <Y>460</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>462</X>
-      <Y>759</Y>
-      <Width>185</Width>
-      <Height>323</Height>
-      <Location>
-        <X>462</X>
-        <Y>759</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>468</X>
-      <Y>1055</Y>
-      <Width>185</Width>
-      <Height>48</Height>
-      <Location>
-        <X>468</X>
-        <Y>1055</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>517</X>
-      <Y>866</Y>
-      <Width>43</Width>
-      <Height>98</Height>
-      <Location>
-        <X>517</X>
-        <Y>866</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1152</X>
-      <Y>809</Y>
-      <Width>93</Width>
-      <Height>132</Height>
-      <Location>
-        <X>1152</X>
-        <Y>809</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>550</X>
-      <Y>-16</Y>
-      <Width>422</Width>
-      <Height>65</Height>
-      <Location>
-        <X>550</X>
-        <Y>-16</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1590</X>
-      <Y>502</Y>
-      <Width>320</Width>
-      <Height>505</Height>
-      <Location>
-        <X>1590</X>
-        <Y>502</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1153</X>
-      <Y>-17</Y>
-      <Width>1013</Width>
-      <Height>110</Height>
-      <Location>
-        <X>1153</X>
-        <Y>-17</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>2057</X>
-      <Y>-21</Y>
-      <Width>640</Width>
-      <Height>107</Height>
-      <Location>
-        <X>2057</X>
-        <Y>-21</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>2462</X>
-      <Y>46</Y>
-      <Width>119</Width>
-      <Height>536</Height>
-      <Location>
-        <X>2462</X>
-        <Y>46</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1646</X>
-      <Y>991</Y>
-      <Width>241</Width>
-      <Height>491</Height>
-      <Location>
-        <X>1646</X>
-        <Y>991</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>2482</X>
-      <Y>555</Y>
-      <Width>82</Width>
-      <Height>166</Height>
-      <Location>
-        <X>2482</X>
-        <Y>555</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1060</X>
-      <Y>101</Y>
-      <Width>97</Width>
-      <Height>418</Height>
-      <Location>
-        <X>1060</X>
-        <Y>101</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1059</X>
-      <Y>482</Y>
-      <Width>115</Width>
-      <Height>527</Height>
-      <Location>
-        <X>1059</X>
-        <Y>482</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>550</X>
-      <Y>1277</Y>
-      <Width>104</Width>
-      <Height>257</Height>
-      <Location>
-        <X>550</X>
-        <Y>1277</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>348</X>
-      <Y>723</Y>
-      <Width>302</Width>
-      <Height>119</Height>
-      <Location>
-        <X>348</X>
-        <Y>723</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-12</X>
-      <Y>719</Y>
-      <Width>257</Width>
-      <Height>119</Height>
-      <Location>
-        <X>-12</X>
-        <Y>719</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>543</X>
-      <Y>1079</Y>
-      <Width>128</Width>
-      <Height>50</Height>
-      <Location>
-        <X>543</X>
-        <Y>1079</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>598</X>
-      <Y>950</Y>
-      <Width>566</Width>
-      <Height>82</Height>
-      <Location>
-        <X>598</X>
-        <Y>950</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1166</X>
-      <Y>900</Y>
-      <Width>158</Width>
-      <Height>78</Height>
-      <Location>
-        <X>1166</X>
-        <Y>900</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1423</X>
-      <Y>918</Y>
-      <Width>245</Width>
-      <Height>57</Height>
-      <Location>
-        <X>1423</X>
-        <Y>918</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1766</X>
-      <Y>998</Y>
-      <Width>347</Width>
-      <Height>191</Height>
-      <Location>
-        <X>1766</X>
-        <Y>998</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>2316</X>
-      <Y>1015</Y>
-      <Width>314</Width>
-      <Height>164</Height>
-      <Location>
-        <X>2316</X>
-        <Y>1015</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1815</X>
-      <Y>610</Y>
-      <Width>335</Width>
-      <Height>126</Height>
-      <Location>
-        <X>1815</X>
-        <Y>610</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>2248</X>
-      <Y>616</Y>
-      <Width>331</Width>
-      <Height>119</Height>
-      <Location>
-        <X>2248</X>
-        <Y>616</Y>
-      </Location>
-    </Rectangle>
-  </MoveArea>
-  <Waypoints />
+  <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
+  <MoveArea />
+  <Waypoints>
+    <Waypoint>
+      <ObjectId>1</ObjectId>
+      <Position>
+        <X>-4</X>
+        <Y>233</Y>
+      </Position>
+      <CollisionBox>
+        <X>-4</X>
+        <Y>233</Y>
+        <Width>192</Width>
+        <Height>206</Height>
+        <Location>
+          <X>-4</X>
+          <Y>233</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <DestinationScene>0</DestinationScene>
+      <DestinationWaypoint>0</DestinationWaypoint>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>-1</X>
+        <Y>0</Y>
+      </MovementOnEnter>
+    </Waypoint>
+    <Waypoint>
+      <ObjectId>2</ObjectId>
+      <Position>
+        <X>1075</X>
+        <Y>241</Y>
+      </Position>
+      <CollisionBox>
+        <X>1075</X>
+        <Y>241</Y>
+        <Width>207</Width>
+        <Height>178</Height>
+        <Location>
+          <X>1075</X>
+          <Y>241</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <DestinationScene>0</DestinationScene>
+      <DestinationWaypoint>0</DestinationWaypoint>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>-1</X>
+        <Y>0</Y>
+      </MovementOnEnter>
+    </Waypoint>
+  </Waypoints>
   <BackgroundSprites />
   <InteractiveObjects>
     <InteractiveObject>
-      <ObjectId>3</ObjectId>
-      <Position>
-        <X>128</X>
-        <Y>384</Y>
-      </Position>
-      <CollisionBox>
-        <X>53</X>
-        <Y>169</Y>
-        <Width>150</Width>
-        <Height>252</Height>
-        <Location>
-          <X>53</X>
-          <Y>169</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>384</DrawZ>
-      <NormalZ>0.09375</NormalZ>
-      <Name>bookShelf</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList>
-        <Rectangle>
-          <X>203</X>
-          <Y>307</Y>
-          <Width>148</Width>
-          <Height>199</Height>
-          <Location>
-            <X>203</X>
-            <Y>307</Y>
-          </Location>
-        </Rectangle>
-      </ActionRectList>
-      <CollisionRectList>
-        <Rectangle>
-          <X>53</X>
-          <Y>169</Y>
-          <Width>150</Width>
-          <Height>252</Height>
-          <Location>
-            <X>53</X>
-            <Y>169</Y>
-          </Location>
-        </Rectangle>
-      </CollisionRectList>
-      <ActionPosition1>
-        <X>227</X>
-        <Y>385</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>128</X>
-        <Y>384</Y>
-      </ActionPosition2>
-      <ActionId>7</ActionId>
-    </InteractiveObject>
-    <InteractiveObject>
-      <ObjectId>44</ObjectId>
-      <Position>
-        <X>2213</X>
-        <Y>1186</Y>
-      </Position>
-      <CollisionBox>
-        <X>2117</X>
-        <Y>1009</Y>
-        <Width>196</Width>
-        <Height>182</Height>
-        <Location>
-          <X>2117</X>
-          <Y>1009</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1186</DrawZ>
-      <NormalZ>0.289550781</NormalZ>
-      <Name>pulldoor</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList>
-        <Rectangle>
-          <X>2114</X>
-          <Y>910</Y>
-          <Width>203</Width>
-          <Height>99</Height>
-          <Location>
-            <X>2114</X>
-            <Y>910</Y>
-          </Location>
-        </Rectangle>
-      </ActionRectList>
-      <CollisionRectList>
-        <Rectangle>
-          <X>2117</X>
-          <Y>1009</Y>
-          <Width>196</Width>
-          <Height>182</Height>
-          <Location>
-            <X>2117</X>
-            <Y>1009</Y>
-          </Location>
-        </Rectangle>
-      </CollisionRectList>
-      <ActionPosition1>
-        <X>2259</X>
-        <Y>978</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>2176</X>
-        <Y>977</Y>
-      </ActionPosition2>
-      <ActionId>9</ActionId>
-    </InteractiveObject>
-    <InteractiveObject>
-      <ObjectId>51</ObjectId>
+      <ObjectId>5</ObjectId>
       <Position>
         <X>290</X>
-        <Y>809</Y>
+        <Y>582</Y>
       </Position>
       <CollisionBox>
-        <X>256</X>
-        <Y>741</Y>
-        <Width>68</Width>
-        <Height>72</Height>
+        <X>290</X>
+        <Y>582</Y>
+        <Width>100</Width>
+        <Height>100</Height>
         <Location>
-          <X>256</X>
-          <Y>741</Y>
+          <X>290</X>
+          <Y>582</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>809</DrawZ>
-      <NormalZ>0.197509766</NormalZ>
-      <Name>stonePush</Name>
+      <DrawZ>582</DrawZ>
+      <NormalZ>0.142089844</NormalZ>
+      <Name>amuletStone</Name>
       <Height>0</Height>
       <Width>0</Width>
       <ActionRectList>
         <Rectangle>
-          <X>256</X>
-          <Y>679</Y>
-          <Width>68</Width>
-          <Height>61</Height>
+          <X>161</X>
+          <Y>586</Y>
+          <Width>287</Width>
+          <Height>104</Height>
           <Location>
-            <X>256</X>
-            <Y>679</Y>
+            <X>161</X>
+            <Y>586</Y>
           </Location>
         </Rectangle>
       </ActionRectList>
       <CollisionRectList>
         <Rectangle>
-          <X>256</X>
-          <Y>741</Y>
-          <Width>68</Width>
-          <Height>72</Height>
+          <X>184</X>
+          <Y>520</Y>
+          <Width>227</Width>
+          <Height>65</Height>
           <Location>
-            <X>256</X>
-            <Y>741</Y>
+            <X>184</X>
+            <Y>520</Y>
           </Location>
         </Rectangle>
       </CollisionRectList>
       <ActionPosition1>
-        <X>307</X>
-        <Y>722</Y>
+        <X>231</X>
+        <Y>627</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>272</X>
-        <Y>722</Y>
+        <X>353</X>
+        <Y>631</Y>
       </ActionPosition2>
-      <ActionId>3</ActionId>
+      <ActionId>11</ActionId>
     </InteractiveObject>
     <InteractiveObject>
-      <ObjectId>61</ObjectId>
+      <ObjectId>10</ObjectId>
       <Position>
-        <X>621</X>
-        <Y>1253</Y>
+        <X>346</X>
+        <Y>123</Y>
       </Position>
       <CollisionBox>
-        <X>581</X>
-        <Y>1179</Y>
-        <Width>80</Width>
-        <Height>79</Height>
+        <X>346</X>
+        <Y>123</Y>
+        <Width>100</Width>
+        <Height>100</Height>
         <Location>
-          <X>581</X>
-          <Y>1179</Y>
+          <X>346</X>
+          <Y>123</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>1253</DrawZ>
-      <NormalZ>0.3059082</NormalZ>
-      <Name>stonePush4</Name>
+      <DrawZ>123</DrawZ>
+      <NormalZ>0.0300292969</NormalZ>
+      <Name>amuletStone</Name>
       <Height>0</Height>
       <Width>0</Width>
       <ActionRectList>
         <Rectangle>
-          <X>511</X>
-          <Y>1179</Y>
-          <Width>70</Width>
-          <Height>79</Height>
+          <X>217</X>
+          <Y>127</Y>
+          <Width>287</Width>
+          <Height>104</Height>
           <Location>
-            <X>511</X>
-            <Y>1179</Y>
+            <X>217</X>
+            <Y>127</Y>
           </Location>
         </Rectangle>
       </ActionRectList>
       <CollisionRectList>
         <Rectangle>
-          <X>581</X>
-          <Y>1179</Y>
-          <Width>80</Width>
-          <Height>79</Height>
+          <X>240</X>
+          <Y>61</Y>
+          <Width>227</Width>
+          <Height>65</Height>
           <Location>
-            <X>581</X>
-            <Y>1179</Y>
+            <X>240</X>
+            <Y>61</Y>
           </Location>
         </Rectangle>
       </CollisionRectList>
       <ActionPosition1>
-        <X>562</X>
-        <Y>1197</Y>
+        <X>287</X>
+        <Y>168</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>563</X>
-        <Y>1243</Y>
+        <X>409</X>
+        <Y>172</Y>
       </ActionPosition2>
-      <ActionId>3</ActionId>
+      <ActionId>11</ActionId>
     </InteractiveObject>
     <InteractiveObject>
-      <ObjectId>66</ObjectId>
+      <ObjectId>15</ObjectId>
       <Position>
-        <X>893</X>
-        <Y>1039</Y>
+        <X>879</X>
+        <Y>107</Y>
       </Position>
       <CollisionBox>
-        <X>806</X>
-        <Y>859</Y>
-        <Width>184</Width>
-        <Height>190</Height>
+        <X>879</X>
+        <Y>107</Y>
+        <Width>100</Width>
+        <Height>100</Height>
         <Location>
-          <X>806</X>
-          <Y>859</Y>
+          <X>879</X>
+          <Y>107</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>1039</DrawZ>
-      <NormalZ>0.2536621</NormalZ>
-      <Name>LegUp</Name>
+      <DrawZ>107</DrawZ>
+      <NormalZ>0.0261230469</NormalZ>
+      <Name>amuletStone</Name>
       <Height>0</Height>
       <Width>0</Width>
       <ActionRectList>
         <Rectangle>
-          <X>804</X>
-          <Y>750</Y>
-          <Width>186</Width>
-          <Height>108</Height>
+          <X>750</X>
+          <Y>111</Y>
+          <Width>287</Width>
+          <Height>104</Height>
           <Location>
-            <X>804</X>
-            <Y>750</Y>
-          </Location>
-        </Rectangle>
-        <Rectangle>
-          <X>806</X>
-          <Y>1049</Y>
-          <Width>185</Width>
-          <Height>110</Height>
-          <Location>
-            <X>806</X>
-            <Y>1049</Y>
+            <X>750</X>
+            <Y>111</Y>
           </Location>
         </Rectangle>
       </ActionRectList>
       <CollisionRectList>
         <Rectangle>
-          <X>806</X>
-          <Y>859</Y>
-          <Width>184</Width>
-          <Height>190</Height>
+          <X>773</X>
+          <Y>45</Y>
+          <Width>227</Width>
+          <Height>65</Height>
           <Location>
-            <X>806</X>
-            <Y>859</Y>
+            <X>773</X>
+            <Y>45</Y>
           </Location>
         </Rectangle>
       </CollisionRectList>
       <ActionPosition1>
-        <X>892</X>
-        <Y>1067</Y>
+        <X>820</X>
+        <Y>152</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>893</X>
-        <Y>832</Y>
+        <X>942</X>
+        <Y>156</Y>
       </ActionPosition2>
-      <ActionId>6</ActionId>
+      <ActionId>11</ActionId>
     </InteractiveObject>
     <InteractiveObject>
-      <ObjectId>71</ObjectId>
+      <ObjectId>20</ObjectId>
       <Position>
-        <X>1374</X>
-        <Y>983</Y>
+        <X>908</X>
+        <Y>500</Y>
       </Position>
       <CollisionBox>
-        <X>1257</X>
-        <Y>803</Y>
-        <Width>241</Width>
-        <Height>180</Height>
+        <X>908</X>
+        <Y>500</Y>
+        <Width>100</Width>
+        <Height>100</Height>
         <Location>
-          <X>1257</X>
-          <Y>803</Y>
+          <X>908</X>
+          <Y>500</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>983</DrawZ>
-      <NormalZ>0.239990234</NormalZ>
-      <Name>jumpgap</Name>
+      <DrawZ>500</DrawZ>
+      <NormalZ>0.122070313</NormalZ>
+      <Name>amuletStone</Name>
       <Height>0</Height>
       <Width>0</Width>
       <ActionRectList>
         <Rectangle>
-          <X>1256</X>
-          <Y>649</Y>
-          <Width>242</Width>
-          <Height>151</Height>
+          <X>779</X>
+          <Y>504</Y>
+          <Width>287</Width>
+          <Height>104</Height>
           <Location>
-            <X>1256</X>
-            <Y>649</Y>
-          </Location>
-        </Rectangle>
-        <Rectangle>
-          <X>1271</X>
-          <Y>988</Y>
-          <Width>218</Width>
-          <Height>151</Height>
-          <Location>
-            <X>1271</X>
-            <Y>988</Y>
+            <X>779</X>
+            <Y>504</Y>
           </Location>
         </Rectangle>
       </ActionRectList>
       <CollisionRectList>
         <Rectangle>
-          <X>1257</X>
-          <Y>803</Y>
-          <Width>241</Width>
-          <Height>180</Height>
+          <X>802</X>
+          <Y>438</Y>
+          <Width>227</Width>
+          <Height>65</Height>
           <Location>
-            <X>1257</X>
-            <Y>803</Y>
+            <X>802</X>
+            <Y>438</Y>
           </Location>
         </Rectangle>
       </CollisionRectList>
       <ActionPosition1>
-        <X>1375</X>
-        <Y>765</Y>
+        <X>849</X>
+        <Y>545</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>1375</X>
-        <Y>1022</Y>
+        <X>971</X>
+        <Y>549</Y>
       </ActionPosition2>
-      <ActionId>5</ActionId>
-    </InteractiveObject>
-    <InteractiveObject>
-      <ObjectId>76</ObjectId>
-      <Position>
-        <X>2196</X>
-        <Y>721</Y>
-      </Position>
-      <CollisionBox>
-        <X>2102</X>
-        <Y>489</Y>
-        <Width>195</Width>
-        <Height>51</Height>
-        <Location>
-          <X>2102</X>
-          <Y>489</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>721</DrawZ>
-      <NormalZ>0.176025391</NormalZ>
-      <Name>knockovertree</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList>
-        <Rectangle>
-          <X>2099</X>
-          <Y>366</Y>
-          <Width>202</Width>
-          <Height>123</Height>
-          <Location>
-            <X>2099</X>
-            <Y>366</Y>
-          </Location>
-        </Rectangle>
-        <Rectangle>
-          <X>2102</X>
-          <Y>771</Y>
-          <Width>198</Width>
-          <Height>123</Height>
-          <Location>
-            <X>2102</X>
-            <Y>771</Y>
-          </Location>
-        </Rectangle>
-      </ActionRectList>
-      <CollisionRectList>
-        <Rectangle>
-          <X>2102</X>
-          <Y>489</Y>
-          <Width>195</Width>
-          <Height>51</Height>
-          <Location>
-            <X>2102</X>
-            <Y>489</Y>
-          </Location>
-        </Rectangle>
-        <Rectangle>
-          <X>2104</X>
-          <Y>721</Y>
-          <Width>194</Width>
-          <Height>50</Height>
-          <Location>
-            <X>2104</X>
-            <Y>721</Y>
-          </Location>
-        </Rectangle>
-      </CollisionRectList>
-      <ActionPosition1>
-        <X>2203</X>
-        <Y>473</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>2195</X>
-        <Y>790</Y>
-      </ActionPosition2>
-      <ActionId>1</ActionId>
+      <ActionId>11</ActionId>
     </InteractiveObject>
   </InteractiveObjects>
   <Collectables />
-  <Lights>
-    <Light xsi:type="PointLight">
-      <ObjectId>118</ObjectId>
-      <Position>
-        <X>267</X>
-        <Y>999</Y>
-      </Position>
-      <CollisionBox>
-        <X>267</X>
-        <Y>999</Y>
-        <Width>64</Width>
-        <Height>64</Height>
-        <Location>
-          <X>267</X>
-          <Y>999</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>50</DrawZ>
-      <NormalZ>0.0122070313</NormalZ>
-      <Intensity>30</Intensity>
-      <Depth>0.110000022</Depth>
-      <LightColor>
-        <X>1</X>
-        <Y>1</Y>
-        <Z>1</Z>
-      </LightColor>
-      <Radius>20</Radius>
-    </Light>
-    <Light xsi:type="PointLight">
-      <ObjectId>119</ObjectId>
-      <Position>
-        <X>1349</X>
-        <Y>229</Y>
-      </Position>
-      <CollisionBox>
-        <X>1349</X>
-        <Y>229</Y>
-        <Width>64</Width>
-        <Height>64</Height>
-        <Location>
-          <X>1349</X>
-          <Y>229</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <NormalZ>0</NormalZ>
-      <Intensity>20</Intensity>
-      <Depth>0.0637207</Depth>
-      <LightColor>
-        <X>0.196078435</X>
-        <Y>1</Y>
-        <Z>1</Z>
-      </LightColor>
-      <Radius>20</Radius>
-    </Light>
-    <Light xsi:type="PointLight">
-      <ObjectId>120</ObjectId>
-      <Position>
-        <X>2078</X>
-        <Y>277</Y>
-      </Position>
-      <CollisionBox>
-        <X>2078</X>
-        <Y>277</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>2078</X>
-          <Y>277</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>4</DrawZ>
-      <NormalZ>0.0009765625</NormalZ>
-      <Intensity>20</Intensity>
-      <Depth>0.06499999</Depth>
-      <LightColor>
-        <X>0</X>
-        <Y>1</Y>
-        <Z>0</Z>
-      </LightColor>
-      <Radius>20</Radius>
-    </Light>
-    <Light xsi:type="PointLight">
-      <ObjectId>123</ObjectId>
-      <Position>
-        <X>2127</X>
-        <Y>1204</Y>
-      </Position>
-      <CollisionBox>
-        <X>2127</X>
-        <Y>1204</Y>
-        <Width>0</Width>
-        <Height>0</Height>
-        <Location>
-          <X>2127</X>
-          <Y>1204</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <NormalZ>0</NormalZ>
-      <Intensity>30</Intensity>
-      <Depth>0.3017578</Depth>
-      <LightColor>
-        <X>1</X>
-        <Y>0</Y>
-        <Z>0</Z>
-      </LightColor>
-      <Radius>20</Radius>
-    </Light>
-  </Lights>
+  <Lights />
   <Events />
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
@@ -884,109 +357,5 @@
       <Z>1</Z>
     </Direction>
   </SceneDirectionLight>
-  <Enemies>
-    <Enemy xsi:type="Wolf">
-      <ObjectId>127</ObjectId>
-      <Position>
-        <X>1253</X>
-        <Y>1246</Y>
-      </Position>
-      <CollisionBox>
-        <X>1203</X>
-        <Y>1146</Y>
-        <Width>100</Width>
-        <Height>100</Height>
-        <Location>
-          <X>1203</X>
-          <Y>1146</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>1246</DrawZ>
-      <NormalZ>0.304199219</NormalZ>
-      <Name>wolf</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList />
-      <CollisionRectList />
-      <ActionPosition1>
-        <X>1253</X>
-        <Y>1246</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>1253</X>
-        <Y>1246</Y>
-      </ActionPosition2>
-      <ActionId>0</ActionId>
-    </Enemy>
-    <Enemy xsi:type="Wolf">
-      <ObjectId>132</ObjectId>
-      <Position>
-        <X>1422</X>
-        <Y>512</Y>
-      </Position>
-      <CollisionBox>
-        <X>1372</X>
-        <Y>412</Y>
-        <Width>100</Width>
-        <Height>100</Height>
-        <Location>
-          <X>1372</X>
-          <Y>412</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>512</DrawZ>
-      <NormalZ>0.125</NormalZ>
-      <Name>wolf</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList />
-      <CollisionRectList />
-      <ActionPosition1>
-        <X>1422</X>
-        <Y>512</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>1422</X>
-        <Y>512</Y>
-      </ActionPosition2>
-      <ActionId>0</ActionId>
-    </Enemy>
-    <Enemy xsi:type="Wolf">
-      <ObjectId>136</ObjectId>
-      <Position>
-        <X>844</X>
-        <Y>426</Y>
-      </Position>
-      <CollisionBox>
-        <X>794</X>
-        <Y>326</Y>
-        <Width>100</Width>
-        <Height>100</Height>
-        <Location>
-          <X>794</X>
-          <Y>326</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>426</DrawZ>
-      <NormalZ>0.104003906</NormalZ>
-      <Name>wolf</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList />
-      <CollisionRectList />
-      <ActionPosition1>
-        <X>844</X>
-        <Y>426</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>844</X>
-        <Y>426</Y>
-      </ActionPosition2>
-      <ActionId>0</ActionId>
-    </Enemy>
-  </Enemies>
-  <Fog>false</Fog>
+  <Enemies />
 </SceneData>

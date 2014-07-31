@@ -764,6 +764,21 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\000Diffuse.png">
+      <Name>000Diffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_ChargeAmulet.png">
+      <Name>ActivityInfo_ChargeAmulet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ActivityInfo_UseAmulet.png">
+      <Name>ActivityInfo_UseAmulet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="iObj\bookShelf.iObj">
       <Name>bookShelf</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -940,6 +955,10 @@
       <Name>000</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="iObj\amuletStone.iObj">
+      <Name>amuletStone</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="sfx\MusicForest0.mp3">
       <Name>MusicForest0</Name>
       <Importer>Mp3Importer</Importer>
@@ -1038,6 +1057,12 @@
     </Compile>
     <Compile Include="spine\cobwebDepth.png">
       <Name>cobwebDepth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\amuletStone.png">
+      <Name>amuletStone</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1224,6 +1249,18 @@
     </Content>
     <Content Include="spine\well.settings">
       <Name>well</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\amuletStone.atlas">
+      <Name>amuletStone</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\amuletStone.json">
+      <Name>amuletStone</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\amuletStone.settings">
+      <Name>amuletStone</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

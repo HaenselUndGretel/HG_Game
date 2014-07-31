@@ -64,6 +64,8 @@ namespace HG_Game
 			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
 			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
 			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
+			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "UseAmulet");
+			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "ChargeAmulet");
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)

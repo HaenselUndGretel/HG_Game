@@ -103,11 +103,11 @@ namespace HG_Game
 					mDestinationGretel = mSourceGretel + DestinationDelta;
 
 					//Passende Animation entsprechend AnimationDirection starten
-					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Push_RockSide);
-					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_Push_RockSide);
-					Sequences.StartAnimation(rIObj, Hardcoded.Anim_Rock_Moving);
-
+					Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_Push_RockUp, Hardcoded.Anim_Push_RockDown, Hardcoded.Anim_Push_RockSide);
+					Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_Push_RockUp, Hardcoded.Anim_Push_RockDown, Hardcoded.Anim_Push_RockSide);
+					Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Rock_MovingUp, Hardcoded.Anim_Rock_MovingDown, Hardcoded.Anim_Rock_MovingSide);
 					++pPlayer.mCurrentState;
+					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					break;
 				case 2:
 					//-----Fels bewegen-----

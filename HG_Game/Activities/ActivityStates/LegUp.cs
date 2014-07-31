@@ -81,7 +81,7 @@ namespace HG_Game
 								ActI.SetFadingState(pPlayer, false);
 								ActI.SetFadingState(pOtherPlayer, false, false);
 								++pPlayer.mCurrentState;
-								++pOtherPlayer.mCurrentState;
+								pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 							}
 							else //Show ActI f Gretel
 							{
@@ -108,7 +108,7 @@ namespace HG_Game
 							rIObj.ActionRectList.Clear(); //LegUp kann mehrfach ausgeführt werden?
 						}
 						++pPlayer.mCurrentState;
-						++pOtherPlayer.mCurrentState;
+						pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					}
 					break;
 				case 4:
@@ -123,7 +123,7 @@ namespace HG_Game
 							Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_LegUp_Lower);
 						}
 						++pPlayer.mCurrentState;
-						++pOtherPlayer.mCurrentState;
+						pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					}
 					break;
 				case 5:

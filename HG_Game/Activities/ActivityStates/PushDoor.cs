@@ -25,13 +25,12 @@ namespace HG_Game
 
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
-			if (Conditions.NotHandicapped(pPlayer, Activity.PushDoor) &&
-				Conditions.Contains(pPlayer, rIObj)
-				)
+			if (Conditions.Contains(pPlayer, rIObj))
 			{
-				if (!m2ndState)
+				if (!m2ndState && Conditions.NotHandicapped(pPlayer, Activity.PushDoor))
 					return Activity.PushDoor;
-				return Activity.PullDoor;
+				if (Conditions.NotHandicapped(pPlayer, Activity.PullDoor))
+					return Activity.PullDoor;
 			}
 			return Activity.None;
 		}
@@ -55,33 +54,30 @@ namespace HG_Game
 					//-----Richtung bestimmen-----
 					Vector2 ActionToCollisionRectDirection = new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y);
 
-					int AnimationDirection;
 					if (ActionToCollisionRectDirection.Y > 0)
-					{
-						AnimationDirection = 0;
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Down);
-					}
 					else if (ActionToCollisionRectDirection.Y < 0)
-					{
-						AnimationDirection = 1;
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Up);
-					}
 					else if (ActionToCollisionRectDirection.X > 0)
-					{
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Right);
-						AnimationDirection = 2;
-					}
 					else
-					{
-						AnimationDirection = 3;
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Left);
-					}
+
 					//Passende Animation entsprechend AnimationDirection & Push-/PullDoor starten
-					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_PushDoor_Side);
-					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_PushDoor_Side);
-					Sequences.StartAnimation(rIObj, Hardcoded.Anim_Door_openSide);
+					if (!m2ndState) //PushDoor
+					{
+						Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushDoor_Up, Hardcoded.Anim_PushDoor_Down, Hardcoded.Anim_PushDoor_Side);
+						Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushDoor_Up, Hardcoded.Anim_PushDoor_Down, Hardcoded.Anim_PushDoor_Side);
+						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_openUp, Hardcoded.Anim_Door_openDown, Hardcoded.Anim_Door_openSide);
+					}
+					else //PullDoor
+					{
+						Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PullDoor_Up, Hardcoded.Anim_PullDoor_Down, Hardcoded.Anim_PullDoor_Side);
+						Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PullDoor_Up, Hardcoded.Anim_PullDoor_Down, Hardcoded.Anim_PullDoor_Side);
+						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_closeUp, Hardcoded.Anim_Door_closeDown, Hardcoded.Anim_Door_closeSide);
+					}
 					++pPlayer.mCurrentState;
-					++pOtherPlayer.mCurrentState;
+					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					break;
 				case 2:
 					//-----Tür bewegen-----
@@ -90,10 +86,7 @@ namespace HG_Game
 						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y), false);
 						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
-					}
-					else
-					{
-						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
+						Sequences.UpdateAnimationStepping(pOtherPlayer, Progress.Progress);
 					}
 
 					if (Progress.Complete)

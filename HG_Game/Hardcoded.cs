@@ -71,13 +71,20 @@ namespace HG_Game
 		Character Walk-Animations -> KryptonEngine/HG_Data/Character/Character.cs
 		*/
 		public const string Anim_RaiseLantern_Hansel = "raiseLantern";
-		public const string Anim_Jump_Hansel = "jump";
-		public const string Anim_KnockOverTree = "knockOverTree";
+
+		public const string Anim_Jump_Up_Hansel = "jump";
+		public const string Anim_Jump_Down_Hansel = "jump";
+		public const string Anim_Jump_Side_Hansel = "jump";
+
+		public const string Anim_KnockOverTree_Up = "knockOverTree";
+		public const string Anim_KnockOverTree_Down = "knockOverTree";
+		public const string Anim_KnockOverTree_Side = "knockOverTree";
 
 		public const string Anim_Balance_EnterUp = "balanceEnterUp";
 		public const string Anim_Balance_EnterDown = "balanceEnterDown";
 		public const string Anim_Balance_EnterSide = "balanceEnterSide";
-								 		
+
+		public const string Anim_Balance_Idle = "balanceSide";
 		public const string Anim_Balance_Up = "balanceUp";
 		public const string Anim_Balance_Down = "balanceDown";
 		public const string Anim_Balance_Side = "balanceSide";
@@ -90,9 +97,17 @@ namespace HG_Game
 		public const string Anim_Balance_LeaveDown = "balanceLeaveDown";
 		public const string Anim_Balance_LeaveSide = "balanceLeaveSide";
 
-		public const string Anim_Tree_KnockOver = "knockOver";
-		public const string Anim_Tree_Falling = "falling";
-		public const string Anim_Tree_Fallen = "fallen";
+		public const string Anim_Tree_KnockOver_Up = "knockOver";
+		public const string Anim_Tree_KnockOver_Down = "knockOver";
+		public const string Anim_Tree_KnockOver_Side = "knockOver";
+
+		public const string Anim_Tree_Falling_Up = "falling";
+		public const string Anim_Tree_Falling_Down = "falling";
+		public const string Anim_Tree_Falling_Side = "falling";
+
+		public const string Anim_Tree_Fallen_Up = "fallen";
+		public const string Anim_Tree_Fallen_Down = "fallen";
+		public const string Anim_Tree_Fallen_Side = "fallen";
 
 		public const string Anim_Lantern_Place = "lanternPlace";
 		public const string Anim_Lantern_Grab = "lanternGrab";
@@ -110,16 +125,21 @@ namespace HG_Game
 		public const string Anim_PullDoor_Down = "pullDoorDown";
 		public const string Anim_PullDoor_Side = "pullDoorSide";
 
-		public const string Anim_Door_openUpDown = "openUpDown";
+		public const string Anim_Door_openUp = "openUpDown";
+		public const string Anim_Door_openDown = "openUpDown";
 		public const string Anim_Door_openSide = "openSide";
-		public const string Anim_Door_closeUpDown = "closeUpDown";
+
+		public const string Anim_Door_closeUp = "closeUpDown";
+		public const string Anim_Door_closeDown = "closeUpDown";
 		public const string Anim_Door_closeSide = "closeSide";
 
 		public const string Anim_Push_RockUp = "pushRockUp";
 		public const string Anim_Push_RockDown = "pushRockDown";
 		public const string Anim_Push_RockSide = "pushRockSide";
 
-		public const string Anim_Rock_Moving = "moving";
+		public const string Anim_Rock_MovingUp = "moving";
+		public const string Anim_Rock_MovingDown = "moving";
+		public const string Anim_Rock_MovingSide = "moving";
 
 		public const string Anim_SlipAway_Gretel = "slipAway";
 		public const string Anim_SlipBack_Gretel = "slipBack";

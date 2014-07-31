@@ -124,6 +124,14 @@ namespace HG_Game
 			SetToPosition(pPlayer, pSource + (pDestination - pSource) * Progress);
 		}
 
+		//Richtige Animation und richtigen FlipState anwenden
+		public static void AnimateAccordingToDirection(SpineObject pSpine, Vector2 pDirection, string pAnimUp, string pAnimDown, string pAnimSide)
+		{
+			string anim = Character.GetRightDirectionAnimation(pDirection, pAnimUp, pAnimDown, pAnimSide);
+			Character.SetSkeletonFlipState(pSpine, pDirection);
+			Sequences.StartAnimation(pSpine, anim);
+		}
+
 		//ActivityInstruction & Progress Update
 		public static void UpdateActIProgressBoth(SteppingProgress pProgress, ActivityInstruction pActI, Player pPlayer, Player pOtherPlayer, Vector2 pThumbstickDirection, bool AllowStepBack = true)
 		{

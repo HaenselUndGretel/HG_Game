@@ -40,10 +40,10 @@ namespace HG_Game
 					Sequences.MovePlayerToNearestActionPosition(pPlayer);
 					break;
 				case 1:
-					//-----Richtung bestimmern-----
-					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Jump_Hansel);
+					//-----Richtung bestimmen-----
 					mDestination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
 					mSource = pPlayer.SkeletonPosition;
+					Sequences.AnimateAccordingToDirection(pPlayer, mDestination - mSource, Hardcoded.Anim_Jump_Up_Hansel, Hardcoded.Anim_Jump_Down_Hansel, Hardcoded.Anim_Jump_Side_Hansel);
 					++pPlayer.mCurrentState;
 					break;
 				case 2:

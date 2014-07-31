@@ -53,7 +53,7 @@ namespace HG_Game
 					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Charge);
 					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_Amulet_Charge);
 					++pPlayer.mCurrentState;
-					++pOtherPlayer.mCurrentState;
+					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					break;
 				case 2:
 					//-----Amulett hoch halten-----

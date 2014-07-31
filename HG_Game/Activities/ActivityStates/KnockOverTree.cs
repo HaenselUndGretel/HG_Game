@@ -61,7 +61,7 @@ namespace HG_Game
 						break;
 					case 1:
 						//-----Richtung bestimmen-----
-						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_KnockOverTree);
+						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_KnockOverTree_Up);
 						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
 						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 						if (DestinationDelta.Y > 0)
@@ -73,6 +73,14 @@ namespace HG_Game
 						else
 							dir = ActivityInstruction.ThumbstickDirection.Right;
 
+						string animPlayer = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_KnockOverTree_Up, Hardcoded.Anim_KnockOverTree_Down, Hardcoded.Anim_KnockOverTree_Side);
+						string animTree = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_Tree_KnockOver_Up, Hardcoded.Anim_Tree_KnockOver_Down, Hardcoded.Anim_Tree_KnockOver_Side);
+
+						Character.SetSkeletonFlipState(pPlayer, rIObj.ActionPosition2 - rIObj.ActionPosition1);
+						Character.SetSkeletonFlipState(rIObj, rIObj.ActionPosition2 - rIObj.ActionPosition1);
+						Sequences.StartAnimation(pPlayer, animPlayer);
+						Sequences.StartAnimation(rIObj, animTree);
+						
 						ActI.SetThumbstickDir(pPlayer, dir);
 						ActI.SetThumbstickDir(pOtherPlayer, ActivityInstruction.ThumbstickDirection.None);
 						++pPlayer.mCurrentState;
@@ -95,8 +103,9 @@ namespace HG_Game
 						if (Progress.Complete)
 						{
 							//Baum fällt
+							string anim = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_Tree_Falling_Up, Hardcoded.Anim_Tree_Falling_Down, Hardcoded.Anim_Tree_Falling_Side);
+							Sequences.StartAnimation(rIObj, anim);
 							//Sequences.StartAnimation(pPlayer, "attack"); kann weg?
-							//Sequences.StartAnimation(rIObj, Hardcoded.Anim_Tree_Falling);
 							ActI.SetFadingState(pPlayer, false);
 							++pPlayer.mCurrentState;
 						}
@@ -130,10 +139,9 @@ namespace HG_Game
 					case 1:
 						//-----Richtung bestimmen-----
 						IsAvailable = false;
-						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Balance_EnterDown);
 						StartPosition = pPlayer.SkeletonPosition;
 						Direction = rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - StartPosition;
-						Direction.Normalize();
+						Sequences.AnimateAccordingToDirection(pPlayer, Direction, Hardcoded.Anim_Balance_EnterUp, Hardcoded.Anim_Balance_EnterDown, Hardcoded.Anim_Balance_EnterSide);
 						++pPlayer.mCurrentState;
 						break;
 					case 2:
@@ -146,8 +154,12 @@ namespace HG_Game
 						//-----Auf Baum balancieren-----
 						//Update Movement
 						Vector2 MovementInput = pPlayer.Input.Movement;
-						if (MovementInput == Vector2.Zero) //Performance quit
-							break;
+						if (MovementInput == Vector2.Zero)
+						{
+							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Balance_Idle);
+							break; //Performance quit
+						}
+
 						//Sideways?
 						Vector2 DirectionTest = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 						DirectionTest.Normalize();
@@ -159,12 +171,16 @@ namespace HG_Game
 						bool Fail = false;
 						if ((MovementInput.X == 0 && MovementInput.Y != 0 && Sideways) || (MovementInput.X != 0 && MovementInput.Y == 0 && !Sideways))
 							Fail = true;
-						//Fallen
-						if (Fail)
+						if (Fail) //Fallen
 						{
 							GameScene.End = true;
 						}
-						//WalkAway?
+
+						//BalancingMovement ausführen
+						Sequences.AnimateAccordingToDirection(pPlayer, DirectionTest, Hardcoded.Anim_Balance_Up, Hardcoded.Anim_Balance_Down, Hardcoded.Anim_Balance_Side);
+						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), Hardcoded.KnockOverTree_BalanceSpeedFactor, null, true, false, false);
+
+						//Leave Tree?
 						Vector2 TargetActionPosition = rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f);
 						Vector2 MovementDirection = TargetActionPosition - pPlayer.SkeletonPosition;
 						MovementDirection.Normalize();
@@ -172,13 +188,9 @@ namespace HG_Game
 						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * Hardcoded.KnockOverTree_EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
-							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Balance_LeaveDown); //ToDo Raus fade Animation starten. In passende Richtung!
 							StartPosition = pPlayer.SkeletonPosition;
-							Direction = MovementDirection;
+							Sequences.AnimateAccordingToDirection(pPlayer, MovementDirection, Hardcoded.Anim_Balance_LeaveUp, Hardcoded.Anim_Balance_LeaveDown, Hardcoded.Anim_Balance_LeaveSide);
 						}
-
-						//BalancingMovement ausführen
-						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), Hardcoded.KnockOverTree_BalanceSpeedFactor);
 						break;
 					case 4:
 						//-----Von Baum steigen-----

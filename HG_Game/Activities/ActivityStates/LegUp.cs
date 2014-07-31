@@ -11,9 +11,6 @@ namespace HG_Game
 {
 	class LegUp : ActivityState
 	{
-		protected Vector2 mStartOffsetGretel = new Vector2(55, -20);
-		protected Vector2 mOffsetGretel = new Vector2(-20, -255);
-
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
@@ -53,9 +50,9 @@ namespace HG_Game
 						Sequences.SetPlayerToIdle(pPlayer);
 						break;
 					}
-					if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer, mStartOffsetGretel))
+					if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer, Hardcoded.LegUp_StartOffsetGretel))
 						++pPlayer.mCurrentState;
-					Sequences.MovePlayerToRightActionPosition(pPlayer, mStartOffsetGretel);
+					Sequences.MovePlayerToRightActionPosition(pPlayer, Hardcoded.LegUp_StartOffsetGretel);
 					break;
 				case 1:
 					Sequences.StartAnimation(pPlayer, "attack");
@@ -134,7 +131,7 @@ namespace HG_Game
 					if (Conditions.AnimationComplete(pPlayer))
 					{
 						if (!m2ndState && pPlayer.GetType() == typeof(Gretel))
-							Sequences.Move(pPlayer, mOffsetGretel); //Bei LegUp Gretel hoch setzen
+							Sequences.Move(pPlayer, Hardcoded.LegUp_OffsetGretel); //Bei LegUp Gretel hoch setzen
 						Sequences.SetPlayerToIdle(pPlayer);
 					}
 					break;

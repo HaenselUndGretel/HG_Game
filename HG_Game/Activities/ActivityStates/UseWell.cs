@@ -103,7 +103,7 @@ namespace HG_Game
 							}
 							ActI.SetFadingState(pPlayer, false, false);
 							ActI.SetFadingState(pOtherPlayer, false, false);
-							Progress.StepFromRotation(pPlayer.Input.LeftStickRotation);
+							Progress.StepFromRotation(pPlayer.Input.LeftStickRotation, Hardcoded.UseWell_ProgressPerRotation, Hardcoded.UseWell_UpRotationFrictionFactor);
 						}
 						else
 						{
@@ -169,7 +169,7 @@ namespace HG_Game
 
 		public void UpdateOverlay(ref List<InteractiveObject> pRenderList)
 		{
-			if (Progress.Progress > 0.1f)
+			if (Progress.Progress > Hardcoded.UseWell_ShowOverlayProgressBarrier)
 			{
 				Sequences.SetWellOverlay(rIObj.SkeletonPosition, false, ref pRenderList); //Hide Overlay
 				return;

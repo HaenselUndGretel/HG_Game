@@ -66,7 +66,7 @@ namespace HG_Game
 #endif
 			//GameState
 			mState = GameState.Running;
-			mEndGameFading = new SteppingProgress(3f);
+			mEndGameFading = new SteppingProgress(Hardcoded.End_FadingDuration);
 			//Player
 			mHansel = new Hansel("skeleton");
 			mGretel = new Gretel("skeleton");

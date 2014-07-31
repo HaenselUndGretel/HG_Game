@@ -16,13 +16,7 @@ namespace HG_Game
 	{
 		#region Properties
 
-		protected const float MaxSwapDistance = 200f;
-		protected Vector2 LanternOffset;
 		public PointLight LanternLight;
-		protected const float LanternHeight = 0.08f;
-		protected const float LanternHeightRaised = 0.15f;
-		protected const float LanternRadius = 8f;
-		protected const float LanternRadiusRaised = 15f;
 		SteppingProgress LanternRaiseProgress;
 
 		#endregion
@@ -31,13 +25,12 @@ namespace HG_Game
 
 		public ItemHandler()
 		{
-			LanternOffset = new Vector2(0, -5);
 			LanternLight = new PointLight();
-			LanternLight.Intensity = 10f;
-			LanternLight.LightColor = new Vector3(1f, 1f, 1f);
-			LanternLight.Depth = LanternHeight;
-			LanternLight.Radius = LanternRadius;
-			LanternRaiseProgress = new SteppingProgress(0.3f);
+			LanternLight.Intensity = Hardcoded.Lantern_Intensity;
+			LanternLight.LightColor = Hardcoded.Lantern_LightColor;
+			LanternLight.Depth = Hardcoded.Lantern_Height;
+			LanternLight.Radius = Hardcoded.Lantern_Radius;
+			LanternRaiseProgress = new SteppingProgress(Hardcoded.Lantern_RaiseSteppingDuration);
 		}
 
 		#endregion
@@ -54,7 +47,7 @@ namespace HG_Game
 		protected void UpdateLantern(Hansel pHansel, Gretel pGretel)
 		{
 			//Lantern
-			if ((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <= MaxSwapDistance)
+			if ((pHansel.SkeletonPosition - pGretel.SkeletonPosition).Length() <=  Hardcoded.Lantern_MaxSwapDistance)
 			{
 				if (pHansel.Lantern && pHansel.mCurrentActivity == ActivityHandler.None && pHansel.Input.SwitchItemJustPressed)
 				{
@@ -70,7 +63,7 @@ namespace HG_Game
 
 			if (pHansel.Lantern)
 			{
-				LanternLight.Position = pHansel.SkeletonPosition + LanternOffset;
+				LanternLight.Position = pHansel.SkeletonPosition;
 				if (pHansel.Input.UseItemIsPressed)
 					LanternRaiseProgress.StepForward();
 				else
@@ -78,11 +71,11 @@ namespace HG_Game
 			}
 			else if (pGretel.Lantern)
 			{
-				LanternLight.Position = pGretel.SkeletonPosition + LanternOffset;
+				LanternLight.Position = pGretel.SkeletonPosition;
 				LanternRaiseProgress.Reset();
 			}
-			LanternLight.Depth = LanternHeight + ((LanternHeightRaised - LanternHeight) * LanternRaiseProgress.Progress);
-			LanternLight.Radius = LanternRadius + ((LanternRadiusRaised - LanternRadius) * LanternRaiseProgress.Progress);
+			LanternLight.Depth = Hardcoded.Lantern_Height + ((Hardcoded.Lantern_HeightRaised - Hardcoded.Lantern_Height) * LanternRaiseProgress.Progress);
+			LanternLight.Radius = Hardcoded.Lantern_Radius + ((Hardcoded.Lantern_RadiusRaised - Hardcoded.Lantern_Radius) * LanternRaiseProgress.Progress);
 		}
 
 		protected void UpdateVisibility(SceneData pScene, Hansel pHansel, Gretel pGretel)

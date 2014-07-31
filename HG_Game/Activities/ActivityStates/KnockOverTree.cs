@@ -12,8 +12,6 @@ namespace HG_Game
 {
 	class KnockOverTree : ActivityState
 	{
-		protected const float EnterBalanceDistance = 74.0f;
-		protected const float BalanceSpeedFactor = 0.6f;
 		protected Vector2 StartPosition;
 		protected Vector2 Direction;
 
@@ -171,7 +169,7 @@ namespace HG_Game
 						Vector2 MovementDirection = TargetActionPosition - pPlayer.SkeletonPosition;
 						MovementDirection.Normalize();
 						//Wenn Entfernung vom Player zum TargetActionPoint <= EnterBalanceEntfernung
-						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * EnterBalanceDistance).Length())
+						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * Hardcoded.KnockOverTree_EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
 							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
@@ -180,11 +178,11 @@ namespace HG_Game
 						}
 
 						//BalancingMovement ausführen
-						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), BalanceSpeedFactor);
+						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), Hardcoded.KnockOverTree_BalanceSpeedFactor);
 						break;
 					case 4:
 						//-----Von Baum steigen-----
-						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
+						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * Hardcoded.KnockOverTree_EnterBalanceDistance));
 						while (pPlayer.CollisionBox.Intersects(pOtherPlayer.CollisionBox))
 							pOtherPlayer.MoveManually(Direction);
 						if (Conditions.AnimationComplete(pPlayer))

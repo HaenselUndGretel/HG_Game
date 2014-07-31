@@ -11,8 +11,6 @@ namespace HG_Game
 		#region Properties
 
 		protected SteppingProgress Frost;
-		protected const float Distance = 300f;
-		protected const float MinBodyTemperature = 0.7f;
 
 		#endregion
 
@@ -20,7 +18,7 @@ namespace HG_Game
 
 		public TemperatureHandler()
 		{
-			Frost = new SteppingProgress(6f);
+			Frost = new SteppingProgress(Hardcoded.Temp_SteppingDuration);
 		}
 
 		#endregion
@@ -29,14 +27,14 @@ namespace HG_Game
 
 		public void Update(Hansel pHansel, Gretel pGretel)
 		{
-			if ((pGretel.SkeletonPosition - pHansel.SkeletonPosition).Length() > Distance)
+			if ((pGretel.SkeletonPosition - pHansel.SkeletonPosition).Length() > Hardcoded.Temp_Distance)
 				Frost.StepForward();
 			else
 				Frost.StepBackward();
-			if (Frost.Progress > MinBodyTemperature)
+			if (Frost.Progress > Hardcoded.Temp_MinBodyTemperature)
 			{
-				pHansel.BodyTemperature = MinBodyTemperature + Frost.ProgressInverse;
-				pGretel.BodyTemperature = MinBodyTemperature + Frost.ProgressInverse;
+				pHansel.BodyTemperature = Hardcoded.Temp_MinBodyTemperature + Frost.ProgressInverse;
+				pGretel.BodyTemperature = Hardcoded.Temp_MinBodyTemperature + Frost.ProgressInverse;
 			}
 			else
 			{

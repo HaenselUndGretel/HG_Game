@@ -50,10 +50,10 @@ namespace HG_Game
 				mProgress = 0f;
 		}
 
-		public void StepFromRotation(float pRotation, float pSpeed = 0.1f)
+		public void StepFromRotation(float pRotation, float pSpeed, float pUpFrictionFactor)
 		{ //Speed: Wieviel der Gesamtstrecke mit einer Controllerumdrehung zurück gelegt wird
 			if (pRotation < 0)
-				pSpeed *= 0.75f;
+				pSpeed *= pUpFrictionFactor;
 			mProgress += pRotation * pSpeed;
 		}
 

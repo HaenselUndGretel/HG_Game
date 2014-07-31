@@ -18,14 +18,13 @@ namespace HG_Game
 		protected Vector2 mDestinationGretel;
 		protected Vector2 mDestinationIObj;
 
-		protected const int RockMoveDistance = 256;
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
 		public PushRock(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			:base(pHansel, pGretel, pIObj)
 		{
-			Progress = new SteppingProgress(7f);
+			Progress = new SteppingProgress(Hardcoded.PushRock_SteppingDuration);
 			ActI = new ActivityInstruction();
 		}
 
@@ -80,22 +79,22 @@ namespace HG_Game
 					Vector2 DestinationDelta;
 					if (ActionToCollisionRectDirection.Y > 0)
 					{
-						DestinationDelta = new Vector2(0, RockMoveDistance);
+						DestinationDelta = new Vector2(0, Hardcoded.PushRock_RockMoveDistance);
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Down);
 					}
 					else if (ActionToCollisionRectDirection.Y < 0)
 					{
-						DestinationDelta = new Vector2(0, -RockMoveDistance);
+						DestinationDelta = new Vector2(0, -Hardcoded.PushRock_RockMoveDistance);
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Up);
 					}
 					else if (ActionToCollisionRectDirection.X > 0)
 					{
-						DestinationDelta = new Vector2(RockMoveDistance, 0);
+						DestinationDelta = new Vector2(Hardcoded.PushRock_RockMoveDistance, 0);
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Right);
 					}
 					else
 					{
-						DestinationDelta = new Vector2(-RockMoveDistance, 0);
+						DestinationDelta = new Vector2(-Hardcoded.PushRock_RockMoveDistance, 0);
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Left);
 					}
 

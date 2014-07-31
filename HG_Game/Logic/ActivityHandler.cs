@@ -23,13 +23,6 @@ namespace HG_Game
 		protected Texture2D ActionInfoButton;
 		protected Texture2D[] ActionInfo;
 
-		protected Vector2 ActionInfoOffset;
-		protected Vector2 ActionInfoButtonOffset;
-
-		protected const int AmuletScene = 0;
-		protected const int LanternScene = 4;
-		protected const int LanternDoorScene = 3;
-
 		protected bool AmuletCharged = false;
 		protected List<ChargeAmulet> AmuletStates;
 		protected UseAmulet Amulet;
@@ -43,8 +36,6 @@ namespace HG_Game
 		public ActivityHandler()
 		{
 			ActionInfoFading = new HudFading();
-			ActionInfoOffset = new Vector2(-100, -200);
-			ActionInfoButtonOffset = new Vector2(-50, -300);
 			AmuletStates = new List<ChargeAmulet>(4);
 		}
 
@@ -111,9 +102,9 @@ namespace HG_Game
 				}
 
 				//-----Tür erst offen wenn Laterne eingesammelt wurde-----
-				if (pSavegame.SceneId == LanternDoorScene)
+				if (pSavegame.SceneId == Hardcoded.Scene_LanternDoor)
 				{
-					foreach (Collectable col in pSavegame.Scenes[LanternScene].Collectables)
+					foreach (Collectable col in pSavegame.Scenes[Hardcoded.Scene_Lantern].Collectables)
 					{
 						if (col.GetType() == typeof(Lantern))
 						{
@@ -126,7 +117,7 @@ namespace HG_Game
 				}
 
 				//-----UseAmulet-----
-				if (pSavegame.SceneId == AmuletScene && AmuletCharged)
+				if (pSavegame.SceneId == Hardcoded.Scene_Amulet && AmuletCharged)
 				{
 					if (TestHansel && PossibleActivityHansel == Activity.None)
 					{
@@ -194,7 +185,7 @@ namespace HG_Game
 
 		protected void UpdateAmulet(Savegame pSavegame, SceneData pScene)
 		{
-			if (pSavegame.SceneId != AmuletScene || Amulet.m2ndState)
+			if (pSavegame.SceneId != Hardcoded.Scene_Amulet || Amulet.m2ndState)
 			{
 				AmuletBlocksWaypoints = false;
 				return;
@@ -229,12 +220,12 @@ namespace HG_Game
 		{
 			//ActionInfo
 			if (ActionInfoHansel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.SkeletonPosition + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityHansel);
+				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.SkeletonPosition + Hardcoded.ActionInfo_Offset, Color.White * ActionInfoFading.VisibilityHansel);
 			if (ActionInfoGretel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.SkeletonPosition + ActionInfoOffset, Color.White * ActionInfoFading.VisibilityGretel);
+				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.SkeletonPosition + Hardcoded.ActionInfo_Offset, Color.White * ActionInfoFading.VisibilityGretel);
 			//ButtonX
-			pSpriteBatch.Draw(ActionInfoButton, pHansel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityHansel);
-			pSpriteBatch.Draw(ActionInfoButton, pGretel.SkeletonPosition + ActionInfoButtonOffset, Color.White * ActionInfoFading.VisibilityGretel);
+			pSpriteBatch.Draw(ActionInfoButton, pHansel.SkeletonPosition + Hardcoded.ActionInfo_OffsetButton, Color.White * ActionInfoFading.VisibilityHansel);
+			pSpriteBatch.Draw(ActionInfoButton, pGretel.SkeletonPosition + Hardcoded.ActionInfo_OffsetButton, Color.White * ActionInfoFading.VisibilityGretel);
 		}
 
 		public void DrawActivityInstruction(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)

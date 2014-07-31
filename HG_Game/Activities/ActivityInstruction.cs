@@ -35,10 +35,6 @@ namespace HG_Game
 		protected Texture2D ThumbstickRight;
 		protected Texture2D ThumbstickRotate;
 
-		//Offsets
-		protected Vector2 OffsetButton;
-		protected Vector2 OffsetThumbstick;
-
 		#endregion
 
 		//Fading
@@ -56,8 +52,6 @@ namespace HG_Game
 		{
 			LoadContent();
 			Fading = new HudFading();
-			OffsetButton = new Vector2(0, -200);
-			OffsetThumbstick = new Vector2(0, -140);
 			ThumbstickDirHansel = ThumbstickDirection.None;
 			ThumbstickDirGretel = ThumbstickDirection.None;
 		}
@@ -85,8 +79,8 @@ namespace HG_Game
 		public void Draw(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
 		{
 			//Buttons
-			pSpriteBatch.Draw(ButtonX, pHansel.SkeletonPosition + OffsetButton, Color.White * Fading.VisibilityHansel);
-			pSpriteBatch.Draw(ButtonX, pGretel.SkeletonPosition + OffsetButton, Color.White * Fading.VisibilityGretel);
+			pSpriteBatch.Draw(ButtonX, pHansel.SkeletonPosition + Hardcoded.ActI_OffsetButton, Color.White * Fading.VisibilityHansel);
+			pSpriteBatch.Draw(ButtonX, pGretel.SkeletonPosition + Hardcoded.ActI_OffsetButton, Color.White * Fading.VisibilityGretel);
 			//Thumbsticks
 			DrawThumbstick(pSpriteBatch, ThumbstickDirHansel, pHansel, Fading.VisibilityHansel);
 			DrawThumbstick(pSpriteBatch, ThumbstickDirGretel, pGretel, Fading.VisibilityGretel);
@@ -116,7 +110,7 @@ namespace HG_Game
 				default:
 					return;
 			}
-			pSpriteBatch.Draw(Thumbstick, pPlayer.SkeletonPosition + OffsetButton, Color.White * pAlpha);
+			pSpriteBatch.Draw(Thumbstick, pPlayer.SkeletonPosition + Hardcoded.ActI_OffsetThumbstick, Color.White * pAlpha);
 		}
 
 		public void SetFadingState(Player pPlayer, bool pShow, bool pInstant = true)

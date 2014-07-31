@@ -27,19 +27,19 @@ namespace HG_Game
 
 		#region Constructor
 
-		public Logic()
+		public Logic(Hansel pHansel, Gretel pGretel)
 		{
-			Initialize();
+			Initialize(pHansel, pGretel);
 		}
 
 		#endregion
 
 		#region Methods
 
-		public void Initialize()
+		public void Initialize(Hansel pHansel, Gretel pGretel)
 		{
 			SceneSwitchHandler = new SceneSwitchHandler();
-			ActivityHandler = new ActivityHandler();
+			ActivityHandler = new ActivityHandler(pHansel, pGretel);
 			ItemHandler = new ItemHandler();
 			EventHandler = new EventHandler();
 			TemperatureHandler = new TemperatureHandler();

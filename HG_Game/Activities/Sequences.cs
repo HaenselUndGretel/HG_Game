@@ -169,6 +169,21 @@ namespace HG_Game
 			}
 		}
 
+		public static void UpdateActIProgress(SteppingProgress pProgress, ActivityInstruction pActI, Player pPlayer, Vector2 pThumbstickDirection, bool AllowStepBack = true)
+		{
+			if (!Conditions.ActionThumbstickPressed(pPlayer, pThumbstickDirection))
+			{
+				pActI.SetFadingState(pPlayer, true);
+				if (AllowStepBack)
+					pProgress.StepBackward();
+			}
+			else
+			{
+				pActI.SetFadingState(pPlayer, false, false);
+				pProgress.StepForward();
+			}
+		}
+
 		//Set States
 		public static void SetPlayerToIdle(Player pPlayer)
 		{

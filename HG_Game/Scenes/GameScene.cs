@@ -77,7 +77,7 @@ namespace HG_Game
 			//Savegame
 			mSavegame = new Savegame();
 			//Logic
-			mLogic = new Logic();
+			mLogic = new Logic(mHansel, mGretel);
 			//PauseMenu
 			mPauseMenu = new PauseMenu();
 		}

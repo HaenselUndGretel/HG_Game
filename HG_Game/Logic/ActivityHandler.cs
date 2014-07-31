@@ -27,18 +27,20 @@ namespace HG_Game
 		protected Vector2 ActionInfoButtonOffset;
 
 		protected const int AmuletScene = 10;
-		protected List<UseAmulet> AmuletStates;
+		protected List<ChargeAmulet> AmuletStates;
+		protected UseAmulet Amulet;
 
 		#endregion
 
 		#region Constructor
 
-		public ActivityHandler()
+		public ActivityHandler(Hansel pHansel, Gretel pGretel)
 		{
 			ActionInfoFading = new HudFading();
 			ActionInfoOffset = new Vector2(-100, -200);
 			ActionInfoButtonOffset = new Vector2(-50, -300);
-			AmuletStates = new List<UseAmulet>(4);
+			AmuletStates = new List<ChargeAmulet>(4);
+			Amulet = new UseAmulet(pHansel, pGretel, null);
 		}
 
 		#endregion
@@ -115,6 +117,34 @@ namespace HG_Game
 					}
 				}
 
+				//-----UseAmulet-----
+				if (pSavegame.SceneId == AmuletScene)
+				{
+					if (TestHansel && PossibleActivityHansel == Activity.None)
+					{
+						if (Conditions.ActionPressed(pHansel))
+						{
+							pHansel.mCurrentActivity = Amulet;
+							PossibleActivityHansel = Activity.None;
+						}
+						else
+						{
+							PossibleActivityHansel = Activity.UseAmulet;
+						}
+					}
+					if (TestGretel && PossibleActivityGretel == Activity.None)
+					{
+						if (Conditions.ActionPressed(pGretel))
+						{
+							pGretel.mCurrentActivity = Amulet;
+							PossibleActivityGretel = Activity.None;
+						}
+						else
+						{
+							PossibleActivityGretel = Activity.UseAmulet;
+						}
+					}
+				}
 
 				//-----Activity aufgrund von Spielereingabe starten?-----
 				if (TestHansel &&
@@ -165,7 +195,7 @@ namespace HG_Game
 			if (pSavegame.SceneId != AmuletScene)
 				return;
 			bool AmuletFinished = true;
-			foreach(UseAmulet a in AmuletStates)
+			foreach(ChargeAmulet a in AmuletStates)
 			{
 				if (a.m2ndState == false)
 				{
@@ -175,7 +205,9 @@ namespace HG_Game
 			}
 			if (AmuletFinished)
 			{
-				foreach (UseAmulet a in AmuletStates)
+				Amulet.m2ndState = true;
+				/*
+				foreach (ChargeAmulet a in AmuletStates)
 					a.m2ndState = false;
 				Witch w = null;
 				foreach (Enemy e in pScene.Enemies)
@@ -185,6 +217,7 @@ namespace HG_Game
 					}
 				if (w == null) throw new Exception("Witch nicht gefunden!");
 				pScene.Enemies.Remove(w);
+				*/
 			}
 		}
 
@@ -269,9 +302,9 @@ namespace HG_Game
 						case Activity.UseWell:
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);
 							break;
-						case Activity.UseAmulet:
-							iObj.ActivityState = new UseAmulet(pHansel, pGretel, iObj);
-							AmuletStates.Add((UseAmulet)iObj.ActivityState);
+						case Activity.ChargeAmulet:
+							iObj.ActivityState = new ChargeAmulet(pHansel, pGretel, iObj);
+							AmuletStates.Add((ChargeAmulet)iObj.ActivityState);
 							break;
 						default:
 							throw new Exception("Im InteractiveObject " + iObj.ObjectId.ToString() + " in Scene " + i.ToString() + " ist eine ungültige Action angegeben!");

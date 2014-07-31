@@ -26,7 +26,11 @@ namespace HG_Game
 		protected Vector2 ActionInfoOffset;
 		protected Vector2 ActionInfoButtonOffset;
 
-		protected const int AmuletScene = 10;
+		protected const int AmuletScene = 0;
+		protected const int LanternScene = 4;
+		protected const int LanternDoorScene = 3;
+
+		protected bool AmuletCharged = false;
 		protected List<ChargeAmulet> AmuletStates;
 		protected UseAmulet Amulet;
 
@@ -36,20 +40,19 @@ namespace HG_Game
 
 		#region Constructor
 
-		public ActivityHandler(Hansel pHansel, Gretel pGretel)
+		public ActivityHandler()
 		{
 			ActionInfoFading = new HudFading();
 			ActionInfoOffset = new Vector2(-100, -200);
 			ActionInfoButtonOffset = new Vector2(-50, -300);
 			AmuletStates = new List<ChargeAmulet>(4);
-			Amulet = new UseAmulet(pHansel, pGretel, null);
 		}
 
 		#endregion
 
 		#region Methods
 
-		public void LoadContent()
+		public void LoadContent(Hansel pHansel, Gretel pGretel)
 		{
 			ActionInfoButton = TextureManager.Instance.GetElementByString("button_x");
 			ActionInfo = new Texture2D[20]; //Anzahl an möglichen Activities
@@ -64,8 +67,9 @@ namespace HG_Game
 			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
 			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
 			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
-			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "UseAmulet");
-			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "ChargeAmulet");
+			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "ChargeAmulet");
+			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "UseAmulet");
+			Amulet = new UseAmulet(pHansel, pGretel, null);
 		}
 
 		public void Update(SceneData pScene, Hansel pHansel, Gretel pGretel, Savegame pSavegame)
@@ -107,9 +111,9 @@ namespace HG_Game
 				}
 
 				//-----Tür erst offen wenn Laterne eingesammelt wurde-----
-				if (pSavegame.SceneId == 3)
+				if (pSavegame.SceneId == LanternDoorScene)
 				{
-					foreach (Collectable col in pSavegame.Scenes[4].Collectables)
+					foreach (Collectable col in pSavegame.Scenes[LanternScene].Collectables)
 					{
 						if (col.GetType() == typeof(Lantern))
 						{
@@ -122,30 +126,24 @@ namespace HG_Game
 				}
 
 				//-----UseAmulet-----
-				if (pSavegame.SceneId == AmuletScene)
+				if (pSavegame.SceneId == AmuletScene && AmuletCharged)
 				{
 					if (TestHansel && PossibleActivityHansel == Activity.None)
 					{
-						if (Conditions.ActionPressed(pHansel))
+						PossibleActivityHansel = Amulet.GetPossibleActivity(pHansel, pGretel);
+						if (PossibleActivityHansel != Activity.None && Conditions.ActionPressed(pHansel))
 						{
 							pHansel.mCurrentActivity = Amulet;
 							PossibleActivityHansel = Activity.None;
 						}
-						else
-						{
-							PossibleActivityHansel = Activity.UseAmulet;
-						}
 					}
 					if (TestGretel && PossibleActivityGretel == Activity.None)
 					{
-						if (Conditions.ActionPressed(pGretel))
+						PossibleActivityGretel = Amulet.GetPossibleActivity(pGretel, pHansel);
+						if (PossibleActivityGretel != Activity.None && Conditions.ActionPressed(pGretel))
 						{
 							pGretel.mCurrentActivity = Amulet;
 							PossibleActivityGretel = Activity.None;
-						}
-						else
-						{
-							PossibleActivityGretel = Activity.UseAmulet;
 						}
 					}
 				}
@@ -202,31 +200,27 @@ namespace HG_Game
 				return;
 			}
 			AmuletBlocksWaypoints = true;
-			bool AmuletFinished = true;
+			AmuletCharged = true;
 			foreach(ChargeAmulet a in AmuletStates)
 			{
 				if (a.m2ndState == false)
 				{
-					AmuletFinished = false;
-					break;
+					AmuletCharged = false;
+					return;
 				}
 			}
-			if (AmuletFinished)
-			{
-				Amulet.m2ndState = true;
-				/*
-				foreach (ChargeAmulet a in AmuletStates)
-					a.m2ndState = false;
-				Witch w = null;
-				foreach (Enemy e in pScene.Enemies)
-					if (e.GetType() == typeof(Witch))
-					{
-						w = (Witch)e;
-					}
-				if (w == null) throw new Exception("Witch nicht gefunden!");
-				pScene.Enemies.Remove(w);
-				*/
-			}
+			/*
+			foreach (ChargeAmulet a in AmuletStates)
+				a.m2ndState = false;
+			Witch w = null;
+			foreach (Enemy e in pScene.Enemies)
+				if (e.GetType() == typeof(Witch))
+				{
+					w = (Witch)e;
+				}
+			if (w == null) throw new Exception("Witch nicht gefunden!");
+			pScene.Enemies.Remove(w);
+			*/
 		}
 
 		#region Draw

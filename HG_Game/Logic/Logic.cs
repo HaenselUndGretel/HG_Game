@@ -27,28 +27,28 @@ namespace HG_Game
 
 		#region Constructor
 
-		public Logic(Hansel pHansel, Gretel pGretel)
+		public Logic()
 		{
-			Initialize(pHansel, pGretel);
+			Initialize();
 		}
 
 		#endregion
 
 		#region Methods
 
-		public void Initialize(Hansel pHansel, Gretel pGretel)
+		public void Initialize()
 		{
 			SceneSwitchHandler = new SceneSwitchHandler();
-			ActivityHandler = new ActivityHandler(pHansel, pGretel);
+			ActivityHandler = new ActivityHandler();
 			ItemHandler = new ItemHandler();
 			EventHandler = new EventHandler();
 			TemperatureHandler = new TemperatureHandler();
 			EnemyHandler = new EnemyHandler();
 		}
 
-		public void LoadContent()
+		public void LoadContent(Hansel pHansel, Gretel pGretel)
 		{
-			ActivityHandler.LoadContent();
+			ActivityHandler.LoadContent(pHansel, pGretel);
 		}
 
 		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer, ref GameScene.GameState pGameState)

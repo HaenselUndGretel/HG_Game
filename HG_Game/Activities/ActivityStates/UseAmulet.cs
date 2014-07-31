@@ -29,7 +29,7 @@ namespace HG_Game
 			if (Conditions.NotHandicapped(pPlayer, Activity.UseAmulet) &&
 				Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this) &&
 				!pPlayer.Lantern &&
-				m2ndState
+				!m2ndState
 				)
 				return Activity.UseAmulet;
 			return Activity.None;
@@ -46,7 +46,7 @@ namespace HG_Game
 					break;
 				case 1:
 					//-----Amulett hoch halten-----
-					Sequences.UpdateActIProgress(Progress, ActI, pPlayer, new Vector2(0, -1), false);
+					Sequences.UpdateActIProgress(Progress, ActI, pPlayer, new Vector2(0, -1));
 					Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 					//Abbrechbar
 					if (Progress.Progress <= 0f && !Conditions.ActionHold(pPlayer) && !Conditions.ActionHold(pOtherPlayer))
@@ -56,6 +56,7 @@ namespace HG_Game
 						Sequences.SetPlayerToIdle(pPlayer);
 						ActI.SetFadingState(pPlayer, false);
 						//Delete Witch
+						m2ndState = true;
 					}
 					break;
 			}

@@ -59,7 +59,7 @@ namespace HG_Game
 					//-----Amulett hoch halten-----
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
-						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1), false);
+						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
 						//Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 					}

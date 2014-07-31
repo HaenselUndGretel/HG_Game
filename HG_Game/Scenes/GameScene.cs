@@ -77,7 +77,7 @@ namespace HG_Game
 			//Savegame
 			mSavegame = new Savegame();
 			//Logic
-			mLogic = new Logic(mHansel, mGretel);
+			mLogic = new Logic();
 			//PauseMenu
 			mPauseMenu = new PauseMenu();
 		}
@@ -87,7 +87,7 @@ namespace HG_Game
 			base.LoadContent();
 			mEndGameTexture = TextureManager.Instance.GetElementByString("endgame");
 			//Logic
-			mLogic.LoadContent();
+			mLogic.LoadContent(mHansel, mGretel);
 			//Player
 			mHansel.LoadContent();
 			mGretel.LoadContent();

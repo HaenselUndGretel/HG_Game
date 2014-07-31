@@ -41,7 +41,7 @@ namespace HG_Game
 					break;
 				case 1:
 					//-----Richtung bestimmern-----
-					Sequences.StartAnimation(pPlayer, "attack");
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Jump_Hansel);
 					mDestination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
 					mSource = pPlayer.SkeletonPosition;
 					++pPlayer.mCurrentState;

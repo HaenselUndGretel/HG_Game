@@ -102,6 +102,11 @@ namespace HG_Game
 					mDestinationHansel = mSourceHansel + DestinationDelta;
 					mDestinationGretel = mSourceGretel + DestinationDelta;
 
+					//Passende Animation entsprechend AnimationDirection starten
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Push_RockSide);
+					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_Push_RockSide);
+					Sequences.StartAnimation(rIObj, Hardcoded.Anim_Rock_Moving);
+
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
@@ -117,6 +122,9 @@ namespace HG_Game
 						Sequences.UpdateMovementStepping(rIObj, Progress.Progress, mSourceIObj, mDestinationIObj);
 						Sequences.UpdateMovementStepping(pPlayer, Progress.Progress, mSourceHansel, mDestinationHansel);
 						Sequences.UpdateMovementStepping(pOtherPlayer, Progress.Progress, mSourceGretel, mDestinationGretel);
+						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
+						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
+						Sequences.UpdateAnimationStepping(pOtherPlayer, Progress.Progress);
 					}
 					if (Progress.Complete)
 					{

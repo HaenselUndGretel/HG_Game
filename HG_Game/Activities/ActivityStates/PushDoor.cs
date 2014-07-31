@@ -77,8 +77,9 @@ namespace HG_Game
 						ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Left);
 					}
 					//Passende Animation entsprechend AnimationDirection & Push-/PullDoor starten
-					Sequences.StartAnimation(pPlayer, "attack");
-					Sequences.StartAnimation(pOtherPlayer, "attack");
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_PushDoor_Side);
+					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_PushDoor_Side);
+					Sequences.StartAnimation(rIObj, Hardcoded.Anim_Door_openSide);
 					++pPlayer.mCurrentState;
 					++pOtherPlayer.mCurrentState;
 					break;

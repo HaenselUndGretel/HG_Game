@@ -50,8 +50,8 @@ namespace HG_Game
 					break;
 				case 1:
 					//-----Animation starten-----
-					Sequences.StartAnimation(pPlayer, "attack");
-					Sequences.StartAnimation(pOtherPlayer, "attack");
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Charge);
+					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_Amulet_Charge);
 					++pPlayer.mCurrentState;
 					++pOtherPlayer.mCurrentState;
 					break;

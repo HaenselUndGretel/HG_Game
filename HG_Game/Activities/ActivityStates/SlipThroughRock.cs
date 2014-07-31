@@ -42,7 +42,7 @@ namespace HG_Game
 					break;
 				case 1:
 					//-----Animation starten-----
-					Sequences.StartAnimation(pPlayer, "attack"); //Weg bewegen
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_SlipAway_Gretel); //Weg bewegen
 					++pPlayer.mCurrentState;
 					break;
 				case 2:
@@ -58,7 +58,7 @@ namespace HG_Game
 					//-----Durch Felsspalt bewegen-----
 					if (pPlayer.SkeletonPosition == Destination)
 					{
-						Sequences.StartAnimation(pPlayer, "attack"); //Wieder "auftauchen"
+						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_SlipBack_Gretel); //Wieder "auftauchen"
 						pPlayer.IsVisible = true;
 						++pPlayer.mCurrentState;
 						break;

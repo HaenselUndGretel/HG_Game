@@ -61,7 +61,7 @@ namespace HG_Game
 						break;
 					case 1:
 						//-----Richtung bestimmen-----
-						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_KnockOverTree);
 						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
 						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 						if (DestinationDelta.Y > 0)
@@ -95,8 +95,8 @@ namespace HG_Game
 						if (Progress.Complete)
 						{
 							//Baum fällt
-							Sequences.StartAnimation(pPlayer, "attack");
-							//Sequences.StartAnimation(rIObj, "attack");
+							//Sequences.StartAnimation(pPlayer, "attack"); kann weg?
+							//Sequences.StartAnimation(rIObj, Hardcoded.Anim_Tree_Falling);
 							ActI.SetFadingState(pPlayer, false);
 							++pPlayer.mCurrentState;
 						}
@@ -130,7 +130,7 @@ namespace HG_Game
 					case 1:
 						//-----Richtung bestimmen-----
 						IsAvailable = false;
-						Sequences.StartAnimation(pPlayer, "attack");
+						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Balance_EnterDown);
 						StartPosition = pPlayer.SkeletonPosition;
 						Direction = rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - StartPosition;
 						Direction.Normalize();
@@ -138,7 +138,7 @@ namespace HG_Game
 						break;
 					case 2:
 						//-----Auf Baum steigen-----
-						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * EnterBalanceDistance));
+						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * Hardcoded.KnockOverTree_EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer))
 							++pPlayer.mCurrentState;
 						break;
@@ -172,7 +172,7 @@ namespace HG_Game
 						if ((TargetActionPosition - pPlayer.SkeletonPosition).Length() <= (MovementDirection * Hardcoded.KnockOverTree_EnterBalanceDistance).Length())
 						{
 							++pPlayer.mCurrentState;
-							Sequences.StartAnimation(pPlayer, "attack"); //ToDo Raus fade Animation starten. In passende Richtung!
+							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Balance_LeaveDown); //ToDo Raus fade Animation starten. In passende Richtung!
 							StartPosition = pPlayer.SkeletonPosition;
 							Direction = MovementDirection;
 						}

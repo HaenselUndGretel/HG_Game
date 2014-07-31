@@ -66,9 +66,9 @@ namespace HG_Game
 					//-----Animationen starten (Hansel an Kurbel bereit machen, Gretel in Korb steigen)-----
 					m2ndState = true;
 					if (pPlayer.GetType() == typeof(Hansel))
-						pPlayer.SetAnimation("attack"); //An Kurbel
+						pPlayer.SetAnimation(Hardcoded.Anim_Well_GrabWind_Hansel); //An Kurbel
 					else
-						pPlayer.SetAnimation("attack", false); //In Korb steigen
+						pPlayer.SetAnimation(Hardcoded.Anim_Well_Enter_Gretel, false); //In Korb steigen
 					++pPlayer.mCurrentState;
 					break;
 				case 3:
@@ -93,13 +93,13 @@ namespace HG_Game
 						{
 							if (pPlayer.Input.LeftStickRotation > 0f)
 							{
-								pPlayer.SetAnimation("attack"); //Brunnen runter lassen Animation
-								pOtherPlayer.SetAnimation("attack");
+								pPlayer.SetAnimation(Hardcoded.Anim_Well_WindDown_Hansel); //Brunnen runter lassen Animation
+								pOtherPlayer.SetAnimation(Hardcoded.Anim_Well_Hang_Gretel);
 							}
 							else if (pPlayer.Input.LeftStickRotation < 0f)
 							{
-								pPlayer.SetAnimation("attack"); //Brunnen hoch ziehen Animation
-								pOtherPlayer.SetAnimation("attack");
+								pPlayer.SetAnimation(Hardcoded.Anim_Well_WindUp_Hansel); //Brunnen hoch ziehen Animation
+								pOtherPlayer.SetAnimation(Hardcoded.Anim_Well_Hang_Gretel);
 							}
 							ActI.SetFadingState(pPlayer, false, false);
 							ActI.SetFadingState(pOtherPlayer, false, false);
@@ -107,8 +107,8 @@ namespace HG_Game
 						}
 						else
 						{
-							pPlayer.SetAnimation("attack"); //Brunnen idle Animation
-							pOtherPlayer.SetAnimation("attack");
+							pPlayer.SetAnimation(Hardcoded.Anim_Well_WindIdle_Hansel); //Brunnen idle Animation
+							pOtherPlayer.SetAnimation(Hardcoded.Anim_Well_Idle_Gretel);
 							if (pPlayer.Input.ActionIsPressed && pPlayer.Input.LeftStickRotation != 0f) //Hansel versucht Brunnen zu bewegen?
 								ActI.SetFadingState(pPlayer, false, false);
 							else
@@ -141,7 +141,7 @@ namespace HG_Game
 					break;
 				case 8:
 					//-----Oben/Unten aussteigen-----
-					pPlayer.SetAnimation("attack", false); // Aus Eimer aussteigen
+					pPlayer.SetAnimation(Hardcoded.Anim_Well_Leave_Gretel, false); // Aus Eimer aussteigen
 					++pPlayer.mCurrentState;
 					break;
 				case 9:

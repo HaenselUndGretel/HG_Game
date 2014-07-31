@@ -41,7 +41,7 @@ namespace HG_Game
 			{
 				case 0:
 					//-----Animation starten-----
-					Sequences.StartAnimation(pPlayer, "attack");
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Use);
 					++pPlayer.mCurrentState;
 					break;
 				case 1:

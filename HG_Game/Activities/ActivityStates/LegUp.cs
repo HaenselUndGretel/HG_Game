@@ -55,7 +55,7 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer, Hardcoded.LegUp_StartOffsetGretel);
 					break;
 				case 1:
-					Sequences.StartAnimation(pPlayer, "attack");
+					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Raise);
 					ActI.ThumbstickDirHansel = ActivityInstruction.ThumbstickDirection.Up;
 					ActI.ThumbstickDirGretel = ActivityInstruction.ThumbstickDirection.None;
 					++pPlayer.mCurrentState;
@@ -100,11 +100,11 @@ namespace HG_Game
 					{
 						if (!m2ndState) //LegUp
 						{
-							Sequences.StartAnimation(pPlayer, "attack"); //hoch ziehen
+							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Lift_Gretel); //hoch ziehen
 						}
 						else //LegUpGrab
 						{
-							Sequences.StartAnimation(pPlayer, "attack"); //Item greifen
+							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Grab_Gretel); //Item greifen
 							rIObj.ActionRectList.Clear(); //LegUp kann mehrfach ausgeführt werden?
 						}
 						++pPlayer.mCurrentState;
@@ -119,8 +119,8 @@ namespace HG_Game
 						if (m2ndState) //LegUpGrab
 						{
 							//Gretel runter lassen
-							Sequences.StartAnimation(pPlayer, "attack");
-							Sequences.StartAnimation(pOtherPlayer, "attack");
+							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Lower);
+							Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_LegUp_Lower);
 						}
 						++pPlayer.mCurrentState;
 						++pOtherPlayer.mCurrentState;

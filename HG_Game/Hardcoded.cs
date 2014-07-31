@@ -67,6 +67,75 @@ namespace HG_Game
 		public const float End_FadingDuration = 3f;
 
 		#region Animations
+		/*
+		Character Walk-Animations -> KryptonEngine/HG_Data/Character/Character.cs
+		*/
+		public const string Anim_RaiseLantern_Hansel = "raiseLantern";
+		public const string Anim_Jump_Hansel = "jump";
+		public const string Anim_KnockOverTree = "knockOverTree";
+
+		public const string Anim_Balance_EnterUp = "balanceEnterUp";
+		public const string Anim_Balance_EnterDown = "balanceEnterDown";
+		public const string Anim_Balance_EnterSide = "balanceEnterSide";
+								 		
+		public const string Anim_Balance_Up = "balanceUp";
+		public const string Anim_Balance_Down = "balanceDown";
+		public const string Anim_Balance_Side = "balanceSide";
+		/*						 
+		public const string Anim_Balance_Up_Shiver = "balanceUpShiver";
+		public const string Anim_Balance_Down_Shiver = "balanceDownShiver";
+		public const string Anim_Balance_Side_Shiver = "balanceSideShiver";
+		*/						 
+		public const string Anim_Balance_LeaveUp = "balanceLeaveUp";
+		public const string Anim_Balance_LeaveDown = "balanceLeaveDown";
+		public const string Anim_Balance_LeaveSide = "balanceLeaveSide";
+
+		public const string Anim_Tree_KnockOver = "knockOver";
+		public const string Anim_Tree_Falling = "falling";
+		public const string Anim_Tree_Fallen = "fallen";
+
+		public const string Anim_Lantern_Place = "lanternPlace";
+		public const string Anim_Lantern_Grab = "lanternGrab";
+								 
+		public const string Anim_LegUp_Raise = "legUpRaise";
+		public const string Anim_LegUp_Lower = "legUpLower";
+		public const string Anim_LegUp_Lift_Gretel = "legUpLift";
+		public const string Anim_LegUp_Grab_Gretel = "legUpGrab";
+
+		public const string Anim_PushDoor_Up = "pushDoorUp";
+		public const string Anim_PushDoor_Down = "pushDoorDown";
+		public const string Anim_PushDoor_Side = "pushDoorSide";
+								 
+		public const string Anim_PullDoor_Up = "pullDoorUp";
+		public const string Anim_PullDoor_Down = "pullDoorDown";
+		public const string Anim_PullDoor_Side = "pullDoorSide";
+
+		public const string Anim_Door_openUpDown = "openUpDown";
+		public const string Anim_Door_openSide = "openSide";
+		public const string Anim_Door_closeUpDown = "closeUpDown";
+		public const string Anim_Door_closeSide = "closeSide";
+
+		public const string Anim_Push_RockUp = "pushRockUp";
+		public const string Anim_Push_RockDown = "pushRockDown";
+		public const string Anim_Push_RockSide = "pushRockSide";
+
+		public const string Anim_Rock_Moving = "moving";
+
+		public const string Anim_SlipAway_Gretel = "slipAway";
+		public const string Anim_SlipBack_Gretel = "slipBack";
+
+		public const string Anim_Well_GrabWind_Hansel = "wellGrabWind";
+		public const string Anim_Well_WindIdle_Hansel = "wellWindIdle";
+		public const string Anim_Well_WindUp_Hansel = "wellWindUp";
+		public const string Anim_Well_WindDown_Hansel = "wellWindDown";
+
+		public const string Anim_Well_Enter_Gretel = "wellEnter";
+		public const string Anim_Well_Leave_Gretel = "wellLeave";
+		public const string Anim_Well_Hang_Gretel = "wellHang";
+		public const string Anim_Well_Idle_Gretel = "wellIdle";
+
+		public const string Anim_Amulet_Charge = "amuletCharge";
+		public const string Anim_Amulet_Use = "amuletUse";
 
 		#endregion
 

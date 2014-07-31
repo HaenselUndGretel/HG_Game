@@ -68,8 +68,8 @@ namespace HG_Game
 			mState = GameState.Running;
 			mEndGameFading = new SteppingProgress(Hardcoded.End_FadingDuration);
 			//Player
-			mHansel = new Hansel("skeleton");
-			mGretel = new Gretel("skeleton");
+			mHansel = new Hansel();
+			mGretel = new Gretel();
 			mHansel.mCurrentActivity = ActivityHandler.None;
 			mGretel.mCurrentActivity = ActivityHandler.None;
 			//Camera

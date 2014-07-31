@@ -779,6 +779,16 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="cfx\ClearLS.fx">
+      <Name>ClearLS</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="cfx\Shadow.fx">
+      <Name>Shadow</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
     <Content Include="iObj\bookShelf.iObj">
       <Name>bookShelf</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -959,10 +969,10 @@
     </Content>
     <Content Include="sfx\collectable02.mp3">
       <Name>collectable02</Name>
-	  <Importer>Mp3Importer</Importer>
+      <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	</Content>
+    </Content>
     <Content Include="iObj\amuletStone.iObj">
       <Name>amuletStone</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

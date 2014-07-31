@@ -940,30 +940,30 @@
       <Name>000</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="sfx\MusicForest0.mp3">
+    <Content Include="sfx\MusicForest0.mp3">
       <Name>MusicForest0</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="sfx\MusicForest1.mp3">
+    </Content>
+    <Content Include="sfx\MusicForest1.mp3">
       <Name>MusicForest1</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="sfx\MusicForest2.mp3">
+    </Content>
+    <Content Include="sfx\MusicForest2.mp3">
       <Name>MusicForest2</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="sfx\MusicForest3.mp3">
+    </Content>
+    <Content Include="sfx\MusicForest3.mp3">
       <Name>MusicForest3</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Compile Include="sfx\SfxFire.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>SfxFire</Name>
@@ -1042,56 +1042,66 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="sfx\MusicHouse0.mp3">
+    <Content Include="sfx\MusicHouse0.mp3">
       <Name>MusicHouse0</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicHouse1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicHouse1.mp3">
       <Name>MusicHouse1</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicHouse2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicHouse2.mp3">
       <Name>MusicHouse2</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicHouse3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicHouse3.mp3">
       <Name>MusicHouse3</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicHouse4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicHouse4.mp3">
       <Name>MusicHouse4</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicMainTheme.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicMainTheme.mp3">
       <Name>MusicMainTheme</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicMountains0.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicMountains0.mp3">
       <Name>MusicMountains0</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicMountains1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicMountains1.mp3">
       <Name>MusicMountains1</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicMountains2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicMountains2.mp3">
       <Name>MusicMountains2</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="sfx\MusicMountains3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sfx\MusicMountains3.mp3">
       <Name>MusicMountains3</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
-    </Compile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="spine\skeleton.atlas">
       <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

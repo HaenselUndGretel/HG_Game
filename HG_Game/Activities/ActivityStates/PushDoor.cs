@@ -68,13 +68,13 @@ namespace HG_Game
 					{
 						Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushDoor_Up, Hardcoded.Anim_PushDoor_Down, Hardcoded.Anim_PushDoor_Side);
 						Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushDoor_Up, Hardcoded.Anim_PushDoor_Down, Hardcoded.Anim_PushDoor_Side);
-						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_openUp, Hardcoded.Anim_Door_openDown, Hardcoded.Anim_Door_openSide);
+						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_Open_Up, Hardcoded.Anim_Door_Open_Down, Hardcoded.Anim_Door_Open_Side);
 					}
 					else //PullDoor
 					{
 						Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PullDoor_Up, Hardcoded.Anim_PullDoor_Down, Hardcoded.Anim_PullDoor_Side);
 						Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PullDoor_Up, Hardcoded.Anim_PullDoor_Down, Hardcoded.Anim_PullDoor_Side);
-						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_closeUp, Hardcoded.Anim_Door_closeDown, Hardcoded.Anim_Door_closeSide);
+						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_Close_Up, Hardcoded.Anim_Door_Close_Down, Hardcoded.Anim_Door_Close_Side);
 					}
 					++pPlayer.mCurrentState;
 					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;

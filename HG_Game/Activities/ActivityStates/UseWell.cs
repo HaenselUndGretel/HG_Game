@@ -93,12 +93,12 @@ namespace HG_Game
 						{
 							if (pPlayer.Input.LeftStickRotation > 0f)
 							{
-								pPlayer.SetAnimation(Hardcoded.Anim_Well_WindDown_Hansel); //Brunnen runter lassen Animation
+								pPlayer.SetAnimation(Hardcoded.Anim_Well_Wind_Down_Hansel); //Brunnen runter lassen Animation
 								pOtherPlayer.SetAnimation(Hardcoded.Anim_Well_Hang_Gretel);
 							}
 							else if (pPlayer.Input.LeftStickRotation < 0f)
 							{
-								pPlayer.SetAnimation(Hardcoded.Anim_Well_WindUp_Hansel); //Brunnen hoch ziehen Animation
+								pPlayer.SetAnimation(Hardcoded.Anim_Well_Wind_Up_Hansel); //Brunnen hoch ziehen Animation
 								pOtherPlayer.SetAnimation(Hardcoded.Anim_Well_Hang_Gretel);
 							}
 							ActI.SetFadingState(pPlayer, false, false);
@@ -107,7 +107,7 @@ namespace HG_Game
 						}
 						else
 						{
-							pPlayer.SetAnimation(Hardcoded.Anim_Well_WindIdle_Hansel); //Brunnen idle Animation
+							pPlayer.SetAnimation(Hardcoded.Anim_Well_Wind_Idle_Hansel); //Brunnen idle Animation
 							pOtherPlayer.SetAnimation(Hardcoded.Anim_Well_Idle_Gretel);
 							if (pPlayer.Input.ActionIsPressed && pPlayer.Input.LeftStickRotation != 0f) //Hansel versucht Brunnen zu bewegen?
 								ActI.SetFadingState(pPlayer, false, false);

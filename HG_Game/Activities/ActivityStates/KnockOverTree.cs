@@ -141,7 +141,7 @@ namespace HG_Game
 						IsAvailable = false;
 						StartPosition = pPlayer.SkeletonPosition;
 						Direction = rIObj.DistantActionPosition(pPlayer.SkeletonPosition) - StartPosition;
-						Sequences.AnimateAccordingToDirection(pPlayer, Direction, Hardcoded.Anim_Balance_EnterUp, Hardcoded.Anim_Balance_EnterDown, Hardcoded.Anim_Balance_EnterSide);
+						Sequences.AnimateAccordingToDirection(pPlayer, Direction, Hardcoded.Anim_Balance_Enter_Up, Hardcoded.Anim_Balance_Enter_Down, Hardcoded.Anim_Balance_Enter_Side);
 						++pPlayer.mCurrentState;
 						break;
 					case 2:
@@ -189,7 +189,7 @@ namespace HG_Game
 						{
 							++pPlayer.mCurrentState;
 							StartPosition = pPlayer.SkeletonPosition;
-							Sequences.AnimateAccordingToDirection(pPlayer, MovementDirection, Hardcoded.Anim_Balance_LeaveUp, Hardcoded.Anim_Balance_LeaveDown, Hardcoded.Anim_Balance_LeaveSide);
+							Sequences.AnimateAccordingToDirection(pPlayer, MovementDirection, Hardcoded.Anim_Balance_Leave_Up, Hardcoded.Anim_Balance_Leave_Down, Hardcoded.Anim_Balance_Leave_Side);
 						}
 						break;
 					case 4:

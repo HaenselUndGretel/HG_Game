@@ -83,9 +83,9 @@ namespace HG_Game
 		{
 			foreach (Waypoint wp in pScene.Waypoints)
 			{
-				if (wp.CollisionBox.Contains(pHansel.CollisionBox)) //Hänsel steht in diesem Waypoint
+				if (wp.CollisionBox.Contains(new Point((int)pHansel.SkeletonPosition.X, (int)pHansel.SkeletonPosition.Y))) //Hänsel steht in diesem Waypoint
 				{
-					if (wp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht auch in diesem Waypoint
+					if (wp.CollisionBox.Contains(new Point((int)pGretel.SkeletonPosition.X, (int)pGretel.SkeletonPosition.Y))) //Gretel steht auch in diesem Waypoint
 					{
 						if (!wp.OneWay)
 							StartSwitching(pHansel, pGretel, wp, wp, pSceneLookup);
@@ -97,7 +97,7 @@ namespace HG_Game
 						{
 							if (otherWp != wp && otherWp.DestinationScene == wp.DestinationScene) //Ein weiterer Waypoint dieser Map führt auf die gleiche DestinationMap
 							{
-								if (otherWp.CollisionBox.Contains(pGretel.CollisionBox)) //Gretel steht in diesem Waypoint
+								if (otherWp.CollisionBox.Contains(new Point((int)pGretel.SkeletonPosition.X, (int)pGretel.SkeletonPosition.Y))) //Gretel steht in diesem Waypoint
 								{
 									if (!wp.OneWay && !otherWp.OneWay)
 										StartSwitching(pHansel, pGretel, wp, otherWp, pSceneLookup);
@@ -198,7 +198,7 @@ namespace HG_Game
 				//Spiel speichern wenn Spiler in der Scene angekommen sind und ein Kreidefelsen in ihr steht.
 				foreach (InteractiveObject iObj in pScene.InteractiveObjects)
 				{
-					if (iObj.Name == "chalkRock")
+					if (iObj.Name == Hardcoded.Scene_Waystone_IObjName)
 					{
 						Savegame.Save(pSavegame, pHansel, pGretel);
 					}

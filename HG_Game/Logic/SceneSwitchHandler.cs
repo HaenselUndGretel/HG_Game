@@ -187,8 +187,8 @@ namespace HG_Game
 				if (wp.CollisionBox.Intersects(pHansel.CollisionBox) || wp.CollisionBox.Intersects(pGretel.CollisionBox))
 				{
 					TmpEnterFinished = false;
-					pHansel.MoveManually(wp.MovementOnEnter, 1f, pScene, false);
-					pGretel.MoveManually(wp.MovementOnEnter, 1f, pScene, false);
+					pHansel.MoveManually(wp.MovementOnEnter, 1f, pScene, false, false, true);
+					pGretel.MoveManually(wp.MovementOnEnter, 1f, pScene, false, false, true);
 				}
 			}
 			if (TmpEnterFinished)

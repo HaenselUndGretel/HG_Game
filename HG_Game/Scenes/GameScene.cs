@@ -222,7 +222,7 @@ namespace HG_Game
 				{
 					mScene.RenderList[i].DrawDebug(mSpriteBatch);
 				}
-				AIManager.Instance.DrawDebugAiGrid(mSpriteBatch);
+				//AIManager.Instance.DrawDebugAiGrid(mSpriteBatch);
 				mSpriteBatch.End();
 
 				SpriteFont font = FontManager.Instance.GetElementByString("font");

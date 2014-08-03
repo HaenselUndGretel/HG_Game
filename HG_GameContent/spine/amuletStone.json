@@ -1,14 +1,15 @@
 {
 "bones": [
-	{ "name": "root" }
+	{ "name": "root" },
+	{ "name": "ObjShelf", "parent": "root", "length": 210, "x": -0.5, "rotation": 89.54 }
 ],
 "slots": [
-	{ "name": "img/ObjStonePush1", "bone": "root", "attachment": "front" }
+	{ "name": "ObjShelf", "bone": "ObjShelf", "attachment": "front" }
 ],
 "skins": {
 	"front": {
-		"img/ObjStonePush1": {
-			"front": { "name": "img/ObjStonePush4", "y": 35, "width": 73, "height": 70 }
+		"ObjShelf": {
+			"front": { "name": "ObjShelf", "x": 89, "y": 0.19, "rotation": -89.54, "width": 144, "height": 250 }
 		}
 	}
 },

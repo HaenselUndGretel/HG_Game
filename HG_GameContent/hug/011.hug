@@ -548,81 +548,81 @@
       <ObjectId>4</ObjectId>
       <Position>
         <X>2477</X>
-        <Y>269</Y>
+        <Y>279</Y>
       </Position>
       <CollisionBox>
         <X>2477</X>
-        <Y>269</Y>
-        <Width>98</Width>
-        <Height>388</Height>
+        <Y>279</Y>
+        <Width>81</Width>
+        <Height>350</Height>
         <Location>
           <X>2477</X>
-          <Y>269</Y>
+          <Y>279</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>10</DestinationScene>
-      <DestinationWaypoint>1</DestinationWaypoint>
+      <DestinationWaypoint>29</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
+        <X>-1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>10</ObjectId>
       <Position>
-        <X>2464</X>
-        <Y>895</Y>
+        <X>2460</X>
+        <Y>905</Y>
       </Position>
       <CollisionBox>
-        <X>2464</X>
-        <Y>895</Y>
-        <Width>98</Width>
-        <Height>516</Height>
+        <X>2460</X>
+        <Y>905</Y>
+        <Width>91</Width>
+        <Height>500</Height>
         <Location>
-          <X>2464</X>
-          <Y>895</Y>
+          <X>2460</X>
+          <Y>905</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>10</DestinationScene>
-      <DestinationWaypoint>2</DestinationWaypoint>
+      <DestinationWaypoint>30</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
+        <X>-1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>12</ObjectId>
       <Position>
-        <X>1106</X>
-        <Y>1347</Y>
+        <X>1176</X>
+        <Y>1335</Y>
       </Position>
       <CollisionBox>
-        <X>1106</X>
-        <Y>1347</Y>
-        <Width>351</Width>
-        <Height>123</Height>
+        <X>1176</X>
+        <Y>1335</Y>
+        <Width>200</Width>
+        <Height>100</Height>
         <Location>
-          <X>1106</X>
-          <Y>1347</Y>
+          <X>1176</X>
+          <Y>1335</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>12</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
+      <DestinationWaypoint>4</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>0</X>
-        <Y>1</Y>
+        <Y>-1</Y>
       </MovementOnEnter>
     </Waypoint>
   </Waypoints>
@@ -630,36 +630,7 @@
   <InteractiveObjects />
   <Collectables />
   <Lights />
-  <Events>
-    <EventTrigger>
-      <ObjectId>5</ObjectId>
-      <Position>
-        <X>2456</X>
-        <Y>903</Y>
-      </Position>
-      <CollisionBox>
-        <X>2456</X>
-        <Y>903</Y>
-        <Width>77</Width>
-        <Height>176</Height>
-        <Location>
-          <X>2456</X>
-          <Y>903</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <NormalZ>0</NormalZ>
-      <Event>SpawnWitch</Event>
-      <Target>-1</Target>
-      <IsAcitvated>false</IsAcitvated>
-      <WitchSpawnPosition>
-        <X>0</X>
-        <Y>0</Y>
-      </WitchSpawnPosition>
-      <SoundName />
-    </EventTrigger>
-  </Events>
+  <Events />
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
     <Position>

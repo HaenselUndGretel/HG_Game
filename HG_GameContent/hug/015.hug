@@ -127,54 +127,54 @@
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
-        <X>-4</X>
-        <Y>273</Y>
+        <X>0</X>
+        <Y>280</Y>
       </Position>
       <CollisionBox>
-        <X>-4</X>
-        <Y>273</Y>
-        <Width>83</Width>
-        <Height>400</Height>
+        <X>0</X>
+        <Y>280</Y>
+        <Width>90</Width>
+        <Height>380</Height>
         <Location>
-          <X>-4</X>
-          <Y>273</Y>
+          <X>0</X>
+          <Y>280</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>14</DestinationScene>
-      <DestinationWaypoint>1</DestinationWaypoint>
+      <DestinationWaypoint>4</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>-1</X>
+        <X>1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>3</ObjectId>
       <Position>
-        <X>1211</X>
-        <Y>289</Y>
+        <X>1190</X>
+        <Y>299</Y>
       </Position>
       <CollisionBox>
-        <X>1211</X>
-        <Y>289</Y>
+        <X>1190</X>
+        <Y>299</Y>
         <Width>90</Width>
-        <Height>384</Height>
+        <Height>350</Height>
         <Location>
-          <X>1211</X>
-          <Y>289</Y>
+          <X>1190</X>
+          <Y>299</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>16</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
+      <DestinationWaypoint>2</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
+        <X>-1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>

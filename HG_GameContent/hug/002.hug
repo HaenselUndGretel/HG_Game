@@ -1268,16 +1268,16 @@
       <ObjectId>2</ObjectId>
       <Position>
         <X>0</X>
-        <Y>75</Y>
+        <Y>60</Y>
       </Position>
       <CollisionBox>
         <X>0</X>
-        <Y>75</Y>
-        <Width>129</Width>
-        <Height>300</Height>
+        <Y>60</Y>
+        <Width>92</Width>
+        <Height>330</Height>
         <Location>
           <X>0</X>
-          <Y>75</Y>
+          <Y>60</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1301,7 +1301,7 @@
         <X>2415</X>
         <Y>593</Y>
         <Width>144</Width>
-        <Height>417</Height>
+        <Height>300</Height>
         <Location>
           <X>2415</X>
           <Y>593</Y>

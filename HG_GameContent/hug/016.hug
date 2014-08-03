@@ -223,8 +223,8 @@
       <CollisionBox>
         <X>-1</X>
         <Y>946</Y>
-        <Width>99</Width>
-        <Height>351</Height>
+        <Width>90</Width>
+        <Height>350</Height>
         <Location>
           <X>-1</X>
           <Y>946</Y>
@@ -234,10 +234,10 @@
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>15</DestinationScene>
-      <DestinationWaypoint>1</DestinationWaypoint>
+      <DestinationWaypoint>3</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>-1</X>
+        <X>1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
@@ -245,26 +245,26 @@
       <ObjectId>3</ObjectId>
       <Position>
         <X>2451</X>
-        <Y>896</Y>
+        <Y>1000</Y>
       </Position>
       <CollisionBox>
         <X>2451</X>
-        <Y>896</Y>
-        <Width>128</Width>
-        <Height>354</Height>
+        <Y>1000</Y>
+        <Width>100</Width>
+        <Height>170</Height>
         <Location>
           <X>2451</X>
-          <Y>896</Y>
+          <Y>1000</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>17</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
+      <DestinationWaypoint>2</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>1</X>
+        <X>-1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>

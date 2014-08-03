@@ -1,13 +1,13 @@
 
 amuletStone.png
-size: 74,72
+size: 146,252
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-img/ObjStonePush4
+ObjShelf
   rotate: false
   xy: 2, 2
-  size: 72, 70
-  orig: 73, 70
-  offset: 1, 0
+  size: 144, 250
+  orig: 144, 250
+  offset: 0, 0
   index: -1

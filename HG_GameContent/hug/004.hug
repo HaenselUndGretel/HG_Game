@@ -1503,8 +1503,8 @@
       <CollisionBox>
         <X>2</X>
         <Y>443</Y>
-        <Width>155</Width>
-        <Height>383</Height>
+        <Width>99</Width>
+        <Height>250</Height>
         <Location>
           <X>2</X>
           <Y>443</Y>
@@ -1530,7 +1530,7 @@
       <CollisionBox>
         <X>468</X>
         <Y>2028</Y>
-        <Width>349</Width>
+        <Width>240</Width>
         <Height>129</Height>
         <Location>
           <X>468</X>

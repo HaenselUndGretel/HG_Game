@@ -13,9 +13,11 @@ namespace HG_Game
 		#region Properties
 
 		protected SteppingProgress Frost;
+		protected const float Distance = 450f;
+		protected const float MinBodyTemperature = 0.7f;
 
 		private const float SOUND_COOLDOWN = 23000.0f;
-		private float soundTimer;
+		private float soundTimer = 24000.0f;
 
 		#endregion
 
@@ -46,7 +48,7 @@ namespace HG_Game
 			{
 				pHansel.BodyTemperature = 1f;
 				pGretel.BodyTemperature = 1f;
-				soundTimer = 0.0f;
+				soundTimer = 23000.0f;
 			}
 		}
 
@@ -58,9 +60,9 @@ namespace HG_Game
 			int player = EngineSettings.Randomizer.Next(0, 2);
 
 			if(player == 0)
-				FmodMediaPlayer.Instance.AddSong("gretel_shiver");
+				FmodMediaPlayer.Instance.AddSong("gretel_shiver", 0.8f);
 			else
-				FmodMediaPlayer.Instance.AddSong("hansel_shiver");
+				FmodMediaPlayer.Instance.AddSong("hansel_shiver", 0.8f);
 
 			soundTimer -= SOUND_COOLDOWN;
 		}

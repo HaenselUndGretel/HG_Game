@@ -60,9 +60,9 @@ namespace HG_Game
 			int player = EngineSettings.Randomizer.Next(0, 2);
 
 			if(player == 0)
-				FmodMediaPlayer.Instance.AddSong("gretel_shiver");
+				FmodMediaPlayer.Instance.AddSong("gretel_shiver", 0.8f);
 			else
-				FmodMediaPlayer.Instance.AddSong("hansel_shiver");
+				FmodMediaPlayer.Instance.AddSong("hansel_shiver", 0.8f);
 
 			soundTimer -= SOUND_COOLDOWN;
 		}

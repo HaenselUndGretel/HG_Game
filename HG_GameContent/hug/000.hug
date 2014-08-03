@@ -382,6 +382,66 @@
         <Y>208</Y>
       </Location>
     </Rectangle>
+    <Rectangle>
+      <X>592</X>
+      <Y>336</Y>
+      <Width>112</Width>
+      <Height>32</Height>
+      <Location>
+        <X>592</X>
+        <Y>336</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>688</X>
+      <Y>352</Y>
+      <Width>16</Width>
+      <Height>32</Height>
+      <Location>
+        <X>688</X>
+        <Y>352</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>688</X>
+      <Y>352</Y>
+      <Width>32</Width>
+      <Height>48</Height>
+      <Location>
+        <X>688</X>
+        <Y>352</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>960</X>
+      <Y>448</Y>
+      <Width>48</Width>
+      <Height>32</Height>
+      <Location>
+        <X>960</X>
+        <Y>448</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1024</X>
+      <Y>432</Y>
+      <Width>32</Width>
+      <Height>48</Height>
+      <Location>
+        <X>1024</X>
+        <Y>432</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1040</X>
+      <Y>432</Y>
+      <Width>32</Width>
+      <Height>32</Height>
+      <Location>
+        <X>1040</X>
+        <Y>432</Y>
+      </Location>
+    </Rectangle>
   </MoveArea>
   <Waypoints>
     <Waypoint>
@@ -401,7 +461,7 @@
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
+      <DrawZ>-31</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>1</DestinationScene>
       <DestinationWaypoint>4</DestinationWaypoint>
@@ -444,9 +504,9 @@
     </FadingLightColor>
     <FadingDuration>0</FadingDuration>
     <StartColor>
-      <X>0</X>
-      <Y>0</Y>
-      <Z>0</Z>
+      <X>0.392156869</X>
+      <Y>0.392156869</Y>
+      <Z>0.490196079</Z>
     </StartColor>
     <IsLightMoving>false</IsLightMoving>
     <MoveSpeed>0</MoveSpeed>

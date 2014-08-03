@@ -312,7 +312,7 @@ namespace HG_Game
 			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
 			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(2);
 			FmodMediaPlayer.Instance.FadeBackgroundChannelIn(3);
-			SoundHandler.Instance.SceneId = 0;
+			GameReferenzes.SceneID= 0;
 			SceneManager.Instance.SetCurrentSceneTo("Game");
 		}
 
@@ -325,16 +325,12 @@ namespace HG_Game
 		{
 			menuState = MenuState.Collectables;
 			SelectedIndexCollectable = 0;
-			//StartMoveing = true;
-			//MoveDirection = false;
 		}
 
 		private void ShowOptions()
 		{
 			menuState = MenuState.Options;
 			SelectedIndexOptions = 0;
-			//StartMoveing = true;
-			//MoveDirection = false;
 		}
 
 		private void MoveListIn(List<GameObject> gos)

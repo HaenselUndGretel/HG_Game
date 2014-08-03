@@ -10,7 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Forest</BackgroundSoundSetting>
+  <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
   <MoveArea>
     <Rectangle>
       <X>0</X>
@@ -1187,24 +1187,51 @@
     <Waypoint>
       <ObjectId>28</ObjectId>
       <Position>
-        <X>3751</X>
-        <Y>589</Y>
+        <X>3615</X>
+        <Y>595</Y>
       </Position>
       <CollisionBox>
-        <X>3751</X>
-        <Y>589</Y>
-        <Width>92</Width>
-        <Height>521</Height>
+        <X>3615</X>
+        <Y>595</Y>
+        <Width>221</Width>
+        <Height>210</Height>
         <Location>
-          <X>3751</X>
-          <Y>589</Y>
+          <X>3615</X>
+          <Y>595</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>9</DestinationScene>
-      <DestinationWaypoint>1</DestinationWaypoint>
+      <DestinationWaypoint>3</DestinationWaypoint>
+      <OneWay>false</OneWay>
+      <MovementOnEnter>
+        <X>-1</X>
+        <Y>0</Y>
+      </MovementOnEnter>
+    </Waypoint>
+    <Waypoint>
+      <ObjectId>29</ObjectId>
+      <Position>
+        <X>0</X>
+        <Y>854</Y>
+      </Position>
+      <CollisionBox>
+        <X>0</X>
+        <Y>854</Y>
+        <Width>81</Width>
+        <Height>350</Height>
+        <Location>
+          <X>0</X>
+          <Y>854</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <DestinationScene>11</DestinationScene>
+      <DestinationWaypoint>4</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>1</X>
@@ -1212,56 +1239,29 @@
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
-      <ObjectId>29</ObjectId>
-      <Position>
-        <X>-8</X>
-        <Y>747</Y>
-      </Position>
-      <CollisionBox>
-        <X>-8</X>
-        <Y>747</Y>
-        <Width>81</Width>
-        <Height>554</Height>
-        <Location>
-          <X>-8</X>
-          <Y>747</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>0</DrawZ>
-      <NormalZ>0</NormalZ>
-      <DestinationScene>11</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-        <Y>0</Y>
-      </MovementOnEnter>
-    </Waypoint>
-    <Waypoint>
       <ObjectId>30</ObjectId>
       <Position>
-        <X>-8</X>
-        <Y>1469</Y>
+        <X>0</X>
+        <Y>1500</Y>
       </Position>
       <CollisionBox>
-        <X>-8</X>
-        <Y>1469</Y>
+        <X>0</X>
+        <Y>1500</Y>
         <Width>91</Width>
-        <Height>586</Height>
+        <Height>500</Height>
         <Location>
-          <X>-8</X>
-          <Y>1469</Y>
+          <X>0</X>
+          <Y>1500</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>11</DestinationScene>
-      <DestinationWaypoint>1</DestinationWaypoint>
+      <DestinationWaypoint>10</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
-        <X>-1</X>
+        <X>1</X>
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>

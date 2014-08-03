@@ -1492,46 +1492,6 @@
         <Y>912</Y>
       </Location>
     </Rectangle>
-    <Rectangle>
-      <X>1552</X>
-      <Y>1184</Y>
-      <Width>240</Width>
-      <Height>16</Height>
-      <Location>
-        <X>1552</X>
-        <Y>1184</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1872</X>
-      <Y>1392</Y>
-      <Width>0</Width>
-      <Height>16</Height>
-      <Location>
-        <X>1872</X>
-        <Y>1392</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1872</X>
-      <Y>1392</Y>
-      <Width>16</Width>
-      <Height>16</Height>
-      <Location>
-        <X>1872</X>
-        <Y>1392</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1600</X>
-      <Y>1392</Y>
-      <Width>288</Width>
-      <Height>16</Height>
-      <Location>
-        <X>1600</X>
-        <Y>1392</Y>
-      </Location>
-    </Rectangle>
   </MoveArea>
   <Waypoints>
     <Waypoint>
@@ -1543,8 +1503,8 @@
       <CollisionBox>
         <X>2</X>
         <Y>443</Y>
-        <Width>155</Width>
-        <Height>383</Height>
+        <Width>99</Width>
+        <Height>250</Height>
         <Location>
           <X>2</X>
           <Y>443</Y>
@@ -1570,7 +1530,7 @@
       <CollisionBox>
         <X>468</X>
         <Y>2028</Y>
-        <Width>349</Width>
+        <Width>240</Width>
         <Height>129</Height>
         <Location>
           <X>468</X>

@@ -22,8 +22,6 @@ namespace HG_Game
 
 		private bool BossFightMusic;
 
-		public int SceneId;
-
 		public SoundHandler()
 		{
 			TimeInScene = 0;
@@ -34,13 +32,13 @@ namespace HG_Game
 		{
 			TimeInScene += EngineSettings.Time.ElapsedGameTime.Milliseconds;
 
-			if (TimeInScene > 30000 & !SecondChannelPlay && SceneId != 0 )
+			if (TimeInScene > 30000 & !SecondChannelPlay && GameReferenzes.SceneID != 0 )
 			{
 				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
 				SecondChannelPlay = true;
 			}
 
-			if(SceneId == 0)
+			if (GameReferenzes.SceneID == 0)
 			{
 				if(TimeInScene > 10000 & !MuteChannel3Scene0)
 				{
@@ -54,7 +52,7 @@ namespace HG_Game
 				}
 			}
 
-			if(SceneId == 17 & !BossFightMusic)
+			if (GameReferenzes.SceneID == 16 & !BossFightMusic)
 			{
 				BossFightMusic = true;
 				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);

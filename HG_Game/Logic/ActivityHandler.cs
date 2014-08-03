@@ -183,7 +183,7 @@ namespace HG_Game
 					{
 						w = (Witch)e;
 					}
-				if (w == null) throw new Exception("Witch nicht gefunden!");
+				//if (w == null) throw new Exception("Witch nicht gefunden!");
 				pScene.Enemies.Remove(w);
 			}
 		}

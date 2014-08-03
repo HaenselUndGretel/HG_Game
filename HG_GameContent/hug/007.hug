@@ -1717,17 +1717,17 @@
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
-        <X>2958</X>
-        <Y>2023</Y>
+        <X>3258</X>
+        <Y>2053</Y>
       </Position>
       <CollisionBox>
-        <X>2958</X>
-        <Y>2023</Y>
-        <Width>362</Width>
-        <Height>136</Height>
+        <X>3258</X>
+        <Y>2053</Y>
+        <Width>225</Width>
+        <Height>101</Height>
         <Location>
-          <X>2958</X>
-          <Y>2023</Y>
+          <X>3258</X>
+          <Y>2053</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1751,7 +1751,7 @@
         <X>614</X>
         <Y>5</Y>
         <Width>186</Width>
-        <Height>210</Height>
+        <Height>110</Height>
         <Location>
           <X>614</X>
           <Y>5</Y>
@@ -1760,8 +1760,8 @@
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
-      <DestinationScene>9</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
+      <DestinationScene>8</DestinationScene>
+      <DestinationWaypoint>1</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>0</X>

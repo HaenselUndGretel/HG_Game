@@ -80,6 +80,8 @@ namespace HG_Game
 			mLogic = new Logic();
 			//PauseMenu
 			mPauseMenu = new PauseMenu();
+
+			FmodMediaPlayer.FadingSpeed = 1 / 90.0f;
 		}
 
 		public override void LoadContent()
@@ -191,6 +193,9 @@ namespace HG_Game
 
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
 
+			if (GameReferenzes.Level.Fog)
+				mRenderer.ApplyFog();
+
 			//--------------------SpriteBatch WorldSpace(HUD & Infos)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
 			//Render ActionInfo
@@ -247,6 +252,11 @@ namespace HG_Game
 					sb.Append("|");
 				sb.AppendLine("");
 				sb.AppendLine("-------------------- --------------------");
+
+				if (GameReferenzes.TargetPlayer == null | GameReferenzes.UntargetPlayer == null) return;
+				mSpriteBatch.Begin();
+				mSpriteBatch.DrawString(font, "Abstand: " + Vector2.Distance(GameReferenzes.TargetPlayer.Position, GameReferenzes.UntargetPlayer.Position).ToString(), new Vector2(10, 10), Color.White);
+				mSpriteBatch.End();
 				
 				mSpriteBatch.Begin();
 				//mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);

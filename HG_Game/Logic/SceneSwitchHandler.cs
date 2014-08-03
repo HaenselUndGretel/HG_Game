@@ -141,6 +141,7 @@ namespace HG_Game
 			FadingProgress = 0d;
 			CurrentState = State.Switching;
 			FmodMediaPlayer.Instance.FadeBackgroundOut();
+			GameReferenzes.IsSceneSwitching = true;
 		}
 
 		/// <summary>
@@ -148,6 +149,8 @@ namespace HG_Game
 		/// </summary>
 		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer) 
 		{
+
+			AIManager.Instance.ClearAgents();
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
 			pHansel.MoveManually(LeaveHansel, 1f, pScene);
 			pGretel.MoveManually(LeaveGretel, 1f, pScene);
@@ -175,6 +178,7 @@ namespace HG_Game
 				SoundHandler.Instance.SceneId = DestinationScene;
 				SoundHandler.Instance.ResetTime();
 				FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.GetBackgroundMusic());
+				GameReferenzes.IsSceneSwitching = false;
 			}
 		}
 

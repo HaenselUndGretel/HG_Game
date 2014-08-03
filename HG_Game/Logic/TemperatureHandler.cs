@@ -13,11 +13,11 @@ namespace HG_Game
 		#region Properties
 
 		protected SteppingProgress Frost;
-		protected const float Distance = 300f;
+		protected const float Distance = 450f;
 		protected const float MinBodyTemperature = 0.7f;
 
 		private const float SOUND_COOLDOWN = 23000.0f;
-		private float soundTimer;
+		private float soundTimer = 24000.0f;
 
 		#endregion
 
@@ -48,7 +48,7 @@ namespace HG_Game
 			{
 				pHansel.BodyTemperature = 1f;
 				pGretel.BodyTemperature = 1f;
-				soundTimer = 0.0f;
+				soundTimer = 23000.0f;
 			}
 		}
 

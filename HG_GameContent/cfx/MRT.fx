@@ -55,7 +55,12 @@ MRT PixelShaderFunction(VertexShaderOutput input)
 
 	output.ColorTarget	    = tex2D(DiffuseMap, input.UV);
 
-	output.NormalTarget = tex2D(NormalMap, input.UV);
+
+	output.NormalTarget.r = tex2D(NormalMap, input.UV).r;
+	output.NormalTarget.g = tex2D(NormalMap, input.UV).g;
+	output.NormalTarget.b = tex2D(NormalMap, input.UV).b;
+	output.NormalTarget.a = tex2D(NormalMap, input.UV).a;
+
 
 	//output.NormalTarget.a   = output.ColorTarget.a;
 

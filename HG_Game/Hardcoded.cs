@@ -40,7 +40,7 @@ namespace HG_Game
 		public const int Scene_Amulet = 10;
 		public const int Scene_Lantern = 4;
 		public const int Scene_LanternDoor = 3;
-		public const string Scene_Waystone_IObjName = "chalkRock";
+		public const string Scene_Waystone_IObjName = "waystone";
 
 		#endregion
 

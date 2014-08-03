@@ -201,16 +201,16 @@ namespace HG_Game
 			{
 
 				CurrentState = State.Idle;
-				//Spiel speichern wenn Spiler in der Scene angekommen sind und ein Kreidefelsen in ihr steht.
-				if (GameReferenzes.SceneID == 3 | GameReferenzes.SceneID == 6 | GameReferenzes.SceneID == 12 | GameReferenzes.SceneID == 15)
-					Savegame.Save(pSavegame, pHansel, pGretel);
-				//foreach (InteractiveObject iObj in pScene.InteractiveObjects)
-				//{
-				//	if (iObj.Name == "chalkRock")
-				//	{
-				//		Savegame.Save(pSavegame, pHansel, pGretel);
-				//	}
-				//}
+				//Spiel speichern wenn Spieler in der Scene angekommen sind und ein Kreidefelsen in ihr steht.
+				//if (GameReferenzes.SceneID == 3 | GameReferenzes.SceneID == 6 | GameReferenzes.SceneID == 12 | GameReferenzes.SceneID == 15)
+					//Savegame.Save(pSavegame, pHansel, pGretel);
+				foreach (InteractiveObject iObj in pScene.InteractiveObjects)
+				{
+					if (iObj.Name == Hardcoded.Scene_Waystone_IObjName)
+					{
+						Savegame.Save(pSavegame, pHansel, pGretel);
+					}
+				}
 			}
 		}
 

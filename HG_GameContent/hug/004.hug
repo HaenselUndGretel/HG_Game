@@ -1503,8 +1503,13 @@
       <CollisionBox>
         <X>2</X>
         <Y>443</Y>
+<<<<<<< HEAD
         <Width>155</Width>
         <Height>383</Height>
+=======
+        <Width>99</Width>
+        <Height>250</Height>
+>>>>>>> origin/Gameplay-Test
         <Location>
           <X>2</X>
           <Y>443</Y>
@@ -1530,7 +1535,11 @@
       <CollisionBox>
         <X>468</X>
         <Y>2028</Y>
+<<<<<<< HEAD
         <Width>349</Width>
+=======
+        <Width>240</Width>
+>>>>>>> origin/Gameplay-Test
         <Height>129</Height>
         <Location>
           <X>468</X>

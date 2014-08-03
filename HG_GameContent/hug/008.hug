@@ -17,6 +17,7 @@
       <ObjectId>1</ObjectId>
       <Position>
         <X>510</X>
+<<<<<<< HEAD
         <Y>1308</Y>
       </Position>
       <CollisionBox>
@@ -27,6 +28,18 @@
         <Location>
           <X>510</X>
           <Y>1308</Y>
+=======
+        <Y>1328</Y>
+      </Position>
+      <CollisionBox>
+        <X>510</X>
+        <Y>1328</Y>
+        <Width>186</Width>
+        <Height>110</Height>
+        <Location>
+          <X>510</X>
+          <Y>1328</Y>
+>>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>

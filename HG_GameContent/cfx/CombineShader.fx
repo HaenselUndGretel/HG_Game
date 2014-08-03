@@ -2,7 +2,8 @@ float3 ambientColor;
 float ambientIntensity;
 
 sampler DiffuseMap  : register(s0);
-sampler LightMap   : register(s1);
+sampler LightMap    : register(s1);
+sampler AoMap		: register(s2);
 // MapSampler
 
 
@@ -37,7 +38,8 @@ float4 CombinePs(VertexShaderOutput input) : COLOR
 {
 	float4 colorMap = tex2D(DiffuseMap, input.TexCoord);
 	float4 lightMap = tex2D(LightMap, input.TexCoord);
-	float3 ambient = ambientColor* ambientIntensity;
+	float3 aoMap    = tex2D(AoMap, input.TexCoord);
+	float3 ambient  = (ambientColor* ambientIntensity)*aoMap;
 
 	float3 finalColor = (colorMap*lightMap)+(colorMap*ambient);
 

@@ -112,7 +112,7 @@ namespace HG_Game
 						if (col.GetType() == typeof(Lantern))
 							pHansel.Lantern = true;
 						pGameState = GameScene.GameState.CollectableInfo;
-						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId);
+						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
 						return;
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
@@ -126,7 +126,7 @@ namespace HG_Game
 						if (col.GetType() == typeof(Lantern))
 							pGretel.Lantern = true;
 						pGameState = GameScene.GameState.CollectableInfo;
-						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId);
+						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
 						return;
 					}
 				}

@@ -173,6 +173,7 @@ namespace HG_Game
 				AIManager.Instance.SetAgents(pScene.Enemies);
 
 				SoundHandler.Instance.SceneId = DestinationScene;
+				SoundHandler.Instance.ResetTime();
 				FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.GetBackgroundMusic());
 			}
 		}

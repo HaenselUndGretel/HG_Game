@@ -7,6 +7,8 @@ using KryptonEngine.Entities;
 using Microsoft.Xna.Framework.Graphics;
 using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
+using KryptonEngine.Controls;
+using Microsoft.Xna.Framework.Input;
 
 namespace HG_Game
 {
@@ -99,6 +101,12 @@ namespace HG_Game
 					if (Visibility.Progress <= 0f)
 						SceneManager.Instance.SetCurrentSceneTo("Menu");
 					break;
+			}
+			if (InputHelper.Player1.InputJustPressed(InputHelper.mDebug))
+			{
+				Visibility.Reset();
+				IdleTimer.Reset(true);
+				SceneManager.Instance.SetCurrentSceneTo("Menu");
 			}
 		}
 

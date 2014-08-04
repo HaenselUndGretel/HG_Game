@@ -45,7 +45,7 @@ namespace HG_Game
 		{
 			mCamera = new Camera();
 			State = FadingState.FadeIn;
-			Visibility = new SteppingProgress(6f);
+			Visibility = new SteppingProgress(2f);
 		}
 
 		public override void LoadContent()

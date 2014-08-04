@@ -1308,7 +1308,7 @@
     <Content Include="spine\skeleton.atlas">
       <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
+    </Content>
     <Compile Include="spine\skeleton.png">
       <Name>skeleton</Name>
       <Importer>TextureImporter</Importer>

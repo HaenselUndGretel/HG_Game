@@ -294,7 +294,8 @@ namespace HG_Game
 
 		private void ShowCredits()
 		{
-			menuState = MenuState.Credits;
+			SceneManager.Instance.SetCurrentSceneTo("Credits");
+			//menuState = MenuState.Credits;
 		}
 
 		private void ContinueGame()

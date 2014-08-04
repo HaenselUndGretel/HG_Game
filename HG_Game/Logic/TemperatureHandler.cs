@@ -46,6 +46,8 @@ namespace HG_Game
 			}
 			else
 			{
+				FmodMediaPlayer.Instance.StopSong("gretel_shiver");
+				FmodMediaPlayer.Instance.StopSong("hansel_shiver");
 				pHansel.BodyTemperature = 1f;
 				pGretel.BodyTemperature = 1f;
 				soundTimer = 23000.0f;

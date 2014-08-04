@@ -71,9 +71,9 @@ namespace HG_Game
 		#region Animations
 
 		//SetupInteractiveObjectsFromDeserialization
-		public const string Anim_Tree_Fallen_Up = "attack";//"fallen";
-		public const string Anim_Tree_Fallen_Down = "attack";//"fallen";
-		public const string Anim_Tree_Fallen_Side = "attack";//"fallen";
+		public const string Anim_Tree_Fallen_Up = "idle";//"fallen";
+		public const string Anim_Tree_Fallen_Down = "idle";//"fallen";
+		public const string Anim_Tree_Fallen_Side = "idle";//"fallen";
 
 		/*
 		Character Walk-Animations -> KryptonEngine/HG_Data/Character/Character.cs
@@ -101,13 +101,13 @@ namespace HG_Game
 		public const string Anim_Balance_Leave_Down = "attack";//"balanceLeaveDown";
 		public const string Anim_Balance_Leave_Side = "attack";//"balanceLeaveSide";
 
-		public const string Anim_Tree_KnockOver_Up = "attack";//"knockOver";
-		public const string Anim_Tree_KnockOver_Down = "attack";//"knockOver";
-		public const string Anim_Tree_KnockOver_Side = "attack";//"knockOver";
+		public const string Anim_Tree_KnockOver_Up = "wiggle";//"knockOver";
+		public const string Anim_Tree_KnockOver_Down = "wiggle";//"knockOver";
+		public const string Anim_Tree_KnockOver_Side = "wiggle";//"knockOver";
 
-		public const string Anim_Tree_Falling_Up = "attack";//"falling";
-		public const string Anim_Tree_Falling_Down = "attack";//"falling";
-		public const string Anim_Tree_Falling_Side = "attack";//"falling";
+		public const string Anim_Tree_Falling_Up = "falling_front";//"falling";
+		public const string Anim_Tree_Falling_Down = "falling_back";//"falling";
+		public const string Anim_Tree_Falling_Side = "fall_side";//"falling";
 
 		public const string Anim_Lantern_Place = "attack";//"lanternPlace";
 		public const string Anim_Lantern_Grab = "attack";//"lanternGrab";

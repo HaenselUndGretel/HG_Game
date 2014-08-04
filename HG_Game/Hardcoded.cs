@@ -14,7 +14,25 @@ namespace HG_Game
 		public const float KnockOverTree_BalanceSpeedFactor = 0.6f;
 
 		public static Vector2 LegUp_StartOffsetGretel = new Vector2(0, 30);
-		public static Vector2 LegUp_OffsetGretel = new Vector2(0, -275);
+		public static Vector2[] LegUp_OffsetGretel = {new Vector2(0, -275), //000
+													 Vector2.Zero, //001
+													 Vector2.Zero, //002
+													 Vector2.Zero, //003
+													 new Vector2(0, -275), //004
+													 Vector2.Zero, //005
+													 Vector2.Zero, //006
+													 new Vector2(0, -275), //007
+													 Vector2.Zero, //008
+													 Vector2.Zero, //009
+													 new Vector2(0, -275), //010
+													 Vector2.Zero, //011
+													 Vector2.Zero, //012
+													 new Vector2(0, -275), //013
+													 Vector2.Zero, //014
+													 Vector2.Zero, //015
+													 Vector2.Zero, //016
+													 Vector2.Zero //017
+													 };
 
 		public const int PushRock_RockMoveDistance = 256;
 		public const float PushRock_SteppingDuration = 7f;

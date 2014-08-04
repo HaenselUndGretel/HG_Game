@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>18000</ObjectId>
+  <ObjectId>30000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,40 +18,40 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>pulldoor</Name>
+  <Name>cabinet</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-99</X>
-      <Y>-276</Y>
-      <Width>203</Width>
-      <Height>99</Height>
+      <X>62</X>
+      <Y>-82</Y>
+      <Width>135</Width>
+      <Height>167</Height>
       <Location>
-        <X>-99</X>
-        <Y>-276</Y>
+        <X>62</X>
+        <Y>-82</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-96</X>
-      <Y>-177</Y>
-      <Width>196</Width>
-      <Height>182</Height>
+      <X>-59</X>
+      <Y>-217</Y>
+      <Width>120</Width>
+      <Height>216</Height>
       <Location>
-        <X>-96</X>
-        <Y>-177</Y>
+        <X>-59</X>
+        <Y>-217</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>46</X>
-    <Y>-208</Y>
+    <X>80</X>
+    <Y>-12</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-37</X>
-    <Y>-209</Y>
+    <X>99</X>
+    <Y>-56</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

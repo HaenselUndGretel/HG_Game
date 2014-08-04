@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>15000</ObjectId>
+  <ObjectId>33000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,50 +18,40 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>jumpgap</Name>
+  <Name>pushableRock</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-118</X>
-      <Y>-334</Y>
-      <Width>242</Width>
-      <Height>151</Height>
+      <X>-104</X>
+      <Y>-301</Y>
+      <Width>212</Width>
+      <Height>103</Height>
       <Location>
-        <X>-118</X>
-        <Y>-334</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-103</X>
-      <Y>5</Y>
-      <Width>218</Width>
-      <Height>151</Height>
-      <Location>
-        <X>-103</X>
-        <Y>5</Y>
+        <X>-107</X>
+        <Y>-301</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-117</X>
-      <Y>-180</Y>
-      <Width>241</Width>
-      <Height>180</Height>
+      <X>-104</X>
+      <Y>-197</Y>
+      <Width>212</Width>
+      <Height>199</Height>
       <Location>
-        <X>-117</X>
-        <Y>-180</Y>
+        <X>-104</X>
+        <Y>-197</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>1</X>
-    <Y>-218</Y>
+    <X>-48</X>
+    <Y>-223</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>1</X>
-    <Y>39</Y>
+    <X>32</X>
+    <Y>-224</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

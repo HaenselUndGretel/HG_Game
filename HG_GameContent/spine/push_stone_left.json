@@ -1,0 +1,20 @@
+{
+"skeleton": { "spine": "1.9.14", "hash": "zkH2tAfx5uJsgVS/tWPQnxZDP8w", "width": 222, "height": 206 },
+"bones": [
+	{ "name": "root" }
+],
+"ik": [],
+"slots": [
+	{ "name": "pushableRock", "bone": "root", "attachment": "pushableRock" }
+],
+"skins": {
+	"front": {
+		"pushableRock": {
+			"pushableRock": { "name": "img/pushableRock", "y": 97.99, "width": 222, "height": 206 }
+		}
+	}
+},
+"animations": {
+	"animation": {}
+}
+}

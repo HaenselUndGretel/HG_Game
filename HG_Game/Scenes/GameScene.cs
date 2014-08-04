@@ -148,6 +148,9 @@ namespace HG_Game
 #endif
 					//Update Camera
 					mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
+
+					foreach (InteractiveObject io in mScene.InteractiveObjects)
+						io.Update();
 					break;
 				case GameState.CollectableInfo:
 					if (InputHelper.ButtonJustPressed2Player(Buttons.A))
@@ -194,7 +197,7 @@ namespace HG_Game
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
 
 			if (GameReferenzes.Level.Fog)
-				mRenderer.ApplyFog();
+				mRenderer.ApplyFog(mCamera.Transform);
 
 			//--------------------SpriteBatch WorldSpace(HUD & Infos)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
@@ -259,7 +262,7 @@ namespace HG_Game
 				mSpriteBatch.End();
 				
 				mSpriteBatch.Begin();
-				//mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
+				mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
 				mSpriteBatch.End();
 			}
 #endif

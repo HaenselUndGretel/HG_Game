@@ -1,0 +1,13 @@
+
+cabinet.png
+size: 62,115
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img/lanternCabinet
+  rotate: false
+  xy: 1, 1
+  size: 61, 114
+  orig: 61, 114
+  offset: 0, 0
+  index: -1

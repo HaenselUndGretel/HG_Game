@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>19000</ObjectId>
+  <ObjectId>40000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,40 +18,50 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>stonePush4</Name>
+  <Name>tree</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-110</X>
-      <Y>-74</Y>
-      <Width>70</Width>
+      <X>-69</X>
+      <Y>400</Y>
+      <Width>133</Width>
       <Height>79</Height>
       <Location>
-        <X>-110</X>
-        <Y>-74</Y>
+        <X>-69</X>
+        <Y>400</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-69</X>
+      <Y>-181</Y>
+      <Width>133</Width>
+      <Height>86</Height>
+      <Location>
+        <X>-69</X>
+        <Y>-181</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-40</X>
-      <Y>-74</Y>
-      <Width>80</Width>
-      <Height>79</Height>
+      <X>-69</X>
+      <Y>-95</Y>
+      <Width>133</Width>
+      <Height>111</Height>
       <Location>
-        <X>-40</X>
-        <Y>-74</Y>
+        <X>-69</X>
+        <Y>-95</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>-59</X>
-    <Y>-56</Y>
+    <X>-4</X>
+    <Y>-125</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-58</X>
-    <Y>-10</Y>
+    <X>-3</X>
+    <Y>423</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

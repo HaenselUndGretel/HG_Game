@@ -28,6 +28,7 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="font\font.spritefont">
@@ -837,52 +838,12 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Content Include="iObj\bookShelf.iObj">
-      <Name>bookShelf</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\cobweb.iObj">
-      <Name>cobweb</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush.iObj">
-      <Name>stonePush</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush2.iObj">
-      <Name>stonePush2</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush3.iObj">
-      <Name>stonePush3</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush4.iObj">
-      <Name>stonePush4</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\swamp.iObj">
-      <Name>swamp</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\waystone.iObj">
-      <Name>waystone</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Compile Include="spine\skeleton-1.png">
       <Name>skeleton-1</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Content Include="iObj\usekey.iObj">
-      <Name>usekey</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\well.iObj">
-      <Name>well</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="sfx\collectable01.mp3">
       <Name>collectable01</Name>
       <Importer>Mp3Importer</Importer>
@@ -1279,6 +1240,60 @@
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Include="spine\cabinet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>cabinet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_stone_down.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_stone_left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_stone_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_stone_up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_tree_down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_tree_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_tree_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\push_tree_up.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="spine\skeleton.atlas">
       <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1335,51 +1350,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="iObj\jumpgap.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>jumpgap</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\knockovertree.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>knockovertree</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\laterne.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>laterne</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\LegUp.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>LegUp</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\pulldoor.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>pulldoor</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\pushrock.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>pushrock</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="iObj\wolf.iObj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>wolf</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\slipthroughrock.iObj">
-      <Name>slipthroughrock</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -1458,6 +1431,224 @@
     <Content Include="hug\008.hug">
       <Name>008</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\cabinet.atlas">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>cabinet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\cabinet.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>cabinet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\cabinet.settings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>cabinet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\cabinet.iObj">
+      <Name>cabinet</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_down.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_left.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_right.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_up.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_down.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_down.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_down.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_left.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_left.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_left.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_right.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_right.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_right.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_up.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_up.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_stone_up.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>push_stone_up1.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_stone_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_down.atlas">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_down.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_down.settings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_left.atlas">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_left.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_left.settings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_right.atlas">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_right.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_right.settings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_up.atlas">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_up.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\push_tree_up.settings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_tree_up</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_tree_down.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_tree_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_tree_left.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_tree_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_tree_right.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_tree_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_tree_up.iObj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>push_tree_up</Name>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

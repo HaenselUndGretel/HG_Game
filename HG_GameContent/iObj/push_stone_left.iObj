@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>15000</ObjectId>
+  <ObjectId>32000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,40 +18,40 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>bookShelf</Name>
+  <Name>pushableRock</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>75</X>
-      <Y>-77</Y>
-      <Width>148</Width>
-      <Height>199</Height>
+      <X>108</X>
+      <Y>-192</Y>
+      <Width>120</Width>
+      <Height>192</Height>
       <Location>
-        <X>75</X>
-        <Y>-77</Y>
+        <X>108</X>
+        <Y>-192</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-75</X>
-      <Y>-215</Y>
-      <Width>150</Width>
-      <Height>252</Height>
+      <X>-109</X>
+      <Y>-192</Y>
+      <Width>217</Width>
+      <Height>192</Height>
       <Location>
-        <X>-75</X>
-        <Y>-215</Y>
+        <X>-109</X>
+        <Y>-192</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>99</X>
-    <Y>1</Y>
+    <X>127</X>
+    <Y>-32</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>0</X>
-    <Y>0</Y>
+    <X>128</X>
+    <Y>-80</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

@@ -1,0 +1,13 @@
+
+push_stone_up.png
+size: 112,104
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img/pushableRock
+  rotate: false
+  xy: 1, 1
+  size: 111, 103
+  orig: 111, 103
+  offset: 0, 0
+  index: -1

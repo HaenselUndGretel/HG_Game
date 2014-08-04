@@ -151,7 +151,6 @@ namespace HG_Game
 		/// </summary>
 		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer) 
 		{
-
 			AIManager.Instance.ClearAgents();
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
 			pHansel.MoveManually(LeaveHansel, 1f, pScene);

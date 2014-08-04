@@ -1,0 +1,20 @@
+{
+"skeleton": { "spine": "1.9.14", "hash": "vu4MBUYBJJuxf984AEJu1KbP/VA", "width": 121, "height": 228 },
+"bones": [
+	{ "name": "root" }
+],
+"ik": [],
+"slots": [
+	{ "name": "cabinet", "bone": "root", "attachment": "cabinet" }
+],
+"skins": {
+	"front": {
+		"cabinet": {
+			"cabinet": { "name": "img/lanternCabinet", "y": 111.99, "width": 121, "height": 228 }
+		}
+	}
+},
+"animations": {
+	"animation": {}
+}
+}

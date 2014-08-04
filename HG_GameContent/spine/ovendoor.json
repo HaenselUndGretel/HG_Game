@@ -1,0 +1,20 @@
+{
+"skeleton": { "spine": "1.9.14", "hash": "fPwQS8sc6TGSXG2C2hVdBHtXkkI", "width": 63, "height": 85 },
+"bones": [
+	{ "name": "root" }
+],
+"ik": [],
+"slots": [
+	{ "name": "ovendoor", "bone": "root", "attachment": "ovendoor" }
+],
+"skins": {
+	"front": {
+		"ovendoor": {
+			"ovendoor": { "name": "img/ofendoor", "y": 42, "width": 63, "height": 85 }
+		}
+	}
+},
+"animations": {
+	"animation": {}
+}
+}

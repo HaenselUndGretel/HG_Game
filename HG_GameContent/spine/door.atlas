@@ -1,0 +1,13 @@
+
+door.png
+size: 116,126
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img/door
+  rotate: false
+  xy: 1, 1
+  size: 115, 125
+  orig: 115, 125
+  offset: 0, 0
+  index: -1

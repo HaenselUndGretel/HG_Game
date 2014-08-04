@@ -1,0 +1,20 @@
+{
+"skeleton": { "spine": "1.9.14", "hash": "1J33AOeJqXjoVqoJqfn4aItyUnY", "width": 553, "height": 472 },
+"bones": [
+	{ "name": "root" }
+],
+"ik": [],
+"slots": [
+	{ "name": "img/clipp_05", "bone": "root", "attachment": "clipp_05" }
+],
+"skins": {
+	"front": {
+		"img/clipp_05": {
+			"clipp_05": { "name": "img/clipp_05", "y": 236.44, "width": 553, "height": 472 }
+		}
+	}
+},
+"animations": {
+	"animation": {}
+}
+}

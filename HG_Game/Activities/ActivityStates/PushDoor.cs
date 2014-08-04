@@ -68,13 +68,13 @@ namespace HG_Game
 					{
 						Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushDoor_Up, Hardcoded.Anim_PushDoor_Down, Hardcoded.Anim_PushDoor_Side);
 						Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushDoor_Up, Hardcoded.Anim_PushDoor_Down, Hardcoded.Anim_PushDoor_Side);
-						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_Open_Up, Hardcoded.Anim_Door_Open_Down, Hardcoded.Anim_Door_Open_Side);
+						//Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_Open_Up, Hardcoded.Anim_Door_Open_Down, Hardcoded.Anim_Door_Open_Side);
 					}
 					else //PullDoor
 					{
 						Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PullDoor_Up, Hardcoded.Anim_PullDoor_Down, Hardcoded.Anim_PullDoor_Side);
 						Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PullDoor_Up, Hardcoded.Anim_PullDoor_Down, Hardcoded.Anim_PullDoor_Side);
-						Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_Close_Up, Hardcoded.Anim_Door_Close_Down, Hardcoded.Anim_Door_Close_Side);
+						//Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Door_Close_Up, Hardcoded.Anim_Door_Close_Down, Hardcoded.Anim_Door_Close_Side);
 					}
 					++pPlayer.mCurrentState;
 					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
@@ -84,7 +84,7 @@ namespace HG_Game
 					if (pPlayer.GetType() == typeof(Hansel))
 					{
 						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(rIObj.CollisionRectList[0].X - rIObj.ActionRectList[0].X, rIObj.CollisionRectList[0].Y - rIObj.ActionRectList[0].Y), false);
-						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
+						//Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pOtherPlayer, Progress.Progress);
 					}

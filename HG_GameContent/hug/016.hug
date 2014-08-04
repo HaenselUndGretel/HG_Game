@@ -309,7 +309,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -353,7 +353,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -397,7 +397,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -441,7 +441,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -485,7 +485,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -529,7 +529,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -573,7 +573,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -617,7 +617,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -661,7 +661,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -705,7 +705,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -749,7 +749,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -793,7 +793,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0983661041</Depth>
+      <Depth>0.06939298</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -802,7 +802,36 @@
       <Radius>10</Radius>
     </Light>
   </Lights>
-  <Events />
+  <Events>
+    <EventTrigger>
+      <ObjectId>16</ObjectId>
+      <Position>
+        <X>121</X>
+        <Y>828</Y>
+      </Position>
+      <CollisionBox>
+        <X>121</X>
+        <Y>828</Y>
+        <Width>298</Width>
+        <Height>596</Height>
+        <Location>
+          <X>121</X>
+          <Y>828</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Event>SpawnWitch</Event>
+      <Target>-1</Target>
+      <IsAcitvated>false</IsAcitvated>
+      <WitchSpawnPosition>
+        <X>1700</X>
+        <Y>1000</Y>
+      </WitchSpawnPosition>
+      <SoundName />
+    </EventTrigger>
+  </Events>
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
     <Position>

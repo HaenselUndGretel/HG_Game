@@ -528,7 +528,7 @@
         <X>337</X>
         <Y>660</Y>
       </ActionPosition2>
-      <ActionId>9</ActionId>
+      <ActionId>8</ActionId>
     </InteractiveObject>
     <InteractiveObject>
       <ObjectId>79</ObjectId>
@@ -620,42 +620,46 @@
       </ActionPosition2>
       <ActionId>0</ActionId>
     </InteractiveObject>
-    <InteractiveObject>
-      <ObjectId>86</ObjectId>
+  </InteractiveObjects>
+  <Collectables>
+    <Collectable xsi:type="Lantern">
+      <ObjectId>90</ObjectId>
       <Position>
-        <X>47</X>
-        <Y>176</Y>
+        <X>54</X>
+        <Y>146</Y>
       </Position>
       <CollisionBox>
-        <X>-3</X>
-        <Y>76</Y>
+        <X>54</X>
+        <Y>146</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>-3</X>
-          <Y>76</Y>
+          <X>54</X>
+          <Y>146</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>176</DrawZ>
-      <NormalZ>0.04296875</NormalZ>
+      <DrawZ>146</DrawZ>
+      <NormalZ>0</NormalZ>
       <Name>laterne</Name>
       <Height>0</Height>
       <Width>0</Width>
       <ActionRectList />
       <CollisionRectList />
       <ActionPosition1>
-        <X>47</X>
-        <Y>176</Y>
+        <X>54</X>
+        <Y>146</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>880</X>
-        <Y>-160</Y>
+        <X>887</X>
+        <Y>-190</Y>
       </ActionPosition2>
       <ActionId>0</ActionId>
-    </InteractiveObject>
-  </InteractiveObjects>
-  <Collectables />
+      <CollectableId>-1</CollectableId>
+      <ShowTextureName />
+      <IsHidden>false</IsHidden>
+    </Collectable>
+  </Collectables>
   <Lights>
     <Light xsi:type="PointLight">
       <ObjectId>68</ObjectId>
@@ -693,7 +697,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.05798367</Depth>
+      <Depth>0.0585993</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>

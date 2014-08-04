@@ -10,7 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
+  <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
   <MoveArea>
     <Rectangle>
       <X>0</X>
@@ -1262,6 +1262,66 @@
         <Y>368</Y>
       </Location>
     </Rectangle>
+    <Rectangle>
+      <X>448</X>
+      <Y>368</Y>
+      <Width>256</Width>
+      <Height>16</Height>
+      <Location>
+        <X>448</X>
+        <Y>368</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>448</X>
+      <Y>368</Y>
+      <Width>192</Width>
+      <Height>32</Height>
+      <Location>
+        <X>448</X>
+        <Y>368</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>432</X>
+      <Y>464</Y>
+      <Width>176</Width>
+      <Height>64</Height>
+      <Location>
+        <X>432</X>
+        <Y>464</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>560</X>
+      <Y>464</Y>
+      <Width>80</Width>
+      <Height>48</Height>
+      <Location>
+        <X>560</X>
+        <Y>464</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>576</X>
+      <Y>496</Y>
+      <Width>80</Width>
+      <Height>32</Height>
+      <Location>
+        <X>576</X>
+        <Y>496</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>432</X>
+      <Y>512</Y>
+      <Width>96</Width>
+      <Height>32</Height>
+      <Location>
+        <X>432</X>
+        <Y>512</Y>
+      </Location>
+    </Rectangle>
   </MoveArea>
   <Waypoints>
     <Waypoint>
@@ -1320,9 +1380,209 @@
     </Waypoint>
   </Waypoints>
   <BackgroundSprites />
-  <InteractiveObjects />
+  <InteractiveObjects>
+    <InteractiveObject>
+      <ObjectId>16</ObjectId>
+      <Position>
+        <X>541</X>
+        <Y>358</Y>
+      </Position>
+      <CollisionBox>
+        <X>541</X>
+        <Y>358</Y>
+        <Width>133</Width>
+        <Height>111</Height>
+        <Location>
+          <X>541</X>
+          <Y>358</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>358</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Name>push_tree_down</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>472</X>
+          <Y>658</Y>
+          <Width>133</Width>
+          <Height>79</Height>
+          <Location>
+            <X>472</X>
+            <Y>658</Y>
+          </Location>
+        </Rectangle>
+        <Rectangle>
+          <X>472</X>
+          <Y>177</Y>
+          <Width>133</Width>
+          <Height>86</Height>
+          <Location>
+            <X>472</X>
+            <Y>177</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>472</X>
+          <Y>263</Y>
+          <Width>133</Width>
+          <Height>111</Height>
+          <Location>
+            <X>472</X>
+            <Y>263</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>537</X>
+        <Y>233</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>534</X>
+        <Y>781</Y>
+      </ActionPosition2>
+      <ActionId>1</ActionId>
+    </InteractiveObject>
+  </InteractiveObjects>
   <Collectables />
-  <Lights />
+  <Lights>
+    <Light xsi:type="PointLight">
+      <ObjectId>9</ObjectId>
+      <Position>
+        <X>2489</X>
+        <Y>728</Y>
+      </Position>
+      <CollisionBox>
+        <X>2489</X>
+        <Y>728</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>2489</X>
+          <Y>728</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>30</Intensity>
+      <Depth>0.07170594</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>10</ObjectId>
+      <Position>
+        <X>12</X>
+        <Y>166</Y>
+      </Position>
+      <CollisionBox>
+        <X>12</X>
+        <Y>166</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>12</X>
+          <Y>166</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>30</Intensity>
+      <Depth>0.07170594</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>14</ObjectId>
+      <Position>
+        <X>1298</X>
+        <Y>572</Y>
+      </Position>
+      <CollisionBox>
+        <X>1298</X>
+        <Y>572</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>1298</X>
+          <Y>572</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>0</X>
+        <Y>1</Y>
+        <Z>0</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>15</Intensity>
+      <Depth>0.07170594</Depth>
+      <LightColor>
+        <X>0</X>
+        <Y>1</Y>
+        <Z>0</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+  </Lights>
   <Events />
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
@@ -1423,18 +1683,18 @@
         <Y>661</Y>
       </Position>
       <CollisionBox>
-        <X>2029</X>
-        <Y>561</Y>
+        <X>2079</X>
+        <Y>661</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>2029</X>
-          <Y>561</Y>
+          <X>2079</X>
+          <Y>661</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>661</DrawZ>
-      <NormalZ>0.161376953</NormalZ>
+      <NormalZ>0</NormalZ>
       <Name>wolf</Name>
       <Height>0</Height>
       <Width>0</Width>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<<<<<<< HEAD
-  <ObjectId>43000</ObjectId>
-=======
-  <ObjectId>42000</ObjectId>
->>>>>>> origin/BgTexLaden
+  <ObjectId>34000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -22,39 +18,40 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>spacer</Name>
+  <Name>pushableRock</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-63</X>
-      <Y>-52</Y>
-      <Width>134</Width>
-      <Height>175</Height>
+      <X>-104</X>
+      <Y>0</Y>
+      <Width>213</Width>
+      <Height>138</Height>
       <Location>
-        <X>-63</X>
-        <Y>-52</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>791</X>
-      <Y>159</Y>
-      <Width>226</Width>
-      <Height>129</Height>
-      <Location>
-        <X>791</X>
-        <Y>159</Y>
+        <X>-104</X>
+        <Y>0</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
-  <CollisionRectList />
+  <CollisionRectList>
+    <Rectangle>
+      <X>-104</X>
+      <Y>-196</Y>
+      <Width>213</Width>
+      <Height>196</Height>
+      <Location>
+        <X>-104</X>
+        <Y>-196</Y>
+      </Location>
+    </Rectangle>
+  </CollisionRectList>
   <ActionPosition1>
-    <X>-5</X>
-    <Y>31</Y>
+    <X>-42</X>
+    <Y>21</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>895</X>
-    <Y>213</Y>
+    <X>36</X>
+    <Y>21</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

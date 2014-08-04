@@ -1572,7 +1572,96 @@
   <BackgroundSprites />
   <InteractiveObjects />
   <Collectables />
-  <Lights />
+  <Lights>
+    <Light xsi:type="PointLight">
+      <ObjectId>7</ObjectId>
+      <Position>
+        <X>2482</X>
+        <Y>849</Y>
+      </Position>
+      <CollisionBox>
+        <X>2482</X>
+        <Y>849</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>2482</X>
+          <Y>849</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>30</Intensity>
+      <Depth>0.09877915</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>8</ObjectId>
+      <Position>
+        <X>1185</X>
+        <Y>343</Y>
+      </Position>
+      <CollisionBox>
+        <X>1185</X>
+        <Y>343</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>1185</X>
+          <Y>343</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>15</Intensity>
+      <Depth>0.09877915</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </LightColor>
+      <Radius>20</Radius>
+    </Light>
+  </Lights>
   <Events />
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
@@ -1601,9 +1690,9 @@
     </FadingLightColor>
     <FadingDuration>0</FadingDuration>
     <StartColor>
-      <X>0</X>
-      <Y>0</Y>
-      <Z>0</Z>
+      <X>0.392156869</X>
+      <Y>0.392156869</Y>
+      <Z>0.490196079</Z>
     </StartColor>
     <IsLightMoving>false</IsLightMoving>
     <MoveSpeed>0</MoveSpeed>
@@ -1644,9 +1733,9 @@
     </FadingLightColor>
     <FadingDuration>0</FadingDuration>
     <StartColor>
-      <X>0</X>
-      <Y>0</Y>
-      <Z>0</Z>
+      <X>1</X>
+      <Y>1</Y>
+      <Z>1</Z>
     </StartColor>
     <IsLightMoving>false</IsLightMoving>
     <MoveSpeed>0</MoveSpeed>

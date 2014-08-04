@@ -127,19 +127,6 @@
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>-4</X>
-        <Y>273</Y>
-      </Position>
-      <CollisionBox>
-        <X>-4</X>
-        <Y>273</Y>
-        <Width>83</Width>
-        <Height>400</Height>
-        <Location>
-          <X>-4</X>
-          <Y>273</Y>
-=======
         <X>0</X>
         <Y>280</Y>
       </Position>
@@ -151,43 +138,22 @@
         <Location>
           <X>0</X>
           <Y>280</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>14</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>1</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-=======
       <DestinationWaypoint>4</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>3</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>1211</X>
-        <Y>289</Y>
-      </Position>
-      <CollisionBox>
-        <X>1211</X>
-        <Y>289</Y>
-        <Width>90</Width>
-        <Height>384</Height>
-        <Location>
-          <X>1211</X>
-          <Y>289</Y>
-=======
         <X>1190</X>
         <Y>299</Y>
       </Position>
@@ -199,24 +165,16 @@
         <Location>
           <X>1190</X>
           <Y>299</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>16</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>1</X>
-=======
       <DestinationWaypoint>2</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>-1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>

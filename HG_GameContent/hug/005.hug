@@ -2572,8 +2572,6 @@
         <Y>1232</Y>
       </Location>
     </Rectangle>
-<<<<<<< HEAD
-=======
     <Rectangle>
       <X>2208</X>
       <Y>624</Y>
@@ -2614,25 +2612,12 @@
         <Y>608</Y>
       </Location>
     </Rectangle>
->>>>>>> origin/Gameplay-Test
   </MoveArea>
   <Waypoints>
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
         <X>2</X>
-<<<<<<< HEAD
-        <Y>607</Y>
-      </Position>
-      <CollisionBox>
-        <X>2</X>
-        <Y>607</Y>
-        <Width>131</Width>
-        <Height>345</Height>
-        <Location>
-          <X>2</X>
-          <Y>607</Y>
-=======
         <Y>667</Y>
       </Position>
       <CollisionBox>
@@ -2643,7 +2628,6 @@
         <Location>
           <X>2</X>
           <Y>667</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -2666,13 +2650,8 @@
       <CollisionBox>
         <X>3130</X>
         <Y>20</Y>
-<<<<<<< HEAD
-        <Width>247</Width>
-        <Height>142</Height>
-=======
         <Width>240</Width>
         <Height>129</Height>
->>>>>>> origin/Gameplay-Test
         <Location>
           <X>3130</X>
           <Y>20</Y>

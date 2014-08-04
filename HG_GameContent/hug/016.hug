@@ -10,11 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-<<<<<<< HEAD
-  <BackgroundSoundSetting>Forest</BackgroundSoundSetting>
-=======
   <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
->>>>>>> origin/Gameplay-Test
   <MoveArea>
     <Rectangle>
       <X>0</X>
@@ -227,13 +223,8 @@
       <CollisionBox>
         <X>-1</X>
         <Y>946</Y>
-<<<<<<< HEAD
-        <Width>99</Width>
-        <Height>351</Height>
-=======
         <Width>90</Width>
         <Height>350</Height>
->>>>>>> origin/Gameplay-Test
         <Location>
           <X>-1</X>
           <Y>946</Y>
@@ -243,17 +234,10 @@
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>15</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>1</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-=======
       <DestinationWaypoint>3</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
@@ -261,18 +245,6 @@
       <ObjectId>3</ObjectId>
       <Position>
         <X>2451</X>
-<<<<<<< HEAD
-        <Y>896</Y>
-      </Position>
-      <CollisionBox>
-        <X>2451</X>
-        <Y>896</Y>
-        <Width>128</Width>
-        <Height>354</Height>
-        <Location>
-          <X>2451</X>
-          <Y>896</Y>
-=======
         <Y>1000</Y>
       </Position>
       <CollisionBox>
@@ -283,24 +255,16 @@
         <Location>
           <X>2451</X>
           <Y>1000</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>17</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>1</X>
-=======
       <DestinationWaypoint>2</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>-1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>

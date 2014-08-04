@@ -52,7 +52,7 @@ namespace HG_Game
 				}
 			}
 
-			if (GameReferenzes.SceneID == 16 & !BossFightMusic)
+			if (GameReferenzes.SceneID == 16 & !BossFightMusic && !GameReferenzes.IsSceneSwitching)
 			{
 				BossFightMusic = true;
 				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);

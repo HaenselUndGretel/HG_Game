@@ -37,7 +37,7 @@ namespace HG_Game
 
 		#region Special Scenes
 
-		public const int Scene_Amulet = 10;
+		public const int Scene_Amulet = 16;
 		public const int Scene_Lantern = 4;
 		public const int Scene_LanternDoor = 3;
 		public const string Scene_Waystone_IObjName = "waystone";

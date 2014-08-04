@@ -64,11 +64,12 @@ namespace HG_Game
 						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_KnockOverTree_Up);
 						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
 						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
-						if (DestinationDelta.Y > Math.Sin(67.5)) //Hoch
+						DestinationDelta.Normalize();
+						if (DestinationDelta.Y > Math.Sin(MathHelper.ToRadians(67.5f))) //Runter
 						{
-							dir = ActivityInstruction.ThumbstickDirection.Up;
+							dir = ActivityInstruction.ThumbstickDirection.Down;
 						}
-						else if (DestinationDelta.Y > -Math.Sin(22.5)) //Seitlich
+						else if (DestinationDelta.Y > Math.Sin(MathHelper.ToRadians(-22.5f))) //Seitlich
 						{
 							if (DestinationDelta.X < 0) //Links
 							{
@@ -79,9 +80,9 @@ namespace HG_Game
 								dir = ActivityInstruction.ThumbstickDirection.Right;
 							}
 						}
-						else //Runter
+						else //Hoch
 						{
-							dir = ActivityInstruction.ThumbstickDirection.Down;
+							dir = ActivityInstruction.ThumbstickDirection.Up;
 						}
 
 						string animPlayer = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_KnockOverTree_Up, Hardcoded.Anim_KnockOverTree_Down, Hardcoded.Anim_KnockOverTree_Side);

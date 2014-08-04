@@ -21,7 +21,7 @@ namespace HG_Game
 			FadeIn,
 			Idle,
 			FadeOut
-		}
+		};
 
 		protected FadingState State;
 		protected Texture2D rTexture;

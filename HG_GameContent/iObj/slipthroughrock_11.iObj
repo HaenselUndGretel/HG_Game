@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>48000</ObjectId>
+  <ObjectId>42000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -21,15 +21,36 @@
   <Name>spacer</Name>
   <Height>0</Height>
   <Width>0</Width>
-  <ActionRectList />
+  <ActionRectList>
+    <Rectangle>
+      <X>-56</X>
+      <Y>-58</Y>
+      <Width>149</Width>
+      <Height>165</Height>
+      <Location>
+        <X>-56</X>
+        <Y>-58</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-1071</X>
+      <Y>349</Y>
+      <Width>160</Width>
+      <Height>99</Height>
+      <Location>
+        <X>-1071</X>
+        <Y>349</Y>
+      </Location>
+    </Rectangle>
+  </ActionRectList>
   <CollisionRectList />
   <ActionPosition1>
-    <X>-702</X>
-    <Y>-319</Y>
+    <X>-2</X>
+    <Y>30</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-2</X>
-    <Y>31</Y>
+    <X>-1002</X>
+    <Y>380</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

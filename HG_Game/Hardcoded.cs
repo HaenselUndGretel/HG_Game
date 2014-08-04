@@ -78,8 +78,8 @@ namespace HG_Game
 		public const float Lantern_MaxSwapDistance = 200f;
 		public const float Lantern_Height = 0.08f;
 		public const float Lantern_HeightRaised = 0.15f;
-		public const float Lantern_Radius = 8f;
-		public const float Lantern_RadiusRaised = 15f;
+		public const float Lantern_Radius = 200.0f;
+		public const float Lantern_RadiusRaised = 250.0f;
 		public const float Lantern_RaiseSteppingDuration = 0.3f;
 
 		#endregion

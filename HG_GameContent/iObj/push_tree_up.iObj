@@ -34,12 +34,12 @@
     </Rectangle>
     <Rectangle>
       <X>-64</X>
-      <Y>-571</Y>
+      <Y>-471</Y>
       <Width>128</Width>
       <Height>86</Height>
       <Location>
         <X>-64</X>
-        <Y>-571</Y>
+        <Y>-471</Y>
       </Location>
     </Rectangle>
   </ActionRectList>

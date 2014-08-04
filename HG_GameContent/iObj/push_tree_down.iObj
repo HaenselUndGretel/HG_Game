@@ -24,12 +24,12 @@
   <ActionRectList>
     <Rectangle>
       <X>-69</X>
-      <Y>400</Y>
+      <Y>300</Y>
       <Width>133</Width>
       <Height>79</Height>
       <Location>
         <X>-69</X>
-        <Y>400</Y>
+        <Y>300</Y>
       </Location>
     </Rectangle>
     <Rectangle>
@@ -60,7 +60,7 @@
     <Y>-125</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-3</X>
+    <X>-7</X>
     <Y>423</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>

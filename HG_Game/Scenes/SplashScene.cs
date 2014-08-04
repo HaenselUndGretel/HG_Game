@@ -48,8 +48,8 @@ namespace HG_Game
 		{
 			mCamera = new Camera();
 			State = LogoState.GA_FadeIn;
-			Visibility = new SteppingProgress(1f);
-			IdleTimer = new SteppingProgress(2f);
+			Visibility = new SteppingProgress(1.5f);
+			IdleTimer = new SteppingProgress(4f);
 		}
 
 		public override void LoadContent()
@@ -68,6 +68,7 @@ namespace HG_Game
 						State = LogoState.GA_Idle;
 					break;
 				case LogoState.GA_Idle:
+					IdleTimer.StepForward();
 					IdleTimer.StepForward();
 					if (IdleTimer.Complete)
 					{
@@ -90,7 +91,7 @@ namespace HG_Game
 					if (IdleTimer.Complete)
 					{
 						IdleTimer.Reset();
-						State = LogoState.GA_FadeOut;
+						State = LogoState.Fables_FadeOut;
 					}
 					break;
 				case LogoState.Fables_FadeOut:
@@ -108,7 +109,7 @@ namespace HG_Game
 				Logo = rTextureFables;
 			mSpriteBatch.Begin();
 			mSpriteBatch.Draw(Logo, Vector2.Zero, Color.White);
-			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), Vector2.Zero, Color.Black * Visibility.ProgressInverse);
+			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * Visibility.ProgressInverse);
 			mSpriteBatch.End();
 		}
 

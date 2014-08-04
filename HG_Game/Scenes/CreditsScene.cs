@@ -82,7 +82,7 @@ namespace HG_Game
 		{
 			mSpriteBatch.Begin();
 			mSpriteBatch.Draw(rTexture, Vector2.Zero, Color.White);
-			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), Vector2.Zero, Color.Black * Visibility.ProgressInverse);
+			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * Visibility.ProgressInverse);
 			mSpriteBatch.End();
 		}
 

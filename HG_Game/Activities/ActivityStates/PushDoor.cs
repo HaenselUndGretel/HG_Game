@@ -28,7 +28,9 @@ namespace HG_Game
 		{
 			if (Conditions.Contains(pPlayer, rIObj))
 			{
-				if (Conditions.NotHandicapped(pPlayer, Activity.PushDoor))
+				if (Conditions.NotHandicapped(pPlayer, Activity.PushDoor) &&
+					(pPlayer.Lantern || pOtherPlayer.Lantern)
+					)
 					return Activity.PushDoor;
 			}
 			return Activity.None;

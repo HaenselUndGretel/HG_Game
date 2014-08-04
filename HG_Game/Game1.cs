@@ -43,7 +43,7 @@ namespace HG_Game
 			SceneManager.Instance.AddScene(new GameScene("Game"));
 			SceneManager.Instance.AddScene(new CreditsScene("Credits"));
 			SceneManager.Instance.AddScene(new MenuScene("Menu"));
-			SceneManager.Instance.SetStartSceneTo("Menu");
+			SceneManager.Instance.SetStartSceneTo("Splash");
 			base.Initialize();
 		}
 

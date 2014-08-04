@@ -757,6 +757,16 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\logo_fables.png">
+      <Name>logo_fables</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\logo_ga.png">
+      <Name>logo_ga</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="sfx\collectable01.mp3">
       <Name>collectable01</Name>
       <Importer>Mp3Importer</Importer>

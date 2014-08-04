@@ -158,6 +158,7 @@ namespace HG_Game
 						break;
 					case 2:
 						//-----Auf Baum steigen-----
+						Direction.Normalize();
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * Hardcoded.KnockOverTree_EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer))
 							++pPlayer.mCurrentState;
@@ -176,16 +177,14 @@ namespace HG_Game
 						Vector2 DirectionTest = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 						DirectionTest.Normalize();
 						bool Sideways = false;
-						if (DirectionTest.Y <= Math.Sin(45) && DirectionTest.Y >= -Math.Sin(45))
+						if (DirectionTest.Y <= Math.Sin(MathHelper.ToRadians(45f)) && DirectionTest.Y >= -Math.Sin(MathHelper.ToRadians(45f)))
 							Sideways = true;
 
 						//Runter fallen?
-						bool Fail = false;
 						if ((MovementInput.X == 0 && MovementInput.Y != 0 && Sideways) || (MovementInput.X != 0 && MovementInput.Y == 0 && !Sideways))
-							Fail = true;
-						if (Fail) //Fallen
 						{
 							GameScene.End = true;
+							break;
 						}
 
 						//BalancingMovement ausführen

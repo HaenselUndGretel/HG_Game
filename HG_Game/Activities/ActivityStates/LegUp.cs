@@ -1,4 +1,5 @@
 ﻿using HanselAndGretel.Data;
+using KryptonEngine;
 using KryptonEngine.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -131,7 +132,7 @@ namespace HG_Game
 					if (Conditions.AnimationComplete(pPlayer))
 					{
 						if (!m2ndState && pPlayer.GetType() == typeof(Gretel))
-							Sequences.Move(pPlayer, Hardcoded.LegUp_OffsetGretel); //Bei LegUp Gretel hoch setzen
+							Sequences.Move(pPlayer, Hardcoded.LegUp_OffsetGretel[GameReferenzes.SceneID]); //Bei LegUp Gretel hoch setzen
 						Sequences.SetPlayerToIdle(pPlayer);
 					}
 					break;

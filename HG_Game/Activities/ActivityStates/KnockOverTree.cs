@@ -64,11 +64,12 @@ namespace HG_Game
 						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_KnockOverTree_Up);
 						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
 						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
-						if (DestinationDelta.Y > Math.Sin(67.5)) //Hoch
+						DestinationDelta.Normalize();
+						if (DestinationDelta.Y > Math.Sin(MathHelper.ToRadians(67.5f))) //Runter
 						{
-							dir = ActivityInstruction.ThumbstickDirection.Up;
+							dir = ActivityInstruction.ThumbstickDirection.Down;
 						}
-						else if (DestinationDelta.Y > -Math.Sin(22.5)) //Seitlich
+						else if (DestinationDelta.Y > Math.Sin(MathHelper.ToRadians(-22.5f))) //Seitlich
 						{
 							if (DestinationDelta.X < 0) //Links
 							{
@@ -79,9 +80,9 @@ namespace HG_Game
 								dir = ActivityInstruction.ThumbstickDirection.Right;
 							}
 						}
-						else //Runter
+						else //Hoch
 						{
-							dir = ActivityInstruction.ThumbstickDirection.Down;
+							dir = ActivityInstruction.ThumbstickDirection.Up;
 						}
 
 						string animPlayer = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_KnockOverTree_Up, Hardcoded.Anim_KnockOverTree_Down, Hardcoded.Anim_KnockOverTree_Side);
@@ -157,6 +158,7 @@ namespace HG_Game
 						break;
 					case 2:
 						//-----Auf Baum steigen-----
+						Direction.Normalize();
 						Sequences.SynchMovementToAnimation(pPlayer, pPlayer, StartPosition, StartPosition + (Direction * Hardcoded.KnockOverTree_EnterBalanceDistance));
 						if (Conditions.AnimationComplete(pPlayer))
 							++pPlayer.mCurrentState;
@@ -175,16 +177,14 @@ namespace HG_Game
 						Vector2 DirectionTest = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 						DirectionTest.Normalize();
 						bool Sideways = false;
-						if (DirectionTest.Y <= Math.Sin(45) && DirectionTest.Y >= -Math.Sin(45))
+						if (DirectionTest.Y <= Math.Sin(MathHelper.ToRadians(45f)) && DirectionTest.Y >= -Math.Sin(MathHelper.ToRadians(45f)))
 							Sideways = true;
 
 						//Runter fallen?
-						bool Fail = false;
 						if ((MovementInput.X == 0 && MovementInput.Y != 0 && Sideways) || (MovementInput.X != 0 && MovementInput.Y == 0 && !Sideways))
-							Fail = true;
-						if (Fail) //Fallen
 						{
 							GameScene.End = true;
+							break;
 						}
 
 						//BalancingMovement ausführen

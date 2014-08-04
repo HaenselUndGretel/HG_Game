@@ -121,7 +121,7 @@ namespace HG_Game
 						pGretel.mCurrentActivity.GetType() == typeof(LegUp) &&
 						pGretel.mCurrentActivity.m2ndState &&
 						pGretel.mCurrentState == 4 &&
-						col.CollisionBox.Intersects(new Rectangle((int)(pGretel.SkeletonPosition.X + Hardcoded.LegUp_OffsetGretel.X - 10), (int)(pGretel.SkeletonPosition.Y + Hardcoded.LegUp_OffsetGretel.Y - 10), 20, 20))
+						col.CollisionBox.Intersects(new Rectangle((int)(pGretel.SkeletonPosition.X + Hardcoded.LegUp_OffsetGretel[pSavegame.SceneId].X - 10), (int)(pGretel.SkeletonPosition.Y + Hardcoded.LegUp_OffsetGretel[pSavegame.SceneId].Y - 10), 20, 20))
 						)
 						)
 					{

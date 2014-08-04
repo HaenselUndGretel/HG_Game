@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ObjectId>47000</ObjectId>
+  <Position>
+    <X>0</X>
+    <Y>0</Y>
+  </Position>
+  <CollisionBox>
+    <X>0</X>
+    <Y>0</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+  </CollisionBox>
+  <IsVisible>true</IsVisible>
+  <DrawZ>-169</DrawZ>
+  <NormalZ>0</NormalZ>
+  <Name>spacer</Name>
+  <Height>0</Height>
+  <Width>0</Width>
+  <ActionRectList>
+    <Rectangle>
+      <X>-1162</X>
+      <Y>-440</Y>
+      <Width>105</Width>
+      <Height>174</Height>
+      <Location>
+        <X>-1162</X>
+        <Y>-440</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-90</X>
+      <Y>-10</Y>
+      <Width>176</Width>
+      <Height>93</Height>
+      <Location>
+        <X>-90</X>
+        <Y>-10</Y>
+      </Location>
+    </Rectangle>
+  </ActionRectList>
+  <CollisionRectList />
+  <ActionPosition1>
+    <X>-2</X>
+    <Y>31</Y>
+  </ActionPosition1>
+  <ActionPosition2>
+    <X>-1102</X>
+    <Y>-369</Y>
+  </ActionPosition2>
+  <ActionId>0</ActionId>
+</InteractiveObject>

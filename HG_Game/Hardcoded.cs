@@ -40,6 +40,7 @@ namespace HG_Game
 		public const int Scene_Amulet = 16;
 		public const int Scene_Lantern = 4;
 		public const int Scene_LanternDoor = 3;
+		public static int[] Scene_Waystone = { 3, 6, 12, 15 };
 		public const string Scene_Waystone_IObjName = "waystone";
 
 		#endregion
@@ -68,6 +69,12 @@ namespace HG_Game
 		public const float End_FadingDuration = 3f;
 
 		#region Animations
+
+		//SetupInteractiveObjectsFromDeserialization
+		public const string Anim_Tree_Fallen_Up = "attack";//"fallen";
+		public const string Anim_Tree_Fallen_Down = "attack";//"fallen";
+		public const string Anim_Tree_Fallen_Side = "attack";//"fallen";
+
 		/*
 		Character Walk-Animations -> KryptonEngine/HG_Data/Character/Character.cs
 		*/
@@ -89,11 +96,7 @@ namespace HG_Game
 		public const string Anim_Balance_Up = "attack";//"balanceUp";
 		public const string Anim_Balance_Down = "attack";//"balanceDown";
 		public const string Anim_Balance_Side = "attack";//"balanceSide";
-		/*						 
-		public const string Anim_Balance_Up_Shiver = "balanceUpShiver";
-		public const string Anim_Balance_Down_Shiver = "balanceDownShiver";
-		public const string Anim_Balance_Side_Shiver = "balanceSideShiver";
-		*/						 
+
 		public const string Anim_Balance_Leave_Up = "attack";//"balanceLeaveUp";
 		public const string Anim_Balance_Leave_Down = "attack";//"balanceLeaveDown";
 		public const string Anim_Balance_Leave_Side = "attack";//"balanceLeaveSide";
@@ -106,10 +109,6 @@ namespace HG_Game
 		public const string Anim_Tree_Falling_Down = "attack";//"falling";
 		public const string Anim_Tree_Falling_Side = "attack";//"falling";
 
-		public const string Anim_Tree_Fallen_Up = "attack";//"fallen";
-		public const string Anim_Tree_Fallen_Down = "attack";//"fallen";
-		public const string Anim_Tree_Fallen_Side = "attack";//"fallen";
-
 		public const string Anim_Lantern_Place = "attack";//"lanternPlace";
 		public const string Anim_Lantern_Grab = "attack";//"lanternGrab";
 								 
@@ -118,29 +117,12 @@ namespace HG_Game
 		public const string Anim_LegUp_Lift_Gretel = "attack";//"legUpLift";
 		public const string Anim_LegUp_Grab_Gretel = "attack";//"legUpGrab";
 
-		public const string Anim_PushDoor_Up = "attack";//"pushDoorUp";
-		public const string Anim_PushDoor_Down = "attack";//"pushDoorDown";
-		public const string Anim_PushDoor_Side = "attack";//"pushDoorSide";
-								 
-		public const string Anim_PullDoor_Up = "attack";//"pullDoorUp";
-		public const string Anim_PullDoor_Down = "attack";//"pullDoorDown";
-		public const string Anim_PullDoor_Side = "attack";//"pullDoorSide";
-
-		public const string Anim_Door_Open_Up = "attack";//"openUpDown";
-		public const string Anim_Door_Open_Down = "attack";//"openUpDown";
-		public const string Anim_Door_Open_Side = "attack";//"openSide";
-
-		public const string Anim_Door_Close_Up = "attack";//"closeUpDown";
-		public const string Anim_Door_Close_Down = "attack";//"closeUpDown";
-		public const string Anim_Door_Close_Side = "attack";//"closeSide";
+		public const string Anim_PushDoor = "attack";//"pushDoorDown";
+		public const string Anim_Door_Open = "attack";//"openUpDown";
 
 		public const string Anim_PushRock_Up = "attack";//"pushRockUp";
 		public const string Anim_PushRock_Down = "attack";//"pushRockDown";
 		public const string Anim_PushRock_Side = "attack";//"pushRockSide";
-
-		public const string Anim_Rock_Moving_Up = "attack";//"moving";
-		public const string Anim_Rock_Moving_Down = "attack";//"moving";
-		public const string Anim_Rock_Moving_Side = "attack";//"moving";
 
 		public const string Anim_SlipAway_Gretel = "attack";//"slipAway";
 		public const string Anim_SlipBack_Gretel = "attack";//"slipBack";

@@ -842,6 +842,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\credits.png">
+      <Name>credits</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="iObj\bookShelf.iObj">
       <Name>bookShelf</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

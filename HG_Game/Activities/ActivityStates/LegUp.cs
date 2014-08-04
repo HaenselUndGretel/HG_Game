@@ -105,7 +105,7 @@ namespace HG_Game
 						else //LegUpGrab
 						{
 							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Grab_Gretel); //Item greifen
-							rIObj.ActionRectList.Clear(); //LegUp kann mehrfach ausgeführt werden?
+							rIObj.ActionRectList.Clear(); //LegUpGrab kann nicht mehrfach ausgeführt werden
 						}
 						++pPlayer.mCurrentState;
 						pOtherPlayer.mCurrentState = pPlayer.mCurrentState;

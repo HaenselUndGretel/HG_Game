@@ -204,8 +204,10 @@ namespace HG_Game
 			mLogic.ActivityHandler.DrawActivityInstruction(mSpriteBatch, mHansel, mGretel);
 			mSpriteBatch.End();
 
-			//--------------------SpriteBatch ScreenSpace(PauseMenu)--------------------
+			//--------------------SpriteBatch ScreenSpace(PauseMenu & SceneSwitch)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+			//Render SceneSwitch darken
+			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * mLogic.SceneSwitchHandler.Fading);
 			//Render PauseMenu
 			if (mState == GameState.CollectableInfo)
 				mSpriteBatch.Draw(mSavegame.Collectables[mSavegame.Collectables.Count - 1].ShowTexture, new Vector2(50, 50), Color.White);
@@ -233,6 +235,8 @@ namespace HG_Game
 				SpriteFont font = FontManager.Instance.GetElementByString("font");
 				StringBuilder sb = new StringBuilder();
 
+				if (GameReferenzes.TargetPlayer != null && GameReferenzes.UntargetPlayer != null)
+					sb.AppendLine("Abstand: " + Vector2.Distance(GameReferenzes.TargetPlayer.Position, GameReferenzes.UntargetPlayer.Position).ToString());
 				sb.AppendLine("--------------------Player--------------------");
 				sb.AppendLine("Hansel: __Pos_ " + mHansel.SkeletonPosition.ToString() + " __CBox_ " + mHansel.CollisionBox.ToString() + " __BTemp_ " + mHansel.BodyTemperature.ToString());
 				sb.AppendLine("Gretel: __Pos_ " + mGretel.SkeletonPosition.ToString() + " __CBox_ " + mGretel.CollisionBox.ToString() + " __BTemp_ " + mGretel.BodyTemperature.ToString());
@@ -252,14 +256,9 @@ namespace HG_Game
 					sb.Append("|");
 				sb.AppendLine("");
 				sb.AppendLine("-------------------- --------------------");
-
-				if (GameReferenzes.TargetPlayer == null | GameReferenzes.UntargetPlayer == null) return;
-				mSpriteBatch.Begin();
-				mSpriteBatch.DrawString(font, "Abstand: " + Vector2.Distance(GameReferenzes.TargetPlayer.Position, GameReferenzes.UntargetPlayer.Position).ToString(), new Vector2(10, 10), Color.White);
-				mSpriteBatch.End();
 				
 				mSpriteBatch.Begin();
-				//mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.LightGreen, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
+				mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.White * 0.5f, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
 				mSpriteBatch.End();
 			}
 #endif
@@ -273,9 +272,8 @@ namespace HG_Game
 
 		public void RestartSavegame()
 		{
-			mSavegame.Reset();
+			Savegame.Delete();
 			RestartGame();
-			Savegame.Save(mSavegame, mHansel, mGretel);
 		}
 
 		public void RestartGame()

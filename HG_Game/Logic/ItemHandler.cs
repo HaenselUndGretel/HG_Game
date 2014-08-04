@@ -115,11 +115,16 @@ namespace HG_Game
 						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
 						return;
 					}
-					else if (col.CollisionBox.Intersects(pGretel.CollisionBox))
+					else if (col.CollisionBox.Intersects(pGretel.CollisionBox) ||
+						( //Collectable bei LegUpGrab einsammeln
+						pGretel.mCurrentActivity != null &&
+						pGretel.mCurrentActivity.GetType() == typeof(LegUp) &&
+						pGretel.mCurrentActivity.m2ndState &&
+						pGretel.mCurrentState == 4 &&
+						col.CollisionBox.Intersects(new Rectangle((int)(pGretel.SkeletonPosition.X + Hardcoded.LegUp_OffsetGretel.X - 10), (int)(pGretel.SkeletonPosition.Y + Hardcoded.LegUp_OffsetGretel.Y - 10), 20, 20))
+						)
+						)
 					{
-						//Bei LegUpGrab Item erst im richtigen Moment einsammeln
-						if (pGretel.mCurrentActivity != null && pGretel.mCurrentActivity.GetType() == typeof(LegUp) && pGretel.mCurrentActivity.m2ndState && pGretel.mCurrentState < 4)
-							return;
 						pSavegame.Collectables.Add(col);
 						pScene.Collectables.Remove(col);
 						//Laterne einsammeln

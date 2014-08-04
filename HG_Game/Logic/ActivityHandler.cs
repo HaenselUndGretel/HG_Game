@@ -263,7 +263,7 @@ namespace HG_Game
 							break;
 						case Activity.BalanceOverTree:
 							iObj.ActivityState = new KnockOverTree(pHansel, pGretel, iObj);
-							//ToDo Dummy 2ndState Animation applyen.
+							Sequences.AnimateAccordingToDirection(iObj, iObj.ActionPosition2 - iObj.ActionPosition1, Hardcoded.Anim_Tree_Fallen_Up, Hardcoded.Anim_Tree_Fallen_Down, Hardcoded.Anim_Tree_Fallen_Side);
 							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.PushRock:
@@ -284,13 +284,12 @@ namespace HG_Game
 							break;
 						case Activity.PushDoor:
 							iObj.ActivityState = new PushDoor(pHansel, pGretel, iObj);
-							//ToDo Dummy 2ndState Animation applyen.
-							iObj.ActivityState.m2ndState = true;
 							break;
 						case Activity.PullDoor:
-							iObj.ActivityState = new PushDoor(pHansel, pGretel, iObj);
-							//(ToDo Dummy 2ndState Animation applyen.)
-							iObj.ActivityState.m2ndState = true;
+							throw new Exception("Es gibt keine Tür mehr die von den Spielern geschlossen werden soll");
+							/*iObj.ActivityState = new PushDoor(pHansel, pGretel, iObj);
+							Sequences.AnimateAccordingToDirection(iObj, new Vector2(iObj.CollisionRectList[0].X - iObj.ActionRectList[0].X, iObj.CollisionRectList[0].Y - iObj.ActionRectList[0].Y), Hardcoded.Anim_Door_Open_Up, Hardcoded.Anim_Door_Open_Down, Hardcoded.Anim_Door_Open_Side);
+							iObj.ActivityState.m2ndState = true;*/
 							break;
 						case Activity.UseWell:
 							iObj.ActivityState = new UseWell(pHansel, pGretel, iObj);

@@ -105,7 +105,6 @@ namespace HG_Game
 					//Passende Animation entsprechend AnimationDirection starten
 					Sequences.AnimateAccordingToDirection(pPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushRock_Up, Hardcoded.Anim_PushRock_Down, Hardcoded.Anim_PushRock_Side);
 					Sequences.AnimateAccordingToDirection(pOtherPlayer, ActionToCollisionRectDirection, Hardcoded.Anim_PushRock_Up, Hardcoded.Anim_PushRock_Down, Hardcoded.Anim_PushRock_Side);
-					Sequences.AnimateAccordingToDirection(rIObj, ActionToCollisionRectDirection, Hardcoded.Anim_Rock_Moving_Up, Hardcoded.Anim_Rock_Moving_Down, Hardcoded.Anim_Rock_Moving_Side);
 					++pPlayer.mCurrentState;
 					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					break;
@@ -122,7 +121,6 @@ namespace HG_Game
 						Sequences.UpdateMovementStepping(rIObj, Progress.Progress, mSourceIObj, mDestinationIObj);
 						Sequences.UpdateMovementStepping(pPlayer, Progress.Progress, mSourceHansel, mDestinationHansel);
 						Sequences.UpdateMovementStepping(pOtherPlayer, Progress.Progress, mSourceGretel, mDestinationGretel);
-						Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 						Sequences.UpdateAnimationStepping(pOtherPlayer, Progress.Progress);
 					}

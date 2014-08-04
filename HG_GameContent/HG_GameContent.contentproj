@@ -1479,10 +1479,6 @@
       <Name>push_stone_right</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="iObj\push_stone_up.iObj">
-      <Name>push_stone_up</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="iObj\push_tree_down.iObj">
       <Name>push_tree_down</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

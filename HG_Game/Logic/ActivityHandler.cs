@@ -104,7 +104,7 @@ namespace HG_Game
 				//-----Tür erst offen wenn Laterne eingesammelt wurde-----
 				if (pSavegame.SceneId == Hardcoded.Scene_LanternDoor)
 				{
-					foreach (Collectable col in pSavegame.Scenes[Hardcoded.Scene_Lantern].Collectables)
+					foreach (Collectable col in pSavegame.Scenes[Hardcoded.Scene_LanternDoor].Collectables)
 					{
 						if (col.GetType() == typeof(Lantern))
 						{

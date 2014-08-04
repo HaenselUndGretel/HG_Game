@@ -63,7 +63,7 @@ namespace HG_Game
 						++pPlayer.mCurrentState;
 						break;
 					}
-					Sequences.MoveToPosition(pPlayer, Destination);
+					Sequences.MoveToPosition(pPlayer, Destination, 1f, true);
 					break;
 				case 4:
 					//-----Wieder komplett da?-----

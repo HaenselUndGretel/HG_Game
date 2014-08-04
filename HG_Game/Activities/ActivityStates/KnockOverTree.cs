@@ -200,6 +200,8 @@ namespace HG_Game
 						{
 							++pPlayer.mCurrentState;
 							StartPosition = pPlayer.SkeletonPosition;
+							Direction = MovementDirection;
+							Direction.Normalize();
 							Sequences.AnimateAccordingToDirection(pPlayer, MovementDirection, Hardcoded.Anim_Balance_Leave_Up, Hardcoded.Anim_Balance_Leave_Down, Hardcoded.Anim_Balance_Leave_Side);
 						}
 						break;

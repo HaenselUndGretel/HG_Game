@@ -14,9 +14,9 @@ namespace HG_Game
 	public static class Sequences
 	{
 		//Move & Set to Position
-		public static void MoveToPosition(Player pPlayer, Vector2 pPosition, float pSpeedFactor = 1f)
+		public static void MoveToPosition(Player pPlayer, Vector2 pPosition, float pSpeedFactor = 1f, bool pIgnoreTemp = false)
 		{
-			pPlayer.MoveAgainstPoint(pPosition, pSpeedFactor);
+			pPlayer.MoveAgainstPoint(pPosition, pSpeedFactor, null, true, false, true, pIgnoreTemp);
 		}
 
 		public static void MovePlayerToActionPosition(Player pPlayer, bool pAP2 = false)

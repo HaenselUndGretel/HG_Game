@@ -265,21 +265,6 @@
   </MoveArea>
   <Waypoints>
     <Waypoint>
-<<<<<<< HEAD
-      <ObjectId>2</ObjectId>
-      <Position>
-        <X>525</X>
-        <Y>-11</Y>
-      </Position>
-      <CollisionBox>
-        <X>525</X>
-        <Y>-11</Y>
-        <Width>211</Width>
-        <Height>113</Height>
-        <Location>
-          <X>525</X>
-          <Y>-11</Y>
-=======
       <ObjectId>4</ObjectId>
       <Position>
         <X>532</X>
@@ -293,36 +278,12 @@
         <Location>
           <X>532</X>
           <Y>0</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>11</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>2</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>0</X>
-        <Y>-1</Y>
-      </MovementOnEnter>
-    </Waypoint>
-    <Waypoint>
-      <ObjectId>3</ObjectId>
-      <Position>
-        <X>513</X>
-        <Y>665</Y>
-      </Position>
-      <CollisionBox>
-        <X>513</X>
-        <Y>665</Y>
-        <Width>254</Width>
-        <Height>81</Height>
-        <Location>
-          <X>513</X>
-          <Y>665</Y>
-=======
       <DestinationWaypoint>12</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
@@ -344,26 +305,17 @@
         <Location>
           <X>544</X>
           <Y>621</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>13</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>0</X>
-        <Y>1</Y>
-=======
       <DestinationWaypoint>8</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>0</X>
         <Y>-1</Y>
->>>>>>> origin/Gameplay-Test
       </MovementOnEnter>
     </Waypoint>
   </Waypoints>

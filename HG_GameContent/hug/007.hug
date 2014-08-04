@@ -1717,19 +1717,6 @@
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>2958</X>
-        <Y>2023</Y>
-      </Position>
-      <CollisionBox>
-        <X>2958</X>
-        <Y>2023</Y>
-        <Width>362</Width>
-        <Height>136</Height>
-        <Location>
-          <X>2958</X>
-          <Y>2023</Y>
-=======
         <X>3258</X>
         <Y>2053</Y>
       </Position>
@@ -1741,7 +1728,6 @@
         <Location>
           <X>3258</X>
           <Y>2053</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1765,11 +1751,7 @@
         <X>614</X>
         <Y>5</Y>
         <Width>186</Width>
-<<<<<<< HEAD
-        <Height>210</Height>
-=======
         <Height>110</Height>
->>>>>>> origin/Gameplay-Test
         <Location>
           <X>614</X>
           <Y>5</Y>

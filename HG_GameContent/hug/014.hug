@@ -847,19 +847,6 @@
     <Waypoint>
       <ObjectId>3</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>2990</X>
-        <Y>-8</Y>
-      </Position>
-      <CollisionBox>
-        <X>2990</X>
-        <Y>-8</Y>
-        <Width>195</Width>
-        <Height>89</Height>
-        <Location>
-          <X>2990</X>
-          <Y>-8</Y>
-=======
         <X>2993</X>
         <Y>0</Y>
       </Position>
@@ -871,44 +858,22 @@
         <Location>
           <X>2993</X>
           <Y>0</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>13</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>1</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>0</X>
-        <Y>-1</Y>
-=======
       <DestinationWaypoint>9</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>0</X>
         <Y>1</Y>
->>>>>>> origin/Gameplay-Test
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>4</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>3230</X>
-        <Y>2106</Y>
-      </Position>
-      <CollisionBox>
-        <X>3230</X>
-        <Y>2106</Y>
-        <Width>531</Width>
-        <Height>90</Height>
-        <Location>
-          <X>3230</X>
-          <Y>2106</Y>
-=======
         <X>3235</X>
         <Y>2066</Y>
       </Position>
@@ -920,26 +885,17 @@
         <Location>
           <X>3235</X>
           <Y>2066</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>15</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>0</X>
-        <Y>1</Y>
-=======
       <DestinationWaypoint>2</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>0</X>
         <Y>-1</Y>
->>>>>>> origin/Gameplay-Test
       </MovementOnEnter>
     </Waypoint>
   </Waypoints>

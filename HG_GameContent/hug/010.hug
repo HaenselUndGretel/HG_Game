@@ -10,11 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-<<<<<<< HEAD
-  <BackgroundSoundSetting>Forest</BackgroundSoundSetting>
-=======
   <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
->>>>>>> origin/Gameplay-Test
   <MoveArea>
     <Rectangle>
       <X>0</X>
@@ -1191,19 +1187,6 @@
     <Waypoint>
       <ObjectId>28</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>3751</X>
-        <Y>589</Y>
-      </Position>
-      <CollisionBox>
-        <X>3751</X>
-        <Y>589</Y>
-        <Width>92</Width>
-        <Height>521</Height>
-        <Location>
-          <X>3751</X>
-          <Y>589</Y>
-=======
         <X>3615</X>
         <Y>595</Y>
       </Position>
@@ -1215,43 +1198,22 @@
         <Location>
           <X>3615</X>
           <Y>595</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>9</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>1</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>1</X>
-=======
       <DestinationWaypoint>3</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>-1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>29</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>-8</X>
-        <Y>747</Y>
-      </Position>
-      <CollisionBox>
-        <X>-8</X>
-        <Y>747</Y>
-        <Width>81</Width>
-        <Height>554</Height>
-        <Location>
-          <X>-8</X>
-          <Y>747</Y>
-=======
         <X>0</X>
         <Y>854</Y>
       </Position>
@@ -1263,43 +1225,22 @@
         <Location>
           <X>0</X>
           <Y>854</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>11</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>0</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-=======
       <DestinationWaypoint>4</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>
     <Waypoint>
       <ObjectId>30</ObjectId>
       <Position>
-<<<<<<< HEAD
-        <X>-8</X>
-        <Y>1469</Y>
-      </Position>
-      <CollisionBox>
-        <X>-8</X>
-        <Y>1469</Y>
-        <Width>91</Width>
-        <Height>586</Height>
-        <Location>
-          <X>-8</X>
-          <Y>1469</Y>
-=======
         <X>0</X>
         <Y>1500</Y>
       </Position>
@@ -1311,24 +1252,16 @@
         <Location>
           <X>0</X>
           <Y>1500</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>11</DestinationScene>
-<<<<<<< HEAD
-      <DestinationWaypoint>1</DestinationWaypoint>
-      <OneWay>false</OneWay>
-      <MovementOnEnter>
-        <X>-1</X>
-=======
       <DestinationWaypoint>10</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>1</X>
->>>>>>> origin/Gameplay-Test
         <Y>0</Y>
       </MovementOnEnter>
     </Waypoint>

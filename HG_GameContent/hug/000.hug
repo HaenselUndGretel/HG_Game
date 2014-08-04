@@ -37,11 +37,6 @@
       <Y>352</Y>
       <Width>32</Width>
       <Height>16</Height>
-<<<<<<< HEAD
-      <Location>
-        <X>672</X>
-        <Y>352</Y>
-=======
       <Location>
         <X>672</X>
         <Y>352</Y>
@@ -49,18 +44,6 @@
     </Rectangle>
     <Rectangle>
       <X>640</X>
-      <Y>112</Y>
-      <Width>64</Width>
-      <Height>80</Height>
-      <Location>
-        <X>640</X>
-        <Y>112</Y>
->>>>>>> origin/Gameplay-Test
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>640</X>
-<<<<<<< HEAD
       <Y>112</Y>
       <Width>64</Width>
       <Height>80</Height>
@@ -81,17 +64,6 @@
     </Rectangle>
     <Rectangle>
       <X>672</X>
-=======
-      <Y>160</Y>
-      <Width>64</Width>
-      <Height>32</Height>
-      <Location>
-        <X>640</X>
-        <Y>160</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>672</X>
       <Y>144</Y>
       <Width>32</Width>
       <Height>48</Height>
@@ -101,22 +73,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>688</X>
->>>>>>> origin/Gameplay-Test
-      <Y>144</Y>
-      <Width>32</Width>
-      <Height>48</Height>
-      <Location>
-<<<<<<< HEAD
-        <X>672</X>
-=======
-        <X>688</X>
->>>>>>> origin/Gameplay-Test
-        <Y>144</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-<<<<<<< HEAD
       <X>688</X>
       <Y>144</Y>
       <Width>32</Width>
@@ -183,79 +139,10 @@
       <Height>32</Height>
       <Location>
         <X>1120</X>
-=======
-      <X>656</X>
-      <Y>112</Y>
-      <Width>560</Width>
-      <Height>48</Height>
-      <Location>
-        <X>656</X>
-        <Y>112</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1024</X>
-      <Y>144</Y>
-      <Width>48</Width>
-      <Height>32</Height>
-      <Location>
-        <X>1024</X>
-        <Y>144</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1040</X>
-      <Y>160</Y>
-      <Width>64</Width>
-      <Height>48</Height>
-      <Location>
-        <X>1040</X>
-        <Y>160</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1056</X>
-      <Y>192</Y>
-      <Width>80</Width>
-      <Height>48</Height>
-      <Location>
-        <X>1056</X>
-        <Y>192</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1088</X>
-      <Y>208</Y>
-      <Width>64</Width>
-      <Height>48</Height>
-      <Location>
-        <X>1088</X>
-        <Y>208</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1120</X>
-      <Y>224</Y>
-      <Width>64</Width>
-      <Height>32</Height>
-      <Location>
-        <X>1120</X>
         <Y>224</Y>
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>1136</X>
-      <Y>224</Y>
-      <Width>128</Width>
-      <Height>48</Height>
-      <Location>
-        <X>1136</X>
->>>>>>> origin/Gameplay-Test
-        <Y>224</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-<<<<<<< HEAD
       <X>1136</X>
       <Y>224</Y>
       <Width>128</Width>
@@ -336,83 +223,10 @@
       </Location>
     </Rectangle>
     <Rectangle>
-=======
-      <X>1248</X>
-      <Y>272</Y>
-      <Width>48</Width>
-      <Height>32</Height>
-      <Location>
-        <X>1248</X>
-        <Y>272</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1264</X>
-      <Y>288</Y>
-      <Width>64</Width>
-      <Height>48</Height>
-      <Location>
-        <X>1264</X>
-        <Y>288</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1216</X>
-      <Y>272</Y>
-      <Width>32</Width>
-      <Height>16</Height>
-      <Location>
-        <X>1216</X>
-        <Y>272</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>960</X>
-      <Y>512</Y>
-      <Width>64</Width>
-      <Height>32</Height>
-      <Location>
-        <X>960</X>
-        <Y>512</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>880</X>
-      <Y>576</Y>
-      <Width>80</Width>
-      <Height>48</Height>
-      <Location>
-        <X>880</X>
-        <Y>576</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1008</X>
-      <Y>448</Y>
-      <Width>64</Width>
-      <Height>64</Height>
-      <Location>
-        <X>1008</X>
-        <Y>448</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>960</X>
-      <Y>480</Y>
-      <Width>48</Width>
-      <Height>32</Height>
-      <Location>
-        <X>960</X>
-        <Y>480</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
->>>>>>> origin/Gameplay-Test
       <X>976</X>
       <Y>464</Y>
       <Width>32</Width>
       <Height>32</Height>
-<<<<<<< HEAD
       <Location>
         <X>976</X>
         <Y>464</Y>
@@ -479,159 +293,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>336</X>
-      <Y>192</Y>
-      <Width>32</Width>
-      <Height>16</Height>
-      <Location>
-        <X>336</X>
-        <Y>192</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-16</X>
-      <Y>288</Y>
-      <Width>48</Width>
-      <Height>128</Height>
-      <Location>
-        <X>-16</X>
-        <Y>288</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>16</X>
-      <Y>240</Y>
-      <Width>16</Width>
-      <Height>112</Height>
-      <Location>
-        <X>16</X>
-        <Y>240</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>32</X>
-      <Y>192</Y>
-      <Width>32</Width>
-      <Height>128</Height>
-      <Location>
-        <X>32</X>
-        <Y>192</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>48</X>
-      <Y>160</Y>
-      <Width>48</Width>
-      <Height>96</Height>
-      <Location>
-        <X>48</X>
-        <Y>160</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>64</X>
-      <Y>128</Y>
-      <Width>96</Width>
-      <Height>64</Height>
-      <Location>
-        <X>64</X>
-        <Y>128</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>64</X>
-      <Y>176</Y>
-      <Width>256</Width>
-      <Height>48</Height>
-      <Location>
-        <X>64</X>
-        <Y>176</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>240</X>
-      <Y>208</Y>
-      <Width>80</Width>
-      <Height>16</Height>
-      <Location>
-        <X>240</X>
-=======
-      <Location>
-        <X>976</X>
-        <Y>464</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-16</X>
-      <Y>64</Y>
-      <Width>720</Width>
-      <Height>80</Height>
-      <Location>
-        <X>-16</X>
-        <Y>64</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>112</X>
-      <Y>96</Y>
-      <Width>528</Width>
-      <Height>64</Height>
-      <Location>
-        <X>112</X>
-        <Y>96</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>352</X>
-      <Y>144</Y>
-      <Width>48</Width>
-      <Height>48</Height>
-      <Location>
-        <X>352</X>
-        <Y>144</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>336</X>
-      <Y>160</Y>
-      <Width>48</Width>
-      <Height>48</Height>
-      <Location>
-        <X>336</X>
-        <Y>160</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>320</X>
-      <Y>192</Y>
-      <Width>16</Width>
-      <Height>64</Height>
-      <Location>
-        <X>320</X>
-        <Y>192</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>320</X>
-      <Y>208</Y>
-      <Width>48</Width>
-      <Height>32</Height>
-      <Location>
-        <X>320</X>
->>>>>>> origin/Gameplay-Test
-        <Y>208</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-<<<<<<< HEAD
-      <X>224</X>
-      <Y>208</Y>
-      <Width>96</Width>
-      <Height>32</Height>
-      <Location>
-        <X>224</X>
-        <Y>208</Y>
-=======
       <X>336</X>
       <Y>192</Y>
       <Width>32</Width>
@@ -779,7 +440,6 @@
       <Location>
         <X>1040</X>
         <Y>432</Y>
->>>>>>> origin/Gameplay-Test
       </Location>
     </Rectangle>
   </MoveArea>
@@ -801,11 +461,7 @@
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-<<<<<<< HEAD
-      <DrawZ>0</DrawZ>
-=======
       <DrawZ>-31</DrawZ>
->>>>>>> origin/Gameplay-Test
       <NormalZ>0</NormalZ>
       <DestinationScene>1</DestinationScene>
       <DestinationWaypoint>4</DestinationWaypoint>
@@ -848,15 +504,9 @@
     </FadingLightColor>
     <FadingDuration>0</FadingDuration>
     <StartColor>
-<<<<<<< HEAD
-      <X>0</X>
-      <Y>0</Y>
-      <Z>0</Z>
-=======
       <X>0.392156869</X>
       <Y>0.392156869</Y>
       <Z>0.490196079</Z>
->>>>>>> origin/Gameplay-Test
     </StartColor>
     <IsLightMoving>false</IsLightMoving>
     <MoveSpeed>0</MoveSpeed>

@@ -1268,18 +1268,6 @@
       <ObjectId>2</ObjectId>
       <Position>
         <X>0</X>
-<<<<<<< HEAD
-        <Y>75</Y>
-      </Position>
-      <CollisionBox>
-        <X>0</X>
-        <Y>75</Y>
-        <Width>129</Width>
-        <Height>300</Height>
-        <Location>
-          <X>0</X>
-          <Y>75</Y>
-=======
         <Y>60</Y>
       </Position>
       <CollisionBox>
@@ -1290,7 +1278,6 @@
         <Location>
           <X>0</X>
           <Y>60</Y>
->>>>>>> origin/Gameplay-Test
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1314,11 +1301,7 @@
         <X>2415</X>
         <Y>593</Y>
         <Width>144</Width>
-<<<<<<< HEAD
-        <Height>417</Height>
-=======
         <Height>300</Height>
->>>>>>> origin/Gameplay-Test
         <Location>
           <X>2415</X>
           <Y>593</Y>

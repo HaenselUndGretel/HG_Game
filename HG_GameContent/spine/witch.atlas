@@ -1,0 +1,174 @@
+
+witch.png
+size: 443,206
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back/body
+  rotate: false
+  xy: 125, 63
+  size: 119, 143
+  orig: 119, 143
+  offset: 0, 0
+  index: -1
+back/forearm_Left
+  rotate: false
+  xy: 412, 99
+  size: 24, 21
+  orig: 24, 21
+  offset: 0, 0
+  index: -1
+back/forearm_Right
+  rotate: false
+  xy: 413, 31
+  size: 23, 21
+  orig: 23, 21
+  offset: 0, 0
+  index: -1
+back/hand_left
+  rotate: false
+  xy: 417, 157
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+back/hand_right
+  rotate: false
+  xy: 387, 26
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+back/head
+  rotate: false
+  xy: 215, 3
+  size: 35, 59
+  orig: 35, 59
+  offset: 0, 0
+  index: -1
+back/shoulder_left
+  rotate: false
+  xy: 290, 41
+  size: 56, 36
+  orig: 56, 36
+  offset: 0, 0
+  index: -1
+back/shoulder_right
+  rotate: false
+  xy: 290, 4
+  size: 55, 36
+  orig: 55, 36
+  offset: 0, 0
+  index: -1
+front/dif/body
+  rotate: false
+  xy: 1, 51
+  size: 123, 155
+  orig: 123, 155
+  offset: 0, 0
+  index: -1
+front/dif/foreArmLeft
+  rotate: false
+  xy: 125, 1
+  size: 44, 61
+  orig: 44, 61
+  offset: 0, 0
+  index: -1
+front/dif/foreArmRight
+  rotate: false
+  xy: 170, 1
+  size: 44, 61
+  orig: 44, 61
+  offset: 0, 0
+  index: -1
+front/dif/handLeft
+  rotate: false
+  xy: 71, 7
+  size: 39, 43
+  orig: 39, 43
+  offset: 0, 0
+  index: -1
+front/dif/handRight
+  rotate: false
+  xy: 387, 53
+  size: 39, 42
+  orig: 39, 42
+  offset: 0, 0
+  index: -1
+front/dif/head
+  rotate: false
+  xy: 347, 96
+  size: 46, 64
+  orig: 46, 64
+  offset: 0, 0
+  index: -1
+front/dif/shoulderLeft
+  rotate: false
+  xy: 1, 5
+  size: 69, 45
+  orig: 69, 45
+  offset: 0, 0
+  index: -1
+front/dif/shoulderRight
+  rotate: false
+  xy: 347, 161
+  size: 69, 45
+  orig: 69, 45
+  offset: 0, 0
+  index: -1
+side/body
+  rotate: false
+  xy: 245, 78
+  size: 101, 128
+  orig: 101, 128
+  offset: 0, 0
+  index: -1
+side/forearmBack
+  rotate: false
+  xy: 417, 185
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+side/forearmFront
+  rotate: false
+  xy: 347, 42
+  size: 39, 53
+  orig: 39, 53
+  offset: 0, 0
+  index: -1
+side/hand_back
+  rotate: false
+  xy: 427, 75
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+side/hand_front
+  rotate: false
+  xy: 412, 121
+  size: 24, 35
+  orig: 24, 35
+  offset: 0, 0
+  index: -1
+side/head
+  rotate: false
+  xy: 251, 18
+  size: 38, 59
+  orig: 38, 59
+  offset: 0, 0
+  index: -1
+side/shoulder_back
+  rotate: false
+  xy: 427, 57
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+side/shoulder_front
+  rotate: false
+  xy: 394, 101
+  size: 17, 59
+  orig: 17, 59
+  offset: 0, 0
+  index: -1

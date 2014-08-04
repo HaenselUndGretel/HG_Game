@@ -1,0 +1,13 @@
+
+ovendoor.png
+size: 33,44
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img/ofendoor
+  rotate: false
+  xy: 1, 1
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1

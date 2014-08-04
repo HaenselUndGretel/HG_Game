@@ -402,11 +402,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="gfx\000Normal.png">
-      <Name>000Normal</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="gfx\000Depth.png">
       <Name>000Depth</Name>
       <Importer>TextureImporter</Importer>
@@ -764,6 +759,21 @@
     </Compile>
     <Compile Include="gfx\logo_ga.png">
       <Name>logo_ga</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\000Normal.png">
+      <Name>000Normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\002Normal.png">
+      <Name>002Normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\014Normal.png">
+      <Name>014Normal</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -1223,10 +1233,80 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="spine\skeleton-1.png">
-      <Name>skeleton-1</Name>
+    <Compile Include="spine\clipp_05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_05</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\clipp_08.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_08</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\clipp_11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\clipp_14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_14</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\door.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>door</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\fire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\laterne.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>laterne</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\laterneDepth.png">
+      <Name>laterneDepth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\laterneNormal.png">
+      <Name>laterneNormal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\ovendoor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ovendoor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\jump_leftright.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_leftright</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\jump_updown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_updown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Content Include="spine\skeleton.atlas">
+      <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="spine\skeleton.png">
@@ -1259,6 +1339,80 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\skeleton.iObj">
+      <Name>skeleton</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="spine\skeletonDepth.png">
+      <Name>skeletonDepth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\witch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>witch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\spacer.png">
+      <Name>spacer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\slipthroughrock_11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_11</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\slipthroughrock_13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_13</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\slipthroughrock_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\slipthroughrock_7_left.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\slipthroughrock_7_right.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Content Include="spine\wolf.atlas">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\wolf.json">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\wolf.settings">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\wolf.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>wolf</Name>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="hug\001.hug">
@@ -1348,8 +1502,38 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="spine\cabinet.settings">
-      <Name>cabinet</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>cabinet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\cabinet.iObj">
+      <Name>cabinet</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_down.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_stone_down</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_left.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_stone_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_right.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_stone_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\push_stone_up.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>push_stone_up</Name>
     </Content>
     <Content Include="spine\push_stone_down.atlas">
       <Name>push_stone_down</Name>
@@ -1512,6 +1696,406 @@
     <Content Include="iObj\wolf.iObj">
       <Name>wolf</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\door.iObj">
+      <Name>door</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\fire.iObj">
+      <Name>fire</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\laterne.iObj">
+      <Name>laterne</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\ovendoor.iObj">
+      <Name>ovendoor</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_05.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_05</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_05.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_05</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_05.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_05</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_08.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_08</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_08.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_08</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_08.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_08</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_11.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_11.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_11.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_14.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_14</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_14.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_14</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\clipp_14.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>clipp_14</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\door.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>door</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\door.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>door</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\door.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>door</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\fire.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>fire</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\fire.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>fire</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\fire.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>fire</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\laterne.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>laterne</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\laterne.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>laterne</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\laterne.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>laterne</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\ovendoor.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ovendoor</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\ovendoor.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ovendoor</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\ovendoor.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ovendoor</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\clipp_05.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>clipp_05</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\clipp_08.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>clipp_08</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\clipp_11.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>clipp_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\clipp_14.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>clipp_14</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\witch.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>witch</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\witch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>witch</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\witch.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>witch.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>witch</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\witch.iObj">
+      <Name>witch</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\spacer.atlas">
+      <Name>spacer</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\spacer.json">
+      <Name>spacer</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\spacer.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>spacer.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>spacer</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_7_right.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_11.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_11.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_11.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_13.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_13</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_13.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_13</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_13.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_13</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_4.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_4</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_4</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_4.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_4</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_7_left.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_7_left.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_7_left.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_7_right.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\slipthroughrock_7_right.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\jump_leftright.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_leftright</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\jump_leftright.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_leftright</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\jump_leftright.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_leftright</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\jump_updown.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_updown</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\jump_updown.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_updown</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\jump_updown.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>jump_updown</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\slipthroughrock_7_right.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_right</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\slipthroughrock_11.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>slipthroughrock_11</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\slipthroughrock_13.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>slipthroughrock_13</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\slipthroughrock_4.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>slipthroughrock_4</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\slipthroughrock_7_left.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>slipthroughrock_7_left</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\jump_leftright.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>jump_leftright</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\jump_updown.iObj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>jump_updown</Name>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

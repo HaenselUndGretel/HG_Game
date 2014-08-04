@@ -146,54 +146,6 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="gfx\arrow_down_default.png">
-      <Name>arrow_down_default</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_down_hover.png">
-      <Name>arrow_down_hover</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_left_default.png">
-      <Name>arrow_left_default</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_left_hover.png">
-      <Name>arrow_left_hover</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_right_default.png">
-      <Name>arrow_right_default</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_right_hover.png">
-      <Name>arrow_right_hover</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_up_default.png">
-      <Name>arrow_up_default</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\arrow_up_hover.png">
-      <Name>arrow_up_hover</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="gfx\ActivityInfo_BalanceOverBrokenTree.png">
       <Name>ActivityInfo_BalanceOverBrokenTree</Name>
       <Importer>TextureImporter</Importer>
@@ -202,18 +154,6 @@
     </Compile>
     <Compile Include="gfx\ActivityInfo_BalanceOverTree.png">
       <Name>ActivityInfo_BalanceOverTree</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\ActivityInfo_FreeFromCobweb.png">
-      <Name>ActivityInfo_FreeFromCobweb</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\ActivityInfo_FreeFromSwamp.png">
-      <Name>ActivityInfo_FreeFromSwamp</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -242,12 +182,6 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="gfx\ActivityInfo_PullDoor.png">
-      <Name>ActivityInfo_PullDoor</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="gfx\ActivityInfo_PushDoor.png">
       <Name>ActivityInfo_PushDoor</Name>
       <Importer>TextureImporter</Importer>
@@ -266,32 +200,8 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="gfx\ActivityInfo_UseChalk.png">
-      <Name>ActivityInfo_UseChalk</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\ActivityInfo_UseKey.png">
-      <Name>ActivityInfo_UseKey</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="gfx\ActivityInfo_UseWell.png">
       <Name>ActivityInfo_UseWell</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\ArrowMenuBackground.png">
-      <Name>ArrowMenuBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="spine\skeleton.png">
-      <Name>skeleton</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -847,52 +757,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Content Include="iObj\bookShelf.iObj">
-      <Name>bookShelf</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\cobweb.iObj">
-      <Name>cobweb</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush.iObj">
-      <Name>stonePush</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush2.iObj">
-      <Name>stonePush2</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush3.iObj">
-      <Name>stonePush3</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\stonePush4.iObj">
-      <Name>stonePush4</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\swamp.iObj">
-      <Name>swamp</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\waystone.iObj">
-      <Name>waystone</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Compile Include="spine\skeleton-1.png">
-      <Name>skeleton-1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Content Include="iObj\usekey.iObj">
-      <Name>usekey</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="iObj\well.iObj">
-      <Name>well</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="sfx\collectable01.mp3">
       <Name>collectable01</Name>
       <Importer>Mp3Importer</Importer>
@@ -1295,18 +1159,78 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Content Include="spine\skeleton.atlas">
-      <Name>skeleton</Name>
+    <Compile Include="spine\cabinet.png">
+      <Name>cabinet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\skeleton.json">
-      <Name>skeleton</Name>
+    </Compile>
+    <Compile Include="spine\push_stone_down.png">
+      <Name>push_stone_down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\skeleton.settings">
-      <Name>skeleton</Name>
+    </Compile>
+    <Compile Include="spine\push_stone_left.png">
+      <Name>push_stone_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Compile>
+    <Compile Include="spine\push_stone_right.png">
+      <Name>push_stone_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\push_stone_up.png">
+      <Name>push_stone_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\push_tree_down.png">
+      <Name>push_tree_down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\push_tree_left.png">
+      <Name>push_tree_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\push_tree_right.png">
+      <Name>push_tree_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\push_tree_up.png">
+      <Name>push_tree_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\skeleton-1.png">
+      <Name>skeleton-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\skeleton.png">
+      <Name>skeleton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="spine\skeletonDepth.png">
+      <Name>skeletonDepth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="spine\wolf.png">
       <Name>wolf</Name>
       <Importer>TextureImporter</Importer>
@@ -1317,86 +1241,14 @@
       <Name>wolfDepth</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="spine\wolfNormal.png">
       <Name>wolfNormal</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\skeleton.iObj">
-      <Name>skeleton</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="spine\skeletonDepth.png">
-      <Name>skeletonDepth</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Content Include="spine\wolf.atlas">
-      <Name>wolf</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\wolf.json">
-      <Name>wolf</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="spine\wolf.settings">
-      <Name>wolf</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\jumpgap.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>jumpgap</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\knockovertree.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>knockovertree</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\laterne.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>laterne</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\LegUp.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>LegUp</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\pulldoor.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>pulldoor</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\pushrock.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>pushrock</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\wolf.iObj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>wolf</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="iObj\slipthroughrock.iObj">
-      <Name>slipthroughrock</Name>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="hug\001.hug">
@@ -1474,6 +1326,186 @@
     <Content Include="hug\008.hug">
       <Name>008</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\cabinet.atlas">
+      <Name>cabinet</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\cabinet.json">
+      <Name>cabinet</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\cabinet.settings">
+      <Name>cabinet</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_down.atlas">
+      <Name>push_stone_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_down.json">
+      <Name>push_stone_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_down.settings">
+      <Name>push_stone_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_left.atlas">
+      <Name>push_stone_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_left.json">
+      <Name>push_stone_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_left.settings">
+      <Name>push_stone_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_right.atlas">
+      <Name>push_stone_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_right.json">
+      <Name>push_stone_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_right.settings">
+      <Name>push_stone_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_up.atlas">
+      <Name>push_stone_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_up.json">
+      <Name>push_stone_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_stone_up.settings">
+      <Name>push_stone_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_down.atlas">
+      <Name>push_tree_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_down.json">
+      <Name>push_tree_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_down.settings">
+      <Name>push_tree_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_left.atlas">
+      <Name>push_tree_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_left.json">
+      <Name>push_tree_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_left.settings">
+      <Name>push_tree_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_right.atlas">
+      <Name>push_tree_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_right.json">
+      <Name>push_tree_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_right.settings">
+      <Name>push_tree_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_up.atlas">
+      <Name>push_tree_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_up.json">
+      <Name>push_tree_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\push_tree_up.settings">
+      <Name>push_tree_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\skeleton.atlas">
+      <Name>skeleton</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\skeleton.json">
+      <Name>skeleton</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\skeleton.settings">
+      <Name>skeleton</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\wolf.atlas">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\wolf.json">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\wolf.settings">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\cabinet.iObj">
+      <Name>cabinet</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_stone_down.iObj">
+      <Name>push_stone_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_stone_left.iObj">
+      <Name>push_stone_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_stone_right.iObj">
+      <Name>push_stone_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_stone_up.iObj">
+      <Name>push_stone_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_tree_down.iObj">
+      <Name>push_tree_down</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_tree_left.iObj">
+      <Name>push_tree_left</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_tree_right.iObj">
+      <Name>push_tree_right</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_tree_up.iObj">
+      <Name>push_tree_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\skeleton.iObj">
+      <Name>skeleton</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\wolf.iObj">
+      <Name>wolf</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

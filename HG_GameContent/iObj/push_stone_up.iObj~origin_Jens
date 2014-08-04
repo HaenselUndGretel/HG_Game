@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>6000</ObjectId>
+  <ObjectId>34000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -16,42 +16,42 @@
     </Location>
   </CollisionBox>
   <IsVisible>true</IsVisible>
-  <DrawZ>-24</DrawZ>
+  <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>amuletStone</Name>
+  <Name>pushableRock</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-129</X>
-      <Y>4</Y>
-      <Width>287</Width>
-      <Height>104</Height>
+      <X>-104</X>
+      <Y>0</Y>
+      <Width>213</Width>
+      <Height>138</Height>
       <Location>
-        <X>-129</X>
-        <Y>4</Y>
+        <X>-104</X>
+        <Y>0</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-106</X>
-      <Y>-62</Y>
-      <Width>227</Width>
-      <Height>65</Height>
+      <X>-104</X>
+      <Y>-196</Y>
+      <Width>213</Width>
+      <Height>196</Height>
       <Location>
-        <X>-106</X>
-        <Y>-62</Y>
+        <X>-104</X>
+        <Y>-196</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>-59</X>
-    <Y>45</Y>
+    <X>-42</X>
+    <Y>28</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>63</X>
-    <Y>49</Y>
+    <X>36</X>
+    <Y>28</Y>
   </ActionPosition2>
-  <ActionId>11</ActionId>
+  <ActionId>0</ActionId>
 </InteractiveObject>

@@ -164,7 +164,7 @@ namespace HG_Game
 				pScene.BackgroundTexture.Dispose();
 				GC.Collect();
 				pScene = pSavegame.Scenes[DestinationScene];
-				pScene.BackgroundTexture.LoadContent();
+				pScene.BackgroundTexture.LoadBackgroundTextures();
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);
 				pRenderer.AmbientLight = pScene.SceneAmbientLight;

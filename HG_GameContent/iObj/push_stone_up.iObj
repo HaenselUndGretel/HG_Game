@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>39000</ObjectId>
+  <ObjectId>34000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,50 +18,40 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>tree</Name>
+  <Name>pushableRock</Name>
   <Height>0</Height>
   <Width>0</Width>
   <ActionRectList>
     <Rectangle>
-      <X>-64</X>
-      <Y>10</Y>
-      <Width>128</Width>
-      <Height>79</Height>
+      <X>-104</X>
+      <Y>0</Y>
+      <Width>213</Width>
+      <Height>138</Height>
       <Location>
-        <X>-64</X>
-        <Y>10</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>-64</X>
-      <Y>-471</Y>
-      <Width>128</Width>
-      <Height>86</Height>
-      <Location>
-        <X>-64</X>
-        <Y>-471</Y>
+        <X>-104</X>
+        <Y>0</Y>
       </Location>
     </Rectangle>
   </ActionRectList>
   <CollisionRectList>
     <Rectangle>
-      <X>-64</X>
-      <Y>-93</Y>
-      <Width>128</Width>
-      <Height>103</Height>
+      <X>-104</X>
+      <Y>-196</Y>
+      <Width>213</Width>
+      <Height>196</Height>
       <Location>
-        <X>-64</X>
-        <Y>-93</Y>
+        <X>-104</X>
+        <Y>-196</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>-3</X>
-    <Y>33</Y>
+    <X>-42</X>
+    <Y>21</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-1</X>
-    <Y>-514</Y>
+    <X>36</X>
+    <Y>21</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

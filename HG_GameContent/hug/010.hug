@@ -323,26 +323,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>1152</X>
-      <Y>1088</Y>
-      <Width>832</Width>
-      <Height>240</Height>
-      <Location>
-        <X>1152</X>
-        <Y>1088</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1968</X>
-      <Y>1088</Y>
-      <Width>768</Width>
-      <Height>224</Height>
-      <Location>
-        <X>1968</X>
-        <Y>1088</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
       <X>3072</X>
       <Y>1136</Y>
       <Width>288</Width>
@@ -380,36 +360,6 @@
       <Location>
         <X>3504</X>
         <Y>1264</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3168</X>
-      <Y>592</Y>
-      <Width>16</Width>
-      <Height>192</Height>
-      <Location>
-        <X>3168</X>
-        <Y>592</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3136</X>
-      <Y>576</Y>
-      <Width>48</Width>
-      <Height>192</Height>
-      <Location>
-        <X>3136</X>
-        <Y>576</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3168</X>
-      <Y>592</Y>
-      <Width>32</Width>
-      <Height>208</Height>
-      <Location>
-        <X>3168</X>
-        <Y>592</Y>
       </Location>
     </Rectangle>
     <Rectangle>
@@ -653,26 +603,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>1184</X>
-      <Y>736</Y>
-      <Width>560</Width>
-      <Height>352</Height>
-      <Location>
-        <X>1184</X>
-        <Y>736</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1728</X>
-      <Y>736</Y>
-      <Width>48</Width>
-      <Height>384</Height>
-      <Location>
-        <X>1728</X>
-        <Y>736</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
       <X>1744</X>
       <Y>320</Y>
       <Width>48</Width>
@@ -740,16 +670,6 @@
       <Location>
         <X>1760</X>
         <Y>560</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1152</X>
-      <Y>896</Y>
-      <Width>32</Width>
-      <Height>192</Height>
-      <Location>
-        <X>1152</X>
-        <Y>896</Y>
       </Location>
     </Rectangle>
     <Rectangle>
@@ -1182,6 +1102,146 @@
         <Y>2032</Y>
       </Location>
     </Rectangle>
+    <Rectangle>
+      <X>3392</X>
+      <Y>1104</Y>
+      <Width>176</Width>
+      <Height>32</Height>
+      <Location>
+        <X>3392</X>
+        <Y>1104</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3344</X>
+      <Y>1120</Y>
+      <Width>64</Width>
+      <Height>16</Height>
+      <Location>
+        <X>3344</X>
+        <Y>1120</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3344</X>
+      <Y>1232</Y>
+      <Width>176</Width>
+      <Height>16</Height>
+      <Location>
+        <X>3344</X>
+        <Y>1232</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3344</X>
+      <Y>1232</Y>
+      <Width>160</Width>
+      <Height>16</Height>
+      <Location>
+        <X>3344</X>
+        <Y>1232</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3344</X>
+      <Y>1232</Y>
+      <Width>144</Width>
+      <Height>16</Height>
+      <Location>
+        <X>3344</X>
+        <Y>1232</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3344</X>
+      <Y>1232</Y>
+      <Width>144</Width>
+      <Height>32</Height>
+      <Location>
+        <X>3344</X>
+        <Y>1232</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1184</X>
+      <Y>544</Y>
+      <Width>304</Width>
+      <Height>592</Height>
+      <Location>
+        <X>1184</X>
+        <Y>544</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1472</X>
+      <Y>880</Y>
+      <Width>272</Width>
+      <Height>256</Height>
+      <Location>
+        <X>1472</X>
+        <Y>880</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1664</X>
+      <Y>800</Y>
+      <Width>448</Width>
+      <Height>112</Height>
+      <Location>
+        <X>1664</X>
+        <Y>800</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>2992</X>
+      <Y>528</Y>
+      <Width>64</Width>
+      <Height>304</Height>
+      <Location>
+        <X>2992</X>
+        <Y>528</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>2080</X>
+      <Y>1232</Y>
+      <Width>720</Width>
+      <Height>80</Height>
+      <Location>
+        <X>2080</X>
+        <Y>1232</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>2400</X>
+      <Y>1072</Y>
+      <Width>368</Width>
+      <Height>240</Height>
+      <Location>
+        <X>2400</X>
+        <Y>1072</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1504</X>
+      <Y>1264</Y>
+      <Width>560</Width>
+      <Height>96</Height>
+      <Location>
+        <X>1504</X>
+        <Y>1264</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>2048</X>
+      <Y>1248</Y>
+      <Width>48</Width>
+      <Height>32</Height>
+      <Location>
+        <X>2048</X>
+        <Y>1248</Y>
+      </Location>
+    </Rectangle>
   </MoveArea>
   <Waypoints>
     <Waypoint>
@@ -1267,9 +1327,253 @@
     </Waypoint>
   </Waypoints>
   <BackgroundSprites />
-  <InteractiveObjects />
+  <InteractiveObjects>
+    <InteractiveObject>
+      <ObjectId>37</ObjectId>
+      <Position>
+        <X>3418</X>
+        <Y>1248</Y>
+      </Position>
+      <CollisionBox>
+        <X>3418</X>
+        <Y>1248</Y>
+        <Width>71</Width>
+        <Height>161</Height>
+        <Location>
+          <X>3418</X>
+          <Y>1248</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1248</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Name>jump_updown</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>3383</X>
+          <Y>1094</Y>
+          <Width>71</Width>
+          <Height>69</Height>
+          <Location>
+            <X>3383</X>
+            <Y>1094</Y>
+          </Location>
+        </Rectangle>
+        <Rectangle>
+          <X>3389</X>
+          <Y>1333</Y>
+          <Width>62</Width>
+          <Height>66</Height>
+          <Location>
+            <X>3389</X>
+            <Y>1333</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>3383</X>
+          <Y>1167</Y>
+          <Width>71</Width>
+          <Height>161</Height>
+          <Location>
+            <X>3383</X>
+            <Y>1167</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>3417</X>
+        <Y>1129</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>3417</X>
+        <Y>1362</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+    </InteractiveObject>
+  </InteractiveObjects>
   <Collectables />
-  <Lights />
+  <Lights>
+    <Light xsi:type="PointLight">
+      <ObjectId>31</ObjectId>
+      <Position>
+        <X>-4</X>
+        <Y>986</Y>
+      </Position>
+      <CollisionBox>
+        <X>-4</X>
+        <Y>986</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>-4</X>
+          <Y>986</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>30</Intensity>
+      <Depth>0.08640482</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>32</ObjectId>
+      <Position>
+        <X>6</X>
+        <Y>1670</Y>
+      </Position>
+      <CollisionBox>
+        <X>6</X>
+        <Y>1670</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>6</X>
+          <Y>1670</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>30</Intensity>
+      <Depth>0.08640482</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>33</ObjectId>
+      <Position>
+        <X>3771</X>
+        <Y>643</Y>
+      </Position>
+      <CollisionBox>
+        <X>3771</X>
+        <Y>643</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>3771</X>
+          <Y>643</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>30</Intensity>
+      <Depth>0.08640482</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>34</ObjectId>
+      <Position>
+        <X>3137</X>
+        <Y>1911</Y>
+      </Position>
+      <CollisionBox>
+        <X>3137</X>
+        <Y>1911</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>3137</X>
+          <Y>1911</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>0</X>
+        <Y>1</Y>
+        <Z>0</Z>
+      </StartColor>
+      <IsLightMoving>true</IsLightMoving>
+      <MoveSpeed>1000</MoveSpeed>
+      <MaxHeight>100</MaxHeight>
+      <MinHeight>50</MinHeight>
+      <Intensity>15</Intensity>
+      <Depth>0.08640482</Depth>
+      <LightColor>
+        <X>0</X>
+        <Y>1</Y>
+        <Z>0</Z>
+      </LightColor>
+      <Radius>10</Radius>
+    </Light>
+  </Lights>
   <Events />
   <SceneAmbientLight>
     <ObjectId>0</ObjectId>
@@ -1370,18 +1674,18 @@
         <Y>736</Y>
       </Position>
       <CollisionBox>
-        <X>456</X>
-        <Y>636</Y>
+        <X>506</X>
+        <Y>736</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>456</X>
-          <Y>636</Y>
+          <X>506</X>
+          <Y>736</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>736</DrawZ>
-      <NormalZ>0.1796875</NormalZ>
+      <NormalZ>0</NormalZ>
       <Name>wolf</Name>
       <Height>0</Height>
       <Width>0</Width>
@@ -1404,18 +1708,18 @@
         <Y>1853</Y>
       </Position>
       <CollisionBox>
-        <X>1443</X>
-        <Y>1753</Y>
+        <X>1493</X>
+        <Y>1853</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>1443</X>
-          <Y>1753</Y>
+          <X>1493</X>
+          <Y>1853</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>1853</DrawZ>
-      <NormalZ>0.452392578</NormalZ>
+      <NormalZ>0</NormalZ>
       <Name>wolf</Name>
       <Height>0</Height>
       <Width>0</Width>
@@ -1428,6 +1732,40 @@
       <ActionPosition2>
         <X>1493</X>
         <Y>1853</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+    </Enemy>
+    <Enemy xsi:type="Wolf">
+      <ObjectId>43</ObjectId>
+      <Position>
+        <X>689</X>
+        <Y>1815</Y>
+      </Position>
+      <CollisionBox>
+        <X>689</X>
+        <Y>1815</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>689</X>
+          <Y>1815</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1815</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Name>wolf</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList />
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>689</X>
+        <Y>1815</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>689</X>
+        <Y>1815</Y>
       </ActionPosition2>
       <ActionId>0</ActionId>
     </Enemy>

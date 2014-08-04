@@ -1343,7 +1343,7 @@
   <ItemGroup>
     <Content Include="iObj\skeleton.iObj">
       <Name>skeleton</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -1410,7 +1410,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\wolf.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>wolf</Name>
     </Content>
   </ItemGroup>
@@ -1509,24 +1509,24 @@
   <ItemGroup>
     <Content Include="iObj\cabinet.iObj">
       <Name>cabinet</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\push_stone_down.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>push_stone_down</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\push_stone_left.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>push_stone_left</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\push_stone_right.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>push_stone_right</Name>
     </Content>
   </ItemGroup>
@@ -1655,63 +1655,63 @@
   <ItemGroup>
     <Content Include="iObj\cabinet.iObj">
       <Name>cabinet</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_stone_down.iObj">
       <Name>push_stone_down</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_stone_left.iObj">
       <Name>push_stone_left</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_stone_right.iObj">
       <Name>push_stone_right</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_tree_down.iObj">
       <Name>push_tree_down</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_tree_left.iObj">
       <Name>push_tree_left</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_tree_right.iObj">
       <Name>push_tree_right</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\push_tree_up.iObj">
       <Name>push_tree_up</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\skeleton.iObj">
       <Name>skeleton</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\wolf.iObj">
       <Name>wolf</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\door.iObj">
       <Name>door</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\fire.iObj">
       <Name>fire</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\laterne.iObj">
       <Name>laterne</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="iObj\ovendoor.iObj">
       <Name>ovendoor</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -1860,25 +1860,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\clipp_05.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>clipp_05</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\clipp_08.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>clipp_08</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\clipp_11.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>clipp_11</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\clipp_14.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>clipp_14</Name>
     </Content>
   </ItemGroup>
@@ -1905,7 +1905,7 @@
   <ItemGroup>
     <Content Include="iObj\witch.iObj">
       <Name>witch</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -2054,44 +2054,66 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\slipthroughrock_7_right.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>slipthroughrock_7_right</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\slipthroughrock_11.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>slipthroughrock_11</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\slipthroughrock_13.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>slipthroughrock_13</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\slipthroughrock_4.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>slipthroughrock_4</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\slipthroughrock_7_left.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>slipthroughrock_7_left</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\jump_leftright.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>jump_leftright</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="iObj\jump_updown.iObj">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>jump_updown</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\legup_04.iObj">
+      <Name>legup_04</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\legup_07.iObj">
+      <Name>legup_07</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\legup_10.iObj">
+      <Name>legup_10</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\legup_13.iObj">
+      <Name>legup_13</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\push_stone_up.iObj">
+      <Name>push_stone_up</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

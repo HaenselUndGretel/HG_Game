@@ -123,8 +123,8 @@ namespace HG_Game
 		public const string Anim_Tree_KnockOver_Down = "wiggle";//"knockOver";
 		public const string Anim_Tree_KnockOver_Side = "wiggle";//"knockOver";
 
-		public const string Anim_Tree_Falling_Up = "falling_front";//"falling";
-		public const string Anim_Tree_Falling_Down = "falling_back";//"falling";
+		public const string Anim_Tree_Falling_Up = "falling_back";//"falling";
+		public const string Anim_Tree_Falling_Down = "falling_front";//"falling";
 		public const string Anim_Tree_Falling_Side = "fall_side";//"falling";
 
 		public const string Anim_Lantern_Place = "attack";//"lanternPlace";

@@ -578,16 +578,16 @@
       <ObjectId>2</ObjectId>
       <Position>
         <X>2</X>
-        <Y>321</Y>
+        <Y>301</Y>
       </Position>
       <CollisionBox>
         <X>2</X>
-        <Y>321</Y>
+        <Y>301</Y>
         <Width>144</Width>
         <Height>300</Height>
         <Location>
           <X>2</X>
-          <Y>321</Y>
+          <Y>301</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -605,16 +605,16 @@
       <ObjectId>3</ObjectId>
       <Position>
         <X>1179</X>
-        <Y>322</Y>
+        <Y>312</Y>
       </Position>
       <CollisionBox>
         <X>1179</X>
-        <Y>322</Y>
+        <Y>312</Y>
         <Width>99</Width>
-        <Height>250</Height>
+        <Height>260</Height>
         <Location>
           <X>1179</X>
-          <Y>322</Y>
+          <Y>312</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -669,7 +669,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0500545874</Depth>
+      <Depth>0.07051337</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -713,7 +713,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0500545874</Depth>
+      <Depth>0.07051337</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -757,7 +757,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0500545874</Depth>
+      <Depth>0.07051337</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -801,7 +801,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0500545874</Depth>
+      <Depth>0.07051337</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -845,7 +845,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0500545874</Depth>
+      <Depth>0.07051337</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

@@ -129,13 +129,23 @@ namespace HG_Game
 			DestinationGretel = Vector2.Zero;
 			foreach(Waypoint wp in pSceneLookup[pWpHansel.DestinationScene].Waypoints) //Wegpunkte in der Zielscene durchgehen
 			{
+				Vector2 wpOrigin = new Vector2(wp.CollisionBox.Width / 2, wp.CollisionBox.Height / 2);
+					bool direction = (wpOrigin.X > wpOrigin.Y) ? true : false;
 				if (wp.ObjectId == pWpHansel.DestinationWaypoint) //Hansels Zielwegpunkt=
-					DestinationHansel = wp.Position + (pHansel.SkeletonPosition - pWpHansel.Position);
+				{
+					// Berechnung welche position
+					DestinationHansel = (direction) ? wpOrigin + wp.Position + new Vector2(-50,0) : wpOrigin + wp.Position + new Vector2(0,-50);
+				}
 				if (wp.ObjectId == pWpGretel.DestinationWaypoint) //Gretels Zielwegpunkt?
-					DestinationGretel = wp.Position + (pGretel.SkeletonPosition - pWpGretel.Position);
+				{
+					// Berechnung welche position
+					DestinationGretel = (direction) ? wpOrigin + wp.Position + new Vector2(50, 0) : wpOrigin + wp.Position + new Vector2(0, 50);
+				}
+					//DestinationGretel = wp.Position + (pGretel.SkeletonPosition - pWpGretel.Position);
 			}
 			if (DestinationHansel == Vector2.Zero || DestinationGretel == Vector2.Zero) //ErrorTest
 				throw new Exception("Zielwegpunkt für Hansel oder Gretel nicht gefunden!");
+
 			DestinationScene = pWpHansel.DestinationScene;
 			//Switching initialisieren
 			pHansel.SetAnimation();
@@ -143,6 +153,7 @@ namespace HG_Game
 			FadingProgress = 0d;
 			CurrentState = State.Switching;
 			FmodMediaPlayer.Instance.FadeBackgroundOut();
+			FmodMediaPlayer.Instance.StopAllSongs();
 			GameReferenzes.IsSceneSwitching = true;
 		}
 
@@ -161,8 +172,6 @@ namespace HG_Game
 				pHansel.MoveInteractiveObject(DestinationHansel - pHansel.SkeletonPosition);
 				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);
 				pSavegame.SceneId = DestinationScene;
-				pScene.BackgroundTexture.Dispose();
-				GC.Collect();
 				pScene = pSavegame.Scenes[DestinationScene];
 				pScene.BackgroundTexture.LoadBackgroundTextures();
 				pCamera.GameScreen = pScene.GamePlane;
@@ -207,17 +216,6 @@ namespace HG_Game
 				foreach (int i in Hardcoded.Scene_Waystone)
 					if (GameReferenzes.SceneID == i)
 						Savegame.Save(pSavegame, pHansel, pGretel);
-				/*
-				if (GameReferenzes.SceneID == 3 | GameReferenzes.SceneID == 6 | GameReferenzes.SceneID == 12 | GameReferenzes.SceneID == 15)
-					Savegame.Save(pSavegame, pHansel, pGretel);
-				foreach (InteractiveObject iObj in pScene.InteractiveObjects)
-				{
-					if (iObj.Name == Hardcoded.Scene_Waystone_IObjName)
-					{
-						Savegame.Save(pSavegame, pHansel, pGretel);
-					}
-				}
-				*/
 			}
 		}
 

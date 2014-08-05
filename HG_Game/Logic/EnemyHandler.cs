@@ -10,6 +10,7 @@ namespace HG_Game
 {
 	public class EnemyHandler
 	{
+
 		public EnemyHandler()
 		{
 
@@ -17,6 +18,23 @@ namespace HG_Game
 
 		public void Update()
 		{
+			//if(GameReferenzes.SceneID == 9)
+			//{
+			//	bool WitchAvidable = false;
+			//	foreach (Enemy e in GameReferenzes.Level.Enemies)
+			//		if (e.GetType() == typeof(Witch))
+			//			WitchAvidable = true;
+			//	if(!WitchAvidable)
+			//	{
+			//		Witch witch = new Witch("witch");
+			//		witch.LoadContent();
+			//		witch.Position = new Vector2(675, 650);
+			//		witch.ApplySettings();
+			//		GameReferenzes.Level.Enemies.Add(witch);
+			//		GameReferenzes.Level.RenderList.Add(witch);
+			//	}
+			//}
+
 			foreach (Enemy e in GameReferenzes.Level.Enemies)
 			{
 				e.Update();

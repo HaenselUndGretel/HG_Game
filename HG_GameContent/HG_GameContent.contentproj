@@ -777,6 +777,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\Backgrounds\013Normal.png">
+      <Name>013Normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="sfx\collectable01.mp3">
       <Name>collectable01</Name>
       <Importer>Mp3Importer</Importer>

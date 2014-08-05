@@ -10,7 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
+  <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
   <MoveArea>
     <Rectangle>
       <X>0</X>

@@ -32,16 +32,6 @@
         <Y>-58</Y>
       </Location>
     </Rectangle>
-    <Rectangle>
-      <X>-1071</X>
-      <Y>349</Y>
-      <Width>160</Width>
-      <Height>99</Height>
-      <Location>
-        <X>-1071</X>
-        <Y>349</Y>
-      </Location>
-    </Rectangle>
   </ActionRectList>
   <CollisionRectList />
   <ActionPosition1>
@@ -49,7 +39,7 @@
     <Y>30</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>-1002</X>
+    <X>-1322</X>
     <Y>380</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>

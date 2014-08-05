@@ -120,7 +120,7 @@ namespace HG_Game
 		/// <param name="pSceneLookup">Scenes-Array aus dem Savegame.</param>
 		public void StartSwitching(Hansel pHansel, Gretel pGretel, Waypoint pWpHansel, Waypoint pWpGretel, SceneData[] pSceneLookup)
 		{
-			if (ActivityHandler.AmuletBlocksWaypoints)
+			if (ActivityHandler.AmuletBlocksWaypoints || ActivityHandler.DoorBlocksWaypoint)
 				return;
 			LeaveHansel = -pWpHansel.MovementOnEnter;
 			LeaveGretel = -pWpGretel.MovementOnEnter;

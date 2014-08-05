@@ -27,7 +27,10 @@ namespace HG_Game
 		protected List<ChargeAmulet> AmuletStates;
 		protected UseAmulet Amulet;
 
+		protected PushDoor Door;
+
 		public static bool AmuletBlocksWaypoints;
+		public static bool DoorBlocksWaypoint;
 
 		#endregion
 
@@ -178,6 +181,7 @@ namespace HG_Game
 
 			//AmuletStates updaten
 			UpdateAmulet(pSavegame, pScene);
+			UpdateDoor();
 			
 
 			ActionInfoFading.Update();
@@ -212,6 +216,16 @@ namespace HG_Game
 			if (w == null) throw new Exception("Witch nicht gefunden!");
 			pScene.Enemies.Remove(w);
 			*/
+		}
+
+		protected void UpdateDoor(Savegame pSavegame)
+		{
+			if (pSavegame.SceneId == Hardcoded.Scene_LanternDoor && !Door.m2ndState)
+			{
+				DoorBlocksWaypoint = true;
+				return;
+			}
+			DoorBlocksWaypoint = false;
 		}
 
 		#region Draw
@@ -284,6 +298,7 @@ namespace HG_Game
 							break;
 						case Activity.PushDoor:
 							iObj.ActivityState = new PushDoor(pHansel, pGretel, iObj);
+							Door = (PushDoor)iObj.ActivityState;
 							break;
 						case Activity.PullDoor:
 							throw new Exception("Es gibt keine Tür mehr die von den Spielern geschlossen werden soll");

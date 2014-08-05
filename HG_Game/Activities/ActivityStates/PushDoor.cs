@@ -77,6 +77,7 @@ namespace HG_Game
 						ActI.SetFadingState(pOtherPlayer, false);
 						rIObj.CollisionRectList.Clear();
 						rIObj.ActionRectList.Clear();
+						m2ndState = true;
 					}
 					break;
 			}

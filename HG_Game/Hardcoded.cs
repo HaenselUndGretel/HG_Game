@@ -61,6 +61,7 @@ namespace HG_Game
 		public const int Scene_LanternDoor = 0;
 		public static int[] Scene_Waystone = { 3, 6, 12, 15 };
 		public const string Scene_Waystone_IObjName = "waystone";
+		public const int Scene_End = 19;
 
 		#endregion
 

@@ -28,7 +28,8 @@ namespace HG_Game
 			Running,
 			Paused,
 			CollectableInfo,
-			End
+			End,
+			EndScene
 		}
 
 		protected GameState mState;
@@ -44,6 +45,8 @@ namespace HG_Game
 		protected Logic mLogic;
 
 		protected PauseMenu mPauseMenu;
+
+		protected EndScene DasEnde;
 
 		#endregion
 
@@ -80,6 +83,9 @@ namespace HG_Game
 			mLogic = new Logic();
 			//PauseMenu
 			mPauseMenu = new PauseMenu();
+
+			//EndScene
+			DasEnde.Initialize();
 
 			FmodMediaPlayer.FadingSpeed = 1 / 90.0f;
 		}
@@ -125,6 +131,9 @@ namespace HG_Game
 				AIManager.Instance.SetInterActiveObjects(mScene.InteractiveObjects);
 
 			AIManager.Instance.SetAgents(mScene.Enemies);
+
+			//EndScene
+			DasEnde.LoadContent();
 		}
 
 		public override void Update()
@@ -166,11 +175,19 @@ namespace HG_Game
 						mState = GameState.Running;
 					}
 					break;
+				case GameState.EndScene:
+					DasEnde.Update();
+					break;
 			}
 		}
 
 		public override void Draw()
 		{
+			if (mState == GameState.EndScene)
+			{
+				DasEnde.Draw(mRenderer, mSpriteBatch);
+				return;
+			}
 			//--------------------Prepare Draw--------------------
 			mScene.RenderList = mScene.RenderList.OrderBy(iobj => iobj.NormalZ).ToList(); //Wird DrawZ vom Character genommen wenn er als IObj betrachtet wird?
 			//Temporär immer neu aufbauen, sollte später anders umgesetzt werden, wie RenderList

@@ -54,7 +54,7 @@ namespace HG_Game
 		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer, ref GameScene.GameState pGameState)
 		{
 			//Update Logic Parts
-			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
+			SceneSwitchHandler.Update(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer, ref pGameState);
 			ActivityHandler.Update(pScene, pHansel, pGretel, pSavegame);
 			ItemHandler.Update(pScene, pHansel, pGretel, pSavegame, ref pGameState);
 			EventHandler.Update(pScene, pHansel, pGretel);

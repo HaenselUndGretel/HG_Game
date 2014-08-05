@@ -1,5 +1,5 @@
 {
-"skeleton": { "spine": "1.9.15", "hash": "P8HR7YJpP+4lxWYDWZg7n+AGwOM", "width": 228.06, "height": 238.42 },
+"skeleton": { "spine": "1.9.15", "hash": "2xf1I+KLpRE5/tcmYn3SEWWLd/w", "width": 0, "height": 0 },
 "bones": [
 	{ "name": "root", "x": 893.56 },
 	{ "name": "backRoot", "parent": "root" },
@@ -89,6 +89,9 @@
 		"front_calfRight": {
 			"gretel/front/FootRight": { "x": 9.82, "y": -1.08, "rotation": 89.54, "width": 11, "height": 52 }
 		},
+		"front_body": {
+			"gretel/front/body": { "x": 8.52, "y": -0.47, "rotation": -89.54, "width": 50, "height": 157 }
+		},
 		"back_shoulderRight": {
 			"gretel/back/shoulderRight": { "x": 21.12, "y": -0.06, "scaleX": 0.81, "scaleY": 0.81, "rotation": 1.52, "width": 66, "height": 23 }
 		},
@@ -131,17 +134,11 @@
 		"back_handLeft": {
 			"gretel/back/handLeft": { "x": 2.06, "y": 3.11, "rotation": -164.01, "width": 14, "height": 18 }
 		},
-		"back_head": {
-			"gretel/back/head": { "x": 37.41, "y": -1.15, "rotation": -89.29, "width": 76, "height": 123 }
-		},
 		"back_handRight": {
 			"gretel/back/handRight": { "y": -1.72, "rotation": -10.98, "width": 13, "height": 17 }
 		},
 		"side_calfLeft": {
 			"gretel/side/footLeft": { "x": 15.92, "y": -3.82, "rotation": 90.9, "width": 17, "height": 43 }
-		},
-		"side_handLeft": {
-			"gretel/side/handLeft": { "x": 1.23, "y": 1.58, "rotation": 161.11, "width": 21, "height": 13 }
 		},
 		"front_handLeft": {
 			"gretel/front/handLeft": { "x": 10.04, "y": -0.94, "rotation": 55.18, "width": 16, "height": 23 }
@@ -164,8 +161,11 @@
 		"front_head": {
 			"gretel/front/head": { "x": 35.95, "y": -1.32, "rotation": -89.29, "width": 67, "height": 122 }
 		},
-		"front_body": {
-			"gretel/front/body": { "x": 8.52, "y": -0.47, "rotation": -89.54, "width": 50, "height": 157 }
+		"back_head": {
+			"gretel/back/head": { "x": 37.41, "y": -1.15, "rotation": -89.29, "width": 76, "height": 123 }
+		},
+		"back_shoulderLeft": {
+			"gretel/back/shoulderLeft": { "x": 23.41, "y": 0.1, "scaleX": 0.81, "scaleY": 0.81, "rotation": 178.12, "width": 65, "height": 24 }
 		},
 		"side_spine": {
 			"gretel/side/body": { "x": 1.89, "y": 7.73, "rotation": -87.54, "width": 44, "height": 139 }
@@ -173,8 +173,8 @@
 		"side_calfRight": {
 			"gretel/side/footRight": { "x": 20.96, "y": -2.74, "rotation": 89.54, "width": 19, "height": 45 }
 		},
-		"back_shoulderLeft": {
-			"gretel/back/shoulderLeft": { "x": 23.41, "y": 0.1, "scaleX": 0.81, "scaleY": 0.81, "rotation": 178.12, "width": 65, "height": 24 }
+		"side_handLeft": {
+			"gretel/side/handLeft": { "x": 1.23, "y": 1.58, "rotation": 161.11, "width": 21, "height": 13 }
 		}
 	},
 	"front": {}

@@ -117,7 +117,7 @@ namespace HG_Game
 				}
 
 				//-----UseAmulet-----
-				if (pSavegame.SceneId == Hardcoded.Scene_Amulet && AmuletCharged)
+				if (pSavegame.SceneId == Hardcoded.Scene_Amulet_Boss && AmuletCharged)
 				{
 					if (TestHansel && PossibleActivityHansel == Activity.None)
 					{
@@ -185,7 +185,7 @@ namespace HG_Game
 
 		protected void UpdateAmulet(Savegame pSavegame, SceneData pScene)
 		{
-			if (pSavegame.SceneId != Hardcoded.Scene_Amulet || Amulet.m2ndState)
+			if (pSavegame.SceneId != Hardcoded.Scene_Amulet_Boss || Amulet.m2ndState)
 			{
 				AmuletBlocksWaypoints = false;
 				return;

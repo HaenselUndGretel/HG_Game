@@ -68,6 +68,10 @@ namespace HG_Game
 					LanternRaiseProgress.StepForward();
 				else
 					LanternRaiseProgress.StepBackward();
+				if (LanternRaiseProgress.Complete)
+					pHansel.IsLanternRaised = true;
+				else
+					pHansel.IsLanternRaised = false;
 			}
 			else if (pGretel.Lantern)
 			{

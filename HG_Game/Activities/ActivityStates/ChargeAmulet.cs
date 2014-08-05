@@ -27,7 +27,8 @@ namespace HG_Game
 		{
 			if (Conditions.NotHandicapped(pPlayer, Activity.ChargeAmulet) &&
 				Conditions.Contains(pPlayer, rIObj) &&
-				Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this)
+				Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this) &&
+				!pPlayer.Lantern
 				)
 				return Activity.ChargeAmulet;
 			return Activity.None;

@@ -86,6 +86,9 @@
 ],
 "skins": {
 	"default": {
+		"front_calfRight": {
+			"gretel/front/FootRight": { "x": 9.82, "y": -1.08, "rotation": 89.54, "width": 11, "height": 52 }
+		},
 		"back_shoulderRight": {
 			"gretel/back/shoulderRight": { "x": 21.12, "y": -0.06, "scaleX": 0.81, "scaleY": 0.81, "rotation": 1.52, "width": 66, "height": 23 }
 		},
@@ -104,8 +107,8 @@
 		"back_calfRight": {
 			"gretel/back/footRight": { "x": 12.32, "y": 0.1, "rotation": 90.9, "width": 11, "height": 46 }
 		},
-		"front_calfRight": {
-			"gretel/front/FootRight": { "x": 9.82, "y": -1.08, "rotation": 89.54, "width": 11, "height": 52 }
+		"back_forearmLeft": {
+			"gretel/back/forearmLeft": { "x": 12.25, "y": -2.89, "rotation": 171.51, "width": 36, "height": 16 }
 		},
 		"side_shoulderRight": {
 			"gretel/side/shoulderRight": { "x": 23.34, "y": -0.44, "rotation": 100.63, "width": 30, "height": 56 }
@@ -118,9 +121,6 @@
 		},
 		"front_handRight": {
 			"gretel/front/handRight": { "x": 7.91, "y": 1.45, "rotation": 125.53, "width": 17, "height": 23 }
-		},
-		"side_spine": {
-			"gretel/side/body": { "x": 1.89, "y": 7.73, "rotation": -87.54, "width": 44, "height": 139 }
 		},
 		"front_shoulderLeft": {
 			"gretel/front/shoulderLeft": { "x": 26.33, "y": -0.38, "scaleX": 0.811, "scaleY": 0.811, "rotation": 6.02, "width": 63, "height": 28 }
@@ -140,14 +140,17 @@
 		"side_calfLeft": {
 			"gretel/side/footLeft": { "x": 15.92, "y": -3.82, "rotation": 90.9, "width": 17, "height": 43 }
 		},
+		"side_handLeft": {
+			"gretel/side/handLeft": { "x": 1.23, "y": 1.58, "rotation": 161.11, "width": 21, "height": 13 }
+		},
 		"front_handLeft": {
 			"gretel/front/handLeft": { "x": 10.04, "y": -0.94, "rotation": 55.18, "width": 16, "height": 23 }
 		},
 		"side_foreArmRight": {
 			"gretel/side/foreArmRight": { "x": 35.39, "y": 1.94, "rotation": 115.77, "width": 44, "height": 70 }
 		},
-		"back_forearmLeft": {
-			"gretel/back/forearmLeft": { "x": 12.25, "y": -2.89, "rotation": 171.51, "width": 36, "height": 16 }
+		"side_shoulderLeft": {
+			"gretel/side/shoulderLeft": { "x": -2.42, "y": 7.22, "rotation": -127.39, "width": 25, "height": 33 }
 		},
 		"front_forearmLeft": {
 			"gretel/front/foreArmLeft": { "x": 25.73, "y": 0.46, "scaleX": 0.966, "scaleY": 0.966, "rotation": 36.56, "width": 49, "height": 42 }
@@ -164,17 +167,14 @@
 		"front_body": {
 			"gretel/front/body": { "x": 8.52, "y": -0.47, "rotation": -89.54, "width": 50, "height": 157 }
 		},
-		"back_shoulderLeft": {
-			"gretel/back/shoulderLeft": { "x": 23.41, "y": 0.1, "scaleX": 0.81, "scaleY": 0.81, "rotation": 178.12, "width": 65, "height": 24 }
-		},
-		"side_shoulderLeft": {
-			"gretel/side/shoulderLeft": { "x": -2.42, "y": 7.22, "rotation": -127.39, "width": 25, "height": 33 }
+		"side_spine": {
+			"gretel/side/body": { "x": 1.89, "y": 7.73, "rotation": -87.54, "width": 44, "height": 139 }
 		},
 		"side_calfRight": {
 			"gretel/side/footRight": { "x": 20.96, "y": -2.74, "rotation": 89.54, "width": 19, "height": 45 }
 		},
-		"side_handLeft": {
-			"gretel/side/handLeft": { "x": 1.23, "y": 1.58, "rotation": 161.11, "width": 21, "height": 13 }
+		"back_shoulderLeft": {
+			"gretel/back/shoulderLeft": { "x": 23.41, "y": 0.1, "scaleX": 0.81, "scaleY": 0.81, "rotation": 178.12, "width": 65, "height": 24 }
 		}
 	},
 	"front": {}

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace HG_Game
 {
-	class PushDoor : ActivityState
+	public class PushDoor : ActivityState
 	{
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;

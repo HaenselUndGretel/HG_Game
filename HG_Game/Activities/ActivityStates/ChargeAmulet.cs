@@ -19,7 +19,6 @@ namespace HG_Game
 		{
 			Progress = new SteppingProgress();
 			ActI = new ActivityInstruction();
-			ActI.SetThumbstickDirBoth(ActivityInstruction.ThumbstickDirection.Up);
 		}
 
 		#region Override Methods
@@ -27,7 +26,8 @@ namespace HG_Game
 		public override Activity GetPossibleActivity(Player pPlayer, Player pOtherPlayer)
 		{
 			if (Conditions.NotHandicapped(pPlayer, Activity.ChargeAmulet) &&
-				Conditions.Contains(pPlayer, rIObj)
+				Conditions.Contains(pPlayer, rIObj) &&
+				Conditions.ActivityNotInUseByOtherPlayer(pOtherPlayer, this)
 				)
 				return Activity.ChargeAmulet;
 			return Activity.None;
@@ -44,36 +44,25 @@ namespace HG_Game
 						Sequences.SetPlayerToIdle(pPlayer);
 						break;
 					}
-					if (Conditions.PlayersAtActionPositions(pPlayer, pOtherPlayer))
+					if (Conditions.PlayerAtActionPosition(pPlayer))
 						++pPlayer.mCurrentState;
 					Sequences.MovePlayerToRightActionPosition(pPlayer);
 					break;
 				case 1:
 					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Charge);
-					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_Amulet_Charge);
+					ActI.SetThumbstickDir(pPlayer, ActivityInstruction.ThumbstickDirection.Up);
+					ActI.SetThumbstickDir(pOtherPlayer, ActivityInstruction.ThumbstickDirection.None);
 					++pPlayer.mCurrentState;
-					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					break;
 				case 2:
 					//-----Amulett hoch halten-----
-					if (pPlayer.GetType() == typeof(Hansel))
-					{
-						Sequences.UpdateActIProgressBoth(Progress, ActI, pPlayer, pOtherPlayer, new Vector2(0, -1));
-						//Sequences.UpdateAnimationStepping(rIObj, Progress.Progress);
-						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
-					}
-					else
-					{
-						Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
-					}
-
+					Sequences.UpdateActIProgress(Progress, ActI, pPlayer, new Vector2(0, -1));
+					Sequences.UpdateAnimationStepping(pPlayer, Progress.Progress);
 					if (Progress.Complete)
 					{
 						Sequences.SetPlayerToIdle(pPlayer);
-						Sequences.SetPlayerToIdle(pOtherPlayer);
 						ActI.SetFadingState(pPlayer, false);
-						ActI.SetFadingState(pOtherPlayer, false);
 						rIObj.ActionRectList.Clear();
 						m2ndState = true;
 					}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InteractiveObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ObjectId>42000</ObjectId>
+  <ObjectId>47000</ObjectId>
   <Position>
     <X>0</X>
     <Y>0</Y>
@@ -18,40 +18,29 @@
   <IsVisible>true</IsVisible>
   <DrawZ>0</DrawZ>
   <NormalZ>0</NormalZ>
-  <Name>clipp_08</Name>
+  <Name>spacer</Name>
   <Height>0</Height>
   <Width>0</Width>
-  <ActionRectList>
-    <Rectangle>
-      <X>-65</X>
-      <Y>-18</Y>
-      <Width>387</Width>
-      <Height>84</Height>
-      <Location>
-        <X>-65</X>
-        <Y>-18</Y>
-      </Location>
-    </Rectangle>
-  </ActionRectList>
+  <ActionRectList />
   <CollisionRectList>
     <Rectangle>
-      <X>-293</X>
-      <Y>-126</Y>
-      <Width>628</Width>
-      <Height>108</Height>
+      <X>-31</X>
+      <Y>-31</Y>
+      <Width>62</Width>
+      <Height>61</Height>
       <Location>
-        <X>-293</X>
-        <Y>-126</Y>
+        <X>-31</X>
+        <Y>-31</Y>
       </Location>
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>145</X>
-    <Y>15</Y>
+    <X>0</X>
+    <Y>0</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>199</X>
-    <Y>5</Y>
+    <X>0</X>
+    <Y>0</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

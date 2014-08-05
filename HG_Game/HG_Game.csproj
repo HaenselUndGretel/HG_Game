@@ -89,6 +89,7 @@
     <Compile Include="Hardcoded.cs" />
     <Compile Include="Logic\EnemyHandler.cs" />
     <Compile Include="Logic\EventHandler.cs" />
+    <Compile Include="Logic\LightHandler.cs" />
     <Compile Include="Logic\SoundHandler.cs" />
     <Compile Include="Logic\TemperatureHandler.cs" />
     <Compile Include="Scenes\Game\Cheats.cs" />

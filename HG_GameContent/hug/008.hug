@@ -43,7 +43,56 @@
   </Waypoints>
   <BackgroundSprites />
   <InteractiveObjects />
-  <Collectables />
+  <Collectables>
+    <Collectable xsi:type="Amulet">
+      <ObjectId>5</ObjectId>
+      <Position>
+        <X>685</X>
+        <Y>1045</Y>
+      </Position>
+      <CollisionBox>
+        <X>635</X>
+        <Y>945</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>635</X>
+          <Y>945</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1045</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Name>amulet</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList />
+      <CollisionRectList>
+        <Rectangle>
+          <X>653</X>
+          <Y>1014</Y>
+          <Width>62</Width>
+          <Height>63</Height>
+          <Location>
+            <X>653</X>
+            <Y>1014</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>685</X>
+        <Y>1045</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>685</X>
+        <Y>1045</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+      <CollectableId>-1</CollectableId>
+      <ShowTextureName />
+      <IsHidden>false</IsHidden>
+    </Collectable>
+  </Collectables>
   <Lights />
   <Events />
   <SceneAmbientLight>

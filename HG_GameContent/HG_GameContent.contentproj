@@ -782,20 +782,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Content Include="sfx\collectable01.mp3">
-      <Name>collectable01</Name>
+    <Compile Include="gfx\ShowTexture1.png">
+      <Name>ShowTexture1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ShowTexture2.png">
+      <Name>ShowTexture2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\ShowTexture3.png">
+      <Name>ShowTexture3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="sfx\collectable3.mp3">
+      <Name>collectable3</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Content Include="sfx\collectable1.mp3">
+      <Name>collectable1</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sfx\collectable02.mp3">
-      <Name>collectable02</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sfx\collectable03.mp3">
-      <Name>collectable03</Name>
+    <Content Include="sfx\collectable2.mp3">
+      <Name>collectable2</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1313,6 +1328,30 @@
     <Compile Include="spine\platform.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>platform</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Content Include="spine\amulet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>amulet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Content>
+    <Compile Include="spine\collectable1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\collectable2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\collectable3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable3</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -2144,6 +2183,104 @@
     <Content Include="spine\platform.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>platform</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\amulet.iObj">
+      <Name>amulet</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\collectable1.iObj">
+      <Name>collectable1</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\collectable2.iObj">
+      <Name>collectable2</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\collectable3.iObj">
+      <Name>collectable3</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\gretel.iObj">
+      <Name>gretel</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iObj\hansel.iObj">
+      <Name>hansel</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\amulet.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>amulet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\amulet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>amulet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\amulet.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>amulet</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable1.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable1</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable1</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable1.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable1</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable2.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable2</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable2</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable2.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable2</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable3.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable3</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable3</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\collectable3.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>collectable3</Name>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

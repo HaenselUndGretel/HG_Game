@@ -1,0 +1,29 @@
+{
+"skeleton": { "spine": "1.9.14", "hash": "G4RgafpMhGSGYX0Qtr6kUX0eBxE", "width": 64, "height": 64 },
+"bones": [
+	{ "name": "root" }
+],
+"ik": [],
+"slots": [
+	{ "name": "spacer", "bone": "root", "attachment": "img/spacer" }
+],
+"skins": {
+	"default": {
+		"spacer": {
+			"img/spacer": { "width": 64, "height": 64 }
+		}
+	},
+	"front": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"spacer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	}
+}
+}

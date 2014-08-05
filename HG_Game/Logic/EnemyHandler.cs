@@ -18,9 +18,9 @@ namespace HG_Game
 
 		public void Update(Savegame pSavegame)
 		{
-			if (GameReferenzes.SceneID == 9)
+			if (GameReferenzes.SceneID == Hardcoded.Scene_Amulet_ColWitch)
 			{
-				if (pSavegame.Scenes[8].Collectables.Count == 0)
+				if (pSavegame.Scenes[Hardcoded.Scene_Amulet_Col].Collectables.Count == 0)
 				{
 					bool WitchAvidable = false;
 					foreach (Enemy e in GameReferenzes.Level.Enemies)

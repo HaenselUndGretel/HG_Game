@@ -208,6 +208,18 @@ namespace HG_Game
 			mLogic.ActivityHandler.DrawActivityInstruction(mSpriteBatch, mHansel, mGretel);
 			mSpriteBatch.End();
 
+			// Laterne Tweak
+
+			Texture2D circle = CreateCircle(250);
+			Texture2D FluchtRadius = CreateCircle(550);
+
+			mSpriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);
+			mSpriteBatch.Draw(circle, mHansel.Position - new Vector2(250, 250), Color.Yellow * 0.8f);
+			mSpriteBatch.Draw(FluchtRadius, mHansel.Position - new Vector2(550, 550), Color.DarkRed);
+			mSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), "Hansel", mHansel.Position, Color.Black);
+			mSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), "Gretel", mGretel.Position, Color.Black);
+			mSpriteBatch.End();
+
 			//--------------------SpriteBatch ScreenSpace(PauseMenu & SceneSwitch)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 			//Render SceneSwitch darken
@@ -271,6 +283,33 @@ namespace HG_Game
 		}
 
 		#endregion
+
+		public Texture2D CreateCircle(int radius)
+		{
+			int outerRadius = radius * 2 + 2; // So circle doesn't go out of bounds
+			Texture2D texture = new Texture2D(EngineSettings.Graphics.GraphicsDevice, outerRadius, outerRadius);
+
+			Color[] data = new Color[outerRadius * outerRadius];
+
+			// Colour the entire texture transparent first.
+			for (int i = 0; i < data.Length; i++)
+				data[i] = Color.Transparent;
+
+			// Work out the minimum step necessary using trigonometry + sine approximation.
+			double angleStep = 1f / radius;
+
+			for (double angle = 0; angle < Math.PI * 2; angle += angleStep)
+			{
+				// Use the parametric definition of a circle: http://en.wikipedia.org/wiki/Circle#Cartesian_coordinates
+				int x = (int)Math.Round(radius + radius * Math.Cos(angle));
+				int y = (int)Math.Round(radius + radius * Math.Sin(angle));
+
+				data[y * outerRadius + x + 1] = Color.White;
+			}
+
+			texture.SetData(data);
+			return texture;
+		}
 
 		#region Methods
 

@@ -10,7 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
+  <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
   <MoveArea>
     <Rectangle>
       <X>0</X>
@@ -449,7 +449,7 @@
         <X>821</X>
         <Y>1518</Y>
       </ActionPosition2>
-      <ActionId>11</ActionId>
+      <ActionId>7</ActionId>
     </InteractiveObject>
   </InteractiveObjects>
   <Collectables />

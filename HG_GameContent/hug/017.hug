@@ -191,7 +191,7 @@
       <DrawZ>0</DrawZ>
       <NormalZ>0</NormalZ>
       <DestinationScene>18</DestinationScene>
-      <DestinationWaypoint>0</DestinationWaypoint>
+      <DestinationWaypoint>2</DestinationWaypoint>
       <OneWay>false</OneWay>
       <MovementOnEnter>
         <X>-1</X>
@@ -239,7 +239,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0998528451</Depth>
+      <Depth>0.0560248047</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -283,7 +283,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0998528451</Depth>
+      <Depth>0.0560248047</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -327,7 +327,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>10</Intensity>
-      <Depth>0.0998528451</Depth>
+      <Depth>0.0560248047</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

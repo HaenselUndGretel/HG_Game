@@ -68,7 +68,8 @@ namespace HG_Game
 			State = EndState.Setup;
 			mMother = new Mother();
 
-			Background = new Sprite("018");
+			Background = new Sprite();
+			Background.TextureName = "018";
 
 			VisibilityPlayer = new SteppingProgress(2);
 			VisibilityPlayer.Reset(true);

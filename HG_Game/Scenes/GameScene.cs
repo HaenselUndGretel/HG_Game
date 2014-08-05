@@ -85,6 +85,7 @@ namespace HG_Game
 			mPauseMenu = new PauseMenu();
 
 			//EndScene
+			DasEnde = new EndScene();
 			DasEnde.Initialize();
 
 			FmodMediaPlayer.FadingSpeed = 1 / 90.0f;
@@ -181,7 +182,7 @@ namespace HG_Game
 					}
 					break;
 				case GameState.EndScene:
-					DasEnde.Update();
+					DasEnde.Update(mCamera);
 					break;
 			}
 		}
@@ -190,7 +191,7 @@ namespace HG_Game
 		{
 			if (mState == GameState.EndScene)
 			{
-				DasEnde.Draw(mRenderer, mSpriteBatch);
+				DasEnde.Draw(mRenderer, mSpriteBatch, mCamera);
 				return;
 			}
 			//--------------------Prepare Draw--------------------

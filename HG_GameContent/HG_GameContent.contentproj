@@ -804,6 +804,26 @@
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="gfx\Backgrounds\018.png">
+      <Name>018</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\Backgrounds\018AO.png">
+      <Name>018AO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\Backgrounds\018Depth.png">
+      <Name>018Depth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="gfx\Backgrounds\018Normal.png">
+      <Name>018Normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="sfx\collectable1.mp3">
       <Name>collectable1</Name>
       <Importer>Mp3Importer</Importer>
@@ -1331,7 +1351,7 @@
       <Name>platform</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-	</Compile>
+    </Compile>
     <Compile Include="spine\gretel.png">
       <Name>gretel</Name>
       <Importer>TextureImporter</Importer>
@@ -1463,6 +1483,12 @@
       <Name>slipthroughrock_7_right</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\stepmother.png">
+      <Name>stepmother</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Content Include="spine\wolf.atlas">
       <Name>wolf</Name>
@@ -2194,7 +2220,7 @@
     <Content Include="spine\platform.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>platform</Name>
-	</Content>
+    </Content>
     <Content Include="spine\gretel.atlas">
       <Name>gretel</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -2332,6 +2358,20 @@
     <Content Include="spine\collectable3.settings">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>collectable3</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\stepmother.atlas">
+      <Name>stepmother</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\stepmother.json">
+      <Name>stepmother</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="spine\stepmother.settings">
+      <Name>stepmother</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

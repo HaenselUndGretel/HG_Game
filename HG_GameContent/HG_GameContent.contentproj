@@ -28,6 +28,7 @@
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="font\font.spritefont">
@@ -1902,22 +1903,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="spine\witch.atlas">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>witch</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="spine\witch.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>witch</Name>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="spine\witch.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>witch.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Name>witch</Name>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -2167,6 +2160,12 @@
     </Content>
     <Content Include="iObj\hansel.iObj">
       <Name>hansel</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\witch.settings">
+      <Name>witch</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

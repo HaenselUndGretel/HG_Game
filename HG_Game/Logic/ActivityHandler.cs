@@ -181,7 +181,7 @@ namespace HG_Game
 
 			//AmuletStates updaten
 			UpdateAmulet(pSavegame, pScene);
-			UpdateDoor();
+			UpdateDoor(pSavegame);
 			
 
 			ActionInfoFading.Update();

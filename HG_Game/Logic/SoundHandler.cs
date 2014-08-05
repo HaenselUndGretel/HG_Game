@@ -32,7 +32,7 @@ namespace HG_Game
 		{
 			TimeInScene += EngineSettings.Time.ElapsedGameTime.Milliseconds;
 
-			if (TimeInScene > 30000 & !SecondChannelPlay && GameReferenzes.SceneID != 0 )
+			if (TimeInScene > 10000 & !SecondChannelPlay && GameReferenzes.SceneID != 0 )
 			{
 				FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
 				SecondChannelPlay = true;

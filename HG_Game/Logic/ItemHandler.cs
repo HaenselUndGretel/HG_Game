@@ -2,6 +2,7 @@
 using KryptonEngine;
 using KryptonEngine.Entities;
 using KryptonEngine.FModAudio;
+using KryptonEngine.HG_Data;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Spine;
@@ -104,21 +105,25 @@ namespace HG_Game
 
 		protected void CollectCollectables(Savegame pSavegame, SceneData pScene, Hansel pHansel, Gretel pGretel, ref GameScene.GameState pGameState)
 		{
+			bool isCollected = false;
+			Collectable delCol = null;
+
 			foreach (Collectable col in pScene.Collectables)
 			{
 				if (col.IsVisible)
 				{
 					if (col.CollisionBox.Intersects(pHansel.CollisionBox))
 					{
-						pSavegame.Collectables.Add(col);
-						pScene.Collectables.Remove(col);
+						isCollected = true;
+						delCol = col;
 						//Laterne einsammeln
 						if (col.GetType() == typeof(Lantern))
 							pHansel.Lantern = true;
-						else
+						else if(col.GetType() != typeof(Amulet))
+						{
 							pGameState = GameScene.GameState.CollectableInfo;
-						//FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
-						return;
+							FmodMediaPlayer.Instance.AddSong("collectable" + col.CollectableId, 0.8f);
+						}
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox) ||
 						( //Collectable bei LegUpGrab einsammeln
@@ -130,17 +135,24 @@ namespace HG_Game
 						)
 						)
 					{
-						pSavegame.Collectables.Add(col);
-						pScene.Collectables.Remove(col);
+						delCol = col;
+						isCollected = true;
 						//Laterne einsammeln
 						if (col.GetType() == typeof(Lantern))
 							pGretel.Lantern = true;
-						else
+						else if (col.GetType() != typeof(Amulet))
+						{
 							pGameState = GameScene.GameState.CollectableInfo;
-						//FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
-						return;
+							FmodMediaPlayer.Instance.AddSong("collectable" + col.CollectableId, 0.8f);
+						}
 					}
 				}
+			}
+			if (isCollected)
+			{
+				pSavegame.Collectables.Add(delCol);
+				pScene.Collectables.Remove(delCol);
+				pScene.RenderList.Remove(delCol);
 			}
 		}
 

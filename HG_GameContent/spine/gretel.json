@@ -1,0 +1,508 @@
+{
+"skeleton": { "spine": "1.9.15", "hash": "P8HR7YJpP+4lxWYDWZg7n+AGwOM", "width": 228.06, "height": 238.42 },
+"bones": [
+	{ "name": "root", "x": 893.56 },
+	{ "name": "backRoot", "parent": "root" },
+	{ "name": "frontRoot", "parent": "root" },
+	{ "name": "sideRoot", "parent": "root" },
+	{ "name": "back_hip", "parent": "backRoot", "x": -1.31, "y": 80.53 },
+	{ "name": "hip", "parent": "frontRoot", "x": -1.31, "y": 80.53 },
+	{ "name": "hipSide", "parent": "sideRoot", "x": -1.31, "y": 80.53 },
+	{ "name": "back_legLeft", "parent": "back_hip", "length": 45.81, "x": -9.07, "y": -0.53, "rotation": -89.54 },
+	{ "name": "back_rightLeg", "parent": "back_hip", "length": 46.37, "x": 8.25, "y": -0.63, "rotation": -88.64 },
+	{ "name": "back_spine", "parent": "back_hip", "length": 54.69, "x": -0.08, "y": 0.8, "rotation": 89.54 },
+	{ "name": "legLeft", "parent": "hip", "length": 46.37, "x": 8.25, "y": -0.63, "rotation": -88.64 },
+	{ "name": "legRight", "parent": "hip", "length": 45.81, "x": -9.07, "y": -0.53, "rotation": -89.54 },
+	{ "name": "side_legLeft", "parent": "hipSide", "length": 43.94, "x": -0.57, "y": -2.46, "rotation": -93.6 },
+	{ "name": "side_legRight", "parent": "hipSide", "length": 44.27, "x": -6.64, "y": 6.75, "rotation": -90.9 },
+	{ "name": "side_spine", "parent": "hipSide", "length": 66.23, "x": 1.9, "y": 1.46, "rotation": 87.54 },
+	{ "name": "spine", "parent": "hip", "length": 54.69, "x": -0.08, "y": 0.8, "rotation": 89.54 },
+	{ "name": "back_calfLeft", "parent": "back_legLeft", "length": 33.65, "x": 46.26, "y": -0.18 },
+	{ "name": "back_calfRight", "parent": "back_rightLeg", "length": 32.39, "x": 46.37, "y": 0.17, "rotation": -2.25 },
+	{ "name": "back_head", "parent": "back_spine", "length": 86.33, "x": 55.14, "y": 0.42, "rotation": -0.25 },
+	{ "name": "back_shoulderLeft", "parent": "back_spine", "length": 49.02, "x": 52.57, "y": 17.22, "rotation": 105.41 },
+	{ "name": "back_shoulderRight", "parent": "back_spine", "length": 44.51, "x": 53.62, "y": -21.87, "rotation": -105.58 },
+	{ "name": "calfLeft", "parent": "legLeft", "length": 32.39, "x": 46.37, "y": 0.17, "rotation": -2.25 },
+	{ "name": "calfRight", "parent": "legRight", "length": 33.65, "x": 46.26, "y": -0.18 },
+	{ "name": "head", "parent": "spine", "length": 86.33, "x": 55.14, "y": 0.42, "rotation": -0.25 },
+	{ "name": "shoulderLeft", "parent": "spine", "length": 51.33, "x": 51.22, "y": -19.16, "rotation": -104.64 },
+	{ "name": "shoulderRight", "parent": "spine", "length": 49.02, "x": 50.43, "y": 17.57, "rotation": 102.43 },
+	{ "name": "side_calfLeft", "parent": "side_legLeft", "length": 32.39, "x": 43.84, "y": -0.39, "rotation": 2.7 },
+	{ "name": "side_calfRight", "parent": "side_legRight", "length": 33.65, "x": 44.39, "y": 0.2, "rotation": 1.35 },
+	{ "name": "side_head", "parent": "side_spine", "length": 58.08, "x": 65.7, "y": 1.48, "rotation": -1.29 },
+	{ "name": "side_shoulderLeft", "parent": "side_spine", "length": 9.68, "x": 60.32, "y": 8.18, "rotation": 39.85 },
+	{ "name": "side_shoulderRight", "parent": "side_spine", "length": 39.33, "x": 43.08, "y": 2.85, "rotation": 171.81 },
+	{ "name": "back_forearmLeft", "parent": "back_shoulderLeft", "length": 29.31, "x": 48.99, "y": -0.84, "rotation": -61.8 },
+	{ "name": "back_forearmRight", "parent": "back_shoulderRight", "length": 27.53, "x": 44.44, "y": 0.45, "rotation": 41.23 },
+	{ "name": "foreArmLeft", "parent": "shoulderLeft", "length": 50.15, "x": 49.15, "y": 0.72, "rotation": -30.36 },
+	{ "name": "foreArmRight", "parent": "shoulderRight", "length": 49.81, "x": 48.47, "y": 0.65, "rotation": 33.14 },
+	{ "name": "side_foreArmRight", "parent": "side_shoulderRight", "length": 71.64, "x": 40.98, "y": 1.45, "rotation": -56.87 },
+	{ "name": "side_forearmLeft", "parent": "side_shoulderLeft", "length": 27.12, "x": 7.85, "y": 1.08, "rotation": 69.44 },
+	{ "name": "back_handLeft", "parent": "back_forearmLeft", "length": 6.95, "x": 29.21, "y": 0.41, "rotation": -11.72 },
+	{ "name": "back_handRight", "parent": "back_forearmRight", "length": 9.19, "x": 27.93, "y": 0.24, "rotation": 7.62 },
+	{ "name": "handLeft", "parent": "foreArmLeft", "length": 19.51, "x": 50.31, "y": -1.39, "rotation": -7.8 },
+	{ "name": "handRight", "parent": "foreArmRight", "length": 19.44, "x": 51.1, "y": 0.24, "rotation": 7.29 },
+	{ "name": "side_handLeft", "parent": "side_forearmLeft", "length": 9.26, "x": 26.82, "y": -0.07, "rotation": 2.03 },
+	{ "name": "side_handRight", "parent": "side_foreArmRight", "length": 26.65, "x": 71.46, "y": -0.37, "rotation": -15.31 }
+],
+"ik": [],
+"slots": [
+	{ "name": "back_head", "bone": "back_head", "attachment": "gretel/back/head" },
+	{ "name": "back_calfRight", "bone": "back_calfRight", "attachment": "gretel/back/footRight" },
+	{ "name": "back_rightLeg", "bone": "back_rightLeg" },
+	{ "name": "back_calfLeft", "bone": "back_calfLeft", "attachment": "gretel/back/footLeft" },
+	{ "name": "back_legLeft", "bone": "back_legLeft" },
+	{ "name": "back_handRight", "bone": "back_handRight", "attachment": "gretel/back/handRight" },
+	{ "name": "back_forearmRight", "bone": "back_forearmRight", "attachment": "gretel/back/foreArmright" },
+	{ "name": "back_shoulderRight", "bone": "back_shoulderRight", "attachment": "gretel/back/shoulderRight" },
+	{ "name": "back_handLeft", "bone": "back_handLeft", "attachment": "gretel/back/handLeft" },
+	{ "name": "back_forearmLeft", "bone": "back_forearmLeft", "attachment": "gretel/back/forearmLeft" },
+	{ "name": "back_shoulderLeft", "bone": "back_shoulderLeft", "attachment": "gretel/back/shoulderLeft" },
+	{ "name": "back_spine", "bone": "back_spine", "attachment": "gretel/back/body" },
+	{ "name": "front_calfLeft", "bone": "calfLeft", "attachment": "gretel/front/FootLeft" },
+	{ "name": "front_legLeft", "bone": "legLeft" },
+	{ "name": "front_calfRight", "bone": "calfRight", "attachment": "gretel/front/FootRight" },
+	{ "name": "front_legRight", "bone": "legRight" },
+	{ "name": "front_handLeft", "bone": "handLeft", "attachment": "gretel/front/handLeft" },
+	{ "name": "front_forearmLeft", "bone": "foreArmLeft", "attachment": "gretel/front/foreArmLeft" },
+	{ "name": "front_shoulderLeft", "bone": "shoulderLeft", "attachment": "gretel/front/shoulderLeft" },
+	{ "name": "front_handRight", "bone": "handRight", "attachment": "gretel/front/handRight" },
+	{ "name": "front_forearmRight", "bone": "foreArmRight", "attachment": "gretel/front/foreArmRight" },
+	{ "name": "front_shoulderRight", "bone": "shoulderRight", "attachment": "gretel/front/shoulderRight" },
+	{ "name": "front_body", "bone": "spine", "attachment": "gretel/front/body" },
+	{ "name": "front_head", "bone": "head", "attachment": "gretel/front/head" },
+	{ "name": "side_legRight", "bone": "side_legRight" },
+	{ "name": "side_calfRight", "bone": "side_calfRight", "attachment": "gretel/side/footRight" },
+	{ "name": "side_calfLeft", "bone": "side_calfLeft", "attachment": "gretel/side/footLeft" },
+	{ "name": "side_legLeft", "bone": "side_legLeft" },
+	{ "name": "side_handLeft", "bone": "side_handLeft", "attachment": "gretel/side/handLeft" },
+	{ "name": "side_forearmLeft", "bone": "side_forearmLeft", "attachment": "gretel/side/foreArmLeft" },
+	{ "name": "side_shoulderLeft", "bone": "side_shoulderLeft", "attachment": "gretel/side/shoulderLeft" },
+	{ "name": "side_spine", "bone": "side_spine", "attachment": "gretel/side/body" },
+	{ "name": "side_handRight", "bone": "side_handRight", "attachment": "gretel/side/handRight" },
+	{ "name": "side_shoulderRight", "bone": "side_shoulderRight", "attachment": "gretel/side/shoulderRight" },
+	{ "name": "side_foreArmRight", "bone": "side_foreArmRight", "attachment": "gretel/side/foreArmRight" },
+	{ "name": "side_head", "bone": "side_head", "attachment": "gretel/side/head" }
+],
+"skins": {
+	"default": {
+		"back_shoulderRight": {
+			"gretel/back/shoulderRight": { "x": 21.12, "y": -0.06, "scaleX": 0.81, "scaleY": 0.81, "rotation": 1.52, "width": 66, "height": 23 }
+		},
+		"side_handRight": {
+			"gretel/side/handRight": { "x": 13.25, "y": -2.49, "rotation": 110.13, "width": 24, "height": 32 }
+		},
+		"front_shoulderRight": {
+			"gretel/front/shoulderRight": { "x": 23.08, "y": 1.09, "scaleX": 0.81, "scaleY": 0.81, "rotation": 172.36, "width": 63, "height": 29 }
+		},
+		"side_head": {
+			"gretel/side/head": { "x": 17.86, "y": 7.43, "rotation": -86.24, "width": 90, "height": 129 }
+		},
+		"back_spine": {
+			"gretel/back/body": { "x": 2.98, "y": -1.17, "rotation": -89.54, "width": 55, "height": 134 }
+		},
+		"back_calfRight": {
+			"gretel/back/footRight": { "x": 12.32, "y": 0.1, "rotation": 90.9, "width": 11, "height": 46 }
+		},
+		"front_calfRight": {
+			"gretel/front/FootRight": { "x": 9.82, "y": -1.08, "rotation": 89.54, "width": 11, "height": 52 }
+		},
+		"side_shoulderRight": {
+			"gretel/side/shoulderRight": { "x": 23.34, "y": -0.44, "rotation": 100.63, "width": 30, "height": 56 }
+		},
+		"front_calfLeft": {
+			"gretel/front/FootLeft": { "x": 10.13, "y": -9.13, "rotation": 90.9, "width": 30, "height": 51 }
+		},
+		"back_calfLeft": {
+			"gretel/back/footLeft": { "x": 12.74, "y": -0.17, "rotation": 89.54, "width": 11, "height": 46 }
+		},
+		"front_handRight": {
+			"gretel/front/handRight": { "x": 7.91, "y": 1.45, "rotation": 125.53, "width": 17, "height": 23 }
+		},
+		"side_spine": {
+			"gretel/side/body": { "x": 1.89, "y": 7.73, "rotation": -87.54, "width": 44, "height": 139 }
+		},
+		"front_shoulderLeft": {
+			"gretel/front/shoulderLeft": { "x": 26.33, "y": -0.38, "scaleX": 0.811, "scaleY": 0.811, "rotation": 6.02, "width": 63, "height": 28 }
+		},
+		"side_forearmLeft": {
+			"gretel/side/foreArmLeft": { "x": 18.49, "y": 0.62, "rotation": 163.15, "width": 22, "height": 12 }
+		},
+		"back_handLeft": {
+			"gretel/back/handLeft": { "x": 2.06, "y": 3.11, "rotation": -164.01, "width": 14, "height": 18 }
+		},
+		"back_head": {
+			"gretel/back/head": { "x": 37.41, "y": -1.15, "rotation": -89.29, "width": 76, "height": 123 }
+		},
+		"back_handRight": {
+			"gretel/back/handRight": { "y": -1.72, "rotation": -10.98, "width": 13, "height": 17 }
+		},
+		"side_calfLeft": {
+			"gretel/side/footLeft": { "x": 15.92, "y": -3.82, "rotation": 90.9, "width": 17, "height": 43 }
+		},
+		"front_handLeft": {
+			"gretel/front/handLeft": { "x": 10.04, "y": -0.94, "rotation": 55.18, "width": 16, "height": 23 }
+		},
+		"side_foreArmRight": {
+			"gretel/side/foreArmRight": { "x": 35.39, "y": 1.94, "rotation": 115.77, "width": 44, "height": 70 }
+		},
+		"back_forearmLeft": {
+			"gretel/back/forearmLeft": { "x": 12.25, "y": -2.89, "rotation": 171.51, "width": 36, "height": 16 }
+		},
+		"front_forearmLeft": {
+			"gretel/front/foreArmLeft": { "x": 25.73, "y": 0.46, "scaleX": 0.966, "scaleY": 0.966, "rotation": 36.56, "width": 49, "height": 42 }
+		},
+		"front_forearmRight": {
+			"gretel/front/foreArmRight": { "x": 22.11, "y": 1.63, "rotation": 139.01, "width": 49, "height": 43 }
+		},
+		"back_forearmRight": {
+			"gretel/back/foreArmright": { "x": 10.98, "y": 1.61, "rotation": 12.59, "width": 36, "height": 17 }
+		},
+		"front_head": {
+			"gretel/front/head": { "x": 35.95, "y": -1.32, "rotation": -89.29, "width": 67, "height": 122 }
+		},
+		"front_body": {
+			"gretel/front/body": { "x": 8.52, "y": -0.47, "rotation": -89.54, "width": 50, "height": 157 }
+		},
+		"back_shoulderLeft": {
+			"gretel/back/shoulderLeft": { "x": 23.41, "y": 0.1, "scaleX": 0.81, "scaleY": 0.81, "rotation": 178.12, "width": 65, "height": 24 }
+		},
+		"side_shoulderLeft": {
+			"gretel/side/shoulderLeft": { "x": -2.42, "y": 7.22, "rotation": -127.39, "width": 25, "height": 33 }
+		},
+		"side_calfRight": {
+			"gretel/side/footRight": { "x": 20.96, "y": -2.74, "rotation": 89.54, "width": 19, "height": 45 }
+		},
+		"side_handLeft": {
+			"gretel/side/handLeft": { "x": 1.23, "y": 1.58, "rotation": 161.11, "width": 21, "height": 13 }
+		}
+	},
+	"front": {}
+},
+"animations": {
+	"BalanceLeaveUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"amuletCharge": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"amuletUse": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceEnterDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceEnterSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceEnterUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceLeaveDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceLeaveSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"balanceUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"idleShiver": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"knockOverTree": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"legUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"legUpRaise": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pullDoorDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pullDoorSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pullDoorUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pushDoorDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pushDoorSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pushDoorUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pushRockDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pushRockSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"pushRockUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"slipAway": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"slipBack": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"walkDown": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"walkDownShiver": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"walkSide": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"walkUp": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"walkUpShiver": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"wellEnter": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"wellHang": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	},
+	"wellIdle": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 553.42, "y": 0 }
+				]
+			}
+		}
+	},
+	"wellLeave": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -893.56, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,258 @@
+
+hansel.png
+size: 268,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+img/back/Body
+  rotate: false
+  xy: 89, 20
+  size: 56, 66
+  orig: 56, 66
+  offset: 0, 0
+  index: -1
+img/back/ShoulderRight
+  rotate: false
+  xy: 146, 5
+  size: 80, 43
+  orig: 80, 43
+  offset: 0, 0
+  index: -1
+img/back/footLeft
+  rotate: false
+  xy: 237, 24
+  size: 9, 35
+  orig: 9, 35
+  offset: 0, 0
+  index: -1
+img/back/footRight
+  rotate: false
+  xy: 227, 23
+  size: 9, 36
+  orig: 9, 36
+  offset: 0, 0
+  index: -1
+img/back/foreArmLeft
+  rotate: false
+  xy: 239, 64
+  size: 24, 19
+  orig: 24, 19
+  offset: 0, 0
+  index: -1
+img/back/foreArmRight
+  rotate: false
+  xy: 245, 171
+  size: 23, 20
+  orig: 23, 20
+  offset: 0, 0
+  index: -1
+img/back/handLeft
+  rotate: false
+  xy: 185, 52
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+img/back/handRight
+  rotate: false
+  xy: 251, 200
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+img/back/head
+  rotate: false
+  xy: 1, 61
+  size: 70, 107
+  orig: 70, 107
+  offset: 0, 0
+  index: -1
+img/back/shoulderLeft
+  rotate: false
+  xy: 1, 1
+  size: 52, 17
+  orig: 52, 17
+  offset: 0, 0
+  index: -1
+img/back/thighLeft
+  rotate: false
+  xy: 251, 212
+  size: 17, 56
+  orig: 17, 56
+  offset: 0, 0
+  index: -1
+img/back/thighRight
+  rotate: false
+  xy: 143, 107
+  size: 24, 57
+  orig: 24, 57
+  offset: 0, 0
+  index: -1
+img/front/HandLeft
+  rotate: false
+  xy: 247, 23
+  size: 21, 19
+  orig: 21, 19
+  offset: 0, 0
+  index: -1
+img/front/body
+  rotate: false
+  xy: 195, 192
+  size: 55, 76
+  orig: 55, 76
+  offset: 0, 0
+  index: -1
+img/front/footLeft
+  rotate: false
+  xy: 160, 170
+  size: 34, 98
+  orig: 34, 98
+  offset: 0, 0
+  index: -1
+img/front/footRight
+  rotate: false
+  xy: 72, 19
+  size: 16, 149
+  orig: 16, 149
+  offset: 0, 0
+  index: -1
+img/front/foreArmLeft
+  rotate: false
+  xy: 189, 119
+  size: 40, 41
+  orig: 40, 41
+  offset: 0, 0
+  index: -1
+img/front/foreArmRight
+  rotate: false
+  xy: 185, 64
+  size: 39, 42
+  orig: 39, 42
+  offset: 0, 0
+  index: -1
+img/front/handRight
+  rotate: false
+  xy: 247, 43
+  size: 21, 20
+  orig: 21, 20
+  offset: 0, 0
+  index: -1
+img/front/head
+  rotate: false
+  xy: 90, 165
+  size: 69, 103
+  orig: 69, 103
+  offset: 0, 0
+  index: -1
+img/front/shoulderLeft
+  rotate: false
+  xy: 195, 161
+  size: 49, 30
+  orig: 49, 30
+  offset: 0, 0
+  index: -1
+img/front/shoulderRight
+  rotate: false
+  xy: 54, 1
+  size: 49, 17
+  orig: 49, 17
+  offset: 0, 0
+  index: -1
+img/front/thighLeft
+  rotate: false
+  xy: 166, 49
+  size: 18, 57
+  orig: 18, 57
+  offset: 0, 0
+  index: -1
+img/front/thighRight
+  rotate: false
+  xy: 146, 49
+  size: 19, 57
+  orig: 19, 57
+  offset: 0, 0
+  index: -1
+img/side/ShoulderLeft
+  rotate: false
+  xy: 225, 60
+  size: 13, 46
+  orig: 13, 46
+  offset: 0, 0
+  index: -1
+img/side/body
+  rotate: false
+  xy: 89, 87
+  size: 53, 77
+  orig: 53, 77
+  offset: 0, 0
+  index: -1
+img/side/footLeft
+  rotate: false
+  xy: 59, 25
+  size: 12, 35
+  orig: 12, 35
+  offset: 0, 0
+  index: -1
+img/side/footRight
+  rotate: false
+  xy: 251, 135
+  size: 12, 35
+  orig: 12, 35
+  offset: 0, 0
+  index: -1
+img/side/foreArmLeft
+  rotate: false
+  xy: 1, 19
+  size: 57, 41
+  orig: 57, 41
+  offset: 0, 0
+  index: -1
+img/side/foreArmRight
+  rotate: false
+  xy: 189, 107
+  size: 40, 11
+  orig: 40, 11
+  offset: 0, 0
+  index: -1
+img/side/handLeft
+  rotate: false
+  xy: 239, 84
+  size: 29, 22
+  orig: 29, 22
+  offset: 0, 0
+  index: -1
+img/side/handRight
+  rotate: false
+  xy: 202, 56
+  size: 18, 7
+  orig: 18, 7
+  offset: 0, 0
+  index: -1
+img/side/head
+  rotate: false
+  xy: 1, 169
+  size: 88, 99
+  orig: 88, 99
+  offset: 0, 0
+  index: -1
+img/side/shoulderRight
+  rotate: false
+  xy: 251, 114
+  size: 12, 20
+  orig: 12, 20
+  offset: 0, 0
+  index: -1
+img/side/thighLeft
+  rotate: false
+  xy: 168, 112
+  size: 20, 57
+  orig: 20, 57
+  offset: 0, 0
+  index: -1
+img/side/thighRight
+  rotate: false
+  xy: 230, 107
+  size: 20, 53
+  orig: 20, 53
+  offset: 0, 0
+  index: -1

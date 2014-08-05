@@ -1,0 +1,216 @@
+
+gretel.png
+size: 490,172
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gretel/back/body
+  rotate: false
+  xy: 97, 38
+  size: 55, 134
+  orig: 55, 134
+  offset: 0, 0
+  index: -1
+gretel/back/footLeft
+  rotate: false
+  xy: 297, 2
+  size: 11, 46
+  orig: 11, 46
+  offset: 0, 0
+  index: -1
+gretel/back/footRight
+  rotate: false
+  xy: 309, 2
+  size: 11, 46
+  orig: 11, 46
+  offset: 0, 0
+  index: -1
+gretel/back/foreArmright
+  rotate: false
+  xy: 451, 98
+  size: 36, 17
+  orig: 36, 17
+  offset: 0, 0
+  index: -1
+gretel/back/forearmLeft
+  rotate: false
+  xy: 231, 1
+  size: 36, 16
+  orig: 36, 16
+  offset: 0, 0
+  index: -1
+gretel/back/handLeft
+  rotate: false
+  xy: 426, 16
+  size: 14, 18
+  orig: 14, 18
+  offset: 0, 0
+  index: -1
+gretel/back/handRight
+  rotate: false
+  xy: 477, 80
+  size: 13, 17
+  orig: 13, 17
+  offset: 0, 0
+  index: -1
+gretel/back/head
+  rotate: false
+  xy: 244, 49
+  size: 76, 123
+  orig: 76, 123
+  offset: 0, 0
+  index: -1
+gretel/back/shoulderLeft
+  rotate: false
+  xy: 231, 18
+  size: 65, 24
+  orig: 65, 24
+  offset: 0, 0
+  index: -1
+gretel/back/shoulderRight
+  rotate: false
+  xy: 391, 149
+  size: 66, 23
+  orig: 66, 23
+  offset: 0, 0
+  index: -1
+gretel/front/FootLeft
+  rotate: false
+  xy: 446, 46
+  size: 30, 51
+  orig: 30, 51
+  offset: 0, 0
+  index: -1
+gretel/front/FootRight
+  rotate: false
+  xy: 389, 63
+  size: 11, 52
+  orig: 11, 52
+  offset: 0, 0
+  index: -1
+gretel/front/body
+  rotate: false
+  xy: 1, 15
+  size: 50, 157
+  orig: 50, 157
+  offset: 0, 0
+  index: -1
+gretel/front/foreArmLeft
+  rotate: false
+  xy: 401, 106
+  size: 49, 42
+  orig: 49, 42
+  offset: 0, 0
+  index: -1
+gretel/front/foreArmRight
+  rotate: false
+  xy: 341, 6
+  size: 49, 43
+  orig: 49, 43
+  offset: 0, 0
+  index: -1
+gretel/front/handLeft
+  rotate: false
+  xy: 409, 11
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+gretel/front/handRight
+  rotate: false
+  xy: 391, 11
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+gretel/front/head
+  rotate: false
+  xy: 321, 50
+  size: 67, 122
+  orig: 67, 122
+  offset: 0, 0
+  index: -1
+gretel/front/shoulderLeft
+  rotate: false
+  xy: 167, 14
+  size: 63, 28
+  orig: 63, 28
+  offset: 0, 0
+  index: -1
+gretel/front/shoulderRight
+  rotate: false
+  xy: 52, 3
+  size: 63, 29
+  orig: 63, 29
+  offset: 0, 0
+  index: -1
+gretel/side/body
+  rotate: false
+  xy: 52, 33
+  size: 44, 139
+  orig: 44, 139
+  offset: 0, 0
+  index: -1
+gretel/side/footLeft
+  rotate: false
+  xy: 446, 2
+  size: 17, 43
+  orig: 17, 43
+  offset: 0, 0
+  index: -1
+gretel/side/footRight
+  rotate: false
+  xy: 321, 4
+  size: 19, 45
+  orig: 19, 45
+  offset: 0, 0
+  index: -1
+gretel/side/foreArmLeft
+  rotate: false
+  xy: 23, 2
+  size: 22, 12
+  orig: 22, 12
+  offset: 0, 0
+  index: -1
+gretel/side/foreArmRight
+  rotate: false
+  xy: 401, 35
+  size: 44, 70
+  orig: 44, 70
+  offset: 0, 0
+  index: -1
+gretel/side/handLeft
+  rotate: false
+  xy: 1, 1
+  size: 21, 13
+  orig: 21, 13
+  offset: 0, 0
+  index: -1
+gretel/side/handRight
+  rotate: false
+  xy: 142, 5
+  size: 24, 32
+  orig: 24, 32
+  offset: 0, 0
+  index: -1
+gretel/side/head
+  rotate: false
+  xy: 153, 43
+  size: 90, 129
+  orig: 90, 129
+  offset: 0, 0
+  index: -1
+gretel/side/shoulderLeft
+  rotate: false
+  xy: 116, 4
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+gretel/side/shoulderRight
+  rotate: false
+  xy: 458, 116
+  size: 30, 56
+  orig: 30, 56
+  offset: 0, 0
+  index: -1

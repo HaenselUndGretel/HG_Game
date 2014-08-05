@@ -217,16 +217,16 @@
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
-        <X>-1</X>
+        <X>0</X>
         <Y>946</Y>
       </Position>
       <CollisionBox>
-        <X>-1</X>
+        <X>0</X>
         <Y>946</Y>
         <Width>90</Width>
         <Height>350</Height>
         <Location>
-          <X>-1</X>
+          <X>0</X>
           <Y>946</Y>
         </Location>
       </CollisionBox>
@@ -245,16 +245,16 @@
       <ObjectId>3</ObjectId>
       <Position>
         <X>2451</X>
-        <Y>1000</Y>
+        <Y>900</Y>
       </Position>
       <CollisionBox>
         <X>2451</X>
-        <Y>1000</Y>
+        <Y>900</Y>
         <Width>100</Width>
-        <Height>170</Height>
+        <Height>340</Height>
         <Location>
           <X>2451</X>
-          <Y>1000</Y>
+          <Y>900</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -270,7 +270,188 @@
     </Waypoint>
   </Waypoints>
   <BackgroundSprites />
-  <InteractiveObjects />
+  <InteractiveObjects>
+    <InteractiveObject>
+      <ObjectId>16</ObjectId>
+      <Position>
+        <X>800</X>
+        <Y>543</Y>
+      </Position>
+      <CollisionBox>
+        <X>800</X>
+        <Y>543</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>800</X>
+          <Y>543</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>543</DrawZ>
+      <NormalZ>0.132568359</NormalZ>
+      <Name>platform</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>635</X>
+          <Y>387</Y>
+          <Width>334</Width>
+          <Height>325</Height>
+          <Location>
+            <X>635</X>
+            <Y>387</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>797</X>
+        <Y>544</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>800</X>
+        <Y>543</Y>
+      </ActionPosition2>
+      <ActionId>11</ActionId>
+    </InteractiveObject>
+    <InteractiveObject>
+      <ObjectId>20</ObjectId>
+      <Position>
+        <X>1738</X>
+        <Y>679</Y>
+      </Position>
+      <CollisionBox>
+        <X>1738</X>
+        <Y>679</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>1738</X>
+          <Y>679</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>679</DrawZ>
+      <NormalZ>0.165771484</NormalZ>
+      <Name>platform</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>1573</X>
+          <Y>523</Y>
+          <Width>334</Width>
+          <Height>325</Height>
+          <Location>
+            <X>1573</X>
+            <Y>523</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>1735</X>
+        <Y>680</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>1738</X>
+        <Y>679</Y>
+      </ActionPosition2>
+      <ActionId>11</ActionId>
+    </InteractiveObject>
+    <InteractiveObject>
+      <ObjectId>24</ObjectId>
+      <Position>
+        <X>1883</X>
+        <Y>1711</Y>
+      </Position>
+      <CollisionBox>
+        <X>1883</X>
+        <Y>1711</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>1883</X>
+          <Y>1711</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1711</DrawZ>
+      <NormalZ>0.4177246</NormalZ>
+      <Name>platform</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>1718</X>
+          <Y>1555</Y>
+          <Width>334</Width>
+          <Height>325</Height>
+          <Location>
+            <X>1718</X>
+            <Y>1555</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>1880</X>
+        <Y>1712</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>1883</X>
+        <Y>1711</Y>
+      </ActionPosition2>
+      <ActionId>11</ActionId>
+    </InteractiveObject>
+    <InteractiveObject>
+      <ObjectId>28</ObjectId>
+      <Position>
+        <X>821</X>
+        <Y>1518</Y>
+      </Position>
+      <CollisionBox>
+        <X>821</X>
+        <Y>1518</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>821</X>
+          <Y>1518</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1518</DrawZ>
+      <NormalZ>0.370605469</NormalZ>
+      <Name>platform</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>656</X>
+          <Y>1362</Y>
+          <Width>334</Width>
+          <Height>325</Height>
+          <Location>
+            <X>656</X>
+            <Y>1362</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList />
+      <ActionPosition1>
+        <X>818</X>
+        <Y>1519</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>821</X>
+        <Y>1518</Y>
+      </ActionPosition2>
+      <ActionId>11</ActionId>
+    </InteractiveObject>
+  </InteractiveObjects>
   <Collectables />
   <Lights>
     <Light xsi:type="PointLight">
@@ -309,7 +490,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -353,7 +534,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -397,7 +578,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -441,7 +622,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -485,7 +666,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -529,7 +710,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -573,7 +754,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -617,7 +798,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -661,7 +842,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -705,7 +886,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -749,7 +930,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -793,7 +974,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06939298</Depth>
+      <Depth>0.08010113</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

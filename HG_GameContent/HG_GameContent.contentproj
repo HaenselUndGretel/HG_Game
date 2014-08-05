@@ -1310,6 +1310,12 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="spine\platform.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>platform</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="spine\skeleton.atlas">
       <Name>skeleton</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -2114,6 +2120,30 @@
     <Content Include="iObj\push_stone_up.iObj">
       <Name>push_stone_up</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\platform.iObj">
+      <Name>platform</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\platform.settings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>platform</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\platform.atlas">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>platform</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spine\platform.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>platform</Name>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

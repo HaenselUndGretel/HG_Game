@@ -2618,16 +2618,16 @@
       <ObjectId>2</ObjectId>
       <Position>
         <X>2</X>
-        <Y>667</Y>
+        <Y>617</Y>
       </Position>
       <CollisionBox>
         <X>2</X>
-        <Y>667</Y>
-        <Width>131</Width>
-        <Height>205</Height>
+        <Y>617</Y>
+        <Width>100</Width>
+        <Height>335</Height>
         <Location>
           <X>2</X>
-          <Y>667</Y>
+          <Y>617</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -2678,13 +2678,13 @@
         <Y>842</Y>
       </Position>
       <CollisionBox>
-        <X>182</X>
-        <Y>842</Y>
+        <X>78</X>
+        <Y>645</Y>
         <Width>212</Width>
         <Height>199</Height>
         <Location>
-          <X>182</X>
-          <Y>842</Y>
+          <X>78</X>
+          <Y>645</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -2766,7 +2766,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2810,7 +2810,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2854,7 +2854,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2898,7 +2898,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2942,7 +2942,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2986,7 +2986,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -3030,7 +3030,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -3074,7 +3074,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -3118,7 +3118,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -3162,7 +3162,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08219685</Depth>
+      <Depth>0.08914589</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -3271,13 +3271,13 @@
         <Y>1232</Y>
       </Position>
       <CollisionBox>
-        <X>2450</X>
-        <Y>1132</Y>
+        <X>2500</X>
+        <Y>1232</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>2450</X>
-          <Y>1132</Y>
+          <X>2500</X>
+          <Y>1232</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -3305,13 +3305,13 @@
         <Y>603</Y>
       </Position>
       <CollisionBox>
-        <X>843</X>
-        <Y>503</Y>
+        <X>893</X>
+        <Y>603</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>843</X>
-          <Y>503</Y>
+          <X>893</X>
+          <Y>603</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>

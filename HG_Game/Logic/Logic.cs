@@ -19,6 +19,7 @@ namespace HG_Game
 		public EventHandler EventHandler;
 		public TemperatureHandler TemperatureHandler;
 		public EnemyHandler EnemyHandler;
+		public LightHandler LightHandler;
 
 		public bool HanselMayMove;
 		public bool GretelMayMove;
@@ -44,6 +45,7 @@ namespace HG_Game
 			EventHandler = new EventHandler();
 			TemperatureHandler = new TemperatureHandler();
 			EnemyHandler = new EnemyHandler();
+			LightHandler = new LightHandler();
 		}
 
 		public void LoadContent(Hansel pHansel, Gretel pGretel)
@@ -63,6 +65,7 @@ namespace HG_Game
 			AIManager.Instance.Update();
 
 			EnemyHandler.Update(pSavegame);
+			LightHandler.Update();
 			SoundHandler.Instance.Update();
 
 			//Check whether Player may move

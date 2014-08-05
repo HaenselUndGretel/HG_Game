@@ -513,26 +513,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>1088</X>
-      <Y>720</Y>
-      <Width>240</Width>
-      <Height>272</Height>
-      <Location>
-        <X>1088</X>
-        <Y>720</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>1328</X>
-      <Y>720</Y>
-      <Width>560</Width>
-      <Height>256</Height>
-      <Location>
-        <X>1328</X>
-        <Y>720</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
       <X>1408</X>
       <Y>960</Y>
       <Width>496</Width>
@@ -1182,6 +1162,36 @@
         <Y>832</Y>
       </Location>
     </Rectangle>
+    <Rectangle>
+      <X>1792</X>
+      <Y>736</Y>
+      <Width>64</Width>
+      <Height>256</Height>
+      <Location>
+        <X>1792</X>
+        <Y>736</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1072</X>
+      <Y>864</Y>
+      <Width>432</Width>
+      <Height>176</Height>
+      <Location>
+        <X>1072</X>
+        <Y>864</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1392</X>
+      <Y>768</Y>
+      <Width>96</Width>
+      <Height>208</Height>
+      <Location>
+        <X>1392</X>
+        <Y>768</Y>
+      </Location>
+    </Rectangle>
   </MoveArea>
   <Waypoints>
     <Waypoint>
@@ -1214,17 +1224,17 @@
     <Waypoint>
       <ObjectId>9</ObjectId>
       <Position>
-        <X>1693</X>
-        <Y>3489</Y>
+        <X>1300</X>
+        <Y>3495</Y>
       </Position>
       <CollisionBox>
-        <X>1693</X>
-        <Y>3489</Y>
-        <Width>190</Width>
+        <X>1300</X>
+        <Y>3495</Y>
+        <Width>1060</Width>
         <Height>100</Height>
         <Location>
-          <X>1693</X>
-          <Y>3489</Y>
+          <X>1300</X>
+          <Y>3495</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1415,13 +1425,13 @@
         <Y>863</Y>
       </Position>
       <CollisionBox>
-        <X>396</X>
-        <Y>863</Y>
+        <X>361</X>
+        <Y>782</Y>
         <Width>71</Width>
         <Height>161</Height>
         <Location>
-          <X>396</X>
-          <Y>863</Y>
+          <X>361</X>
+          <Y>782</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1474,61 +1484,6 @@
       </ActionPosition2>
       <ActionId>5</ActionId>
     </InteractiveObject>
-    <InteractiveObject>
-      <ObjectId>41</ObjectId>
-      <Position>
-        <X>1305</X>
-        <Y>694</Y>
-      </Position>
-      <CollisionBox>
-        <X>1305</X>
-        <Y>694</Y>
-        <Width>100</Width>
-        <Height>100</Height>
-        <Location>
-          <X>1305</X>
-          <Y>694</Y>
-        </Location>
-      </CollisionBox>
-      <IsVisible>true</IsVisible>
-      <DrawZ>694</DrawZ>
-      <NormalZ>0.1694336</NormalZ>
-      <Name>slipthroughrock_13</Name>
-      <Height>0</Height>
-      <Width>0</Width>
-      <ActionRectList>
-        <Rectangle>
-          <X>1242</X>
-          <Y>642</Y>
-          <Width>134</Width>
-          <Height>175</Height>
-          <Location>
-            <X>1242</X>
-            <Y>642</Y>
-          </Location>
-        </Rectangle>
-        <Rectangle>
-          <X>2096</X>
-          <Y>853</Y>
-          <Width>226</Width>
-          <Height>129</Height>
-          <Location>
-            <X>2096</X>
-            <Y>853</Y>
-          </Location>
-        </Rectangle>
-      </ActionRectList>
-      <CollisionRectList />
-      <ActionPosition1>
-        <X>1300</X>
-        <Y>725</Y>
-      </ActionPosition1>
-      <ActionPosition2>
-        <X>2200</X>
-        <Y>907</Y>
-      </ActionPosition2>
-      <ActionId>4</ActionId>
-    </InteractiveObject>
   </InteractiveObjects>
   <Collectables />
   <Lights>
@@ -1568,7 +1523,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.09990963</Depth>
+      <Depth>0.09845901</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1612,7 +1567,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.09990963</Depth>
+      <Depth>0.09845901</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1656,7 +1611,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.09990963</Depth>
+      <Depth>0.09845901</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1700,7 +1655,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.09990963</Depth>
+      <Depth>0.09845901</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1744,7 +1699,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.09990963</Depth>
+      <Depth>0.09845901</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1788,7 +1743,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.09990963</Depth>
+      <Depth>0.09845901</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

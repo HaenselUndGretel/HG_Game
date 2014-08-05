@@ -20,7 +20,7 @@ namespace HG_Game
 		{
 			if (GameReferenzes.SceneID == Hardcoded.Scene_Amulet_ColWitch)
 			{
-				if (pSavegame.Scenes[Hardcoded.Scene_Amulet_Col].Collectables.Count == 0)
+				if (pSavegame.Scenes[Hardcoded.Scene_Amulet_Col].Collectables.Count == 1)
 				{
 					bool WitchAvidable = false;
 					foreach (Enemy e in GameReferenzes.Level.Enemies)

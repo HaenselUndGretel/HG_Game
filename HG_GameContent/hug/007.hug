@@ -1797,16 +1797,16 @@
     <Waypoint>
       <ObjectId>2</ObjectId>
       <Position>
-        <X>3258</X>
+        <X>2758</X>
         <Y>2053</Y>
       </Position>
       <CollisionBox>
-        <X>3258</X>
+        <X>2758</X>
         <Y>2053</Y>
-        <Width>225</Width>
+        <Width>1000</Width>
         <Height>101</Height>
         <Location>
-          <X>3258</X>
+          <X>2758</X>
           <Y>2053</Y>
         </Location>
       </CollisionBox>
@@ -1858,13 +1858,13 @@
         <Y>1474</Y>
       </Position>
       <CollisionBox>
-        <X>1036</X>
-        <Y>1474</Y>
+        <X>877</X>
+        <Y>1438</Y>
         <Width>316</Width>
         <Height>74</Height>
         <Location>
-          <X>1036</X>
-          <Y>1474</Y>
+          <X>877</X>
+          <Y>1438</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1935,7 +1935,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>851</DrawZ>
-      <NormalZ>0.207763672</NormalZ>
+      <NormalZ>0</NormalZ>
       <Name>slipthroughrock_7_left</Name>
       <Height>0</Height>
       <Width>0</Width>
@@ -1990,7 +1990,7 @@
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>1499</DrawZ>
-      <NormalZ>0.3659668</NormalZ>
+      <NormalZ>0</NormalZ>
       <Name>slipthroughrock_7_right</Name>
       <Height>0</Height>
       <Width>0</Width>
@@ -2066,7 +2066,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.07348368</Depth>
+      <Depth>0.09210081</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2110,7 +2110,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.07348368</Depth>
+      <Depth>0.09210081</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2154,7 +2154,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.07348368</Depth>
+      <Depth>0.09210081</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

@@ -62,7 +62,7 @@ namespace HG_Game
 
 			AIManager.Instance.Update();
 
-			EnemyHandler.Update();
+			EnemyHandler.Update(pSavegame);
 			SoundHandler.Instance.Update();
 
 			//Check whether Player may move

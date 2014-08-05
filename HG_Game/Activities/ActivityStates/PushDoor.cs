@@ -9,7 +9,7 @@ using System.Text;
 
 namespace HG_Game
 {
-	class PushDoor : ActivityState
+	public class PushDoor : ActivityState
 	{
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
@@ -77,6 +77,7 @@ namespace HG_Game
 						ActI.SetFadingState(pOtherPlayer, false);
 						rIObj.CollisionRectList.Clear();
 						rIObj.ActionRectList.Clear();
+						m2ndState = true;
 					}
 					break;
 			}

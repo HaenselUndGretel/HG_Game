@@ -91,6 +91,7 @@
     <Compile Include="Logic\EventHandler.cs" />
     <Compile Include="Logic\SoundHandler.cs" />
     <Compile Include="Logic\TemperatureHandler.cs" />
+    <Compile Include="Scenes\EndScene.cs" />
     <Compile Include="Scenes\Game\Cheats.cs" />
     <Compile Include="Logic\ActivityHandler.cs" />
     <Compile Include="Logic\HudFading.cs" />

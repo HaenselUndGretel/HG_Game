@@ -46,12 +46,12 @@
     </Rectangle>
   </CollisionRectList>
   <ActionPosition1>
-    <X>-342</X>
+    <X>-300</X>
     <Y>-49</Y>
   </ActionPosition1>
   <ActionPosition2>
-    <X>0</X>
-    <Y>0</Y>
+    <X>-287</X>
+    <Y>-88</Y>
   </ActionPosition2>
   <ActionId>0</ActionId>
 </InteractiveObject>

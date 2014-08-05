@@ -158,7 +158,7 @@
 	"front": {}
 },
 "animations": {
-	"back_floating": {
+	"walkUp": {
 		"bones": {
 			"leftHandBack2": {
 				"rotate": [
@@ -326,7 +326,7 @@
 			}
 		}
 	},
-	"back_grab": {
+	"grabUp": {
 		"bones": {
 			"leftHandBack2": {
 				"rotate": [
@@ -512,7 +512,7 @@
 			}
 		}
 	},
-	"back_idle": {
+	"idleUp": {
 		"bones": {
 			"rootFront": {
 				"translate": [
@@ -2284,7 +2284,7 @@
 			{ "time": 2 }
 		]
 	},
-	"side_floating": {
+	"walkSide": {
 		"bones": {
 			"shoulder_side_back": {
 				"rotate": [
@@ -2462,7 +2462,7 @@
 			}
 		}
 	},
-	"side_grab": {
+	"grabSide": {
 		"bones": {
 			"rootBack": {
 				"translate": [
@@ -2654,7 +2654,7 @@
 			}
 		}
 	},
-	"side_idle": {
+	"idleSide": {
 		"bones": {
 			"rootBack": {
 				"translate": [

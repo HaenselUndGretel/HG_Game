@@ -61,7 +61,7 @@ namespace HG_Game
 			CurrentState = State.Idle;
 		}
 
-		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer)
+		public void Update(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer, ref GameScene.GameState pGameState)
 		{
 			switch (CurrentState)
 			{
@@ -69,7 +69,7 @@ namespace HG_Game
 					TestForSwitch(pScene, pHansel, pGretel, pSavegame.Scenes);
 					break;
 				case State.Switching:
-					Switch(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer);
+					Switch(pSavegame, ref pScene, pHansel, pGretel, pCamera, pRenderer, ref pGameState);
 					break;
 				case State.Entering:
 					Enter(pScene, pHansel, pGretel, pSavegame);
@@ -120,7 +120,7 @@ namespace HG_Game
 		/// <param name="pSceneLookup">Scenes-Array aus dem Savegame.</param>
 		public void StartSwitching(Hansel pHansel, Gretel pGretel, Waypoint pWpHansel, Waypoint pWpGretel, SceneData[] pSceneLookup)
 		{
-			if (ActivityHandler.AmuletBlocksWaypoints)
+			if (ActivityHandler.AmuletBlocksWaypoints || ActivityHandler.DoorBlocksWaypoint)
 				return;
 			LeaveHansel = -pWpHansel.MovementOnEnter;
 			LeaveGretel = -pWpGretel.MovementOnEnter;
@@ -160,7 +160,7 @@ namespace HG_Game
 		/// <summary>
 		/// Aktualisiert den FadingProgress des Switchings.
 		/// </summary>
-		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer) 
+		public void Switch(Savegame pSavegame, ref SceneData pScene, Hansel pHansel, Gretel pGretel, Camera pCamera, TwoDRenderer pRenderer, ref GameScene.GameState pGameState) 
 		{
 			AIManager.Instance.ClearAgents();
 			FadingProgress += EngineSettings.Time.ElapsedGameTime.Milliseconds;
@@ -168,6 +168,13 @@ namespace HG_Game
 			pGretel.MoveManually(LeaveGretel, 1f, pScene);
 			if (FadingProgress >= FadingDuration)
 			{
+				if (DestinationScene == Hardcoded.Scene_End)
+				{
+					pGameState = GameScene.GameState.EndScene;
+
+					FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.GetBackgroundMusic());
+					GameReferenzes.IsSceneSwitching = false;
+				}
 				//Switch
 				pHansel.MoveInteractiveObject(DestinationHansel - pHansel.SkeletonPosition);
 				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);

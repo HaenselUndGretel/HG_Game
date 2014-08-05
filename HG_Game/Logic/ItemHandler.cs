@@ -68,6 +68,10 @@ namespace HG_Game
 					LanternRaiseProgress.StepForward();
 				else
 					LanternRaiseProgress.StepBackward();
+				if (LanternRaiseProgress.Complete)
+					pHansel.IsLanternRaised = true;
+				else
+					pHansel.IsLanternRaised = false;
 			}
 			else if (pGretel.Lantern)
 			{
@@ -111,8 +115,9 @@ namespace HG_Game
 						//Laterne einsammeln
 						if (col.GetType() == typeof(Lantern))
 							pHansel.Lantern = true;
-						pGameState = GameScene.GameState.CollectableInfo;
-						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
+						else
+							pGameState = GameScene.GameState.CollectableInfo;
+						//FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
 						return;
 					}
 					else if (col.CollisionBox.Intersects(pGretel.CollisionBox) ||
@@ -130,8 +135,9 @@ namespace HG_Game
 						//Laterne einsammeln
 						if (col.GetType() == typeof(Lantern))
 							pGretel.Lantern = true;
-						pGameState = GameScene.GameState.CollectableInfo;
-						FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
+						else
+							pGameState = GameScene.GameState.CollectableInfo;
+						//FmodMediaPlayer.Instance.AddSong("Collectable0" + col.CollectableId, 0.8f);
 						return;
 					}
 				}

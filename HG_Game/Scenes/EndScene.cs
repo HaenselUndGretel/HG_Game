@@ -101,6 +101,7 @@ namespace HG_Game
 					Sequences.SetToPosition(mMother, PositionMother);
 					mMother.SetAnimation("shovel");
 					State = EndState.WalkToHouse;
+					FmodMediaPlayer.Instance.SetBackgroundSong(new List<String>() { "MusicHouse0", "SfxDigging" });
 					break;
 				case EndState.WalkToHouse:
 					Sequences.MoveToPosition(GameReferenzes.ReferenzHansel, InitPosHansel + HouseWalkDelta, 1f, true);

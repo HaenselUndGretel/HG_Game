@@ -18,16 +18,16 @@ namespace HG_Game
 													 Vector2.Zero, //001
 													 Vector2.Zero, //002
 													 Vector2.Zero, //003
-													 new Vector2(0, -275), //004
+													 new Vector2(202, -80), //004
 													 Vector2.Zero, //005
 													 Vector2.Zero, //006
-													 new Vector2(0, -275), //007
+													 new Vector2(-30, 0), //007
 													 Vector2.Zero, //008
 													 Vector2.Zero, //009
-													 new Vector2(0, -275), //010
+													 new Vector2(-245, -18), //010
 													 Vector2.Zero, //011
 													 Vector2.Zero, //012
-													 new Vector2(0, -275), //013
+													 new Vector2(190, -85), //013
 													 Vector2.Zero, //014
 													 Vector2.Zero, //015
 													 Vector2.Zero, //016
@@ -98,54 +98,58 @@ namespace HG_Game
 		/*
 		Character Walk-Animations -> KryptonEngine/HG_Data/Character/Character.cs
 		*/
-		public const string Anim_RaiseLantern_Hansel = "attack";//"raiseLantern";
+		public const string Anim_RaiseLantern_Up_Hansel = "raiseLanternUp";
+		public const string Anim_RaiseLantern_Down_Hansel = "raiseLanternDown";
+		public const string Anim_RaiseLantern_Side_Hansel = "raiseLanternSide";
 
-		public const string Anim_Jump_Up_Hansel = "attack";//"jump";
-		public const string Anim_Jump_Down_Hansel = "attack";//"jump";
-		public const string Anim_Jump_Side_Hansel = "attack";//"jump";
+		public const string Anim_Jump_Up_Hansel = "";
+		public const string Anim_Jump_Down_Hansel = "jumpDown";
+		public const string Anim_Jump_Side_Hansel = "jumpSide";
 
-		public const string Anim_KnockOverTree_Up = "attack";//"knockOverTree";
-		public const string Anim_KnockOverTree_Down = "attack";//"knockOverTree";
-		public const string Anim_KnockOverTree_Side = "attack";//"knockOverTree";
+		public const string Anim_KnockOverTree_Up = "knockOverTreeUp";
+		public const string Anim_KnockOverTree_Down = "knockOverTreeDown";
+		public const string Anim_KnockOverTree_Side = "knockOverTreeSide";
 
-		public const string Anim_Balance_Enter_Up = "attack";//"balanceEnterUp";
-		public const string Anim_Balance_Enter_Down = "attack";//"balanceEnterDown";
-		public const string Anim_Balance_Enter_Side = "attack";//"balanceEnterSide";
+		public const string Anim_Balance_Enter_Up = "balanceEnterDown";
+		public const string Anim_Balance_Enter_Down = "balanceEnterUp";
+		public const string Anim_Balance_Enter_Side = "balanceEnterSide";
 
-		public const string Anim_Balance_Idle = "attack";//"balanceSide";
-		public const string Anim_Balance_Up = "attack";//"balanceUp";
-		public const string Anim_Balance_Down = "attack";//"balanceDown";
-		public const string Anim_Balance_Side = "attack";//"balanceSide";
+		public const string Anim_Balance_Idle = "";
+		public const string Anim_Balance_Up = "balanceUp";
+		public const string Anim_Balance_Down = "balanceDown";
+		public const string Anim_Balance_Side = "balanceSide";
 
-		public const string Anim_Balance_Leave_Up = "attack";//"balanceLeaveUp";
-		public const string Anim_Balance_Leave_Down = "attack";//"balanceLeaveDown";
-		public const string Anim_Balance_Leave_Side = "attack";//"balanceLeaveSide";
+		public const string Anim_Balance_Leave_Up = "balanceLeaveUp";
+		public const string Anim_Balance_Leave_Down = "balanceLeaveDown";
+		public const string Anim_Balance_Leave_Side = "balanceLeaveSide";
 
-		public const string Anim_Tree_KnockOver_Up = "wiggle";//"knockOver";
-		public const string Anim_Tree_KnockOver_Down = "wiggle";//"knockOver";
-		public const string Anim_Tree_KnockOver_Side = "wiggle";//"knockOver";
+		public const string Anim_Tree_KnockOver_Up = "wiggle";
+		public const string Anim_Tree_KnockOver_Down = "wiggle";
+		public const string Anim_Tree_KnockOver_Side = "wiggle";
 
-		public const string Anim_Tree_Falling_Up = "falling_back";//"falling";
-		public const string Anim_Tree_Falling_Down = "falling_front";//"falling";
-		public const string Anim_Tree_Falling_Side = "fall_side";//"falling";
-
-		public const string Anim_Lantern_Place = "attack";//"lanternPlace";
-		public const string Anim_Lantern_Grab = "attack";//"lanternGrab";
+		public const string Anim_Tree_Falling_Up = "falling_back";
+		public const string Anim_Tree_Falling_Down = "falling_front";
+		public const string Anim_Tree_Falling_Side = "fall_side";
 								 
-		public const string Anim_LegUp_Raise = "attack";//"legUpRaise";
-		public const string Anim_LegUp_Lower = "attack";//"legUpLower";
-		public const string Anim_LegUp_Lift_Gretel = "attack";//"legUpLift";
-		public const string Anim_LegUp_Grab_Gretel = "attack";//"legUpGrab";
+		public const string Anim_LegUp_Raise_Up = "legUpRaiseDown";
+		public const string Anim_LegUp_Raise_Side = "legUpRaiseSide";
 
-		public const string Anim_PushDoor = "attack";//"pushDoorDown";
+		public const string Anim_LegUp_Lift_Up = "legUpDown";
+		public const string Anim_LegUp_Lift_Side = "legUpSide";
+
+		public const string Anim_LegUp_Lower = "";
+
+		public const string Anim_PushDoor = "pushDoorDown";
 		public const string Anim_Door_Open = "attack";//"openUpDown";
 
-		public const string Anim_PushRock_Up = "attack";//"pushRockUp";
-		public const string Anim_PushRock_Down = "attack";//"pushRockDown";
-		public const string Anim_PushRock_Side = "attack";//"pushRockSide";
+		public const string Anim_PushRock_Up = "gibts nicht";
+		public const string Anim_PushRock_Down = "pushRockDown";
+		public const string Anim_PushRock_Side = "pushRockSide";
 
-		public const string Anim_SlipAway_Gretel = "attack";//"slipAway";
-		public const string Anim_SlipBack_Gretel = "attack";//"slipBack";
+		public const string Anim_Amulet_Charge = "amuletCharge";
+		public const string Anim_Amulet_Use = "amuletUse";
+
+		#region Brunnen
 
 		public const string Anim_Well_GrabWind_Hansel = "attack";//"wellGrabWind";
 		public const string Anim_Well_Wind_Idle_Hansel = "attack";//"wellWindIdle";
@@ -157,8 +161,7 @@ namespace HG_Game
 		public const string Anim_Well_Hang_Gretel = "attack";//"wellHang";
 		public const string Anim_Well_Idle_Gretel = "attack";//"wellIdle";
 
-		public const string Anim_Amulet_Charge = "attack";//"amuletCharge";
-		public const string Anim_Amulet_Use = "attack";//"amuletUse";
+		#endregion
 
 		#endregion
 

@@ -1,216 +1,237 @@
 
 gretel.png
-size: 799,107
+size: 510,254
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 gretel/back/body
-  rotate: true
-  xy: 484, 52
+  rotate: false
+  xy: 241, 120
   size: 55, 134
   orig: 55, 134
   offset: 0, 0
   index: -1
 gretel/back/footLeft
-  rotate: true
-  xy: 122, 4
+  rotate: false
+  xy: 78, 17
   size: 11, 46
   orig: 11, 46
   offset: 0, 0
   index: -1
 gretel/back/footRight
-  rotate: true
-  xy: 133, 18
+  rotate: false
+  xy: 91, 17
   size: 11, 46
   orig: 11, 46
   offset: 0, 0
   index: -1
 gretel/back/foreArmright
-  rotate: true
-  xy: 318, 2
+  rotate: false
+  xy: 447, 176
   size: 36, 17
   orig: 36, 17
   offset: 0, 0
   index: -1
 gretel/back/forearmLeft
-  rotate: true
-  xy: 337, 2
+  rotate: false
+  xy: 350, 97
   size: 36, 16
   orig: 36, 16
   offset: 0, 0
   index: -1
 gretel/back/handLeft
-  rotate: true
-  xy: 170, 2
+  rotate: false
+  xy: 104, 15
   size: 14, 18
   orig: 14, 18
   offset: 0, 0
   index: -1
 gretel/back/handRight
-  rotate: true
-  xy: 25, 2
+  rotate: false
+  xy: 79, 106
   size: 13, 17
   orig: 13, 17
   offset: 0, 0
   index: -1
 gretel/back/head
-  rotate: true
-  xy: 133, 31
+  rotate: false
+  xy: 94, 131
   size: 76, 123
   orig: 76, 123
   offset: 0, 0
   index: -1
 gretel/back/shoulderLeft
   rotate: false
-  xy: 225, 5
+  xy: 79, 80
   size: 65, 24
   orig: 65, 24
   offset: 0, 0
   index: -1
 gretel/back/shoulderRight
-  rotate: true
-  xy: 428, 41
+  rotate: false
+  xy: 94, 106
   size: 66, 23
   orig: 66, 23
   offset: 0, 0
   index: -1
 gretel/front/FootLeft
-  rotate: true
-  xy: 413, 8
+  rotate: false
+  xy: 396, 114
   size: 30, 51
   orig: 30, 51
   offset: 0, 0
   index: -1
 gretel/front/FootRight
-  rotate: true
-  xy: 68, 4
+  rotate: false
+  xy: 460, 122
   size: 11, 52
   orig: 11, 52
   offset: 0, 0
   index: -1
 gretel/front/body
-  rotate: true
-  xy: 620, 57
+  rotate: false
+  xy: 298, 97
   size: 50, 157
   orig: 50, 157
   offset: 0, 0
   index: -1
 gretel/front/foreArmLeft
-  rotate: true
-  xy: 738, 6
+  rotate: false
+  xy: 396, 167
   size: 49, 42
   orig: 49, 42
   offset: 0, 0
   index: -1
 gretel/front/foreArmRight
-  rotate: true
-  xy: 693, 6
+  rotate: false
+  xy: 396, 211
   size: 49, 43
   orig: 49, 43
   offset: 0, 0
   index: -1
 gretel/front/handLeft
   rotate: false
-  xy: 782, 14
+  xy: 146, 81
   size: 16, 23
   orig: 16, 23
   offset: 0, 0
   index: -1
 gretel/front/handRight
   rotate: false
-  xy: 782, 39
+  xy: 149, 56
   size: 17, 23
   orig: 17, 23
   offset: 0, 0
   index: -1
 gretel/front/head
-  rotate: true
-  xy: 304, 40
+  rotate: false
+  xy: 172, 132
   size: 67, 122
   orig: 67, 122
   offset: 0, 0
   index: -1
 gretel/front/shoulderLeft
   rotate: false
-  xy: 466, 14
+  xy: 447, 195
   size: 63, 28
   orig: 63, 28
   offset: 0, 0
   index: -1
 gretel/front/shoulderRight
-  rotate: true
-  xy: 453, 44
+  rotate: false
+  xy: 447, 225
   size: 63, 29
   orig: 63, 29
   offset: 0, 0
   index: -1
 gretel/side/body
-  rotate: true
-  xy: 552, 6
+  rotate: false
+  xy: 350, 115
   size: 44, 139
   orig: 44, 139
   offset: 0, 0
   index: -1
 gretel/side/footLeft
   rotate: false
-  xy: 782, 64
+  xy: 104, 35
   size: 17, 43
   orig: 17, 43
   offset: 0, 0
   index: -1
 gretel/side/footRight
   rotate: false
-  xy: 531, 5
+  xy: 29, 6
   size: 19, 45
   orig: 19, 45
   offset: 0, 0
   index: -1
 gretel/side/foreArmLeft
   rotate: false
-  xy: 44, 3
+  xy: 123, 32
   size: 22, 12
   orig: 22, 12
   offset: 0, 0
   index: -1
 gretel/side/foreArmRight
   rotate: false
-  xy: 258, 37
+  xy: 2, 53
   size: 44, 70
   orig: 44, 70
   offset: 0, 0
   index: -1
 gretel/side/handLeft
   rotate: false
-  xy: 2, 2
+  xy: 79, 65
   size: 21, 13
   orig: 21, 13
   offset: 0, 0
   index: -1
 gretel/side/handRight
   rotate: false
-  xy: 292, 3
+  xy: 123, 46
   size: 24, 32
   orig: 24, 32
   offset: 0, 0
   index: -1
 gretel/side/head
-  rotate: true
-  xy: 2, 17
+  rotate: false
+  xy: 2, 125
   size: 90, 129
   orig: 90, 129
   offset: 0, 0
   index: -1
 gretel/side/shoulderLeft
-  rotate: true
-  xy: 190, 4
+  rotate: false
+  xy: 485, 160
   size: 25, 33
   orig: 25, 33
   offset: 0, 0
   index: -1
 gretel/side/shoulderRight
-  rotate: true
-  xy: 355, 8
+  rotate: false
+  xy: 428, 109
   size: 30, 56
   orig: 30, 56
   offset: 0, 0
+  index: -1
+img/amulett
+  rotate: false
+  xy: 48, 65
+  size: 29, 58
+  orig: 29, 58
+  offset: 0, 0
+  index: -1
+img/laterneFrontDiffuse
+  rotate: false
+  xy: 50, 13
+  size: 26, 50
+  orig: 26, 50
+  offset: 0, 0
+  index: -1
+img/laterneSideDiffuse
+  rotate: false
+  xy: 2, 2
+  size: 25, 49
+  orig: 26, 50
+  offset: 0, 1
   index: -1

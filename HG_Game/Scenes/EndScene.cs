@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.HG_Data;
 using KryptonEngine.Manager;
 using KryptonEngine.Rendering;
 using KryptonEngine.SceneManagement;
@@ -44,7 +45,7 @@ namespace HG_Game
 
 		protected Vector2 MoveCameraDirection;
 
-		protected const int MaxCameraX = 1700;
+		protected const int MaxCameraX = 1800;
 
 		#endregion
 
@@ -83,11 +84,12 @@ namespace HG_Game
 			mMother.LoadContent();
 		}
 
-		public void Update(Camera pCamera)
+		public void Update(Camera pCamera, TwoDRenderer pRenderer)
 		{
 			switch (State)
 			{
 				case EndState.Setup:
+					pRenderer.AmbientLight = new AmbientLight();
 					SceneData.BackgroundTexture.LoadBackgroundTextures("018");
 					pCamera.GameScreen = new Rectangle(0,0, 2560, 1440);
 					GameReferenzes.ReferenzHansel.Lantern = false;
@@ -108,9 +110,13 @@ namespace HG_Game
 						State = EndState.FadeThisShit;
 					break;
 				case EndState.FadeThisShit:
-					VisibilityPlayer.StepBackward();
+					/*VisibilityPlayer.StepBackward();
 					if (VisibilityPlayer.Progress <= 0f)
+					{*/
+						GameReferenzes.ReferenzHansel.IsVisible = false;
+						GameReferenzes.ReferenzGretel.IsVisible = false;
 						State = EndState.Wait5sec;
+					//}
 					break;
 				case EndState.Wait5sec:
 					Waiting5sec.StepForward();
@@ -151,21 +157,18 @@ namespace HG_Game
 			SceneData.BackgroundTexture.Draw(pRenderer);
 			
 			mMother.Draw(pRenderer);
-			Color color = Color.White;
+			Color color = Color.Pink;
 			color.A = (byte)(VisibilityPlayer.Progress * 255);
-			pRenderer.Draw(GameReferenzes.ReferenzHansel.Skeleton, GameReferenzes.ReferenzHansel.Textures, color);
-			pRenderer.Draw(GameReferenzes.ReferenzGretel.Skeleton, GameReferenzes.ReferenzGretel.Textures, color);
+			if (GameReferenzes.ReferenzHansel.IsVisible)
+				pRenderer.Draw(GameReferenzes.ReferenzHansel.Skeleton, GameReferenzes.ReferenzHansel.Textures, color);
+			if (GameReferenzes.ReferenzGretel.IsVisible) 
+				pRenderer.Draw(GameReferenzes.ReferenzGretel.Skeleton, GameReferenzes.ReferenzGretel.Textures, color);
 			
 			pRenderer.End();
 			
 			//--------------------DrawToScreen--------------------
 			pRenderer.DisposeGBuffer();
-
-			PointLight l = new PointLight(new Vector2(100, 100));
-			l.Intensity = 10f;
-			l.Radius = 20f;
-
-			pRenderer.ProcessLight(new List<Light>() { l }, pCamera.Transform);
+			pRenderer.ProcessLight(new List<Light>(), pCamera.Transform);
 			pRenderer.ProcessFinalScene();
 
 			pRenderer.DrawFinalTargettOnScreen(pSpriteBatch);

@@ -56,7 +56,7 @@ namespace HG_Game
 					Sequences.MovePlayerToRightActionPosition(pPlayer, Hardcoded.LegUp_StartOffsetGretel);
 					break;
 				case 1:
-					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Raise);
+					Sequences.StartAnimation(pPlayer, Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_LegUp_Raise_Up, "gibts nicht", Hardcoded.Anim_LegUp_Raise_Side));
 					ActI.ThumbstickDirHansel = ActivityInstruction.ThumbstickDirection.Up;
 					ActI.ThumbstickDirGretel = ActivityInstruction.ThumbstickDirection.None;
 					++pPlayer.mCurrentState;
@@ -101,11 +101,12 @@ namespace HG_Game
 					{
 						if (!m2ndState) //LegUp
 						{
-							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Lift_Gretel); //hoch ziehen
+							Sequences.StartAnimation(pPlayer, Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_LegUp_Lift_Up, "gibts nicht", Hardcoded.Anim_LegUp_Lift_Side)); //hoch ziehen
+							Sequences.StartAnimation(pOtherPlayer, Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_LegUp_Lift_Up, "gibts nicht", Hardcoded.Anim_LegUp_Lift_Side));
 						}
 						else //LegUpGrab
 						{
-							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_LegUp_Grab_Gretel); //Item greifen
+							//Hier wurde die Animation LegUpGrab gestartet
 							rIObj.ActionRectList.Clear(); //LegUpGrab kann nicht mehrfach ausgeführt werden
 						}
 						++pPlayer.mCurrentState;

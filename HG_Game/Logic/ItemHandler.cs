@@ -69,7 +69,7 @@ namespace HG_Game
 					LanternRaiseProgress.StepForward();
 				else
 					LanternRaiseProgress.StepBackward();
-				if (LanternRaiseProgress.Complete)
+				if (LanternRaiseProgress.Progress > 0.5f)
 					pHansel.IsLanternRaised = true;
 				else
 					pHansel.IsLanternRaised = false;

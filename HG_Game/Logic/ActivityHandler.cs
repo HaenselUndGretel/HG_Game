@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using KryptonEngine.Manager;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -189,18 +190,21 @@ namespace HG_Game
 					return;
 				}
 			}
-			/*
-			foreach (ChargeAmulet a in AmuletStates)
-				a.m2ndState = false;
-			Witch w = null;
-			foreach (Enemy e in pScene.Enemies)
-				if (e.GetType() == typeof(Witch))
-				{
-					w = (Witch)e;
-				}
-			if (w == null) throw new Exception("Witch nicht gefunden!");
-			pScene.Enemies.Remove(w);
-			*/
+			if (Amulet.m2ndState)
+			{
+				foreach (ChargeAmulet a in AmuletStates)
+					a.m2ndState = false;
+				Witch w = null;
+				foreach (Enemy e in pScene.Enemies)
+					if (e.GetType() == typeof(Witch))
+					{
+						w = (Witch)e;
+					}
+				if (w == null) throw new Exception("Witch nicht gefunden!");
+				pScene.Enemies.Remove(w);
+				FmodMediaPlayer.Instance.AddSong("ghost_death_bossfight", 0.8f);
+				Amulet.m2ndState = false;
+			}
 		}
 
 		protected void UpdateDoor(Savegame pSavegame)

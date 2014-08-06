@@ -78,21 +78,20 @@ namespace HG_Game
 			int TextureHeight = 720 - 226 - 25;
 
 			for (int i = 0; i < 5; i++ )
-				mButtons.Add(new ImageButton(Names[i], new Vector2(25 + i * TextureWidth + i * 25, TextureHeight), Actions[i]));
+				mButtons.Add(new ImageButton(Names[i], new Vector2(25 + i * TextureWidth + i * 25, 0), Actions[i]));
 			mButtons[SelectedIndex].IsSelected = true;
 
 			mCollectableButton = new List<LockedImageButton>();
+			int OffsetRight = (1280 - (3 * TextureWidth + 25)) / 2;
 
 			for (int i = 0; i < 3; i++)
-				mCollectableButton.Add(new LockedImageButton("collectable" + (i+1), new Vector2((1280 - (3 * TextureWidth + 25)) / 2, TextureHeight), null));
-
-			int OffsetRight = (1280 - (3 * TextureWidth + 25)) / 2;
+				mCollectableButton.Add(new LockedImageButton("Collectable" + (i + 1), new Vector2(OffsetRight + i * TextureWidth + i * 25, 20), null));
 
 			mOptionButtons = new List<ImageButton>();
 			Names = new List<String>() { "volume", "controller", "credits" };
 			Actions = new List<Action>() { SetVolumeSetting, ShowControllerSettings, ShowCredits };
 			for(int i = 0; i < 3; i++)
-				mOptionButtons.Add(new ImageButton(Names[i], new Vector2(OffsetRight + i * TextureWidth + i * 25, 276), Actions[i]));
+				mOptionButtons.Add(new ImageButton(Names[i], new Vector2(OffsetRight + i * TextureWidth + i * 25, 0), Actions[i]));
 		}
 
 		public override void Update()
@@ -251,10 +250,12 @@ namespace HG_Game
 				case MenuState.Collectables:
 					foreach (LockedImageButton lib in mCollectableButton)
 						lib.Draw(mSpriteBatch);
+					mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("btnBack"), new Vector2(1120, 650), Color.White);
 					break;
 				case MenuState.Options:
 					foreach (ImageButton ib in mOptionButtons)
 						ib.Draw(mSpriteBatch);
+					mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("btnBack"), new Vector2(1120, 650), Color.White);
 					break;
 				case MenuState.Controller:
 					DrawController();

@@ -134,6 +134,9 @@ namespace HG_Game
 
 			AIManager.Instance.SetAgents(mScene.Enemies);
 
+			mRenderer.SetMinFogHeight(0.1f);
+			mRenderer.SetMaxFogHeight(0.2f);
+
 			//EndScene
 			DasEnde.LoadContent();
 		}

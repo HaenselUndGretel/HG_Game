@@ -55,7 +55,7 @@ namespace HG_Game
 					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_PushDoor);
 					Sequences.StartAnimation(pOtherPlayer, Hardcoded.Anim_PushDoor);
-					Sequences.StartAnimation(rIObj, Hardcoded.Anim_Door_Open);
+					//Sequences.StartAnimation(rIObj, Hardcoded.Anim_Door_Open);
 					++pPlayer.mCurrentState;
 					pOtherPlayer.mCurrentState = pPlayer.mCurrentState;
 					break;

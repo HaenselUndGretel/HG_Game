@@ -18,6 +18,8 @@ namespace HG_Game
 		protected SteppingProgress Progress;
 		public ActivityInstruction ActI;
 
+		protected Vector2 LastDirection = new Vector2(0, 1);
+
 		public KnockOverTree(Hansel pHansel, Gretel pGretel, InteractiveObject pIObj)
 			: base(pHansel, pGretel, pIObj)
 		{
@@ -61,7 +63,6 @@ namespace HG_Game
 						break;
 					case 1:
 						//-----Richtung bestimmen-----
-						Sequences.StartAnimation(pPlayer, Hardcoded.Anim_KnockOverTree_Up);
 						ActivityInstruction.ThumbstickDirection dir = ActivityInstruction.ThumbstickDirection.None;
 						Vector2 DestinationDelta = rIObj.ActionPosition2 - rIObj.ActionPosition1;
 						DestinationDelta.Normalize();
@@ -85,13 +86,8 @@ namespace HG_Game
 							dir = ActivityInstruction.ThumbstickDirection.Up;
 						}
 
-						string animPlayer = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_KnockOverTree_Up, Hardcoded.Anim_KnockOverTree_Down, Hardcoded.Anim_KnockOverTree_Side);
-						string animTree = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_Tree_KnockOver_Up, Hardcoded.Anim_Tree_KnockOver_Down, Hardcoded.Anim_Tree_KnockOver_Side);
-
-						Character.SetSkeletonFlipState(pPlayer, rIObj.ActionPosition2 - rIObj.ActionPosition1);
-						Character.SetSkeletonFlipState(rIObj, rIObj.ActionPosition2 - rIObj.ActionPosition1);
-						Sequences.StartAnimation(pPlayer, animPlayer);
-						Sequences.StartAnimation(rIObj, animTree);
+						Sequences.AnimateAccordingToDirection(pPlayer, DestinationDelta, Hardcoded.Anim_KnockOverTree_Up, Hardcoded.Anim_KnockOverTree_Down, Hardcoded.Anim_KnockOverTree_Side);
+						Sequences.AnimateAccordingToDirection(rIObj, DestinationDelta, Hardcoded.Anim_Tree_KnockOver_Up, Hardcoded.Anim_Tree_KnockOver_Down, Hardcoded.Anim_Tree_KnockOver_Side);
 						
 						ActI.SetThumbstickDir(pPlayer, dir);
 						ActI.SetThumbstickDir(pOtherPlayer, ActivityInstruction.ThumbstickDirection.None);
@@ -115,9 +111,7 @@ namespace HG_Game
 						if (Progress.Complete)
 						{
 							//Baum fällt
-							string anim = Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_Tree_Falling_Up, Hardcoded.Anim_Tree_Falling_Down, Hardcoded.Anim_Tree_Falling_Side);
-							Sequences.StartAnimation(rIObj, anim);
-							//Sequences.StartAnimation(pPlayer, "attack"); kann weg?
+							Sequences.AnimateAccordingToDirection(rIObj, rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_Tree_Falling_Up, Hardcoded.Anim_Tree_Falling_Down, Hardcoded.Anim_Tree_Falling_Side);
 							ActI.SetFadingState(pPlayer, false);
 							++pPlayer.mCurrentState;
 						}
@@ -169,9 +163,10 @@ namespace HG_Game
 						Vector2 MovementInput = pPlayer.Input.Movement;
 						if (MovementInput == Vector2.Zero)
 						{
-							Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Balance_Idle);
+							Sequences.AnimateAccordingToDirection(pPlayer, LastDirection, Hardcoded.Anim_Balance_Up, Hardcoded.Anim_Balance_Down, Hardcoded.Anim_Balance_Side);
 							break; //Performance quit
 						}
+						LastDirection = MovementInput;
 
 						//Sideways?
 						Vector2 DirectionTest = rIObj.ActionPosition2 - rIObj.ActionPosition1;
@@ -188,7 +183,7 @@ namespace HG_Game
 						}
 
 						//BalancingMovement ausführen
-						Sequences.AnimateAccordingToDirection(pPlayer, DirectionTest, Hardcoded.Anim_Balance_Up, Hardcoded.Anim_Balance_Down, Hardcoded.Anim_Balance_Side);
+						Sequences.AnimateAccordingToDirection(pPlayer, MovementInput, Hardcoded.Anim_Balance_Up, Hardcoded.Anim_Balance_Down, Hardcoded.Anim_Balance_Side);
 						pPlayer.MoveAgainstPoint(rIObj.NearestActionPosition(pPlayer.SkeletonPosition + MovementInput * 1000f), Hardcoded.KnockOverTree_BalanceSpeedFactor, null, true, false, false);
 
 						//Leave Tree?

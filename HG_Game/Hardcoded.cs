@@ -95,13 +95,13 @@ namespace HG_Game
 		public const string Anim_KnockOverTree_Down = "knockOverTreeDown";
 		public const string Anim_KnockOverTree_Side = "knockOverTreeSide";
 
-		public const string Anim_Balance_Enter_Up = "balanceEnterDown";
-		public const string Anim_Balance_Enter_Down = "balanceEnterUp";
+		public const string Anim_Balance_Enter_Up = "balanceEnterUp";
+		public const string Anim_Balance_Enter_Down = "balanceEnterDown";
 		public const string Anim_Balance_Enter_Side = "balanceEnterSide";
 
 		public const string Anim_Balance_Idle = "";
-		public const string Anim_Balance_Up = "balanceDown";
-		public const string Anim_Balance_Down = "balanceUp";
+		public const string Anim_Balance_Up = "balanceUp";
+		public const string Anim_Balance_Down = "balanceDown";
 		public const string Anim_Balance_Side = "balanceSide";
 
 		public const string Anim_Balance_Leave_Up = "balanceLeaveUp";

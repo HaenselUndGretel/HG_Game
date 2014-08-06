@@ -47,7 +47,7 @@ namespace HG_Game
 					}
 					if (Conditions.PlayerAtActionPosition(pPlayer))
 						++pPlayer.mCurrentState;
-					Sequences.MovePlayerToRightActionPosition(pPlayer);
+					Sequences.MovePlayerToActionPosition(pPlayer);
 					break;
 				case 1:
 					//-----Animation starten-----

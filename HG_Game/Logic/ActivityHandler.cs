@@ -21,7 +21,6 @@ namespace HG_Game
 		protected int ActionInfoHansel;
 		protected int ActionInfoGretel;
 		protected Texture2D ActionInfoButton;
-		protected Texture2D[] ActionInfo;
 
 		protected bool AmuletCharged = false;
 		protected List<ChargeAmulet> AmuletStates;
@@ -49,20 +48,6 @@ namespace HG_Game
 		public void LoadContent(Hansel pHansel, Gretel pGretel)
 		{
 			ActionInfoButton = TextureManager.Instance.GetElementByString("button_x");
-			ActionInfo = new Texture2D[20]; //Anzahl an möglichen Activities
-			string prefix = "ActivityInfo_";
-			ActionInfo[1] = TextureManager.Instance.GetElementByString(prefix + "KnockOverTree");
-			ActionInfo[2] = TextureManager.Instance.GetElementByString(prefix + "BalanceOverTree");
-			ActionInfo[3] = TextureManager.Instance.GetElementByString(prefix + "PushRock");
-			ActionInfo[4] = TextureManager.Instance.GetElementByString(prefix + "SlipThroughRock");
-			ActionInfo[5] = TextureManager.Instance.GetElementByString(prefix + "JumpOverGap");
-			ActionInfo[6] = TextureManager.Instance.GetElementByString(prefix + "LegUp");
-			ActionInfo[7] = TextureManager.Instance.GetElementByString(prefix + "LegUpGrab");
-			ActionInfo[8] = TextureManager.Instance.GetElementByString(prefix + "PushDoor");
-			ActionInfo[9] = TextureManager.Instance.GetElementByString(prefix + "PullDoor");
-			ActionInfo[10] = TextureManager.Instance.GetElementByString(prefix + "UseWell");
-			ActionInfo[11] = TextureManager.Instance.GetElementByString(prefix + "ChargeAmulet");
-			ActionInfo[12] = TextureManager.Instance.GetElementByString(prefix + "UseAmulet");
 			Amulet = new UseAmulet(pHansel, pGretel, null);
 		}
 
@@ -232,11 +217,6 @@ namespace HG_Game
 
 		public void DrawActionInfo(SpriteBatch pSpriteBatch, Hansel pHansel, Gretel pGretel)
 		{
-			//ActionInfo
-			if (ActionInfoHansel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoHansel], pHansel.SkeletonPosition + Hardcoded.ActionInfo_Offset, Color.White * ActionInfoFading.VisibilityHansel);
-			if (ActionInfoGretel != 0)
-				pSpriteBatch.Draw(ActionInfo[ActionInfoGretel], pGretel.SkeletonPosition + Hardcoded.ActionInfo_Offset, Color.White * ActionInfoFading.VisibilityGretel);
 			//ButtonX
 			pSpriteBatch.Draw(ActionInfoButton, pHansel.SkeletonPosition + Hardcoded.ActionInfo_OffsetButton, Color.White * ActionInfoFading.VisibilityHansel);
 			pSpriteBatch.Draw(ActionInfoButton, pGretel.SkeletonPosition + Hardcoded.ActionInfo_OffsetButton, Color.White * ActionInfoFading.VisibilityGretel);

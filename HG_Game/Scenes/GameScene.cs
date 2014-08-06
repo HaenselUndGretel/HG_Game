@@ -294,6 +294,8 @@ namespace HG_Game
 				for (int i = 0; i > (int)(mHansel.Input.LeftStickRotation * 1000); --i)
 					sb.Append("|");
 				sb.AppendLine("");
+				sb.AppendLine("--------------------Scene--------------------");
+				sb.AppendLine("SG: " + mSavegame.SceneId.ToString() + " _ GR: " + GameReferenzes.SceneID.ToString());
 				sb.AppendLine("-------------------- --------------------");
 				
 				mSpriteBatch.Begin();

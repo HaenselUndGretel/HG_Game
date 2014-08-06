@@ -31,11 +31,10 @@ namespace HG_Game
 		
 		#region ActivityHud
 
-		public static Vector2 ActI_OffsetButton = new Vector2(0, -200);
-		public static Vector2 ActI_OffsetThumbstick = new Vector2(0, -140);
+		public static Vector2 ActI_OffsetButton = new Vector2(-100, -200);
+		public static Vector2 ActI_OffsetThumbstick = new Vector2(-20, -200);
 
-		public static Vector2 ActionInfo_Offset = new Vector2(-100, -200);
-		public static Vector2 ActionInfo_OffsetButton = new Vector2(-50, -300);
+		public static Vector2 ActionInfo_OffsetButton = new Vector2(-32, -200);
 
 		#endregion
 

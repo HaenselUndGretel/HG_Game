@@ -305,24 +305,6 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="gfx\button_a.png">
-      <Name>button_a</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\button_b.png">
-      <Name>button_b</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="gfx\button_y.png">
-      <Name>button_y</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="gfx\Backgrounds\001AO.png">
       <Name>001AO</Name>
       <Importer>TextureImporter</Importer>
@@ -364,11 +346,6 @@
     </Compile>
     <Compile Include="gfx\ThumbstickUp.png">
       <Name>ThumbstickUp</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="gfx\ThumbstickRotate.png">
-      <Name>ThumbstickRotate</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

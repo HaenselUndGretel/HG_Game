@@ -11,21 +11,332 @@
     </Location>
   </GamePlane>
   <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
-  <MoveArea />
+  <MoveArea>
+    <Rectangle>
+      <X>0</X>
+      <Y>1376</Y>
+      <Width>272</Width>
+      <Height>80</Height>
+      <Location>
+        <X>0</X>
+        <Y>1376</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>848</X>
+      <Y>1392</Y>
+      <Width>448</Width>
+      <Height>48</Height>
+      <Location>
+        <X>848</X>
+        <Y>1392</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1168</X>
+      <Y>1216</Y>
+      <Width>112</Width>
+      <Height>240</Height>
+      <Location>
+        <X>1168</X>
+        <Y>1216</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1168</X>
+      <Y>800</Y>
+      <Width>144</Width>
+      <Height>48</Height>
+      <Location>
+        <X>1168</X>
+        <Y>800</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1168</X>
+      <Y>816</Y>
+      <Width>112</Width>
+      <Height>480</Height>
+      <Location>
+        <X>1168</X>
+        <Y>816</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1200</X>
+      <Y>576</Y>
+      <Width>96</Width>
+      <Height>336</Height>
+      <Location>
+        <X>1200</X>
+        <Y>576</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1200</X>
+      <Y>288</Y>
+      <Width>96</Width>
+      <Height>352</Height>
+      <Location>
+        <X>1200</X>
+        <Y>288</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1136</X>
+      <Y>384</Y>
+      <Width>96</Width>
+      <Height>16</Height>
+      <Location>
+        <X>1136</X>
+        <Y>384</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1136</X>
+      <Y>384</Y>
+      <Width>112</Width>
+      <Height>32</Height>
+      <Location>
+        <X>1136</X>
+        <Y>384</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1088</X>
+      <Y>288</Y>
+      <Width>288</Width>
+      <Height>48</Height>
+      <Location>
+        <X>1088</X>
+        <Y>288</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>512</X>
+      <Y>128</Y>
+      <Width>928</Width>
+      <Height>80</Height>
+      <Location>
+        <X>512</X>
+        <Y>128</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>1168</X>
+      <Y>176</Y>
+      <Width>176</Width>
+      <Height>144</Height>
+      <Location>
+        <X>1168</X>
+        <Y>176</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-32</X>
+      <Y>128</Y>
+      <Width>544</Width>
+      <Height>64</Height>
+      <Location>
+        <X>-32</X>
+        <Y>128</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-16</X>
+      <Y>176</Y>
+      <Width>544</Width>
+      <Height>32</Height>
+      <Location>
+        <X>-16</X>
+        <Y>176</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>0</X>
+      <Y>176</Y>
+      <Width>48</Width>
+      <Height>512</Height>
+      <Location>
+        <X>0</X>
+        <Y>176</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-16</X>
+      <Y>656</Y>
+      <Width>64</Width>
+      <Height>448</Height>
+      <Location>
+        <X>-16</X>
+        <Y>656</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>32</X>
+      <Y>816</Y>
+      <Width>64</Width>
+      <Height>64</Height>
+      <Location>
+        <X>32</X>
+        <Y>816</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>32</X>
+      <Y>912</Y>
+      <Width>32</Width>
+      <Height>144</Height>
+      <Location>
+        <X>32</X>
+        <Y>912</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>48</X>
+      <Y>848</Y>
+      <Width>32</Width>
+      <Height>80</Height>
+      <Location>
+        <X>48</X>
+        <Y>848</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>64</X>
+      <Y>896</Y>
+      <Width>64</Width>
+      <Height>48</Height>
+      <Location>
+        <X>64</X>
+        <Y>896</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>-16</X>
+      <Y>1072</Y>
+      <Width>64</Width>
+      <Height>336</Height>
+      <Location>
+        <X>-16</X>
+        <Y>1072</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>16</X>
+      <Y>1280</Y>
+      <Width>96</Width>
+      <Height>96</Height>
+      <Location>
+        <X>16</X>
+        <Y>1280</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>96</X>
+      <Y>1296</Y>
+      <Width>48</Width>
+      <Height>96</Height>
+      <Location>
+        <X>96</X>
+        <Y>1296</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>16</X>
+      <Y>192</Y>
+      <Width>448</Width>
+      <Height>64</Height>
+      <Location>
+        <X>16</X>
+        <Y>192</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>144</X>
+      <Y>272</Y>
+      <Width>32</Width>
+      <Height>32</Height>
+      <Location>
+        <X>144</X>
+        <Y>272</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>32</X>
+      <Y>224</Y>
+      <Width>144</Width>
+      <Height>80</Height>
+      <Location>
+        <X>32</X>
+        <Y>224</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>528</X>
+      <Y>496</Y>
+      <Width>176</Width>
+      <Height>80</Height>
+      <Location>
+        <X>528</X>
+        <Y>496</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>688</X>
+      <Y>496</Y>
+      <Width>16</Width>
+      <Height>80</Height>
+      <Location>
+        <X>688</X>
+        <Y>496</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>688</X>
+      <Y>496</Y>
+      <Width>16</Width>
+      <Height>64</Height>
+      <Location>
+        <X>688</X>
+        <Y>496</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>688</X>
+      <Y>496</Y>
+      <Width>32</Width>
+      <Height>80</Height>
+      <Location>
+        <X>688</X>
+        <Y>496</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>560</X>
+      <Y>560</Y>
+      <Width>128</Width>
+      <Height>32</Height>
+      <Location>
+        <X>560</X>
+        <Y>560</Y>
+      </Location>
+    </Rectangle>
+  </MoveArea>
   <Waypoints>
     <Waypoint>
       <ObjectId>1</ObjectId>
       <Position>
-        <X>510</X>
+        <X>277</X>
         <Y>1328</Y>
       </Position>
       <CollisionBox>
-        <X>510</X>
+        <X>277</X>
         <Y>1328</Y>
-        <Width>186</Width>
+        <Width>566</Width>
         <Height>110</Height>
         <Location>
-          <X>510</X>
+          <X>277</X>
           <Y>1328</Y>
         </Location>
       </CollisionBox>
@@ -45,23 +356,23 @@
   <InteractiveObjects />
   <Collectables>
     <Collectable xsi:type="Amulet">
-      <ObjectId>5</ObjectId>
+      <ObjectId>6</ObjectId>
       <Position>
-        <X>685</X>
-        <Y>1045</Y>
+        <X>814</X>
+        <Y>417</Y>
       </Position>
       <CollisionBox>
-        <X>635</X>
-        <Y>945</Y>
+        <X>764</X>
+        <Y>317</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>635</X>
-          <Y>945</Y>
+          <X>764</X>
+          <Y>317</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>1045</DrawZ>
+      <DrawZ>417</DrawZ>
       <NormalZ>0</NormalZ>
       <Name>amulet</Name>
       <Height>0</Height>
@@ -69,23 +380,23 @@
       <ActionRectList />
       <CollisionRectList>
         <Rectangle>
-          <X>653</X>
-          <Y>1014</Y>
+          <X>782</X>
+          <Y>386</Y>
           <Width>62</Width>
           <Height>63</Height>
           <Location>
-            <X>653</X>
-            <Y>1014</Y>
+            <X>782</X>
+            <Y>386</Y>
           </Location>
         </Rectangle>
       </CollisionRectList>
       <ActionPosition1>
-        <X>685</X>
-        <Y>1045</Y>
+        <X>814</X>
+        <Y>417</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>685</X>
-        <Y>1045</Y>
+        <X>814</X>
+        <Y>417</Y>
       </ActionPosition2>
       <ActionId>0</ActionId>
       <CollectableId>-1</CollectableId>

@@ -104,6 +104,7 @@ namespace HG_Game
 					Sequences.SetToPosition(GameReferenzes.ReferenzHansel, InitPosHansel);
 					Sequences.SetToPosition(GameReferenzes.ReferenzGretel, InitPosGretel);
 					Sequences.SetToPosition(mMother, PositionMother);
+					State = EndState.WalkToHouse;
 					break;
 				case EndState.WalkToHouse:
 					Sequences.MoveToPosition(GameReferenzes.ReferenzHansel, InitPosHansel + HouseWalkDelta, 1f, true);

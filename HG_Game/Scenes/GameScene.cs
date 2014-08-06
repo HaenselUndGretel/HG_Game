@@ -295,8 +295,9 @@ namespace HG_Game
 				sb.AppendLine("");
 				sb.AppendLine("--------------------Scene--------------------");
 				sb.AppendLine("SG: " + mSavegame.SceneId.ToString() + " _ GR: " + GameReferenzes.SceneID.ToString());
-				sb.AppendLine("-------------------- --------------------");
-				
+				sb.AppendLine("--------------------Lantern--------------------");
+				sb.AppendLine("Hansel: " + mHansel.Lantern.ToString() + " _ Gretel: " + mGretel.Lantern.ToString());
+
 				mSpriteBatch.Begin();
 				mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.White * 0.5f, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
 				mSpriteBatch.End();

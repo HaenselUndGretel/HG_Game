@@ -43,7 +43,7 @@ namespace HG_Game
 				case 0:
 					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Use);
-					FmodMediaPlayer.Instance.AddSong("SfxAmuletCharge", 0.8f);
+					FmodMediaPlayer.Instance.AddSong("SfxAmuletCharge", 1f);
 					++pPlayer.mCurrentState;
 					break;
 				case 1:

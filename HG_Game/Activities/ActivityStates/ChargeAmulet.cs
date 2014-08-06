@@ -53,7 +53,7 @@ namespace HG_Game
 				case 1:
 					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Charge);
-					FmodMediaPlayer.Instance.AddSong("SfxAmuletCharge", 0.8f);
+					FmodMediaPlayer.Instance.AddSong("SfxAmuletCharge", 0.9f);
 					ActI.SetThumbstickDir(pPlayer, ActivityInstruction.ThumbstickDirection.Up);
 					ActI.SetThumbstickDir(pOtherPlayer, ActivityInstruction.ThumbstickDirection.None);
 					++pPlayer.mCurrentState;

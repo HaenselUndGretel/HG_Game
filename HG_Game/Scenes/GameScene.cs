@@ -182,7 +182,7 @@ namespace HG_Game
 					}
 					break;
 				case GameState.EndScene:
-					DasEnde.Update(mCamera);
+					DasEnde.Update(mCamera, mRenderer);
 					break;
 			}
 		}

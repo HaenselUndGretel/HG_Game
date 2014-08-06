@@ -18,16 +18,16 @@ namespace HG_Game
 													 Vector2.Zero, //001
 													 Vector2.Zero, //002
 													 Vector2.Zero, //003
-													 new Vector2(0, -275), //004
+													 new Vector2(202, -80), //004
 													 Vector2.Zero, //005
 													 Vector2.Zero, //006
-													 new Vector2(0, -275), //007
+													 new Vector2(-30, 0), //007
 													 Vector2.Zero, //008
 													 Vector2.Zero, //009
-													 new Vector2(0, -275), //010
+													 new Vector2(-245, -18), //010
 													 Vector2.Zero, //011
 													 Vector2.Zero, //012
-													 new Vector2(0, -275), //013
+													 new Vector2(190, -85), //013
 													 Vector2.Zero, //014
 													 Vector2.Zero, //015
 													 Vector2.Zero, //016

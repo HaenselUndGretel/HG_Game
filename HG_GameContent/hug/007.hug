@@ -1663,56 +1663,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>3232</X>
-      <Y>1360</Y>
-      <Width>144</Width>
-      <Height>32</Height>
-      <Location>
-        <X>3232</X>
-        <Y>1360</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3232</X>
-      <Y>1376</Y>
-      <Width>176</Width>
-      <Height>32</Height>
-      <Location>
-        <X>3232</X>
-        <Y>1376</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3376</X>
-      <Y>1360</Y>
-      <Width>192</Width>
-      <Height>64</Height>
-      <Location>
-        <X>3376</X>
-        <Y>1360</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3520</X>
-      <Y>1376</Y>
-      <Width>208</Width>
-      <Height>32</Height>
-      <Location>
-        <X>3520</X>
-        <Y>1376</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
-      <X>3648</X>
-      <Y>1360</Y>
-      <Width>208</Width>
-      <Height>48</Height>
-      <Location>
-        <X>3648</X>
-        <Y>1360</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
       <X>736</X>
       <Y>848</Y>
       <Width>64</Width>
@@ -1790,6 +1740,106 @@
       <Location>
         <X>1072</X>
         <Y>1440</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3200</X>
+      <Y>1392</Y>
+      <Width>80</Width>
+      <Height>144</Height>
+      <Location>
+        <X>3200</X>
+        <Y>1392</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3216</X>
+      <Y>1488</Y>
+      <Width>624</Width>
+      <Height>144</Height>
+      <Location>
+        <X>3216</X>
+        <Y>1488</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3200</X>
+      <Y>1216</Y>
+      <Width>96</Width>
+      <Height>160</Height>
+      <Location>
+        <X>3200</X>
+        <Y>1216</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3168</X>
+      <Y>1152</Y>
+      <Width>448</Width>
+      <Height>112</Height>
+      <Location>
+        <X>3168</X>
+        <Y>1152</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3248</X>
+      <Y>1216</Y>
+      <Width>176</Width>
+      <Height>64</Height>
+      <Location>
+        <X>3248</X>
+        <Y>1216</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3488</X>
+      <Y>880</Y>
+      <Width>128</Width>
+      <Height>352</Height>
+      <Location>
+        <X>3488</X>
+        <Y>880</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3552</X>
+      <Y>896</Y>
+      <Width>304</Width>
+      <Height>96</Height>
+      <Location>
+        <X>3552</X>
+        <Y>896</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3760</X>
+      <Y>960</Y>
+      <Width>144</Width>
+      <Height>256</Height>
+      <Location>
+        <X>3760</X>
+        <Y>960</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3568</X>
+      <Y>1120</Y>
+      <Width>48</Width>
+      <Height>112</Height>
+      <Location>
+        <X>3568</X>
+        <Y>1120</Y>
+      </Location>
+    </Rectangle>
+    <Rectangle>
+      <X>3584</X>
+      <Y>1120</Y>
+      <Width>64</Width>
+      <Height>128</Height>
+      <Location>
+        <X>3584</X>
+        <Y>1120</Y>
       </Location>
     </Rectangle>
   </MoveArea>
@@ -2092,13 +2142,13 @@
         <Y>1966</Y>
       </Position>
       <CollisionBox>
-        <X>1404</X>
-        <Y>1966</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>1373</X>
+        <Y>1935</Y>
+        <Width>62</Width>
+        <Height>61</Height>
         <Location>
-          <X>1404</X>
-          <Y>1966</Y>
+          <X>1373</X>
+          <Y>1935</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -2171,7 +2221,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.09730785</Depth>
+      <Depth>0.06286099</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2215,7 +2265,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.09730785</Depth>
+      <Depth>0.06286099</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2259,13 +2309,101 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.09730785</Depth>
+      <Depth>0.06286099</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
         <Z>0</Z>
       </LightColor>
       <Radius>10</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>34</ObjectId>
+      <Position>
+        <X>1160</X>
+        <Y>813</Y>
+      </Position>
+      <CollisionBox>
+        <X>1160</X>
+        <Y>813</Y>
+        <Width>64</Width>
+        <Height>64</Height>
+        <Location>
+          <X>1160</X>
+          <Y>813</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>0</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>false</IsLightMoving>
+      <MoveSpeed>0</MoveSpeed>
+      <MaxHeight>0</MaxHeight>
+      <MinHeight>0</MinHeight>
+      <Intensity>10</Intensity>
+      <Depth>0.206298828</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>20</Radius>
+    </Light>
+    <Light xsi:type="PointLight">
+      <ObjectId>35</ObjectId>
+      <Position>
+        <X>3659</X>
+        <Y>1204</Y>
+      </Position>
+      <CollisionBox>
+        <X>3659</X>
+        <Y>1204</Y>
+        <Width>0</Width>
+        <Height>0</Height>
+        <Location>
+          <X>3659</X>
+          <Y>1204</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>-39</DrawZ>
+      <NormalZ>0</NormalZ>
+      <LightFading>false</LightFading>
+      <FadingLightColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+      </FadingLightColor>
+      <FadingDuration>0</FadingDuration>
+      <StartColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </StartColor>
+      <IsLightMoving>false</IsLightMoving>
+      <MoveSpeed>0</MoveSpeed>
+      <MaxHeight>0</MaxHeight>
+      <MinHeight>0</MinHeight>
+      <Intensity>10</Intensity>
+      <Depth>0.496757627</Depth>
+      <LightColor>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </LightColor>
+      <Radius>20</Radius>
     </Light>
   </Lights>
   <Events />

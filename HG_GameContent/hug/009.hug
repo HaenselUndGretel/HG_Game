@@ -1618,16 +1618,16 @@
       <ObjectId>2</ObjectId>
       <Position>
         <X>144</X>
-        <Y>4</Y>
+        <Y>0</Y>
       </Position>
       <CollisionBox>
         <X>144</X>
-        <Y>4</Y>
+        <Y>0</Y>
         <Width>159</Width>
         <Height>64</Height>
         <Location>
           <X>144</X>
-          <Y>4</Y>
+          <Y>0</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1645,16 +1645,16 @@
       <ObjectId>3</ObjectId>
       <Position>
         <X>935</X>
-        <Y>2037</Y>
+        <Y>2039</Y>
       </Position>
       <CollisionBox>
         <X>935</X>
-        <Y>2037</Y>
+        <Y>2039</Y>
         <Width>181</Width>
         <Height>120</Height>
         <Location>
           <X>935</X>
-          <Y>2037</Y>
+          <Y>2039</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1675,16 +1675,16 @@
       <ObjectId>23</ObjectId>
       <Position>
         <X>611</X>
-        <Y>1652</Y>
+        <Y>1642</Y>
       </Position>
       <CollisionBox>
-        <X>507</X>
-        <Y>1455</Y>
+        <X>611</X>
+        <Y>1642</Y>
         <Width>212</Width>
         <Height>199</Height>
         <Location>
-          <X>507</X>
-          <Y>1455</Y>
+          <X>611</X>
+          <Y>1642</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
@@ -1725,7 +1725,7 @@
         <X>643</X>
         <Y>1428</Y>
       </ActionPosition2>
-      <ActionId>3</ActionId>
+      <ActionId>0</ActionId>
     </InteractiveObject>
   </InteractiveObjects>
   <Collectables />
@@ -1766,7 +1766,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1810,7 +1810,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1854,7 +1854,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1898,7 +1898,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1942,7 +1942,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1986,7 +1986,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2030,7 +2030,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2074,7 +2074,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2118,7 +2118,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2162,7 +2162,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -2206,7 +2206,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.06766336</Depth>
+      <Depth>0.0529935919</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

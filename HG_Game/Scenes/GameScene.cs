@@ -181,7 +181,7 @@ namespace HG_Game
 					break;
 				case GameState.End:
 					mEndGameFading.StepForward();
-					if (mEndGameFading.Complete && InputHelper.ButtonJustPressed2Player(Buttons.A))
+					if (mEndGameFading.Complete && (InputHelper.ButtonJustPressed2Player(Buttons.A) || InputHelper.ButtonJustPressed2Player(Buttons.B)))
 					{ //Wenn komplett sichtbar & ein Spieler drückt A
 						mEndGameFading.Reset();
 						RestartGame();

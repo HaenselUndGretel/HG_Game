@@ -117,7 +117,6 @@ namespace HG_Game
 			mLogic.ActivityHandler.SetupInteractiveObjectsFromDeserialization(mSavegame, mHansel, mGretel);
 			//PauseMenu
 			mPauseMenu.LoadContent();
-			mHansel.Lantern = true;
 
 			GameReferenzes.ReferenzHansel = mHansel;
 			GameReferenzes.ReferenzGretel = mGretel;

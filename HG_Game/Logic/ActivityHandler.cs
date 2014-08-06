@@ -178,9 +178,11 @@ namespace HG_Game
 			if (pSavegame.SceneId != Hardcoded.Scene_Amulet_Boss || Amulet.m2ndState)
 			{
 				AmuletBlocksWaypoints = false;
-				return;
 			}
-			AmuletBlocksWaypoints = true;
+			else
+			{
+				AmuletBlocksWaypoints = true;
+			}
 			AmuletCharged = true;
 			foreach(ChargeAmulet a in AmuletStates)
 			{
@@ -202,8 +204,9 @@ namespace HG_Game
 					}
 				if (w == null) throw new Exception("Witch nicht gefunden!");
 				pScene.Enemies.Remove(w);
+				pScene.RenderList.Remove(w);
 				FmodMediaPlayer.Instance.AddSong("ghost_death_bossfight", 0.8f);
-				Amulet.m2ndState = false;
+				Amulet.m2ndState = true;
 			}
 		}
 

@@ -171,16 +171,16 @@ namespace HG_Game
 				if (DestinationScene == Hardcoded.Scene_End)
 				{
 					pGameState = GameScene.GameState.EndScene;
-
 					FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.GetBackgroundMusic());
 					GameReferenzes.IsSceneSwitching = false;
+					return;
 				}
 				//Switch
 				pHansel.MoveInteractiveObject(DestinationHansel - pHansel.SkeletonPosition);
 				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);
 				pSavegame.SceneId = DestinationScene;
 				pScene = pSavegame.Scenes[DestinationScene];
-				SceneData.BackgroundTexture.LoadBackgroundTextures();
+				SceneData.BackgroundTexture.LoadBackgroundTextures(Savegame.LevelNameFromId(DestinationScene));
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);
 				pRenderer.AmbientLight = pScene.SceneAmbientLight;

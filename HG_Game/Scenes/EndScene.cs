@@ -32,8 +32,6 @@ namespace HG_Game
 
 		protected Mother mMother;
 
-		protected Sprite Background;
-
 		protected SteppingProgress VisibilityPlayer;
 		protected SteppingProgress Waiting5sec;
 		protected SteppingProgress Waiting10sec;
@@ -46,9 +44,7 @@ namespace HG_Game
 
 		protected Vector2 MoveCameraDirection;
 
-		protected const int MaxCameraX = 1500;
-
-		protected Rectangle SceneSize;
+		protected const int MaxCameraX = 1700;
 
 		#endregion
 
@@ -68,19 +64,16 @@ namespace HG_Game
 			State = EndState.Setup;
 			mMother = new Mother();
 
-			Background = new Sprite();
-			Background.TextureName = "018";
-
 			VisibilityPlayer = new SteppingProgress(2);
 			VisibilityPlayer.Reset(true);
 			Waiting5sec = new SteppingProgress(5f);
 			Waiting10sec = new SteppingProgress(10f);
 			FadingOut = new SteppingProgress(4f);
 
-			PositionMother = new Vector2(1500, 600);
-			InitPosHansel = new Vector2(50, 200);
-			InitPosHansel = new Vector2(50, 300);
-			HouseWalkDelta = new Vector2(1000, 500);
+			PositionMother = new Vector2(2000, 700);
+			InitPosHansel = new Vector2(50, 700);
+			InitPosGretel = new Vector2(50, 800);
+			HouseWalkDelta = new Vector2(1000, 0);
 
 			MoveCameraDirection = new Vector2(1, 0);
 		}
@@ -88,8 +81,6 @@ namespace HG_Game
 		public void LoadContent()
 		{
 			mMother.LoadContent();
-			Background.LoadBackgroundTextures();
-			SceneSize = Background.CollisionBox;
 		}
 
 		public void Update(Camera pCamera)
@@ -97,13 +88,15 @@ namespace HG_Game
 			switch (State)
 			{
 				case EndState.Setup:
-					pCamera.GameScreen = SceneSize;
-					pCamera.MoveCamera(GameReferenzes.ReferenzHansel.CollisionBox, GameReferenzes.ReferenzGretel.CollisionBox);
+					SceneData.BackgroundTexture.LoadBackgroundTextures("018");
+					pCamera.GameScreen = new Rectangle(0,0, 2560, 1440);
 					GameReferenzes.ReferenzHansel.Lantern = false;
 					GameReferenzes.ReferenzGretel.Lantern = false;
 					Sequences.SetToPosition(GameReferenzes.ReferenzHansel, InitPosHansel);
 					Sequences.SetToPosition(GameReferenzes.ReferenzGretel, InitPosGretel);
+					pCamera.MoveCamera(GameReferenzes.ReferenzHansel.CollisionBox, GameReferenzes.ReferenzGretel.CollisionBox);
 					Sequences.SetToPosition(mMother, PositionMother);
+					mMother.SetAnimation("shovel");
 					State = EndState.WalkToHouse;
 					break;
 				case EndState.WalkToHouse:
@@ -117,7 +110,7 @@ namespace HG_Game
 				case EndState.FadeThisShit:
 					VisibilityPlayer.StepBackward();
 					if (VisibilityPlayer.Progress <= 0f)
-						State = EndState.FadeThisShit;
+						State = EndState.Wait5sec;
 					break;
 				case EndState.Wait5sec:
 					Waiting5sec.StepForward();
@@ -125,23 +118,26 @@ namespace HG_Game
 						State = EndState.MoveCamera;
 					break;
 				case EndState.MoveCamera:
-					pCamera.MoveCamera(MoveCameraDirection * 1f);
+					pCamera.MoveCameraFree(MoveCameraDirection * 2f);
 					if (pCamera.Position.X > MaxCameraX)
 						State = EndState.Wait10sec;
 					break;
 				case EndState.Wait10sec:
 					Waiting10sec.StepForward();
 					if (Waiting10sec.Complete)
-						State = EndState.MoveCamera;
+						State = EndState.FadeOut;
 					break;
 				case EndState.FadeOut:
 					FadingOut.StepForward();
 					if (FadingOut.Complete)
 					{
-						SceneManager.Instance.SetCurrentSceneTo("Menu");
+						SceneManager.Instance.SetCurrentSceneTo("Credits");
 					}
 					break;
 			}
+			GameReferenzes.ReferenzHansel.Update(false, 1f, null);
+			GameReferenzes.ReferenzGretel.Update(false, 1f, null);
+			mMother.Update();
 		}
 
 		public void Draw(TwoDRenderer pRenderer, SpriteBatch pSpriteBatch, Camera pCamera)
@@ -152,25 +148,36 @@ namespace HG_Game
 			pRenderer.ClearGBuffer();
 			pRenderer.Begin(pCamera.Transform);
 
-			Background.Draw(pRenderer);
+			SceneData.BackgroundTexture.Draw(pRenderer);
+			
 			mMother.Draw(pRenderer);
 			Color color = Color.White;
 			color.A = (byte)(VisibilityPlayer.Progress * 255);
 			pRenderer.Draw(GameReferenzes.ReferenzHansel.Skeleton, GameReferenzes.ReferenzHansel.Textures, color);
 			pRenderer.Draw(GameReferenzes.ReferenzGretel.Skeleton, GameReferenzes.ReferenzGretel.Textures, color);
-
+			
 			pRenderer.End();
 			
 			//--------------------DrawToScreen--------------------
 			pRenderer.DisposeGBuffer();
-			pRenderer.ProcessLight(new List<Light>(), pCamera.Transform);
+
+			PointLight l = new PointLight(new Vector2(100, 100));
+			l.Intensity = 10f;
+			l.Radius = 20f;
+
+			pRenderer.ProcessLight(new List<Light>() { l }, pCamera.Transform);
 			pRenderer.ProcessFinalScene();
 
 			pRenderer.DrawFinalTargettOnScreen(pSpriteBatch);
 
+			
 			//--------------------SpriteBatch--------------------
 			pSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 				pSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * FadingOut.Progress);
+				pSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), State.ToString(), new Vector2(10, 10), Color.White);
+				pSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), GameReferenzes.ReferenzHansel.SkeletonPosition.ToString(), new Vector2(10, 30), Color.White);
+				pSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), GameReferenzes.ReferenzGretel.SkeletonPosition.ToString(), new Vector2(10, 50), Color.White);
+				pSpriteBatch.DrawString(FontManager.Instance.GetElementByString("font"), color.A.ToString(), new Vector2(10, 70), Color.White);
 			pSpriteBatch.End();
 		}
 

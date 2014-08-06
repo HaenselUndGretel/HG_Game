@@ -1,82 +1,118 @@
 
 stepmother.png
+size: 360,191
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-front/diffuse/armLeft_front
-  rotate: true
-  xy: 130, 2
-  size: 13, 25
-  orig: 13, 25
-  offset: 0, 0
-  index: -1
-front/diffuse/armRight_front
-  rotate: true
-  xy: 157, 2
-  size: 13, 25
-  orig: 13, 25
-  offset: 0, 0
-  index: -1
-front/diffuse/body_front
-  rotate: true
-  xy: 172, 20
-  size: 24, 43
-  orig: 24, 43
-  offset: 0, 0
-  index: -1
-front/diffuse/footLeft_front
-  rotate: true
-  xy: 184, 10
-  size: 8, 44
-  orig: 8, 44
-  offset: 0, 0
-  index: -1
-front/diffuse/footRight_front
+front/diffuse/eyes
   rotate: false
-  xy: 2, 2
-  size: 8, 42
-  orig: 8, 42
-  offset: 0, 0
+  xy: 168, 14
+  size: 58, 30
+  orig: 58, 31
+  offset: 0, 1
   index: -1
-front/diffuse/handLeft_Front
+front/diffuse/eyes_down
   rotate: false
-  xy: 217, 35
-  size: 9, 9
-  orig: 9, 9
+  xy: 230, 81
+  size: 58, 30
+  orig: 58, 30
   offset: 0, 0
   index: -1
-front/diffuse/handRight_Front
+front/diffuse/eyes_left
   rotate: false
-  xy: 217, 24
-  size: 9, 9
-  orig: 9, 9
+  xy: 226, 50
+  size: 58, 30
+  orig: 58, 30
   offset: 0, 0
   index: -1
-front/diffuse/head_front
+front/diffuse/eyes_right
   rotate: false
-  xy: 106, 5
-  size: 22, 39
-  orig: 22, 39
+  xy: 293, 88
+  size: 58, 30
+  orig: 58, 30
   offset: 0, 0
   index: -1
-front/diffuse/lowerBody_front
-  rotate: true
-  xy: 12, 5
-  size: 39, 92
-  orig: 39, 92
-  offset: 0, 0
-  index: -1
-front/diffuse/shouderLeft_front
+front/diffuse/witch__0003s_0000_foreArm_right
   rotate: false
-  xy: 130, 17
-  size: 19, 27
-  orig: 19, 27
+  xy: 227, 8
+  size: 54, 41
+  orig: 54, 41
   offset: 0, 0
   index: -1
-front/diffuse/shouderRight_front
+front/diffuse/witch__0003s_0001_foreArm_left
   rotate: false
-  xy: 151, 17
-  size: 19, 27
-  orig: 19, 27
+  xy: 168, 45
+  size: 57, 40
+  orig: 57, 40
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0002_foot_left
+  rotate: false
+  xy: 285, 24
+  size: 15, 56
+  orig: 15, 56
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0003_foot_right
+  rotate: false
+  xy: 301, 31
+  size: 16, 56
+  orig: 16, 56
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0004_torso
+  rotate: false
+  xy: 230, 112
+  size: 62, 79
+  orig: 62, 102
+  offset: 0, 23
+  index: -1
+front/diffuse/witch__0003s_0005_skirt
+  rotate: false
+  xy: 87, 17
+  size: 80, 174
+  orig: 80, 174
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0006_hand-open_left
+  rotate: false
+  xy: 318, 65
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0007_hand_fist_right
+  rotate: false
+  xy: 318, 44
+  size: 17, 20
+  orig: 17, 20
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0008_shoulder_left
+  rotate: false
+  xy: 293, 156
+  size: 67, 35
+  orig: 67, 35
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0009_shoulder_right
+  rotate: false
+  xy: 293, 119
+  size: 65, 36
+  orig: 65, 36
+  offset: 0, 0
+  index: -1
+front/diffuse/witch__0003s_0010_Head
+  rotate: false
+  xy: 168, 86
+  size: 61, 105
+  orig: 61, 105
+  offset: 0, 0
+  index: -1
+shovel/shovel
+  rotate: false
+  xy: 1, 1
+  size: 85, 190
+  orig: 85, 190
   offset: 0, 0
   index: -1

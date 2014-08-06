@@ -804,11 +804,6 @@
       <Processor>SongProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="gfx\Backgrounds\018Normal.png">
-      <Name>018Normal</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="gfx\Backgrounds\018.png">
       <Name>018</Name>
       <Importer>TextureImporter</Importer>
@@ -1396,6 +1391,16 @@
     <Compile Include="spine\collectable3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>collectable3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\gretelNormal.png">
+      <Name>gretelNormal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\hanselNormal.png">
+      <Name>hanselNormal</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -2382,6 +2387,12 @@
   <ItemGroup>
     <Content Include="hug\018.hug">
       <Name>018</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iObj\stepmother.iObj">
+      <Name>stepmother</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

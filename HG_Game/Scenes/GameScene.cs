@@ -109,7 +109,7 @@ namespace HG_Game
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
-			SceneData.BackgroundTexture.LoadBackgroundTextures();
+			SceneData.BackgroundTexture.LoadBackgroundTextures(Savegame.LevelNameFromId(mSavegame.SceneId));
 			mRenderer.AmbientLight = mScene.SceneAmbientLight;
 			//Camera
 			mCamera.GameScreen = mScene.GamePlane;
@@ -135,7 +135,7 @@ namespace HG_Game
 			AIManager.Instance.SetAgents(mScene.Enemies);
 
 			//EndScene
-			//DasEnde.LoadContent();
+			DasEnde.LoadContent();
 		}
 
 		public override void Update()

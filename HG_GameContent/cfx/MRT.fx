@@ -12,12 +12,14 @@ sampler DepthMap	: register(s4);
 struct VertexShaderInput
 {
     float4 Position : POSITION0;
+	float4 Color	: COLOR0;
 	float2 UV		: TEXCOORD0;
 };
 
 struct VertexShaderOutput
 {
     float4 Position : POSITION0;
+	float4 Color	: COLOR0;
 	float2 UV		: TEXCOORD0;
 	float3 WorldPos : TEXCOORD1;
 };
@@ -41,6 +43,7 @@ VertexShaderOutput VertexShaderFunction(VertexShaderInput input)
 
     output.Position = mul(viewPosition, Projection);
 	output.Position.z = input.Position.z;
+	output.Color = input.Color;
 	output.UV = input.UV;
 
 	output.WorldPos = output.Position.xyz;
@@ -53,8 +56,8 @@ MRT PixelShaderFunction(VertexShaderOutput input)
 {
 	MRT output = (MRT)0;
 
-	output.ColorTarget	    = tex2D(DiffuseMap, input.UV);
-
+	output.ColorTarget	    = tex2D(DiffuseMap, input.UV)*input.Color;
+	//output.ColorTarget.a *= input.Color.a;
 
 	output.NormalTarget.r = tex2D(NormalMap, input.UV).r;
 	output.NormalTarget.g = tex2D(NormalMap, input.UV).g;

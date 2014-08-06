@@ -123,6 +123,7 @@ namespace HG_Game
 			GameReferenzes.ReferenzGretel = mGretel;
 			GameReferenzes.GameCamera = mCamera;
 			GameReferenzes.Level = mScene;
+			GameReferenzes.SaveGame = mSavegame;
 
 			GameReferenzes.SceneID = mSavegame.SceneId;
 
@@ -170,6 +171,7 @@ namespace HG_Game
 						FmodMediaPlayer.Instance.StopSong("collectable1");
 						FmodMediaPlayer.Instance.StopSong("collectable2");
 						FmodMediaPlayer.Instance.StopSong("collectable3");
+						FmodMediaPlayer.Instance.SetBackgroundVolume(1.0f);
 						mState = GameState.Running;
 					}
 					break;

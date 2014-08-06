@@ -10,7 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Mountain</BackgroundSoundSetting>
+  <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
   <MoveArea>
     <Rectangle>
       <X>576</X>
@@ -620,46 +620,42 @@
       </ActionPosition2>
       <ActionId>0</ActionId>
     </InteractiveObject>
-  </InteractiveObjects>
-  <Collectables>
-    <Collectable xsi:type="Lantern">
-      <ObjectId>90</ObjectId>
+    <InteractiveObject>
+      <ObjectId>93</ObjectId>
       <Position>
-        <X>54</X>
-        <Y>146</Y>
+        <X>680</X>
+        <Y>158</Y>
       </Position>
       <CollisionBox>
-        <X>54</X>
-        <Y>146</Y>
+        <X>630</X>
+        <Y>58</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>54</X>
-          <Y>146</Y>
+          <X>630</X>
+          <Y>58</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
-      <DrawZ>146</DrawZ>
-      <NormalZ>0</NormalZ>
-      <Name>laterne</Name>
+      <DrawZ>158</DrawZ>
+      <NormalZ>0.03857422</NormalZ>
+      <Name>ovendoor</Name>
       <Height>0</Height>
       <Width>0</Width>
       <ActionRectList />
       <CollisionRectList />
       <ActionPosition1>
-        <X>54</X>
-        <Y>146</Y>
+        <X>680</X>
+        <Y>158</Y>
       </ActionPosition1>
       <ActionPosition2>
-        <X>887</X>
-        <Y>-190</Y>
+        <X>1510</X>
+        <Y>-148</Y>
       </ActionPosition2>
       <ActionId>0</ActionId>
-      <CollectableId>-1</CollectableId>
-      <ShowTextureName />
-      <IsHidden>false</IsHidden>
-    </Collectable>
-  </Collectables>
+    </InteractiveObject>
+  </InteractiveObjects>
+  <Collectables />
   <Lights>
     <Light xsi:type="PointLight">
       <ObjectId>68</ObjectId>
@@ -697,7 +693,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0585993</Depth>
+      <Depth>0.09949068</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>

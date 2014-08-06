@@ -11,6 +11,7 @@ using KryptonEngine.Controls;
 using Microsoft.Xna.Framework.Input;
 using KryptonEngine;
 using KryptonEngine.FModAudio;
+using HanselAndGretel.Data;
 
 namespace HG_Game
 {
@@ -80,17 +81,10 @@ namespace HG_Game
 				mButtons.Add(new ImageButton(Names[i], new Vector2(25 + i * TextureWidth + i * 25, TextureHeight), Actions[i]));
 			mButtons[SelectedIndex].IsSelected = true;
 
-			int OffsetScreenX = 1280;
-			int OffsetScreenY = 720;
-
 			mCollectableButton = new List<LockedImageButton>();
 
-			for (int i = 0; i < 5; i++)
-				mCollectableButton.Add(new LockedImageButton("Collectable1", new Vector2(25 + i * TextureWidth + i * 25, + 25), null));
-			for (int i = 5; i < 9; i++)
-				mCollectableButton.Add(new LockedImageButton("Collectable1", new Vector2(138 + (i - 5) * TextureWidth + (i - 5) * 25, 276), null));
-			for (int i = 0; i < 9; i++)
-				mCollectableButton[i].IsUnlocked = true;
+			for (int i = 0; i < 3; i++)
+				mCollectableButton.Add(new LockedImageButton("collectable" + (i+1), new Vector2((1280 - (3 * TextureWidth + 25)) / 2, TextureHeight), null));
 
 			int OffsetRight = (1280 - (3 * TextureWidth + 25)) / 2;
 
@@ -166,8 +160,8 @@ namespace HG_Game
 					SelectedIndexCollectable += 4;
 
 				if (SelectedIndexCollectable == -1)
-					SelectedIndexCollectable = 8;
-				if (SelectedIndexCollectable == 9)
+					SelectedIndexCollectable = 2;
+				if (SelectedIndexCollectable == 3)
 					SelectedIndexCollectable = 0;
 
 				mCollectableButton[SelectedIndexCollectable].IsSelected = true;
@@ -181,6 +175,15 @@ namespace HG_Game
 					MoveDirection = true;
 					mCollectableButton[SelectedIndexCollectable].IsSelected = false;
 				}
+			}
+		}
+
+		public void CheckCollectables()
+		{
+			foreach(Collectable c in GameReferenzes.SaveGame.Collectables)
+			{
+				if (c.CollectableId > 0)
+					mCollectableButton[c.CollectableId].IsUnlocked = true;
 			}
 		}
 
@@ -326,6 +329,7 @@ namespace HG_Game
 
 		private void ShowExtras()
 		{
+			CheckCollectables();
 			menuState = MenuState.Collectables;
 			SelectedIndexCollectable = 0;
 		}

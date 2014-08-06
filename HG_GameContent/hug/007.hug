@@ -2027,8 +2027,113 @@
       </ActionPosition2>
       <ActionId>4</ActionId>
     </InteractiveObject>
+    <InteractiveObject>
+      <ObjectId>28</ObjectId>
+      <Position>
+        <X>3521</X>
+        <Y>1652</Y>
+      </Position>
+      <CollisionBox>
+        <X>3228</X>
+        <Y>1526</Y>
+        <Width>628</Width>
+        <Height>108</Height>
+        <Location>
+          <X>3228</X>
+          <Y>1526</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1652</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Name>clipp_08</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList>
+        <Rectangle>
+          <X>3456</X>
+          <Y>1634</Y>
+          <Width>387</Width>
+          <Height>84</Height>
+          <Location>
+            <X>3456</X>
+            <Y>1634</Y>
+          </Location>
+        </Rectangle>
+      </ActionRectList>
+      <CollisionRectList>
+        <Rectangle>
+          <X>3228</X>
+          <Y>1526</Y>
+          <Width>628</Width>
+          <Height>108</Height>
+          <Location>
+            <X>3228</X>
+            <Y>1526</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>3666</X>
+        <Y>1693</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>3521</X>
+        <Y>1652</Y>
+      </ActionPosition2>
+      <ActionId>6</ActionId>
+    </InteractiveObject>
   </InteractiveObjects>
-  <Collectables />
+  <Collectables>
+    <Collectable>
+      <ObjectId>33</ObjectId>
+      <Position>
+        <X>1404</X>
+        <Y>1966</Y>
+      </Position>
+      <CollisionBox>
+        <X>1404</X>
+        <Y>1966</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <Location>
+          <X>1404</X>
+          <Y>1966</Y>
+        </Location>
+      </CollisionBox>
+      <IsVisible>true</IsVisible>
+      <DrawZ>1966</DrawZ>
+      <NormalZ>0</NormalZ>
+      <Name>collectable2</Name>
+      <Height>0</Height>
+      <Width>0</Width>
+      <ActionRectList />
+      <CollisionRectList>
+        <Rectangle>
+          <X>1373</X>
+          <Y>1935</Y>
+          <Width>62</Width>
+          <Height>61</Height>
+          <Location>
+            <X>1373</X>
+            <Y>1935</Y>
+          </Location>
+        </Rectangle>
+      </CollisionRectList>
+      <ActionPosition1>
+        <X>1404</X>
+        <Y>1966</Y>
+      </ActionPosition1>
+      <ActionPosition2>
+        <X>1404</X>
+        <Y>1966</Y>
+      </ActionPosition2>
+      <ActionId>0</ActionId>
+      <CollectableId>2</CollectableId>
+      <ShowTextureName>ShowCollectable2</ShowTextureName>
+      <IsHidden>false</IsHidden>
+    </Collectable>
+  </Collectables>
   <Lights>
     <Light xsi:type="PointLight">
       <ObjectId>5</ObjectId>
@@ -2066,7 +2171,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.09210081</Depth>
+      <Depth>0.09730785</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2110,7 +2215,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.09210081</Depth>
+      <Depth>0.09730785</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -2154,7 +2259,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.09210081</Depth>
+      <Depth>0.09730785</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

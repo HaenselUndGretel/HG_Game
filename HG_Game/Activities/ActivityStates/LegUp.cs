@@ -133,7 +133,30 @@ namespace HG_Game
 					if (Conditions.AnimationComplete(pPlayer))
 					{
 						if (!m2ndState && pPlayer.GetType() == typeof(Gretel))
-							Sequences.Move(pPlayer, Hardcoded.LegUp_OffsetGretel[GameReferenzes.SceneID]); //Bei LegUp Gretel hoch setzen
+						{
+							Vector2 Offset;
+							switch (GameReferenzes.SceneID)
+							{
+								case 0:
+									Offset = Hardcoded.LegUp_OffsetGretel_0;
+									break;
+								case 4:
+									Offset = Hardcoded.LegUp_OffsetGretel_4;
+									break;
+								case 7:
+									Offset = Hardcoded.LegUp_OffsetGretel_7;
+									break;
+								case 10:
+									Offset = Hardcoded.LegUp_OffsetGretel_10;
+									break;
+								case 13:
+									Offset = Hardcoded.LegUp_OffsetGretel_13;
+									break;
+								default:
+									throw new Exception("Für diese Scene gibt es kein LegUp");
+							}
+							Sequences.Move(pPlayer, Offset); //Bei LegUp Gretel hoch setzen
+						}
 						Sequences.SetPlayerToIdle(pPlayer);
 					}
 					break;

@@ -13,7 +13,7 @@ namespace HG_Game
 		public const float KnockOverTree_EnterBalanceDistance = 74f;
 		public const float KnockOverTree_BalanceSpeedFactor = 0.6f;
 
-		public static Vector2 LegUp_StartOffsetGretel = new Vector2(0, 30);
+		public static Vector2 LegUp_StartOffsetGretel = new Vector2(0, 55);
 		public static Vector2[] LegUp_OffsetGretel = {new Vector2(0, -275), //000
 													 Vector2.Zero, //001
 													 Vector2.Zero, //002

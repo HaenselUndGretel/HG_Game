@@ -85,13 +85,8 @@ namespace HG_Game
 			mPauseMenu = new PauseMenu();
 
 			//EndScene
-<<<<<<< HEAD
-			//DasEnde = new EndScene();
-			//DasEnde.Initialize();
-=======
 			DasEnde = new EndScene();
 			DasEnde.Initialize();
->>>>>>> origin/NEWMASTER
 
 			FmodMediaPlayer.FadingSpeed = 1 / 90.0f;
 		}
@@ -169,6 +164,7 @@ namespace HG_Game
 						io.Update();
 					break;
 				case GameState.CollectableInfo:
+					FmodMediaPlayer.Instance.SetBackgroundVolume(0.1f);
 					if (InputHelper.ButtonJustPressed2Player(Buttons.B))
 					{
 						FmodMediaPlayer.Instance.StopSong("collectable1");

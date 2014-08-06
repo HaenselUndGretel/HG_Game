@@ -58,7 +58,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>amuletCharge</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletCharge</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletCharge</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletCharge</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -98,22 +113,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>amuletCharge</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>amuletCharge</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>amuletCharge</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>amuletCharge</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletCharge</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -243,7 +263,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>amuletUse</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletUse</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletUse</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletUse</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -283,22 +318,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>amuletUse</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>amuletUse</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>amuletUse</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>amuletUse</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>amuletUse</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -428,7 +468,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -468,22 +523,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -613,7 +673,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -653,22 +728,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -798,7 +878,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -838,22 +933,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -983,7 +1083,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1023,22 +1138,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceEnterUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceEnterUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1168,7 +1288,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1208,22 +1343,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1353,7 +1493,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1393,22 +1548,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1538,7 +1698,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1578,22 +1753,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceLeaveUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceLeaveUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1723,7 +1903,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1763,22 +1958,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1908,7 +2108,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -1948,22 +2163,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>balanceUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>balanceUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>balanceUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2093,7 +2313,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>idleDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2133,22 +2368,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>idleDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2222,187 +2462,822 @@
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>amuletCharge</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>amuletUse</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceEnterDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceEnterSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceEnterUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceLeaveDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceLeaveSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceLeaveUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>balanceUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>idleDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDownShiver</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDownShiver</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDownShiver</From>
       <To>idleSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>idleUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>jumpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>jumpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>knockOverTreeDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>knockOverTreeSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>knockOverTreeUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
-      <To>legUp</To>
+      <From>idleDownShiver</From>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
-      <To>legUpLower</To>
+      <From>idleDownShiver</From>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
-      <To>legUpRaise</To>
+      <From>idleDownShiver</From>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
-      <To>pushDoorUp</To>
+      <From>idleDownShiver</From>
+      <To>legUpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDownShiver</From>
       <To>pushRockDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>pushRockSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>raiseLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>raiseLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>raiseLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkSideShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
       <To>walkUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleShiver</From>
+      <From>idleDownShiver</From>
+      <To>walkUpShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>amuletCharge</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>amuletUse</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceEnterDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceEnterSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceEnterUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceLeaveDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceLeaveSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceLeaveUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>balanceUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>jumpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>jumpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>knockOverTreeDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>knockOverTreeSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>knockOverTreeUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>legUpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>legUpRaiseDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>legUpRaiseSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>pushRockDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>pushRockSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>raiseLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>raiseLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>raiseLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkSideShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternDown</From>
+      <To>walkUpShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>amuletCharge</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>amuletUse</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceEnterDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceEnterSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceEnterUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceLeaveDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceLeaveSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceLeaveUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>balanceUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>jumpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>jumpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>knockOverTreeDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>knockOverTreeSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>knockOverTreeUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>legUpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>legUpRaiseDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>legUpRaiseSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>pushRockDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>pushRockSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>raiseLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>raiseLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>raiseLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkSideShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternSide</From>
+      <To>walkUpShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>amuletCharge</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>amuletUse</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceEnterDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceEnterSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceEnterUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceLeaveDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceLeaveSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceLeaveUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>balanceUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>jumpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>jumpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>knockOverTreeDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>knockOverTreeSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>knockOverTreeUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>legUpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>legUpRaiseDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>legUpRaiseSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>pushRockDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>pushRockSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>raiseLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>raiseLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>raiseLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkSideShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleLanternUp</From>
       <To>walkUpShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
@@ -2468,7 +3343,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2503,22 +3393,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2653,7 +3548,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>idleUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2688,22 +3598,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>idleUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2838,7 +3753,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>jumpDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -2873,22 +3803,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>jumpDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>jumpDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>jumpDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>jumpDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3023,7 +3958,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>jumpSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3058,22 +4008,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>jumpSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>jumpSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>jumpSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>jumpSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>jumpSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3208,7 +4163,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3243,22 +4213,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3393,7 +4368,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3428,22 +4418,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3578,7 +4573,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3613,22 +4623,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>knockOverTreeUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>knockOverTreeUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -3702,742 +4717,1027 @@
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>amuletCharge</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>amuletUse</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceEnterDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceEnterSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceEnterUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceLeaveDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceLeaveSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceLeaveUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>balanceUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>idleDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
-      <To>idleShiver</To>
+      <From>legUpDown</From>
+      <To>idleDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpDown</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpDown</From>
       <To>idleSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>idleUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>jumpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>jumpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>knockOverTreeDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>knockOverTreeSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>knockOverTreeUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
-      <To>legUpLower</To>
+      <From>legUpDown</From>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
-      <To>legUpRaise</To>
+      <From>legUpDown</From>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
-      <To>pushDoorUp</To>
+      <From>legUpDown</From>
+      <To>legUpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpDown</From>
       <To>pushRockDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>pushRockSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>raiseLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>raiseLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>raiseLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkSideShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUp</From>
+      <From>legUpDown</From>
       <To>walkUpShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>amuletCharge</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>amuletUse</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceEnterDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceEnterSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceEnterUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceLeaveDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceLeaveSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceLeaveUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>balanceUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>idleDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
-      <To>idleShiver</To>
+      <From>legUpRaiseDown</From>
+      <To>idleDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseDown</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseDown</From>
       <To>idleSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>idleUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>jumpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>jumpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>knockOverTreeDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>knockOverTreeSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>knockOverTreeUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
-      <To>legUp</To>
+      <From>legUpRaiseDown</From>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
-      <To>legUpRaise</To>
+      <From>legUpRaiseDown</From>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
-      <To>pushDoorUp</To>
+      <From>legUpRaiseDown</From>
+      <To>legUpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseDown</From>
       <To>pushRockDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>pushRockSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>raiseLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>raiseLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>raiseLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkSideShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpLower</From>
+      <From>legUpRaiseDown</From>
       <To>walkUpShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>amuletCharge</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>amuletUse</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceEnterDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceEnterSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceEnterUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceLeaveDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceLeaveSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceLeaveUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>balanceUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>idleDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
-      <To>idleShiver</To>
+      <From>legUpRaiseSide</From>
+      <To>idleDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseSide</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseSide</From>
       <To>idleSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>idleUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>jumpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>jumpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>knockOverTreeDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>knockOverTreeSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>knockOverTreeUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
-      <To>legUp</To>
+      <From>legUpRaiseSide</From>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
-      <To>legUpLower</To>
+      <From>legUpRaiseSide</From>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
-      <To>pushDoorUp</To>
+      <From>legUpRaiseSide</From>
+      <To>legUpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpRaiseSide</From>
       <To>pushRockDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>pushRockSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>raiseLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>raiseLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>raiseLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkSideShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>legUpRaise</From>
+      <From>legUpRaiseSide</From>
       <To>walkUpShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>amuletCharge</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>amuletUse</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceEnterDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceEnterSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceEnterUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceLeaveDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceLeaveSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceLeaveUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>balanceUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>idleDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
-      <To>idleShiver</To>
+      <From>legUpSide</From>
+      <To>idleDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpSide</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpSide</From>
       <To>idleSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>idleUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>jumpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>jumpSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>knockOverTreeDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>knockOverTreeSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>knockOverTreeUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
-      <To>legUp</To>
+      <From>legUpSide</From>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
-      <To>legUpLower</To>
+      <From>legUpSide</From>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
-      <To>legUpRaise</To>
+      <From>legUpSide</From>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
+      <To>pushDoorDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>legUpSide</From>
       <To>pushRockDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>pushRockSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>raiseLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>raiseLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>raiseLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkDownShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkLanternDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkLanternSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkSideShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
       <To>walkUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>pushDoorUp</From>
+      <From>legUpSide</From>
+      <To>walkUpShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>amuletCharge</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>amuletUse</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceEnterDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceEnterSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceEnterUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceLeaveDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceLeaveSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceLeaveUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>balanceUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>jumpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>jumpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>knockOverTreeDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>knockOverTreeSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>knockOverTreeUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>legUpDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>legUpRaiseDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>legUpRaiseSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>pushRockDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>pushRockSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>raiseLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>raiseLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>raiseLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkLanternUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkSideShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushDoorDown</From>
       <To>walkUpShiver</To>
       <Fading>0</Fading>
     </AnimationMix>
@@ -4503,7 +5803,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>pushRockDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -4543,22 +5858,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>pushRockDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>pushRockDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>pushRockDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>pushRockDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -4688,7 +6008,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>pushRockSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -4728,22 +6063,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>pushRockSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>pushRockSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>pushRockSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>pushRockSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>pushRockSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -4873,7 +6213,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -4913,22 +6268,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5058,7 +6418,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5098,22 +6473,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5243,7 +6623,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5283,22 +6678,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>raiseLanternUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>raiseLanternUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5428,7 +6828,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5468,22 +6883,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5613,7 +7033,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkDownShiver</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDownShiver</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDownShiver</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDownShiver</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5653,22 +7088,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkDownShiver</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkDownShiver</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkDownShiver</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkDownShiver</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkDownShiver</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5798,7 +7238,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternDown</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternDown</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternDown</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternDown</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5838,22 +7293,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternDown</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternDown</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternDown</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternDown</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternDown</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -5983,7 +7443,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6023,22 +7498,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6168,7 +7648,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6208,22 +7703,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkLanternUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkLanternUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6353,7 +7853,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSide</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSide</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSide</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6393,22 +7908,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSide</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6538,7 +8058,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkSideShiver</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSideShiver</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSideShiver</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSideShiver</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6578,22 +8113,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkSideShiver</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSideShiver</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSideShiver</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSideShiver</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSideShiver</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6723,7 +8263,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkUp</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6763,22 +8318,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkUp</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkUp</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkUp</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkUp</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6908,7 +8468,22 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkUpShiver</From>
-      <To>idleShiver</To>
+      <To>idleDownShiver</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUpShiver</From>
+      <To>idleLanternDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUpShiver</From>
+      <To>idleLanternSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUpShiver</From>
+      <To>idleLanternUp</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
@@ -6948,22 +8523,27 @@
     </AnimationMix>
     <AnimationMix>
       <From>walkUpShiver</From>
-      <To>legUp</To>
+      <To>legUpDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkUpShiver</From>
-      <To>legUpLower</To>
+      <To>legUpRaiseDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkUpShiver</From>
-      <To>legUpRaise</To>
+      <To>legUpRaiseSide</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkUpShiver</From>
-      <To>pushDoorUp</To>
+      <To>legUpSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUpShiver</From>
+      <To>pushDoorDown</To>
       <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>

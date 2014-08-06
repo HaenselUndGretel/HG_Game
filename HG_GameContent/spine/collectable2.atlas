@@ -1,13 +1,13 @@
 
 collectable2.png
-size: 65,65
+size: 42,30
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 img/spacer
   rotate: false
   xy: 1, 1
-  size: 64, 64
-  orig: 64, 64
+  size: 42, 30
+  orig: 42, 30
   offset: 0, 0
   index: -1

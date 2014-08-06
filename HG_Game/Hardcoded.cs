@@ -15,9 +15,9 @@ namespace HG_Game
 
 		public static Vector2 LegUp_StartOffsetGretel = new Vector2(0, 55);
 		public static Vector2 LegUp_OffsetGretel_0 = new Vector2(0, -275);
-		public static Vector2 LegUp_OffsetGretel_4 = new Vector2(202, -80);
-		public static Vector2 LegUp_OffsetGretel_7 = new Vector2(-30, 0);
-		public static Vector2 LegUp_OffsetGretel_10 = new Vector2(-245, -18);
+		public static Vector2 LegUp_OffsetGretel_4 = new Vector2(202, -102);
+		public static Vector2 LegUp_OffsetGretel_7 = new Vector2(-30, -225);
+		public static Vector2 LegUp_OffsetGretel_10 = new Vector2(-245, -120);
 		public static Vector2 LegUp_OffsetGretel_13 = new Vector2(190, -85);
 
 		public const int PushRock_RockMoveDistance = 256;

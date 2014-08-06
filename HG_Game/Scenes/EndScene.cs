@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using KryptonEngine.HG_Data;
 using KryptonEngine.Manager;
 using KryptonEngine.Rendering;
@@ -108,6 +109,8 @@ namespace HG_Game
 						GameReferenzes.ReferenzGretel.SkeletonPosition == InitPosGretel + HouseWalkDelta
 						)
 						State = EndState.FadeThisShit;
+					FmodMediaPlayer.Instance.FadeBackgroundChannelOut(0);
+					FmodMediaPlayer.Instance.FadeBackgroundChannelOut(1);
 					break;
 				case EndState.FadeThisShit:
 					/*VisibilityPlayer.StepBackward();

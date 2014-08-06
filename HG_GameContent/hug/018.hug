@@ -10,7 +10,7 @@
       <Y>0</Y>
     </Location>
   </GamePlane>
-  <BackgroundSoundSetting>Inside</BackgroundSoundSetting>
+  <BackgroundSoundSetting>EndTheme</BackgroundSoundSetting>
   <MoveArea />
   <Waypoints>
     <Waypoint>

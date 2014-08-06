@@ -246,6 +246,7 @@ namespace HG_Game
 			{
 				string name = "ShowTexture" + mSavegame.Collectables[mSavegame.Collectables.Count - 1].CollectableId;
 				mSpriteBatch.Draw(TextureManager.Instance.GetElementByString(name), Vector2.Zero, Color.White);
+				mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("btnBack"), new Vector2(1120, 650), Color.White);
 			}
 			mPauseMenu.Draw(mSpriteBatch);
 			if (mState == GameState.End)

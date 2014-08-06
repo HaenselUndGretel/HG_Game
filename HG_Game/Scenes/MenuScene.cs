@@ -17,7 +17,7 @@ namespace HG_Game
 {
 	enum MenuState
 	{
-		Main, Collectables, Credits, Options, Volume, Controller
+		Main, Collectables, Credits, Options, Volume, Controller, ShowCollectable
 	}
 
 	public class MenuScene : Scene
@@ -26,6 +26,7 @@ namespace HG_Game
 
 		protected Texture2D mBackground;
 		protected Texture2D mSoundbar;
+		protected Texture2D mShowCollectable;
 		protected List<ImageButton> mButtons;
 		protected List<LockedImageButton> mCollectableButton;
 		protected List<ImageButton> mOptionButtons;
@@ -72,10 +73,10 @@ namespace HG_Game
 
 			List<String> Names = new List<String>() { "continue", "newGame", "extras", "options", "exitGame"};
 			List<Action> Actions = new List<Action>() { ContinueGame, StartNewGame, ShowExtras, ShowOptions, ExitGame };
+			List<Action> ColActions = new List<Action>(){ShowCollectable1,ShowCollectable2,ShowCollectable3};
 			mButtons = new List<ImageButton>();
 
 			int TextureWidth = 226;
-			int TextureHeight = 720 - 226 - 25;
 
 			for (int i = 0; i < 5; i++ )
 				mButtons.Add(new ImageButton(Names[i], new Vector2(25 + i * TextureWidth + i * 25, 0), Actions[i]));
@@ -85,7 +86,7 @@ namespace HG_Game
 			int OffsetRight = (1280 - (3 * TextureWidth + 25)) / 2;
 
 			for (int i = 0; i < 3; i++)
-				mCollectableButton.Add(new LockedImageButton("Collectable" + (i + 1), new Vector2(OffsetRight + i * TextureWidth + i * 25, 20), null));
+				mCollectableButton.Add(new LockedImageButton("Collectable" + (i + 1), new Vector2(OffsetRight + i * TextureWidth + i * 25, 20),ColActions[i]));
 
 			mOptionButtons = new List<ImageButton>();
 			Names = new List<String>() { "volume", "controller", "credits" };
@@ -107,6 +108,10 @@ namespace HG_Game
 				case MenuState.Controller: UpdateControllerMenu();
 					break;
 				case MenuState.Credits: UpdateCredits();
+					break;
+				case MenuState.ShowCollectable:
+					if(InputHelper.ButtonJustPressed2Player(Buttons.B))
+						menuState = MenuState.Collectables;
 					break;
 			}
 		}
@@ -259,8 +264,13 @@ namespace HG_Game
 					break;
 				case MenuState.Controller:
 					DrawController();
+					mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("btnBack"), new Vector2(1120, 650), Color.White);
 					break;
 				case MenuState.Credits: DrawCredits();
+					break;
+				case MenuState.ShowCollectable:
+					mSpriteBatch.Draw(mShowCollectable, Vector2.Zero, Color.White);
+					mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("btnBack"), new Vector2(1120, 650), Color.White);
 					break;
 					
 			}
@@ -271,6 +281,7 @@ namespace HG_Game
 		private void DrawController()
 		{
 			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * 0.8f);
+			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("Controller"), new Rectangle(0, 0, 1280, 720), Color.White);
 		}
 
 		private void DrawCredits()
@@ -284,6 +295,24 @@ namespace HG_Game
 		private void None()
 		{
 
+		}
+
+		private void ShowCollectable1()
+		{
+			menuState = MenuState.ShowCollectable;
+			mShowCollectable = TextureManager.Instance.GetElementByString("ShowTexture1");
+		}
+
+		private void ShowCollectable2()
+		{
+			menuState = MenuState.ShowCollectable;
+			mShowCollectable = TextureManager.Instance.GetElementByString("ShowTexture2");
+		}
+
+		private void ShowCollectable3()
+		{
+			menuState = MenuState.ShowCollectable;
+			mShowCollectable = TextureManager.Instance.GetElementByString("ShowTexture3");
 		}
 
 		private void ShowControllerSettings()

@@ -233,5 +233,6 @@ namespace HG_Game
 			else
 				pActI.Draw(pSpriteBatch, (Hansel)pOtherPlayer, (Gretel)pPlayer);
 		}
+
 	}
 }

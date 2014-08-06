@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -113,6 +114,7 @@ namespace HG_Game
 							//Baum fällt
 							Sequences.AnimateAccordingToDirection(rIObj, rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_Tree_Falling_Up, Hardcoded.Anim_Tree_Falling_Down, Hardcoded.Anim_Tree_Falling_Side);
 							ActI.SetFadingState(pPlayer, false);
+							FmodMediaPlayer.Instance.AddSong("SfxTreeFall", 0.8f);
 							++pPlayer.mCurrentState;
 						}
 						break;

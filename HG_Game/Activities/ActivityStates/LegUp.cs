@@ -1,6 +1,7 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -57,6 +58,8 @@ namespace HG_Game
 					break;
 				case 1:
 					Sequences.StartAnimation(pPlayer, Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_LegUp_Raise_Up, "gibts nicht", Hardcoded.Anim_LegUp_Raise_Side));
+					if (pPlayer.GetType() == typeof(Hansel))
+						FmodMediaPlayer.Instance.AddSong("hansel_legup_01", 0.8f);
 					ActI.ThumbstickDirHansel = ActivityInstruction.ThumbstickDirection.Up;
 					ActI.ThumbstickDirGretel = ActivityInstruction.ThumbstickDirection.None;
 					++pPlayer.mCurrentState;
@@ -103,6 +106,7 @@ namespace HG_Game
 						{
 							Sequences.StartAnimation(pPlayer, Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_LegUp_Lift_Up, "gibts nicht", Hardcoded.Anim_LegUp_Lift_Side)); //hoch ziehen
 							Sequences.StartAnimation(pOtherPlayer, Character.GetRightDirectionAnimation(rIObj.ActionPosition2 - rIObj.ActionPosition1, Hardcoded.Anim_LegUp_Lift_Up, "gibts nicht", Hardcoded.Anim_LegUp_Lift_Side));
+							FmodMediaPlayer.Instance.AddSong("gretel_legup_01", 0.8f);
 						}
 						else //LegUpGrab
 						{

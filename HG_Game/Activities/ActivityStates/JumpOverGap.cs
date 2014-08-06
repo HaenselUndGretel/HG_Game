@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ namespace HG_Game
 					mDestination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
 					mSource = pPlayer.SkeletonPosition;
 					Sequences.AnimateAccordingToDirection(pPlayer, mDestination - mSource, Hardcoded.Anim_Jump_Up_Hansel, Hardcoded.Anim_Jump_Down_Hansel, Hardcoded.Anim_Jump_Side_Hansel);
+					FmodMediaPlayer.Instance.AddSong("hansel_jump_01", 0.8f);
 					++pPlayer.mCurrentState;
 					break;
 				case 2:

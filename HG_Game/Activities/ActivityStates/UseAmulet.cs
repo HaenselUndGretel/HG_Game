@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -42,6 +43,7 @@ namespace HG_Game
 				case 0:
 					//-----Animation starten-----
 					Sequences.StartAnimation(pPlayer, Hardcoded.Anim_Amulet_Use);
+					FmodMediaPlayer.Instance.AddSong("SfxAmuletCharge", 0.8f);
 					++pPlayer.mCurrentState;
 					break;
 				case 1:

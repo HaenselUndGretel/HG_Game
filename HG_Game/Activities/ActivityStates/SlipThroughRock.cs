@@ -1,5 +1,6 @@
 ﻿using HanselAndGretel.Data;
 using KryptonEngine.Entities;
+using KryptonEngine.FModAudio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -49,6 +50,7 @@ namespace HG_Game
 					//-----Weg bewegt?-----
 					if (Conditions.AnimationComplete(pPlayer))
 					{
+						FmodMediaPlayer.Instance.AddSong("gretel_crawl", 0.8f);
 						Destination = rIObj.DistantActionPosition(pPlayer.SkeletonPosition);
 						pPlayer.IsVisible = false;
 						++pPlayer.mCurrentState;

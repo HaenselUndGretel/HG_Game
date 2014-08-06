@@ -174,16 +174,16 @@
     <Waypoint>
       <ObjectId>3</ObjectId>
       <Position>
-        <X>2425</X>
+        <X>2417</X>
         <Y>290</Y>
       </Position>
       <CollisionBox>
-        <X>2425</X>
+        <X>2417</X>
         <Y>290</Y>
         <Width>142</Width>
         <Height>367</Height>
         <Location>
-          <X>2425</X>
+          <X>2417</X>
           <Y>290</Y>
         </Location>
       </CollisionBox>
@@ -239,7 +239,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0560248047</Depth>
+      <Depth>0.0869731</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -283,7 +283,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0560248047</Depth>
+      <Depth>0.0869731</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -327,7 +327,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>10</Intensity>
-      <Depth>0.0560248047</Depth>
+      <Depth>0.0869731</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>

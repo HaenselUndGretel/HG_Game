@@ -136,6 +136,7 @@ namespace HG_Game
 
 			mRenderer.SetMinFogHeight(0.1f);
 			mRenderer.SetMaxFogHeight(0.2f);
+			FmodMediaPlayer.Instance.SetBackgroundVolume(0.7f);
 
 			//EndScene
 			DasEnde.LoadContent();
@@ -174,7 +175,7 @@ namespace HG_Game
 						FmodMediaPlayer.Instance.StopSong("collectable1");
 						FmodMediaPlayer.Instance.StopSong("collectable2");
 						FmodMediaPlayer.Instance.StopSong("collectable3");
-						FmodMediaPlayer.Instance.SetBackgroundVolume(1.0f);
+						FmodMediaPlayer.Instance.SetBackgroundVolume(0.7f);
 						mState = GameState.Running;
 					}
 					break;

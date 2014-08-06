@@ -249,7 +249,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0558490939</Depth>
+      <Depth>0.0868663043</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -293,7 +293,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.0558490939</Depth>
+      <Depth>0.0868663043</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -337,7 +337,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0558490939</Depth>
+      <Depth>0.0868663043</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -381,7 +381,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0558490939</Depth>
+      <Depth>0.0868663043</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -425,7 +425,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.0558490939</Depth>
+      <Depth>0.0868663043</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -527,5 +527,5 @@
     </Direction>
   </SceneDirectionLight>
   <Enemies />
-  <Fog>false</Fog>
+  <Fog>true</Fog>
 </SceneData>

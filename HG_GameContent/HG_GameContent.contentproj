@@ -1364,12 +1364,6 @@
       <Processor>TextureProcessor</Processor>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="spine\hansel2.png">
-      <Name>hansel2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Content Include="spine\amulet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>amulet</Name>
@@ -1401,6 +1395,26 @@
     </Compile>
     <Compile Include="spine\hanselNormal.png">
       <Name>hanselNormal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\gretelAO.png">
+      <Name>gretelAO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\gretelDepth.png">
+      <Name>gretelDepth</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\hanselAO.png">
+      <Name>hanselAO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spine\hanselDepth.png">
+      <Name>hanselDepth</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

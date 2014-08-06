@@ -219,6 +219,7 @@ namespace HG_Game
 			mRenderer.ProcessFinalScene();
 
 			mRenderer.DrawFinalTargettOnScreen(mSpriteBatch);
+			mRenderer.DrawDebugRendertargets(mSpriteBatch);
 
 			if (GameReferenzes.Level.Fog)
 				mRenderer.ApplyFog(mCamera.Transform);

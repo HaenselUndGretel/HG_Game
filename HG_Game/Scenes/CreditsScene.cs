@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using KryptonEngine.Controls;
 using Microsoft.Xna.Framework.Input;
+using KryptonEngine;
 
 namespace HG_Game
 {
@@ -80,6 +81,7 @@ namespace HG_Game
 
 		public override void Draw()
 		{
+			EngineSettings.Graphics.GraphicsDevice.Clear(Color.Black);
 			mSpriteBatch.Begin();
 			mSpriteBatch.Draw(rTexture, Vector2.Zero, Color.White);
 			mSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * Visibility.ProgressInverse);

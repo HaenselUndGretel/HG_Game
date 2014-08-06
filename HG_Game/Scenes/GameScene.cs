@@ -94,7 +94,7 @@ namespace HG_Game
 		public override void LoadContent()
 		{
 			base.LoadContent();
-			mEndGameTexture = TextureManager.Instance.GetElementByString("endgame");
+			mEndGameTexture = TextureManager.Instance.GetElementByString("gameover");
 			//Logic
 			mLogic.LoadContent(mHansel, mGretel);
 			//Player

@@ -869,6 +869,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="gfx\Backgrounds\008Ink.png">
+      <Name>008Ink</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="sfx\collectable1.mp3">
       <Name>collectable1</Name>
       <Importer>Mp3Importer</Importer>

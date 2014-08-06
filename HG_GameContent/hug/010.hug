@@ -1243,16 +1243,6 @@
       </Location>
     </Rectangle>
     <Rectangle>
-      <X>3408</X>
-      <Y>976</Y>
-      <Width>64</Width>
-      <Height>128</Height>
-      <Location>
-        <X>3408</X>
-        <Y>976</Y>
-      </Location>
-    </Rectangle>
-    <Rectangle>
       <X>3328</X>
       <Y>720</Y>
       <Width>48</Width>
@@ -1566,18 +1556,18 @@
         <Y>1185</Y>
       </Position>
       <CollisionBox>
-        <X>3527</X>
-        <Y>1185</Y>
-        <Width>100</Width>
-        <Height>100</Height>
+        <X>3492</X>
+        <Y>1104</Y>
+        <Width>71</Width>
+        <Height>161</Height>
         <Location>
-          <X>3527</X>
-          <Y>1185</Y>
+          <X>3492</X>
+          <Y>1104</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>
       <DrawZ>1185</DrawZ>
-      <NormalZ>0.289306641</NormalZ>
+      <NormalZ>0</NormalZ>
       <Name>jump_updown</Name>
       <Height>0</Height>
       <Width>0</Width>
@@ -1664,7 +1654,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.08627353</Depth>
+      <Depth>0.0529363677</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1708,7 +1698,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.08627353</Depth>
+      <Depth>0.0529363677</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1752,7 +1742,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>30</Intensity>
-      <Depth>0.08627353</Depth>
+      <Depth>0.0529363677</Depth>
       <LightColor>
         <X>1</X>
         <Y>1</Y>
@@ -1796,7 +1786,7 @@
       <MaxHeight>100</MaxHeight>
       <MinHeight>50</MinHeight>
       <Intensity>15</Intensity>
-      <Depth>0.08627353</Depth>
+      <Depth>0.0529363677</Depth>
       <LightColor>
         <X>0</X>
         <Y>1</Y>
@@ -1949,13 +1939,13 @@
         <Y>975</Y>
       </Position>
       <CollisionBox>
-        <X>535</X>
-        <Y>875</Y>
+        <X>585</X>
+        <Y>975</Y>
         <Width>100</Width>
         <Height>100</Height>
         <Location>
-          <X>535</X>
-          <Y>875</Y>
+          <X>585</X>
+          <Y>975</Y>
         </Location>
       </CollisionBox>
       <IsVisible>true</IsVisible>

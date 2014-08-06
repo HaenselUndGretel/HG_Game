@@ -64,9 +64,6 @@ namespace HG_Game
 
 		public override void Initialize()
 		{
-#if DEBUG
-			EngineSettings.IsDebug = true;
-#endif
 			//GameState
 			mState = GameState.Running;
 			mEndGameFading = new SteppingProgress(Hardcoded.End_FadingDuration);
@@ -299,7 +296,7 @@ namespace HG_Game
 				sb.AppendLine("Hansel: " + mHansel.Lantern.ToString() + " _ Gretel: " + mGretel.Lantern.ToString());
 
 				mSpriteBatch.Begin();
-				mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.White * 0.5f, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
+				//mSpriteBatch.DrawString(font, sb, new Vector2(10, 10), Color.White * 0.5f, 0f, Vector2.Zero, 1.1f, SpriteEffects.None, 0f);
 				mSpriteBatch.End();
 			}
 #endif

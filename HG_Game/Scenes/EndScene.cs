@@ -72,9 +72,9 @@ namespace HG_Game
 			Waiting10sec = new SteppingProgress(10f);
 			FadingOut = new SteppingProgress(4f);
 
-			PositionMother = new Vector2(2000, 700);
-			InitPosHansel = new Vector2(50, 700);
-			InitPosGretel = new Vector2(50, 800);
+			PositionMother = new Vector2(2150, 650);
+			InitPosHansel = new Vector2(50, 800);
+			InitPosGretel = new Vector2(100, 800);
 			HouseWalkDelta = new Vector2(1000, 0);
 
 			MoveCameraDirection = new Vector2(1, 0);

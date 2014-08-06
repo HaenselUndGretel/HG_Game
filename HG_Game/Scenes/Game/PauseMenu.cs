@@ -21,6 +21,7 @@ namespace HG_Game
 		private bool mIsActive;
 		private int mSelectedIndex;
 		private List<ImageButton> mButtons;
+		private Texture2D Top;
 
 		#endregion
 
@@ -39,8 +40,9 @@ namespace HG_Game
 		{
 			mIsActive = false;
 			mSelectedIndex = 0;
-			mButtons.Add(new ImageButton("continueIngame", new Vector2(100, 100), ContinueButton));
-			mButtons.Add(new ImageButton("exitIngame", new Vector2(300, 100), ExitButton));
+			mButtons.Add(new ImageButton("continue", new Vector2(401, 247), ContinueButton));
+			mButtons.Add(new ImageButton("exitIngame", new Vector2(652, 247), ExitButton));
+			Top = TextureManager.Instance.GetElementByString("pause_default");
 		}
 
 		public void Update(ref GameScene.GameState pGameState)
@@ -49,6 +51,8 @@ namespace HG_Game
 			{
 				mIsActive = !mIsActive;
 				mSelectedIndex = 0;
+				foreach (ImageButton b in mButtons)
+					b.IsSelected = false;
 			}
 
 			if (mIsActive)
@@ -68,6 +72,8 @@ namespace HG_Game
 				pSpriteBatch.Draw(TextureManager.Instance.GetElementByString("pixel"), new Rectangle(0, 0, 1280, 720), Color.Black * 0.8f);
 				foreach (ImageButton ib in mButtons)
 					ib.Draw(pSpriteBatch);
+
+				pSpriteBatch.Draw(Top, new Vector2(487, 50), Color.White);
 			}
 		}
 
@@ -100,6 +106,10 @@ namespace HG_Game
 		private void ExitButton()
 		{
 			mIsActive = false;
+			mSelectedIndex = 0;
+			foreach (ImageButton b in mButtons)
+				b.IsSelected = false;
+
 			FmodMediaPlayer.Instance.SetBackgroundSong(GameReferenzes.MainTheme);
 			SceneManager.Instance.SetCurrentSceneTo("Menu");
 		}

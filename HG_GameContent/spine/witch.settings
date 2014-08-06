@@ -2,454 +2,454 @@
 <SpineDataSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <AnimationFading>
     <AnimationMix>
-      <From>walkUp</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
+      <From>dieDown</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>walkUp</From>
-      <To>idleUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkUp</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkUp</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkUp</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkUp</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkUp</From>
+      <From>dieDown</From>
       <To>walkSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>walkUp</From>
-      <To>grabSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkUp</From>
-      <To>idleSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabUp</From>
+      <From>dieDown</From>
       <To>walkUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>grabUp</From>
-      <To>idleUp</To>
-      <Fading>0.2</Fading>
+      <From>dieDown</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>grabUp</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabUp</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabUp</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabUp</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabUp</From>
-      <To>walkSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabUp</From>
+      <From>dieDown</From>
       <To>grabSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>grabUp</From>
-      <To>idleSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
-      <To>walkUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
+      <From>dieDown</From>
       <To>grabUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleUp</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
+      <From>dieDown</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleUp</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
-      <To>walkSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
-      <To>grabSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleUp</From>
+      <From>dieDown</From>
       <To>idleSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>die</From>
-      <To>walkUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>die</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>die</From>
+      <From>dieDown</From>
       <To>idleUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>die</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
+      <From>walkDown</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>die</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>die</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>die</From>
+      <From>walkDown</From>
       <To>walkSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>die</From>
-      <To>grabSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>die</From>
-      <To>idleSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>floating</From>
+      <From>walkDown</From>
       <To>walkUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>floating</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
+      <From>walkDown</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>floating</From>
-      <To>idleUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>floating</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>floating</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>floating</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>floating</From>
-      <To>walkSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>floating</From>
+      <From>walkDown</From>
       <To>grabSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>floating</From>
-      <To>idleSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
-      <To>walkUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
+      <From>walkDown</From>
       <To>grabUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>grab</From>
-      <To>idleUp</To>
-      <Fading>0.2</Fading>
+      <From>walkDown</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>grab</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
-      <To>walkSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
-      <To>grabSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grab</From>
+      <From>walkDown</From>
       <To>idleSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idle</From>
-      <To>walkUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idle</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idle</From>
+      <From>walkDown</From>
       <To>idleUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idle</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
+      <From>walkSide</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idle</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idle</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idle</From>
-      <To>walkSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idle</From>
-      <To>grabSide</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idle</From>
-      <To>idleSide</To>
-      <Fading>0.2</Fading>
+      <From>walkSide</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
       <To>walkUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkSide</From>
-      <To>idleUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkSide</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkSide</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkSide</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>walkSide</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
+      <To>grabDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
       <To>grabSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSide</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkSide</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>walkSide</From>
       <To>idleSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>grabSide</From>
-      <To>walkUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabSide</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabSide</From>
+      <From>walkSide</From>
       <To>idleUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>grabSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>walkUp</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>grabSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabDown</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>grabSide</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
+      <To>dieDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>grabSide</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabSide</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>grabSide</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
+      <To>walkDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>grabSide</From>
       <To>walkSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabSide</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabSide</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabSide</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabSide</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>grabSide</From>
       <To>idleSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
-      <From>idleSide</From>
-      <To>walkUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleSide</From>
-      <To>grabUp</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleSide</From>
+      <From>grabSide</From>
       <To>idleUp</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>grabSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>grabUp</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>grabSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleDown</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>die</To>
-      <Fading>0.2</Fading>
+      <To>dieDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
-      <To>floating</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleSide</From>
-      <To>grab</To>
-      <Fading>0.2</Fading>
-    </AnimationMix>
-    <AnimationMix>
-      <From>idleSide</From>
-      <To>idle</To>
-      <Fading>0.2</Fading>
+      <To>walkDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
       <To>walkSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
     </AnimationMix>
     <AnimationMix>
       <From>idleSide</From>
       <To>grabSide</To>
-      <Fading>0.2</Fading>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleSide</From>
+      <To>idleUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>dieDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>walkDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>walkSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>walkUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>grabDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>grabSide</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>grabUp</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>idleDown</To>
+      <Fading>0</Fading>
+    </AnimationMix>
+    <AnimationMix>
+      <From>idleUp</From>
+      <To>idleSide</To>
+      <Fading>0</Fading>
     </AnimationMix>
   </AnimationFading>
   <Scaling>1</Scaling>

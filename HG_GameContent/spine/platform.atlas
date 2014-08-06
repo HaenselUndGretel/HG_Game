@@ -1,13 +1,13 @@
 
 platform.png
-size: 65,65
+size: 340,212
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 img/spacer
   rotate: false
   xy: 1, 1
-  size: 64, 64
-  orig: 64, 64
+  size: 340, 212
+  orig: 340, 212
   offset: 0, 0
   index: -1

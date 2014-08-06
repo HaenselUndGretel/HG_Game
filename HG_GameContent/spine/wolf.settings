@@ -152,5 +152,5 @@
       <Fading>0</Fading>
     </AnimationMix>
   </AnimationFading>
-  <Scaling>0.5</Scaling>
+  <Scaling>1</Scaling>
 </SpineDataSettings>

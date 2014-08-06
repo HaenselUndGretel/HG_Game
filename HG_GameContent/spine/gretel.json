@@ -1,5 +1,5 @@
 {
-"skeleton": { "spine": "1.9.15", "hash": "bEceyhnWSw5hodXqvI+BYrzjh3c", "width": 100164.28, "height": 233.2 },
+"skeleton": { "spine": "1.9.15", "hash": "weuMpNsMpI/cFK6GlOuNhe3Kobs", "width": 100097.8, "height": 233.17 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "backRoot", "parent": "root" },
@@ -203,6 +203,11 @@
 			"amulett": {
 				"attachment": [
 					{ "time": 0, "name": "img/amulett" }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
 				]
 			}
 		},
@@ -488,6 +493,11 @@
 				"attachment": [
 					{ "time": 0, "name": "img/amulett" }
 				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
 			}
 		},
 		"bones": {
@@ -767,6 +777,18 @@
 		}
 	},
 	"balanceDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"legRight": {
 				"rotate": [
@@ -1002,6 +1024,18 @@
 		}
 	},
 	"balanceEnterDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -1224,6 +1258,23 @@
 		}
 	},
 	"balanceEnterSide": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -1498,6 +1549,23 @@
 		}
 	},
 	"balanceEnterUp": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"frontRoot": {
 				"translate": [
@@ -1694,6 +1762,18 @@
 		}
 	},
 	"balanceLeaveDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -1939,6 +2019,23 @@
 		}
 	},
 	"balanceLeaveSide": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -2209,6 +2306,23 @@
 		}
 	},
 	"balanceLeaveUp": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"frontRoot": {
 				"translate": [
@@ -2476,6 +2590,23 @@
 		}
 	},
 	"balanceSide": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -2733,6 +2864,23 @@
 		}
 	},
 	"balanceUp": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"frontRoot": {
 				"rotate": [
@@ -3168,6 +3316,18 @@
 		}
 	},
 	"idleDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -3461,6 +3621,18 @@
 		}
 	},
 	"idleDownShiver": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -3729,6 +3901,11 @@
 	},
 	"idleLanternDown": {
 		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
 			"lantern": {
 				"attachment": [
 					{ "time": 0, "name": "img/laterneFrontDiffuse" },
@@ -3998,6 +4175,11 @@
 	},
 	"idleLanternSide": {
 		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
 			"lanternSide": {
 				"attachment": [
 					{ "time": 0, "name": "img/laterneSideDiffuse" },
@@ -4531,6 +4713,13 @@
 		}
 	},
 	"idleSide": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -4780,6 +4969,13 @@
 		}
 	},
 	"idleSideShiver": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -5029,6 +5225,13 @@
 		}
 	},
 	"idleUp": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"frontRoot": {
 				"translate": [
@@ -5275,6 +5478,13 @@
 		}
 	},
 	"idleUpShiver": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"frontRoot": {
 				"translate": [
@@ -5521,6 +5731,18 @@
 		}
 	},
 	"knockOverTreeDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"calfRight": {
 				"rotate": [
@@ -5757,6 +5979,13 @@
 		}
 	},
 	"knockOverTreeSide": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -6267,6 +6496,13 @@
 		}
 	},
 	"knockOverTreeUp": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"foreArmLeftBack": {
 				"rotate": [
@@ -6569,6 +6805,13 @@
 		}
 	},
 	"legUpDown": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"shoulderLeftBack": {
 				"rotate": [
@@ -6882,6 +7125,13 @@
 		}
 	},
 	"legUpRaiseDown": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"rotate": [
@@ -7137,6 +7387,13 @@
 		}
 	},
 	"legUpRaiseSide": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -7399,6 +7656,13 @@
 		}
 	},
 	"legUpSide": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"side_spine": {
 				"rotate": [
@@ -7738,6 +8002,18 @@
 		}
 	},
 	"pushDoorDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"hip": {
 				"rotate": [
@@ -8368,6 +8644,13 @@
 		}
 	},
 	"pushRockSide": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -8837,6 +9120,11 @@
 	},
 	"raiseLanternDown": {
 		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
 			"lantern": {
 				"attachment": [
 					{ "time": 0, "name": "img/laterneFrontDiffuse" },
@@ -9859,6 +10147,18 @@
 		}
 	},
 	"walkDown": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -10095,6 +10395,18 @@
 		}
 	},
 	"walkDownShiver": {
+		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"lantern": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -10357,6 +10669,11 @@
 	},
 	"walkLanternDown": {
 		"slots": {
+			"amulett": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
 			"lantern": {
 				"attachment": [
 					{ "time": 0, "name": "img/laterneFrontDiffuse" },
@@ -11369,6 +11686,13 @@
 		}
 	},
 	"walkSide": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"backRoot": {
 				"translate": [
@@ -11667,6 +11991,13 @@
 		}
 	},
 	"walkSideShiver": {
+		"slots": {
+			"lanternSide": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"side_legLeft": {
 				"rotate": [
@@ -11937,6 +12268,13 @@
 		}
 	},
 	"walkUp": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"calfLeft": {
 				"rotate": [
@@ -12363,6 +12701,13 @@
 		}
 	},
 	"walkUpShiver": {
+		"slots": {
+			"lanternBack": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
 		"bones": {
 			"spine2": {
 				"rotate": [

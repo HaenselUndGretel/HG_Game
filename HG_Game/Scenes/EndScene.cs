@@ -109,9 +109,12 @@ namespace HG_Game
 					if (GameReferenzes.ReferenzHansel.SkeletonPosition == InitPosHansel + HouseWalkDelta &&
 						GameReferenzes.ReferenzGretel.SkeletonPosition == InitPosGretel + HouseWalkDelta
 						)
+					{
 						State = EndState.FadeThisShit;
-					FmodMediaPlayer.Instance.FadeBackgroundChannelOut(0);
-					FmodMediaPlayer.Instance.FadeBackgroundChannelOut(1);
+						FmodMediaPlayer.FadingSpeed = 1 / 300.0f;
+						FmodMediaPlayer.Instance.FadeBackgroundChannelOut(0);
+						FmodMediaPlayer.Instance.FadeBackgroundChannelIn(1);
+					}
 					break;
 				case EndState.FadeThisShit:
 					/*VisibilityPlayer.StepBackward();
@@ -141,6 +144,8 @@ namespace HG_Game
 					FadingOut.StepForward();
 					if (FadingOut.Complete)
 					{
+						FmodMediaPlayer.FadingSpeed = 1 / 90.0f;
+						FmodMediaPlayer.Instance.SetBackgroundSong(new List<String>() { "MusicMainTheme" });
 						SceneManager.Instance.SetCurrentSceneTo("Credits");
 					}
 					break;

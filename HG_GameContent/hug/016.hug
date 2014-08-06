@@ -235,7 +235,7 @@
       <NormalZ>0</NormalZ>
       <DestinationScene>15</DestinationScene>
       <DestinationWaypoint>3</DestinationWaypoint>
-      <OneWay>false</OneWay>
+      <OneWay>true</OneWay>
       <MovementOnEnter>
         <X>1</X>
         <Y>0</Y>

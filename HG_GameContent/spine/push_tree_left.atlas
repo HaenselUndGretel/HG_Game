@@ -1,34 +1,20 @@
 
 push_tree_left.png
-size: 564,446
+size: 192,762
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-img/side
+img/standing
   rotate: false
-  xy: 1, 358
-  size: 492, 88
-  orig: 492, 88
+  xy: 1, 156
+  size: 129, 606
+  orig: 129, 606
   offset: 0, 0
   index: -1
-img/stamp
+img/stumpf
   rotate: false
-  xy: 70, 236
-  size: 147, 121
-  orig: 147, 121
-  offset: 0, 0
-  index: -1
-img/tree
-  rotate: false
-  xy: 1, 52
-  size: 68, 305
-  orig: 68, 305
-  offset: 0, 0
-  index: -1
-img/tree_st
-  rotate: false
-  xy: 494, 1
-  size: 70, 445
-  orig: 70, 445
+  xy: 1, 1
+  size: 191, 154
+  orig: 191, 154
   offset: 0, 0
   index: -1

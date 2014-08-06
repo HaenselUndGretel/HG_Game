@@ -180,7 +180,7 @@ namespace HG_Game
 				pGretel.MoveInteractiveObject(DestinationGretel - pGretel.SkeletonPosition);
 				pSavegame.SceneId = DestinationScene;
 				pScene = pSavegame.Scenes[DestinationScene];
-				pScene.BackgroundTexture.LoadBackgroundTextures();
+				SceneData.BackgroundTexture.LoadBackgroundTextures();
 				pCamera.GameScreen = pScene.GamePlane;
 				pScene.SetupRenderList(pHansel, pGretel);
 				pRenderer.AmbientLight = pScene.SceneAmbientLight;

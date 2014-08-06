@@ -85,7 +85,8 @@ namespace HG_Game
 			mPauseMenu = new PauseMenu();
 
 			//EndScene
-			DasEnde.Initialize();
+			//DasEnde = new EndScene();
+			//DasEnde.Initialize();
 
 			FmodMediaPlayer.FadingSpeed = 1 / 90.0f;
 		}
@@ -108,7 +109,7 @@ namespace HG_Game
 			//Savegame
 			mSavegame = Savegame.Load(mHansel, mGretel);
 			mScene = mSavegame.Scenes[mSavegame.SceneId];
-			mScene.BackgroundTexture.LoadBackgroundTextures();
+			SceneData.BackgroundTexture.LoadBackgroundTextures();
 			mRenderer.AmbientLight = mScene.SceneAmbientLight;
 			//Camera
 			mCamera.GameScreen = mScene.GamePlane;
@@ -133,7 +134,7 @@ namespace HG_Game
 			AIManager.Instance.SetAgents(mScene.Enemies);
 
 			//EndScene
-			DasEnde.LoadContent();
+			//DasEnde.LoadContent();
 		}
 
 		public override void Update()
@@ -181,7 +182,7 @@ namespace HG_Game
 					}
 					break;
 				case GameState.EndScene:
-					DasEnde.Update();
+					DasEnde.Update(mCamera);
 					break;
 			}
 		}
@@ -190,7 +191,7 @@ namespace HG_Game
 		{
 			if (mState == GameState.EndScene)
 			{
-				DasEnde.Draw(mRenderer, mSpriteBatch);
+				DasEnde.Draw(mRenderer, mSpriteBatch, mCamera);
 				return;
 			}
 			//--------------------Prepare Draw--------------------
@@ -205,7 +206,7 @@ namespace HG_Game
 			mRenderer.ClearGBuffer();
 			mRenderer.Begin(mCamera.Transform);
 				//Render Background
-				mScene.BackgroundTexture.Draw(mRenderer);
+				SceneData.BackgroundTexture.Draw(mRenderer);
 				//Render Game
 				foreach (InteractiveObject iObj in mScene.RenderList)
 					if (iObj.IsVisible)

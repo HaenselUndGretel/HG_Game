@@ -228,7 +228,7 @@ namespace HG_Game
 			//mRenderer.DrawDebugRendertargets(mSpriteBatch);
 
 			if (GameReferenzes.Level.Fog)
-				mRenderer.ApplyFog(mCamera.Transform);
+				mRenderer.ApplyFog(mCamera.Transform,mCamera.Scale);
 
 			//--------------------SpriteBatch WorldSpace(HUD & Infos)--------------------
 			mSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, mCamera.Transform);

@@ -3,6 +3,7 @@ sampler FogTexture: register(s2);
 sampler SceneDiffuse: register(s3);
 
 float3 View;
+float Scale;
 
 float FogStrength;
 float FogFactorMin;
@@ -36,6 +37,8 @@ PS_Input Vs_Main(VS_Input input)
 
 	output.fogUV.x = input.UV.x - View.x / 1280;
 	output.fogUV.y = input.UV.y - View.y / 720;
+
+  output.fogUV *= 1/Scale;
 
 	return output;
 }

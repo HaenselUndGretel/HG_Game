@@ -154,10 +154,6 @@ namespace HG_Game
 					//Update Player
 					mHansel.Update(mLogic.HanselMayMove, mHansel.mCurrentActivity.mMovementSpeedFactorHansel, mScene);
 					mGretel.Update(mLogic.GretelMayMove, mGretel.mCurrentActivity.mMovementSpeedFactorGretel, mScene);
-#if DEBUG
-					//DebugCheats, im finalen Spiel löschen
-					Cheats.Update(mSavegame, mScene, mHansel, mGretel);
-#endif
 					//Update Camera
 					mCamera.MoveCamera(mHansel.CollisionBox, mGretel.CollisionBox);
 
